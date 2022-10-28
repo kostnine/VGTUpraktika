@@ -20,10 +20,9 @@ export default {
 <style lang="scss">
 @import './assets/scss/_variables.scss';
 #app {
-  font-family: 'Barlow Semi Condensed';
+  font-family: $mainFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #000;
 }
 body{
