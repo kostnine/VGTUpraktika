@@ -56,7 +56,7 @@ export default {
       min-width: 25%;
       padding: 8px 0;
       &:hover{
-        font-weight: 600;
+        font-family: $semiBoldFont;
         border-bottom: 2px solid #000000;
       }
     }
