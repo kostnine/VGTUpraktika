@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <div class="header-image-container">
-    <router-link to="/"><img src="@/assets/Logo.png" alt="logo"/></router-link>
+    <router-link to="/"><img src="@/assets/logo.png" alt="logo"/></router-link>
     </div>
     <nav class="header-navigation-bar">
       <router-link to="/regulations" class="header-nav-block">Regulations in Europe</router-link>
@@ -28,9 +28,14 @@ export default {
 @import '@/assets/scss/variables';
 .header-container{
   display: flex;
-  margin: 0 160px;
+  height: 0;
+  width: 100%;
+  padding: 0 160px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 10px;
   @media(max-width: 1280px){
-    margin: 0 80px
+    padding: 0 80px
   }
   .header-image-container{
     width: 40%;
@@ -53,8 +58,8 @@ export default {
       font-family: $mainFont;
       font-weight: 400;
       // border: 1px solid black;
-      min-width: 25%;
-      padding: 8px 0;
+      min-width: 20%;
+      padding: 8px 8px;
       &:hover{
         font-family: $semiBoldFont;
         border-bottom: 2px solid #000000;

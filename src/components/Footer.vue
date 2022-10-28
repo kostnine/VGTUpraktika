@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div class="footer-image-container">
       <div class="image-with-under-text">
-        <img src="@/assets/Logo.png" alt="logo"/>
+        <img src="@/assets/logo.png" alt="logo"/>
         <span>18th November 2022</span>
       </div>
     </div>

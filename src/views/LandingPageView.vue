@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/Logo.png">
+    <img alt="Vue logo" src="../assets/logo.png">
   </div>
 </template>
 
@@ -12,3 +12,8 @@ export default {
  
 }
 </script>
+<style scoped lang="scss" >
+body, html{
+  background-color: red;
+}
+</style>
