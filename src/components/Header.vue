@@ -1,9 +1,13 @@
 <template>
-  <div>
-    <h1>Header</h1>
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="header-container">
+    <div class="header-image-container">
+    <router-link to="/"><img src="@/assets/Logo.png" alt="logo"/></router-link>
+    </div>
+    <nav class="header-navigation-bar">
+      <router-link to="/regulations" class="header-nav-block">Regulations in Europe</router-link>
+      <div class="header-nav-block dropdown" @click="dropdownExtended = !dropdownExtended">Smoke Alarms Information <img :class="dropdownExtended ? 'flipped': 'non-flipped'" src="@/assets/icons/arrow_down.svg" alt="dropdown"/></div>
+      <router-link to="/facts" class="header-nav-block">Important Facts</router-link>
+      <router-link to="/downloads" class="header-nav-block">Download Section</router-link>
     </nav>
   </div>
 </template>
@@ -13,6 +17,7 @@ export default {
     name: 'HeaderComponent',
     data(){
         return{
+          dropdownExtended: false,
 
         }
     }
@@ -20,7 +25,52 @@ export default {
 </script>
 
 <style scoped lang="scss">
-div{
-
+@import '@/assets/scss/variables';
+.header-container{
+  display: flex;
+  margin: 0 160px;
+  @media(max-width: 1280px){
+    margin: 0 40px
+  }
+  .header-image-container{
+    width: 40%;
+    display: flex;
+    @media(max-width: 1280px){
+      width: 35%;
+    }
+  }
+  .header-navigation-bar{
+    width: 60%;
+    // border: 1px solid black;
+    display: flex;
+    padding-top: 7px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    .header-nav-block{
+      font-size: 16px;
+      text-decoration: none;
+      color: black;
+      font-family: $mainFont;
+      font-weight: 400;
+      // border: 1px solid black;
+      min-width: 25%;
+      padding: 8px 0;
+      &:hover{
+        font-family: $semiBoldFont;
+        border-bottom: 2px solid #000000;
+      }
+    }
+    .dropdown{
+      cursor: pointer;
+      .flipped{
+        transition: 0.3s;
+        transform: rotate(180deg);
+      }
+      .non-flipped{
+        transition: 0.3s;
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
 </style>
