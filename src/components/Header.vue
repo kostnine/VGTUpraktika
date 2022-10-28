@@ -30,7 +30,7 @@ export default {
   display: flex;
   margin: 0 160px;
   @media(max-width: 1280px){
-    margin: 0 40px
+    margin: 0 80px
   }
   .header-image-container{
     width: 40%;
