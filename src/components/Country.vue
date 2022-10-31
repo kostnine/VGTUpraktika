@@ -42,11 +42,11 @@ export default {
 
 <style scoped lang="scss">
 .map-object:hover {
-  transition: 0.1s;
   cursor: pointer;
   fill: #483a5b;
 }
 .map-object {
+  transition: 0.2s;
   &.grayed {
     opacity: 0.2;
   }

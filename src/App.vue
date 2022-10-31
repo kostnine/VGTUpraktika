@@ -1,32 +1,33 @@
 <template>
   <div id="app">
-    
     <HeaderComponent />
-    <router-view/>
+    <router-view />
     <FooterComponent />
   </div>
 </template>
 <script>
-import HeaderComponent from './components/Header.vue'
-import FooterComponent from './components/Footer.vue'
+import HeaderComponent from "./components/Header.vue";
+import FooterComponent from "./components/Footer.vue";
 export default {
   components: {
     HeaderComponent,
-    FooterComponent
-  }
-}
+    FooterComponent,
+  },
+};
 </script>
 
 <style lang="scss">
-@import './assets/scss/_variables.scss';
+@import "./assets/scss/_variables.scss";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: $mainFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: #000;
 }
-body, html{
+body {
   margin: 0;
+}
+* {
+  box-sizing: border-box;
 }
 </style>
