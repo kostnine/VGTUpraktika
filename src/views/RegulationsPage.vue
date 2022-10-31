@@ -1,190 +1,370 @@
 <template>
-    <div class="regulations-page-container">
-        <div class="regulations-page-header">
-            <div class="regulations-header-text">
-                <span class="regulations-header-title">Regulations in Europe</span>
-                <span class="regulations-header-content">See the interactive map to know more about regulations in different european homes!</span>
-                <button class="regulations-header-button"><span>Map of the Europe </span><img src="@/assets/icons/arrow_down_white.svg" alt="down_arrow"/></button>
-            </div>
-            <div class="regulations-page-image-half">
-                <img class="top-image" src="@/assets/images/Man_writing.png" alt="image"/>
-                <img class="cropped-circle" src="@/assets/images/Circle_red.svg" alt="circle"/>
-            </div>
-
-        </div>
-        <div class="regulations-page-map">
-            <div class="regulations-page-text-content">
-                <span class="regulations-page-text-title">Smoke alarm requirements</span>
-                <span class="regulations-page-text-subInfo">Click on map and see what are the requirements in each country</span>
-                <div class="regulations-page-dict-row">
-                    <div class="regulations-page-dict-wrapper">
-                        <span class="regulations-page-text-dict"><div class="colored-block blue"></div>Multiple alarms per property</span>
-                        <span class="regulations-page-text-dict"><div class="colored-block orange"></div>At least one alarm per property</span>
-                        <span class="regulations-page-text-dict"><div class="colored-block red"></div>No alarm requirement</span>
-                    </div>
-                </div>
-
-                <div class="regulations-information-block">
-                    <span>Information</span>
-                    <ul>
-                        <li>Extensive smoke alarm legislation in multiple countries</li>
-                        <li>No legislation in Southern/Eastern Europe</li>
-                        <li>Weak legislation/lack of a requirement/forcement is as bad as e.g. France 20% homes protected with working smoke alarms according to Fire Service Sources</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="regulations-page-map-content">
-                <div>MAP</div>
-            </div>
-        </div>
+  <div class="regulations-page-container">
+    <div class="regulations-page-header">
+      <div class="regulations-header-text">
+        <span class="regulations-header-title">Regulations in Europe</span>
+        <span class="regulations-header-content"
+          >See the interactive map to know more about regulations in different
+          european homes!</span
+        >
+        <button class="regulations-header-button">
+          <span @click="scroll('text-content')">Map of the Europe </span
+          ><img src="@/assets/icons/arrow_down_white.svg" alt="down_arrow" />
+        </button>
+      </div>
+      <div class="regulations-page-image-half">
+        <img
+          class="top-image"
+          src="@/assets/images/Man_writing.png"
+          alt="image"
+        />
+        <img
+          class="cropped-circle"
+          src="@/assets/images/Circle_red.svg"
+          alt="circle"
+        />
+      </div>
     </div>
-  </template>
-  
-  <script>
-  // @ is an alias to /src
-  
-  export default {
-    name: 'RegulationsPage',
-   
-  }
-  </script>
-  <style scoped lang="scss">
-  @import '@/assets/scss/variables';
-  .regulations-page-container{
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .regulations-page-header{
-    display: flex;
-    overflow: hidden;
-    height: 1080px;
-    background-color: #FBF3ED;
-    padding-top: 80px;
-    padding-left: 160px;
-    padding-right: 160px;
-    margin-bottom: -50px;
+    <div class="regulations-page-map">
+      <div
+        class="regulations-page-text-content"
+        id="text-content"
+        v-if="activeCountry == ''"
+      >
+        <span class="regulations-page-text-title"
+          >Smoke alarm requirements</span
+        >
+        <span class="regulations-page-text-subInfo"
+          >Click on map and see what are the requirements in each country</span
+        >
+        <div class="regulations-page-dict-row">
+          <div class="regulations-page-dict-wrapper">
+            <span class="regulations-page-text-dict"
+              ><div class="colored-block blue"></div>
+              Multiple alarms per property</span
+            >
+            <span class="regulations-page-text-dict"
+              ><div class="colored-block orange"></div>
+              At least one alarm per property</span
+            >
+            <span class="regulations-page-text-dict"
+              ><div class="colored-block red"></div>
+              No alarm requirement</span
+            >
+          </div>
+        </div>
 
-    .regulations-header-text{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        font-family: $mainFont;
-        justify-content: center;
-        align-items: flex-start;
-        .regulations-header-title{
-            font-family: $semiBoldFont;
-            font-size: 64px;
-            margin-bottom: 50px;
-        }
-        .regulations-header-content{
-            font-size: 24px;
-            text-align: start;
-            margin-bottom: 75px;
-            width: 80%;
-        }
-        .regulations-header-button{
-            position: relative;
-            width: 380px;
-            height: 64px;
-            border-radius: 5px;
-            border: none;
-            color: white;
-            background-color: #C0554B;
-            font-size: 24px;
-            font-family: $semiBoldFont;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            img{
-                height: 12px;
-                width: 27px;
-                position: absolute;
-                top: 28px;
-                right: 40px;
-            }
-            &:hover{
-                background-color: #483A5B;
-            }
-        }
-    } 
-    .regulations-page-image-half{
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .cropped-circle{
-        position: absolute;
-        z-index: 0;
-        right: 0px;
-        top: 350px;
-        }
-        .top-image{
-            z-index: 1;
-        }
-    }
+        <div class="regulations-information-block">
+          <span class="regulations-information-title">Information:</span>
+          <ul>
+            <li>Extensive smoke alarm legislation in multiple countries</li>
+            <li>No legislation in Southern/Eastern Europe</li>
+            <li>
+              Weak legislation/lack of a requirement/forcement is as bad as e.g.
+              France 20% homes protected with working smoke alarms according to
+              Fire Service Sources
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="regulations-page-text-content"
+        id="text-content"
+        v-else-if="activeCountry != ''"
+      >
+        <div class="regulations-country-info-block">
+          <img
+            @click="clearActiveCountry"
+            src="@/assets/icons/close_cross.svg"
+            alt="close"
+            class="regulations-country-close"
+          />
+          <span class="regulations-country-name">{{
+            country_data[activeCountry].name
+          }}</span>
+          <div
+            class="paragraph"
+            v-if="country_data[activeCountry].p1_title != ''"
+          >
+            <span class="paragraph-title">{{
+              country_data[activeCountry].p1_title
+            }}</span>
+            <div v-html="country_data[activeCountry].p1_text"></div>
+          </div>
+          <div
+            class="paragraph"
+            v-if="country_data[activeCountry].p2_title != ''"
+          >
+            <span class="paragraph-title">{{
+              country_data[activeCountry].p2_title
+            }}</span>
+            <div v-html="country_data[activeCountry].p2_text"></div>
+          </div>
+          <div
+            class="paragraph"
+            v-if="country_data[activeCountry].p3_title != ''"
+          >
+            <span class="paragraph-title">{{
+              country_data[activeCountry].p3_title
+            }}</span>
+            <div v-html="country_data[activeCountry].p3_text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="regulations-page-map-content">
+        <div>
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 1077 1082"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <CountryComponent
+              v-for="(country, country_key) in this.country_data"
+              :key="country_key"
+              :country="country"
+              :setActiveCountry="setActiveCountry"
+              :activeSelectedCountry="activeCountry"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
-  }
-  .regulations-page-map{
-    position: relative;
-    height: 1200px;
-    width: 100%;
-    background-color: white;
-    z-index: 2;
-    display: flex;
-    padding: 0 160px;
-  }
-  .regulations-page-text-content{
+<script>
+// @ is an alias to /src
+import country_data from "@/assets/data/country_data.json";
+import CountryComponent from "@/components/Country.vue";
+export default {
+  name: "RegulationsPage",
+  data() {
+    return {
+      activeCountry: "",
+      country_data: country_data,
+    };
+  },
+  components: {
+    CountryComponent,
+  },
+  methods: {
+    setActiveCountry(country) {
+      if (this.activeCountry == country) {
+        this.activeCountry = "";
+      } else {
+        this.activeCountry = country;
+      }
+    },
+    clearActiveCountry() {
+      this.activeCountry = "";
+    },
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+  },
+};
+</script>
+<style scoped lang="scss">
+@import "@/assets/scss/variables";
+.regulations-page-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+.regulations-page-header {
+  display: flex;
+  overflow: hidden;
+  height: 1080px;
+  background-color: #fbf3ed;
+  padding-top: 80px;
+  padding-left: 160px;
+  padding-right: 160px;
+  margin-bottom: -50px;
+
+  .regulations-header-text {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    width: 50%;
     font-family: $mainFont;
-
-    .regulations-page-text-title{
-        font-size: 48px;
-        font-family: $semiBoldFont;
+    justify-content: center;
+    align-items: flex-start;
+    .regulations-header-title {
+      font-family: $semiBoldFont;
+      font-size: 64px;
+      margin-bottom: 50px;
     }
-    .regulations-page-text-subInfo{
-        font-size: 16px;
-        line-height: 24px;
-        text-align: start;
+    .regulations-header-content {
+      font-size: 24px;
+      text-align: start;
+      margin-bottom: 75px;
+      width: 80%;
+    }
+    .regulations-header-button {
+      position: relative;
+      width: 380px;
+      height: 64px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      background-color: #c0554b;
+      font-size: 24px;
+      font-family: $semiBoldFont;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        height: 12px;
+        width: 27px;
+        position: absolute;
+        top: 28px;
+        right: 40px;
+      }
+      &:hover {
+        background-color: #483a5b;
+      }
     }
   }
-  .regulations-page-map-content{
-    div{
-        width: 1200px;
-        height: 1080px;
-        border: 1px solid black;
+  .regulations-page-image-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cropped-circle {
+      position: absolute;
+      z-index: 0;
+      right: 0px;
+      top: 350px;
+    }
+    .top-image {
+      z-index: 1;
     }
   }
+}
+.regulations-page-map {
+  position: relative;
+  height: 1200px;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+  display: flex;
+  padding: 0 0 0 160px;
+  box-sizing: border-box;
+}
+.regulations-page-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $mainFont;
+  width: 32%;
+  height: 100%;
 
-  .colored-block{
-    width: 34px;
-    height: 34px;
-    &.blue{
-        background-color: #DCE3EF;
-    }
-    &.orange{
-        background-color: #F39964;
-    }
-    &.red{
-        background-color: #C0554B;
+  .regulations-page-text-title {
+    font-size: 48px;
+    font-family: $semiBoldFont;
+    text-align: start;
+  }
+  .regulations-page-text-subInfo {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+  }
+}
+.regulations-page-map-content {
+  width: 68%;
+  height: 95%;
+  div {
+    width: 100%;
+    height: 1080px;
+    box-sizing: border-box;
+  }
+}
+
+.colored-block {
+  width: 34px;
+  height: 34px;
+  margin-right: 14px;
+  &.blue {
+    background-color: #a2bbe5;
+  }
+  &.orange {
+    background-color: #f39964;
+  }
+  &.red {
+    background-color: #c0554b;
+  }
+}
+
+.regulations-page-dict-row {
+  display: flex;
+  align-items: center;
+  .regulations-page-dict-wrapper {
+    width: 73%;
+    .regulations-page-text-dict {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 34px 0;
     }
   }
+}
+.regulations-information-block {
+  text-align: start;
+  .regulations-information-title {
+    font-family: $semiBoldFont;
+  }
+}
 
-  .regulations-page-dict-row{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .regulations-page-dict-wrapper{
-            width: 73%;
-            .regulations-page-text-dict{
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                margin: 34px 0;
-            }      
-        }
-    }
-  </style>
-  
+//regulations left info
+.regulations-country-info-block {
+  height: 800px;
+  background: #faf7f5;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #1e1826;
+  position: relative;
+  .regulations-country-close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 16px;
+    right: 21px;
+    cursor: pointer;
+  }
+}
+.regulations-country-name {
+  font-size: 48px;
+  line-height: 72px;
+  font-family: $semiBoldFont;
+  margin-bottom: 26px;
+  margin-left: 22px;
+}
+.paragraph-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: $semiBoldFont;
+}
+.paragraph {
+  text-align: start;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 27px 16px;
+  width: 95%;
+  a {
+    color: #1290c1;
+  }
+}
+</style>
+<style lang="scss">
+@import "@/assets/scss/variables";
+.semibold {
+  font-family: $semiBoldFont;
+}
+</style>
