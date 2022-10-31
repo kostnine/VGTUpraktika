@@ -6,6 +6,29 @@ Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
+Vue.mixin({
+  data: function() {
+    return {
+      windowWidth: 0,
+      windowHeight: 0
+    }
+  },
+  mounted() {
+    this.windowWidth = window.innerWidth;
+    this.windowHeight = window.innerHeight; 
+    window.addEventListener('resize', this.setWindowSize);
+  },
+  beforeDestroy(){
+     window.removeEventListener('resize', this.setWindowSize);
+  },
+  methods: {
+    setWindowSize(){
+        this.windowWidth = window.innerWidth;
+        this.windowHeight = window.innerHeight;
+    },
+  }
+})
+
 new Vue({
   router,
   render: h => h(App),

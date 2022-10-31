@@ -71,6 +71,7 @@ export default {
     .footer-column-wrapper{
       display: flex;
       flex-direction: column;
+      align-items: center;
       font-family: $mainFont;
       .join-us-header{
         font-size: 25px;
@@ -83,6 +84,43 @@ export default {
         margin-top: 55px;
       }
     }
+  }
+  @media (max-width: 768px){
+    padding: 0 20px;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    .footer-image-container{
+      position: relative;
+      width: 100%;
+      margin-bottom: 2rem;
+      .image-with-under-text{
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        max-width: 100%;
+    
+        img{
+          max-height: 75px;
+          width: auto;
+        }
+        span{
+          margin: 0;
+          font-size: clamp(16px, 3vw, 24px);
+        }
+      }
+
+    }
+    .footer-main-container{
+      .footer-column-wrapper{
+        .join-us-header{
+          margin-bottom: 1rem;
+        }
+  
+      }
+
+    }
+  
   }
 }
 </style>
