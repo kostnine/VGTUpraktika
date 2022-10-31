@@ -342,6 +342,7 @@ section{
     @media (max-width: 768px){
         padding: 0 $paddingHorizontalMobile;
         flex-direction: column;
+        height: calc(100vh - 110px);
         .text{
             width: 100%;
             padding: 0rem;
@@ -362,8 +363,12 @@ section{
                 margin-top: 0px;
                 left: 0rem;
                 right: 0;
-                top: -2rem;
+                top: 1rem;
                 margin: auto;
+                height: 22.3vw;
+                width: 23.3vw;
+                min-width: 250px;
+                min-height: 250px;
             }
             .red-circle{
                 width: 90vw;
@@ -616,7 +621,7 @@ section{
                     width: 100%;
                     max-width: 100%;
                     margin: 0.5rem 0px;
-                    font-size: clamp(20px, 3vw, 28px);
+                    font-size: clamp(18px, 3vw, 28px);
                    
                 }
             }
@@ -778,8 +783,16 @@ section{
          .modal-content{
             .supporter-container{
                 .supporter{
-                    margin: 1vw;
-              
+                    width: 100%;
+                    height: 44vw;
+                    margin: 1rem 0;
+                    img{
+                        height: 100%;
+                        width: auto;
+                    }
+                    span{
+                        font-size: clamp(16px, 4vw, 24px);
+                    }
                 }
             }
          }
