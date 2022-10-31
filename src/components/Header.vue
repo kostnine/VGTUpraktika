@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <div class="header-image-container">
-      <router-link to="/"><img src="@/assets/Logo.png" alt="logo"/></router-link>
+      <router-link to="/"><img src="@/assets/logo.png" alt="logo"/></router-link>
     </div>
     <div 
       class="burger"
@@ -48,8 +48,12 @@ export default {
 @import '@/assets/scss/variables';
 .header-container{
   display: flex;
-  margin: 60px 160px 0;
- 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 160px 0;
+  z-index: 99;
   .header-image-container{
     width: 40%;
     display: flex;
@@ -126,10 +130,10 @@ export default {
     }
   }
   @media(max-width: 1280px){
-    margin: 30px 80px
+    padding: 30px 80px
   }
   @media(max-width: 1050px){
-    margin: 30px 30px;
+    padding: 30px 30px;
     .header-navigation-bar{
       width: 100%;
     }

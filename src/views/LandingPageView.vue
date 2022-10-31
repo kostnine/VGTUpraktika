@@ -89,7 +89,7 @@
                         </span>
                     </a>
                 </div>
-                <div class="supporter-container">
+                <div class="supporter-container extra">
                     <a :href="supporter.url" target="_blank" rel="noopener noreferrer"  class="supporter" v-for="(supporter, index) in supportersExtra" :key="index">
                         <img :src="require(`@/assets/${supporter.logo}`)" alt="">
                         <span class="website">
@@ -329,8 +329,7 @@ section{
     flex-direction: row;
     align-items: center;
     position: relative;
-    height: calc(100vh - 196px);
-    padding: 0 0 0 $paddingHorizontal;
+    padding: 196px 0 0 $paddingHorizontal;
     .text{
         display: flex;
         flex-direction: column;
@@ -531,7 +530,8 @@ section{
             border-radius: 5px;
             border: none;
             color: white;
-            font-weight: 700;
+            font-family: $semiBoldFont;
+            font-size: 16px;
             cursor: pointer;
             &.secondary{
                 background: $secondaryColor;
@@ -697,6 +697,11 @@ section{
 
         &:first-of-type{
             margin-bottom: 1rem;
+        }
+        &.extra{
+            .supporter{
+                 max-width: 17%;
+            }
         }
     }
     .supporter{
