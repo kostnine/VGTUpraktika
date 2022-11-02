@@ -114,8 +114,7 @@
       <div class="regulations-page-map-content">
         <div>
           <svg
-            width="100%"
-            height="100%"
+            class="map-svg"
             viewBox="0 0 1077 1082"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -175,6 +174,7 @@ export default {
   box-sizing: border-box;
 }
 .regulations-page-header {
+  position: relative;
   display: flex;
   overflow: hidden;
   height: 1080px;
@@ -183,6 +183,11 @@ export default {
   padding-left: 160px;
   padding-right: 160px;
   margin-bottom: -50px;
+  box-sizing: border-box;
+  @media (max-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 
   .regulations-header-text {
     display: flex;
@@ -191,6 +196,9 @@ export default {
     font-family: $mainFont;
     justify-content: center;
     align-items: flex-start;
+    @media (max-width: 1280px) {
+      width: 80%;
+    }
     .regulations-header-title {
       font-family: $semiBoldFont;
       font-size: 64px;
@@ -201,6 +209,9 @@ export default {
       text-align: start;
       margin-bottom: 75px;
       width: 80%;
+      @media (max-width: 1280px) {
+        width: 100%;
+      }
     }
     .regulations-header-button {
       position: relative;
@@ -233,14 +244,28 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1280px) {
+      margin-left: 100px;
+    }
     .cropped-circle {
       position: absolute;
       z-index: 0;
-      right: 0px;
+      right: 0;
       top: 350px;
+      @media (max-width: 1280px) {
+        right: -100px;
+        top: 450px;
+        max-width: 923px;
+        max-height: 923px;
+      }
     }
     .top-image {
       z-index: 1;
+      height: 70%;
+      @media (max-width: 1280px) {
+        min-width: 450px;
+        max-height: 450px;
+      }
     }
   }
 }
@@ -253,6 +278,10 @@ export default {
   display: flex;
   padding: 0 0 0 160px;
   box-sizing: border-box;
+  @media (max-width: 1280px) {
+    height: 80vh;
+    padding: 0 0 0 80px;
+  }
 }
 .regulations-page-text-content {
   display: flex;
@@ -330,6 +359,12 @@ export default {
   justify-content: center;
   color: #1e1826;
   position: relative;
+  min-width: 450px;
+  @media (max-width: 1280px) {
+    max-height: 760px;
+    overflow-y: auto;
+    min-width: 400px;
+  }
   .regulations-country-close {
     width: 16px;
     height: 16px;
@@ -345,6 +380,9 @@ export default {
   font-family: $semiBoldFont;
   margin-bottom: 26px;
   margin-left: 22px;
+  @media (max-width: 1280px) {
+    margin-bottom: 4px;
+  }
 }
 .paragraph-title {
   font-size: 24px;
@@ -359,6 +397,16 @@ export default {
   width: 95%;
   a {
     color: #1290c1;
+  }
+  @media (max-width: 1280px) {
+    margin: 4px 8px;
+  }
+}
+.map-svg {
+  width: 100%;
+  height: 100%;
+  @media (max-width: 1280px) {
+    height: 70%;
   }
 }
 </style>
