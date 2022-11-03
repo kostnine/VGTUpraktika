@@ -1,41 +1,39 @@
 <template>
   <div class="types-page-container">
-    <div class="types-page-header-container">
-      <div class="types-header-text-half">
-        <div class="types-header-text-container">
-          <span class="types-header-title"
-            >What Do You Need To Know About Smoke Alarms?</span
-          >
-          <span class="types-header-content"
-            >Types of smoke alarms, where to locate them at home, how to look
-            after them... Let’s find out everything!</span
-          >
-          <span class="types-header-button" @click="scroll('types')">
-            Learn More About Types<img
-              class="types-header-down-arrow"
-              src="@/assets/icons/arrow_down_white.svg"
-              alt="down_arrow"
-            />
-          </span>
-        </div>
-      </div>
-      <div class="types-header-image-half">
-        <img
-          class="header-top-image"
-          src="@/assets/images/Hand_detector.png"
-          alt="detector"
-        />
-        <img
-          class="cropped-circle"
-          src="@/assets/images/Circle_red.svg"
-          alt="circle"
-        />
-      </div>
-    </div>
+    <PageHeader
+      image="images/Hand_detector.png"
+      title="What Do You Need To Know About Smoke Alarms?"
+      content="Types of smoke alarms, where to locate them at home, how to look
+            after them... Let’s find out everything!"
+      buttonText="Learn More About Types"
+      scrollTo="types"
+    />
     <div class="types-page-main-container">
       <div class="types-page-main-nav">
-        <div class="main-nav-clickable">{{ `<` }} Back to Homepage</div>
-        <div class="main-nav-clickable">Locations of Smoke Alarms ></div>
+        <router-link to="/" tag="div" class="main-nav-clickable">
+          <svg
+            class="arrow-left"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7.5 0.5L1.5 7L7.5 13.5" />
+          </svg>
+          <span class="text-left">Back to Homepage</span>
+        </router-link>
+        <router-link to="/locations" tag="div" class="main-nav-clickable">
+          <span class="text-right">Locations of Smoke Alarms</span>
+          <svg
+            class="arrow-right"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 13.5L7 7L1 0.499999" /></svg></router-link>
       </div>
       <div class="main-header">
         <span class="main-header-title" id="types">Types of Smoke Alarms</span>
@@ -191,16 +189,42 @@
         </div>
       </div>
       <div class="types-page-main-nav">
-        <div class="main-nav-clickable">{{ `<` }} Back to Homepage</div>
-        <div class="main-nav-clickable">Locations of Smoke Alarms ></div>
+        <router-link to="/" tag="div" class="main-nav-clickable">
+          <svg
+            class="arrow-left"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7.5 0.5L1.5 7L7.5 13.5" />
+          </svg>
+          <span class="text-left">Back to Homepage</span>
+        </router-link>
+        <router-link to="/locations" tag="div" class="main-nav-clickable">
+          <span class="text-right">Locations of Smoke Alarms</span>
+          <svg
+            class="arrow-right"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 13.5L7 7L1 0.499999" /></svg></router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import PageHeader from "@/components/PageHeader.vue";
 export default {
   name: "TypesPage",
+  components: {
+    PageHeader,
+  },
   methods: {
     scroll(id) {
       document.getElementById(id).scrollIntoView({
@@ -215,106 +239,6 @@ export default {
 .types-page-container {
   font-family: $mainFont;
   width: 100%;
-
-  .types-page-header-container {
-    display: flex;
-    height: 900px;
-    position: relative;
-    overflow: hidden;
-    padding: 0 0 0 160px;
-    padding-top: 80px;
-    background-color: $tetriaryColor;
-    @media (max-width: 1280px) {
-      padding: 0 0 0 80px;
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-      padding: 8px;
-      margin-bottom: 16px;
-    }
-
-    .types-header-text-half {
-      width: 40%;
-      margin-bottom: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .types-header-text-container {
-        color: #1e1826;
-        display: flex;
-        flex-direction: column;
-        .types-header-title {
-          font-size: 56px;
-          line-height: 72px;
-          font-family: $semiBoldFont;
-          margin-bottom: 14px;
-        }
-        .types-header-content {
-          font-size: 24px;
-          line-height: 32px;
-        }
-        .types-header-button {
-          position: relative;
-          width: 381px;
-          height: 64px;
-          font-size: 24px;
-          line-height: 32px;
-          font-family: $semiBoldFont;
-          text-align: center;
-          background-color: $mainColor;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #ffffff;
-          border-radius: 5px;
-          margin-top: 75px;
-          cursor: pointer;
-          transition: 0.1s;
-          z-index: 1;
-          img {
-            position: absolute;
-            right: 40px;
-            margin-left: 24px;
-          }
-          &:hover {
-            background-color: $secondaryColor;
-          }
-        }
-      }
-    }
-    .types-header-image-half {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 60%;
-      .cropped-circle {
-        position: absolute;
-        z-index: 0;
-        right: -100px;
-        top: 300px;
-        @media (max-width: 1280px) {
-          right: -200px;
-          top: 350px;
-        }
-        @media (max-width: 768px) {
-          right: -300px;
-          top: 550px;
-        }
-      }
-      .header-top-image {
-        z-index: 1;
-        width: 65%;
-        @media (max-width: 1280px) {
-          width: 450px;
-        }
-        @media (max-width: 768px) {
-          width: 250px;
-        }
-      }
-    }
-  }
   .types-page-main-container {
     box-sizing: border-box;
     display: flex;
@@ -332,12 +256,13 @@ export default {
         margin: 16px;
       }
       @media (max-width: 768px) {
-        margin: 0;
+        margin: 16px;
         padding: 0;
       }
       .main-nav-clickable {
+        box-sizing: border-box;
+        position: relative;
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 8px 24px;
@@ -349,13 +274,47 @@ export default {
         text-align: center;
         color: #1e1826;
         transition: 0.1s;
-        width: 200px;
         flex-wrap: nowrap;
         white-space: nowrap;
+        @media (max-width: 768px) {
+          flex-wrap: break-word;
+          white-space: initial;
+        }
+        max-width: 50%;
+        svg {
+          stroke: #1e1826;
+          position: absolute;
+          &.arrow-left {
+            left: 16px;
+          }
+          &.arrow-right {
+            right: 16px;
+          }
+        }
+        span {
+          text-decoration: dashed;
+          text-decoration: none;
+        }
+        .text-right {
+          padding-right: 32px;
+          @media (max-width: 768px) {
+            padding-right: 4px;
+          }
+        }
+        .text-left {
+          padding-left: 32px;
+          @media (max-width: 768px) {
+            padding-left: 4px;
+          }
+        }
         &:hover {
           background-color: $secondaryColor;
           color: white;
           font-family: $semiBoldFont;
+          svg {
+            stroke: white;
+            stroke-width: 2px;
+          }
         }
       }
     }
