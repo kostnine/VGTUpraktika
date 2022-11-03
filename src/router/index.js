@@ -28,6 +28,11 @@ const routes = [
     path: '/types',
     name: 'types of smoke alarms',
     component: ()=> import('../views/TypesPage.vue')
+  },
+   {
+    path: '/place',
+    name: 'place',
+    component: ()=> import('../views/AlarmPlacePage.vue')
   }
 ]
 

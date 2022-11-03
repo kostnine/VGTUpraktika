@@ -55,8 +55,8 @@
 
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis suspendisse dolor purus ipsum pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis suspendisse dolor purus ipsum pellentesque.</p>
                 <div class="button-container">
-                    <button>Know More about Smoke Alarms</button>
-                    <button class="secondary">Regulations for Smoke Alarms in Europe</button>
+                    <button @click="$router.push({path:'/types'})">Know More about Smoke Alarms</button>
+                    <button class="secondary" @click="$router.push({path:'/regulations'})">Regulations for Smoke Alarms in Europe</button>
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@
         <h3>Information You Need to Know About Smoke Alarms</h3>
         <span>Click on one of the cards and find out more!</span>
         <div class="card-container">
-            <div class="card" v-for="(card, index) in cards" :key="index">
+            <div class="card" v-for="(card, index) in cards" :key="index" @click="card.action">
                 <div class="card-content">
                     <div class="text">
                         {{card.text}}
@@ -179,13 +179,19 @@ export default {
                     url: 'https://www.fireangel.co.uk', url_text: 'www.fireangel.co.uk', logo: 'images/supporters/FA-Logo-Orange.png'
                 },
                 {
-                    url: 'https://www.something.org', url_text: 'www.something.org', logo: 'images/supporters/one_more_logo.png'
+                    url: 'https://www.gloria.de/de', url_text: 'www.gloria.de', logo: 'images/supporters/gloria.png'
+                },
+                {
+                    url: 'https://www.kidde.com/home-safety/en', url_text: 'www.kidde.com', logo: 'images/supporters/kidde.png'
+                },
+                {
+                    url: 'https://www.euralarm.org', url_text: 'www.euralarm.org', logo: 'images/supporters/euralarm.png'
                 },
             ],
             cards:[
-                {'text': 'Types of smoke alarms', 'img': 'images/cards/detector.png'},
-                {'text': 'Where to place smoke alarms', 'img': ''},
-                {'text': 'How to look after smoke alarms', 'img': ''},
+                {'text': 'Types of smoke alarms', 'img': 'images/cards/detector.png', action: ()=>{ this.$router.push({path:'/types'})}},
+                {'text': 'Where to place smoke alarms', 'img': 'images/cards/room.png', action: ()=>{ this.$router.push({path:'/place'})}},
+                {'text': 'How to look after smoke alarms', 'img': '', action: ()=>{ this.$router.push({path:'/types'})}},
             ],
             currentlyHoveringVideo: '',
             tempMainMessageVideo: {},
@@ -321,7 +327,7 @@ h2{
     font-weight: 500;
 }
 h3{
-    font-size: clamp(24px, 4vw, 64px);
+    font-size: clamp(24px, 4vw, 46px);
     margin: 1rem 0;
     
     font-family: $semiBoldFont;
@@ -384,6 +390,7 @@ section{
                 width: 23.3vw;
                 min-width: 250px;
                 min-height: 250px;
+      
             }
             .red-circle{
                 width: 90vw;
@@ -415,6 +422,8 @@ section{
     min-height: 300px;
     top: 164px;
     left: 7.6vw;
+    max-width: 450px;
+    max-height: 450px;
     &::before{
         content: '';
         position: absolute;
@@ -599,6 +608,10 @@ section{
             }
         }
     }
+    @media (min-width: 2000px){
+        min-height: 100vh;
+        height: auto;
+    }
     @media (max-width: 1050px){
         min-height: 100vh;
         height: auto;
@@ -678,16 +691,16 @@ section{
 }
 .supporters{
     position: relative;
-    padding: 100px $paddingHorizontal;
+    padding: 50px $paddingHorizontal;
     overflow: hidden;
     h3{
-        margin: 0rem 0 5rem;
+        margin: 0rem 0 2rem;
     }
     .modal{
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 3px 3px 0px #00000052;
+        box-shadow: 0 2px 3px 0px #00000052;
         border-radius: 10px;
         width: 100%;
         height: 100%;
@@ -698,7 +711,7 @@ section{
         flex-direction: column;
         height: 100%;
         width: 100%;
-        padding: 4rem 0;
+        padding: 3rem 0;
         // padding: 115px;
         align-items: center;
     }
@@ -722,8 +735,12 @@ section{
             margin-bottom: 1rem;
         }
         &.extra{
+            padding: 0 11%;
             .supporter{
-                 max-width: 17%;
+                height: 9vw;
+                max-height: 170px;
+                max-width: 47%;
+                 margin: 1rem;
             }
         }
     }
@@ -733,7 +750,7 @@ section{
         justify-content: space-around;
         align-items: center;
         margin: 1rem 3rem;
-        height: 11vw;
+        height: 10vw;
         width: 17vw;
         padding: 1rem;
         border-radius: 10px;
@@ -757,6 +774,17 @@ section{
         }
         &:active{
            box-shadow: 0px 2px 3px 0px #0000004f;
+        }
+    }
+    @media (min-width: 1900px){
+        height: auto;
+        .supporter-container{
+            &.extra{
+                .supporter{
+
+                        height: 25vh;
+                }   
+            }
         }
     }
     @media (max-width: 1320px){
@@ -790,8 +818,10 @@ section{
                     }
                 }
                 &.extra{
+                    padding: 0;
                     .supporter{
                         max-width: 100%;
+                        width: 44%;
                     }
                 }
                 &:first-of-type{
@@ -827,6 +857,13 @@ section{
                     }
                     span{
                         font-size: clamp(16px, 4vw, 24px);
+                    }
+                }
+                &.extra{
+                    padding: 0;
+                    .supporter{
+                        max-width: 100%;
+                        width: 100%;
                     }
                 }
             }
@@ -873,10 +910,14 @@ section{
             .text{
                 font-size: clamp(16px, 2vw, 36px);
                 transition: color 0.3s;
+                margin-bottom: 1.5rem;
             }
             img{
-                width: fit-content;
+                width: auto;
                 max-width: 100%;
+                max-height: 100%;
+                display: flex;
+                height: 100%;
             }
             .card-content{
                 display: flex;
@@ -947,6 +988,8 @@ section{
                     img{
                         width: 50vw;
                         max-width: 280px;
+                        height: auto;
+                        margin: auto;
                     }
                 }
             }
