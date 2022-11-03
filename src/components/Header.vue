@@ -13,7 +13,16 @@
     </div>
     <nav class="header-navigation-bar" :class="{open: windowWidth < 768 ? isMenuOpen : true}" >
       <router-link to="/regulations" class="header-nav-block">Regulations in Europe</router-link>
+      <div class="header-button-with-dropdown">
       <div class="header-nav-block dropdown" @click="dropdownExtended = !dropdownExtended">Smoke Alarms Information <img :class="dropdownExtended ? 'flipped': 'non-flipped'" src="@/assets/icons/arrow_down.svg" alt="dropdown"/></div>
+      <transition name="slide">
+        <div v-if="dropdownExtended" class="header-dropdown">
+          <router-link to="/types" class="header-nav-block link-dropdown">Types Of Smoke Alarms</router-link>
+          <router-link to="/place" class="header-nav-block link-dropdown">Where To Place Smoke Alarms</router-link>
+          <!-- <router-link to="/care" class="header-nav-block">How to Look After Smoke Alarms</router-link> -->
+        </div>
+      </transition>
+      </div>
       <router-link to="/facts" class="header-nav-block">Important Facts</router-link>
       <router-link to="/downloads" class="header-nav-block">Download Section</router-link>
     </nav>
@@ -78,22 +87,61 @@ export default {
       // border: 1px solid black;
       min-width: 18%;
       padding: 8px 0;
-      &:hover{
-        font-family: $semiBoldFont;
+      &.link-dropdown{
+        color: white;
+        box-sizing: content-box;
+        width: 236px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &:hover {
+        &:not(.link-dropdown){
+          font-family: $semiBoldFont;
         border-bottom: 2px solid #000000;
+        }
+        &.link-dropdown{
+          font-family: $semiBoldFont;
+        }
       }
     }
     .dropdown{
       cursor: pointer;
+      @media(min-width: 768px){
+        width: 236px;
+      }
       .flipped{
         transition: 0.3s;
         transform: rotate(180deg);
+        margin-left: 8px;
       }
       .non-flipped{
         transition: 0.3s;
         transform: rotate(0deg);
+        margin-left: 8px;
       }
     }
+    .header-button-with-dropdown{
+      display: flex;
+      flex-direction: column;
+      -webkit-user-select: none; /* Safari */        
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE10+/Edge */
+      user-select: none; /* Standard */
+      .header-dropdown{
+        display: flex;
+        flex-direction: column;
+        background-color: #C0554B;
+        border-radius: 0px 0px 5px 5px;
+        transition: transform .2s ease-in-out;
+        transform-origin: top;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+  .slide-enter, .slide-leave-to{
+    transform: scaleY(0);
   }
   .burger{
     display: flex;

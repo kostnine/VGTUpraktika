@@ -23,6 +23,11 @@ const routes = [
     name: 'regulations',
 
     component: () => import('../views/RegulationsPage.vue')
+  },
+  {
+    path: '/types',
+    name: 'types of smoke alarms',
+    component: ()=> import('../views/TypesPage.vue')
   }
 ]
 
