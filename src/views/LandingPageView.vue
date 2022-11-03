@@ -63,15 +63,17 @@
         <div class="footer">
             <div 
                 class="video"
-                v-for="(video, index) in windowWidth<768 ? videos : videos.filter(el=>el.id != mainMessageVideo.id)" 
+                v-for="(video, index) in windowWidth<768 ? videos : footerVideos" 
                 :key="index"
                 :class="{loading: isLoadingNewVideo}"
             >
-                <video v-if="windowWidth<768" :ref="`video-${index}`" controls>
-                    <source :src="require(`@/assets/${video.link}`)" type="video/mp4"  >
-                    Your browser does not support the video tag.
-                </video>
-                <img v-else :src="require(`@/assets/${video.img}`)" alt="" @click="setMainMessageVideo(video)">
+                <transition name="slide" mode="out-in">
+                    <video v-if="windowWidth<768" :ref="`video-${index}`" controls>
+                        <source :src="require(`@/assets/${video.link}`)" type="video/mp4"  >
+                        Your browser does not support the video tag.
+                    </video>
+                    <img v-else :src="require(`@/assets/${video.img}`)" :key="video.id" alt="" @click="setMainMessageVideo(video, index)">
+                </transition>
             </div>
         </div>
     </section>
@@ -197,10 +199,14 @@ export default {
                 },
              
             ],
+            footerVideos:[],
 
             
             swiper: null,
         }
+    },
+    mounted(){
+        this.footerVideos = this.videos.filter(el=>el.id != 0);
     },
     computed:{
         isMobile(){
@@ -234,13 +240,17 @@ export default {
         }
     },
     methods:{
-        setMainMessageVideo(video){
+        setMainMessageVideo(video, index){
             if(this.isLoadingNewVideo ) return;
             if(this.videoStack[this.videoStack.length-1].id == video.id) return;
             this.isLoadingNewVideo = true;
+            let oldVideo = this.mainMessageVideo;
             this.tempMainMessageVideo=video;
             this.videoStack.push(video);
             this.mainMessageVideo=video;
+            video = oldVideo;
+            this.footerVideos[index] = oldVideo;
+            console.log(video)
             this.$nextTick(()=>{
                 this.swiper.update();
                 this.$nextTick(()=>{
@@ -554,7 +564,14 @@ section{
         background: $mainColor;
         padding: 2rem calc(min(160px, 10vw));
         justify-content: space-between;
+        span{
+            display: flex;
+            flex-direction: row;
+        }
         .video{
+            display: flex;
+            flex:1;
+            flex-direction: column;
             height: calc(min(250px, 10vw));
             min-width: calc(min(360px, 10vw));
             margin: 0 1rem;
@@ -928,6 +945,30 @@ section{
 }
 .fadeIn-enter, .fadeIn-leave-to /* .fade-leave-active below version 2.1.8 */ {
   transform: translateY(0%);
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+   opacity: 0;
+}
+.slide-leave-active,
+.slide-enter-active {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);;
+}
+.slide-enter {
+  transform: translateY(100%);
+     opacity: 0.5;
+
+}
+.slide-leave-to {
+  transform: translateY(-100%);
+    opacity: 0.5;
+
+}
+
+.flip-list-move {
+  transition: transform 1s;
 }
 </style>
 <style lang="scss">
