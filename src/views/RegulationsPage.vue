@@ -1,36 +1,15 @@
 <template>
   <div class="regulations-page-container">
-    <div class="regulations-page-header">
-      <div class="regulations-header-text">
-        <span class="regulations-header-title">Regulations in Europe</span>
-        <span class="regulations-header-content"
-          >See the interactive map to know more about regulations in different
-          european homes!</span
-        >
-        <button class="regulations-header-button">
-          <span @click="scroll('text-content')">Map of the Europe </span
-          ><img src="@/assets/icons/arrow_down_white.svg" alt="down_arrow" />
-        </button>
-      </div>
-      <div class="regulations-page-image-half">
-        <img
-          class="top-image"
-          src="@/assets/images/Man_writing.png"
-          alt="image"
-        />
-        <img
-          class="cropped-circle"
-          src="@/assets/images/Circle_red.svg"
-          alt="circle"
-        />
-      </div>
-    </div>
-    <div class="regulations-page-map">
-      <div
-        class="regulations-page-text-content"
-        id="text-content"
-        v-if="activeCountry == ''"
-      >
+    <PageHeader
+      image="images/Man_writing.png"
+      title="Regulations in Europe"
+      content="See the interactive map to know more about regulations in different
+          european homes!"
+      buttonText="Map of the Europe"
+      scrollTo="map"
+    />
+    <div class="regulations-page-map" id="map">
+      <div class="regulations-page-text-content" v-if="activeCountry == ''">
         <span class="regulations-page-text-title"
           >Smoke alarm requirements</span
         >
@@ -60,16 +39,14 @@
             <li>Extensive smoke alarm legislation in multiple countries</li>
             <li>No legislation in Southern/Eastern Europe</li>
             <li>
-              Weak legislation/lack of a requirement/forcement is as bad as e.g.
-              France 20% homes protected with working smoke alarms according to
-              Fire Service Sources
+              Consumer awareness is found to be the most important influence in the decision to buy a smoke alarm, even without legislation or when legislation is limited or is not enforced actively.
             </li>
+            
           </ul>
         </div>
       </div>
       <div
         class="regulations-page-text-content"
-        id="text-content"
         v-else-if="activeCountry != ''"
       >
         <div class="regulations-country-info-block">
@@ -137,6 +114,7 @@
 // @ is an alias to /src
 import country_data from "@/assets/data/country_data.json";
 import CountryComponent from "@/components/Country.vue";
+import PageHeader from "@/components/PageHeader.vue";
 export default {
   name: "RegulationsPage",
   data() {
@@ -147,6 +125,7 @@ export default {
   },
   components: {
     CountryComponent,
+    PageHeader,
   },
   methods: {
     setActiveCountry(country) {
@@ -172,102 +151,6 @@ export default {
 .regulations-page-container {
   width: 100%;
   box-sizing: border-box;
-}
-.regulations-page-header {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  height: 1080px;
-  background-color: #fbf3ed;
-  padding-top: 80px;
-  padding-left: 160px;
-  padding-right: 160px;
-  margin-bottom: -50px;
-  box-sizing: border-box;
-  @media (max-width: 1280px) {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
-  .regulations-header-text {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    font-family: $mainFont;
-    justify-content: center;
-    align-items: flex-start;
-    @media (max-width: 1280px) {
-      width: 80%;
-    }
-    .regulations-header-title {
-      font-family: $semiBoldFont;
-      font-size: 64px;
-      margin-bottom: 50px;
-    }
-    .regulations-header-content {
-      font-size: 24px;
-      text-align: start;
-      margin-bottom: 75px;
-      width: 80%;
-      @media (max-width: 1280px) {
-        width: 100%;
-      }
-    }
-    .regulations-header-button {
-      position: relative;
-      width: 380px;
-      height: 64px;
-      border-radius: 5px;
-      border: none;
-      color: white;
-      background-color: #c0554b;
-      font-size: 24px;
-      font-family: $semiBoldFont;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      img {
-        height: 12px;
-        width: 27px;
-        position: absolute;
-        top: 28px;
-        right: 40px;
-      }
-      &:hover {
-        background-color: #483a5b;
-      }
-    }
-  }
-  .regulations-page-image-half {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media (max-width: 1280px) {
-      margin-left: 100px;
-    }
-    .cropped-circle {
-      position: absolute;
-      z-index: 0;
-      right: 0;
-      top: 350px;
-      @media (max-width: 1280px) {
-        right: -100px;
-        top: 450px;
-        max-width: 923px;
-        max-height: 923px;
-      }
-    }
-    .top-image {
-      z-index: 1;
-      height: 70%;
-      @media (max-width: 1280px) {
-        min-width: 450px;
-        max-height: 450px;
-      }
-    }
-  }
 }
 .regulations-page-map {
   position: relative;
