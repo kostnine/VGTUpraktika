@@ -50,15 +50,14 @@
         v-else-if="activeCountry != ''"
       >
         <div class="regulations-country-info-block">
-          <img
+          <span class="regulations-country-name">{{
+            country_data[activeCountry].name
+          }}<img
             @click="clearActiveCountry"
             src="@/assets/icons/close_cross.svg"
             alt="close"
             class="regulations-country-close"
-          />
-          <span class="regulations-country-name">{{
-            country_data[activeCountry].name
-          }}</span>
+          /></span>
           <div
             class="paragraph"
             v-if="country_data[activeCountry].p1_title != ''"
@@ -292,6 +291,49 @@ export default {
     height: 70%;
   }
 }
+
+@media(max-width: 768px){
+    .regulations-page-map{
+      flex-direction: column;
+      padding: 0 10vw;
+      height: 1000px;
+      .regulations-page-text-content{
+        width: 100%;
+      }
+      .regulations-page-map-content{
+        width: 110%;
+        div{
+          height: 100%;
+          svg{
+            height: 100%;
+          }
+        }
+      }
+    }
+    .regulations-country-info-block{
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 100vw;
+      padding: 0 1vw;
+      height: 90%;
+      box-sizing: border-box;
+      .regulations-country-name{
+        font-size: 36px;
+        margin: 0 8px;
+        line-height: 36px;
+        position: relative;
+        .regulations-country-close{
+          top: -10px;
+          left: 89vw;
+        }
+      }
+      .paragraph{
+        font-size: 14px;
+        max-width: 85%;
+      }
+    }
+  }
 </style>
 <style lang="scss">
 @import "@/assets/scss/variables";
