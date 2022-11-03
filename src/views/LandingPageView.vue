@@ -74,6 +74,14 @@
                     </video>
                     <img v-else :src="require(`@/assets/${video.img}`)" :key="video.id" alt="" @click="setMainMessageVideo(video, index)">
                 </transition>
+                <transition name="fade" mode="out-in">
+                    <div v-if="windowWidth>=768" :key="video.id" class="play-button" @click="setMainMessageVideo(video, index)">
+                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z" fill="#1E1826"/>
+                        </svg>
+
+                    </div>
+                </transition>
             </div>
         </div>
     </section>
@@ -191,7 +199,7 @@ export default {
             cards:[
                 {'text': 'Types of smoke alarms', 'img': 'images/cards/detector.png', action: ()=>{ this.$router.push({path:'/types'})}},
                 {'text': 'Where to place smoke alarms', 'img': 'images/cards/room.png', action: ()=>{ this.$router.push({path:'/place'})}},
-                {'text': 'How to look after smoke alarms', 'img': '', action: ()=>{ this.$router.push({path:'/types'})}},
+                {'text': 'How to look after smoke alarms', 'img': 'images/cards/maintain.png', action: ()=>{ this.$router.push({path:'/types'})}},
             ],
             currentlyHoveringVideo: '',
             tempMainMessageVideo: {},
@@ -342,6 +350,27 @@ section{
     height: 100vh;
     padding: 0 $paddingHorizontal;
     overflow: hidden;
+}
+.play-button{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.67);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    cursor: pointer;
+    svg{
+        margin-right: -4px;
+    }
 }
 .date{
     display: flex;
@@ -591,6 +620,7 @@ section{
             min-width: calc(min(360px, 10vw));
             margin: 0 1rem;
             border-radius: 15px;
+            position: relative;
             overflow: hidden;
             video, img{
                 object-fit: cover;
@@ -908,16 +938,18 @@ section{
             overflow: hidden;
             transition: background-color 0.3s, box-shadow 0.3s;
             .text{
+                display: flex;
+                flex:1;
                 font-size: clamp(16px, 2vw, 36px);
                 transition: color 0.3s;
                 margin-bottom: 1.5rem;
             }
             img{
-                width: auto;
+                // width: auto;
                 max-width: 100%;
                 max-height: 100%;
                 display: flex;
-                height: 100%;
+                // height: auto;
             }
             .card-content{
                 display: flex;
@@ -925,7 +957,7 @@ section{
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                padding: calc(min(5vw, 4rem)) calc(min(5vw, 5rem));
+                padding: calc(min(4vw, 3rem)) calc(min(4vw, 1.5rem));
                 text-align: center;
             }
             &:hover{
@@ -955,7 +987,19 @@ section{
                 width: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
                 height: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
                 .card-content{
-                    padding: calc(min(2vw, 2rem)) calc(min(4vw, 3rem));
+                    padding: calc(min(2vw, 2rem)) calc(min(3vw, 1.5rem));
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        .card-container{
+            .card{
+                .card-content{
+                    img{
+                        width: auto;
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -982,7 +1026,7 @@ section{
                 .card-content{
                     padding: 1rem 2rem;
                     .text{
-
+                        flex: initial;
                         font-size: clamp(24px, 3vw, 36px);
                     }
                     img{
