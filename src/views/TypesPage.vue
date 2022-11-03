@@ -36,11 +36,32 @@
             <path d="M1 13.5L7 7L1 0.499999" /></svg></router-link>
       </div>
       <div class="main-header">
-        <span class="main-header-title" id="types">Types of Smoke Alarms</span>
-        <span class="main-header-content"
-          >Did you know that there are .. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Proin lacus sollicitudin proin accumsan
-          senectus enim ultrices volutpat felis vitae?</span
+        <span class="main-header-title" id="types">How to Choose Your Smoke Alarm?</span>
+        <div class="main-header-content"
+          ><div><span>Good quality smoke alarms can be recognized by the <span class="semibold">CE logo </span>
+          and the <span class="semibold">identification numbers</span> for that specific smoke alarm next to it.<br/></span>
+          <div class="separator"></div>
+          <span class="separated-text">Also the <span class="semibold">European standard EN 14604</span> should be mentioned.</span></div><div class="image-container"><img src="@/assets/images/C_sign.svg" alt="c_sign"/></div></div
+        >
+        <div class="main-header-item">
+          <div class="main-content-image">
+            <img src="@/assets/images/Battery.png" alt="linked" />
+          </div>
+          <div class="main-content-text">
+            <span class="content-text-block">When you buy a smoke alarm, please pay attention to <span class="semibold">the battery lifetime</span> of the product.</span
+            >
+            <span class="content-text-block"
+              >Smoke alarms can have a replaceable battery with a lifetime of 1 up top 5 years. When the battery is empty you replace it,  after ten years of usage you need to replace the smoke alarm as well.
+            </span>
+            <span class="content-text-block"
+              >This is why smoke alarms with a sealed 10 year lifetime battery are the better option. Calculated over these ten years it is the best priced option because you do not need to replace the battery. You also do not run the risk of using the alarm for more than ten years.</span
+            >
+          </div>
+        </div>
+        <div class="main-header-content"
+          ><div><span>Another option is choosing a smoke alarm which is <span class="semibold">interconnected</span>, this means if 1 smoke alarm detects smoke, they all go off.<br/></span>
+          <div class="separator"></div>
+          <span class="separated-text">You can choose <span class="semibold">wireless interconnected smoke alarms or mains connected smoke alarms.</span></span></div></div
         >
       </div>
       <div class="main-content">
@@ -332,21 +353,94 @@ export default {
   @media (max-width: 1280px) {
     padding: 0 80px 0 80px;
   }
+  @media(max-width: 768px){
+    padding: 0 10vw;
+  }
   .main-header-title {
-    font-size: 48px;
-    line-height: 72px;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
     font-family: $semiBoldFont;
     text-align: center;
     color: #1e1826;
-    margin-bottom: 30px;
+    margin-bottom: 74px;
   }
   .main-header-content {
     font-size: 24px;
     line-height: 32px;
-    max-width: 550px;
-    text-align: center;
+    width: 90%;
+    text-align: start;
     color: #1e1826;
+    display: flex;
+    @media(max-width: 1024px){
+      flex-direction: column;
+      justify-content: center;
+      span{
+        width: 100%;
+      }
+      .image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+    span{
+      width: 80%;
+    }
+    .separator{
+      height: 16px;
+      width: 100%;
+    }
+    .image-container{
+      display: flex;
+      justify-content: flex-end;
+      width: 20%;
+      @media(max-width: 1024px){
+        width: 100%;
+        justify-content: center;
+        margin-top: 32px;
+      }
+    }
   }
+}
+.main-header-item{
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1E1826;
+  display: flex;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: #FBF3ED;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 95%;
+    @media (max-width: 1280px) {
+      width: 95%;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+    }
+    .main-content-image {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 768px) {
+        width: 80%;
+        padding: 8px;
+      }
+      img {
+        width: 100%;
+        @media (max-width: 768px) {
+          object-fit: fill;
+        }
+      }
+    }
 }
 .main-content {
   display: flex;
