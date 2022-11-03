@@ -109,6 +109,9 @@ export default {
       @media(min-width: 768px){
         width: 236px;
       }
+      @media(max-width: 768px){
+        
+      }
       .flipped{
         transition: 0.3s;
         transform: rotate(180deg);
@@ -215,9 +218,18 @@ export default {
         .header-nav-block{
           font-size: clamp(16px, 7vw, 36px);
           margin: 2rem 0;
+          .header-button-with-dropdown{
+            width: 100%;
+
+          }
           img{
             width: 30px;
             height: 20px;
+          }
+        }
+        .header-dropdown{
+          .header-nav-block{
+            width: 100%;
           }
         }
       }

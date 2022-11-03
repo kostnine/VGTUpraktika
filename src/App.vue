@@ -22,7 +22,7 @@ export default {
   font-family: $mainFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #000;
+  color: #1e1826;
 }
 body {
   margin: 0;
