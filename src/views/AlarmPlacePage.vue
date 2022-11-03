@@ -1,42 +1,59 @@
 <template>
   <div>
-    <div class="page-header">
-      <div class="header-text">
-        <span class="header-title">What Do You Need to Know
-About Smoke Alarms?</span>
-        <span class="header-content"
-          >Types of smoke alarms, where to locate them at home, how to look after them... Let’s find out everything!</span
-        >
-        <button class="header-button">
-          <span @click="scroll('locations-header')">Learn more locations </span
-          ><img src="@/assets/icons/arrow_down_white.svg" alt="down_arrow" />
-        </button>
-      </div>
-      <div class="page-image-half">
-        <img
-          class="top-image"
-          src="@/assets/images/install-smoke-alarms.png"
-          alt="image"
-        />
-        <img
-          class="cropped-circle"
-          src="@/assets/images/Circle_red.svg"
-          alt="circle"
-        />
-      </div>
-    </div>
+
+    <PageHeader
+      image="images/install-smoke-alarms.png"
+      title="Where to Place Smoke Alarms?"
+      content="Protect yourself and your family with the right number and correct placement of smoke detectors."
+      buttonText="Learn More About Locations"
+      scrollTo="locations-header"
+    />
     <div class="types-page-main-container"  >
       <div class="types-page-main-nav">
         <div class="main-nav-clickable" @click="$router.push({path: '/types'})">{{ `<` }} Types of Smoke Alarms</div>
         <div class="main-nav-clickable">How to Look After Smoke Alarms ></div>
       </div>
       <div class="main-header" id="locations-header">
-        <span class="main-header-title" id="types">Where to Place Smoke Alarms?</span>
-        <span class="main-header-content"
-          >The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.
-Although regulations differ slightly from country to country, we would like to provide some general guidelines on where to install smoke alarms.
-</span
-        >
+        <span class="main-header-title" id="types">Where Exactly Must Smoke Alarms be Installed?</span>
+        <span class="main-header-content">
+          The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.
+        </span>
+        <span class="main-header-content">
+          Although regulations differ slightly from country to country, we would like to provide some general guidelines on where to install smoke alarms.
+        </span>
+      </div>
+      <div class="recommendations">
+        <div class="row">
+          <div class="col left">
+            <p>According to the recommendations of various European fire protection organisations and associations, <strong>there should be at least 1 smoke alarm on every floor</strong> (including the basements), as well as in all bedrooms (especially children's rooms) and in rooms that are part of an escape route (e.g. hall, corridor).</p>
+          </div>
+          <div class="col">
+            <div class="card">
+              <p><strong>Note:</strong> In flats, of course, almost every corridor is also an escape route, as you only have one. In some houses there are also corridors that do not serve as an exit in case of fire. Smoke detectors do not have to be installed here. However, we recommend doing so anyway.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="content-column">
+          <div class="row">
+            <div class="arrow-right"></div>
+            <p>We also recommend that <strong>living rooms and study rooms</strong> should always be equipped with detectors. If a fire starts here, it takes longer for the other detectors to detect the fire.</p>
+          </div>
+          <div class="row">
+            <div class="arrow-right"></div>
+            <p>It also makes sense to install a detector in rooms where <strong>there are electrical appliances</strong> (especially washing machines or dryers) and <strong>in remote rooms</strong> that are frequently used but where the signal from other smoke detectors cannot be heard. 
+            </p>
+          </div>
+          <div class="row white">
+            <p>
+              In general, you should remember that <strong>a smoke detector can monitor an area of up to 60 m²</strong>. If your room area is larger than 60 m², you should install an additional smoke detector. So depending on the size of your home, this means that <strong>you will need several smoke alarms</strong>.
+            </p>
+          </div>
+          <div class="row">
+            <div class="arrow-right"></div>
+            <p>Before installing your smoke alarms, please <strong>check country-specific regulations</strong> or seek advice from a local fire safety expert.</p>
+          </div>
+        </div>
       </div>
       <div class="main-content">
         <div class="main-content-red-bar">
@@ -63,6 +80,41 @@ Although regulations differ slightly from country to country, we would like to p
                 <HouseComponent />
             </div>
         </div>
+        <div class="consider-container">
+          <h2>What to Consider for the Installation Location?</h2>
+          <span>Now that we have determined which rooms/areas should be equipped with detectors, the next question is where in the room the detector should be installed.</span>
+          <div class="card wheat mb-40">
+            <p>
+              In many European countries, legislation is specifying framework conditions to which the respective state building codes must adhere. Generally, the installation location must ensure early detection of fire smoke.
+            </p>
+            <p>
+              In addition, there are also specifications on room sizes and living areas which may be different from country to country. Your local fire protection expert will be able to advise you on this.
+            </p>
+          </div>
+          <h2>Installation in the Room</h2>
+          <div class="row">
+            <div class="col left">
+              <div class="row">
+                <div class="arrow-right"></div>
+                <p>Smoke detectors should be placed centrally in the room, at least 50 cm away from walls and other objects such as lamps and other ceiling-mounted fixtures. Do not install them near windows, doors, or ducts where drafts might interfere with their operation. 
+                </p>
+              </div>
+              <div class="row">
+                <div class="arrow-right"></div>
+                <p>Smoke alarms installed in the basement should be installed on the ceiling at the bottom of the stairs leading to the next level.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card wheat">
+                <h4>Never paint smoke alarms.</h4>
+                <p>
+                  Paint, stickers, or other decorations could keep the alarms from working.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="locations">
           <div class="content-section">
             <h2>Siting and Locations of Smoke Alarms</h2>
@@ -88,9 +140,12 @@ Although regulations differ slightly from country to country, we would like to p
 
 <script>
 import HouseComponent from '@/components/House.vue'
+import PageHeader from "@/components/PageHeader.vue";
+
 export default {
     components:{
-        HouseComponent
+        HouseComponent,
+        PageHeader
     },
     data(){
       return{
@@ -276,7 +331,6 @@ export default {
   justify-content: center;
   align-items: center;
   height: fit-content;
-  padding: 0 160px 0 160px;
   padding-top: 80px;
   padding-bottom: 210px;
   @media (max-width: 1280px) {
@@ -293,10 +347,91 @@ export default {
   .main-header-content {
     font-size: 24px;
     line-height: 32px;
-    max-width: 550px;
+    max-width: 70%;
     text-align: center;
     color: #1e1826;
+    margin-bottom: 4rem;
   }
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  &.white{
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.10);
+  }
+}
+.col{
+  &.left{
+    padding: 20px 40px 20px 0;
+  }
+}
+.recommendations{
+  display: flex;
+  padding: 50px calc(min(160px, 10vw)) 10%;
+  flex-direction: column;
+  background: #FBF3ED;
+  p{
+    margin: 0;
+    font-size: 20px;
+  }
+  .content-column{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.consider-container{
+  display: flex;
+  padding: 50px calc(min(160px, 10vw)) 0;
+  flex-direction: column;
+  align-items: center;
+  .row{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  h2{
+    text-align: center;
+    font-size: clamp(24px, 5vw, 32px);
+  }
+  span{
+    text-align: center;
+    max-width: 60%;
+    margin: 2rem 0 4rem;
+    font-size: clamp(16px, 5vw, 24px);
+  }
+}
+.card{
+  background: white;
+  padding: 20px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.10);
+  &.wheat{
+    background: #FBF3ED;
+    h4{
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.mb-40{
+  margin-bottom: 40px;
+}
+.arrow-right{
+  background: none;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  height: 25px;
+  width: 25px;
+  min-width: 25px;
+  min-height: 25px;
+  margin-left: -12.5px;
+  margin-right: 15px;
 }
 .main-content {
   position: relative;
