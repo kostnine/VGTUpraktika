@@ -69,6 +69,7 @@ export default {
       font-family: $semiBoldFont;
       font-size: 56px;
       line-height: 72px;
+      margin-bottom: 30px;
     }
     .header-content {
       font-size: 24px;
@@ -94,8 +95,7 @@ export default {
       z-index: 1;
       img {
         position: absolute;
-        right: 40px;
-        margin-left: 24px;
+        right: 15px;
       }
       &:hover {
         background-color: $secondaryColor;
