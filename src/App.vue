@@ -13,6 +13,11 @@ export default {
     HeaderComponent,
     FooterComponent,
   },
+  watch:{
+    '$route.path'(){
+      window.scroll(0,0);
+    }
+  }
 };
 </script>
 

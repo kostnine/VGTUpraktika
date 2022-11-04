@@ -24,7 +24,7 @@
       </transition>
       </div>
       <router-link to="/facts" class="header-nav-block">Important Facts</router-link>
-      <router-link to="/downloads" class="header-nav-block">Download Section</router-link>
+      <router-link to="/downloads" class="header-nav-block">Downloads</router-link>
     </nav>
   </div>
 </template>
@@ -61,22 +61,31 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 60px 160px 0;
+  padding: 55px 160px 0;
   z-index: 99;
   .header-image-container{
     width: 40%;
     display: flex;
     @media(max-width: 1280px){
       width: 35%;
+      .header-navigation-bar{
+        width: 65%;
+      }
+    }
+    @media(max-width: 1080px){
+      width: 20%;
+      a, img{
+        width: 100%;
+      }
     }
   }
   .header-navigation-bar{
-    width: 60%;
-    // border: 1px solid black;
-    display: flex;
-    padding-top: 7px;
-    align-items: flex-start;
-    justify-content: space-between;
+      width: 40.5vw;
+      display: flex;
+      padding-top: 7px;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 0 0 0 auto;
     .header-nav-block{
       font-size: 16px;
       text-decoration: none;
@@ -85,12 +94,13 @@ export default {
       font-weight: 400;
       text-align: center;
       // border: 1px solid black;
-      min-width: 18%;
-      padding: 8px 0;
+      // min-width: 18%;
+      white-space: nowrap;
+      padding: 8px 24px;
       &.link-dropdown{
         color: white;
         box-sizing: content-box;
-        width: 236px;
+        // width: 236px;
         font-size: 16px;
         line-height: 24px;
       }
@@ -115,12 +125,12 @@ export default {
       .flipped{
         transition: 0.3s;
         transform: rotate(180deg);
-        margin-left: 8px;
+        margin-left: 4px;
       }
       .non-flipped{
         transition: 0.3s;
         transform: rotate(0deg);
-        margin-left: 8px;
+        margin-left: 4px;
       }
     }
     .header-button-with-dropdown{
@@ -141,6 +151,13 @@ export default {
           color: white;
         }
       }
+    }
+    @media(max-width: 1280px){
+      width: 65%;
+    }
+    @media(max-width: 1080px){
+      width: 75%;
+     
     }
   }
   .slide-enter, .slide-leave-to{
@@ -181,7 +198,7 @@ export default {
     }
   }
   @media(max-width: 1280px){
-    padding: 30px 80px
+    padding: 30px 80px;
   }
   @media(max-width: 1050px){
     padding: 30px 30px;
@@ -239,6 +256,7 @@ export default {
       height: 80px;
       img{
         height: 100%;
+        width: initial;
       }
     }
   }

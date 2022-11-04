@@ -53,9 +53,9 @@
             <div class="text">
                 <h3> Messages of Support </h3>
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis suspendisse dolor purus ipsum pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis suspendisse dolor purus ipsum pellentesque.</p>
+                <p> Fire officers all over Europe support #smokealarmsaveslives day.</p>
                 <div class="button-container">
-                    <button @click="$router.push({path:'/types'})">Know More about Smoke Alarms</button>
+                    <button @click="$router.push({path:'/types'})">Find out more about smoke alarms</button>
                     <button class="secondary" @click="$router.push({path:'/regulations'})">Regulations for Smoke Alarms in Europe</button>
                 </div>
             </div>
@@ -73,6 +73,14 @@
                         Your browser does not support the video tag.
                     </video>
                     <img v-else :src="require(`@/assets/${video.img}`)" :key="video.id" alt="" @click="setMainMessageVideo(video, index)">
+                </transition>
+                <transition name="fade" mode="out-in">
+                    <div v-if="windowWidth>=768" :key="video.id" class="play-button" @click="setMainMessageVideo(video, index)">
+                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z" fill="#1E1826"/>
+                        </svg>
+
+                    </div>
                 </transition>
             </div>
         </div>
@@ -107,14 +115,19 @@
     </section>
     <section class="information" id="information">
         <h3>Information You Need to Know About Smoke Alarms</h3>
-        <span>Click on one of the cards and find out more!</span>
+        <span>Click and find out more!</span>
         <div class="card-container">
             <div class="card" v-for="(card, index) in cards" :key="index" @click="card.action">
                 <div class="card-content">
                     <div class="text">
                         {{card.text}}
                     </div>
-                    <img v-if="card.img != '' " :src="require(`@/assets/${card.img}`)" alt="">
+                    <img 
+                        v-if="card.img != '' " 
+                        :src="require(`@/assets/${card.img}`)" 
+                        alt=""
+                        :class="{'maintain': index == 2}"
+                    >
                 </div>
             </div>
         </div>
@@ -166,6 +179,9 @@ export default {
                 {
                     url: 'https://www.europeanfiresafetyalliance.org', url_text: 'www.europeanfiresafetyalliance.org', logo: 'images/supporters/efsa-logo.png'
                 },
+                {
+                    url: 'https://www.euralarm.org', url_text: 'www.euralarm.org', logo: 'images/supporters/euralarm.png'
+                },
         
             ],
             supportersExtra:[
@@ -178,20 +194,16 @@ export default {
                 {
                     url: 'https://www.fireangel.co.uk', url_text: 'www.fireangel.co.uk', logo: 'images/supporters/FA-Logo-Orange.png'
                 },
-                {
-                    url: 'https://www.gloria.de/de', url_text: 'www.gloria.de', logo: 'images/supporters/gloria.png'
-                },
+             
                 {
                     url: 'https://www.kidde.com/home-safety/en', url_text: 'www.kidde.com', logo: 'images/supporters/kidde.png'
                 },
-                {
-                    url: 'https://www.euralarm.org', url_text: 'www.euralarm.org', logo: 'images/supporters/euralarm.png'
-                },
+                
             ],
             cards:[
                 {'text': 'Types of smoke alarms', 'img': 'images/cards/detector.png', action: ()=>{ this.$router.push({path:'/types'})}},
                 {'text': 'Where to place smoke alarms', 'img': 'images/cards/room.png', action: ()=>{ this.$router.push({path:'/place'})}},
-                {'text': 'How to look after smoke alarms', 'img': '', action: ()=>{ this.$router.push({path:'/types'})}},
+                {'text': 'How to look after smoke alarms', 'img': 'images/cards/maintain.png', action: ()=>{ this.$router.push({path:'/types'})}},
             ],
             currentlyHoveringVideo: '',
             tempMainMessageVideo: {},
@@ -343,6 +355,27 @@ section{
     padding: 0 $paddingHorizontal;
     overflow: hidden;
 }
+.play-button{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.67);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    cursor: pointer;
+    svg{
+        margin-right: -4px;
+    }
+}
 .date{
     display: flex;
     flex-direction: row;
@@ -390,6 +423,7 @@ section{
                 width: 23.3vw;
                 min-width: 250px;
                 min-height: 250px;
+                
       
             }
             .red-circle{
@@ -420,10 +454,10 @@ section{
     width: 27.3vw;
     min-width: 300px;
     min-height: 300px;
-    top: 164px;
-    left: 7.6vw;
-    max-width: 450px;
-    max-height: 450px;
+    top: 65px;
+    left: 1vw;
+    max-width: 658px;
+    max-height: 658px;
     &::before{
         content: '';
         position: absolute;
@@ -457,8 +491,8 @@ section{
         height: 69vw;
         width: 69vw;
         z-index: -1;
-        left: 7.6vw;
-        top: 164px;
+        top: 65px;
+        left: 1vw;
         border-radius: 50%;
         background: $mainColor;
     }
@@ -555,7 +589,7 @@ section{
             border-radius: 5px;
             border: none;
             color: white;
-            font-family: $semiBoldFont;
+            font-family: $mainFont;
             font-size: 16px;
             cursor: pointer;
             &.secondary{
@@ -567,6 +601,7 @@ section{
             transition: all 0.3s;
             &:hover{
                 box-shadow: 0px 3px 10px 0px #0707073f;
+                font-weight: 700;
             }
             &:active{
                 box-shadow: 0px 2px 3px 0px #0000004f;
@@ -591,6 +626,7 @@ section{
             min-width: calc(min(360px, 10vw));
             margin: 0 1rem;
             border-radius: 15px;
+            position: relative;
             overflow: hidden;
             video, img{
                 object-fit: cover;
@@ -730,16 +766,19 @@ section{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
+        margin-top: auto;
         &:first-of-type{
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
         }
         &.extra{
-            padding: 0 11%;
+            padding: 0 4%;
+            margin-bottom: auto;
+            margin-top: 0;
             .supporter{
                 height: 9vw;
                 max-height: 170px;
                 max-width: 47%;
+                width: 17vw;
                  margin: 1rem;
             }
         }
@@ -776,7 +815,7 @@ section{
            box-shadow: 0px 2px 3px 0px #0000004f;
         }
     }
-    @media (min-width: 1900px){
+    @media (min-width: 1950px){
         height: auto;
         .supporter-container{
             &.extra{
@@ -908,16 +947,23 @@ section{
             overflow: hidden;
             transition: background-color 0.3s, box-shadow 0.3s;
             .text{
+                display: flex;
+                flex:1;
                 font-size: clamp(16px, 2vw, 36px);
                 transition: color 0.3s;
                 margin-bottom: 1.5rem;
             }
             img{
-                width: auto;
+                // width: auto;
                 max-width: 100%;
                 max-height: 100%;
                 display: flex;
-                height: 100%;
+                &.maintain{
+                    margin-bottom: -3rem;
+                    margin-right: -4rem;
+                }
+
+                // height: auto;
             }
             .card-content{
                 display: flex;
@@ -925,7 +971,7 @@ section{
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                padding: calc(min(5vw, 4rem)) calc(min(5vw, 5rem));
+                padding: calc(min(4vw, 3rem)) calc(min(4vw, 1.5rem));
                 text-align: center;
             }
             &:hover{
@@ -955,7 +1001,30 @@ section{
                 width: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
                 height: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
                 .card-content{
-                    padding: calc(min(2vw, 2rem)) calc(min(4vw, 3rem));
+                    padding: calc(min(2vw, 2rem)) calc(min(3vw, 1.5rem));
+                }
+            }
+        }
+    }
+    @media (max-width: 1150px){
+        .card-container {
+            .card{
+                img{
+                    &.maintain{
+                        margin-bottom: -2rem;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        .card-container{
+            .card{
+                .card-content{
+                    img{
+                        width: auto;
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -982,7 +1051,7 @@ section{
                 .card-content{
                     padding: 1rem 2rem;
                     .text{
-
+                        flex: initial;
                         font-size: clamp(24px, 3vw, 36px);
                     }
                     img{
@@ -990,6 +1059,11 @@ section{
                         max-width: 280px;
                         height: auto;
                         margin: auto;
+                        &.maintain{
+                            margin-bottom: -6%;
+                            margin-right: -6%;
+                            width: 72vw;
+                        }
                     }
                 }
             }

@@ -228,7 +228,7 @@
 <path class="room" opacity="0.7" d="M218 299L142 311.488V424.919L218 427V299Z" fill="#A2BBE5"/>
 <path class="room" opacity="0.7" d="M222.52 165.8L222 292.015L321.277 275.394L498 305V191.77L322.836 131L222.52 165.8Z" fill="#EAD40E"/>
 <path class="room" opacity="0.7" d="M223 426.883V299.102L321.585 283L498 311.049V423.247L321.585 430L223 426.883Z" fill="#D93D2E"/>
-<path class="room" opacity="0.7" d="M501 305.154V193L642 241.808V328L501 305.154Z" fill="#A2BBE5"/>
+<path class="room" opacity="0.7" d="M501 305.154V193L642 241.808V328L501 305.154Z" fill="#6FC06E"/>
 <path class="room" opacity="0.7" d="M501 423V311L641 333.4V418.312L501 423Z" fill="#A2BBE5"/>
 <path class="room" opacity="0.7" d="M647 418V317L737 335.222V414.356L647 418Z" fill="#D93D2E"/>
 </svg>
