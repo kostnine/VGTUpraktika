@@ -23,10 +23,10 @@
           </svg>
           <span class="text-left">Back to Homepage</span>
         </router-link>
-        <router-link to="/locations" tag="div" class="main-nav-clickable">
+        <router-link to="/place" tag="div" class="main-nav-clickable">
           <span class="text-right">Locations of Smoke Alarms</span>
           <svg
-            class="arrow-right"
+            class="nav-arrow-right"
             width="8"
             height="14"
             viewBox="0 0 8 14"
@@ -226,7 +226,7 @@
         <router-link to="/locations" tag="div" class="main-nav-clickable">
           <span class="text-right">Locations of Smoke Alarms</span>
           <svg
-            class="arrow-right"
+            class="nav-arrow-right"
             width="8"
             height="14"
             viewBox="0 0 8 14"
@@ -308,7 +308,7 @@ export default {
           &.arrow-left {
             left: 16px;
           }
-          &.arrow-right {
+          &.nav-arrow-right {
             right: 16px;
           }
         }
