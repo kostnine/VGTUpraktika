@@ -53,9 +53,9 @@
             <div class="text">
                 <h3> Messages of Support </h3>
 
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis suspendisse dolor purus ipsum pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis suspendisse dolor purus ipsum pellentesque.</p>
+                <p> Fire officers all over Europe support #smokealarmsaveslives day.</p>
                 <div class="button-container">
-                    <button @click="$router.push({path:'/types'})">Know More about Smoke Alarms</button>
+                    <button @click="$router.push({path:'/types'})">Find out more about smoke alarms</button>
                     <button class="secondary" @click="$router.push({path:'/regulations'})">Regulations for Smoke Alarms in Europe</button>
                 </div>
             </div>
@@ -115,14 +115,19 @@
     </section>
     <section class="information" id="information">
         <h3>Information You Need to Know About Smoke Alarms</h3>
-        <span>Click on one of the cards and find out more!</span>
+        <span>Click and find out more!</span>
         <div class="card-container">
             <div class="card" v-for="(card, index) in cards" :key="index" @click="card.action">
                 <div class="card-content">
                     <div class="text">
                         {{card.text}}
                     </div>
-                    <img v-if="card.img != '' " :src="require(`@/assets/${card.img}`)" alt="">
+                    <img 
+                        v-if="card.img != '' " 
+                        :src="require(`@/assets/${card.img}`)" 
+                        alt=""
+                        :class="{'maintain': index == 2}"
+                    >
                 </div>
             </div>
         </div>
@@ -174,6 +179,9 @@ export default {
                 {
                     url: 'https://www.europeanfiresafetyalliance.org', url_text: 'www.europeanfiresafetyalliance.org', logo: 'images/supporters/efsa-logo.png'
                 },
+                {
+                    url: 'https://www.euralarm.org', url_text: 'www.euralarm.org', logo: 'images/supporters/euralarm.png'
+                },
         
             ],
             supportersExtra:[
@@ -186,15 +194,11 @@ export default {
                 {
                     url: 'https://www.fireangel.co.uk', url_text: 'www.fireangel.co.uk', logo: 'images/supporters/FA-Logo-Orange.png'
                 },
-                {
-                    url: 'https://www.gloria.de/de', url_text: 'www.gloria.de', logo: 'images/supporters/gloria.png'
-                },
+             
                 {
                     url: 'https://www.kidde.com/home-safety/en', url_text: 'www.kidde.com', logo: 'images/supporters/kidde.png'
                 },
-                {
-                    url: 'https://www.euralarm.org', url_text: 'www.euralarm.org', logo: 'images/supporters/euralarm.png'
-                },
+                
             ],
             cards:[
                 {'text': 'Types of smoke alarms', 'img': 'images/cards/detector.png', action: ()=>{ this.$router.push({path:'/types'})}},
@@ -419,6 +423,7 @@ section{
                 width: 23.3vw;
                 min-width: 250px;
                 min-height: 250px;
+                
       
             }
             .red-circle{
@@ -449,10 +454,10 @@ section{
     width: 27.3vw;
     min-width: 300px;
     min-height: 300px;
-    top: 164px;
-    left: 7.6vw;
-    max-width: 450px;
-    max-height: 450px;
+    top: 65px;
+    left: 1vw;
+    max-width: 658px;
+    max-height: 658px;
     &::before{
         content: '';
         position: absolute;
@@ -486,8 +491,8 @@ section{
         height: 69vw;
         width: 69vw;
         z-index: -1;
-        left: 7.6vw;
-        top: 164px;
+        top: 65px;
+        left: 1vw;
         border-radius: 50%;
         background: $mainColor;
     }
@@ -584,7 +589,7 @@ section{
             border-radius: 5px;
             border: none;
             color: white;
-            font-family: $semiBoldFont;
+            font-family: $mainFont;
             font-size: 16px;
             cursor: pointer;
             &.secondary{
@@ -596,6 +601,7 @@ section{
             transition: all 0.3s;
             &:hover{
                 box-shadow: 0px 3px 10px 0px #0707073f;
+                font-weight: 700;
             }
             &:active{
                 box-shadow: 0px 2px 3px 0px #0000004f;
@@ -760,16 +766,19 @@ section{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
+        margin-top: auto;
         &:first-of-type{
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
         }
         &.extra{
-            padding: 0 11%;
+            padding: 0 4%;
+            margin-bottom: auto;
+            margin-top: 0;
             .supporter{
                 height: 9vw;
                 max-height: 170px;
                 max-width: 47%;
+                width: 17vw;
                  margin: 1rem;
             }
         }
@@ -806,7 +815,7 @@ section{
            box-shadow: 0px 2px 3px 0px #0000004f;
         }
     }
-    @media (min-width: 1900px){
+    @media (min-width: 1950px){
         height: auto;
         .supporter-container{
             &.extra{
@@ -949,6 +958,11 @@ section{
                 max-width: 100%;
                 max-height: 100%;
                 display: flex;
+                &.maintain{
+                    margin-bottom: -3rem;
+                    margin-right: -4rem;
+                }
+
                 // height: auto;
             }
             .card-content{
@@ -988,6 +1002,17 @@ section{
                 height: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
                 .card-content{
                     padding: calc(min(2vw, 2rem)) calc(min(3vw, 1.5rem));
+                }
+            }
+        }
+    }
+    @media (max-width: 1150px){
+        .card-container {
+            .card{
+                img{
+                    &.maintain{
+                        margin-bottom: -2rem;
+                    }
                 }
             }
         }
@@ -1034,6 +1059,11 @@ section{
                         max-width: 280px;
                         height: auto;
                         margin: auto;
+                        &.maintain{
+                            margin-bottom: -6%;
+                            margin-right: -6%;
+                            width: 72vw;
+                        }
                     }
                 }
             }
