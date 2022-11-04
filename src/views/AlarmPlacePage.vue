@@ -23,7 +23,7 @@
         </span>
       </div>
       <div class="recommendations">
-        <div class="row">
+        <div class="row has-cols">
           <div class="col left">
             <p>According to the recommendations of various European fire protection organisations and associations, <strong>there should be at least 1 smoke alarm on every floor</strong> (including the basements), as well as in all bedrooms (especially children's rooms) and in rooms that are part of an escape route (e.g. hall, corridor).</p>
           </div>
@@ -61,17 +61,9 @@
                 <div class="row">Location requirements for smoke and heat alarms according to the room of the house.</div>
                 <div class="row">
                     <div class="legend">
-                        <div class="legend-item">
-                            <div class="legend-color ionisation"></div>
-                            <div class="legend-text">Ionisation</div>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color optical"></div>
-                            <div class="legend-text">Optical</div>
-                        </div>
-                        <div class="legend-item">
-                            <div class="legend-color heat"></div>
-                            <div class="legend-text">Heat</div>
+                        <div class="legend-item" v-for="(item, index) in legend" :key="index">
+                            <div class="legend-color" :style="{'background-color': item.color}"></div>
+                            <div class="legend-text">{{item.text}}</div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +74,7 @@
         </div>
         <div class="consider-container">
           <h2>What to Consider for the Installation Location?</h2>
-          <span>Now that we have determined which rooms/areas should be equipped with detectors, the next question is where in the room the detector should be installed.</span>
+          <span>Now that we have determined which rooms/areas should be equipped with detectors, the next question is <strong>where in the room the detector should be installed</strong>.</span>
           <div class="card wheat mb-40">
             <p>
               In many European countries, legislation is specifying framework conditions to which the respective state building codes must adhere. Generally, the installation location must ensure early detection of fire smoke.
@@ -92,7 +84,7 @@
             </p>
           </div>
           <h2>Installation in the Room</h2>
-          <div class="row">
+          <div class="row has-cols">
             <div class="col left">
               <div class="row">
                 <div class="arrow-right"></div>
@@ -156,6 +148,12 @@ export default {
           {img: 'images/locations/location4.svg', 'text': 'Heat alarms – max 5 m from any point in the area.'},
           {img: 'images/locations/location5.svg', 'text': 'Site alarm between risk areas (kitchen and lounge) and bedrooms.'},
           {img: 'images/locations/location6.svg', 'text': 'Site alarms max 3 m from any bedroom door.'},
+        ],
+        legend:[
+          {color: '#ead40ea9', text: 'Recommended protection'},
+          {color: '#6FC06EBD', text: 'No alarm'},
+          {color: '#a2bae5a8', text: 'Minimum protection'},
+          {color: '#d93c2eaf', text: 'Recommended heat detector'},
         ]
       }
     },
@@ -337,12 +335,12 @@ export default {
     padding: 0 80px 0 80px;
   }
   .main-header-title {
-    font-size: 48px;
-    line-height: 72px;
+    line-height: clamp(36px, 5vw, 72px);
     font-family: $semiBoldFont;
     text-align: center;
     color: #1e1826;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
+    font-size: clamp(28px, 5vw, 48px);
   }
   .main-header-content {
     font-size: 24px;
@@ -371,7 +369,7 @@ export default {
 }
 .recommendations{
   display: flex;
-  padding: 50px calc(min(160px, 10vw)) 10%;
+  padding: 50px calc(min(160px, 10vw)) 15%;
   flex-direction: column;
   background: #FBF3ED;
   p{
@@ -396,6 +394,7 @@ export default {
   h2{
     text-align: center;
     font-size: clamp(24px, 5vw, 32px);
+    margin: 3rem 0;
   }
   span{
     text-align: center;
@@ -464,7 +463,8 @@ export default {
         position: absolute;
         left: 0;
         bottom:0;
-
+        height: auto;
+        max-height: 60vh;
       }
     }
     .info{
@@ -486,7 +486,7 @@ export default {
           align-items: center;
           justify-content: space-between;
           background: white;
-          padding: calc(min(20px,10vw)) calc(min(40px,10vw));
+          padding: calc(min(15px,10vw)) calc(min(10px,10vw));
           border-radius: 10px;
           width: 100%;
           max-width: 355px;
@@ -503,15 +503,9 @@ export default {
             height: 30px;
             width: 30px;
             margin: 5px;
-            &.ionisation{
-              background: #ead40ea9;
-            }
-             &.optical{
-              background: #a2bae5a8;
-            }
-             &.heat{
-              background: #d93c2eaf;
-            }
+          }
+          .legend-text{
+            text-align: center;
           }
         }
       }
@@ -603,16 +597,26 @@ export default {
     justify-content: center;
     color:#1e1826;
     .location{
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       max-width: 50%;
       width: 45%;
+      height: 40vh;
+      max-height: 400px;
       margin: 2rem 0px;
+      img{
+        display: flex;
+        height: 73%;
+      }
       p{
+        height: 27%;
         text-align: center;
-        max-width: 320px;
+        max-width: 70%;
+        margin: calc(min(30px, 5vw)) 0 0;
+        font-size: clamp(16px, 5vw, 20px);
         font-family: $mainFont;
       }
     }
@@ -672,6 +676,59 @@ export default {
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 16px;
+  }
+}
+@media (max-width: 768px){
+  .main-header{
+    padding: 0 20px;
+    .main-header-content{
+      max-width: 100%;
+      margin-bottom: 7vw;
+    }
+
+  }
+  .has-cols{
+    flex-wrap: wrap;
+  }
+  .col{
+    &.left{
+      padding-right: 0;
+    };
+  }
+  .recommendations{
+    padding: 5vw 20px 15%;
+  }
+  .main-content .main-content-red-bar {
+    padding: 15px 20px;
+    .info{
+      width: 100%;
+      max-width: 100%;
+      .row{
+        margin-bottom: 15px;
+        .legend{
+          max-width: 100%;
+          .legend-item{
+            margin: 0 1vw;
+          }
+        }
+      }
+    }
+  }
+  .consider-container{
+    padding: 8vw 20px;
+    h2{
+      margin: 1vh 0;
+    }
+    span{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+.types-page-main-container .types-page-main-nav{
+  margin-top: 1rem;
+  &.bottom{
+    margin-top: 0;
   }
 }
 </style>
