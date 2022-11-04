@@ -5,7 +5,7 @@
       title="Regulations in Europe"
       content="See the interactive map to know more about regulations in different
           european homes!"
-      buttonText="Map of the Europe"
+      buttonText="Map of Europe"
       scrollTo="map"
     />
     <div class="regulations-page-map" id="map">
@@ -14,7 +14,7 @@
           >Smoke alarm requirements</span
         >
         <span class="regulations-page-text-subInfo"
-          >Click on map and see what are the requirements in each country</span
+          >Click on map and see what the requirements in each country are.</span
         >
         <div class="regulations-page-dict-row">
           <div class="regulations-page-dict-wrapper">
@@ -39,9 +39,8 @@
             <li>Extensive smoke alarm legislation in multiple countries</li>
             <li>No legislation in Southern/Eastern Europe</li>
             <li>
-              Consumer awareness is found to be the most important influence in the decision to buy a smoke alarm, even without legislation or when legislation is limited or is not enforced actively.
+              Consumer awareness is found to be the most important influence in the decision to buy a smoke alarm, even without legislation or when legislation is limited.
             </li>
-            
           </ul>
         </div>
       </div>
