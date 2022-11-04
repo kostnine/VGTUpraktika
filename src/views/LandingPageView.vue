@@ -263,19 +263,16 @@ export default {
             if(this.videoStack[this.videoStack.length-1].id == video.id) return;
             this.isLoadingNewVideo = true;
             let oldVideo = this.mainMessageVideo;
-            this.tempMainMessageVideo=video;
             this.videoStack.push(video);
             this.mainMessageVideo=video;
             video = oldVideo;
             this.footerVideos[index] = oldVideo;
-            console.log(video)
             this.$nextTick(()=>{
                 this.swiper.update();
                 this.$nextTick(()=>{
                     this.swiper.slideTo(this.videoStack.length-1, 300);
                     if(this.videoStack.length > 2){
                         setTimeout(()=>{
-
                         this.videoStack.splice(0, 1)
                         this.swiper.update();
                         this.swiper.slidePrev(0)
@@ -287,25 +284,8 @@ export default {
 
                         this.isLoadingNewVideo=false
                     }
-                    // this.swiper.setProgress(0,300)
                 });
-                setTimeout(()=>{
-                    // this.videoStack.shift();
-                      
-                }, 50);
-                  setTimeout(()=>{
-                        // this.swiper.update();
-                        // this.swiper.slidePrev(0);
-
-
-                   
-                },350)
             })
-          
-                // let swiper = this.$refs.swiper;
-                // console.log(swiper);
-                // if(Array.isArray(swiper)) swiper = swiper[0];
-
         },
         onSwiper(swiper){
             if(this.swiper == null){
