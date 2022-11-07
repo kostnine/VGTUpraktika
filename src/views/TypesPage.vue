@@ -70,142 +70,21 @@
         </div>
         <div class="main-content-item first">
           <div class="main-content-image">
-            <img src="@/assets/images/Linked_detectors.png" alt="linked" />
+            <img src="@/assets/images/types_smoke_detector.png" alt="linked" />
           </div>
           <div class="main-content-text">
             <span class="content-text-title">Linked Smoke Detector(s)</span>
-            <span class="content-text-block">
-              Do you want to hang multiple detectors in your house? Or do you
-              not hear your smoke detector properly? Then we recommend
-              installing linked smoke detectors. Linking the smoke detectors is
-              very simple and can be done
-              <span class="semibold">wirelessly.</span></span
+            <span class="content-text-block">In any property where multiple Smoke Alarms are deemed necessary, it is recommended to interconnect the alarms</span
             >
             <span class="content-text-block"
-              >If one detector in the house is triggered by smoke,
-              <span class="semibold"
-                >the signal will go off for all detectors that are linked.</span
-              >
-              This will warn you earlier and give you longer time to flee. This
-              increases your chance of survival!
+              >All alarms will sound once any one of them detects smoke. This provides earlier warning and improves escape time.
             </span>
             <span class="content-text-block"
-              >Did you know that you can also
-              <span class="semibold"
-                >share linked detectors with neighbors?</span
-              >
-              This way you live even safer and you can warn or help each other
-              sooner if a fire starts in the house.</span
+              >Interconnect can be hardwired or use radio linked signals depending on your property and the technology used.</span
             >
             <span class="content-text-block"
-              >Do you want to purchase linked detectors? Then
-              <a href="https:/google.com" target="_blank">click here.</a></span
+              >It is especially useful in multple story properties or where the sleeping zones are distant from the living areas where the fire risk may be higher.</span
             >
-          </div>
-        </div>
-        <div class="main-content-item">
-          <div class="main-content-text">
-            <span class="content-text-title">Linked Smoke Detector(s)</span>
-            <span class="content-text-block">
-              Do you want to hang multiple detectors in your house? Or do you
-              not hear your smoke detector properly? Then we recommend
-              installing linked smoke detectors. Linking the smoke detectors is
-              very simple and can be done
-              <span class="semibold">wirelessly.</span></span
-            >
-            <span class="content-text-block"
-              >If one detector in the house is triggered by smoke,
-              <span class="semibold"
-                >the signal will go off for all detectors that are linked.</span
-              >
-              This will warn you earlier and give you longer time to flee. This
-              increases your chance of survival!
-            </span>
-            <span class="content-text-block"
-              >Did you know that you can also
-              <span class="semibold"
-                >share linked detectors with neighbors?</span
-              >
-              This way you live even safer and you can warn or help each other
-              sooner if a fire starts in the house.</span
-            >
-            <span class="content-text-block"
-              >Do you want to purchase linked detectors? Then
-              <a href="https:/google.com" target="_blank">click here.</a></span
-            >
-          </div>
-          <div class="main-content-image">
-            <img src="@/assets/images/Linked_detectors.png" alt="linked" />
-          </div>
-        </div>
-        <div class="main-content-item">
-          <div class="main-content-image">
-            <img src="@/assets/images/Linked_detectors.png" alt="linked" />
-          </div>
-          <div class="main-content-text">
-            <span class="content-text-title">Linked Smoke Detector(s)</span>
-            <span class="content-text-block">
-              Do you want to hang multiple detectors in your house? Or do you
-              not hear your smoke detector properly? Then we recommend
-              installing linked smoke detectors. Linking the smoke detectors is
-              very simple and can be done
-              <span class="semibold">wirelessly.</span></span
-            >
-            <span class="content-text-block"
-              >If one detector in the house is triggered by smoke,
-              <span class="semibold"
-                >the signal will go off for all detectors that are linked.</span
-              >
-              This will warn you earlier and give you longer time to flee. This
-              increases your chance of survival!
-            </span>
-            <span class="content-text-block"
-              >Did you know that you can also
-              <span class="semibold"
-                >share linked detectors with neighbors?</span
-              >
-              This way you live even safer and you can warn or help each other
-              sooner if a fire starts in the house.</span
-            >
-            <span class="content-text-block"
-              >Do you want to purchase linked detectors? Then
-              <a href="https:/google.com" target="_blank">click here.</a></span
-            >
-          </div>
-        </div>
-        <div class="main-content-item">
-          <div class="main-content-text">
-            <span class="content-text-title">Linked Smoke Detector(s)</span>
-            <span class="content-text-block">
-              Do you want to hang multiple detectors in your house? Or do you
-              not hear your smoke detector properly? Then we recommend
-              installing linked smoke detectors. Linking the smoke detectors is
-              very simple and can be done
-              <span class="semibold">wirelessly.</span></span
-            >
-            <span class="content-text-block"
-              >If one detector in the house is triggered by smoke,
-              <span class="semibold"
-                >the signal will go off for all detectors that are linked.</span
-              >
-              This will warn you earlier and give you longer time to flee. This
-              increases your chance of survival!
-            </span>
-            <span class="content-text-block"
-              >Did you know that you can also
-              <span class="semibold"
-                >share linked detectors with neighbors?</span
-              >
-              This way you live even safer and you can warn or help each other
-              sooner if a fire starts in the house.</span
-            >
-            <span class="content-text-block"
-              >Do you want to purchase linked detectors? Then
-              <a href="https:/google.com" target="_blank">click here.</a></span
-            >
-          </div>
-          <div class="main-content-image">
-            <img src="@/assets/images/Linked_detectors.png" alt="linked" />
           </div>
         </div>
       </div>
@@ -264,7 +143,6 @@ export default {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
     .types-page-main-nav {
       width: 100%;
       display: flex;
