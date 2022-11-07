@@ -2,8 +2,8 @@
   <div class="maintain-page">
     <PageHeader
       image="images/maintain/battery.png"
-      title="How to Maintain Smoke Alarms"
-      content="It is important that all smoke alarms in your home are working. Learn how to maintain them properly!"
+      title="How to Maintain<br> Smoke Alarms"
+      content="It is important that all smoke alarms in your home are<br> working. Learn how to maintain them properly!"
       buttonText="Learn More About Maintenance"
       scrollTo="maintain"
     />
@@ -18,7 +18,7 @@
           <span class="maintain-item-text-title"
             ><div class="arrow-right"></div>
             It is important to test and clean your smoke alarm on a regular
-            basis.</span
+            basis</span
           >
           <span class="maintain-item-text-block first">
             We advise to test the smoke alarm on a fixed date every month and to
@@ -98,6 +98,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 .maintain-page-main-container {
+  margin-top: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,5 +222,9 @@ export default {
   width: 18px;
   margin-left: -12.5px;
   margin-right: 15px;
+  @media (max-width: 768px) {
+    height: 15px;
+    width: 35px;
+  }
 }
 </style>
