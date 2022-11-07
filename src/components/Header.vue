@@ -19,7 +19,7 @@
         <div v-if="dropdownExtended" class="header-dropdown">
           <router-link to="/types" class="header-nav-block link-dropdown">Types Of Smoke Alarms</router-link>
           <router-link to="/place" class="header-nav-block link-dropdown">Where To Place Smoke Alarms</router-link>
-          <!-- <router-link to="/care" class="header-nav-block">How to Look After Smoke Alarms</router-link> -->
+          <router-link to="/maintain" class="header-nav-block link-dropdown">How to Maintain Smoke Alarms</router-link>
         </div>
       </transition>
       </div>

@@ -137,7 +137,7 @@ export default {
     flex-direction: column-reverse;
     height: 1280px;
     max-height: calc(100vh - 110px);
-    padding: 20px 20px 0;
+    padding: 32px calc(min(160px, 10vw));
     .header-text-half {
       // margin-top: -320px;
       width: 100%;
@@ -145,12 +145,12 @@ export default {
       align-items: center;
       justify-content: flex-start;
       z-index: 1;
-      .header-title{
+      .header-title {
         line-height: clamp(36px, 5vw, 72px);
         font-size: clamp(28px, 4vw, 56px);
         margin-bottom: 20px;
       }
-      .header-button{
+      .header-button {
         margin-top: auto;
       }
     }
