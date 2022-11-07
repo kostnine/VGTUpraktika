@@ -2,67 +2,72 @@
   <div class="types-page-container">
     <PageHeader
       image="images/Hand_detector.png"
-      title="What Do You Need To Know About Smoke Alarms?"
-      content="Types of smoke alarms, where to locate them at home, how to look
-            after them... Let’s find out everything!"
-      buttonText="Learn More About Types"
+      title="About Smoke Alarms"
+      content="Which smoke alarm is the best for you?<br> Let's find out!"
+      buttonText="Learn More"
       scrollTo="types"
+      break="false"
     />
     <div class="types-page-main-container">
-      <div class="types-page-main-nav">
-        <router-link to="/" tag="div" class="main-nav-clickable">
-          <svg
-            class="arrow-left"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M7.5 0.5L1.5 7L7.5 13.5" />
-          </svg>
-          <span class="text-left">Back to Homepage</span>
-        </router-link>
-        <router-link to="/place" tag="div" class="main-nav-clickable">
-          <span class="text-right">Locations of Smoke Alarms</span>
-          <svg
-            class="nav-arrow-right"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M1 13.5L7 7L1 0.499999" /></svg></router-link>
-      </div>
       <div class="main-header">
-        <span class="main-header-title" id="types">How to Choose Your Smoke Alarm?</span>
-        <div class="main-header-content"
-          ><div><span>Good quality smoke alarms can be recognized by the <span class="semibold">CE logo </span>
-          and the <span class="semibold">identification numbers</span> for that specific smoke alarm next to it.<br/></span>
-          <div class="separator"></div>
-          <span class="separated-text">Also the <span class="semibold">European standard EN 14604</span> should be mentioned.</span></div><div class="image-container"><img src="@/assets/images/C_sign.svg" alt="c_sign"/></div></div
+        <span class="main-header-title" id="types"
+          >How to Choose Your Smoke Alarm?</span
         >
+        <div class="main-header-content">
+          <div>
+            <span
+              >All smoke alarms placed on the EU market must be third party
+              certified to <span class="semibold">EN14604</span> and
+              <span class="semibold">CE marked</span> to conform with the
+              Construction Products Regulation.</span
+            >
+          </div>
+          <div class="image-container">
+            <img src="@/assets/images/C_sign.svg" alt="c_sign" />
+          </div>
+        </div>
         <div class="main-header-item">
           <div class="main-content-image">
             <img src="@/assets/images/Battery.png" alt="linked" />
           </div>
           <div class="main-content-text">
-            <span class="content-text-block">When you buy a smoke alarm, please pay attention to <span class="semibold">the battery lifetime</span> of the product.</span
+            <span class="content-text-block"
+              >When you buy a smoke alarm, please pay attention to
+              <span class="semibold">the battery lifetime</span> of the
+              product.</span
             >
             <span class="content-text-block"
-              >Smoke alarms can have a replaceable battery with a lifetime of 1 up top 5 years. When the battery is empty you replace it,  after ten years of usage you need to replace the smoke alarm as well.
+              >Smoke alarms can have a replaceable battery with a lifetime of 1
+              up top 5 years. When the battery is empty you need to replace it,
+              after ten years of usage you need to replace the smoke alarm as
+              well.
             </span>
             <span class="content-text-block"
-              >This is why smoke alarms with a sealed 10 year lifetime battery are the better option. Calculated over these ten years it is the best priced option because you do not need to replace the battery. You also do not run the risk of using the alarm for more than ten years.</span
+              >This is why smoke alarms with a sealed 10 year lifetime battery
+              are the better option. Calculated over these ten years it is the
+              best priced option because you do not need to replace the battery.
+              You also do not run the risk of using the alarm for more than ten
+              years.</span
             >
           </div>
         </div>
-        <div class="main-header-content"
-          ><div><span>Another option is choosing a smoke alarm which is <span class="semibold">interconnected</span>, this means if 1 smoke alarm detects smoke, they all go off.<br/></span>
-          <div class="separator"></div>
-          <span class="separated-text">You can choose <span class="semibold">wireless interconnected smoke alarms or mains connected smoke alarms.</span></span></div></div
-        >
+        <div class="main-header-content">
+          <div>
+            <span
+              >Another option is choosing a smoke alarm which is
+              <span class="semibold">interconnected</span>, this means if 1
+              smoke alarm detects smoke, they all go off.<br
+            /></span>
+            <div class="separator"></div>
+            <span class="separated-text"
+              >You can choose
+              <span class="semibold"
+                >wireless interconnected smoke alarms or mains connected smoke
+                alarms.</span
+              ></span
+            >
+          </div>
+        </div>
       </div>
       <div class="main-content">
         <div class="main-content-red-bar">
@@ -74,45 +79,25 @@
           </div>
           <div class="main-content-text">
             <span class="content-text-title">Linked Smoke Detector(s)</span>
-            <span class="content-text-block">In any property where multiple Smoke Alarms are deemed necessary, it is recommended to interconnect the alarms</span
+            <span class="content-text-block"
+              >In any property where multiple Smoke Alarms are deemed necessary,
+              it is recommended to interconnect the alarms</span
             >
             <span class="content-text-block"
-              >All alarms will sound once any one of them detects smoke. This provides earlier warning and improves escape time.
+              >All alarms will sound once any one of them detects smoke. This
+              provides earlier warning and improves escape time.
             </span>
             <span class="content-text-block"
-              >Interconnect can be hardwired or use radio linked signals depending on your property and the technology used.</span
+              >Interconnect can be hardwired or use radio linked signals
+              depending on your property and the technology used.</span
             >
             <span class="content-text-block"
-              >It is especially useful in multple story properties or where the sleeping zones are distant from the living areas where the fire risk may be higher.</span
+              >It is especially useful in multple story properties or where the
+              sleeping zones are distant from the living areas where the fire
+              risk may be higher.</span
             >
           </div>
         </div>
-      </div>
-      <div class="types-page-main-nav">
-        <router-link to="/" tag="div" class="main-nav-clickable">
-          <svg
-            class="arrow-left"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M7.5 0.5L1.5 7L7.5 13.5" />
-          </svg>
-          <span class="text-left">Back to Homepage</span>
-        </router-link>
-        <router-link to="/locations" tag="div" class="main-nav-clickable">
-          <span class="text-right">Locations of Smoke Alarms</span>
-          <svg
-            class="nav-arrow-right"
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M1 13.5L7 7L1 0.499999" /></svg></router-link>
       </div>
     </div>
   </div>
@@ -155,7 +140,7 @@ export default {
         margin: 16px;
       }
       @media (max-width: 768px) {
-        margin: 16px;
+        margin: 0;
         padding: 0;
       }
       .main-nav-clickable {
@@ -231,7 +216,7 @@ export default {
   @media (max-width: 1280px) {
     padding: 0 80px 0 80px;
   }
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     padding: 0 10vw;
   }
   .main-header-title {
@@ -250,31 +235,31 @@ export default {
     text-align: start;
     color: #1e1826;
     display: flex;
-    @media(max-width: 1024px){
+    @media (max-width: 1024px) {
       flex-direction: column;
       justify-content: center;
-      span{
+      span {
         width: 100%;
       }
-      .image-container{
+      .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
       }
     }
-    span{
+    span {
       width: 80%;
     }
-    .separator{
+    .separator {
       height: 16px;
       width: 100%;
     }
-    .image-container{
+    .image-container {
       display: flex;
       justify-content: flex-end;
       width: 20%;
-      @media(max-width: 1024px){
+      @media (max-width: 1024px) {
         width: 100%;
         justify-content: center;
         margin-top: 32px;
@@ -282,47 +267,48 @@ export default {
     }
   }
 }
-.main-header-item{
+.main-header-item {
   margin-top: 70px;
   margin-bottom: 70px;
   font-size: 20px;
   line-height: 28px;
-  color: #1E1826;
+  color: #1e1826;
   display: flex;
-    box-sizing: border-box;
-    padding: 16px;
-    background-color: #FBF3ED;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #fbf3ed;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 95%;
+  @media (max-width: 1280px) {
     width: 95%;
-    @media (max-width: 1280px) {
-      width: 95%;
-    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+  }
+  .main-content-image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+      width: 80%;
       padding: 8px;
     }
-    .main-content-image {
-      width: 30%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    img {
+      width: 100%;
       @media (max-width: 768px) {
-        width: 80%;
-        padding: 8px;
-      }
-      img {
-        width: 100%;
-        @media (max-width: 768px) {
-          object-fit: fill;
-        }
+        object-fit: fill;
       }
     }
+  }
 }
 .main-content {
   display: flex;
   flex-direction: column;
+  margin-bottom: 80px;
   .main-content-red-bar {
     background-color: $mainColor;
     width: 100%;

@@ -3,14 +3,14 @@
     <PageHeader
       image="images/Green_block.png"
       title="Important facts"
-      content="What else do you need to know?"
+      content="Some surprising facts that you<br> might not even know!"
       buttonText="Read more"
       scrollTo="facts"
     />
     <div class="facts-page-main">
       <div class="facts-main-header">
         <span class="header-title" id="facts"
-          >Smoke alarms have one major benefit – they save lives!</span
+          >Smoke Alarms Have One Major <br />Benefit – They Save Lives!</span
         >
         <div class="header-list">
           <span class="header-list-title">Did you know?</span>
@@ -54,7 +54,7 @@
           <button @click="mailto">info@eurofsa.org</button>
         </div>
         <div class="facts-how">
-          <span class="how-title">How Smoke Alarms Work?</span>
+          <span class="how-title">How Do Smoke Alarms Work?</span>
           <div class="how-item">
             <div class="image-container">
               <img src="@/assets/images/facts/smoke_alarm.png" alt="alarm" />
