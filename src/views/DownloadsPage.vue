@@ -570,6 +570,10 @@ export default {
   flex-direction: column;
   height: 100vh;
   padding-top: 191px;
+  @media (max-width: 768px) {
+    height: fit-content;
+    padding-top: 20px;
+  }
 }
 h2 {
   font-size: clamp(36px, 5vw, 56px);
@@ -587,7 +591,7 @@ h2 {
 }
 .text {
   height: 100%;
-  padding: 50px 160px;
+  padding: 50px calc(min(160px, 10vw));
   span {
     font-size: clamp(16px, 5vw, 24px);
   }
@@ -596,9 +600,12 @@ h2 {
   display: flex;
   flex-direction: column;
   background: #c0554b;
-  padding: 15px calc(min(160px, 10vw));
+  padding: 50px calc(min(160px, 10vw));
   color: white;
   font-size: clamp(16px, 5vw, 24px);
+  @media (max-width: 768px) {
+    padding: 15px calc(min(160px, 10vw));
+  }
   span {
     margin-bottom: 1rem;
     font-family: $semiBoldFont;
@@ -627,9 +634,23 @@ h2 {
       }
       &:first-child {
         margin-left: 0;
+        @media (max-width: 768px) {
+          margin: 0 auto;
+        }
       }
       &:last-child {
         margin-right: 0;
+        @media (max-width: 768px) {
+          margin: 0 auto;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      .video {
+        height: 22vh;
+        justify-content: center;
+        margin: 20px auto;
       }
     }
   }
@@ -644,6 +665,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   .leaflet {
     position: relative;
@@ -654,6 +679,9 @@ h3 {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    @media (max-width: 768px) {
+      margin: 20px 0;
+    }
     .bottom-content {
       display: flex;
       align-items: center;
@@ -726,6 +754,9 @@ h3 {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    @media (max-width: 768px) {
+      margin: 5px;
+    }
     video,
     img {
       object-fit: cover;
@@ -780,6 +811,7 @@ h3 {
     line-height: 24px;
   }
   @media (max-width: 768px) {
+    height: fit-content;
     .why-videos-title {
       text-align: center;
     }
@@ -793,10 +825,10 @@ h3 {
     aspect-ratio: 16/9;
     width: 80%;
     height: auto;
-    margin: auto;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 20px;
-    max-height: 60vh;
+    max-height: 30vh;
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -826,6 +858,9 @@ h3 {
     &:last-child {
       width: 30%;
     }
+    @media (max-width: 768px) {
+      margin: 5px;
+    }
     .videos {
       display: flex;
       flex-direction: column;
@@ -833,6 +868,9 @@ h3 {
       .video {
         position: relative;
         margin: 16px;
+        @media (max-width: 768px) {
+          margin: 0;
+        }
       }
       img {
         max-width: 100%;
