@@ -135,7 +135,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 55px 160px 0;
+  padding: 55px calc(min(160px, 10vw));
   z-index: 99;
   .header-image-container {
     width: 40%;
@@ -146,12 +146,6 @@ export default {
       @media (max-width: 768px) {
         min-width: 120px;
         min-height: 80px;
-      }
-    }
-    @media (max-width: 1280px) {
-      width: 35%;
-      .header-navigation-bar {
-        width: 65%;
       }
     }
     @media (max-width: 1080px) {
@@ -179,7 +173,7 @@ export default {
       // border: 1px solid black;
       // min-width: 18%;
       white-space: nowrap;
-      padding: 8px 12px;
+      padding: 8px 15px;
       &.link-dropdown {
         color: white;
         box-sizing: content-box;
@@ -278,7 +272,7 @@ export default {
     }
   }
   @media (max-width: 1280px) {
-    padding: 30px 80px;
+    padding: 30px calc(min(160px, 10vw));
   }
   @media (max-width: 1050px) {
     padding: 30px 30px;

@@ -50,43 +50,10 @@
         class="regulations-page-text-content"
         v-else-if="activeCountry != ''"
       >
-        <div class="regulations-country-info-block">
-          <span class="regulations-country-name"
-            >{{ country_data[activeCountry].name
-            }}<img
-              @click="clearActiveCountry"
-              src="@/assets/icons/close_cross.svg"
-              alt="close"
-              class="regulations-country-close"
-          /></span>
-          <div
-            class="paragraph"
-            v-if="country_data[activeCountry].p1_title != ''"
-          >
-            <span class="paragraph-title">{{
-              country_data[activeCountry].p1_title
-            }}</span>
-            <div v-html="country_data[activeCountry].p1_text"></div>
-          </div>
-          <div
-            class="paragraph"
-            v-if="country_data[activeCountry].p2_title != ''"
-          >
-            <span class="paragraph-title">{{
-              country_data[activeCountry].p2_title
-            }}</span>
-            <div v-html="country_data[activeCountry].p2_text"></div>
-          </div>
-          <div
-            class="paragraph"
-            v-if="country_data[activeCountry].p3_title != ''"
-          >
-            <span class="paragraph-title">{{
-              country_data[activeCountry].p3_title
-            }}</span>
-            <div v-html="country_data[activeCountry].p3_text"></div>
-          </div>
-        </div>
+        <CountryTextBlock
+          :country="this.activeCountry"
+          :closeCountry="clearActiveCountry"
+        />
       </div>
       <div class="regulations-page-map-content">
         <div>
@@ -115,6 +82,7 @@
 import country_data from "@/assets/data/country_data.json";
 import CountryComponent from "@/components/Country.vue";
 import PageHeader from "@/components/PageHeader.vue";
+import CountryTextBlock from "@/components/CountryTextBlock.vue";
 export default {
   name: "RegulationsPage",
   data() {
@@ -126,6 +94,7 @@ export default {
   components: {
     CountryComponent,
     PageHeader,
+    CountryTextBlock,
   },
   methods: {
     setActiveCountry(country) {
@@ -233,60 +202,6 @@ export default {
 }
 
 //regulations left info
-.regulations-country-info-block {
-  height: 800px;
-  background: #faf7f5;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #1e1826;
-  position: relative;
-  min-width: 450px;
-  @media (max-width: 1280px) {
-    max-height: 760px;
-    overflow-y: auto;
-    min-width: 400px;
-  }
-  .regulations-country-close {
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    top: 16px;
-    right: 21px;
-    cursor: pointer;
-  }
-}
-.regulations-country-name {
-  font-size: 48px;
-  line-height: 72px;
-  font-family: $semiBoldFont;
-  margin-bottom: 26px;
-  margin-left: 22px;
-  @media (max-width: 1280px) {
-    margin-bottom: 4px;
-  }
-}
-.paragraph-title {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: $semiBoldFont;
-}
-.paragraph {
-  text-align: start;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 27px 16px;
-  width: 95%;
-  a {
-    color: #1290c1;
-  }
-  @media (max-width: 1280px) {
-    margin: 4px 8px;
-  }
-}
 .map-svg {
   width: 100%;
   height: 100%;
@@ -318,7 +233,6 @@ export default {
     top: 100px;
     left: 0;
     width: 100vw;
-    padding: 0 1vw;
     height: 90%;
     box-sizing: border-box;
     .regulations-country-name {

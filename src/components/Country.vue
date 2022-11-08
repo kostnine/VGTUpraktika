@@ -33,8 +33,6 @@ export default {
   methods: {
     setSelectedCountry(name) {
       this.setCountry(name);
-      console.log(this.activeSelectedCountry);
-      console.log(this.countryInfo.name);
     },
   },
 };

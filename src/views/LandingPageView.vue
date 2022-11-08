@@ -454,7 +454,7 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-  padding: 196px 0 0 $paddingHorizontal;
+  padding: 196px 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
     flex-direction: column;
@@ -465,7 +465,7 @@ section {
     margin-top: -6rem;
   }
   @media (max-width: 768px) {
-    padding: 0 $paddingHorizontalMobile;
+    padding: 0 calc(min(160px, 10vw));
     flex-direction: column;
     height: calc(100vh - 110px);
     .text {
