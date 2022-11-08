@@ -99,11 +99,11 @@
         <div class="main-content-red-bar">
           <div class="info">
             <div class="row">
-              Location requirements for smoke and heat alarms according to the
-              room of the house.
-            </div>
-            <div class="row">
               <div class="legend">
+                <span class="legend-title">
+                  Location requirements for smoke and heat alarms according to
+                  the room of the house.
+                </span>
                 <div
                   class="legend-item"
                   v-for="(item, index) in legend"
@@ -265,9 +265,9 @@ export default {
         },
       ],
       legend: [
-        { color: "#ead40ea9", text: "Recommended protection" },
-        { color: "#d93c2eaf", text: "Recommended heat detector" },
         { color: "#a2bae5a8", text: "Minimum protection" },
+        { color: "#ead40ea9", text: "Additional recommended protection" },
+        { color: "#d93c2eaf", text: "Recommended heat detector" },
         { color: "#6FC06EBD", text: "No alarm" },
       ],
     };
@@ -615,7 +615,8 @@ export default {
         width: 100%;
         .legend {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
           justify-content: space-between;
           background: white;
           padding: calc(min(15px, 10vw)) calc(min(10px, 10vw));
@@ -623,10 +624,14 @@ export default {
           width: 100%;
           max-width: 355px;
           margin-top: 25px;
+          .legend-title {
+            color: #1e1826;
+            font-size: 20px;
+            line-height: 24px;
+          }
         }
         .legend-item {
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
           color: #1e1826;
@@ -634,7 +639,8 @@ export default {
           .legend-color {
             height: 30px;
             width: 30px;
-            margin: 5px;
+            margin: 5px 0;
+            margin-right: 5px;
           }
           .legend-text {
             text-align: center;
