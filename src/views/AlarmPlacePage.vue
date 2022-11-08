@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <PageHeader
       image="images/install-smoke-alarms.png"
       title="Where to Place Smoke Alarms?"
@@ -8,28 +7,54 @@
       buttonText="Learn More About Locations"
       scrollTo="locations-header"
     />
-    <div class="types-page-main-container"  >
+    <div class="types-page-main-container">
       <div class="types-page-main-nav">
-        <div class="main-nav-clickable" @click="$router.push({path: '/types'})">{{ `<` }} Types of Smoke Alarms</div>
+        <div
+          class="main-nav-clickable"
+          @click="$router.push({ path: '/types' })"
+        >
+          {{ `<` }} Types of Smoke Alarms
+        </div>
         <div class="main-nav-clickable">How to Look After Smoke Alarms ></div>
       </div>
       <div class="main-header" id="locations-header">
-        <span class="main-header-title" id="types">Where Exactly Must Smoke Alarms be Installed?</span>
+        <span class="main-header-title" id="types"
+          >Where Exactly Must Smoke Alarms be Installed?</span
+        >
         <span class="main-header-content">
-          The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.
+          The placement of a smoke alarm is essential for the correct
+          functioning of the detector. Of course, it should work properly and
+          provide you and your family with life-saving minutes in the event of a
+          fire.
         </span>
         <span class="main-header-content">
-          Although regulations differ slightly from country to country, we would like to provide some general guidelines on where to install smoke alarms.
+          Although regulations differ slightly from country to country, we would
+          like to provide some general guidelines on where to install smoke
+          alarms.
         </span>
       </div>
       <div class="recommendations">
         <div class="row has-cols">
           <div class="col left">
-            <p>According to the recommendations of various European fire protection organisations and associations, <strong>there should be at least 1 smoke alarm on every floor</strong> (including the basements), as well as in all bedrooms (especially children's rooms) and in rooms that are part of an escape route (e.g. hall, corridor).</p>
+            <p>
+              According to the recommendations of various European fire
+              protection organisations and associations,
+              <strong
+                >there should be at least 1 smoke alarm on every floor</strong
+              >
+              (including the basements), as well as in all bedrooms (especially
+              children's rooms) and in rooms that are part of an escape route
+              (e.g. hall, corridor).
+            </p>
           </div>
           <div class="col">
             <div class="card">
-              <p><strong>Note:</strong> In flats, of course, almost every corridor is also an escape route, as you only have one. In some houses there are also corridors that do not serve as an exit in case of fire. Smoke detectors do not have to be installed here. However, we recommend doing so anyway.
+              <p>
+                <strong>Note:</strong> In flats, of course, almost every
+                corridor is also an escape route, as you only have one. In some
+                houses there are also corridors that do not serve as an exit in
+                case of fire. Smoke detectors do not have to be installed here.
+                However, we recommend doing so anyway.
               </p>
             </div>
           </div>
@@ -37,50 +62,90 @@
         <div class="content-column">
           <div class="row">
             <div class="arrow-right"></div>
-            <p>We also recommend that <strong>living rooms and study rooms</strong> should always be equipped with detectors. If a fire starts here, it takes longer for the other detectors to detect the fire.</p>
+            <p>
+              We also recommend that
+              <strong>living rooms and study rooms</strong> should always be
+              equipped with detectors. If a fire starts here, it takes longer
+              for the other detectors to detect the fire.
+            </p>
           </div>
           <div class="row">
             <div class="arrow-right"></div>
-            <p>It also makes sense to install a detector in rooms where <strong>there are electrical appliances</strong> (especially washing machines or dryers) and <strong>in remote rooms</strong> that are frequently used but where the signal from other smoke detectors cannot be heard. 
+            <p>
+              It also makes sense to install a detector in rooms where
+              <strong>there are electrical appliances</strong> (especially
+              washing machines or dryers) and
+              <strong>in remote rooms</strong> that are frequently used but
+              where the signal from other smoke detectors cannot be heard.
             </p>
           </div>
           <div class="row white">
             <p>
-              In general, you should remember that <strong>a smoke detector can monitor an area of up to 60 m²</strong>. If your room area is larger than 60 m², you should install an additional smoke detector. So depending on the size of your home, this means that <strong>you will need several smoke alarms</strong>.
+              In general, you should remember that
+              <strong
+                >a smoke detector can monitor an area of up to 60 m²</strong
+              >. If your room area is larger than 60 m², you should install an
+              additional smoke detector. So depending on the size of your home,
+              this means that
+              <strong>you will need several smoke alarms</strong>.
             </p>
           </div>
           <div class="row">
             <div class="arrow-right"></div>
-            <p>Before installing your smoke alarms, please <strong>check country-specific regulations</strong> or seek advice from a local fire safety expert.</p>
+            <p>
+              Before installing your smoke alarms, please
+              <strong>check country-specific regulations</strong> or seek advice
+              from a local fire safety expert.
+            </p>
           </div>
         </div>
       </div>
       <div class="main-content">
         <div class="main-content-red-bar">
-            <div class="info">
-                <div class="row">Location requirements for smoke and heat alarms according to the room of the house.</div>
-                <div class="row">
-                    <div class="legend">
-                        <div class="legend-item" v-for="(item, index) in legend" :key="index">
-                            <div class="legend-color" :style="{'background-color': item.color}"></div>
-                            <div class="legend-text">{{item.text}}</div>
-                        </div>
-                    </div>
+          <div class="info">
+            <div class="row">
+              <div class="legend">
+                <span class="legend-title">
+                  Location requirements for smoke and heat alarms according to
+                  the room of the house.
+                </span>
+                <div
+                  class="legend-item"
+                  v-for="(item, index) in legend"
+                  :key="index"
+                >
+                  <div
+                    class="legend-color"
+                    :style="{ 'background-color': item.color }"
+                  ></div>
+                  <div class="legend-text">{{ item.text }}</div>
                 </div>
+              </div>
             </div>
-            <div class="house">
-                <HouseComponent />
-            </div>
+          </div>
+          <div class="house">
+            <HouseComponent />
+          </div>
         </div>
         <div class="consider-container">
           <h2>What to Consider for the Installation Location?</h2>
-          <span>Now that we have determined which rooms/areas should be equipped with detectors, the next question is <strong>where in the room the detector should be installed</strong>.</span>
+          <span
+            >Now that we have determined which rooms/areas should be equipped
+            with detectors, the next question is
+            <strong>where in the room the detector should be installed</strong
+            >.</span
+          >
           <div class="card wheat mb-40">
             <p>
-              In many European countries, legislation is specifying framework conditions to which the respective state building codes must adhere. Generally, the installation location must ensure early detection of fire smoke.
+              In many European countries, legislation is specifying framework
+              conditions to which the respective state building codes must
+              adhere. Generally, the installation location must ensure early
+              detection of fire smoke.
             </p>
             <p>
-              In addition, there are also specifications on room sizes and living areas which may be different from country to country. Your local fire protection expert will be able to advise you on this.
+              In addition, there are also specifications on room sizes and
+              living areas which may be different from country to country. Your
+              local fire protection expert will be able to advise you on this.
             </p>
           </div>
           <h2>Installation in the Room</h2>
@@ -88,12 +153,20 @@
             <div class="col left">
               <div class="row">
                 <div class="arrow-right"></div>
-                <p>Smoke detectors should be placed centrally in the room, at least 50 cm away from walls and other objects such as lamps and other ceiling-mounted fixtures. Do not install them near windows, doors, or ducts where drafts might interfere with their operation. 
+                <p>
+                  Smoke detectors should be placed centrally in the room, at
+                  least 50 cm away from walls and other objects such as lamps
+                  and other ceiling-mounted fixtures. Do not install them near
+                  windows, doors, or ducts where drafts might interfere with
+                  their operation.
                 </p>
               </div>
               <div class="row">
                 <div class="arrow-right"></div>
-                <p>Smoke alarms installed in the basement should be installed on the ceiling at the bottom of the stairs leading to the next level.
+                <p>
+                  Smoke alarms installed in the basement should be installed on
+                  the ceiling at the bottom of the stairs leading to the next
+                  level.
                 </p>
               </div>
             </div>
@@ -101,7 +174,8 @@
               <div class="card wheat">
                 <h4>Never paint smoke alarms.</h4>
                 <p>
-                  Paint, stickers, or other decorations could keep the alarms from working.
+                  Paint, stickers, or other decorations could keep the alarms
+                  from working.
                 </p>
               </div>
             </div>
@@ -112,14 +186,17 @@
             <h2>Siting and Locations of Smoke Alarms</h2>
             <h4>Smoke, Heat and Fire Alarms</h4>
             <div class="location-container">
-              <div class="location" v-for="(location, index) in locations" :key="index">
+              <div
+                class="location"
+                v-for="(location, index) in locations"
+                :key="index"
+              >
                 <img :src="require(`@/assets/${location.img}`)" />
-                <p>{{location.text}}</p>
+                <p>{{ location.text }}</p>
               </div>
             </div>
           </div>
-          <div class="red-circle">
-          </div>
+          <div class="red-circle"></div>
           <div class="types-page-main-nav bottom">
             <div class="main-nav-clickable">{{ `<` }} Back to Homepage</div>
             <div class="main-nav-clickable">Locations of Smoke Alarms ></div>
@@ -131,41 +208,58 @@
 </template>
 
 <script>
-import HouseComponent from '@/components/House.vue'
+import HouseComponent from "@/components/House.vue";
 import PageHeader from "@/components/PageHeader.vue";
 
 export default {
-    components:{
-        HouseComponent,
-        PageHeader
+  components: {
+    HouseComponent,
+    PageHeader,
+  },
+  data() {
+    return {
+      locations: [
+        {
+          img: "images/locations/location1.svg",
+          text: "Ceiling mount in central position.",
+        },
+        {
+          img: "images/locations/location2.svg",
+          text: "Site at least 300 mm from walls and obstructions (e.g. light pendant – where 300 mm cannot be achieved move closer to the pendant).",
+        },
+        {
+          img: "images/locations/location3.svg",
+          text: "Smoke alarms – max 7.5 m from any point in the area.",
+        },
+        {
+          img: "images/locations/location4.svg",
+          text: "Heat alarms – max 5 m from any point in the area.",
+        },
+        {
+          img: "images/locations/location5.svg",
+          text: "Site alarm between risk areas (kitchen and lounge) and bedrooms.",
+        },
+        {
+          img: "images/locations/location6.svg",
+          text: "Site alarms max 3 m from any bedroom door.",
+        },
+      ],
+      legend: [
+        { color: "#a2bae5a8", text: "Minimum protection" },
+        { color: "#ead40ea9", text: "Additional recommended protection" },
+        { color: "#d93c2eaf", text: "Recommended heat detector" },
+        { color: "#6FC06EBD", text: "No alarm" },
+      ],
+    };
+  },
+  methods: {
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+      });
     },
-    data(){
-      return{
-        locations:[
-          {img: 'images/locations/location1.svg', 'text': 'Ceiling mount in central position.'},
-          {img: 'images/locations/location2.svg', 'text': 'Site at least 300 mm from walls and obstructions (e.g. light pendant – where 300 mm cannot be achieved move closer to the pendant).'},
-          {img: 'images/locations/location3.svg', 'text': 'Smoke alarms – max 7.5 m from any point in the area.'},
-          {img: 'images/locations/location4.svg', 'text': 'Heat alarms – max 5 m from any point in the area.'},
-          {img: 'images/locations/location5.svg', 'text': 'Site alarm between risk areas (kitchen and lounge) and bedrooms.'},
-          {img: 'images/locations/location6.svg', 'text': 'Site alarms max 3 m from any bedroom door.'},
-        ],
-        legend:[
-          {color: '#ead40ea9', text: 'Recommended protection'},
-          {color: '#6FC06EBD', text: 'No alarm'},
-          {color: '#a2bae5a8', text: 'Minimum protection'},
-          {color: '#d93c2eaf', text: 'Recommended heat detector'},
-        ]
-      }
-    },
-    methods:{
-      scroll(id) {
-        document.getElementById(id).scrollIntoView({
-          behavior: "smooth",
-        });
-      },
-    }
-
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -268,61 +362,61 @@ export default {
   }
 }
 .types-page-main-container {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .types-page-main-nav {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    .types-page-main-nav {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 160px 0 160px;
-      padding-top: 80px;
-      &.bottom{
-        padding: 0;
-        padding-top: 40px;
-      }
-      @media (max-width: 1280px) {
-        padding: 0 80px 0 80px;
-        margin: 16px;
-      }
-      @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        &.bottom{
-          padding-top: 20px;
-        }
-        .main-nav-clickable{
-          width: calc(100% - 20px);
-          margin-bottom: 16px;
-        }
+    justify-content: space-between;
+    padding: 0 160px 0 160px;
+    padding-top: 80px;
+    &.bottom {
+      padding: 0;
+      padding-top: 40px;
+    }
+    @media (max-width: 1280px) {
+      padding: 0 80px 0 80px;
+      margin: 16px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      &.bottom {
+        padding-top: 20px;
       }
       .main-nav-clickable {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 24px;
-        background: #dce3ef;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: #1e1826;
-        transition: 0.1s;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        &:hover {
-          background-color: $secondaryColor;
-          color: white;
-          font-family: $semiBoldFont;
-        }
+        width: calc(100% - 20px);
+        margin-bottom: 16px;
+      }
+    }
+    .main-nav-clickable {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 24px;
+      background: #dce3ef;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #1e1826;
+      transition: 0.1s;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      &:hover {
+        background-color: $secondaryColor;
+        color: white;
+        font-family: $semiBoldFont;
       }
     }
   }
+}
 .main-header {
   display: flex;
   flex-direction: column;
@@ -351,76 +445,76 @@ export default {
     margin-bottom: 4rem;
   }
 }
-.row{
+.row {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-  &.white{
+  &.white {
     padding: 15px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   }
 }
-.col{
-  &.left{
+.col {
+  &.left {
     padding: 20px 40px 20px 0;
   }
 }
-.recommendations{
+.recommendations {
   display: flex;
   padding: 50px calc(min(160px, 10vw)) 15%;
   flex-direction: column;
-  background: #FBF3ED;
-  p{
+  background: #fbf3ed;
+  p {
     margin: 0;
     font-size: 20px;
   }
-  .content-column{
+  .content-column {
     display: flex;
     flex-direction: column;
   }
 }
-.consider-container{
+.consider-container {
   display: flex;
   padding: 50px calc(min(160px, 10vw)) 0;
   flex-direction: column;
   align-items: center;
-  .row{
-    &:last-child{
+  .row {
+    &:last-child {
       margin-bottom: 0;
     }
   }
-  h2{
+  h2 {
     text-align: center;
     font-size: clamp(24px, 5vw, 32px);
     margin: 3rem 0;
   }
-  span{
+  span {
     text-align: center;
     max-width: 60%;
     margin: 2rem 0 4rem;
     font-size: clamp(16px, 5vw, 24px);
   }
 }
-.card{
+.card {
   background: white;
   padding: 20px 30px;
   font-size: 20px;
   border-radius: 10px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.10);
-  &.wheat{
-    background: #FBF3ED;
-    h4{
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  &.wheat {
+    background: #fbf3ed;
+    h4 {
       margin-top: 1rem;
       margin-bottom: 2rem;
     }
   }
 }
-.mb-40{
+.mb-40 {
   margin-bottom: 40px;
 }
-.arrow-right{
+.arrow-right {
   background: none;
   border-top: 2px solid;
   border-right: 2px solid;
@@ -454,71 +548,77 @@ export default {
         object-position: 50% 61%;
       }
     }
-    .house{
+    .house {
       display: flex;
-      flex:8;
+      flex: 8;
       position: relative;
       width: 100%;
-      svg{
+      svg {
         position: absolute;
         left: 0;
-        bottom:0;
+        bottom: 0;
         height: auto;
         max-height: 60vh;
       }
     }
-    .info{
+    .info {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex:5;
+      flex: 5;
       color: white;
       padding: 1rem 0;
       font-size: clamp(20px, 4vw, 24px);
       max-width: 355px;
       // margin-left: ;
-      .row{
+      .row {
         display: flex;
         width: 100%;
-        .legend{
+        .legend {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: flex-start;
           justify-content: space-between;
           background: white;
-          padding: calc(min(15px,10vw)) calc(min(10px,10vw));
+          padding: calc(min(15px, 10vw)) calc(min(10px, 10vw));
           border-radius: 10px;
           width: 100%;
           max-width: 355px;
           margin-top: 25px;
+          .legend-title {
+            color: #1e1826;
+            font-size: 20px;
+            line-height: 24px;
+          }
         }
-        .legend-item{
+        .legend-item {
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
           color: #1e1826;
           font-size: clamp(14px, 5vw, 16px);
-          .legend-color{
+          .legend-color {
             height: 30px;
             width: 30px;
-            margin: 5px;
+            margin: 5px 0;
+            margin-right: 5px;
           }
-          .legend-text{
+          .legend-text {
             text-align: center;
           }
         }
       }
     }
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column-reverse;
-      .house{
+      .house {
         position: relative;
         top: 0;
-        flex:1;
+        flex: 1;
         margin: 2rem 0;
-        svg{
+        svg {
           position: relative;
           height: auto;
         }
@@ -566,23 +666,23 @@ export default {
     }
   }
 }
-.locations{
+.locations {
   position: relative;
   overflow: hidden;
   font-family: $semiBoldFont;
   padding: 70px calc(min(160px, 10vw)) 40px;
-  h2, h4{
+  h2,
+  h4 {
     font-size: clamp(24px, 4vw, 32px);
     text-align: center;
   }
-  h2{
+  h2 {
     font-size: clamp(24px, 5vw, 32px);
   }
-  h4{
+  h4 {
     font-size: clamp(18px, 4vw, 24px);
-
   }
-  .content-section{
+  .content-section {
     display: flex;
     flex-direction: column;
     background: #faf7f5;
@@ -590,13 +690,13 @@ export default {
     box-shadow: 0 2px 3px 0px #00000052;
     border-radius: 10px;
   }
-  .location-container{
+  .location-container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color:#1e1826;
-    .location{
+    color: #1e1826;
+    .location {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -607,11 +707,11 @@ export default {
       height: 40vh;
       max-height: 400px;
       margin: 2rem 0px;
-      img{
+      img {
         display: flex;
         height: 73%;
       }
-      p{
+      p {
         height: 27%;
         text-align: center;
         max-width: 70%;
@@ -621,32 +721,31 @@ export default {
       }
     }
   }
-    .red-circle{
-      position: absolute;
-      background: $mainColor;
-      z-index: -1;
-      right: -30vw;
-      bottom: -25vw;
-      width: 62vw;
-      height: 62vw;
-      border-radius: 50%;
-
+  .red-circle {
+    position: absolute;
+    background: $mainColor;
+    z-index: -1;
+    right: -30vw;
+    bottom: -25vw;
+    width: 62vw;
+    height: 62vw;
+    border-radius: 50%;
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding: 0;
-    h2{
+    h2 {
       font-size: clamp(24px, 5vw, 32px);
     }
-    h4{
+    h4 {
       font-size: clamp(18px, 5vw, 24px);
     }
-    .content-section{
+    .content-section {
       padding: 20px 20px;
     }
-    .location-container{
+    .location-container {
       flex-direction: column;
       align-items: center;
-      .location{
+      .location {
         width: 100%;
         max-width: 100%;
       }
@@ -678,56 +777,55 @@ export default {
     margin-bottom: 16px;
   }
 }
-@media (max-width: 768px){
-  .main-header{
+@media (max-width: 768px) {
+  .main-header {
     padding: 0 20px;
-    .main-header-content{
+    .main-header-content {
       max-width: 100%;
       margin-bottom: 7vw;
     }
-
   }
-  .has-cols{
+  .has-cols {
     flex-wrap: wrap;
   }
-  .col{
-    &.left{
+  .col {
+    &.left {
       padding-right: 0;
-    };
+    }
   }
-  .recommendations{
+  .recommendations {
     padding: 5vw 20px 15%;
   }
   .main-content .main-content-red-bar {
     padding: 15px 20px;
-    .info{
+    .info {
       width: 100%;
       max-width: 100%;
-      .row{
+      .row {
         margin-bottom: 15px;
-        .legend{
+        .legend {
           max-width: 100%;
-          .legend-item{
+          .legend-item {
             margin: 0 1vw;
           }
         }
       }
     }
   }
-  .consider-container{
+  .consider-container {
     padding: 8vw 20px;
-    h2{
+    h2 {
       margin: 1vh 0;
     }
-    span{
+    span {
       width: 100%;
       max-width: 100%;
     }
   }
 }
-.types-page-main-container .types-page-main-nav{
+.types-page-main-container .types-page-main-nav {
   margin-top: 1rem;
-  &.bottom{
+  &.bottom {
     margin-top: 0;
   }
 }
