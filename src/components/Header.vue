@@ -2,7 +2,7 @@
   <div class="header-container">
     <div class="header-image-container">
       <router-link to="/"
-        ><img src="@/assets/logo.png" alt="logo"
+        ><img src="@/assets/logo.svg" alt="logo"
       /></router-link>
     </div>
     <div
@@ -140,6 +140,14 @@ export default {
   .header-image-container {
     width: 40%;
     display: flex;
+    img {
+      min-width: 284px;
+      min-height: 131px;
+      @media (max-width: 768px) {
+        min-width: 120px;
+        min-height: 80px;
+      }
+    }
     @media (max-width: 1280px) {
       width: 35%;
       .header-navigation-bar {

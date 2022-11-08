@@ -19,7 +19,7 @@
               >All smoke alarms placed on the EU market must be third party
               certified to <span class="semibold">EN14604</span> and
               <span class="semibold">CE marked</span> to conform with the
-              Construction Products Regulation.</span
+              Construction Products Directive.</span
             >
           </div>
           <div class="image-container">
@@ -38,7 +38,7 @@
             >
             <span class="content-text-block"
               >Smoke alarms can have a replaceable battery with a lifetime of 1
-              up top 5 years. When the battery is empty you need to replace it,
+              up to 5 years. When the battery is empty you need to replace it,
               after ten years of usage you need to replace the smoke alarm as
               well.
             </span>
@@ -92,7 +92,7 @@
               depending on your property and the technology used.</span
             >
             <span class="content-text-block"
-              >It is especially useful in multple story properties or where the
+              >It is especially useful in multple storey properties or where the
               sleeping zones are distant from the living areas where the fire
               risk may be higher.</span
             >

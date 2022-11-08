@@ -3,8 +3,7 @@
     <PageHeader
       image="images/Man_writing.png"
       title="Regulations in Europe"
-      content="See the interactive map to know more about regulations in different
-          european homes!"
+      content="Check out the interactive map to find out more about<br>  regulations on smoke alarms in domestic properties<br> in different European countries."
       buttonText="Map of Europe"
       scrollTo="map"
     />
@@ -14,8 +13,8 @@
           >Smoke alarm requirements</span
         >
         <span class="regulations-page-text-subInfo"
-          >Check out the interactive map to find out more about regulations in
-          different European countries!</span
+          >Click on the map and see what the requirements in each country
+          are.</span
         >
         <div class="regulations-page-dict-row">
           <div class="regulations-page-dict-wrapper">
@@ -221,6 +220,8 @@ export default {
       align-items: center;
       justify-content: flex-start;
       margin: 34px 0;
+      font-size: 24px;
+      line-height: 32px;
     }
   }
 }
