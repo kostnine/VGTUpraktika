@@ -2,17 +2,20 @@
   <div class="footer-container">
     <div class="footer-image-container">
       <div class="image-with-under-text">
-        <img src="@/assets/logo.png" alt="logo"/>
+        <img src="@/assets/logo.svg" alt="logo" />
         <span>18th November 2022</span>
       </div>
     </div>
     <div class="footer-main-container">
       <div class="footer-column-wrapper">
-        <span class="join-us-header">Want to join the project? Contact us!</span>
-        <span class="semiBold text">Monique de Haan</span>
-        <span class="text">EUROFSA Secretariat</span>
-        <span class="text"><span class="semiBold">E-Mail:</span> info@eurofsa.org</span>
-        <span class="bottom-rights">All content © 2022 European smoke alarm day campaign</span>
+        <span class="join-us-header"
+          >Want to join the project? Contact us!</span
+        >
+        <span class="text">EUROFSA</span>
+        <span class="text email">E-Mail: info@eurofsa.org</span>
+        <span class="bottom-rights"
+          >All content © 2022 European smoke alarm day campaign</span
+        >
       </div>
     </div>
   </div>
@@ -20,107 +23,106 @@
 
 <script>
 export default {
-    name: 'FooterComponent',
-    data(){
-        return{
-
-        }
-    }
-}
+  name: "FooterComponent",
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/scss/variables';
-.semiBold{
+@import "@/assets/scss/variables";
+.semiBold {
   font-family: $semiBoldFont;
 }
-.footer-container{
+.footer-container {
   display: flex;
-  background-color: #483A5B;
+  background-color: #483a5b;
   color: white;
   height: 300px;
   align-items: center;
   padding: 0 160px;
-  @media(max-width: 1280px){
+  @media (max-width: 1280px) {
     padding: 0 80px;
   }
-  .footer-image-container{
+  .footer-image-container {
     position: absolute;
     font-family: $mainFont;
-    .image-with-under-text{
+    .image-with-under-text {
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: center;
       align-items: flex-start;
-      img{
+      img {
         width: 200px;
         height: 100px;
       }
-      span{
+      span {
+        width: 200px;
         margin-top: 40px;
         font-size: 24px;
+        line-height: 32px;
+        text-align: center;
       }
     }
   }
-  .footer-main-container{
+  .footer-main-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .footer-column-wrapper{
+    .footer-column-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       font-family: $mainFont;
-      .join-us-header{
+      .join-us-header {
         font-size: 25px;
         margin-bottom: 55px;
       }
-      .text{
+      .text {
         margin: 3px 0;
+        font-size: 20px;
+        line-height: 24px;
       }
-      .bottom-rights{
+      .bottom-rights {
         margin-top: 55px;
       }
     }
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding: 0 20px;
     flex-direction: column;
     height: 100%;
     padding: 20px;
-    .footer-image-container{
+    .footer-image-container {
       position: relative;
       width: 100%;
       margin-bottom: 2rem;
-      .image-with-under-text{
+      .image-with-under-text {
         flex-direction: row;
         align-items: flex-end;
         position: relative;
         max-width: 100%;
-    
-        img{
+
+        img {
           max-height: 75px;
           width: auto;
         }
-        span{
+        span {
           margin: 0;
           font-size: clamp(16px, 3vw, 24px);
         }
       }
-
     }
-    .footer-main-container{
-      .footer-column-wrapper{
-        .join-us-header{
+    .footer-main-container {
+      .footer-column-wrapper {
+        .join-us-header {
           margin-bottom: 1rem;
         }
-  
       }
-
     }
-  
   }
 }
 </style>

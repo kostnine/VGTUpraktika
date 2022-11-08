@@ -3,7 +3,7 @@
     <PageHeader
       image="images/Green_block.png"
       title="Important facts"
-      content="Some surprising facts that you<br> might not even know!"
+      content="Some surprising facts that you<br> may not even know!"
       buttonText="Read more"
       scrollTo="facts"
     />
@@ -36,7 +36,7 @@
           <div class="item-title">
             <span class="item-text-title">Success stories</span>
             <span class="item-text-content"
-              >These smoke detectors have saved lives.<br />
+              >These smoke alarms have saved lives.<br />
               Some of them are still working!</span
             >
           </div>

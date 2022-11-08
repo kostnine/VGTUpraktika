@@ -61,7 +61,9 @@
           <h3>Messages of Support</h3>
 
           <p>
-            Fire officers all over Europe support #smokealarmsaveslives day.
+            Fire officers all over Europe support
+            <span class="semibold">#smokealarmsaveslives</span>
+            campaign.
           </p>
           <div class="button-container">
             <button @click="$router.push({ path: '/types' })">
@@ -390,6 +392,9 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/_variables.scss";
+.semibold {
+  font-family: $semiBoldFont;
+}
 .landing-page {
 }
 h1 {
@@ -991,6 +996,25 @@ section {
           margin: 1rem 0;
           width: 100%;
           height: 44vw;
+        }
+      }
+    }
+  }
+}
+.supporter-container {
+  &:not(.extra) {
+    .supporter {
+      &:first-child {
+        img {
+          height: 80%;
+          width: 70%;
+          margin-bottom: 10px;
+          @media (max-width: 768px) {
+            width: auto;
+            height: auto;
+            max-height: 19vw;
+            margin-bottom: 0;
+          }
         }
       }
     }
