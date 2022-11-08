@@ -14,7 +14,8 @@
           >Smoke alarm requirements</span
         >
         <span class="regulations-page-text-subInfo"
-          >Click on map and see what the requirements in each country are.</span
+          >Check out the interactive map to find out more about regulations in
+          different European countries!</span
         >
         <div class="regulations-page-dict-row">
           <div class="regulations-page-dict-wrapper">
@@ -39,7 +40,9 @@
             <li>Extensive smoke alarm legislation in multiple countries</li>
             <li>No legislation in Southern/Eastern Europe</li>
             <li>
-              Consumer awareness is found to be the most important influence in the decision to buy a smoke alarm, even without legislation or when legislation is limited.
+              Consumer awareness is found to be the most important influence in
+              the decision to buy a smoke alarm, even without legislation or
+              when legislation is limited.
             </li>
           </ul>
         </div>
@@ -49,13 +52,13 @@
         v-else-if="activeCountry != ''"
       >
         <div class="regulations-country-info-block">
-          <span class="regulations-country-name">{{
-            country_data[activeCountry].name
-          }}<img
-            @click="clearActiveCountry"
-            src="@/assets/icons/close_cross.svg"
-            alt="close"
-            class="regulations-country-close"
+          <span class="regulations-country-name"
+            >{{ country_data[activeCountry].name
+            }}<img
+              @click="clearActiveCountry"
+              src="@/assets/icons/close_cross.svg"
+              alt="close"
+              class="regulations-country-close"
           /></span>
           <div
             class="paragraph"
@@ -160,7 +163,7 @@ export default {
   padding: 0 0 0 160px;
   box-sizing: border-box;
   @media (max-width: 1280px) {
-    height: 80vh;
+    height: 90vh;
     padding: 0 0 0 80px;
   }
 }
@@ -291,48 +294,48 @@ export default {
   }
 }
 
-@media(max-width: 768px){
-    .regulations-page-map{
-      flex-direction: column;
-      padding: 0 10vw;
-      height: 1000px;
-      .regulations-page-text-content{
-        width: 100%;
-      }
-      .regulations-page-map-content{
-        width: 110%;
-        div{
-          height: 100%;
-          svg{
-            height: 100%;
-          }
-        }
-      }
+@media (max-width: 768px) {
+  .regulations-page-map {
+    flex-direction: column;
+    padding: 0 10vw;
+    height: 1000px;
+    .regulations-page-text-content {
+      width: 100%;
     }
-    .regulations-country-info-block{
-      position: fixed;
-      top: 100px;
-      left: 0;
-      width: 100vw;
-      padding: 0 1vw;
-      height: 90%;
-      box-sizing: border-box;
-      .regulations-country-name{
-        font-size: 36px;
-        margin: 0 8px;
-        line-height: 36px;
-        position: relative;
-        .regulations-country-close{
-          top: -10px;
-          left: 89vw;
+    .regulations-page-map-content {
+      width: 110%;
+      div {
+        height: 100%;
+        svg {
+          height: 100%;
         }
-      }
-      .paragraph{
-        font-size: 14px;
-        max-width: 85%;
       }
     }
   }
+  .regulations-country-info-block {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    padding: 0 1vw;
+    height: 90%;
+    box-sizing: border-box;
+    .regulations-country-name {
+      font-size: 36px;
+      margin: 0 8px;
+      line-height: 36px;
+      position: relative;
+      .regulations-country-close {
+        top: -10px;
+        left: 89vw;
+      }
+    }
+    .paragraph {
+      font-size: 14px;
+      max-width: 85%;
+    }
+  }
+}
 </style>
 <style lang="scss">
 @import "@/assets/scss/variables";

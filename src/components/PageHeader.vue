@@ -1,12 +1,15 @@
 <template>
   <div class="header-component">
     <div class="header-text-half">
-      <span class="header-title">{{ titleText }}</span>
-      <span class="header-content">{{ contentText }}</span>
-      <span class="header-button" @click="scroll(scrollToId)">
+      <span class="header-title" v-html="titleText"></span>
+      <span class="header-content" v-html="contentText"></span>
+      <span
+        :class="['header-button', { longtext: buttonTextContent.length > 27 }]"
+        @click="scroll(scrollToId)"
+      >
         {{ buttonTextContent
         }}<img
-          class="types-header-down-arrow"
+          class="header-down-arrow"
           src="@/assets/icons/arrow_down_white.svg"
           alt="down_arrow"
         />
@@ -100,6 +103,15 @@ export default {
       &:hover {
         background-color: $secondaryColor;
       }
+      &.longtext {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 25px;
+        @media (max-width: 768px) {
+          padding-left: 10px;
+          justify-content: start;
+        }
+      }
     }
   }
   .header-image-half {
@@ -152,6 +164,7 @@ export default {
       }
       .header-button {
         margin-top: auto;
+        width: 90vw;
       }
     }
     .header-image-half {

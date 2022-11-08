@@ -1,25 +1,17 @@
 <template>
   <div>
     <PageHeader
-      image="images/install-smoke-alarms.png"
-      title="Where to Place Smoke Alarms?"
-      content="Protect yourself and your family with the right number and correct placement of smoke detectors."
+      image="images/install_smoke_alarms.png"
+      title="Where to Place<br> Smoke Alarms?"
+      content="Protect yourself and your family with the right<br> number and correct placement of smoke alarms."
       buttonText="Learn More About Locations"
       scrollTo="locations-header"
     />
     <div class="types-page-main-container">
-      <div class="types-page-main-nav">
-        <div
-          class="main-nav-clickable"
-          @click="$router.push({ path: '/types' })"
-        >
-          {{ `<` }} Types of Smoke Alarms
-        </div>
-        <div class="main-nav-clickable">How to Look After Smoke Alarms ></div>
-      </div>
       <div class="main-header" id="locations-header">
         <span class="main-header-title" id="types"
-          >Where Exactly Must Smoke Alarms be Installed?</span
+          >Where Exactly Should<br />
+          Smoke Alarms Be Installed?</span
         >
         <span class="main-header-content">
           The placement of a smoke alarm is essential for the correct
@@ -28,8 +20,8 @@
           fire.
         </span>
         <span class="main-header-content">
-          Although regulations differ slightly from country to country, we would
-          like to provide some general guidelines on where to install smoke
+          Although regulations differ slightly from country to country, this
+          page provides some general guidelines on where to install smoke
           alarms.
         </span>
       </div>
@@ -39,22 +31,23 @@
             <p>
               According to the recommendations of various European fire
               protection organisations and associations,
-              <strong
-                >there should be at least 1 smoke alarm on every floor</strong
+              <span class="semibold"
+                >there should be at least 1 smoke alarm on every floor</span
               >
-              (including the basements), as well as in all bedrooms (especially
-              children's rooms) and in rooms that are part of an escape route
-              (e.g. hall, corridor).
+              (including the basements) of every home. In addition, it can be a
+              requirement to place alarms in all bedrooms (especially children's
+              rooms) and in rooms that are part of an escape route (e.g. hall,
+              corridor).
             </p>
           </div>
           <div class="col">
-            <div class="card">
+            <div class="card red">
               <p>
-                <strong>Note:</strong> In flats, of course, almost every
-                corridor is also an escape route, as you only have one. In some
-                houses there are also corridors that do not serve as an exit in
-                case of fire. Smoke detectors do not have to be installed here.
-                However, we recommend doing so anyway.
+                <span class="semibold">Note:</span> In apartments, of course,
+                every corridor is also an escape route. In some houses there are
+                also corridors that do not serve as an exit in case of fire. We
+                recommend installing smoke alarms here especially if there are
+                sleeping quarters.
               </p>
             </div>
           </div>
@@ -64,30 +57,32 @@
             <div class="arrow-right"></div>
             <p>
               We also recommend that
-              <strong>living rooms and study rooms</strong> should always be
-              equipped with detectors. If a fire starts here, it takes longer
-              for the other detectors to detect the fire.
+              <span class="semibold">living rooms and study rooms</span> should
+              always be equipped with alarms and that these alarms be connected
+              to those in the sleeping areas.
             </p>
           </div>
           <div class="row">
             <div class="arrow-right"></div>
             <p>
-              It also makes sense to install a detector in rooms where
-              <strong>there are electrical appliances</strong> (especially
-              washing machines or dryers) and
-              <strong>in remote rooms</strong> that are frequently used but
-              where the signal from other smoke detectors cannot be heard.
+              It also makes sense to install an alarm in rooms where
+              <span class="semibold">there are electrical appliances</span>
+              (especially washing machines and dryers) and in
+              <span class="semibold">in remote rooms</span> that are frequently
+              used but where the signal from other smoke alarms cannot be heard.
             </p>
           </div>
           <div class="row white">
             <p>
               In general, you should remember that
-              <strong
-                >a smoke detector can monitor an area of up to 60 m²</strong
+              <span class="semibold"
+                >a smoke detector can monitor an area of up to 60 m²</span
               >. If your room area is larger than 60 m², you should install an
-              additional smoke detector. So depending on the size of your home,
+              additional smoke alarm. So depending on the size of your home,
               this means that
-              <strong>you will need several smoke alarms</strong>.
+              <span class="semibold">you will need several smoke alarms</span>.
+              In corridors or escape routes an alarm should be positioned every
+              7.5 m.
             </p>
           </div>
           <div class="row">
@@ -132,15 +127,17 @@
           <span
             >Now that we have determined which rooms/areas should be equipped
             with detectors, the next question is
-            <strong>where in the room the detector should be installed</strong
-            >.</span
+            <span class="semibold"
+              >where in the room it should be installed.</span
+            ></span
           >
           <div class="card wheat mb-40">
             <p>
-              In many European countries, legislation is specifying framework
-              conditions to which the respective state building codes must
-              adhere. Generally, the installation location must ensure early
-              detection of fire smoke.
+              In many European countries, legislation specifies or refers to a
+              building code. Generally, the installation location must
+              prioritise early detection of fire smoke and a sound level
+              sufficient to wake all sleeping occupants on the property. Usually
+              this will require multiple alarms per property.
             </p>
             <p>
               In addition, there are also specifications on room sizes and
@@ -152,26 +149,53 @@
           <div class="row has-cols">
             <div class="col left">
               <div class="row">
-                <div class="arrow-right"></div>
+                <div class="block-with-number">1</div>
                 <p>
-                  Smoke detectors should be placed centrally in the room, at
-                  least 50 cm away from walls and other objects such as lamps
-                  and other ceiling-mounted fixtures. Do not install them near
-                  windows, doors, or ducts where drafts might interfere with
-                  their operation.
+                  As smoke rises, it is always preferable to
+                  <span class="semibold">position alarms on the ceiling</span>
+                  to ensure the fastest possible detection. If this is not
+                  possible then wall mounting is allowed by some manufacturers.
+                  Always
+                  <span class="semibold">read the user manual</span> before
+                  starting the installation.
                 </p>
               </div>
               <div class="row">
-                <div class="arrow-right"></div>
+                <div class="block-with-number">2</div>
                 <p>
-                  Smoke alarms installed in the basement should be installed on
-                  the ceiling at the bottom of the stairs leading to the next
-                  level.
+                  <span class="semibold"
+                    >Use the screws and rawlplugs provided with the alarm</span
+                  >
+                  to ensure a solid, secure fixing that will last for the 10
+                  year life of the product.
+                </p>
+              </div>
+              <div class="row">
+                <div class="block-with-number">3</div>
+                <p>
+                  Smoke alarms should be placed centrally in the room,
+                  <span class="semibold">at least 50 cm away from walls</span>
+                  to avoid dead air zones. Avoid objects such as lamps and other
+                  ceiling-mounted fixtures which may generate air currents that
+                  could deflect the smoke away from the alarm.
+                  <span class="semibold"
+                    >Do not install them near windows, doors, or ducts where
+                    drafts might interfere with their operation.</span
+                  >
+                </p>
+              </div>
+              <div class="row">
+                <div class="block-with-number">4</div>
+                <p>
+                  Smoke
+                  <span class="semibold">alarms installed in the basement</span>
+                  should be installed on the ceiling at the bottom of the stairs
+                  leading to the next level.
                 </p>
               </div>
             </div>
             <div class="col">
-              <div class="card wheat">
+              <div class="card red">
                 <h4>Never paint smoke alarms.</h4>
                 <p>
                   Paint, stickers, or other decorations could keep the alarms
@@ -197,10 +221,6 @@
             </div>
           </div>
           <div class="red-circle"></div>
-          <div class="types-page-main-nav bottom">
-            <div class="main-nav-clickable">{{ `<` }} Back to Homepage</div>
-            <div class="main-nav-clickable">Locations of Smoke Alarms ></div>
-          </div>
         </div>
       </div>
     </div>
@@ -429,6 +449,7 @@ export default {
     padding: 0 80px 0 80px;
   }
   .main-header-title {
+    margin-top: 75px;
     line-height: clamp(36px, 5vw, 72px);
     font-family: $semiBoldFont;
     text-align: center;
@@ -450,8 +471,9 @@ export default {
   align-items: center;
   margin-bottom: 30px;
   &.white {
+    color: white;
     padding: 15px;
-    background: white;
+    background: #483a5b;
     border-radius: 10px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
   }
@@ -459,6 +481,13 @@ export default {
 .col {
   &.left {
     padding: 20px 40px 20px 0;
+    font-size: 20px;
+    line-height: 28px;
+    .semibold {
+      font-family: $semiBoldFont;
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 }
 .recommendations {
@@ -509,6 +538,15 @@ export default {
       margin-top: 1rem;
       margin-bottom: 2rem;
     }
+  }
+  &.red {
+    background-color: #c0554b;
+    color: white;
+  }
+  h4 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-family: $semiBoldFont;
   }
 }
 .mb-40 {
@@ -828,5 +866,23 @@ export default {
   &.bottom {
     margin-top: 0;
   }
+}
+.block-with-number {
+  align-self: baseline;
+  color: white;
+  background: #c0554b;
+  min-height: 30px;
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17px;
+  margin-right: 10px;
+}
+.semibold {
+  font-family: $semiBoldFont;
 }
 </style>
