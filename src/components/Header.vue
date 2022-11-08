@@ -17,7 +17,9 @@
       class="header-navigation-bar"
       :class="{ open: windowWidth < 768 ? isMenuOpen : true }"
     >
-      <router-link to="/" class="header-nav-block">Home</router-link>
+      <router-link to="/" class="header-nav-block">{{
+        this.isNotHome ? "Back to Homepage" : "Home"
+      }}</router-link>
       <router-link to="/regulations" class="header-nav-block"
         >Regulations in Europe</router-link
       >
@@ -68,10 +70,16 @@ export default {
     return {
       dropdownExtended: false,
       isMenuOpen: false,
+      isNotHome: false,
     };
   },
   watch: {
     "$route.path"() {
+      if (this.$route.path != "/") {
+        this.isNotHome = true;
+      } else {
+        this.isNotHome = false;
+      }
       this.isMenuOpen = false;
     },
   },
@@ -147,12 +155,13 @@ export default {
     }
   }
   .header-navigation-bar {
-    width: 40.5vw;
+    width: 60%;
     display: flex;
     padding-top: 7px;
     align-items: flex-start;
-    justify-content: space-between;
-    margin: 0 0 0 auto;
+    @media (min-width: 769px) {
+      margin-left: 64px;
+    }
     .header-nav-block {
       font-size: 16px;
       text-decoration: none;
@@ -162,7 +171,7 @@ export default {
       // border: 1px solid black;
       // min-width: 18%;
       white-space: nowrap;
-      padding: 8px 24px;
+      padding: 8px 12px;
       &.link-dropdown {
         color: white;
         box-sizing: content-box;
@@ -182,11 +191,6 @@ export default {
     }
     .dropdown {
       cursor: pointer;
-      @media (min-width: 768px) {
-        width: 236px;
-      }
-      @media (max-width: 768px) {
-      }
       .flipped {
         transition: 0.3s;
         transform: rotate(180deg);
@@ -221,7 +225,7 @@ export default {
       }
     }
     @media (max-width: 1280px) {
-      width: 65%;
+      width: fit-content;
     }
     @media (max-width: 1080px) {
       width: 75%;

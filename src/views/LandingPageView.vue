@@ -65,7 +65,7 @@
           </p>
           <div class="button-container">
             <button @click="$router.push({ path: '/types' })">
-              Find out more about smoke alarms
+              Find Out More About Smoke Alarms
             </button>
             <button
               class="secondary"
@@ -421,7 +421,6 @@ h3 {
 section {
   display: flex;
   height: 100vh;
-  padding: 0 $paddingHorizontal;
   overflow: hidden;
 }
 .play-button {
@@ -481,6 +480,12 @@ section {
     }
     .illustrations {
       width: 100%;
+      @media (max-width: 768px) {
+        @media (max-height: 667px) {
+          margin-top: 128px;
+        }
+        margin-top: 32px;
+      }
       .smoke-detector-container {
         margin-top: 0px;
         left: 0rem;
@@ -1065,7 +1070,7 @@ section {
     margin: 3rem 0 5rem;
   }
   @media (max-width: 1320px) {
-    padding: 0 calc(min(160px, 10vw));
+    padding: 0 calc(min(80px, 10vw));
     .card-container {
       .card {
         width: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);

@@ -163,7 +163,7 @@ export default {
   padding: 0 0 0 160px;
   box-sizing: border-box;
   @media (max-width: 1280px) {
-    height: 80vh;
+    height: 90vh;
     padding: 0 0 0 80px;
   }
 }
