@@ -165,8 +165,10 @@ export default {
 }
 
 .colored-block {
-  width: 34px;
+  min-width: 34px;
+  min-height: 34px;
   height: 34px;
+  width: 34px;
   margin-right: 14px;
   &.blue {
     background-color: #a2bbe5;
@@ -214,7 +216,7 @@ export default {
   .regulations-page-map {
     flex-direction: column;
     padding: 0 10vw;
-    height: 1000px;
+    height: 1200px;
     .regulations-page-text-content {
       width: 100%;
     }
