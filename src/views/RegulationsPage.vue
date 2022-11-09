@@ -32,6 +32,20 @@
             >
           </div>
         </div>
+        <select
+          class="country-select"
+          @model="this.activeCountry"
+          @change="(e) => setActiveCountry(e.target.value)"
+        >
+          <option hidden disabled value="" selected>Select a country</option>
+          <option
+            v-for="(country, key) in this.sorted_countries"
+            :key="key"
+            :value="country"
+          >
+            {{ country }}
+          </option>
+        </select>
 
         <div class="regulations-information-block">
           <span class="regulations-information-title">Information:</span>
@@ -89,6 +103,7 @@ export default {
     return {
       activeCountry: "",
       country_data: country_data,
+      sorted_countries: [],
     };
   },
   components: {
@@ -98,6 +113,7 @@ export default {
   },
   methods: {
     setActiveCountry(country) {
+      console.log(country);
       if (this.activeCountry == country) {
         this.activeCountry = "";
       } else {
@@ -112,6 +128,14 @@ export default {
         behavior: "smooth",
       });
     },
+  },
+  mounted() {
+    this.sorted_countries = Object.keys(this.country_data).sort((a, b) =>
+      a.localeCompare(b)
+    );
+    this.sorted_countries = this.sorted_countries.filter(
+      (country) => !country.includes("_")
+    );
   },
 };
 </script>
@@ -131,7 +155,7 @@ export default {
   padding: 0 0 0 160px;
   box-sizing: border-box;
   @media (max-width: 1280px) {
-    height: 90vh;
+    height: fit-content;
     padding: 0 0 0 80px;
   }
 }
@@ -142,6 +166,7 @@ export default {
   font-family: $mainFont;
   width: 32%;
   height: 100%;
+  position: relative;
 
   .regulations-page-text-title {
     font-size: 48px;
@@ -159,7 +184,7 @@ export default {
   height: 95%;
   div {
     width: 100%;
-    height: 1080px;
+    height: fit-content;
     box-sizing: border-box;
   }
 }
@@ -251,6 +276,43 @@ export default {
       font-size: 14px;
       max-width: 85%;
     }
+  }
+}
+.country-select {
+  margin-bottom: 60px;
+  font-family: $mainFont;
+  font-size: 18px;
+  background: #483a5b;
+  border-radius: 5px;
+  height: 45px;
+  color: white;
+  width: 55%;
+  font-family: $mainFont;
+  padding-left: 10px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  &:hover {
+    background-color: red;
+    outline: none;
+  }
+  option {
+    background-color: white;
+    color: black;
+    &:hover {
+      outline: none;
+      background: transparent !important;
+      background-color: rgba(72, 58, 91, 0.2) !important;
+      font-family: $semiBoldFont;
+    }
+  }
+  &::selection {
+    color: none;
+  }
+  select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
   }
 }
 </style>

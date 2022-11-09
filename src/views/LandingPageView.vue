@@ -23,39 +23,41 @@
     </section>
     <section class="message" id="message">
       <div class="content">
-        <div class="video" v-if="windowWidth > 768">
-          <swiper
-            ref="swiper"
-            :slides-per-view="1"
-            :space-between="0"
-            :allowTouchMove="false"
-            direction="vertical"
-            @swiper="onSwiper"
-            @slideChange="onSlideChange"
-          >
-            <swiper-slide
-              v-for="(video, index) in videoStack"
-              :key="`${video.link}-${index}`"
+        <div class="video-container">
+          <div class="video" v-if="windowWidth > 768">
+            <swiper
+              ref="swiper"
+              :slides-per-view="1"
+              :space-between="0"
+              :allowTouchMove="false"
+              direction="vertical"
+              @swiper="onSwiper"
+              @slideChange="onSlideChange"
             >
-              <video
-                :ref="`mainMessageVideo-${index}`"
-                :poster="require(`@/assets/${video.img}`)"
-                @mouseover="
-                  currentlyHoveringVideo = `mainMessageVideo-${index}`
-                "
-                @mouseleave="currentlyHoveringVideo = ''"
+              <swiper-slide
+                v-for="(video, index) in videoStack"
+                :key="`${video.link}-${index}`"
               >
-                <source
-                  :src="require(`@/assets/${video.link}`)"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </swiper-slide>
-          </swiper>
-          <!-- <div class="carousel" ref="carousel" >
+                <video
+                  :ref="`mainMessageVideo-${index}`"
+                  :poster="require(`@/assets/${video.img}`)"
+                  @mouseover="
+                    currentlyHoveringVideo = `mainMessageVideo-${index}`
+                  "
+                  @mouseleave="currentlyHoveringVideo = ''"
+                >
+                  <source
+                    :src="require(`@/assets/${video.link}`)"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </swiper-slide>
+            </swiper>
+            <!-- <div class="carousel" ref="carousel" >
                     
                 </div> -->
+          </div>
         </div>
         <div class="text">
           <h3>Messages of Support</h3>
@@ -221,34 +223,34 @@ export default {
       videos: [
         {
           id: 0,
-          link: "videos/landingpage/2.FIRESAFETY_Cooking.mp4",
-          img: "images/messages_of_support/video2.jpg",
+          link: "videos/landingpage/speaker.mp4",
+          img: "images/messages_of_support/finnish.jpg",
         },
-        {
-          id: 1,
-          link: "videos/landingpage/4.FIRESAFETY_SOCKET.mp4",
-          img: "images/messages_of_support/video4.jpg",
-        },
-        {
-          id: 2,
-          link: "videos/landingpage/6.FireSafety-Christmas lights.mp4",
-          img: "images/messages_of_support/video6.jpg",
-        },
-        {
-          id: 3,
-          link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
-          img: "images/messages_of_support/video3.jpg",
-        },
-        {
-          id: 4,
-          link: "videos/landingpage/1.FIRESAFETY_CANDLES.mp4",
-          img: "images/messages_of_support/video1.jpg",
-        },
-        {
-          id: 5,
-          link: "videos/landingpage/5.FIRESAFETY_TONGS.mp4",
-          img: "images/messages_of_support/video5.jpg",
-        },
+        // {
+        //   id: 1,
+        //   link: "videos/landingpage/4.FIRESAFETY_SOCKET.mp4",
+        //   img: "images/messages_of_support/video4.jpg",
+        // },
+        // {
+        //   id: 2,
+        //   link: "videos/landingpage/6.FireSafety-Christmas lights.mp4",
+        //   img: "images/messages_of_support/video6.jpg",
+        // },
+        // {
+        //   id: 3,
+        //   link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
+        //   img: "images/messages_of_support/video3.jpg",
+        // },
+        // {
+        //   id: 4,
+        //   link: "videos/landingpage/1.FIRESAFETY_CANDLES.mp4",
+        //   img: "images/messages_of_support/video1.jpg",
+        // },
+        // {
+        //   id: 5,
+        //   link: "videos/landingpage/5.FIRESAFETY_TONGS.mp4",
+        //   img: "images/messages_of_support/video5.jpg",
+        // },
       ],
       supporters: [
         {
@@ -317,15 +319,15 @@ export default {
       tempMainMessageVideo: {},
       mainMessageVideo: {
         id: 0,
-        link: "videos/landingpage/2.FIRESAFETY_Cooking.mp4",
-        img: "images/messages_of_support/video2.jpg",
+        link: "videos/landingpage/speaker.mp4",
+        img: "images/messages_of_support/finnish.jpg",
       },
       isLoadingNewVideo: false,
       videoStack: [
         {
           id: 0,
-          link: "videos/landingpage/2.FIRESAFETY_Cooking.mp4",
-          img: "images/messages_of_support/video2.jpg",
+          link: "videos/landingpage/speaker.mp4",
+          img: "images/messages_of_support/finnish.jpg",
         },
       ],
       footerVideos: [],
@@ -616,17 +618,23 @@ section {
     align-items: center;
     padding: 0px calc(min(160px, 10vw));
     height: 100%;
+    width: 100%;
+    .video-container {
+      display: flex;
+      flex: 3;
+      justify-content: center;
+    }
     .video {
       position: relative;
       display: flex;
       flex-direction: column;
-      flex: 3;
-      height: 30vw;
+      height: 40vw;
       min-height: calc(min(500px, 30vw));
-      max-height: 90%;
+      max-height: 667px;
+      max-width: 500px;
       border-radius: 20px;
-      margin: 0;
       overflow: hidden;
+      aspect-ratio: 3/4;
       .carousel {
         position: absolute;
         left: 0;
@@ -635,12 +643,13 @@ section {
         // max-height: 100%;
         // transition: top 0.3s;
       }
-      video,
-      img {
-        object-fit: cover;
+      video {
+        aspect-ratio: 3/4;
+        object-fit: fill;
         width: 100%;
         height: 100%;
         min-height: 100%;
+        min-width: 100%;
         transition: transform 0.5s;
       }
       img {
@@ -662,8 +671,6 @@ section {
       display: flex;
       flex-direction: column;
       flex: 2;
-      padding: 0 0 0 calc(min(2rem, 1vw));
-      margin-left: calc(min(6rem, 3vw));
       height: 30vw;
       max-height: 500px;
       margin-top: 3rem;
@@ -705,6 +712,7 @@ section {
     align-items: center;
     background: $mainColor;
     padding: 2rem calc(min(160px, 10vw));
+    min-height: 125px;
     justify-content: space-between;
     span {
       display: flex;
@@ -720,11 +728,15 @@ section {
       border-radius: 15px;
       position: relative;
       overflow: hidden;
+      aspect-ratio: 3/4;
+      align-items: center;
       video,
       img {
+        aspect-ratio: 3/4;
         object-fit: cover;
-        width: 100%;
-        height: 100%;
+        width: 40vw;
+        height: 100vw;
+        border-radius: 10px;
       }
       img {
         cursor: pointer;
@@ -741,6 +753,17 @@ section {
     min-height: 100vh;
     height: auto;
   }
+  @media (max-width: 1280px) {
+    min-height: 100vh;
+    height: auto;
+    .content {
+      padding: 2rem calc(min(160px, 10vw));
+      .video {
+        width: 70%;
+        height: 40vw;
+      }
+    }
+  }
   @media (max-width: 1050px) {
     min-height: 100vh;
     height: auto;
@@ -749,6 +772,7 @@ section {
       padding: 2rem calc(min(160px, 10vw));
       .video {
         width: 100%;
+        height: 40vw;
       }
       .text {
         margin-left: 0;
@@ -763,6 +787,7 @@ section {
       }
     }
   }
+
   @media (max-width: 768px) {
     min-height: 100vh;
     height: auto;
@@ -795,10 +820,13 @@ section {
       flex-wrap: wrap;
       .video {
         margin: 1rem 0;
-        height: auto;
-        aspect-ratio: 16/9;
+        height: 100vh;
+        aspect-ratio: 3/4;
         min-width: 100%;
         width: 100%;
+        video {
+          width: 90%;
+        }
         &:first-child {
           margin: 1rem 0;
         }
@@ -811,7 +839,7 @@ section {
   @media (max-width: 678px) {
     .footer {
       .video {
-        height: 50vw;
+        height: 100vw;
         width: initial;
       }
     }
@@ -1236,7 +1264,7 @@ section {
   min-width: 100%;
   min-height: 100%;
 }
-.swiper-wrapper{
+.swiper-wrapper {
   flex-direction: column;
 }
 .swiper-slide {

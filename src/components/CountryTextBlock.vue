@@ -1,11 +1,14 @@
 <template>
   <div class="country-card">
-    <img
-      src="@/assets/icons/close_cross.svg"
-      class="card-close"
-      alt="close"
-      @click="this.closeActiveCountry"
-    />
+    <div class="nav-line">
+      <img
+        src="@/assets/icons/close_cross.svg"
+        class="card-close"
+        alt="close"
+        @click="this.closeActiveCountry"
+      />
+    </div>
+
     <span class="country-title">
       {{ this.country_data[countryInfo].name }}
     </span>
@@ -87,7 +90,10 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 .country-card {
-  position: relative;
+  margin: 10px;
+  margin-left: -50px;
+  max-height: 100%;
+  overflow-y: auto;
   max-height: fit-content;
   min-height: 780px;
   width: 640px;
@@ -100,6 +106,7 @@ export default {
   padding: 20px;
   word-wrap: normal;
   @media (max-width: 768px) {
+    margin: 0;
     position: fixed;
     min-height: 0;
     top: 110px;
@@ -141,12 +148,17 @@ export default {
     font-family: $semiBoldFont;
   }
 }
-.card-close {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  cursor: pointer;
+.nav-line {
+  width: 100%;
+  position: relative;
+  .card-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+  }
 }
+
 // .regulations-country-info-block {
 //   height: 800px;
 //   background: #faf7f5;

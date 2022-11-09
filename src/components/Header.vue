@@ -330,4 +330,13 @@ export default {
     }
   }
 }
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+  .header-container {
+    .header-navigation-bar {
+      .header-nav-block {
+        font-size: 14px;
+      }
+    }
+  }
+}
 </style>
