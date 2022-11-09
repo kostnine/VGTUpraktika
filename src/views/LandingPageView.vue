@@ -1205,6 +1205,9 @@ section {
   min-width: 100%;
   min-height: 100%;
 }
+.swiper-wrapper{
+  flex-direction: column;
+}
 .swiper-slide {
   height: 100% !important;
 }

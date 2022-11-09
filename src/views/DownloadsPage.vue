@@ -170,6 +170,9 @@
                 )"
                 :key="index"
               >
+              <transition
+                  name="fade" mode="out-in"
+                >
                 <img
                   :ref="`testing-video-primary-${index}`"
                   :src="require(`@/assets/${video.img}`)"
@@ -177,21 +180,6 @@
                   alt=""
                   @click="setMainTestingVideo(video)"
                 />
-                <transition
-                  v-on:before-enter="beforeEnter($event, index)"
-                  v-on:enter="(el, done) => enter(el, done, video)"
-                  v-on:after-enter="afterEnter($event, index)"
-                  v-on:after-leave="afterLeave($event, index)"
-                  v-bind:css="false"
-                >
-                  <img
-                    v-if="showTransitionImages"
-                    :ref="`testing-video-${index}`"
-                    class="secondary"
-                    :src="require(`@/assets/${video.img}`)"
-                    alt=""
-                    @click="setMainTestingVideo(video)"
-                  />
                 </transition>
               </div>
             </div>
@@ -905,5 +893,12 @@ h3 {
 }
 .move-enter, .move-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
