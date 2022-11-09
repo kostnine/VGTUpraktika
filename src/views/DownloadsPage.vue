@@ -170,16 +170,14 @@
                 )"
                 :key="index"
               >
-              <transition
-                  name="fade" mode="out-in"
-                >
-                <img
-                  :ref="`testing-video-primary-${index}`"
-                  :src="require(`@/assets/${video.img}`)"
-                  :key="video.id"
-                  alt=""
-                  @click="setMainTestingVideo(video)"
-                />
+                <transition name="fade" mode="out-in">
+                  <img
+                    :ref="`testing-video-primary-${index}`"
+                    :src="require(`@/assets/${video.img}`)"
+                    :key="video.id"
+                    alt=""
+                    @click="setMainTestingVideo(video)"
+                  />
                 </transition>
               </div>
             </div>
@@ -912,6 +910,7 @@ h3 {
       margin-right: 0;
     }
   }
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;
