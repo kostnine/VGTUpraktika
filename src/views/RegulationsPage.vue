@@ -292,10 +292,6 @@ export default {
   @media (max-width: 768px) {
     width: 100%;
   }
-  &:hover {
-    background-color: red;
-    outline: none;
-  }
   option {
     background-color: white;
     color: black;
