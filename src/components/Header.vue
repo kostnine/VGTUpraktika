@@ -141,7 +141,7 @@ export default {
     width: 40%;
     display: flex;
     img {
-      min-width: 284px;
+      min-width: 200px;
       min-height: 131px;
       @media (max-width: 768px) {
         min-width: 120px;
@@ -152,6 +152,8 @@ export default {
       width: 20%;
       a,
       img {
+        min-width: 60px;
+        min-height: 20px;
         width: 100%;
       }
     }
@@ -161,7 +163,7 @@ export default {
     display: flex;
     padding-top: 7px;
     align-items: flex-start;
-    @media (min-width: 769px) {
+    @media (min-width: 1280px) {
       margin-left: 64px;
     }
     .header-nav-block {

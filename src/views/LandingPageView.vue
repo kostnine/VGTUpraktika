@@ -138,10 +138,17 @@
               v-for="(supporter, index) in supporters"
               :key="index"
             >
-              <img :src="require(`@/assets/${supporter.logo}`)" alt="" />
-              <span class="website">
-                {{ supporter.url_text }}
-              </span>
+              <div class="image-container">
+                <img
+                  :src="require(`@/assets/${supporter.logo}`)"
+                  alt="partner"
+                />
+              </div>
+              <div class="website-container">
+                <span class="website">
+                  {{ supporter.url_text }}
+                </span>
+              </div>
             </a>
           </div>
           <div class="supporter-container extra">
@@ -152,11 +159,17 @@
               class="supporter"
               v-for="(supporter, index) in supportersExtra"
               :key="index"
-            >
-              <img :src="require(`@/assets/${supporter.logo}`)" alt="" />
-              <span class="website">
-                {{ supporter.url_text }}
-              </span>
+              ><div class="image-container">
+                <img
+                  :src="require(`@/assets/${supporter.logo}`)"
+                  alt="partner"
+                />
+              </div>
+              <div class="website-container">
+                <span class="website">
+                  {{ supporter.url_text }}
+                </span>
+              </div>
             </a>
           </div>
         </div>
@@ -279,21 +292,21 @@ export default {
       ],
       cards: [
         {
-          text: "Types of smoke alarms",
+          text: "Types of Smoke Alarms",
           img: "images/cards/detector.png",
           action: () => {
             this.$router.push({ path: "/types" });
           },
         },
         {
-          text: "Where to place smoke alarms",
+          text: "Where to place Smoke Alarms",
           img: "images/cards/room.png",
           action: () => {
             this.$router.push({ path: "/place" });
           },
         },
         {
-          text: "How to look after smoke alarms",
+          text: "How to Maintain Smoke Slarms",
           img: "images/cards/maintain.png",
           action: () => {
             this.$router.push({ path: "/types" });
@@ -465,7 +478,7 @@ section {
     margin-top: -6rem;
   }
   @media (max-width: 768px) {
-    padding: 0 calc(min(160px, 10vw));
+    padding: 0 0 0 calc(min(160px, 10vw));
     flex-direction: column;
     height: calc(100vh - 110px);
     .text {
@@ -510,6 +523,9 @@ section {
         right: 0;
         margin: auto;
         bottom: -57%;
+        @media (max-width: 768px) {
+          right: -50vw;
+        }
       }
       .smoke {
         left: -8rem;
@@ -562,6 +578,7 @@ section {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  margin: 0;
   .red-circle {
     position: absolute;
     height: 69vw;
@@ -802,7 +819,7 @@ section {
 }
 .supporters {
   position: relative;
-  padding: 50px $paddingHorizontal;
+  padding: 50px calc(min(160px, 7vw));
   overflow: hidden;
   h3 {
     margin: 0rem 0 2rem;
@@ -841,6 +858,19 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: auto;
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+      img {
+        object-fit: fill;
+      }
+    }
+    .website-container {
+      height: 20%;
+    }
     &:first-of-type {
       margin-bottom: 3rem;
     }
@@ -862,10 +892,11 @@ section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 1rem 3rem;
-    height: 10vw;
-    width: 17vw;
-    padding: 1rem;
+    margin: 1rem 2rem;
+    height: 15vw;
+    font-size: 14px;
+    line-height: 14px;
+    width: 18vw;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
@@ -1007,7 +1038,7 @@ section {
       &:first-child {
         img {
           height: 80%;
-          width: 70%;
+          width: 85%;
           margin-bottom: 10px;
           @media (max-width: 768px) {
             width: auto;

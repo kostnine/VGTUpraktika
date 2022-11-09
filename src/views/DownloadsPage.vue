@@ -699,7 +699,6 @@ h3 {
   display: flex;
   flex-direction: column;
   flex: 3;
-  height: 30vw;
   min-height: calc(min(500px, 30vw));
   max-height: 90%;
   border-radius: 15px;
@@ -816,7 +815,7 @@ h3 {
     margin: 20px auto;
     overflow: hidden;
     border-radius: 20px;
-    max-height: 30vh;
+    max-height: 60vh;
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -894,6 +893,25 @@ h3 {
 .move-enter, .move-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  .why-videos {
+    .main-video {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      margin-top: 32px;
+      margin-bottom: 5px;
+    }
+  }
+  .other-videos {
+    display: flex;
+    flex-direction: column;
+    .video {
+      margin-right: 0;
+    }
+  }
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s;
