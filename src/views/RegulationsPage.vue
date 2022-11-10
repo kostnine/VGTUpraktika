@@ -74,7 +74,7 @@
         <div>
           <svg
             class="map-svg"
-            viewBox="0 0 1077 1082"
+            viewBox="0 100 929 980"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -145,31 +145,6 @@ export default {
       (country) => !country.includes("_")
     );
   },
-  // directives: {
-  //   "click-outside": {
-  //     bind: function (el, binding, vnode) {
-  //       el.clickOutsideEvent = function (event) {
-  //         let outside = true;
-  //         console.log(el);
-  //         console.log(event.path);
-  //         if (outside) {
-  //           vnode.context[binding.expression](event);
-  //         }
-  //       };
-  //       // register click and touch events
-  //       document.body.addEventListener("click", el.clickOutsideEvent);
-  //       document.body.addEventListener("touchstart", el.clickOutsideEvent);
-  //     },
-  //     unbind: function (el) {
-  //       // unregister click and touch events before the element is unmounted
-  //       document.body.removeEventListener("click", el.clickOutsideEvent);
-  //       document.body.removeEventListener("touchstart", el.clickOutsideEvent);
-  //     },
-  //     stopProp(event) {
-  //       event.stopPropagation();
-  //     },
-  //   },
-  // },
 };
 </script>
 <style scoped lang="scss">
@@ -199,7 +174,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   font-family: $mainFont;
-  width: 32%;
+  width: 41%;
   height: 60%;
   @media (max-width: 1580px) {
     position: relative;
@@ -217,7 +192,7 @@ export default {
   }
 }
 .regulations-page-map-content {
-  width: 68%;
+  width: 61%;
   height: 95%;
   div {
     width: 100%;

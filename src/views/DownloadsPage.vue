@@ -637,6 +637,9 @@ export default {
   flex-direction: column;
   height: 100vh;
   padding-top: 191px;
+  @media (max-width: 1080px) {
+    padding-top: 100px;
+  }
   @media (max-width: 768px) {
     height: fit-content;
     padding-top: 20px;
@@ -650,8 +653,8 @@ h2 {
   position: absolute;
   background: $mainColor;
   z-index: -1;
-  right: -30vw;
-  bottom: -25vw;
+  right: -25vw;
+  bottom: 9vw;
   width: 62vw;
   height: 62vw;
   border-radius: 50%;
@@ -667,9 +670,11 @@ h2 {
   display: flex;
   flex-direction: column;
   background: #c0554b;
-  padding: 50px calc(min(160px, 10vw));
+  padding: 0 calc(min(160px, 10vw));
   color: white;
   font-size: clamp(16px, 5vw, 24px);
+  min-height: 300px;
+  justify-content: center;
   @media (max-width: 768px) {
     padding: 15px calc(min(160px, 10vw));
   }
@@ -684,10 +689,10 @@ h2 {
       flex-direction: column;
       align-items: center;
       margin: 0 auto;
-      max-height: 30vh;
+      min-height: 14vw;
       height: 13vw;
       width: auto;
-      aspect-ratio: 16/9;
+      // aspect-ratio: 16/9;
       iframe {
         border-radius: 10px;
         overflow: hidden;
@@ -727,7 +732,15 @@ h3 {
   margin: 0 0 15px;
 }
 .leaflet-container {
-  padding: 50px calc(min(160px, 10vw));
+  margin-top: 40px;
+  min-height: 640px;
+  padding: 0 calc(min(160px, 10vw));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-height: 700px) {
+    min-height: 500px;
+  }
   .leaflets {
     display: flex;
     justify-content: space-between;
@@ -746,6 +759,10 @@ h3 {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    @media (max-width: 1080px) {
+      width: 180px;
+      height: 250px;
+    }
     @media (max-width: 768px) {
       margin: 20px 0;
     }
@@ -815,11 +832,12 @@ h3 {
     flex: 1;
     flex-direction: column;
     height: calc(min(250px, 10vw));
-    min-width: calc(min(360px, 10vw));
+    min-width: calc(min(300px, 11vw));
     margin: 0 1rem;
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 16/19;
     @media (max-width: 768px) {
       margin: 5px;
     }
@@ -873,6 +891,8 @@ h3 {
   }
   @media (max-width: 1080px) {
     height: 60vh;
+    padding-top: 260px;
+    padding-bottom: 300px;
   }
   .why-videos-title {
     font-size: 32px;
@@ -904,6 +924,7 @@ h3 {
     max-height: 60vw;
     @media (max-width: 1280px) {
       max-height: 50vw;
+      max-width: 55vw;
     }
     @media (max-width: 1080px) {
       max-height: 40vw;
@@ -1065,7 +1086,7 @@ h3 {
     margin-left: 15%;
     display: flex;
     flex-direction: column;
-    @media (max-width: 1000px) {
+    @media (max-width: 1080px) {
       margin-left: 5%;
     }
     @media (max-width: 768px) {
@@ -1114,6 +1135,9 @@ h3 {
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    @media (max-width: 1080px) {
+      width: 40%;
+    }
     @media (max-width: 768px) {
       width: 100%;
       text-align: center;
@@ -1125,6 +1149,10 @@ h3 {
       width: 100%;
       height: 100%;
       margin-right: calc(min(80px, 7vw));
+      @media (max-width: 1080px) {
+        font-size: 20px;
+        margin: 0;
+      }
       @media (max-width: 768px) {
         margin: 0;
       }

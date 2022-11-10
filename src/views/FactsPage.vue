@@ -3,7 +3,7 @@
     <PageHeader
       image="images/green_block.jpg"
       title="Important facts"
-      content="Some surprising facts that you<br> may not even know!"
+      content="Some surprising facts that you may not know!"
       buttonText="Read more"
       scrollTo="facts"
     />
@@ -268,7 +268,7 @@ export default {
     background: #fbf3ed;
     border-radius: 5px;
     border: none;
-    width: 22%;
+    width: 30%;
     height: 64px;
     margin: 30px auto;
     font-family: $semiBoldFont;
@@ -304,7 +304,7 @@ export default {
     width: 100%;
     align-items: center;
     .image-container {
-      width: 30%;
+      width: 40%;
       height: 100%;
       margin-right: 42px;
       img {
@@ -325,7 +325,7 @@ export default {
     .column-text-list {
       display: flex;
       flex-direction: column;
-      width: 70%;
+      width: 60%;
       height: 100%;
       justify-content: center;
       @media (max-width: 768px) {
@@ -344,7 +344,7 @@ export default {
         margin: 4px 0;
         display: flex;
         .colored-block {
-          background: #e2001a;
+          background: #c0554b;
           opacity: 0.7;
           min-width: 30px;
           height: 30px;
@@ -357,6 +357,7 @@ export default {
           font-family: $semiBoldFont;
           text-align: center;
           color: #ffffff;
+          border-radius: 3px;
         }
         &.first {
           margin: 0;
