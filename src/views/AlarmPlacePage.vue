@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageHeader
-      image="images/install_smoke_alarms.png"
+      image="images/install_smoke_alarms.jpg"
       title="Where to Place<br> Smoke Alarms?"
       content="Protect yourself and your family with the right<br> number and correct placement of smoke alarms."
       buttonText="Learn More About Locations"

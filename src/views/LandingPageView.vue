@@ -6,6 +6,7 @@
         <h1><strong>Smoke Alarm</strong> Day</h1>
         <h2>18th November 2022</h2>
         <span class="hashtag">#smokealarmssavelives</span>
+        <h4>This Campaign is Part of Fire Safety Week</h4>
       </div>
       <div class="illustrations">
         <div class="smoke-detector-container">
@@ -233,7 +234,7 @@ export default {
         {
           id: 2,
           link: "videos/landingpage/Latvia.mp4",
-          img: "images/messages_of_support/2.jpg",
+          img: "images/messages_of_support/3.jpg",
         },
         // {
         //   id: 3,

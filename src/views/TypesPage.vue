@@ -1,7 +1,7 @@
 <template>
   <div class="types-page-container">
     <PageHeader
-      image="images/Hand_detector.png"
+      image="images/hand_detector.jpg"
       title="About Smoke Alarms"
       content="Which smoke alarm is the best for you?<br> Let's find out!"
       buttonText="Learn More"
@@ -28,7 +28,7 @@
         </div>
         <div class="main-header-item">
           <div class="main-content-image">
-            <img src="@/assets/images/Battery.png" alt="linked" />
+            <img src="@/assets/images/battery.jpg" alt="linked" />
           </div>
           <div class="main-content-text">
             <span class="content-text-block"
@@ -78,7 +78,7 @@
             <img src="@/assets/images/types_smoke_detector.png" alt="linked" />
           </div>
           <div class="main-content-text">
-            <span class="content-text-title">Linked Smoke Detector(s)</span>
+            <span class="content-text-title">Linked Smoke Alarm(s)</span>
             <span class="content-text-block"
               >In any property where multiple Smoke Alarms are deemed necessary,
               it is recommended to interconnect the alarms</span

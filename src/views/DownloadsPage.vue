@@ -64,6 +64,59 @@
           </div>
         </div>
       </div>
+      <div class="spain-container">
+        <div class="title-container">
+          <span class="spain-title"
+            >Fire Prevention Week Campaign in Spain:</span
+          >
+        </div>
+        <div class="video-container-with-text">
+          <span class="video-title">Video About Smoke Alarms:</span>
+          <div class="video">
+            <iframe
+              :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <span class="video-url"
+            >https://www.youtube.com/watch?v=NDShJjSbA1Y</span
+          >
+        </div>
+        <div class="brochure-container">
+          <span class="title">Brochure About Smoke Alarms:</span>
+          <div
+            class="leaflet"
+            :style="{
+              backgroundImage:
+                'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
+            }"
+            @click="downloadLeaflet(spainBrochure)"
+          >
+            <div class="bottom-content">
+              <div class="leaflet-text">
+                {{ spainBrochure.text }}
+              </div>
+              <div class="donwload-btn">
+                <svg
+                  width="37"
+                  height="37"
+                  viewBox="0 0 37 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="why-videos">
         <span class="why-videos-title"
           >Why installing smoke alarms is important?</span
@@ -311,6 +364,12 @@ export default {
         },
       ],
       footerVideos: [],
+      spainBrochure: {
+        img: "images/downloads/Asset8.png",
+        download_path:
+          "/downloads/tripticos-consejos-detectores-incendios-en-hogar.pdf",
+        text: "Advice on Smoke Alarms in the Home.",
+      },
       swiper: null,
       isLoadingNewVideo: false,
       showTransitionImages: false,
@@ -934,5 +993,124 @@ h3 {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+.spain-container {
+  width: 100%;
+  display: flex;
+  background-color: #c0554b;
+  box-sizing: border-box;
+  padding: 20px calc(min(80px, 10vw));
+  align-items: start;
+  justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .video-container-with-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    .video-title {
+      height: 15%;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 24px;
+      line-height: 32px;
+      color: white;
+      font-family: $semiBoldFont;
+      text-align: start;
+    }
+    .video-url {
+      font-size: 16px;
+      line-height: 24px;
+      color: white;
+      margin-top: 5px;
+      white-space: nowrap;
+    }
+    .video {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      border-radius: 10px;
+      iframe {
+        border-radius: 10px;
+        min-height: 180px;
+      }
+    }
+  }
+  .brochure-container {
+    height: 100%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1000px) {
+      margin-left: 5%;
+    }
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+    .title {
+      height: 15%;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 24px;
+      line-height: 32px;
+      color: white;
+      font-family: $semiBoldFont;
+      text-align: start;
+    }
+    .leaflet {
+      position: relative;
+      background-position: center;
+      min-height: 200px;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      .bottom-content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #1e1826;
+        color: white;
+        padding: 10px;
+        width: 100%;
+      }
+      .leaflet-text {
+        width: 100%;
+      }
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  .title-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+    .spain-title {
+      font-size: 32px;
+      line-height: 48px;
+      color: white;
+      width: 100%;
+      height: 100%;
+      margin-right: calc(min(80px, 7vw));
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+    }
+  }
 }
 </style>

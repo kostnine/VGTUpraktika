@@ -1,7 +1,7 @@
 <template>
   <div class="facts-page-container">
     <PageHeader
-      image="images/Green_block.png"
+      image="images/green_block.jpg"
       title="Important facts"
       content="Some surprising facts that you<br> may not even know!"
       buttonText="Read more"
@@ -43,7 +43,7 @@
           <div class="item-window">
             <div class="image-container" v-for="n in 4" v-bind:key="n">
               <img
-                :src="require('@/assets/images/facts/burnt_' + n + '.png')"
+                :src="require('@/assets/images/facts/' + n + '.jpg')"
                 alt="burnt"
               />
             </div>
@@ -57,7 +57,7 @@
           <span class="how-title">How Do Smoke Alarms Work?</span>
           <div class="how-item">
             <div class="image-container">
-              <img src="@/assets/images/facts/smoke_alarm.png" alt="alarm" />
+              <img src="@/assets/images/facts/foto9.jpg" alt="alarm" />
             </div>
             <div class="column-text-list">
               <span class="text-in-list"
@@ -72,7 +72,7 @@
           </div>
           <div class="how-item">
             <div class="image-container">
-              <img src="@/assets/images/facts/smoke_alarm.png" alt="alarm" />
+              <img src="@/assets/images/facts/foto8.jpg" alt="alarm" />
             </div>
             <div class="column-text-list">
               <span class="text-with-bullet first"
@@ -238,6 +238,7 @@ export default {
         box-sizing: border-box;
         border-radius: 15px;
         img {
+          border-radius: 15px;
           height: 100%;
           width: 100%;
         }
@@ -307,6 +308,7 @@ export default {
       height: 100%;
       margin-right: 42px;
       img {
+        border-radius: 10px;
         height: 100%;
         width: 100%;
         object-fit: cover;

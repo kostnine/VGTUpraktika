@@ -554,6 +554,14 @@
             "link_name": "GOUV.FR – Le détecteur de fumée (DAAF)",
             "gap_above": "0",
             "gap_below": "0"
+          },
+          {
+            "link_title": "More information:",
+            "link_url": "http://www.ensemblecontrelefeu.fr/",
+            "link_name": "Together against Fire",
+            "isUrlInNewLine": true,
+            "gap_above": "15px",
+            "gap_below": "0"
           }
         ],
         "gap_size": "20px"

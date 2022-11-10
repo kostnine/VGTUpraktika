@@ -1,7 +1,7 @@
 <template>
   <div class="maintain-page">
     <PageHeader
-      image="images/maintain/battery.png"
+      image="images/maintain/battery.jpg"
       title="How to Maintain<br> Smoke Alarms"
       content="It is important that all smoke alarms in your home are<br> working. Learn how to maintain them properly!"
       buttonText="Learn More About Maintenance"
@@ -35,12 +35,12 @@
           </span>
         </div>
         <div class="maintain-item-image-container">
-          <img src="@/assets/images/maintain/clean.png" alt="clean" />
+          <img src="@/assets/images/maintain/clean.jpg" alt="clean" />
         </div>
       </div>
       <div class="maintain-middle-info">
         <div class="image-container">
-          <img src="@/assets/images/maintain/info.png" alt="info" />
+          <img src="@/assets/images/maintain/info.jpg" alt="info" />
         </div>
         <div class="text-container">
           <span class="title-text">
@@ -79,7 +79,7 @@
           </span>
         </div>
         <div class="maintain-item-image-container">
-          <img src="@/assets/images/maintain/pin.png" alt="clean" />
+          <img src="@/assets/images/maintain/pin.jpg" alt="clean" />
         </div>
       </div>
     </div>
@@ -161,7 +161,7 @@ export default {
       }
     }
     .maintain-item-image-container {
-      width: 25%;
+      width: 35%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -171,6 +171,7 @@ export default {
       }
       img {
         width: 100%;
+        border-radius: 10px;
         @media (max-width: 768px) {
           object-fit: fill;
         }

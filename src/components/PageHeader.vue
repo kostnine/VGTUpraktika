@@ -121,9 +121,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    border-radius: 20px;
     img {
+      border-radius: 20px;
       width: 80%;
       z-index: 1;
+      filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.3));
       @media (max-width: 1280px) {
         width: 90%;
       }
