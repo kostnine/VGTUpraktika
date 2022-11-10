@@ -35,8 +35,8 @@ const routes = [
     component: ()=> import('../views/AlarmPlacePage.vue')
   },
    {
-    path: '/downloads',
-    name: 'downloads',
+    path: '/practices',
+    name: 'practices',
     component: ()=> import('../views/DownloadsPage.vue')
   },
   {

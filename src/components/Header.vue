@@ -56,7 +56,7 @@
       <router-link to="/facts" class="header-nav-block"
         >Important Facts</router-link
       >
-      <router-link to="/downloads" class="header-nav-block"
+      <router-link to="/practices" class="header-nav-block"
         >Best practices</router-link
       >
     </nav>
