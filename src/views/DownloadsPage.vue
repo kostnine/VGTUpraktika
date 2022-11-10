@@ -242,6 +242,24 @@
         </div>
       </div>
       <div class="red-circle"></div>
+      <div class="extra-container">
+        <span class="title">Raising Awareness of Fire Risk Among Schools</span>
+        <span class="subtitle"
+          >Video by French Federation of Fire Professions(FFMI)</span
+        >
+        <div class="video-container">
+          <div class="video">
+            <iframe
+              :src="`https://www.youtube.com/embed/9B49KCXF2BY`"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <span>https://youtu.be/9B49KCXF2BY</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -1109,6 +1127,55 @@ h3 {
       margin-right: calc(min(80px, 7vw));
       @media (max-width: 768px) {
         margin: 0;
+      }
+    }
+  }
+}
+.extra-container {
+  min-width: 400px;
+  background-color: #fbf3ed;
+  display: flex;
+  flex-direction: column;
+  padding: 40px calc(min(160px, 10vw));
+  .title {
+    font-size: 32px;
+    line-height: 42px;
+    font-family: $semiBoldFont;
+  }
+  .subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .video-container {
+    display: flex;
+    min-height: 60%;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .video {
+      display: flex;
+      flex-direction: column;
+      min-width: 300px;
+      min-height: 200px;
+      max-height: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 32px 0;
+      @media (max-width: 768px) {
+        margin: 5px;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        @media (max-width: 768px) {
+          min-height: 300px;
+        }
       }
     }
   }
