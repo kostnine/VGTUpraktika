@@ -67,6 +67,7 @@
         <CountryTextBlock
           :country="this.activeCountry"
           :closeCountry="clearActiveCountry"
+          id="country-block"
         />
       </div>
       <div class="regulations-page-map-content">
@@ -87,6 +88,14 @@
           </svg>
         </div>
       </div>
+    </div>
+    <div class="disclaimer-bar">
+      <span class="disclaimer-text"
+        >E&OE – While we have made every effort to ensure the information
+        provided is correct and up to date, we accept that there maybe errors
+        and welcome updates. Corrections and contributions to improve accuracy
+        or additional detail.</span
+      >
     </div>
   </div>
 </template>
@@ -113,7 +122,6 @@ export default {
   },
   methods: {
     setActiveCountry(country) {
-      console.log(country);
       if (this.activeCountry == country) {
         this.activeCountry = "";
       } else {
@@ -137,6 +145,31 @@ export default {
       (country) => !country.includes("_")
     );
   },
+  // directives: {
+  //   "click-outside": {
+  //     bind: function (el, binding, vnode) {
+  //       el.clickOutsideEvent = function (event) {
+  //         let outside = true;
+  //         console.log(el);
+  //         console.log(event.path);
+  //         if (outside) {
+  //           vnode.context[binding.expression](event);
+  //         }
+  //       };
+  //       // register click and touch events
+  //       document.body.addEventListener("click", el.clickOutsideEvent);
+  //       document.body.addEventListener("touchstart", el.clickOutsideEvent);
+  //     },
+  //     unbind: function (el) {
+  //       // unregister click and touch events before the element is unmounted
+  //       document.body.removeEventListener("click", el.clickOutsideEvent);
+  //       document.body.removeEventListener("touchstart", el.clickOutsideEvent);
+  //     },
+  //     stopProp(event) {
+  //       event.stopPropagation();
+  //     },
+  //   },
+  // },
 };
 </script>
 <style scoped lang="scss">
@@ -147,16 +180,18 @@ export default {
 }
 .regulations-page-map {
   position: relative;
-  height: 1200px;
+  height: fit-content;
   width: 100%;
   background-color: white;
   z-index: 2;
   display: flex;
-  padding: 0 0 0 160px;
+  padding: 0 0 40px 160px;
   box-sizing: border-box;
+  align-items: center;
+  overflow: hidden;
   @media (max-width: 1280px) {
     height: fit-content;
-    padding: 0 0 0 80px;
+    padding: 0 0 80px 80px;
   }
 }
 .regulations-page-text-content {
@@ -165,8 +200,10 @@ export default {
   justify-content: center;
   font-family: $mainFont;
   width: 32%;
-  height: 100%;
-  position: relative;
+  height: 60%;
+  @media (max-width: 1580px) {
+    position: relative;
+  }
 
   .regulations-page-text-title {
     font-size: 48px;
@@ -240,13 +277,13 @@ export default {
 @media (max-width: 768px) {
   .regulations-page-map {
     flex-direction: column;
-    padding: 0 10vw;
+    padding: 0 0 0 10vw;
     height: 1200px;
     .regulations-page-text-content {
       width: 100%;
     }
     .regulations-page-map-content {
-      width: 110%;
+      width: 100%;
       div {
         height: 100%;
         svg {
@@ -287,10 +324,12 @@ export default {
   height: 45px;
   color: white;
   width: 55%;
+  min-width: 300px;
   font-family: $mainFont;
   padding-left: 10px;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
+    min-height: 45px;
   }
   option {
     background-color: white;
@@ -310,6 +349,12 @@ export default {
     -webkit-appearance: none; /* Safari and Chrome */
     appearance: none;
   }
+}
+.disclaimer-bar {
+  width: 100%;
+  padding: 5px calc(min(80px, 5vw));
+  background: #be544a;
+  color: white;
 }
 </style>
 <style lang="scss">

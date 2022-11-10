@@ -14,7 +14,7 @@
           >How to Choose Your Smoke Alarm?</span
         >
         <div class="main-header-content">
-          <div>
+          <div class="centered-row">
             <span
               >All smoke alarms placed on the EU market must be third party
               certified to <span class="semibold">EN14604</span> and
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="main-header-content">
-          <div>
+          <div class="column-div">
             <span
               >Another option is choosing a smoke alarm which is
               <span class="semibold">interconnected</span>, this means if 1
@@ -212,21 +212,22 @@ export default {
   height: fit-content;
   padding: 0 160px 0 160px;
   padding-top: 80px;
-  padding-bottom: 210px;
+  padding-bottom: 70px;
   @media (max-width: 1280px) {
-    padding: 0 80px 0 80px;
+    padding: 0 80px 70px 80px;
   }
   @media (max-width: 768px) {
-    padding: 0 10vw;
+    padding: 70px 10vw;
   }
   .main-header-title {
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 48px;
+    line-height: 72px;
     text-align: center;
     font-family: $semiBoldFont;
     text-align: center;
     color: #1e1826;
     margin-bottom: 74px;
+    margin-top: 74px;
   }
   .main-header-content {
     font-size: 24px;
@@ -235,11 +236,19 @@ export default {
     text-align: start;
     color: #1e1826;
     display: flex;
+    .centered-row {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
     @media (max-width: 1024px) {
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       span {
         width: 100%;
+        display: flex;
       }
       .image-container {
         display: flex;
@@ -249,7 +258,7 @@ export default {
       }
     }
     span {
-      width: 80%;
+      width: 95%;
     }
     .separator {
       height: 16px;

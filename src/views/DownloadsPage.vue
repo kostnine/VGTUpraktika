@@ -152,7 +152,11 @@
         <div class="video-container">
           <div class="col">
             <div class="main-video" ref="mainTestingVideo">
-              <video controls :key="activeTestingVideo.link">
+              <video
+                controls
+                :key="activeTestingVideo.link"
+                :poster="require(`@/assets/${activeTestingVideo.img}`)"
+              >
                 <source
                   :src="require(`@/assets/${activeTestingVideo.link}`)"
                   type="video/mp4"
@@ -283,26 +287,26 @@ export default {
       currentlyHoveringVideo: "",
       mainMessageVideo: {
         id: 0,
-        link: "videos/landingpage/2.FIRESAFETY_Cooking.mp4",
-        img: "images/messages_of_support/video2.jpg",
+        link: "videos/downloads/bedroom_b-roll.mp4",
+        img: "images/downloads/bedroom.jpg",
       },
       testing_videos: [
         {
           id: 0,
-          link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
-          img: "images/messages_of_support/video3.jpg",
+          link: "videos/downloads/bedroom_b-roll.mp4",
+          img: "images/downloads/bedroom.jpg",
           active: true,
         },
         {
           id: 1,
-          link: "videos/landingpage/1.FIRESAFETY_CANDLES.mp4",
-          img: "images/messages_of_support/video1.jpg",
+          link: "videos/downloads/batteries_b-roll.mp4",
+          img: "images/downloads/batteries.jpg",
           active: false,
         },
         {
           id: 2,
-          link: "videos/landingpage/5.FIRESAFETY_TONGS.mp4",
-          img: "images/messages_of_support/video5.jpg",
+          link: "videos/downloads/testing_b-roll.mp4",
+          img: "images/downloads/testing.jpg",
           active: false,
         },
       ],
@@ -783,9 +787,16 @@ h3 {
 .why-videos {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 50px calc(min(160px, 10vw));
   background: #fbf3ed;
   height: 100vh;
+  @media (max-width: 1280px) {
+    height: 85vh;
+  }
+  @media (max-width: 1080px) {
+    height: 60vh;
+  }
   .why-videos-title {
     font-size: 32px;
     line-height: 48px;
@@ -813,7 +824,13 @@ h3 {
     margin: 20px auto;
     overflow: hidden;
     border-radius: 20px;
-    max-height: 60vh;
+    max-height: 60vw;
+    @media (max-width: 1280px) {
+      max-height: 50vw;
+    }
+    @media (max-width: 1080px) {
+      max-height: 40vw;
+    }
     .swiper-container {
       width: 100%;
       height: 100%;

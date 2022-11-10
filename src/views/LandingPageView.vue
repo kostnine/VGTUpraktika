@@ -40,7 +40,6 @@
               >
                 <video
                   :ref="`mainMessageVideo-${index}`"
-                  :poster="require(`@/assets/${video.img}`)"
                   @mouseover="
                     currentlyHoveringVideo = `mainMessageVideo-${index}`
                   "
@@ -223,19 +222,19 @@ export default {
       videos: [
         {
           id: 0,
-          link: "videos/landingpage/speaker.mp4",
-          img: "images/messages_of_support/finnish.jpg",
+          link: "videos/landingpage/Finland.mp4",
+          img: "images/messages_of_support/1.jpg",
         },
-        // {
-        //   id: 1,
-        //   link: "videos/landingpage/4.FIRESAFETY_SOCKET.mp4",
-        //   img: "images/messages_of_support/video4.jpg",
-        // },
-        // {
-        //   id: 2,
-        //   link: "videos/landingpage/6.FireSafety-Christmas lights.mp4",
-        //   img: "images/messages_of_support/video6.jpg",
-        // },
+        {
+          id: 1,
+          link: "videos/landingpage/Czech.mp4",
+          img: "images/messages_of_support/2.jpg",
+        },
+        {
+          id: 2,
+          link: "videos/landingpage/Latvia.mp4",
+          img: "images/messages_of_support/2.jpg",
+        },
         // {
         //   id: 3,
         //   link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
@@ -294,7 +293,7 @@ export default {
       ],
       cards: [
         {
-          text: "Types of Smoke Alarms",
+          text: "About Smoke Alarms",
           img: "images/cards/detector.png",
           action: () => {
             this.$router.push({ path: "/types" });
@@ -311,7 +310,7 @@ export default {
           text: "How to Maintain Smoke Slarms",
           img: "images/cards/maintain.png",
           action: () => {
-            this.$router.push({ path: "/types" });
+            this.$router.push({ path: "/maintain" });
           },
         },
       ],
@@ -319,15 +318,15 @@ export default {
       tempMainMessageVideo: {},
       mainMessageVideo: {
         id: 0,
-        link: "videos/landingpage/speaker.mp4",
-        img: "images/messages_of_support/finnish.jpg",
+        link: "videos/landingpage/Finland.mp4",
+        img: "images/messages_of_support/1.jpg",
       },
       isLoadingNewVideo: false,
       videoStack: [
         {
           id: 0,
-          link: "videos/landingpage/speaker.mp4",
-          img: "images/messages_of_support/finnish.jpg",
+          link: "videos/landingpage/Finland.mp4",
+          img: "images/messages_of_support/1.jpg",
         },
       ],
       footerVideos: [],
@@ -629,12 +628,11 @@ section {
       display: flex;
       flex-direction: column;
       height: 40vw;
+      min-width: calc(min(500px, 30vw));
       min-height: calc(min(500px, 30vw));
-      max-height: 667px;
-      max-width: 500px;
+      max-height: 500px;
       border-radius: 20px;
       overflow: hidden;
-      aspect-ratio: 3/4;
       .carousel {
         position: absolute;
         left: 0;
@@ -644,7 +642,6 @@ section {
         // transition: top 0.3s;
       }
       video {
-        aspect-ratio: 3/4;
         object-fit: fill;
         width: 100%;
         height: 100%;
@@ -713,14 +710,13 @@ section {
     background: $mainColor;
     padding: 2rem calc(min(160px, 10vw));
     min-height: 125px;
-    justify-content: space-between;
+    justify-content: center;
     span {
       display: flex;
       flex-direction: row;
     }
     .video {
       display: flex;
-      flex: 1;
       flex-direction: column;
       height: calc(min(250px, 10vw));
       min-width: calc(min(360px, 10vw));
@@ -728,14 +724,12 @@ section {
       border-radius: 15px;
       position: relative;
       overflow: hidden;
-      aspect-ratio: 3/4;
       align-items: center;
       video,
       img {
-        aspect-ratio: 3/4;
         object-fit: cover;
-        width: 40vw;
-        height: 100vw;
+        width: 10vw;
+        height: 100%;
         border-radius: 10px;
       }
       img {
@@ -758,10 +752,6 @@ section {
     height: auto;
     .content {
       padding: 2rem calc(min(160px, 10vw));
-      .video {
-        width: 70%;
-        height: 40vw;
-      }
     }
   }
   @media (max-width: 1050px) {
@@ -821,11 +811,11 @@ section {
       .video {
         margin: 1rem 0;
         height: 100vh;
-        aspect-ratio: 3/4;
         min-width: 100%;
         width: 100%;
         video {
-          width: 90%;
+          height: 300px;
+          min-width: 300px;
         }
         &:first-child {
           margin: 1rem 0;
@@ -1065,8 +1055,8 @@ section {
     .supporter {
       &:first-child {
         img {
-          height: 80%;
-          width: 85%;
+          height: 65%;
+          width: 75%;
           margin-bottom: 10px;
           @media (max-width: 768px) {
             width: auto;

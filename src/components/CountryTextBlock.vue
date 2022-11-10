@@ -90,12 +90,11 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 .country-card {
-  margin: 10px;
   margin-left: -50px;
   max-height: 100%;
   overflow-y: auto;
   max-height: fit-content;
-  min-height: 780px;
+  min-height: 750px;
   width: 640px;
   background: #faf7f5;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -105,6 +104,11 @@ export default {
   box-sizing: border-box;
   padding: 20px;
   word-wrap: normal;
+  position: absolute;
+  top: 20%;
+  @media (max-width: 1580px) {
+    position: relative;
+  }
   @media (max-width: 768px) {
     margin: 0;
     position: fixed;

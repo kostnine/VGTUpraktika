@@ -137,10 +137,11 @@ export default {
   justify-content: center;
   min-height: 600px;
   .header-title {
-    max-width: 40%;
+    max-width: 60%;
     font-size: 48px;
     line-height: 72px;
     margin: 0 auto;
+    margin-bottom: 55px;
 
     text-align: center;
     font-family: $semiBoldFont;
@@ -164,6 +165,7 @@ export default {
       display: flex;
       padding: 15px 0;
       align-items: center;
+      font-size: 18px;
     }
   }
   .arrow-right {
@@ -205,7 +207,7 @@ export default {
       height: 20%;
       align-items: center;
       .item-text-title {
-        font-size: 24px;
+        font-size: 32px;
         line-height: 32px;
         text-align: center;
         font-family: $semiBoldFont;
@@ -289,7 +291,7 @@ export default {
   width: 90%;
   padding-bottom: 78px;
   .how-title {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 32px;
     font-family: $semiBoldFont;
     margin: 65px auto;

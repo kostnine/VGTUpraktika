@@ -29,7 +29,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -41,7 +41,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -119,10 +119,17 @@
     ]
 
   },
-  "slovenia": {
-    "name": "slovenia",
+  "Slovenia": {
+    "name": "Slovenia",
     "svg": "M512.801 798.841C511.417 798.644 508.065 797.851 507.272 798.053C505.101 798.447 508.059 801.214 506.878 802.001C505.894 802.395 504.707 801.805 503.717 802.198C503.324 802.395 503.914 803.182 503.521 803.582C501.547 805.162 498.391 805.359 496.417 807.131C494.049 809.302 500.759 814.83 497.801 817.001C490.894 821.934 495.236 813.644 490.697 820.156C490.107 820.944 492.475 821.141 492.868 822.13C493.262 822.923 490.894 822.727 490.894 823.514C490.894 823.908 492.868 826.472 492.075 827.462C489.904 829.633 486.749 826.276 484.775 826.276C481.817 826.276 487.537 829.037 482.604 827.659C481.221 827.265 479.449 825.094 478.853 823.908C478.459 823.514 478.06 822.327 477.863 822.727C477.076 823.908 477.272 825.291 476.479 826.276C473.915 829.628 470.36 826.276 467.402 827.265C467.008 827.462 467.796 828.255 467.402 828.649C465.625 829.633 462.07 829.436 460.298 828.649C460.298 828.649 460.298 828.452 460.495 828.452C461.48 827.468 462.666 826.478 463.06 825.494C469.966 825.888 462.07 821.152 460.102 819.965C458.718 819.178 460.889 816.613 460.495 815.623C460.102 814.633 456.941 817.401 457.734 814.83C458.324 813.053 462.076 811.478 460.692 810.292C459.708 809.504 455.164 809.898 455.563 807.53C455.957 804.369 460.889 805.162 461.283 801.214C461.086 801.214 461.086 801.214 460.889 801.214C462.07 801.411 463.257 801.608 464.64 801.805C466.221 802.001 467.801 803.188 469.376 803.385C470.956 803.582 472.531 802.401 474.112 802.598C475.096 802.794 475.692 804.178 476.676 804.178C477.07 804.375 476.873 803.194 477.267 802.991C478.257 802.007 479.831 801.608 480.821 800.427C481.614 799.836 481.018 798.453 481.614 797.862C485.36 794.904 489.308 798.649 492.863 797.075C494.049 796.484 494.246 794.707 495.427 794.313C495.624 794.116 502.137 795.101 502.334 794.904C502.924 794.707 501.743 793.919 501.547 793.323C500.956 790.168 503.324 789.375 506.282 789.375C507.081 789.369 508.656 795.483 512.801 798.841Z",
-    "fill": "#F39964"
+    "fill": "#C0554B",
+    "content": [
+      {
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+        "links":[
+        ]
+      }
+    ]
   },
   "Denmark": {
     "name": "Denmark",
@@ -171,10 +178,24 @@
     ]
     
   },
-  "austria": {
-    "name": "austria",
+  "Austria": {
+    "name": "Austria",
     "svg": "M387.088 777.132C387.088 778.515 389.653 778.909 388.865 780.883C388.669 781.277 387.881 781.08 387.684 781.277C387.487 781.867 386.897 783.448 386.301 785.225L387.291 787.396V789.764C389.265 789.961 392.42 790.354 392.617 790.354C393.01 790.748 392.026 791.339 392.42 791.732C393.404 792.919 394.591 793.706 395.974 794.297C399.135 795.877 399.726 790.546 401.897 790.945C406.042 791.535 401.7 793.706 403.083 794.297C406.239 795.877 403.477 793.903 406.638 794.297C408.218 794.494 409.799 798.639 412.954 796.862L415.519 791.53C417.093 790.349 424.006 791.136 425.783 790.939C428.741 790.742 431.109 788.178 434.073 788.178C434.86 788.178 432.689 789.168 432.493 789.955C431.503 794.1 434.073 791.339 435.648 793.706C436.047 794.297 435.057 795.084 435.451 795.877C435.648 796.271 436.244 795.478 436.638 795.877C440.389 798.639 441.373 799.033 446.502 799.826C452.425 800.613 458.538 800.81 464.657 801.8C466.238 801.996 467.818 803.183 469.393 803.38C470.973 803.582 472.548 802.396 474.129 802.593C475.113 802.789 475.709 804.173 476.693 804.173C477.087 804.37 476.89 803.189 477.284 802.986C478.274 802.002 479.848 801.603 480.838 800.422C481.631 799.831 481.035 798.448 481.631 797.857C485.377 794.899 489.325 798.644 492.88 797.07C494.066 796.479 494.263 794.702 495.444 794.308C495.641 794.111 502.154 795.096 502.351 794.899C502.941 794.702 501.76 793.914 501.564 793.318C501.17 791.344 501.957 790.163 503.341 789.764C506.895 785.816 508.47 785.225 510.247 782.267C510.641 781.479 507.092 777.334 508.076 775.36C509.46 772.599 512.812 775.557 512.418 771.609C512.221 768.251 506.299 768.65 507.486 767.661C510.247 765.293 517.356 768.448 518.537 766.283C518.734 765.495 515.973 759.179 518.734 757.993C516.367 755.428 514.392 752.858 512.615 749.899C511.035 747.335 516.76 743.19 512.615 740.231C512.025 739.838 511.232 741.019 510.641 741.019C509.657 740.822 507.683 738.257 506.299 738.651C505.315 739.045 504.916 740.625 503.735 741.215C502.947 741.412 501.957 741.019 501.17 741.019C495.838 740.428 491.299 736.086 485.58 736.086C484.595 736.086 483.802 737.267 482.818 737.267C482.424 737.07 482.818 736.086 482.424 735.884C481.631 735.49 480.45 735.096 479.86 735.687C479.663 736.081 480.057 741.806 479.663 742.2C479.269 742.796 477.886 741.412 477.098 742.003L475.518 747.138C474.134 747.531 472.756 745.754 471.373 745.754C470.58 745.754 470.782 747.335 469.989 747.532C465.844 749.112 463.476 744.967 460.321 743.386H460.124C460.321 743.977 460.518 744.568 460.518 745.164C460.321 750.495 459.14 749.309 454.989 748.324C454.596 748.324 454.202 748.521 454.005 748.915C453.611 750.889 454.793 753.06 452.824 754.64C451.047 756.018 442.757 757.998 442.56 761.153C442.56 761.153 447.295 767.666 447.295 767.863C447.492 768.06 444.731 770.428 445.715 771.215C447.886 773.189 450.057 770.231 448.28 776.744C448.28 777.137 447.886 777.728 447.487 777.728C441.171 775.951 446.103 772.79 443.145 772.593C441.564 772.593 440.186 773.977 438.606 773.78C437.819 773.583 438.016 772.199 437.425 772.002C436.244 771.609 435.057 772.593 434.067 772.199C433.674 772.003 434.461 770.821 434.067 770.821C431.7 771.018 433.87 774.179 433.28 774.376C430.518 775.163 425.98 773.982 423.409 774.966C422.622 775.36 423.016 776.744 422.228 777.137C421.441 777.734 420.451 776.744 419.664 777.334C419.073 777.531 419.86 778.515 419.467 778.915C419.27 779.111 412.56 780.889 411.773 780.495C411.379 780.101 411.773 779.112 411.379 778.718C411.182 778.324 410.198 778.324 409.996 777.93C409.799 777.537 410.986 777.734 410.789 777.34C409.996 774.775 404.473 777.93 402.892 776.153C402.892 776.153 403.286 775.956 403.286 775.759C402.099 774.972 403.286 778.324 402.892 779.708C402.892 780.501 399.141 785.039 397.757 783.656C396.97 782.869 399.141 781.682 398.55 780.894C398.354 780.698 397.757 781.485 397.364 781.485C396.97 781.485 396.379 781.288 396.183 780.894C395.789 780.298 397.167 779.511 396.183 778.723C395.395 778.133 395.001 777.143 394.208 776.749C393.618 776.35 392.83 777.34 392.037 777.143C391.644 776.749 392.037 775.759 391.644 775.366C390.66 774.578 390.856 778.127 387.696 777.143C387.499 776.946 387.302 776.946 387.099 776.946L387.088 777.132Z",
-    "fill": "#A2BBE5"
+    "fill": "#A2BBE5",
+    "content": [
+      {
+        "text": "<span>For all homes smoke alarms are mandatory in Austria. How many smoke alarms you need depends on how many rooms your home has.</span>",
+        "links":[
+          {
+            "link_title": "More information:",
+            "link_url": "https://www.bundesfeuerwehrverband.at/wp-content/uploads/2017/07/TRVB-122-13-ohne-Anhang-3.pdf",
+            "link_name": "Austrian Federal Fire Brigade Association – Smoke alarms",
+            "isUrlInNewLine": true
+          }
+        ],
+        "gap_size": "40px"
+      }
+    ]
   },
   "Lithuania": {
     "name": "Lithuania",
@@ -223,10 +244,24 @@
       }
     ]
   },
-  "czech": {
-    "name": "czech",
+  "Czech Republic": {
+    "name": "Czech Republic",
     "svg": "M513.988 742.593C516.946 730.951 523.459 740.816 529.381 733.319C529.775 732.728 529.184 731.738 529.578 731.148C530.169 730.355 531.552 730.754 532.143 729.961C532.143 729.961 533.718 723.842 533.718 723.645C535.495 720.484 540.23 717.919 543.588 716.345C542.801 715.355 543.391 713.583 542.604 712.593C541.811 711.8 540.236 712.397 539.443 711.8C539.246 711.604 537.469 706.868 537.272 706.671C536.288 705.884 534.511 706.474 533.324 706.08C532.34 705.884 530.169 705.293 529.376 704.697C528.982 704.5 528.982 703.707 528.588 703.904C525.231 705.287 531.744 705.681 526.024 706.272C525.63 706.272 525.039 706.075 524.64 705.681C524.05 705.091 524.246 704.101 523.65 703.51C522.863 702.92 520.101 702.723 520.889 702.132C523.453 699.764 525.034 702.723 522.666 697.987C522.666 697.79 522.272 697.79 522.075 697.987C521.879 698.381 522.075 699.168 521.682 699.371C520.894 699.765 519.905 699.371 519.117 699.371C518.33 699.371 517.34 699.765 516.552 699.568C514.775 698.977 511.418 696.013 508.459 696.412C507.278 696.609 511.62 700.951 511.418 701.351C510.827 702.532 508.853 702.138 507.863 702.931C507.273 703.521 507.469 704.905 506.682 705.299C503.724 706.48 502.537 701.351 501.946 700.563L497.408 697.802C497.014 695.237 504.511 694.247 499.185 691.683C498.201 691.092 493.859 693.46 493.859 693.46C493.268 692.869 493.859 691.879 493.268 691.289C493.071 690.895 492.481 691.289 491.885 691.486C491.688 691.486 491.491 692.076 491.097 691.879C490.704 691.289 490.9 690.299 490.113 689.708C487.548 688.128 484.978 689.905 481.823 687.341C479.652 685.76 482.61 684.185 479.061 683.786C473.533 682.802 479.849 687.144 474.523 687.931C474.129 688.719 473.927 689.315 473.336 689.315C470.771 689.911 466.626 679.056 464.455 685.17C464.062 686.16 467.616 686.947 466.823 687.537C464.455 689.512 461.098 689.708 458.73 691.092C458.336 691.289 458.73 692.273 458.336 692.476C456.756 693.269 454.585 692.082 453.404 693.066C452.42 693.859 452.813 695.434 451.823 696.227C451.43 696.621 451.03 695.243 450.44 695.439C448.663 695.833 448.466 698.201 447.285 698.994C446.694 699.585 445.507 698.6 444.917 699.191C444.326 699.585 444.917 700.771 444.326 701.362C443.533 702.346 441.368 700.569 440.772 700.569C435.834 701.362 435.046 705.108 433.471 708.268C433.078 709.061 433.078 706.294 432.285 705.704C431.694 704.916 430.508 704.714 429.523 704.517C427.746 704.123 431.497 710.439 435.446 713.004C435.839 713.201 437.223 713.398 437.42 714.584C438.01 717.346 435.446 716.362 435.052 718.533C434.855 719.123 439.197 726.423 439.787 727.019C443.145 730.371 443.933 728.009 446.103 730.175C447.487 731.558 447.684 733.729 449.062 734.91C451.823 736.884 458.73 739.449 460.113 743.397H460.31C463.465 744.978 465.833 749.117 469.978 747.542C470.771 747.345 470.569 745.765 471.362 745.765C472.74 745.765 474.123 747.542 475.507 747.149L477.087 742.014C477.875 741.423 479.258 742.807 479.652 742.21C480.046 741.817 479.652 736.097 479.849 735.698C480.439 735.101 481.626 735.501 482.413 735.895C482.807 736.091 482.413 737.076 482.807 737.272C483.791 737.272 484.584 736.091 485.569 736.091C491.294 736.091 495.833 740.433 501.159 741.024C501.952 741.024 502.936 741.417 503.724 741.221C504.91 740.63 505.304 739.05 506.288 738.656C507.666 738.262 509.64 740.827 510.63 741.024C511.221 741.024 512.014 739.843 512.604 740.236C513.594 741.018 513.988 741.806 513.988 742.593Z",
-    "fill": "#F39964"
+    "fill": "#F39964",
+    "content": [
+      {
+        "text": "<span>It is mandatory to install a smoke alarm in every household from <span class='semibold'>1st<br> January 2020.</span><p></p>At least one smoke alarm in every flat, if there is a two floor flat at least one smoke alarm in every floor, the same rule for house</span>",
+        "links":[
+          {
+            "link_title": "More information:",
+            "link_url": "http://www.detektory.cahd.cz/home/detektory-hlasice-pozaru/#1",
+            "link_name": "CAFO – Smoke alarms"
+          }
+        ],
+        "gap_size": "20px"
+      }
+    ]
+    
   },
   "Slovakia": {
     "name": "Slovakia",
@@ -234,7 +269,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -264,7 +299,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -276,7 +311,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -288,7 +323,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -300,7 +335,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -312,7 +347,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -398,7 +433,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -444,7 +479,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -456,7 +491,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -468,7 +503,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -552,7 +587,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -564,7 +599,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -576,7 +611,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -588,7 +623,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -601,7 +636,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -613,7 +648,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -625,7 +660,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -637,7 +672,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -649,14 +684,14 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
     ]
   },
   "second_faroe": {
-    "name": "faroe",
+    "name": "Faroe Islands",
     "svg": "M193.092 368.61C190.724 373.548 194.076 367.429 194.672 370.387C194.672 370.781 193.688 370.781 193.688 370.978C194.082 371.765 195.662 371.568 195.662 372.361C195.662 373.745 195.268 376.113 193.885 376.113C192.704 375.916 194.081 373.548 193.885 372.361C193.288 370.387 187.366 368.216 193.092 368.61Z",
     "fill": "#C0554B"
   },
@@ -666,7 +701,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -678,7 +713,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -690,7 +725,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -702,7 +737,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -714,7 +749,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -726,19 +761,19 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
     ]
   },
   "second_russia": {
-    "name": "russia",
+    "name": "Russia",
     "svg": "M586.81 582.146C582.468 576.229 586.613 570.897 585.427 568.923C584.836 568.136 584.043 567.539 583.256 567.146C582.862 566.949 582.271 567.545 582.075 567.343C581.287 566.746 581.681 565.172 580.894 564.975C578.132 564.187 575.365 566.752 572.407 566.752C572.013 566.752 572.603 566.161 572.21 565.965C569.645 565.177 565.697 565.374 563.329 563.991C562.739 563.597 562.739 562.607 562.148 562.41C561.557 562.41 561.361 563.198 560.764 563.4C560.961 563.991 560.961 564.384 560.764 564.778C560.568 565.172 559.583 564.581 559.583 564.975C559.386 567.146 562.148 569.12 561.557 571.291C560.961 573.855 550.506 573.659 550.9 572.472C551.096 572.078 551.293 571.684 551.49 571.291C549.319 573.659 546.951 573.265 543.796 574.052C543.402 574.052 542.812 573.855 542.812 574.249C542.615 575.83 543.402 577.41 543.402 578.985C543.402 581.746 542.019 584.705 539.651 587.078C550.9 588.658 577.542 587.668 586.619 582.342C586.613 582.348 586.613 582.342 586.81 582.146Z",
     "fill": "#C0554B"
   },
   "second_lithuania": {
-    "name": "lithuania",
+    "name": "Lithuania",
     "svg": "M556.221 563.203H556.024C555.827 563.794 555.433 564.587 555.236 565.177C555.63 564.587 556.024 563.794 556.221 563.203Z",
     "fill": "#F39964"
   },
@@ -753,7 +788,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -765,7 +800,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -777,7 +812,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
@@ -789,20 +824,7 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
-        "links":[
-        ]
-      }
-    ]
-
-  },
-  "Monaco":{
-    "name": "Monaco",
-    "svg": "M346.502 872.445C346.502 872.445 346.502 872.445 346.491 872.419C346.491 872.419 346.495 872.41 346.477 872.402C346.458 872.394 346.468 872.398 346.468 872.398C346.468 872.398 346.468 872.398 346.46 872.417C346.46 872.417 346.46 872.417 346.456 872.426C346.452 872.435 346.448 872.444 346.444 872.453C346.44 872.463 346.444 872.453 346.418 872.464C346.396 872.466 346.396 872.466 346.383 872.471C346.374 872.467 346.374 872.467 346.355 872.459C346.337 872.452 346.337 872.452 346.324 872.457C346.31 872.462 346.32 872.466 346.292 872.455C346.264 872.443 346.283 872.451 346.255 872.439C346.227 872.428 346.214 872.433 346.205 872.429C346.196 872.425 346.187 872.421 346.174 872.427C346.166 872.445 346.166 872.445 346.153 872.451C346.153 872.451 346.087 872.477 346.093 872.49C346.089 872.5 346.098 872.503 346.085 872.509C346.081 872.518 346.076 872.505 346.064 872.533C346.056 872.551 346.053 872.56 346.053 872.56C346.053 872.56 346.036 872.575 346.023 872.58C346.015 872.599 346.015 872.599 345.998 872.613C345.981 872.628 345.976 872.615 345.962 872.62C345.962 872.62 345.94 872.622 345.936 872.631C345.932 872.64 345.929 872.649 345.915 872.655C345.915 872.655 345.906 872.651 345.88 872.662C345.854 872.672 345.872 872.68 345.85 872.681C345.837 872.687 345.842 872.7 345.824 872.692C345.805 872.684 345.813 872.666 345.791 872.667C345.769 872.669 345.795 872.658 345.763 872.656C345.728 872.663 345.741 872.657 345.724 872.672C345.72 872.681 345.694 872.692 345.694 872.692C345.694 872.692 345.69 872.701 345.668 872.703C345.658 872.699 345.645 872.704 345.642 872.713C345.642 872.713 345.632 872.709 345.606 872.72C345.58 872.731 345.571 872.727 345.558 872.732L345.321 872.807C345.321 872.807 345.309 872.834 345.305 872.843C345.314 872.847 345.305 872.843 345.301 872.853C345.297 872.862 345.293 872.871 345.293 872.871C345.293 872.871 345.286 872.89 345.282 872.899L345.263 872.945C345.263 872.945 345.255 872.963 345.246 872.959C345.246 872.959 345.218 872.948 345.196 872.949C345.169 872.96 345.156 872.965 345.156 872.965L345.117 872.981L345.1 872.996L345.304 873.363L345.502 873.305C345.483 873.298 345.483 873.298 345.478 873.285C345.477 873.262 345.463 873.268 345.48 873.253C345.484 873.244 345.49 873.257 345.488 873.235C345.488 873.235 345.492 873.225 345.47 873.227C345.451 873.219 345.444 873.238 345.433 873.211C345.422 873.185 345.417 873.172 345.411 873.159C345.402 873.155 345.397 873.142 345.401 873.133C345.405 873.124 345.428 873.144 345.405 873.124C345.386 873.116 345.377 873.112 345.381 873.103C345.381 873.103 345.407 873.092 345.42 873.087L345.438 873.094C345.438 873.094 345.444 873.108 345.449 873.121C345.458 873.124 345.468 873.128 345.469 873.151C345.474 873.164 345.471 873.173 345.48 873.177C345.489 873.181 345.48 873.177 345.498 873.185C345.498 873.185 345.498 873.185 345.513 873.202C345.531 873.209 345.54 873.213 345.55 873.217C345.55 873.217 345.568 873.225 345.577 873.229C345.587 873.232 345.6 873.227 345.622 873.226C345.644 873.224 345.648 873.215 345.657 873.219C345.667 873.223 345.676 873.226 345.694 873.234C345.704 873.238 345.72 873.223 345.734 873.218C345.741 873.2 345.741 873.2 345.745 873.19C345.753 873.172 345.822 873.136 345.804 873.128C345.785 873.121 345.789 873.111 345.767 873.113C345.748 873.105 345.748 873.105 345.726 873.107C345.708 873.099 345.698 873.095 345.676 873.096C345.658 873.089 345.613 873.092 345.608 873.079C345.608 873.079 345.608 873.079 345.597 873.052C345.586 873.026 345.577 873.022 345.581 873.013C345.585 873.004 345.599 873.021 345.607 873.002C345.615 872.984 345.624 872.988 345.619 872.975C345.613 872.962 345.6 872.967 345.608 872.949C345.612 872.939 345.62 872.921 345.623 872.912C345.627 872.903 345.635 872.884 345.644 872.888C345.644 872.888 345.653 872.892 345.663 872.896L345.809 872.935C345.809 872.935 345.844 872.928 345.866 872.927C345.876 872.931 345.885 872.935 345.907 872.933C345.916 872.937 345.916 872.937 345.937 872.913C345.954 872.899 345.984 872.879 345.992 872.86C346 872.842 346.007 872.823 346.011 872.814C346.019 872.796 346.023 872.786 346.032 872.79L346.115 872.749C346.115 872.749 346.135 872.725 346.143 872.707C346.151 872.688 346.155 872.679 346.172 872.664C346.179 872.646 346.179 872.646 346.192 872.641C346.215 872.639 346.25 872.632 346.263 872.627C346.276 872.622 346.302 872.611 346.316 872.605C346.316 872.605 346.319 872.596 346.342 872.595C346.364 872.593 346.36 872.602 346.366 872.616C346.376 872.642 346.359 872.656 346.369 872.66C346.378 872.664 346.378 872.664 346.396 872.672C346.405 872.676 346.424 872.683 346.424 872.683C346.424 872.683 346.472 872.595 346.466 872.582C346.466 872.582 346.462 872.576 346.452 872.565C346.452 872.565 346.432 872.535 346.445 872.53C346.449 872.52 346.479 872.5 346.483 872.491C346.487 872.482 346.498 872.454 346.502 872.445Z",
-    "fill": "#C0554B",
-    "content": [
-      {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home</span>",
+        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
         "links":[
         ]
       }
