@@ -616,6 +616,7 @@ section {
   padding: 0;
   display: flex;
   flex-direction: column;
+  height: fit-content;
   .content {
     position: relative;
     display: flex;
