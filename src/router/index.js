@@ -40,6 +40,16 @@ const routes = [
     path: '/maintain',
     name: 'maintain',
     component: ()=> import('../views/MaintainPage.vue')
+  },
+   {
+    path: '/privacy-policy',
+    name: 'privacypolicy',
+    component: ()=> import('../views/PrivacyPolicy.vue')
+  },
+   {
+    path: '/*/',
+    name: 'PageNotFound',
+    component: LandingPageView
   }
 ]
 

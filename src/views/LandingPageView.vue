@@ -420,7 +420,7 @@ export default {
 h1 {
   font-size: clamp(24px, 5vw, 96px);
   margin: 0;
-  color: #000;
+  color: #1e1826;
   font-weight: 500;
   &.primary {
     margin-bottom: calc(min(2rem, 2vw));

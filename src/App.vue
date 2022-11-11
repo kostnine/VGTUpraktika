@@ -3,15 +3,18 @@
     <HeaderComponent />
     <router-view />
     <FooterComponent />
+    <CookieModal />
   </div>
 </template>
 <script>
 import HeaderComponent from "./components/Header.vue";
 import FooterComponent from "./components/Footer.vue";
+import CookieModal from "./components/CookieModal.vue";
 export default {
   components: {
     HeaderComponent,
     FooterComponent,
+    CookieModal
   },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
