@@ -3,7 +3,7 @@
     <PageHeader
       image="images/install_smoke_alarms.jpg"
       title="Where to Place<br> Smoke Alarms?"
-      content="Protect yourself and your family with the right<br> number and correct placement of smoke alarms."
+      content="Protect yourself and your family with the right number and correct placement of smoke alarms."
       buttonText="Learn More About Locations"
       scrollTo="locations-header"
     />
@@ -124,9 +124,9 @@
         </div>
         <div class="consider-container">
           <h2>What to Consider for the Installation Location?</h2>
-          <span
-            >Now that we have determined which rooms/areas should be equipped
-            with detectors, the next question is
+          <span class="even-text"
+            >Now that we have determined which rooms / areas should <br />be
+            equipped with detectors, the next question is<br />
             <span class="semibold"
               >where in the room it should be installed.</span
             ></span
@@ -444,7 +444,7 @@ export default {
   align-items: center;
   height: fit-content;
   padding-top: 80px;
-  padding-bottom: 210px;
+  padding-bottom: 80px;
   @media (max-width: 1280px) {
     padding: 0 80px 0 80px;
   }
@@ -483,6 +483,13 @@ export default {
     padding: 20px 40px 20px 0;
     font-size: 20px;
     line-height: 28px;
+    @media (max-width: 1080px) {
+      max-width: 60%;
+      text-align: justify;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
     .semibold {
       font-family: $semiBoldFont;
       font-size: 20px;
@@ -503,6 +510,9 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  @media (max-width: 1280px) {
+    padding: 5vw 20px 5%;
+  }
 }
 .consider-container {
   display: flex;
@@ -519,9 +529,13 @@ export default {
     font-size: clamp(24px, 5vw, 32px);
     margin: 3rem 0;
   }
+  .even-text {
+    text-align: center;
+    width: 80%;
+  }
   span {
     text-align: center;
-    max-width: 60%;
+    max-width: 80%;
     margin: 2rem 0 4rem;
     font-size: clamp(16px, 5vw, 24px);
   }
@@ -576,7 +590,9 @@ export default {
     width: 100%;
     min-height: 300px;
     padding: 15px calc(min(160px, 10vw));
-    // position: absolute;
+    @media (max-width: 1080px) {
+      padding: 15px calc(min(80px, 5vw));
+    }
     img {
       width: 100%;
       height: 100%;
@@ -588,7 +604,7 @@ export default {
     }
     .house {
       display: flex;
-      flex: 8;
+      flex: 10;
       position: relative;
       width: 100%;
       svg {
@@ -597,6 +613,9 @@ export default {
         bottom: 0;
         height: auto;
         max-height: 60vh;
+      }
+      @media (max-width: 1124px) {
+        flex: 14;
       }
     }
     .info {
@@ -610,6 +629,9 @@ export default {
       font-size: clamp(20px, 4vw, 24px);
       max-width: 355px;
       // margin-left: ;
+      @media (max-width: 1080px) {
+        flex: 4;
+      }
       .row {
         display: flex;
         width: 100%;
@@ -628,6 +650,11 @@ export default {
             color: #1e1826;
             font-size: 20px;
             line-height: 24px;
+            @media (max-width: 1080px) {
+              font-size: 16px;
+              line-height: 18px;
+              margin-bottom: 8px;
+            }
           }
         }
         .legend-item {
@@ -638,12 +665,16 @@ export default {
           font-size: clamp(14px, 5vw, 16px);
           .legend-color {
             height: 30px;
-            width: 30px;
+            min-width: 30px;
             margin: 5px 0;
             margin-right: 5px;
+            border-radius: 3px;
           }
           .legend-text {
             text-align: center;
+            @media (max-width: 1280px) {
+              text-align: start;
+            }
           }
         }
       }
@@ -724,7 +755,7 @@ export default {
     display: flex;
     flex-direction: column;
     background: #faf7f5;
-    padding: 60px calc(min(165px, 15vw));
+    padding: 60px calc(min(165px, 1vw));
     box-shadow: 0 2px 3px 0px #00000052;
     border-radius: 10px;
   }
@@ -741,7 +772,7 @@ export default {
       justify-content: flex-end;
       align-items: center;
       max-width: 50%;
-      width: 45%;
+      width: 50%;
       height: 40vh;
       max-height: 400px;
       margin: 2rem 0px;
@@ -752,7 +783,7 @@ export default {
       p {
         height: 27%;
         text-align: center;
-        max-width: 70%;
+        max-width: 90%;
         margin: calc(min(30px, 5vw)) 0 0;
         font-size: clamp(16px, 5vw, 20px);
         font-family: $mainFont;
@@ -881,6 +912,7 @@ export default {
   align-items: center;
   margin-top: 17px;
   margin-right: 10px;
+  border-radius: 3px;
 }
 .semibold {
   font-family: $semiBoldFont;

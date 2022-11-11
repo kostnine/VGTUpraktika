@@ -13,15 +13,13 @@
         <span class="main-header-title" id="types"
           >How to Choose Your Smoke Alarm?</span
         >
-        <div class="main-header-content">
-          <div class="centered-row">
-            <span
-              >All smoke alarms placed on the EU market must be third party
-              certified to <span class="semibold">EN14604</span> and
-              <span class="semibold">CE marked</span> to conform with the
-              Construction Products Directive.</span
-            >
-          </div>
+        <div class="main-header-content centered-row">
+          <span
+            >All smoke alarms placed on the EU market must be third party
+            certified to <bold class="semibold">EN14604</bold> and
+            <strong class="semibold">CE marked</strong> to conform with the
+            Construction Products Directive.</span
+          >
           <div class="image-container">
             <img src="@/assets/images/C_sign.svg" alt="c_sign" />
           </div>
@@ -53,13 +51,13 @@
         </div>
         <div class="main-header-content">
           <div class="column-div">
-            <span
+            <span class="whole-text"
               >Another option is choosing a smoke alarm which is
               <span class="semibold">interconnected</span>, this means if 1
               smoke alarm detects smoke, they all go off.<br
             /></span>
             <div class="separator"></div>
-            <span class="separated-text"
+            <span class="whole-text"
               >You can choose
               <span class="semibold"
                 >wireless interconnected smoke alarms or mains connected smoke
@@ -236,11 +234,27 @@ export default {
     text-align: start;
     color: #1e1826;
     display: flex;
-    .centered-row {
+    &.centered-row {
       display: flex;
+      flex-direction: row;
       align-items: center;
       height: 100%;
-      width: 100%;
+      width: 90%;
+      span {
+        width: 80%;
+        display: inline-block;
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        span {
+          width: 100%;
+        }
+      }
+    }
+    .column-div {
+      .whole-text {
+        display: inline-block;
+      }
     }
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -269,8 +283,8 @@ export default {
       justify-content: flex-end;
       width: 20%;
       @media (max-width: 1024px) {
-        width: 100%;
-        justify-content: center;
+        width: 30%;
+        justify-content: flex-end;
         margin-top: 32px;
       }
     }

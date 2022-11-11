@@ -17,9 +17,7 @@
       class="header-navigation-bar"
       :class="{ open: windowWidth < 768 ? isMenuOpen : true }"
     >
-      <router-link to="/" class="header-nav-block">{{
-        this.isNotHome ? "Back to Homepage" : "Home"
-      }}</router-link>
+      <router-link to="/" class="header-nav-block"> Home </router-link>
       <router-link to="/regulations" class="header-nav-block"
         >Regulations in Europe</router-link
       >
@@ -97,6 +95,7 @@ export default {
     "click-outside": {
       bind: function (el, binding, vnode) {
         el.clickOutsideEvent = function (event) {
+          console.log(vnode.context);
           let outside = true;
           if (event.target.classList[1] == "dropdown") {
             outside = false;
@@ -162,6 +161,7 @@ export default {
     width: 60%;
     display: flex;
     padding-top: 7px;
+    justify-content: flex-end;
     align-items: flex-start;
     @media (min-width: 1280px) {
       margin-left: 64px;

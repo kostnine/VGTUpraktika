@@ -3,7 +3,7 @@
     <PageHeader
       image="images/Man_writing.png"
       title="Regulations in Europe"
-      content="Check out the interactive map to find out more about<br>  regulations on smoke alarms in domestic properties<br> in different European countries."
+      content="Check out the interactive map to find out more about regulations on smoke alarms in domestic properties in different European countries."
       buttonText="Map of Europe"
       scrollTo="map"
     />
@@ -51,7 +51,7 @@
           <span class="regulations-information-title">Information:</span>
           <ul>
             <li>Extensive smoke alarm legislation in multiple countries</li>
-            <li>No legislation in Southern/Eastern Europe</li>
+            <li>No legislation in Southern / Eastern Europe</li>
             <li>
               Consumer awareness is found to be the most important influence in
               the decision to buy a smoke alarm, even without legislation or
@@ -74,7 +74,7 @@
         <div>
           <svg
             class="map-svg"
-            viewBox="0 0 1077 1082"
+            viewBox="0 100 929 980"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -145,31 +145,6 @@ export default {
       (country) => !country.includes("_")
     );
   },
-  // directives: {
-  //   "click-outside": {
-  //     bind: function (el, binding, vnode) {
-  //       el.clickOutsideEvent = function (event) {
-  //         let outside = true;
-  //         console.log(el);
-  //         console.log(event.path);
-  //         if (outside) {
-  //           vnode.context[binding.expression](event);
-  //         }
-  //       };
-  //       // register click and touch events
-  //       document.body.addEventListener("click", el.clickOutsideEvent);
-  //       document.body.addEventListener("touchstart", el.clickOutsideEvent);
-  //     },
-  //     unbind: function (el) {
-  //       // unregister click and touch events before the element is unmounted
-  //       document.body.removeEventListener("click", el.clickOutsideEvent);
-  //       document.body.removeEventListener("touchstart", el.clickOutsideEvent);
-  //     },
-  //     stopProp(event) {
-  //       event.stopPropagation();
-  //     },
-  //   },
-  // },
 };
 </script>
 <style scoped lang="scss">
@@ -199,16 +174,20 @@ export default {
   flex-direction: column;
   justify-content: center;
   font-family: $mainFont;
-  width: 32%;
+  width: 41%;
   height: 60%;
   @media (max-width: 1580px) {
     position: relative;
   }
 
   .regulations-page-text-title {
-    font-size: 48px;
+    font-size: clamp(28px, 3vw, 48px);
     font-family: $semiBoldFont;
     text-align: start;
+    @media (max-width: 768px) {
+      margin-top: 16px;
+      font-size: 40px;
+    }
   }
   .regulations-page-text-subInfo {
     font-size: 16px;
@@ -217,7 +196,7 @@ export default {
   }
 }
 .regulations-page-map-content {
-  width: 68%;
+  width: 61%;
   height: 95%;
   div {
     width: 100%;
@@ -253,7 +232,7 @@ export default {
       align-items: center;
       justify-content: flex-start;
       margin: 34px 0;
-      font-size: 24px;
+      font-size: clamp(18px, 1vw, 24px);
       line-height: 32px;
     }
   }
@@ -262,6 +241,11 @@ export default {
   text-align: start;
   .regulations-information-title {
     font-family: $semiBoldFont;
+  }
+  @media (min-width: 1280px) {
+    li {
+      max-width: 80%;
+    }
   }
 }
 

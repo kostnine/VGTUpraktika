@@ -6,7 +6,9 @@
         <h1><strong>Smoke Alarm</strong> Day</h1>
         <h2>18th November 2022</h2>
         <span class="hashtag">#smokealarmssavelives</span>
-        <h4>This Campaign is Part of Fire Safety Week</h4>
+        <span class="under-hashtag"
+          >This Campaign is Part of Fire Safety Week</span
+        >
       </div>
       <div class="illustrations">
         <div class="smoke-detector-container">
@@ -189,9 +191,7 @@
           @click="card.action"
         >
           <div class="card-content">
-            <div class="text">
-              {{ card.text }}
-            </div>
+            <div class="text" v-html="card.text"></div>
             <img
               v-if="card.img != ''"
               :src="require(`@/assets/${card.img}`)"
@@ -236,6 +236,11 @@ export default {
           link: "videos/landingpage/Latvia.mp4",
           img: "images/messages_of_support/3.jpg",
         },
+        {
+          id: 3,
+          link: "videos/landingpage/Denmark.mp4",
+          img: "images/messages_of_support/4.jpg",
+        },
         // {
         //   id: 3,
         //   link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
@@ -256,29 +261,29 @@ export default {
         {
           url: "https://www.f-e-u.org",
           url_text: "www.f-e-u.org",
-          logo: "images/supporters/feu-logo.png",
+          logo: "images/supporters/feu-logo.svg",
         },
         {
           url: "https://www.europeanfiresafetyalliance.org",
           url_text: "www.europeanfiresafetyalliance.org",
-          logo: "images/supporters/efsa-logo.png",
+          logo: "images/supporters/efsa-logo.svg",
         },
         {
           url: "https://www.euralarm.org",
           url_text: "www.euralarm.org",
-          logo: "images/supporters/euralarm.png",
+          logo: "images/supporters/euralarm.svg",
         },
       ],
       supportersExtra: [
         {
           url: "https://www.smartwaresgroup.com",
           url_text: "www.smartwaresgroup.com",
-          logo: "images/supporters/Smartwares Group_fc.png",
+          logo: "images/supporters/Smartwares Group_fc.svg",
         },
         {
           url: "https://www.eielectronics.com",
           url_text: "www.eielectronics.com",
-          logo: "images/supporters/Ei-Electronics-Logo.png",
+          logo: "images/supporters/Ei-Electronics-Logo.svg",
         },
         {
           url: "https://www.fireangel.co.uk",
@@ -289,26 +294,26 @@ export default {
         {
           url: "https://www.kidde.com/home-safety/en",
           url_text: "www.kidde.com",
-          logo: "images/supporters/kidde.png",
+          logo: "images/supporters/kidde.svg",
         },
       ],
       cards: [
         {
-          text: "About Smoke Alarms",
+          text: "About<br> Smoke Alarms",
           img: "images/cards/detector.png",
           action: () => {
             this.$router.push({ path: "/types" });
           },
         },
         {
-          text: "Where to place Smoke Alarms",
+          text: "Where to place <br> Smoke Alarms",
           img: "images/cards/room.png",
           action: () => {
             this.$router.push({ path: "/place" });
           },
         },
         {
-          text: "How to Maintain Smoke Slarms",
+          text: "How to Maintain<br> Smoke Alarms",
           img: "images/cards/maintain.png",
           action: () => {
             this.$router.push({ path: "/maintain" });
@@ -453,8 +458,8 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 58px;
-  height: 58px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.67);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -710,7 +715,6 @@ section {
     align-items: center;
     background: $mainColor;
     padding: 2rem calc(min(160px, 10vw));
-    min-height: 125px;
     justify-content: center;
     span {
       display: flex;
@@ -719,8 +723,6 @@ section {
     .video {
       display: flex;
       flex-direction: column;
-      height: calc(min(250px, 10vw));
-      min-width: calc(min(360px, 10vw));
       margin: 0 1rem;
       border-radius: 15px;
       position: relative;
@@ -729,9 +731,11 @@ section {
       video,
       img {
         object-fit: cover;
-        width: 10vw;
+        width: 100%;
         height: 100%;
         border-radius: 10px;
+        height: 20vw;
+        min-width: 20vw;
       }
       img {
         cursor: pointer;
@@ -754,6 +758,24 @@ section {
     .content {
       padding: 2rem calc(min(160px, 10vw));
     }
+    .video {
+      display: flex;
+      flex-direction: column;
+      height: 20vw;
+      min-width: 20vw;
+      margin: 0 1rem;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      align-items: center;
+      video,
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
   }
   @media (max-width: 1050px) {
     min-height: 100vh;
@@ -762,7 +784,7 @@ section {
       flex-direction: column-reverse;
       padding: 2rem calc(min(160px, 10vw));
       .video {
-        width: 100%;
+        width: 40vw;
         height: 40vw;
       }
       .text {
@@ -811,12 +833,11 @@ section {
       flex-wrap: wrap;
       .video {
         margin: 1rem 0;
-        height: 100vh;
-        min-width: 100%;
-        width: 100%;
+        height: 80vw;
+        width: 80vw;
         video {
-          height: 300px;
-          min-width: 300px;
+          height: 100%;
+          min-width: 100%;
         }
         &:first-child {
           margin: 1rem 0;
@@ -824,14 +845,6 @@ section {
         &:last-child {
           margin: 1rem 0;
         }
-      }
-    }
-  }
-  @media (max-width: 678px) {
-    .footer {
-      .video {
-        height: 100vw;
-        width: initial;
       }
     }
   }
@@ -1260,5 +1273,11 @@ section {
 }
 .swiper-slide {
   height: 100% !important;
+}
+.under-hashtag {
+  // font-size: 16px;
+  line-height: 24px;
+  font-size: clamp(16px, 1.5vw, 38px);
+  margin-top: 16px;
 }
 </style>

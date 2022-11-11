@@ -1,5 +1,11 @@
 <template>
-  <div class="country-card">
+  <div
+    class="country-card"
+    :class="this.country_data[countryInfo].expanded == true ? 'expanded' : ''"
+    v-scroll-lock="
+      this.country_data[countryInfo].expanded == true && this.windowWidth <= 768
+    "
+  >
     <div class="nav-line">
       <img
         src="@/assets/icons/close_cross.svg"
@@ -78,24 +84,38 @@ export default {
       countryInfo: this.country,
       closeActiveCountry: this.closeCountry,
       country_data: country_data,
+      windowWidth: window.innerWidth,
     };
   },
   watch: {
     country(newVal) {
       this.countryInfo = newVal;
+      console.log(this.countryInfo);
     },
+  },
+  methods: {
+    closeOpenedCountry() {
+      this.closeActiveCountry;
+    },
+    clearCountry() {
+      console.log("test");
+    },
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
   },
 };
 </script>
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 .country-card {
-  margin-left: -50px;
-  max-height: 100%;
   overflow-y: auto;
-  max-height: fit-content;
-  min-height: 750px;
-  width: 640px;
+  margin-top: 20px;
   background: #faf7f5;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
@@ -105,6 +125,8 @@ export default {
   padding: 20px;
   word-wrap: normal;
   position: absolute;
+  width: 384px;
+  height: 510px;
   top: 20%;
   @media (max-width: 1580px) {
     position: relative;
@@ -119,9 +141,20 @@ export default {
     height: calc(100vh - 110px);
     overflow-y: auto;
   }
+  &.expanded {
+    height: 660px;
+    width: 500px;
+    @media (max-width: 1000px) {
+      width: 140%;
+    }
+    @media (max-width: 768px) {
+      height: 86vh;
+      width: 100%;
+    }
+  }
 }
 .country-title {
-  font-size: 48px;
+  font-size: 32px;
   line-height: 72px;
   font-family: $semiBoldFont;
 }

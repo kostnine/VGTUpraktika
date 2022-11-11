@@ -12,7 +12,9 @@
           >Want to join the project? Contact us!</span
         >
         <span class="text">EUROFSA</span>
-        <span class="text email">E-Mail: info@eurofsa.org</span>
+        <span class="text email-link"
+          >E-Mail: <a href="mailto:info@eurofsa.org">info@eurofsa.org</a></span
+        >
         <span class="bottom-rights"
           >All content © 2022 European smoke alarm day campaign</span
         >
@@ -54,6 +56,7 @@ export default {
       flex-wrap: nowrap;
       justify-content: center;
       align-items: flex-start;
+      text-align: start;
       img {
         width: 200px;
         height: 100px;
@@ -63,7 +66,6 @@ export default {
         margin-top: 40px;
         font-size: 24px;
         line-height: 32px;
-        text-align: center;
       }
     }
   }
@@ -122,6 +124,14 @@ export default {
           margin-bottom: 1rem;
         }
       }
+    }
+  }
+}
+.email-link {
+  a {
+    color: white;
+    &:hover {
+      font-family: $semiBoldFont;
     }
   }
 }

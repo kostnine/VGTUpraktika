@@ -116,7 +116,8 @@
           }
         ]
       }
-    ]
+    ],
+    "expanded": true
 
   },
   "Slovenia": {
@@ -169,8 +170,7 @@
           {
             "link_title": "More information:",
             "link_url": "https://www.belgium.be/nl/huisvesting/huisvestingsproblemen/brand/rookmelders",
-            "link_name": "BELGIUM.BE – Smoke detectors",
-            "isUrlInNewLine": true
+            "link_name": "BELGIUM.BE – Smoke detectors"
           }
         ],
         "gap_size": "40px"
@@ -559,7 +559,6 @@
             "link_title": "More information:",
             "link_url": "http://www.ensemblecontrelefeu.fr/",
             "link_name": "Together against Fire",
-            "isUrlInNewLine": true,
             "gap_above": "15px",
             "gap_below": "0"
           }
@@ -581,8 +580,7 @@
             "link_url": "https://www.government.nl/documents/questions-and-answers/housing/how-many-smoke-detectors",
             "link_name": "GOVERNMENT.NL – Smoke detectors",
             "gap_above": "",
-            "gap_below": "0",
-            "isUrlInNewLine": true
+            "gap_below": "0"
           }
         ]
       }

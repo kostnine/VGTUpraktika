@@ -3,7 +3,7 @@
     <PageHeader
       image="images/maintain/battery.jpg"
       title="How to Maintain<br> Smoke Alarms"
-      content="It is important that all smoke alarms in your home are<br> working. Learn how to maintain them properly!"
+      content="It is important that all smoke alarms in your home are working. Learn how to maintain them properly!"
       buttonText="Learn More About Maintenance"
       scrollTo="maintain"
     />
