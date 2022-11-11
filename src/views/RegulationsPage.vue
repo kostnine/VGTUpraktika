@@ -115,6 +115,9 @@ export default {
       sorted_countries: [],
     };
   },
+  metaInfo: {
+      title: 'Regulations',
+  },
   components: {
     CountryComponent,
     PageHeader,

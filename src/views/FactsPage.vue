@@ -111,6 +111,9 @@
 import PageHeader from "@/components/PageHeader.vue";
 export default {
   name: "FactsPage",
+  metaInfo: {
+      title: 'Important facts',
+  },
   components: {
     PageHeader,
   },

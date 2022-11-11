@@ -108,6 +108,9 @@ export default {
   components: {
     PageHeader,
   },
+  metaInfo: {
+      title: 'About Smoke Alarms',
+  },
   methods: {
     scroll(id) {
       document.getElementById(id).scrollIntoView({

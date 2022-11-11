@@ -277,6 +277,9 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  metaInfo: {
+      title: 'Best practices',
+  },
   data() {
     return {
       windowWidth: window.innerWidth,

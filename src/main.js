@@ -3,10 +3,23 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import router from './router'
 import VScrollLock from 'v-scroll-lock'
- 
+import VueGtag from "vue-gtag";
+import VueMeta from 'vue-meta'
 Vue.use(VScrollLock)
 Vue.use(VueRouter)
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true
+})
 
+Vue.use(VueGtag, {
+  config: { 
+    id: "G-HBB1FHQMV7",
+    params: {
+      send_page_view: false
+    }
+  }
+});
 Vue.config.productionTip = false
 
 Vue.mixin({

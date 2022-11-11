@@ -236,6 +236,9 @@ export default {
     HouseComponent,
     PageHeader,
   },
+  metaInfo: {
+      title: 'Where To Place Smoke Alarms',
+  },
   data() {
     return {
       locations: [

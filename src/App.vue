@@ -13,6 +13,12 @@ export default {
     HeaderComponent,
     FooterComponent,
   },
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Home',
+    // all titles will be injected into this template
+    titleTemplate: '%s | European Smoke Alarm Day'
+  },
   watch:{
     '$route.path'(){
       window.scroll(0,0);

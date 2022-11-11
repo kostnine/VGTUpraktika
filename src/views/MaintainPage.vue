@@ -91,6 +91,9 @@ import PageHeader from "@/components/PageHeader.vue";
 
 export default {
   name: "MaintainPage",
+  metaInfo: {
+      title: 'How to Maintain Smoke Alarms',
+  },
   components: { PageHeader },
 };
 </script>
