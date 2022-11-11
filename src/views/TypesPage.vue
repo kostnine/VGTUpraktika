@@ -51,13 +51,13 @@
         </div>
         <div class="main-header-content">
           <div class="column-div">
-            <span
+            <span class="whole-text"
               >Another option is choosing a smoke alarm which is
               <span class="semibold">interconnected</span>, this means if 1
               smoke alarm detects smoke, they all go off.<br
             /></span>
             <div class="separator"></div>
-            <span class="separated-text"
+            <span class="whole-text"
               >You can choose
               <span class="semibold"
                 >wireless interconnected smoke alarms or mains connected smoke
@@ -252,7 +252,7 @@ export default {
       }
     }
     .column-div {
-      span {
+      .whole-text {
         display: inline-block;
       }
     }

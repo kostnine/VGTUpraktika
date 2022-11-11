@@ -70,12 +70,12 @@ export default {
     width: 50%;
     .header-title {
       font-family: $semiBoldFont;
-      font-size: 56px;
+      font-size: clamp(42px, 5vw, 56px);
       line-height: 72px;
       margin-bottom: 30px;
     }
     .header-content {
-      font-size: 24px;
+      font-size: clamp(20px, 3vw, 24px);
       line-height: 32px;
     }
     .header-button {

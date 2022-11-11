@@ -236,6 +236,11 @@ export default {
           link: "videos/landingpage/Latvia.mp4",
           img: "images/messages_of_support/3.jpg",
         },
+        {
+          id: 3,
+          link: "videos/landingpage/Denmark.mp4",
+          img: "images/messages_of_support/4.jpg",
+        },
         // {
         //   id: 3,
         //   link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
@@ -453,8 +458,8 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 58px;
-  height: 58px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.67);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -779,7 +784,7 @@ section {
       flex-direction: column-reverse;
       padding: 2rem calc(min(160px, 10vw));
       .video {
-        width: 100%;
+        width: 40vw;
         height: 40vw;
       }
       .text {
@@ -828,12 +833,11 @@ section {
       flex-wrap: wrap;
       .video {
         margin: 1rem 0;
-        height: 100vh;
-        min-width: 100%;
-        width: 100%;
+        height: 80vw;
+        width: 80vw;
         video {
-          height: 300px;
-          min-width: 300px;
+          height: 100%;
+          min-width: 100%;
         }
         &:first-child {
           margin: 1rem 0;
@@ -841,14 +845,6 @@ section {
         &:last-child {
           margin: 1rem 0;
         }
-      }
-    }
-  }
-  @media (max-width: 678px) {
-    .footer {
-      .video {
-        height: 100vw;
-        width: initial;
       }
     }
   }
@@ -1279,7 +1275,9 @@ section {
   height: 100% !important;
 }
 .under-hashtag {
-  font-size: 16px;
+  // font-size: 16px;
   line-height: 24px;
+  font-size: clamp(16px, 1.5vw, 38px);
+  margin-top: 16px;
 }
 </style>

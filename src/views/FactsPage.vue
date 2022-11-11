@@ -345,7 +345,6 @@ export default {
         display: flex;
         .colored-block {
           background: #c0554b;
-          opacity: 0.7;
           min-width: 30px;
           height: 30px;
           display: flex;

@@ -130,6 +130,9 @@ export default {
 .email-link {
   a {
     color: white;
+    &:hover {
+      font-family: $semiBoldFont;
+    }
   }
 }
 </style>

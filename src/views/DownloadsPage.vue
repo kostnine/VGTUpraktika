@@ -358,8 +358,8 @@ export default {
       currentlyHoveringVideo: "",
       mainMessageVideo: {
         id: 0,
-        link: "videos/downloads/bedroom_b-roll.mp4",
-        img: "images/downloads/bedroom.jpg",
+        link: "videos/landingpage/2.FIRESAFETY_Cooking.mp4",
+        img: "images/messages_of_support/video2.jpg",
       },
       testing_videos: [
         {
@@ -675,6 +675,28 @@ h2 {
   font-size: clamp(16px, 5vw, 24px);
   min-height: 300px;
   justify-content: center;
+  @media (min-width: 1080px) {
+    min-height: 450px;
+    .video-container {
+      .video {
+        min-height: 14vw;
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (max-width: 1080px) {
+    min-height: 450px;
+    .video-container {
+      .video {
+        min-height: 20vw;
+        min-width: 18vw;
+        margin: 0 5px;
+        span {
+          text-align: center;
+        }
+      }
+    }
+  }
   @media (max-width: 768px) {
     padding: 15px calc(min(160px, 10vw));
   }
@@ -688,11 +710,7 @@ h2 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 auto;
-      min-height: 14vw;
-      height: 13vw;
-      width: auto;
-      // aspect-ratio: 16/9;
+      aspect-ratio: 16/9;
       iframe {
         border-radius: 10px;
         overflow: hidden;
@@ -905,6 +923,8 @@ h3 {
   }
   @media (max-width: 768px) {
     height: fit-content;
+    padding-top: 64px;
+    padding-bottom: 64px;
     .why-videos-title {
       text-align: center;
     }
@@ -922,12 +942,19 @@ h3 {
     overflow: hidden;
     border-radius: 20px;
     max-height: 60vw;
+    @media (min-width: 1280px) {
+      width: 60%;
+    }
     @media (max-width: 1280px) {
       max-height: 50vw;
       max-width: 55vw;
     }
     @media (max-width: 1080px) {
       max-height: 40vw;
+      width: 60%;
+    }
+    @media (max-width: 768px) {
+      min-height: 80vw;
     }
     .swiper-container {
       width: 100%;
@@ -1009,13 +1036,7 @@ h3 {
 @media (max-width: 768px) {
   .why-videos {
     .main-video {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%;
-      margin-top: 32px;
-      margin-bottom: 5px;
+      display: none;
     }
   }
   .other-videos {
@@ -1023,6 +1044,8 @@ h3 {
     flex-direction: column;
     .video {
       margin-right: 0;
+      min-height: 80vw;
+      max-height: 80vw;
     }
   }
 }
@@ -1060,6 +1083,13 @@ h3 {
       color: white;
       font-family: $semiBoldFont;
       text-align: start;
+      @media (max-width: 1080px) {
+        font-size: 20px;
+      }
+      @media (max-width: 768px) {
+        width: 95%;
+        text-align: center;
+      }
     }
     .video-url {
       font-size: 16px;
@@ -1067,6 +1097,11 @@ h3 {
       color: white;
       margin-top: 5px;
       white-space: nowrap;
+      @media (max-width: 768px) {
+        width: 95%;
+        text-align: center;
+        white-space: initial;
+      }
     }
     .video {
       display: flex;
@@ -1101,6 +1136,13 @@ h3 {
       color: white;
       font-family: $semiBoldFont;
       text-align: start;
+      @media (max-width: 1080px) {
+        font-size: 20px;
+      }
+      @media (max-width: 768px) {
+        width: 98%;
+        text-align: center;
+      }
     }
     .leaflet {
       position: relative;
@@ -1150,7 +1192,7 @@ h3 {
       height: 100%;
       margin-right: calc(min(80px, 7vw));
       @media (max-width: 1080px) {
-        font-size: 20px;
+        font-size: 24px;
         margin: 0;
       }
       @media (max-width: 768px) {
