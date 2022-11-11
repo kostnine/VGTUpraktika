@@ -25,22 +25,29 @@ Vue.mixin({
   data: function() {
     return {
       windowWidth: 0,
-      windowHeight: 0
+      windowHeight: 0,
+      windowScrollTop: 0,
     }
   },
   mounted() {
     this.windowWidth = window.innerWidth;
     this.windowHeight = window.innerHeight; 
+    this.windowScrollTop = window.scrollY;
     window.addEventListener('resize', this.setWindowSize);
+    window.addEventListener('scroll', this.setScrollTop);
   },
   beforeDestroy(){
      window.removeEventListener('resize', this.setWindowSize);
+     window.removeEventListener('scroll', this.setScrollTop);
   },
   methods: {
     setWindowSize(){
         this.windowWidth = window.innerWidth;
         this.windowHeight = window.innerHeight;
     },
+    setScrollTop() {
+      this.windowScrollTop = window.scrollY;
+    }
   }
 })
 

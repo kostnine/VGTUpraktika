@@ -3,6 +3,7 @@
     <HeaderComponent />
     <router-view />
     <FooterComponent />
+    <BackToTop/>
     <CookieModal />
   </div>
 </template>
@@ -10,11 +11,13 @@
 import HeaderComponent from "./components/Header.vue";
 import FooterComponent from "./components/Footer.vue";
 import CookieModal from "./components/CookieModal.vue";
+import BackToTop from "./components/BackToTop.vue";
 export default {
   components: {
     HeaderComponent,
     FooterComponent,
-    CookieModal
+    CookieModal,
+    BackToTop
   },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used

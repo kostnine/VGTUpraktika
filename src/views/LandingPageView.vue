@@ -1169,12 +1169,22 @@ section {
       }
     }
   }
+  @media (max-width: 1200px) {
+    .card-container {
+      .card {
+        img {
+          margin-top: -2rem;
+        }
+      }
+    }
+  }
   @media (max-width: 1150px) {
     .card-container {
       .card {
         img {
           &.maintain {
             margin-bottom: -2rem;
+            margin-top: 0;
           }
         }
       }
@@ -1186,7 +1196,12 @@ section {
         .card-content {
           img {
             width: auto;
-            height: 100%;
+             margin-top: 0rem;
+            //height: 100%;
+            max-height: 60%;
+            &.maintain {
+              margin-bottom: -1rem;
+            }
           }
         }
       }
@@ -1220,6 +1235,7 @@ section {
           img {
             width: 50vw;
             max-width: 280px;
+             max-height: 100%;
             height: auto;
             margin: auto;
             &.maintain {
