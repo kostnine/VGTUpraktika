@@ -139,20 +139,19 @@
               v-for="(video, index) in videoStack"
               :key="`${video.link}-${index}`"
             >
-              <video
-                :ref="`mainMessageVideo-${index}`"
-                :poster="require(`@/assets/${video.img}`)"
-                @mouseover="
-                  currentlyHoveringVideo = `mainMessageVideo-${index}`
-                "
-                @mouseleave="currentlyHoveringVideo = ''"
-              >
-                <source
-                  :src="require(`@/assets/${video.link}`)"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+              <video-player :ref="`mainMessageVideo-${index}`" :options="{
+                autoplay: false,
+                controls: true,
+                sources: [
+                   {
+                    src:
+                      require(`@/assets/${video.link}`),
+                      type: 'video/mp4'
+                  }
+                ]
+              }
+              "
+              />
             </swiper-slide>
           </swiper>
         </div>
@@ -205,21 +204,25 @@
       </div>
       <div class="testing-videos">
         <h3>How to test your smoke alarm?</h3>
-        <span class="testing-videos-subTitle">Videos from USA</span>
+        <span class="testing-videos-subtitle">Videos from USA</span>
         <div class="video-container">
           <div class="col">
             <div class="main-video" ref="mainTestingVideo">
-              <video
-                controls
-                :key="activeTestingVideo.link"
-                :poster="require(`@/assets/${activeTestingVideo.img}`)"
-              >
-                <source
-                  :src="require(`@/assets/${activeTestingVideo.link}`)"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+              <video-player
+              ref="testingMainVideo"
+              :key="activeTestingVideo.link"
+              :options="{
+                  autoplay: false,
+                  controls: true,
+                  sources: [
+                    {
+                      src:
+                        require(`@/assets/${activeTestingVideo.link}`),
+                        type: 'video/mp4'
+                    }
+                  ]
+                }"
+              />
             </div>
           </div>
           <div class="col">
@@ -240,6 +243,26 @@
                     @click="setMainTestingVideo(video)"
                   />
                 </transition>
+                 <transition name="fade" mode="out-in">
+                    <div
+                      :key="video.id"
+                      class="play-button"
+                      @click="setMainTestingVideo(video)"
+                    >
+                      <svg
+                        width="17"
+                        height="20"
+                        viewBox="0 0 17 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z"
+                          fill="#1E1826"
+                        />
+                      </svg>
+                    </div>
+                  </transition>
               </div>
             </div>
           </div>
@@ -273,12 +296,14 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
+import VideoPlayer from '@/components/VideoPlayer.vue';
 SwiperCore.use([Navigation, Pagination]);
 export default {
   name: "DownloadsPage",
   components: {
     Swiper,
     SwiperSlide,
+    VideoPlayer
   },
   metaInfo: {
     title: "Best practices",
@@ -396,7 +421,6 @@ export default {
       },
       swiper: null,
       isLoadingNewVideo: false,
-      showTransitionImages: false,
       selectedVideoID: 0,
     };
   },
@@ -489,22 +513,36 @@ export default {
         (el) => el.id == video.id
       );
       this.testing_videos[selectedVideo].active = true;
-      this.showTransitionImages = true;
-      setTimeout(() => {
-        this.showTransitionImages = false;
-      }, 10000);
+      this.$nextTick(()=>{
+        console.log(this.$refs.testingMainVideo.player)
+        setTimeout(()=>{
+          this.$refs.testingMainVideo.player.play();
+
+        },100)
+
+      })
+   
     },
   pauseAllVideos(){
-      this.$nextTick(() => {
+    this.$nextTick(() => {
+        this.videoStack.forEach((slide,index) => {
+          if(this.$refs["mainMessageVideo-" + index]){
+            let player = this.$refs["mainMessageVideo-" + index][0];
+            if(player){
+              player.player.pause();
+            }
+          }
+            
         });
-        this.swiper.slides.forEach((slide) => {
-          slide.firstChild.pause();
-          console.log(slide.firstChild);
         });
     },
     playVideo(){
         this.$nextTick(() => {
-          this.swiper.slides[this.swiper.activeIndex].firstChild.play();
+          setTimeout(()=>{
+            console.log(this.videoStack.length,this.$refs["mainMessageVideo-2"])
+
+            this.$refs["mainMessageVideo-"+(this.videoStack.length-1)][0].player.play()
+          },100)
         })
     },
   }
@@ -700,6 +738,7 @@ h3 {
   flex: 3;
   min-height: calc(min(500px, 30vw));
   max-height: 90%;
+  aspect-ratio: 16/9;
   border-radius: 15px;
   margin: 0;
   overflow: hidden;
@@ -771,8 +810,10 @@ h3 {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 58px;
-  height: 58px;
+  width: 4vw;
+  height: 4vw;
+  max-width: 30px;
+  max-height: 30px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.67);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -780,6 +821,32 @@ h3 {
   cursor: pointer;
   svg {
     margin-right: -4px;
+    width: 35%;
+  }
+}
+.play-button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.67);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  cursor: pointer;
+  svg {
+    margin-right: -4px;
+    width: 33%;
+    path{
+      fill:#0C2C39;
+    }
   }
 }
 .why-videos {
@@ -854,6 +921,7 @@ h3 {
   .testing-videos-subtitle {
     font-size: 20px;
     line-height: 24px;
+    margin-bottom: 5px;
   }
   .video-container {
     display: flex;
