@@ -336,7 +336,6 @@ export default {
         },
       ],
       footerVideos: [],
-
       swiper: null,
     };
   },
@@ -382,6 +381,7 @@ export default {
       this.mainMessageVideo = video;
       video = oldVideo;
       this.footerVideos[index] = oldVideo;
+      this.pauseAllVideos();
       this.$nextTick(() => {
         this.swiper.update();
         this.$nextTick(() => {
@@ -392,12 +392,27 @@ export default {
               this.swiper.update();
               this.swiper.slidePrev(0);
               this.isLoadingNewVideo = false;
+              this.playVideo();
             }, 350);
           } else {
             this.isLoadingNewVideo = false;
+            this.playVideo();
           }
         });
       });
+    },
+    pauseAllVideos(){
+        this.videoStack.forEach((video, index) => {
+          if(this.$refs['mainMessageVideo-' + index] && this.$refs['mainMessageVideo-' + index][0])
+            this.$refs['mainMessageVideo-' + index][0].pause();
+        });
+    },
+    playVideo(){
+      if(this.$refs['mainMessageVideo-1']){
+        this.$nextTick(() => {
+          this.$refs['mainMessageVideo-1'][0].play();
+        })
+      }
     },
     onSwiper(swiper) {
       if (this.swiper == null) {
