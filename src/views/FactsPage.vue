@@ -15,17 +15,29 @@
         <div class="header-list">
           <span class="header-list-title">Did you know?</span>
           <span class="header-list-item"
-            ><div class="arrow-right"></div>
+            ><div class="arrow-right">
+              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              </svg>
+            </div>
             By installing a smoke alarm, you reduce the chances of a fire
             occurring in your house by 75 percent.</span
           >
           <span class="header-list-item"
-            ><div class="arrow-right"></div>
+            ><div class="arrow-right">
+              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              </svg>
+            </div>
             By having a smoke alarm at your house, you ae 4 times less likely to
             die.</span
           >
           <span class="header-list-item"
-            ><div class="arrow-right"></div>
+            ><div class="arrow-right">
+               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              </svg>
+            </div>
             Deaths occur in 10 percent of homes that have no smoke alarms.</span
           >
         </div>
@@ -172,15 +184,9 @@ export default {
     }
   }
   .arrow-right {
-    background: none;
-    border-top: 2px solid;
-    border-right: 2px solid;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 15px;
-    min-width: 15px;
-    min-height: 15px;
-    margin-right: 15px;
+    display: flex;
+  margin-right: 10px;
+  padding-top: 2px;
   }
 }
 .facts-main-container {

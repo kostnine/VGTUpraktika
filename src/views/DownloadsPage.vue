@@ -721,7 +721,7 @@ h2 {
         width: 100%;
       }
       span {
-        font-size: 16px;
+        font-size: clamp(12px, 1.4vw, 16px);
         font-family: $mainFont;
         margin: 5px 0 0;
       }
@@ -744,6 +744,9 @@ h2 {
         height: 22vh;
         justify-content: center;
         margin: 20px auto;
+        span{
+          font-size: 16px;
+        }
       }
     }
   }
@@ -774,7 +777,7 @@ h3 {
   .leaflet {
     position: relative;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     height: 300px;
     width: 225px;
     border-radius: 10px;
@@ -1149,7 +1152,7 @@ h3 {
     }
     .leaflet {
       position: relative;
-      background-position: center;
+      background-position: top;
       min-height: 200px;
       width: 300px;
       border-radius: 10px;

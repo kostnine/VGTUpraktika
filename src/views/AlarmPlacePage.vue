@@ -54,7 +54,11 @@
         </div>
         <div class="content-column">
           <div class="row">
-            <div class="arrow-right"></div>
+            <div class="arrow-right">
+              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              </svg>
+            </div>
             <p>
               We also recommend that
               <span class="semibold">living rooms and study rooms</span> should
@@ -63,7 +67,11 @@
             </p>
           </div>
           <div class="row">
-            <div class="arrow-right"></div>
+            <div class="arrow-right">
+               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              </svg>
+            </div>
             <p>
               It also makes sense to install an alarm in rooms where
               <span class="semibold">there are electrical appliances</span>
@@ -86,7 +94,11 @@
             </p>
           </div>
           <div class="row">
-            <div class="arrow-right"></div>
+            <div class="arrow-right">
+               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              </svg>
+            </div>
             <p>
               Before installing your smoke alarms, please
               <strong>check country-specific regulations</strong> or seek advice
@@ -471,7 +483,7 @@ export default {
 }
 .row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 30px;
   &.white {
     color: white;
@@ -570,16 +582,9 @@ export default {
   margin-bottom: 40px;
 }
 .arrow-right {
-  background: none;
-  border-top: 2px solid;
-  border-right: 2px solid;
-  transform: rotate(45deg);
-  height: 25px;
-  width: 25px;
-  min-width: 25px;
-  min-height: 25px;
-  margin-left: -12.5px;
-  margin-right: 15px;
+  display: flex;
+  margin-right: 10px;
+  padding-top: 2px;
 }
 .main-content {
   position: relative;

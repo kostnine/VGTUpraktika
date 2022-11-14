@@ -77,6 +77,7 @@ export default {
     .header-content {
       font-size: clamp(20px, 3vw, 24px);
       line-height: 32px;
+      max-width: 31rem;
     }
     .header-button {
       position: relative;

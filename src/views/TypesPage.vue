@@ -16,7 +16,7 @@
         <div class="main-header-content centered-row">
           <span
             >All smoke alarms placed on the EU market must be third party
-            certified to <bold class="semibold">EN14604</bold> and
+            certified to <strong class="semibold">EN14604</strong> and
             <strong class="semibold">CE marked</strong> to conform with the
             Construction Products Directive.</span
           >
@@ -264,8 +264,8 @@ export default {
       justify-content: center;
       align-items: center;
       span {
-        width: 100%;
-        display: flex;
+        // width: 100%;
+        // display: flex;
       }
       .image-container {
         display: flex;
@@ -275,7 +275,7 @@ export default {
       }
     }
     span {
-      width: 95%;
+      // width: 95%;
     }
     .separator {
       height: 16px;
@@ -418,6 +418,8 @@ export default {
   }
 }
 .semibold {
+  display: inline;
   font-family: $semiBoldFont;
+  font-weight: 500;
 }
 </style>
