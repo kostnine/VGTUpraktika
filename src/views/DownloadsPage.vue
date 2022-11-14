@@ -721,7 +721,7 @@ h2 {
         width: 100%;
       }
       span {
-        font-size: 16px;
+        font-size: clamp(12px, 1.4vw, 16px);
         font-family: $mainFont;
         margin: 5px 0 0;
       }
@@ -744,6 +744,9 @@ h2 {
         height: 22vh;
         justify-content: center;
         margin: 20px auto;
+        span{
+          font-size: 16px;
+        }
       }
     }
   }
