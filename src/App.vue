@@ -3,7 +3,7 @@
     <HeaderComponent />
     <router-view />
     <FooterComponent />
-    <BackToTop/>
+    <BackToTop />
     <CookieModal />
   </div>
 </template>
@@ -17,19 +17,19 @@ export default {
     HeaderComponent,
     FooterComponent,
     CookieModal,
-    BackToTop
+    BackToTop,
   },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Home',
+    title: "Home",
     // all titles will be injected into this template
-    titleTemplate: '%s | European Smoke Alarm Day'
+    titleTemplate: "%s | European Smoke Alarm Day",
   },
-  watch:{
-    '$route.path'(){
-      window.scroll(0,0);
-    }
-  }
+  watch: {
+    "$route.path"() {
+      window.scroll(0, 0);
+    },
+  },
 };
 </script>
 

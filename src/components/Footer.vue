@@ -103,27 +103,35 @@ export default {
       width: 100%;
       margin-bottom: 2rem;
       .image-with-under-text {
-        flex-direction: row;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: center;
         position: relative;
         max-width: 100%;
 
         img {
           max-height: 75px;
-          width: auto;
+          max-width: 160px;
         }
         span {
           margin: 0;
-          font-size: clamp(16px, 3vw, 24px);
+          font-size: 20px;
+          line-height: 32px;
+          text-align: center;
+          width: 160px;
         }
       }
     }
     .footer-main-container {
       .footer-column-wrapper {
+        text-align: center;
         .join-us-header {
           margin-bottom: 1rem;
         }
       }
+    }
+    .bottom-rights {
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 }

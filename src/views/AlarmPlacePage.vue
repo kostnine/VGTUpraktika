@@ -55,8 +55,17 @@
         <div class="content-column">
           <div class="row">
             <div class="arrow-right">
-              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             <p>
@@ -68,8 +77,17 @@
           </div>
           <div class="row">
             <div class="arrow-right">
-               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             <p>
@@ -95,8 +113,17 @@
           </div>
           <div class="row">
             <div class="arrow-right">
-               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             <p>
@@ -137,8 +164,8 @@
         <div class="consider-container">
           <h2>What to Consider for the Installation Location?</h2>
           <span class="even-text"
-            >Now that we have determined which rooms / areas should <br />be
-            equipped with detectors, the next question is<br />
+            >Now that we have determined which rooms / areas should be equipped
+            with detectors, the next question is
             <span class="semibold"
               >where in the room it should be installed.</span
             ></span
@@ -547,6 +574,9 @@ export default {
   .even-text {
     text-align: center;
     width: 80%;
+    @media (min-width: 1280px) {
+      width: 60%;
+    }
   }
   span {
     text-align: center;

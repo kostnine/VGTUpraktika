@@ -167,7 +167,7 @@ export default {
         margin-bottom: 20px;
       }
       .header-button {
-        margin-top: auto;
+        margin-top: 10vw;
         width: 90vw;
       }
     }

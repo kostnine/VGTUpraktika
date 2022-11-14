@@ -7,7 +7,7 @@
         <h2>18th November 2022</h2>
         <span class="hashtag">#smokealarmssavelives</span>
         <span class="under-hashtag"
-          >This Campaign is Part of Fire Safety Week</span
+          >This Campaign is part of European Fire Safety Week</span
         >
       </div>
       <div class="illustrations">
@@ -468,9 +468,6 @@ h1 {
   margin: 0;
   color: #1e1826;
   font-weight: 500;
-  &.primary {
-    margin-bottom: calc(min(2rem, 2vw));
-  }
 }
 h2 {
   color: $mainColor;
@@ -874,7 +871,7 @@ section {
         margin-left: 0px;
         padding: 0;
         max-width: 100%;
-        text-align: justify;
+        text-align: center;
       }
       h3 {
         font-size: clamp(36px, 5vw, 64px);
@@ -1152,6 +1149,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: fit-content;
+  padding-bottom: 160px;
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -1222,6 +1221,7 @@ section {
   }
   @media (max-width: 1320px) {
     padding: 0 calc(min(80px, 10vw));
+    padding-bottom: 80px;
     .card-container {
       .card {
         width: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
@@ -1259,7 +1259,7 @@ section {
         .card-content {
           img {
             width: auto;
-             margin-top: 0rem;
+            margin-top: 0rem;
             //height: 100%;
             max-height: 60%;
             &.maintain {
@@ -1298,10 +1298,56 @@ section {
           img {
             width: 50vw;
             max-width: 280px;
-             max-height: 100%;
+            max-height: 100%;
             height: auto;
             margin: auto;
             &.maintain {
+              margin-bottom: -6%;
+              margin-right: -6%;
+              width: 72vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 460px) {
+    padding: 0 $paddingHorizontalMobile;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 5rem;
+    h3 {
+      width: 100%;
+      font-size: clamp(28px, 4vw, 36px);
+    }
+    span {
+      margin: 1rem 0;
+      font-size: clamp(16px, 2vw, 20px);
+    }
+    .card-container {
+      .card {
+        width: 80vw;
+        height: 80vw;
+        min-height: 80vw;
+        min-width: 80vw;
+        max-height: 80vw;
+        max-width: 80vw;
+        margin: 1rem;
+        .card-content {
+          padding: 1rem 2rem;
+          .text {
+            flex: initial;
+            font-size: clamp(24px, 3vw, 36px);
+            height: 40%;
+          }
+          img {
+            height: 60%;
+            margin: auto;
+            &.maintain {
+              width: 50vw;
+              max-width: 280px;
+              max-height: 100%;
+              height: auto;
               margin-bottom: -6%;
               margin-right: -6%;
               width: 72vw;

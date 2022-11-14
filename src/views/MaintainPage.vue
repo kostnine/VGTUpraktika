@@ -17,8 +17,17 @@
         <div class="maintain-item-text-part">
           <span class="maintain-item-text-title"
             ><div class="arrow-right">
-               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             It is important to test and clean your smoke alarm on a regular
@@ -75,8 +84,17 @@
         <div class="maintain-item-text-part">
           <span class="maintain-item-text-title"
             ><div class="arrow-right">
-               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             If you have chosen smoke alarms with a battery that needs to be
@@ -218,12 +236,20 @@ export default {
       display: flex;
       flex-direction: column;
       width: 80%;
+      @media (max-width: 768px) {
+        width: 90%;
+      }
       .maintain-item-text-title {
         display: flex;
         align-items: center;
         font-size: 24px;
         line-height: 32px;
         font-family: $semiBoldFont;
+        @media (max-width: 768px) {
+          align-items: flex-start;
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
       }
       .maintain-item-text-block {
         font-size: 20px;
@@ -235,6 +261,11 @@ export default {
         &.last {
           margin-bottom: 10px;
         }
+        @media (max-width: 768px) {
+          margin: 0;
+          margin-bottom: 8px;
+          font-size: 16px;
+        }
       }
     }
     .maintain-item-image-container {
@@ -243,7 +274,7 @@ export default {
       justify-content: center;
       align-items: center;
       @media (max-width: 768px) {
-        width: 80%;
+        width: 90%;
         padding: 8px;
       }
       img {
@@ -288,6 +319,9 @@ export default {
         line-height: 28px;
         margin: 16px 0;
       }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -295,6 +329,13 @@ export default {
   display: flex;
   margin-right: 10px;
   padding-top: 2px;
+  @media (max-width: 768px) {
+    margin-top: 8px;
+    svg {
+      height: 13px;
+      width: 6px;
+    }
+  }
 }
 
 .expanded-schema {
@@ -328,6 +369,9 @@ export default {
       width: 90vw;
       height: 100vw;
     }
+    @media (max-width: 768px) and(min-height: 800px) {
+      top: 25%;
+    }
     @media (max-height: 1000px) {
       max-height: 80vh;
     }
@@ -344,19 +388,27 @@ export default {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+      transition: 0.3s;
       img {
         width: 16px;
         height: 16px;
+      }
+      &:hover {
+        background: #f39964;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
       }
     }
     .expanded-image {
       width: 100%;
       height: 100%;
       object-fit: fill;
+      border-radius: 5px;
     }
   }
 }
 .zoomable {
-  cursor: zoom-in;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>

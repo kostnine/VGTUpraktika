@@ -250,7 +250,12 @@
     "fill": "#F39964",
     "content": [
       {
-        "text": "<span>It is mandatory to install a smoke alarm in every household from <span class='semibold'>1st<br> January 2020.</span><p></p>At least one smoke alarm in every flat, if there is a two floor flat at least one smoke alarm in every floor, the same rule for house</span>",
+        "text": "<span>In the Czech Republic, it is mandatory to equip newly built family houses and apartments with smoke detectors from <span class='semibold'>1st July 2008.</span></span>",
+        "links":[
+        ]
+      },
+      {
+        "text": "<span>The obligation also applies for accommodation facilities and facilities for the provision of social services, if they do not have obligation for electric fire alarm system.</span>",
         "links":[
           {
             "link_title": "More information:",
@@ -448,16 +453,16 @@
         "text": "<span>Smoke Alarms must be installed in  circulation areas, living and sleeping spaces and a heat alarm in the kitchen. Interconnection required.</span>",
         "links":[
           {
-            "link_title": "Regulations (paid document):",
-            "link_url": "https://shop.standards.ie/en-ie/Standards/I-S-3218-2013-A1-2019-871876_SAIG_NSAI_NSAI_2773621/",
-            "link_name": "IS 3218 – Fire detection and alarm systems for buildings",
+            "link_title": "Regulations:",
+            "link_url": "https://www.gov.ie/en/publication/303fa-current-edition-technical-guidance-document-b-fire-safety-volume-2-dwelling-houses-supplementary-documents-supplementary-guidance-to-technical-guidance-document-b-fire-safety-volume-2-dwelling-houses-2017/",
+            "link_name": "TGD B – Fire Safety Volume 2 Dwelling Houses 2017",
             "gap_above": "0",
             "gap_below": "0"
           },
           {
-            "link_title": "Building regulations (free):",
+            "link_title": "Building regulations:",
             "link_url": "https://www.gov.ie/en/publication/263ee-technical-guidance-document-b-fire-safety/",
-            "link_name": "Building Regulations – Technical Guidance",
+            "link_name": "Technical Guidance B, Vol 2, Dwelling Houses, 2017",
             "gap_above": "0",
             "gap_below": "0"
           },
@@ -465,7 +470,7 @@
             "link_title": "Guidance:",
             "link_url": "https://www.gov.ie/en/publication/67603-fire-detection-in-the-home/",
             "link_name": "GOV.IE – Fire detection in the home",
-            "gap_above": "16px",
+            "gap_above": "0",
             "gap_below": "0"
           }
         ],

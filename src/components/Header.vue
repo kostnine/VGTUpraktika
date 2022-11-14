@@ -79,7 +79,7 @@ export default {
         this.isNotHome = false;
       }
       this.isMenuOpen = false;
-      this.dropdownExtended=false;
+      this.dropdownExtended = false;
     },
   },
   methods: {
@@ -245,8 +245,8 @@ export default {
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    height: 30px;
-    width: 50px;
+    height: 25px;
+    width: 30px;
     cursor: pointer;
     z-index: 100;
     span {
@@ -316,8 +316,8 @@ export default {
             width: 100%;
           }
           img {
-            width: 30px;
-            height: 20px;
+            width: 18px;
+            height: 13px;
           }
         }
       }
@@ -331,14 +331,14 @@ export default {
     }
   }
 }
-.header-dropdown{
-  .router-link-exact-active{
+.header-dropdown {
+  .router-link-exact-active {
     border-bottom: 2px solid white;
   }
 }
-.router-link-exact-active{
+.router-link-exact-active {
   border-bottom: 2px solid #000000;
-  &.logo{
+  &.logo {
     border-bottom: none;
   }
 }

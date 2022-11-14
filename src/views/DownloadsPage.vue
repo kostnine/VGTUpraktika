@@ -46,7 +46,7 @@
               <div class="leaflet-text">
                 {{ leaflet.text }}
               </div>
-              <div class="donwload-btn">
+              <div class="download-btn">
                 <svg
                   width="37"
                   height="37"
@@ -102,7 +102,7 @@
                 <div class="leaflet-text">
                   {{ spainBrochure.text }}
                 </div>
-                <div class="donwload-btn">
+                <div class="download-btn">
                   <svg
                     width="37"
                     height="37"
@@ -661,7 +661,7 @@ h2 {
         height: initial;
         justify-content: center;
         margin: 20px auto;
-        span{
+        span {
           font-size: 16px;
         }
       }
@@ -687,8 +687,10 @@ h3 {
     justify-content: space-between;
     margin-top: 30px;
     @media (max-width: 768px) {
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
+      margin-bottom: 64px;
     }
   }
   .leaflet {
@@ -697,15 +699,19 @@ h3 {
     background-position: top;
     height: 300px;
     width: 225px;
-    border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 10px;
     @media (max-width: 1080px) {
       width: 180px;
       height: 250px;
     }
     @media (max-width: 768px) {
       margin: 20px 0;
+      width: 46%;
+      margin: 2%;
+      height: 50vw;
+      background-size: cover;
     }
     .bottom-content {
       display: flex;
@@ -717,6 +723,15 @@ h3 {
       color: white;
       padding: 10px;
       width: 100%;
+      @media (max-width: 768px) {
+        font-size: 14px;
+        .download-btn {
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
     }
     .leaflet-text {
       width: 100%;

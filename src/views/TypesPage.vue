@@ -109,7 +109,7 @@ export default {
     PageHeader,
   },
   metaInfo: {
-      title: 'About Smoke Alarms',
+    title: "About Smoke Alarms",
   },
   methods: {
     scroll(id) {
@@ -246,6 +246,7 @@ export default {
       span {
         width: 80%;
         display: inline-block;
+        font-size: 18px;
       }
       @media (max-width: 768px) {
         flex-direction: column;
@@ -257,6 +258,7 @@ export default {
     .column-div {
       .whole-text {
         display: inline-block;
+        font-size: 18px;
       }
     }
     @media (max-width: 1024px) {
@@ -266,12 +268,6 @@ export default {
       span {
         // width: 100%;
         // display: flex;
-      }
-      .image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
       }
     }
     span {
@@ -289,6 +285,9 @@ export default {
         width: 30%;
         justify-content: flex-end;
         margin-top: 32px;
+      }
+      @media (max-width: 768px) {
+        width: initial;
       }
     }
   }

@@ -127,14 +127,19 @@ export default {
   methods: {
     setActiveCountry(country) {
       if (this.activeCountry == country) {
-        this.activeCountry = "";
+        document.querySelector("#go-to-top").style.zIndex = "99";
       } else {
         this.activeCountry = country;
-        this.scroll("map");
+        if (window.innerWidth >= 768) {
+          this.scroll("map");
+        } else {
+          document.querySelector("#go-to-top").style.zIndex = "0";
+        }
       }
     },
     clearActiveCountry() {
       this.activeCountry = "";
+      document.querySelector("#go-to-top").style.zIndex = "99";
     },
     scroll(id) {
       document.getElementById(id).scrollIntoView({
@@ -181,8 +186,7 @@ export default {
         document.addEventListener("click", handler);
       },
 
-      unbind: function (el, binding) {
-        console.log(binding);
+      unbind: function (el) {
         document.removeEventListener("click", el.__vueClickOutside__);
         el.__vueClickOutside__ = null;
       },
@@ -308,6 +312,9 @@ export default {
     height: 1200px;
     .regulations-page-text-content {
       width: 100%;
+      @media (max-width: 768px) {
+        margin-right: 10vw;
+      }
     }
     .regulations-page-map-content {
       width: 100%;

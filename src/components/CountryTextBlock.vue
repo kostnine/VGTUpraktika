@@ -2,9 +2,7 @@
   <div
     class="country-card"
     :class="this.country_data[countryInfo].expanded == true ? 'expanded' : ''"
-    v-scroll-lock="
-      this.country_data[countryInfo].expanded == true && this.windowWidth <= 768
-    "
+    v-scroll-lock="this.windowWidth <= 768"
   >
     <div class="nav-line">
       <img
@@ -128,6 +126,7 @@ export default {
   width: 384px;
   height: 510px;
   top: 20%;
+  z-index: 100;
   @media (max-width: 1580px) {
     position: relative;
   }
@@ -162,7 +161,6 @@ export default {
 .country-segment {
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
   .segment-title {
     font-size: 20px;
     line-height: 24px;
@@ -173,6 +171,7 @@ export default {
     font-size: 18px;
     line-height: 24px;
     display: inline-block;
+    margin-bottom: 8px;
   }
   .segment-links {
     display: flex;

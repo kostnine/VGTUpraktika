@@ -10,14 +10,23 @@
     <div class="facts-page-main">
       <div class="facts-main-header">
         <span class="header-title" id="facts"
-          >Smoke Alarms Have One Major <br />Benefit – They Save Lives!</span
+          >Smoke Alarms Have One Major Benefit – They Save Lives!</span
         >
         <div class="header-list">
           <span class="header-list-title">Did you know?</span>
           <span class="header-list-item"
             ><div class="arrow-right">
-              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             By installing a smoke alarm, you reduce the chances of a fire
@@ -25,8 +34,17 @@
           >
           <span class="header-list-item"
             ><div class="arrow-right">
-              <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             By having a smoke alarm at your house, you ae 4 times less likely to
@@ -34,8 +52,17 @@
           >
           <span class="header-list-item"
             ><div class="arrow-right">
-               <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z" fill="#483A5B"/>
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#483A5B"
+                />
               </svg>
             </div>
             Deaths occur in 10 percent of homes that have no smoke alarms.</span
@@ -67,7 +94,56 @@
         </div>
         <div class="facts-how">
           <span class="how-title">How Do Smoke Alarms Work?</span>
-          <div class="how-item">
+
+          <div class="how-container">
+            <div class="how-images">
+              <div class="image-container">
+                <img src="@/assets/images/facts/foto9.jpg" alt="alarm" />
+              </div>
+              <div class="image-container">
+                <img src="@/assets/images/facts/foto8.jpg" alt="alarm" />
+              </div>
+            </div>
+            <div class="how-text">
+              <div class="column-text-list">
+                <span class="text-in-list"
+                  >All optical smoke alarms have a smoke chamber with a light
+                  and the receiver.</span
+                >
+                <span class="text-in-list"
+                  >As soon as smoke enters the smoke chamber and diffuses the
+                  lights, the smoke alarm will sound.</span
+                >
+              </div>
+              <div class="column-text-list bullets">
+                <span class="text-with-bullet first"
+                  ><div class="colored-block">1</div>
+                  Smoke entry</span
+                >
+                <span class="text-with-bullet"
+                  ><div class="colored-block">2</div>
+                  Insect screen</span
+                >
+                <span class="text-with-bullet"
+                  ><div class="colored-block">3</div>
+                  Light transmitter</span
+                >
+                <span class="text-with-bullet"
+                  ><div class="colored-block">4</div>
+                  Light receiver</span
+                >
+                <span class="text-with-bullet"
+                  ><div class="colored-block">5</div>
+                  EMC shield</span
+                >
+                <span class="text-with-bullet last"
+                  ><div class="colored-block">6</div>
+                  Ambient light diaphragm</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- <div class="how-item">
             <div class="image-container">
               <img src="@/assets/images/facts/foto9.jpg" alt="alarm" />
             </div>
@@ -112,7 +188,7 @@
                 Ambient light diaphragm</span
               >
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -124,7 +200,7 @@ import PageHeader from "@/components/PageHeader.vue";
 export default {
   name: "FactsPage",
   metaInfo: {
-      title: 'Important facts',
+    title: "Important facts",
   },
   components: {
     PageHeader,
@@ -152,7 +228,7 @@ export default {
   justify-content: center;
   min-height: 600px;
   .header-title {
-    max-width: 60%;
+    max-width: 45%;
     font-size: 48px;
     line-height: 72px;
     margin: 0 auto;
@@ -162,6 +238,8 @@ export default {
     font-family: $semiBoldFont;
     @media (max-width: 768px) {
       max-width: 100%;
+      font-size: 36px;
+      padding: 0 10vw;
     }
   }
   .header-list {
@@ -185,8 +263,8 @@ export default {
   }
   .arrow-right {
     display: flex;
-  margin-right: 10px;
-  padding-top: 2px;
+    margin-right: 10px;
+    padding-top: 2px;
   }
 }
 .facts-main-container {
@@ -265,6 +343,10 @@ export default {
   height: 300px;
   width: 100%;
   background: #c0554b;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    padding: 0 10vw;
+  }
   .share-title {
     font-size: 48px;
     line-height: 72px;
@@ -272,6 +354,9 @@ export default {
     text-align: center;
     margin-top: 55px;
     color: #ffffff;
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
   button {
     background: #fbf3ed;
@@ -291,7 +376,8 @@ export default {
       color: white;
     }
     @media (max-width: 768px) {
-      width: 60%;
+      width: 70%;
+      height: 40px;
     }
   }
 }
@@ -306,6 +392,106 @@ export default {
     font-family: $semiBoldFont;
     margin: 65px auto;
     text-align: center;
+  }
+  .how-container {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .how-images {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .image-container {
+        width: 100%;
+        height: 100%;
+        img {
+          border-radius: 10px;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        margin-bottom: 18px;
+      }
+    }
+    .how-text {
+      margin-left: 42px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+      }
+      .column-text-list {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: 768px) {
+          &.bullets {
+            flex-wrap: wrap;
+            max-height: 115px;
+            justify-content: center;
+            .text-with-bullet {
+              width: 50%;
+              word-wrap: wrap;
+              .colored-block {
+                min-width: 23px;
+                height: 23px;
+              }
+              &.last {
+                margin: 0;
+              }
+              &.first {
+                margin: 0;
+              }
+              margin-top: 4px;
+              margin-bottom: 4px;
+            }
+          }
+        }
+        .text-in-list {
+          font-size: clamp(16px, 1vw, 20px);
+          line-height: 24px;
+          color: #1e1826;
+          margin: 12px 0;
+        }
+        .text-with-bullet {
+          line-height: 24px;
+          color: #1e1826;
+          margin: 4px 0;
+          display: flex;
+          .colored-block {
+            background: #c0554b;
+            min-width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-size: clamp(16px, 1vw, 20px);
+            line-height: 28px;
+            font-family: $semiBoldFont;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 3px;
+          }
+          &.first {
+            margin: 0;
+            margin-bottom: 4px;
+          }
+          &.last {
+            margin: 0;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
   }
   .how-item {
     display: flex;
