@@ -54,20 +54,19 @@
                   />
                   Your browser does not support the video tag.
                 </video> -->
-              <video-player 
-                :ref="`mainMessageVideo-${index}`" 
-                :options="{
-                  autoplay: false,
-                  controls: true,
-                  sources: [
-                    {
-                      src:
-                        require(`@/assets/${video.link}`),
-                        type: 'video/mp4'
-                    }
-                  ]
-                }"
-              />
+                <video-player
+                  :ref="`mainMessageVideo-${index}`"
+                  :options="{
+                    autoplay: false,
+                    controls: true,
+                    sources: [
+                      {
+                        src: require(`@/assets/${video.link}`),
+                        type: 'video/mp4',
+                      },
+                    ],
+                  }"
+                />
               </swiper-slide>
             </swiper>
             <!-- <div class="carousel" ref="carousel" >
@@ -83,7 +82,7 @@
             <span class="semibold">#smokealarmsaveslives</span>
             campaign.
           </p>
-          <div class="button-container">
+          <div class="button-container" v-if="this.windowWidth >= 768">
             <button @click="$router.push({ path: '/types' })">
               Find Out More About Smoke Alarms
             </button>
@@ -105,20 +104,19 @@
         >
           <transition name="fade" mode="out-in">
             <video-player
-               v-if="windowWidth < 768"  
-                :ref="`video-${index}`"
-                :options="{
-                  autoplay: false,
-                  controls: true,
-                  sources: [
-                    {
-                      src:
-                        require(`@/assets/${video.link}`),
-                        type: 'video/mp4'
-                    }
-                  ]
-                }"
-              />
+              v-if="windowWidth < 768"
+              :ref="`video-${index}`"
+              :options="{
+                autoplay: false,
+                controls: true,
+                sources: [
+                  {
+                    src: require(`@/assets/${video.link}`),
+                    type: 'video/mp4',
+                  },
+                ],
+              }"
+            />
             <img
               v-else
               :src="require(`@/assets/${video.img}`)"
@@ -149,6 +147,17 @@
             </div>
           </transition>
         </div>
+      </div>
+      <div class="button-container" v-if="this.windowWidth < 768">
+        <button @click="$router.push({ path: '/types' })">
+          Find Out More About Smoke Alarms
+        </button>
+        <button
+          class="secondary"
+          @click="$router.push({ path: '/regulations' })"
+        >
+          Regulations for Smoke Alarms in Europe
+        </button>
       </div>
     </section>
     <section class="supporters" id="supporters">
@@ -232,7 +241,7 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
-import VideoPlayer from '@/components/VideoPlayer.vue';
+import VideoPlayer from "@/components/VideoPlayer.vue";
 
 SwiperCore.use([Navigation, Pagination]);
 export default {
@@ -240,10 +249,11 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    VideoPlayer
+    VideoPlayer,
   },
   data() {
     return {
+      windowWidth: window.innerWidth,
       videos: [
         {
           id: 0,
@@ -365,6 +375,9 @@ export default {
   },
   mounted() {
     this.footerVideos = this.videos.filter((el) => el.id != 0);
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
   },
   computed: {
     isMobile() {
@@ -412,7 +425,7 @@ export default {
           this.swiper.slideTo(this.videoStack.length - 1, 300);
           if (this.videoStack.length > 2) {
             setTimeout(() => {
-               this.swiper.removeSlide(0);
+              this.swiper.removeSlide(0);
               this.isLoadingNewVideo = false;
               this.playVideo();
             }, 350);
@@ -423,27 +436,28 @@ export default {
         });
       });
     },
-     pauseAllVideos(){
+    pauseAllVideos() {
       this.$nextTick(() => {
-          this.videoStack.forEach((slide,index) => {
-            if(this.$refs["mainMessageVideo-" + index]){
-              let player = this.$refs["mainMessageVideo-" + index][0];
-              if(player){
-                player.player.pause();
-              }
+        this.videoStack.forEach((slide, index) => {
+          if (this.$refs["mainMessageVideo-" + index]) {
+            let player = this.$refs["mainMessageVideo-" + index][0];
+            if (player) {
+              player.player.pause();
             }
-              
+          }
         });
       });
     },
-    playVideo(){
-        this.$nextTick(() => {
-          setTimeout(()=>{
-            console.log(this.videoStack.length,this.$refs["mainMessageVideo-2"])
+    playVideo() {
+      this.$nextTick(() => {
+        setTimeout(() => {
+          console.log(this.videoStack.length, this.$refs["mainMessageVideo-2"]);
 
-            this.$refs["mainMessageVideo-"+(this.videoStack.length-1)][0].player.play()
-          },100)
-        })
+          this.$refs[
+            "mainMessageVideo-" + (this.videoStack.length - 1)
+          ][0].player.play();
+        }, 100);
+      });
     },
     onSwiper(swiper) {
       if (this.swiper == null) {
@@ -453,11 +467,49 @@ export default {
     onSlideChange() {
       console.log("slide change");
     },
+    onResize() {
+      this.windowWidth = window.innerWidth;
+      console.log(this.windowWidth);
+    },
   },
 };
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/_variables.scss";
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    button {
+      max-width: 80%;
+      margin: 1rem 0;
+      width: 80%;
+      height: 56px;
+      background: $mainColor;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-family: $mainFont;
+      font-size: 16px;
+      cursor: pointer;
+      &.secondary {
+        background: $secondaryColor;
+      }
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 0px 3px 10px 0px #0707073f;
+        font-weight: 700;
+      }
+      &:active {
+        box-shadow: 0px 2px 3px 0px #0000004f;
+      }
+    }
+  }
+}
 .semibold {
   font-family: $semiBoldFont;
 }
@@ -511,8 +563,8 @@ section {
   svg {
     margin-right: -4px;
     width: 33%;
-    path{
-      fill:#0C2C39;
+    path {
+      fill: #0c2c39;
     }
   }
 }
@@ -552,7 +604,7 @@ section {
     }
     .illustrations {
       width: 100%;
-        margin-top: 32px;
+      margin-top: 32px;
       .smoke-detector-container {
         margin-top: 0px;
         left: 0rem;
@@ -567,7 +619,7 @@ section {
       }
       @media (max-height: 640px) {
         // margin-top: 128px;
-        .smoke-detector-container{
+        .smoke-detector-container {
           height: 25vh;
           width: 25vh;
           bottom: 9vh;
@@ -575,11 +627,11 @@ section {
       }
       @media (max-height: 550px) {
         // margin-top: 128px;
-        .smoke-detector-container{
+        .smoke-detector-container {
           display: none;
         }
       }
-       @media (max-height: 487px) {
+      @media (max-height: 487px) {
         display: none;
       }
       .red-circle {
@@ -863,7 +915,7 @@ section {
   @media (max-width: 768px) {
     min-height: 100vh;
     height: auto;
-    
+
     .content {
       flex-direction: column;
       padding: 40px $paddingHorizontalMobile 20px;

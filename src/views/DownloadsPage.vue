@@ -139,18 +139,18 @@
               v-for="(video, index) in videoStack"
               :key="`${video.link}-${index}`"
             >
-              <video-player :ref="`mainMessageVideo-${index}`" :options="{
-                autoplay: false,
-                controls: true,
-                sources: [
-                   {
-                    src:
-                      require(`@/assets/${video.link}`),
-                      type: 'video/mp4'
-                  }
-                ]
-              }
-              "
+              <video-player
+                :ref="`mainMessageVideo-${index}`"
+                :options="{
+                  autoplay: false,
+                  controls: true,
+                  sources: [
+                    {
+                      src: require(`@/assets/${video.link}`),
+                      type: 'video/mp4',
+                    },
+                  ],
+                }"
               />
             </swiper-slide>
           </swiper>
@@ -205,22 +205,21 @@
       <div class="testing-videos">
         <h3>How to test your smoke alarm?</h3>
         <span class="testing-videos-subtitle">Videos from USA</span>
-        <div class="video-container">
+        <div class="video-container" v-if="windowWidth >= 768">
           <div class="col">
             <div class="main-video" ref="mainTestingVideo">
               <video-player
-              ref="testingMainVideo"
-              :key="activeTestingVideo.link"
-              :options="{
+                ref="testingMainVideo"
+                :key="activeTestingVideo.link"
+                :options="{
                   autoplay: false,
                   controls: true,
                   sources: [
                     {
-                      src:
-                        require(`@/assets/${activeTestingVideo.link}`),
-                        type: 'video/mp4'
-                    }
-                  ]
+                      src: require(`@/assets/${activeTestingVideo.link}`),
+                      type: 'video/mp4',
+                    },
+                  ],
                 }"
               />
             </div>
@@ -243,28 +242,49 @@
                     @click="setMainTestingVideo(video)"
                   />
                 </transition>
-                 <transition name="fade" mode="out-in">
-                    <div
-                      :key="video.id"
-                      class="play-button"
-                      @click="setMainTestingVideo(video)"
+                <transition name="fade" mode="out-in">
+                  <div
+                    :key="video.id"
+                    class="play-button"
+                    @click="setMainTestingVideo(video)"
+                  >
+                    <svg
+                      width="17"
+                      height="20"
+                      viewBox="0 0 17 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        width="17"
-                        height="20"
-                        viewBox="0 0 17 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z"
-                          fill="#1E1826"
-                        />
-                      </svg>
-                    </div>
-                  </transition>
+                      <path
+                        d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z"
+                        fill="#1E1826"
+                      />
+                    </svg>
+                  </div>
+                </transition>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="video-container-extra" v-else>
+          <div
+            class="row"
+            v-for="(video, index) in testing_videos"
+            :key="index"
+          >
+            <video-player
+              ref="testingMainVideo"
+              :options="{
+                autoplay: false,
+                controls: true,
+                sources: [
+                  {
+                    src: require(`@/assets/${video.link}`),
+                    type: 'video/mp4',
+                  },
+                ],
+              }"
+            />
           </div>
         </div>
       </div>
@@ -296,14 +316,14 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
-import VideoPlayer from '@/components/VideoPlayer.vue';
+import VideoPlayer from "@/components/VideoPlayer.vue";
 SwiperCore.use([Navigation, Pagination]);
 export default {
   name: "DownloadsPage",
   components: {
     Swiper,
     SwiperSlide,
-    VideoPlayer
+    VideoPlayer,
   },
   metaInfo: {
     title: "Best practices",
@@ -490,9 +510,8 @@ export default {
             setTimeout(() => {
               this.swiper.removeSlide(0);
               this.isLoadingNewVideo = false;
-              
+
               this.playVideo();
-             
             }, 350);
           } else {
             this.isLoadingNewVideo = false;
@@ -513,39 +532,37 @@ export default {
         (el) => el.id == video.id
       );
       this.testing_videos[selectedVideo].active = true;
-      this.$nextTick(()=>{
-        console.log(this.$refs.testingMainVideo.player)
-        setTimeout(()=>{
+      this.$nextTick(() => {
+        console.log(this.$refs.testingMainVideo.player);
+        setTimeout(() => {
           this.$refs.testingMainVideo.player.play();
-
-        },100)
-
-      })
-   
+        }, 100);
+      });
     },
-  pauseAllVideos(){
-    this.$nextTick(() => {
-        this.videoStack.forEach((slide,index) => {
-          if(this.$refs["mainMessageVideo-" + index]){
+    pauseAllVideos() {
+      this.$nextTick(() => {
+        this.videoStack.forEach((slide, index) => {
+          if (this.$refs["mainMessageVideo-" + index]) {
             let player = this.$refs["mainMessageVideo-" + index][0];
-            if(player){
+            if (player) {
               player.player.pause();
             }
           }
-            
         });
-        });
+      });
     },
-    playVideo(){
-        this.$nextTick(() => {
-          setTimeout(()=>{
-            console.log(this.videoStack.length,this.$refs["mainMessageVideo-2"])
+    playVideo() {
+      this.$nextTick(() => {
+        setTimeout(() => {
+          console.log(this.videoStack.length, this.$refs["mainMessageVideo-2"]);
 
-            this.$refs["mainMessageVideo-"+(this.videoStack.length-1)][0].player.play()
-          },100)
-        })
+          this.$refs[
+            "mainMessageVideo-" + (this.videoStack.length - 1)
+          ][0].player.play();
+        }, 100);
+      });
     },
-  }
+  },
 };
 </script>
 
@@ -859,8 +876,8 @@ h3 {
   svg {
     margin-right: -4px;
     width: 33%;
-    path{
-      fill:#0C2C39;
+    path {
+      fill: #0c2c39;
     }
   }
 }
@@ -1010,10 +1027,11 @@ h3 {
   .other-videos {
     display: flex;
     flex-direction: column;
+    margin-top: 8px;
     .video {
       margin-right: 0;
-      min-height: 80vw;
-      max-height: 80vw;
+      min-height: 40vw;
+      max-height: 50vw;
     }
   }
 }
@@ -1199,6 +1217,10 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: 40px calc(min(160px, 10vw));
+  @media (max-width: 768px) {
+    justify-content: center;
+    min-width: fit-content;
+  }
   .title {
     font-size: 32px;
     line-height: 42px;
@@ -1231,15 +1253,37 @@ h3 {
       margin: 32px 0;
       @media (max-width: 768px) {
         margin: 5px;
+        min-width: 40vw;
+        max-width: 90vw;
+        margin-top: 16px;
+        height: 50vw;
       }
       iframe {
         width: 100%;
         height: 100%;
         border-radius: 10px;
         @media (max-width: 768px) {
-          min-height: 300px;
+          min-height: 20vw;
+          height: 60vw;
+          max-height: 60vw;
         }
       }
+    }
+  }
+}
+.video-container-extra {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  .row {
+    position: relative;
+    width: 100%;
+    .video-parent {
+      position: relative;
+      height: 40vw;
+      width: 100%;
+      margin: 16px 0;
     }
   }
 }
