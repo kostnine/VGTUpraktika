@@ -44,7 +44,12 @@
       </div>
       <div class="maintain-middle-info">
         <div class="image-container">
-          <img src="@/assets/images/maintain/info.jpg" alt="info" />
+          <img
+            class="zoomable"
+            src="@/assets/images/maintain/info.jpg"
+            @click="isExpanded = true"
+            alt="info"
+          />
         </div>
         <div class="text-container">
           <span class="title-text">
@@ -91,6 +96,18 @@
         </div>
       </div>
     </div>
+    <div class="expanded-schema" v-if="isExpanded" v-scroll-lock="isExpanded">
+      <div class="expanded-image-container" v-click-outside="closeModal">
+        <div class="expanded-close" @click="isExpanded = false">
+          <img src="@/assets/icons/close_cross.svg" alt="close" />
+        </div>
+        <img
+          class="expanded-image"
+          src="@/assets/images/maintain/info.jpg"
+          alt="info"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -100,9 +117,58 @@ import PageHeader from "@/components/PageHeader.vue";
 export default {
   name: "MaintainPage",
   metaInfo: {
-      title: 'How to Maintain Smoke Alarms',
+    title: "How to Maintain Smoke Alarms",
+  },
+  data() {
+    return {
+      isExpanded: false,
+    };
+  },
+  methods: {
+    closeModal() {
+      this.isExpanded = false;
+    },
   },
   components: { PageHeader },
+  directives: {
+    "click-outside": {
+      bind: function (el, binding, vNode) {
+        // Provided expression must evaluate to a function.
+        if (typeof binding.value !== "function") {
+          const compName = vNode.context.name;
+          let warn = `[Vue-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`;
+          if (compName) {
+            warn += `Found in component '${compName}'`;
+          }
+
+          console.warn(warn);
+        }
+        // Define Handler and cache it on the element
+        const bubble = binding.modifiers.bubble;
+        const handler = (e) => {
+          if (
+            bubble ||
+            (!el.contains(e.target) &&
+              el !== e.target &&
+              e.target.classList[0] != "zoomable")
+          ) {
+            console.log("should be closed");
+            binding.value(e);
+          }
+        };
+        el.__vueClickOutside__ = handler;
+
+        // add Event Listeners
+        document.addEventListener("click", handler);
+      },
+
+      unbind: function (el, binding) {
+        console.log(binding);
+        document.removeEventListener("click", el.__vueClickOutside__);
+        el.__vueClickOutside__ = null;
+      },
+    },
+  },
 };
 </script>
 
@@ -229,5 +295,68 @@ export default {
   display: flex;
   margin-right: 10px;
   padding-top: 2px;
+}
+
+.expanded-schema {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .expanded-image-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 80%;
+    top: 10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2000;
+    @media (max-width: 1440px) {
+      width: 70vw;
+      height: 80vw;
+    }
+    @media (max-width: 1080px) {
+      width: 80vw;
+      height: 85vw;
+    }
+    @media (max-width: 768px) {
+      width: 90vw;
+      height: 100vw;
+    }
+    @media (max-height: 1000px) {
+      max-height: 80vh;
+    }
+    .expanded-close {
+      position: absolute;
+      right: -17px;
+      top: -17px;
+      background-color: #ffffff;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .expanded-image {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+.zoomable {
+  cursor: zoom-in;
 }
 </style>

@@ -249,7 +249,7 @@ export default {
     PageHeader,
   },
   metaInfo: {
-      title: 'Where To Place Smoke Alarms',
+    title: "Where To Place Smoke Alarms",
   },
   data() {
     return {
@@ -500,7 +500,7 @@ export default {
     line-height: 28px;
     @media (max-width: 1080px) {
       max-width: 60%;
-      text-align: justify;
+      text-align: start;
     }
     @media (max-width: 768px) {
       max-width: 100%;
@@ -658,10 +658,10 @@ export default {
             color: #1e1826;
             font-size: 20px;
             line-height: 24px;
+            margin-bottom: 8px;
             @media (max-width: 1080px) {
               font-size: 16px;
               line-height: 18px;
-              margin-bottom: 8px;
             }
           }
         }

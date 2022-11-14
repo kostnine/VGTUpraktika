@@ -70,48 +70,52 @@
             >Fire Prevention Week Campaign in Spain:</span
           >
         </div>
-        <div class="video-container-with-text">
-          <span class="video-title">Video About Smoke Alarms:</span>
-          <div class="video">
-            <iframe
-              :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+        <div class="section-container">
+          <div class="video-container-with-text">
+            <span class="video-title">Video About Smoke Alarms:</span>
+            <div class="video">
+              <iframe
+                :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <span class="video-url"
+              >https://www.youtube.com/watch?v=NDShJjSbA1Y</span
+            >
           </div>
-          <span class="video-url"
-            >https://www.youtube.com/watch?v=NDShJjSbA1Y</span
-          >
         </div>
-        <div class="brochure-container">
-          <span class="title">Brochure About Smoke Alarms:</span>
-          <div
-            class="leaflet"
-            :style="{
-              backgroundImage:
-                'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
-            }"
-            @click="downloadLeaflet(spainBrochure)"
-          >
-            <div class="bottom-content">
-              <div class="leaflet-text">
-                {{ spainBrochure.text }}
-              </div>
-              <div class="donwload-btn">
-                <svg
-                  width="37"
-                  height="37"
-                  viewBox="0 0 37 37"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                    fill="white"
-                  />
-                </svg>
+        <div class="section-container">
+          <div class="brochure-container">
+            <span class="title">Brochure About Smoke Alarms:</span>
+            <div
+              class="leaflet"
+              :style="{
+                backgroundImage:
+                  'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
+              }"
+              @click="downloadLeaflet(spainBrochure)"
+            >
+              <div class="bottom-content">
+                <div class="leaflet-text">
+                  {{ spainBrochure.text }}
+                </div>
+                <div class="donwload-btn">
+                  <svg
+                    width="37"
+                    height="37"
+                    viewBox="0 0 37 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -278,7 +282,7 @@ export default {
     SwiperSlide,
   },
   metaInfo: {
-      title: 'Best practices',
+    title: "Best practices",
   },
   data() {
     return {
@@ -741,7 +745,7 @@ h2 {
     @media (max-width: 768px) {
       flex-direction: column;
       .video {
-        height: 22vh;
+        height: initial;
         justify-content: center;
         margin: 20px auto;
         span{
@@ -1067,7 +1071,7 @@ h3 {
   display: flex;
   background-color: #c0554b;
   box-sizing: border-box;
-  padding: 20px calc(min(80px, 10vw));
+  padding: 20px calc(min(160px, 10vw));
   align-items: start;
   justify-content: center;
   @media (max-width: 768px) {
@@ -1075,11 +1079,30 @@ h3 {
     justify-content: center;
     align-items: center;
   }
+  .section-container {
+    width: 33%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    @media (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   .video-container-with-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+    width: 75%;
+    @media (max-width: 1280px) {
+      width: 95%;
+    }
+    @media (max-width: 768px) {
+      margin: 0;
+      width: initial;
+    }
     .video-title {
       height: 15%;
       padding: 20px 0;
@@ -1124,7 +1147,7 @@ h3 {
   }
   .brochure-container {
     height: 100%;
-    margin-left: 15%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     @media (max-width: 1080px) {
@@ -1132,6 +1155,7 @@ h3 {
     }
     @media (max-width: 768px) {
       margin: 0;
+      width: initial;
     }
     .title {
       height: 15%;
@@ -1158,6 +1182,9 @@ h3 {
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
+      @media (max-width: 768px) {
+        width: initial;
+      }
       .bottom-content {
         display: flex;
         align-items: center;
@@ -1200,6 +1227,7 @@ h3 {
       @media (max-width: 1080px) {
         font-size: 24px;
         margin: 0;
+        margin-right: 8px;
       }
       @media (max-width: 768px) {
         margin: 0;
@@ -1217,6 +1245,7 @@ h3 {
     font-size: 32px;
     line-height: 42px;
     font-family: $semiBoldFont;
+    margin-bottom: 8px;
   }
   .subtitle {
     font-size: 20px;

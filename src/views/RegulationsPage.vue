@@ -68,6 +68,7 @@
           :country="this.activeCountry"
           :closeCountry="clearActiveCountry"
           id="country-block"
+          v-click-outside="clearActiveCountry"
         />
       </div>
       <div class="regulations-page-map-content">
@@ -116,7 +117,7 @@ export default {
     };
   },
   metaInfo: {
-      title: 'Regulations',
+    title: "Regulations",
   },
   components: {
     CountryComponent,
@@ -129,6 +130,7 @@ export default {
         this.activeCountry = "";
       } else {
         this.activeCountry = country;
+        this.scroll("map");
       }
     },
     clearActiveCountry() {
@@ -147,6 +149,44 @@ export default {
     this.sorted_countries = this.sorted_countries.filter(
       (country) => !country.includes("_")
     );
+  },
+  directives: {
+    "click-outside": {
+      bind: function (el, binding, vNode) {
+        // Provided expression must evaluate to a function.
+        if (typeof binding.value !== "function") {
+          const compName = vNode.context.name;
+          let warn = `[Vue-click-outside:] provided expression '${binding.expression}' is not a function, but has to be`;
+          if (compName) {
+            warn += `Found in component '${compName}'`;
+          }
+
+          console.warn(warn);
+        }
+        // Define Handler and cache it on the element
+        const bubble = binding.modifiers.bubble;
+        const handler = (e) => {
+          if (
+            bubble ||
+            (!el.contains(e.target) &&
+              el !== e.target &&
+              e.target.classList[0] != "map-object")
+          ) {
+            binding.value(e);
+          }
+        };
+        el.__vueClickOutside__ = handler;
+
+        // add Event Listeners
+        document.addEventListener("click", handler);
+      },
+
+      unbind: function (el, binding) {
+        console.log(binding);
+        document.removeEventListener("click", el.__vueClickOutside__);
+        el.__vueClickOutside__ = null;
+      },
+    },
   },
 };
 </script>

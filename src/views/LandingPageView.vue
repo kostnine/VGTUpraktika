@@ -241,16 +241,16 @@ export default {
           link: "videos/landingpage/Denmark.mp4",
           img: "images/messages_of_support/4.jpg",
         },
-        // {
-        //   id: 3,
-        //   link: "videos/landingpage/3.FIRESAFETY_PHONE_.mp4",
-        //   img: "images/messages_of_support/video3.jpg",
-        // },
-        // {
-        //   id: 4,
-        //   link: "videos/landingpage/1.FIRESAFETY_CANDLES.mp4",
-        //   img: "images/messages_of_support/video1.jpg",
-        // },
+        {
+          id: 4,
+          link: "videos/landingpage/Lithuania1.mp4",
+          img: "images/messages_of_support/Lithuania_1.jpg",
+        },
+        {
+          id: 5,
+          link: "videos/landingpage/Lithuania2.mp4",
+          img: "images/messages_of_support/Lithuania_2.jpg",
+        },
         // {
         //   id: 5,
         //   link: "videos/landingpage/5.FIRESAFETY_TONGS.mp4",
@@ -735,8 +735,10 @@ section {
         width: 100%;
         height: 100%;
         border-radius: 10px;
-        height: 20vw;
-        min-width: 20vw;
+        min-height: 15vw;
+        height: 15vw;
+        min-width: 15vw;
+        width: 15vw;
       }
       img {
         cursor: pointer;
@@ -762,8 +764,6 @@ section {
     .video {
       display: flex;
       flex-direction: column;
-      height: 20vw;
-      min-width: 20vw;
       margin: 0 1rem;
       border-radius: 15px;
       position: relative;
