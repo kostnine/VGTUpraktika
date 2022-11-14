@@ -104,7 +104,6 @@ video{
 }
 </style>
 <style>
-/* @import '@/assets/css/player.css'; */
 @import 'video.js/dist/video-js.css';
 
 </style>
