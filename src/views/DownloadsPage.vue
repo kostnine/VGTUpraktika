@@ -269,7 +269,6 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
-import Velocity from "velocity-animate";
 SwiperCore.use([Navigation, Pagination]);
 export default {
   name: "DownloadsPage",
@@ -454,19 +453,22 @@ export default {
       this.mainMessageVideo = video;
       video = oldVideo;
       this.footerVideos[index] = oldVideo;
+      this.pauseAllVideos();
       this.$nextTick(() => {
         this.swiper.update();
         this.$nextTick(() => {
           this.swiper.slideTo(this.videoStack.length - 1, 300);
           if (this.videoStack.length > 2) {
             setTimeout(() => {
-              this.videoStack.splice(0, 1);
-              this.swiper.update();
-              this.swiper.slidePrev(0);
+              this.swiper.removeSlide(0);
               this.isLoadingNewVideo = false;
+              
+              this.playVideo();
+             
             }, 350);
           } else {
             this.isLoadingNewVideo = false;
+            this.playVideo();
           }
         });
       });
@@ -488,147 +490,20 @@ export default {
         this.showTransitionImages = false;
       }, 10000);
     },
-    beforeEnter: function (el, index) {
-      // this.showTransitionImages=true;
-      console.log(this, this.showTransitionImages);
-      // this.$nextTick(()=>{
-      // console.log(this, this.showTransitionImages)
-
-      // })
-      // el.style.position = 'absolute'
-
-      let nextImg =
-        this.$refs[
-          `testing-video-primary-${index == 0 ? index + 1 : index - 1}`
-        ];
-      if (Array.isArray(nextImg)) nextImg = nextImg[0];
-      nextImg.style.opacity = 0;
-      console.log(el, index);
-
-      nextImg =
-        this.$refs[
-          `testing-video-primary-${index == 0 ? index + 1 : index - 1}`
-        ];
-      if (Array.isArray(nextImg)) nextImg = nextImg[0];
-      nextImg.style.opacity = 1;
-      nextImg.style.top = 0;
-      nextImg.style.left = 0;
-      let mainVideo = this.$refs.mainTestingVideo;
-      mainVideo.style.opacity = "";
-      mainVideo.style.top = "";
-      mainVideo.style.left = "";
-      mainVideo.style.width = "";
-      mainVideo.style.maxWidth = "";
-      mainVideo.style.height = "";
-      // let mainVid = this.$refs.mainTestingVideo;
-      // mainVid.style.opacity = 0;
+  pauseAllVideos(){
+      this.$nextTick(() => {
+        });
+        this.swiper.slides.forEach((slide) => {
+          slide.firstChild.pause();
+          console.log(slide.firstChild);
+        });
     },
-    enter: function (el, done, video) {
-      console.log(video.id, this.activeTestingVideo.id);
-      if (video.id == this.activeTestingVideo.id) {
-        let mainVideo = this.$refs.mainTestingVideo;
-        let boundingMain = mainVideo.getBoundingClientRect();
-        let currentBounding = el.getBoundingClientRect();
-        console.log(boundingMain, el.getBoundingClientRect());
-        let left = boundingMain.left - currentBounding.left;
-        Velocity(
-          el,
-          {
-            left: left + "px",
-            width: boundingMain.width + "px",
-            maxWidth: boundingMain.width + "px",
-            height: boundingMain.height + "px",
-          },
-          { duration: 10000, complete: done }
-        );
-      } else {
-        let mainVideo = this.$refs.mainTestingVideo;
-        let boundingMain = mainVideo.getBoundingClientRect();
-        let testing_videos_filtered = this.testing_videos.filter(
-          (el) => !el.active
-        );
-        let nextVideoIndex = testing_videos_filtered.findIndex(
-          (elem) => elem.id == video.id
-        );
-        let nextEl =
-          nextVideoIndex == 0
-            ? this.$refs[`testing-video-${nextVideoIndex + 1}`]
-            : this.$refs[`testing-video-${nextVideoIndex - 1}`];
-        if (Array.isArray(nextEl)) nextEl = nextEl[0];
-        console.log(nextEl);
-        let nextElBounding = nextEl.getBoundingClientRect();
-        let nextTop = boundingMain.top - nextElBounding.top;
-        Velocity(
-          nextEl,
-          {
-            top: nextTop + "px",
-          },
-          { duration: 10000, complete: done }
-        );
-      }
-      // else if(video.id == this.activeTestingVideo.id)
-      // let testing_videos_filtered = this.testing_videos.filter(el=>!el.active);
-      // let nextVideoIndex = testing_videos_filtered.findIndex(elem=>elem.id == video.id);
-
-      // let mainVideoLeft =  nextElBounding.left - boundingMain.left;
-      // let mainVideoTop = nextElBounding.top - boundingMain.top;
-      // Velocity(mainVideo, {
-      //     top:mainVideoTop+'px',
-      //     left:mainVideoLeft+'px',
-      //     width: nextElBounding.width+'px',
-      //     maxWidth: nextElBounding.width+'px',
-      //     height: nextElBounding.height+'px',
-      // }, { duration: 10000, complete: done })
+    playVideo(){
+        this.$nextTick(() => {
+          this.swiper.slides[this.swiper.activeIndex].firstChild.play();
+        })
     },
-    afterEnter: function (el, index) {
-      console.log(el, index);
-      let img = this.$refs[`testing-video-primary-${index}`];
-      if (Array.isArray(img)) img = img[0];
-      img.style.opacity = 1;
-      img.style.top = 0;
-      img.style.left = 0;
-      let nextImg =
-        this.$refs[
-          `testing-video-primary-${index == 0 ? index + 1 : index - 1}`
-        ];
-      if (Array.isArray(nextImg)) nextImg = nextImg[0];
-      nextImg.style.opacity = 1;
-      nextImg.style.top = 0;
-      nextImg.style.left = 0;
-      let mainVideo = this.$refs.mainTestingVideo;
-      mainVideo.style.opacity = "";
-      mainVideo.style.top = "";
-      mainVideo.style.left = "";
-      mainVideo.style.width = "";
-      mainVideo.style.maxWidth = "";
-      mainVideo.style.height = "";
-
-      // this.showTransitionImages=false;
-    },
-    afterLeave: function (el, index) {
-      console.log(el, index);
-      let img = this.$refs[`testing-video-primary-${index}`];
-      if (Array.isArray(img)) img = img[0];
-      img.style.opacity = 1;
-      img.style.top = 0;
-      img.style.left = 0;
-      let nextImg =
-        this.$refs[
-          `testing-video-primary-${index == 0 ? index + 1 : index - 1}`
-        ];
-      if (Array.isArray(nextImg)) nextImg = nextImg[0];
-      nextImg.style.opacity = 1;
-      nextImg.style.top = 0;
-      nextImg.style.left = 0;
-      let mainVideo = this.$refs.mainTestingVideo;
-      mainVideo.style.opacity = "";
-      mainVideo.style.top = "";
-      mainVideo.style.left = "";
-      mainVideo.style.width = "";
-      mainVideo.style.maxWidth = "";
-      mainVideo.style.height = "";
-    },
-  },
+  }
 };
 </script>
 
