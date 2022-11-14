@@ -774,7 +774,7 @@ h3 {
   .leaflet {
     position: relative;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     height: 300px;
     width: 225px;
     border-radius: 10px;
@@ -1149,7 +1149,7 @@ h3 {
     }
     .leaflet {
       position: relative;
-      background-position: center;
+      background-position: top;
       min-height: 200px;
       width: 300px;
       border-radius: 10px;
