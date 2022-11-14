@@ -301,7 +301,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 20vw 0 0 5vw;
+        padding: 12vh 0 0 5vw;
         position: fixed;
         top: 0;
         left: 0;
@@ -311,7 +311,7 @@ export default {
         z-index: 99;
         .header-nav-block {
           font-size: clamp(16px, 7vw, 36px);
-          margin: 2rem 0;
+          margin: 3vh 0;
           .header-button-with-dropdown {
             width: 100%;
           }

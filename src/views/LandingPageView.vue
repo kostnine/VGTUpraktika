@@ -518,12 +518,7 @@ section {
     }
     .illustrations {
       width: 100%;
-      @media (max-width: 768px) {
-        @media (max-height: 667px) {
-          margin-top: 128px;
-        }
         margin-top: 32px;
-      }
       .smoke-detector-container {
         margin-top: 0px;
         left: 0rem;
@@ -531,21 +526,36 @@ section {
         bottom: 23vw;
         top: initial;
         margin: auto;
-        height: 22.3vw;
-        width: 23.3vw;
-        min-width: 250px;
-        min-height: 250px;
+        height: 30vh;
+        width: 30vh;
+        min-width: 150px;
+        min-height: 150px;
+      }
+      @media (max-height: 640px) {
+        // margin-top: 128px;
+        .smoke-detector-container{
+          height: 25vh;
+          width: 25vh;
+          bottom: 9vh;
+        }
+      }
+      @media (max-height: 550px) {
+        // margin-top: 128px;
+        .smoke-detector-container{
+          display: none;
+        }
+      }
+       @media (max-height: 487px) {
+        display: none;
       }
       .red-circle {
         width: 90vw;
-        height: 80vw;
+        height: 90vw;
         left: 0;
         right: 0;
         margin: auto;
-        bottom: -57%;
-        @media (max-width: 768px) {
-          right: -50vw;
-        }
+        bottom: -23vh;
+        right: -32vw;
       }
       .smoke {
         left: -8rem;
@@ -1050,6 +1060,7 @@ section {
           max-width: 100%;
           img {
             height: 100%;
+            max-width: 80%;
             width: auto;
           }
           span {
