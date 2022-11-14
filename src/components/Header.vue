@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <div class="header-image-container">
-      <router-link to="/"
+      <router-link class="logo" to="/"
         ><img src="@/assets/logo.svg" alt="logo"
       /></router-link>
     </div>
@@ -79,6 +79,7 @@ export default {
         this.isNotHome = false;
       }
       this.isMenuOpen = false;
+      this.dropdownExtended=false;
     },
   },
   methods: {
@@ -328,6 +329,17 @@ export default {
         width: initial;
       }
     }
+  }
+}
+.header-dropdown{
+  .router-link-exact-active{
+    border-bottom: 2px solid white;
+  }
+}
+.router-link-exact-active{
+  border-bottom: 2px solid #000000;
+  &.logo{
+    border-bottom: none;
   }
 }
 @media screen and (max-width: 1100px) and (min-width: 768px) {
