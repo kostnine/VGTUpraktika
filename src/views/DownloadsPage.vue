@@ -139,9 +139,11 @@
               v-for="(video, index) in videoStack"
               :key="`${video.link}-${index}`"
             >
-              <video
+              <!-- <video
+
                 :ref="`mainMessageVideo-${index}`"
                 :poster="require(`@/assets/${video.img}`)"
+                
                 @mouseover="
                   currentlyHoveringVideo = `mainMessageVideo-${index}`
                 "
@@ -152,7 +154,20 @@
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
-              </video>
+              </video> -->
+              <video-player :ref="`mainMessageVideo-${index}`" :options="{
+                autoplay: false,
+                controls: true,
+                sources: [
+                   {
+                    src:
+                      require(`@/assets/${video.link}`),
+                      type: 'video/mp4'
+                  }
+                ]
+              }
+              "
+              />
             </swiper-slide>
           </swiper>
         </div>
@@ -273,12 +288,14 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
+import VideoPlayer from '@/components/VideoPlayer.vue';
 SwiperCore.use([Navigation, Pagination]);
 export default {
   name: "DownloadsPage",
   components: {
     Swiper,
     SwiperSlide,
+    VideoPlayer
   },
   metaInfo: {
     title: "Best practices",
@@ -495,16 +512,25 @@ export default {
       }, 10000);
     },
   pauseAllVideos(){
-      this.$nextTick(() => {
+    this.$nextTick(() => {
+        this.videoStack.forEach((slide,index) => {
+          if(this.$refs["mainMessageVideo-" + index]){
+            let player = this.$refs["mainMessageVideo-" + index][0];
+            if(player){
+              player.player.pause();
+            }
+          }
+            
         });
-        this.swiper.slides.forEach((slide) => {
-          slide.firstChild.pause();
-          console.log(slide.firstChild);
         });
     },
     playVideo(){
         this.$nextTick(() => {
-          this.swiper.slides[this.swiper.activeIndex].firstChild.play();
+          setTimeout(()=>{
+            console.log(this.videoStack.length,this.$refs["mainMessageVideo-2"])
+
+            this.$refs["mainMessageVideo-"+(this.videoStack.length-1)][0].player.play()
+          },100)
         })
     },
   }
@@ -771,8 +797,10 @@ h3 {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 58px;
-  height: 58px;
+  width: 4vw;
+  height: 4vw;
+  max-width: 30px;
+  max-height: 30px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.67);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -780,6 +808,7 @@ h3 {
   cursor: pointer;
   svg {
     margin-right: -4px;
+    width: 35%;
   }
 }
 .why-videos {

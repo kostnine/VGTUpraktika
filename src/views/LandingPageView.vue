@@ -41,7 +41,7 @@
                 v-for="(video, index) in videoStack"
                 :key="`${video.link}-${index}`"
               >
-                <video
+                <!-- <video
                   :ref="`mainMessageVideo-${index}`"
                   @mouseover="
                     currentlyHoveringVideo = `mainMessageVideo-${index}`
@@ -53,7 +53,21 @@
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.
-                </video>
+                </video> -->
+              <video-player 
+                :ref="`mainMessageVideo-${index}`" 
+                :options="{
+                  autoplay: false,
+                  controls: true,
+                  sources: [
+                    {
+                      src:
+                        require(`@/assets/${video.link}`),
+                        type: 'video/mp4'
+                    }
+                  ]
+                }"
+              />
               </swiper-slide>
             </swiper>
             <!-- <div class="carousel" ref="carousel" >
@@ -90,13 +104,21 @@
           :class="{ loading: isLoadingNewVideo }"
         >
           <transition name="fade" mode="out-in">
-            <video v-if="windowWidth < 768" :ref="`video-${index}`" controls>
-              <source
-                :src="require(`@/assets/${video.link}`)"
-                type="video/mp4"
+            <video-player
+               v-if="windowWidth < 768"  
+                :ref="`video-${index}`"
+                :options="{
+                  autoplay: false,
+                  controls: true,
+                  sources: [
+                    {
+                      src:
+                        require(`@/assets/${video.link}`),
+                        type: 'video/mp4'
+                    }
+                  ]
+                }"
               />
-              Your browser does not support the video tag.
-            </video>
             <img
               v-else
               :src="require(`@/assets/${video.img}`)"
@@ -210,6 +232,7 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
+import VideoPlayer from '@/components/VideoPlayer.vue';
 
 SwiperCore.use([Navigation, Pagination]);
 export default {
@@ -217,6 +240,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+    VideoPlayer
   },
   data() {
     return {
@@ -399,17 +423,26 @@ export default {
         });
       });
     },
-    pauseAllVideos(){
+     pauseAllVideos(){
       this.$nextTick(() => {
+          this.videoStack.forEach((slide,index) => {
+            if(this.$refs["mainMessageVideo-" + index]){
+              let player = this.$refs["mainMessageVideo-" + index][0];
+              if(player){
+                player.player.pause();
+              }
+            }
+              
         });
-        this.swiper.slides.forEach((slide) => {
-          slide.firstChild.pause();
-          console.log(slide.firstChild);
-        });
+      });
     },
     playVideo(){
         this.$nextTick(() => {
-          this.swiper.slides[this.swiper.activeIndex].firstChild.play();
+          setTimeout(()=>{
+            console.log(this.videoStack.length,this.$refs["mainMessageVideo-2"])
+
+            this.$refs["mainMessageVideo-"+(this.videoStack.length-1)][0].player.play()
+          },100)
         })
     },
     onSwiper(swiper) {
@@ -480,6 +513,10 @@ section {
   cursor: pointer;
   svg {
     margin-right: -4px;
+    width: 33%;
+    path{
+      fill:#0C2C39;
+    }
   }
 }
 .date {
@@ -650,6 +687,7 @@ section {
     width: 100%;
     .video-container {
       display: flex;
+      padding: 20px 0;
       flex: 3;
       justify-content: center;
     }
@@ -658,8 +696,8 @@ section {
       display: flex;
       flex-direction: column;
       height: 40vw;
-      min-width: calc(min(500px, 30vw));
-      min-height: calc(min(500px, 30vw));
+      min-width: calc(min(500px, 40vw));
+      min-height: calc(min(500px, 40vw));
       max-height: 500px;
       border-radius: 20px;
       overflow: hidden;
@@ -828,6 +866,7 @@ section {
   @media (max-width: 768px) {
     min-height: 100vh;
     height: auto;
+    
     .content {
       flex-direction: column;
       padding: 40px $paddingHorizontalMobile 20px;
