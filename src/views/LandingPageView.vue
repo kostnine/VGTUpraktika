@@ -336,7 +336,6 @@ export default {
         },
       ],
       footerVideos: [],
-
       swiper: null,
     };
   },
@@ -382,22 +381,36 @@ export default {
       this.mainMessageVideo = video;
       video = oldVideo;
       this.footerVideos[index] = oldVideo;
+      this.pauseAllVideos();
       this.$nextTick(() => {
         this.swiper.update();
         this.$nextTick(() => {
           this.swiper.slideTo(this.videoStack.length - 1, 300);
           if (this.videoStack.length > 2) {
             setTimeout(() => {
-              this.videoStack.splice(0, 1);
-              this.swiper.update();
-              this.swiper.slidePrev(0);
+               this.swiper.removeSlide(0);
               this.isLoadingNewVideo = false;
+              this.playVideo();
             }, 350);
           } else {
             this.isLoadingNewVideo = false;
+            this.playVideo();
           }
         });
       });
+    },
+    pauseAllVideos(){
+      this.$nextTick(() => {
+        });
+        this.swiper.slides.forEach((slide) => {
+          slide.firstChild.pause();
+          console.log(slide.firstChild);
+        });
+    },
+    playVideo(){
+        this.$nextTick(() => {
+          this.swiper.slides[this.swiper.activeIndex].firstChild.play();
+        })
     },
     onSwiper(swiper) {
       if (this.swiper == null) {
