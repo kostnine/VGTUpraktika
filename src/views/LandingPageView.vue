@@ -95,11 +95,11 @@
           </div>
         </div>
       </div>
-      <div class="footer">
+      <div class="footer" v-if="this.windowWidth <= 768">
         <div
           class="video"
           v-for="(video, index) in windowWidth < 768 ? videos : footerVideos"
-          :key="index"
+          :key="`bideo${index}`"
           :class="{ loading: isLoadingNewVideo }"
         >
           <transition name="fade" mode="out-in">
@@ -120,7 +120,7 @@
             <img
               v-else
               :src="require(`@/assets/${video.img}`)"
-              :key="video.id"
+              :key="`v${video.id}`"
               alt=""
               @click="setMainMessageVideo(video, index)"
             />
@@ -128,7 +128,7 @@
           <transition name="fade" mode="out-in">
             <div
               v-if="windowWidth >= 768"
-              :key="video.id"
+              :key="`v-img${video.id}`"
               class="play-button"
               @click="setMainMessageVideo(video, index)"
             >
@@ -146,6 +146,72 @@
               </svg>
             </div>
           </transition>
+        </div>
+      </div>
+      <div class="footer w-carousel" v-else>
+        <div class="c-arrow-left c-arrow" @click="carouselMove(false)">
+          <svg
+            width="24"
+            height="15"
+            viewBox="0 0 24 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M22 13L12 3L2 13" stroke="#483A5B" stroke-width="3" />
+          </svg>
+        </div>
+        <div class="carousel">
+          <div
+            class="c-video-container"
+            ref="inner"
+            id="footer-carousel"
+            :style="innerStyles"
+          >
+            <div
+              class="video"
+              v-for="(video, index) in footerVideos"
+              :key="`videoKey-${video.id}`"
+              id="carousel-footer"
+              :class="{ loading: isLoadingNewVideo }"
+            >
+              <img
+                :src="require(`@/assets/${video.img}`)"
+                :key="`videoImgKey-${video.id}`"
+                alt=""
+                @click="setMainMessageVideo(video, index)"
+              />
+              <div
+                v-if="windowWidth >= 768"
+                :key="`videoBtnKey-${video.id}`"
+                class="play-button"
+                @click="setMainMessageVideo(video, index)"
+              >
+                <svg
+                  width="17"
+                  height="20"
+                  viewBox="0 0 17 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z"
+                    fill="#1E1826"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-arrow-right c-arrow" @click="carouselMove(true)">
+          <svg
+            width="24"
+            height="15"
+            viewBox="0 0 24 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M22 13L12 3L2 13" stroke="#483A5B" stroke-width="3" />
+          </svg>
         </div>
       </div>
       <div class="button-container" v-if="this.windowWidth < 768">
@@ -254,6 +320,7 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
+      cTranslation: 125,
       videos: [
         {
           id: 0,
@@ -285,11 +352,11 @@ export default {
           link: "videos/landingpage/Lithuania2.mp4",
           img: "images/messages_of_support/Lithuania_2.jpg",
         },
-        // {
-        //   id: 5,
-        //   link: "videos/landingpage/5.FIRESAFETY_TONGS.mp4",
-        //   img: "images/messages_of_support/video5.jpg",
-        // },
+        {
+          id: 6,
+          link: "videos/landingpage/Stephan.mp4",
+          img: "images/messages_of_support/Stephan.jpg",
+        },
       ],
       supporters: [
         {
@@ -371,6 +438,8 @@ export default {
       ],
       footerVideos: [],
       swiper: null,
+      innerStyles: {},
+      transitioning: false,
     };
   },
   mounted() {
@@ -378,6 +447,7 @@ export default {
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
     });
+    this.setStep();
   },
   computed: {
     isMobile() {
@@ -470,6 +540,115 @@ export default {
     onResize() {
       this.windowWidth = window.innerWidth;
       console.log(this.windowWidth);
+    },
+    carouselMove(isForward) {
+      if (this.transitioning) return;
+      this.transitioning = true;
+      if (isForward) {
+        const innerWidth = this.$refs.inner.scrollWidth;
+        const cards = this.footerVideos.length;
+        if (window.innerWidth < 1280) {
+          this.cTranslation = `${innerWidth / cards}px`;
+        } else {
+          this.cTranslation = `${innerWidth / cards / 2}px`;
+        }
+        this.innerStyles = {
+          transform: `translateX(-${this.cTranslation})`,
+        };
+        setTimeout(() => {
+          if (window.innerWidth < 1280) {
+            this.innerStyles = {
+              transition: "transform 0s",
+              translate: "6px",
+            };
+          } else {
+            this.innerStyles = {
+              transition: "transform 0s",
+              translate: "0px",
+            };
+          }
+          for (let i = 0; i < 1; i++) {
+            let card = this.footerVideos[i];
+            this.footerVideos.push(card);
+            this.footerVideos.shift();
+          }
+          this.transitioning = false;
+        }, 500);
+      } else {
+        const innerWidth = this.$refs.inner.scrollWidth;
+        const cards = this.footerVideos.length;
+        if (window.innerWidth < 1280) {
+          this.cTranslation = `${innerWidth / cards}px`;
+        } else {
+          this.cTranslation = `${(innerWidth / cards) * 1.5}px`;
+        }
+        this.innerStyles = {
+          transform: `translateX(+${this.cTranslation})`,
+        };
+        setTimeout(() => {
+          this.innerStyles = {
+            transition: "transform 0s",
+            translate: "-5px",
+          };
+          for (let i = 0; i < 1; i++) {
+            let card = this.footerVideos.pop();
+            this.footerVideos.unshift(card);
+          }
+          this.transitioning = false;
+        }, 500);
+      }
+    },
+    setStep() {
+      const innerWidth = this.$refs.inner.scrollWidth;
+      const cards = this.footerVideos.length;
+      this.cTranslation = `${innerWidth / cards}px`;
+    },
+    next() {
+      if (this.transitioning) return;
+      this.transitioning = true;
+      this.moveLeft();
+      this.afterTransition(() => {
+        const card = this.footerVideos.shift();
+        this.footerVideos.push(card);
+        this.resetTranslate();
+        this.transitioning = false;
+      });
+    },
+    prev() {
+      if (this.transitioning) return;
+      this.transitioning = true;
+      this.moveRight();
+      this.afterTransition(() => {
+        const card = this.footerVideos.pop();
+        this.footerVideos.unshift(card);
+        this.resetTranslate();
+        this.transitioning = false;
+      });
+    },
+    afterTransition(callback) {
+      const listener = () => {
+        callback();
+        this.$refs.inner.removeEventListener("transitionend", listener);
+      };
+      this.$refs.inner.addEventListener("transitionend", listener);
+    },
+    resetTranslate() {
+      this.innerStyles = {
+        transition: "none",
+        transform: `translateX(-${this.cTranslation})`,
+      };
+    },
+    moveLeft() {
+      this.innerStyles = {
+        transform: `translateX(-${this.cTranslation})
+                    translateX(-${this.cTranslation})`,
+      };
+    },
+    moveRight() {
+      this.innerStyles = {
+        transform: `translateX(${this.step})
+                    translateX(-${this.step})`,
+      };
     },
   },
 };
@@ -845,10 +1024,10 @@ section {
         width: 100%;
         height: 100%;
         border-radius: 10px;
-        min-height: 15vw;
-        height: 15vw;
-        min-width: 15vw;
-        width: 15vw;
+        min-height: 12vw;
+        height: 12vw;
+        min-width: 12vw;
+        width: 12vw;
       }
       img {
         cursor: pointer;
@@ -1457,5 +1636,75 @@ section {
   line-height: 24px;
   font-size: clamp(16px, 1.5vw, 38px);
   margin-top: 16px;
+}
+
+.message {
+  .footer {
+    &.w-carousel {
+      overflow-x: hidden;
+      .carousel {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        overflow-x: hidden;
+        @media (max-width: 1280px) {
+          width: 75%;
+        }
+        .c-video-container {
+          // translate: 125px;
+          width: fit-content;
+          display: flex;
+          transition: transform 0.5s;
+          transform: translate(7vw);
+          .video {
+            overflow: visible;
+          }
+          @media (max-width: 1280px) {
+            transform: translate(0);
+          }
+        }
+      }
+      .c-ctrl {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.c-arrow {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  svg {
+    path {
+      stroke: white;
+    }
+  }
+  &:hover {
+    background-color: #483a5b;
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  }
+}
+.c-arrow-left {
+  transform: rotate(-90deg);
+}
+.c-arrow-right {
+  transform: rotate(90deg);
 }
 </style>
