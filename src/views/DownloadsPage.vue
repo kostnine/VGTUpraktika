@@ -927,15 +927,22 @@ h3 {
     border-radius: 20px;
     max-height: 60vw;
     @media (min-width: 1280px) {
-      width: 60%;
+      // width: 60%;
+       max-width: initial;
+      width: initial;
     }
     @media (max-width: 1280px) {
       max-height: 50vw;
-      max-width: 55vw;
+      // max-width: 55vw;
+      max-width: initial;
+      width: initial;
+      
     }
     @media (max-width: 1080px) {
       max-height: 40vw;
-      width: 60%;
+      // width: 60%;
+       max-width: initial;
+      width: initial;
     }
     @media (max-width: 768px) {
       min-height: 80vw;

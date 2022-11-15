@@ -59,6 +59,7 @@
                   :options="{
                     autoplay: false,
                     controls: true,
+                    aspectRatio: '1:1',
                     sources: [
                       {
                         src: require(`@/assets/${video.link}`),
@@ -356,6 +357,11 @@ export default {
           id: 6,
           link: "videos/landingpage/Stephan.mp4",
           img: "images/messages_of_support/Stephan.jpg",
+        },
+         {
+          id: 7,
+          link: "videos/landingpage/Estonia.mp4",
+          img: "images/messages_of_support/Estonia.png",
         },
       ],
       supporters: [
@@ -1645,6 +1651,7 @@ section {
       .carousel {
         display: flex;
         justify-content: center;
+        // justify-content: flex-start;
         width: 50%;
         overflow-x: hidden;
         @media (max-width: 1280px) {
