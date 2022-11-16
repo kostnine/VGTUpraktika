@@ -358,7 +358,7 @@ export default {
           link: "videos/landingpage/Stephan.mp4",
           img: "images/messages_of_support/Stephan.jpg",
         },
-         {
+        {
           id: 7,
           link: "videos/landingpage/Estonia.mp4",
           img: "images/messages_of_support/Estonia.png",
@@ -399,7 +399,7 @@ export default {
         },
 
         {
-          url: "https://www.kidde.com/home-safety/en",
+          url: "https://www.kidde.com/fire-safety/en/uk",
           url_text: "www.kidde.com",
           logo: "images/supporters/kidde.svg",
         },
@@ -1648,11 +1648,12 @@ section {
   .footer {
     &.w-carousel {
       overflow-x: hidden;
+      padding: 2rem 5vw;
       .carousel {
         display: flex;
         justify-content: center;
         // justify-content: flex-start;
-        width: 50%;
+        width: 100%;
         overflow-x: hidden;
         @media (max-width: 1280px) {
           width: 75%;
@@ -1681,6 +1682,9 @@ section {
         align-items: center;
         background-color: white;
         cursor: pointer;
+      }
+      @media (max-width: 1280px) {
+        padding: 2rem 2vw;
       }
     }
   }

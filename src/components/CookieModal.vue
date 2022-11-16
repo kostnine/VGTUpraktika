@@ -32,7 +32,7 @@
       v-if="privacyOpened"
     >
       <div class="cookie-big-inside">
-        <div class="big-header">
+        <div class="big-header" :class="{ absolute: extraExpanded }">
           <div class="logo-container">
             <img src="@/assets/logo.svg" alt="logo" />
           </div>
@@ -491,6 +491,7 @@ export default {
       privacyOpened: false,
       necessaryOpen: false,
       analyticalOpen: false,
+      extraExpanded: false,
     };
   },
   mounted() {
@@ -518,6 +519,34 @@ export default {
     },
     closePrivacy() {
       this.privacyOpened = false;
+    },
+  },
+  watch: {
+    necessaryOpen: {
+      handler(newVal) {
+        if (newVal == false) {
+          if (!this.analyticalOpen) {
+            setTimeout(() => {
+              this.extraExpanded = false;
+            }, 250);
+          }
+        } else {
+          this.extraExpanded = true;
+        }
+      },
+    },
+    analyticalOpen: {
+      handler(newVal) {
+        if (newVal == false) {
+          if (!this.necessaryOpen) {
+            setTimeout(() => {
+              this.extraExpanded = false;
+            }, 250);
+          }
+        } else {
+          this.extraExpanded = true;
+        }
+      },
     },
   },
 };
@@ -624,6 +653,7 @@ a {
   justify-content: center;
   align-items: center;
   .cookie-big-inside {
+    position: relative;
     background: #faf7f5;
     box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -641,6 +671,9 @@ a {
   border-radius: 10px 10px 0px 0px;
   transition: 0.5s;
   height: fit-content;
+  &.absolute {
+    position: absolute;
+  }
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -653,6 +686,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative;
       .btn-container {
         display: flex;
         flex-direction: row;
@@ -680,9 +714,12 @@ a {
   padding: 15px 20px;
   @media (max-width: 768px) {
     max-height: 40vh;
+    &.smaller {
+      max-height: 70vh;
+    }
   }
   &.smaller {
-    height: 65%;
+    height: 90%;
   }
   .content-block {
     display: flex;
@@ -734,6 +771,11 @@ a {
         &:first-child {
           th {
             &:first-child {
+              min-width: 150px;
+              width: 150px;
+              max-width: 150px;
+            }
+            &:last-child {
               min-width: 150px;
               width: 150px;
               max-width: 150px;
@@ -870,7 +912,7 @@ input:checked + .slider:before {
 }
 .slide-leave-active,
 .slide-enter-active {
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .slide-enter,
 .slide-leave-to {
