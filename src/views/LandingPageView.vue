@@ -146,6 +146,7 @@
       </div>
       <div class="footer w-carousel" v-else>
         <div class="c-arrow-left c-arrow" @click="carouselMove(false)">
+          <div class="c-arrow-block"></div>
           <svg
             width="24"
             height="15"
@@ -208,6 +209,7 @@
           >
             <path d="M22 13L12 3L2 13" stroke="#483A5B" stroke-width="3" />
           </svg>
+          <div class="c-arrow-block"></div>
         </div>
       </div>
       <div class="button-container" v-if="this.windowWidth < 768">
@@ -357,6 +359,16 @@ export default {
           id: 7,
           link: "videos/landingpage/Estonia.mp4",
           img: "images/messages_of_support/Estonia.png",
+        },
+        {
+          id: 8,
+          link: "videos/landingpage/Maria.mp4",
+          img: "images/messages_of_support/Maria.png",
+        },
+        {
+          id: 9,
+          link: "videos/landingpage/Sweden.mp4",
+          img: "images/messages_of_support/Sweden.png",
         },
       ],
       supporters: [
@@ -563,7 +575,7 @@ export default {
         if (window.innerWidth < 1280) {
           this.cTranslation = `${innerWidth / cards}px`;
         } else {
-          this.cTranslation = `${innerWidth / cards / 2}px`;
+          this.cTranslation = `${innerWidth / cards}px`;
         }
         this.innerStyles = {
           transform: `translateX(-${this.cTranslation})`,
@@ -593,7 +605,7 @@ export default {
         if (window.innerWidth < 1280) {
           this.cTranslation = `${innerWidth / cards}px`;
         } else {
-          this.cTranslation = `${(innerWidth / cards) * 1.5}px`;
+          this.cTranslation = `${innerWidth / cards}px`;
         }
         this.innerStyles = {
           transform: `translateX(+${this.cTranslation})`,
@@ -624,7 +636,7 @@ export default {
         console.log(this.mobileVideos);
         const innerWidth = this.$refs.mInner.scrollWidth;
         const cards = this.mobileVideos.length;
-        this.cTranslation = `${innerWidth / cards / 4.5}px`;
+        this.cTranslation = `${innerWidth / cards / 4.65}px`;
         // this.$refs["video-player-1"].load();
         // this.$refs["video-player-1"].pause();
         this.innerMobileStyles = {
@@ -633,7 +645,7 @@ export default {
         setTimeout(() => {
           this.innerMobileStyles = {
             transition: "transform 0s",
-            translate: "0px",
+            translate: "0",
           };
           for (let i = 0; i < 1; i++) {
             let card = this.mobileVideos[i];
@@ -649,7 +661,7 @@ export default {
         console.log(this.videos);
         const innerWidth = this.$refs.mInner.scrollWidth;
         const cards = this.videos.length;
-        this.cTranslation = `${(innerWidth / cards) * 1.78}px`;
+        this.cTranslation = `${(innerWidth / cards) * 1.8}px`;
         this.innerMobileStyles = {
           transform: `translateX(+${this.cTranslation})`,
         };
@@ -740,6 +752,7 @@ section {
   overflow: hidden;
 }
 .play-button {
+  opacity: 0.6;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1021,7 +1034,7 @@ section {
     display: flex;
     align-items: center;
     background: $mainColor;
-    padding: 2rem calc(min(160px, 10vw));
+    padding: 2rem 0;
     justify-content: center;
     span {
       display: flex;
@@ -1659,22 +1672,25 @@ section {
   .footer {
     &.w-carousel {
       overflow-x: hidden;
-      padding: 2rem 5vw;
+      position: relative;
+      justify-content: center;
       .carousel {
         display: flex;
         justify-content: center;
         // justify-content: flex-start;
-        width: 100%;
+        width: 100vw;
+        box-sizing: border-box;
+        margin: 0 calc(min(160px, 10vw));
         overflow-x: hidden;
-        @media (max-width: 1280px) {
-          width: 75%;
-        }
+        border-radius: 10px;
+        // @media (max-width: 1280px) {
+        //   width: 75%;
+        // }
         .c-video-container {
           // translate: 125px;
           width: fit-content;
           display: flex;
           transition: transform 0.5s;
-          transform: translate(7vw);
           .video {
             overflow: visible;
           }
@@ -1683,51 +1699,80 @@ section {
           }
         }
       }
-      .c-ctrl {
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        cursor: pointer;
-      }
-      @media (max-width: 1280px) {
-        padding: 2rem 2vw;
-      }
+      // @media (max-width: 1280px) {
+      //   padding: 2rem 2vw;
+      // }
     }
   }
 }
 .c-arrow {
-  width: 50px;
-  height: 50px;
+  width: 5vw;
+  height: 12vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  transition: 0.2s;
+  transition: background 0.2s;
+  position: absolute;
+  z-index: 99;
   cursor: pointer;
+  &:hover {
+    transition: 0.5s;
+    svg {
+      opacity: 1;
+    }
+  }
   svg {
+    height: 20px;
+    width: 40px;
+    opacity: 0.7;
     path {
       stroke: white;
     }
   }
-  &:hover {
-    background-color: #483a5b;
-    svg {
-      path {
-        stroke: white;
-      }
-    }
-  }
 }
 .c-arrow-left {
-  transform: rotate(-90deg);
+  svg {
+    transform: rotate(-90deg);
+    margin-left: -20px;
+  }
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: calc(min(160px, 10vw));
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(192, 85, 75, 0) 100%
+  );
+  transition: 0.5s;
+  &:hover {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(192, 85, 75, 0) 100%
+    );
+  }
+  left: 0;
 }
 .c-arrow-right {
-  transform: rotate(90deg);
+  svg {
+    transform: rotate(90deg);
+  }
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: calc(min(160px, 10vw));
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  &:hover {
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(192, 85, 75, 0) 100%
+    );
+  }
+  right: 0;
 }
 .mobile-carousel-footer {
   display: flex;

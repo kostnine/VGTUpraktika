@@ -293,7 +293,7 @@ export default {
     background: white;
     width: 100%;
     padding: 15px 20px;
-    z-index: 99;
+    z-index: 999;
     box-shadow: 0px 1px 6px -2px rgba(0, 0, 0, 0.404);
     .header-navigation-bar {
       display: none;
