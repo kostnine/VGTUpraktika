@@ -130,12 +130,21 @@ export default {
       player: null,
       showPlayButton: this.isPlayButton,
       buttonType: "play",
+      playerLoading: true,
     };
   },
   mounted() {
     this.player = videojs(this.$refs.videoPlayer, this.options, () => {
       this.player.log("onPlayerReady", this);
     });
+    // this.player.on("ready", () => {
+    //   if (this.isLoading) {
+    //     if (this.playerLoading) {
+    //       this.playerLoading = false;
+    //     }
+    //   }
+    //   console.log("load");
+    // });
   },
   beforeDestroy() {
     if (this.player) {
@@ -261,11 +270,12 @@ video {
     bottom: 0;
     width: 12vw;
     height: 12vw;
-    max-width: 87px;
-    max-height: 87px;
+    max-width: 60px;
+    max-height: 60px;
     border-radius: 50%;
     border: none;
     background: #ffffffde;
+    opacity: 0.4;
     .vjs-icon-placeholder {
       &::before {
         display: flex;

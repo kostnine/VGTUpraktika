@@ -117,7 +117,7 @@
             <video-player
               :key="rerenderingVideo"
               :ref="`video-player-${index}`"
-              :isLoading="isLoadingVideo"
+              :isLoading="false"
               :options="{
                 autoplay: false,
                 controls: true,
@@ -437,16 +437,16 @@ export default {
       currentlyHoveringVideo: "",
       tempMainMessageVideo: {},
       mainMessageVideo: {
-        id: 0,
-        link: "videos/landingpage/Finland.mp4",
-        img: "images/messages_of_support/1.jpg",
+        id: 6,
+        link: "videos/landingpage/Stephan.mp4",
+        img: "images/messages_of_support/Stephan.jpg",
       },
       isLoadingNewVideo: false,
       videoStack: [
         {
-          id: 0,
-          link: "videos/landingpage/Finland.mp4",
-          img: "images/messages_of_support/1.jpg",
+          id: 6,
+          link: "videos/landingpage/Stephan.mp4",
+          img: "images/messages_of_support/Stephan.jpg",
         },
       ],
       footerVideos: [],
@@ -460,7 +460,7 @@ export default {
     };
   },
   mounted() {
-    this.footerVideos = this.videos.filter((el) => el.id != 0);
+    this.footerVideos = this.videos.filter((el) => el.id != 6);
     this.mobileVideos = this.videos;
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
