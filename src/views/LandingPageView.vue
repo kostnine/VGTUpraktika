@@ -96,20 +96,32 @@
           </div>
         </div>
       </div>
-      <div class="footer" v-if="this.windowWidth <= 768">
-        <div
-          class="video"
-          v-for="(video, index) in windowWidth < 768 ? videos : footerVideos"
-          :key="`bideo${index}`"
-          :class="{ loading: isLoadingNewVideo }"
-        >
-          <transition name="fade" mode="out-in">
+      <div class="mobile-carousel-footer" v-if="this.windowWidth <= 768">
+        <button class="mob-carousel-btn left" @click="moveMobileSlide(false)">
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M7.5 0.5L1.5 7L7.5 13.5" />
+          </svg>
+        </button>
+        <div class="mobile-carousel" ref="mInner" :style="innerMobileStyles">
+          <div
+            class="video"
+            v-for="(video, index) in mobileVideos"
+            :key="`mobile-video-${index}`"
+          >
             <video-player
-              v-if="windowWidth < 768"
-              :ref="`video-${index}`"
+              :key="rerenderingVideo"
+              :ref="`video-player-${index}`"
+              :isLoading="isLoadingVideo"
               :options="{
                 autoplay: false,
                 controls: true,
+                aspectRatio: '1:1',
                 sources: [
                   {
                     src: require(`@/assets/${video.link}`),
@@ -118,36 +130,19 @@
                 ],
               }"
             />
-            <img
-              v-else
-              :src="require(`@/assets/${video.img}`)"
-              :key="`v${video.id}`"
-              alt=""
-              @click="setMainMessageVideo(video, index)"
-            />
-          </transition>
-          <transition name="fade" mode="out-in">
-            <div
-              v-if="windowWidth >= 768"
-              :key="`v-img${video.id}`"
-              class="play-button"
-              @click="setMainMessageVideo(video, index)"
-            >
-              <svg
-                width="17"
-                height="20"
-                viewBox="0 0 17 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z"
-                  fill="#1E1826"
-                />
-              </svg>
-            </div>
-          </transition>
+          </div>
         </div>
+        <button class="mob-carousel-btn right" @click="moveMobileSlide(true)">
+          <svg
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 13.5L7 7L1 0.499999" />
+          </svg>
+        </button>
       </div>
       <div class="footer w-carousel" v-else>
         <div class="c-arrow-left c-arrow" @click="carouselMove(false)">
@@ -443,17 +438,22 @@ export default {
         },
       ],
       footerVideos: [],
+      mobileVideos: [],
       swiper: null,
       innerStyles: {},
       transitioning: false,
+      innerMobileStyles: {},
+      rerenderingVideo: 0,
+      isLoadingVideo: false,
     };
   },
   mounted() {
     this.footerVideos = this.videos.filter((el) => el.id != 0);
+    this.mobileVideos = this.videos;
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
     });
-    this.setStep();
+    // this.setStep();
   },
   computed: {
     isMobile() {
@@ -481,6 +481,14 @@ export default {
             oldVideo.controls = "";
           }
         }
+      }
+    },
+    rerenderingVideo: function (newVal, oldVal) {
+      if (newVal != oldVal) {
+        this.isLoadingVideo = true;
+        setTimeout(() => {
+          this.isLoadingVideo = false;
+        }, 500);
       }
     },
   },
@@ -545,7 +553,6 @@ export default {
     },
     onResize() {
       this.windowWidth = window.innerWidth;
-      console.log(this.windowWidth);
     },
     carouselMove(isForward) {
       if (this.transitioning) return;
@@ -609,52 +616,56 @@ export default {
       const cards = this.footerVideos.length;
       this.cTranslation = `${innerWidth / cards}px`;
     },
-    next() {
+
+    moveMobileSlide(isForward) {
       if (this.transitioning) return;
       this.transitioning = true;
-      this.moveLeft();
-      this.afterTransition(() => {
-        const card = this.footerVideos.shift();
-        this.footerVideos.push(card);
-        this.resetTranslate();
-        this.transitioning = false;
-      });
-    },
-    prev() {
-      if (this.transitioning) return;
-      this.transitioning = true;
-      this.moveRight();
-      this.afterTransition(() => {
-        const card = this.footerVideos.pop();
-        this.footerVideos.unshift(card);
-        this.resetTranslate();
-        this.transitioning = false;
-      });
-    },
-    afterTransition(callback) {
-      const listener = () => {
-        callback();
-        this.$refs.inner.removeEventListener("transitionend", listener);
-      };
-      this.$refs.inner.addEventListener("transitionend", listener);
-    },
-    resetTranslate() {
-      this.innerStyles = {
-        transition: "none",
-        transform: `translateX(-${this.cTranslation})`,
-      };
-    },
-    moveLeft() {
-      this.innerStyles = {
-        transform: `translateX(-${this.cTranslation})
-                    translateX(-${this.cTranslation})`,
-      };
-    },
-    moveRight() {
-      this.innerStyles = {
-        transform: `translateX(${this.step})
-                    translateX(-${this.step})`,
-      };
+      if (isForward) {
+        console.log(this.mobileVideos);
+        const innerWidth = this.$refs.mInner.scrollWidth;
+        const cards = this.mobileVideos.length;
+        this.cTranslation = `${innerWidth / cards / 4.5}px`;
+        // this.$refs["video-player-1"].load();
+        // this.$refs["video-player-1"].pause();
+        this.innerMobileStyles = {
+          transform: `translateX(-${this.cTranslation})`,
+        };
+        setTimeout(() => {
+          this.innerMobileStyles = {
+            transition: "transform 0s",
+            translate: "0px",
+          };
+          for (let i = 0; i < 1; i++) {
+            let card = this.mobileVideos[i];
+            console.log(card);
+            this.mobileVideos.push(card);
+            this.mobileVideos.shift();
+            console.log(this.$refs.mInner.parentElement);
+          }
+          this.transitioning = false;
+          this.rerenderingVideo += 1;
+        }, 500);
+      } else {
+        console.log(this.videos);
+        const innerWidth = this.$refs.mInner.scrollWidth;
+        const cards = this.videos.length;
+        this.cTranslation = `${(innerWidth / cards) * 1.78}px`;
+        this.innerMobileStyles = {
+          transform: `translateX(+${this.cTranslation})`,
+        };
+        setTimeout(() => {
+          this.innerMobileStyles = {
+            transition: "transform 0s",
+            translate: "0px",
+          };
+          for (let i = 0; i < 1; i++) {
+            let card = this.mobileVideos.pop();
+            this.mobileVideos.unshift(card);
+          }
+          this.transitioning = false;
+          this.rerenderingVideo += 1;
+        }, 500);
+      }
     },
   },
 };
@@ -1717,5 +1728,57 @@ section {
 }
 .c-arrow-right {
   transform: rotate(90deg);
+}
+.mobile-carousel-footer {
+  display: flex;
+  min-height: 50vw;
+  justify-content: flex-end;
+  overflow: visible;
+  background: #c0554b;
+  padding: 25px 0;
+  position: relative;
+  .mob-carousel-btn {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    height: 100%;
+    border: none;
+    width: 10vw;
+    svg {
+      height: 25px;
+      width: 13px;
+      stroke: white;
+      opacity: 0.5;
+    }
+    &.left {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(192, 85, 75, 0) 100%
+      );
+    }
+    &.right {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(192, 85, 75, 0) 100%
+      );
+    }
+  }
+  .mobile-carousel {
+    display: flex;
+    transform: translate(51vw);
+    width: fit-content;
+    transition: transform 0.5s;
+    @media (max-width: 450px) {
+      transform: translate(55vw);
+    }
+  }
+  .video {
+    height: 60vw;
+    width: 60vw;
+  }
 }
 </style>
