@@ -368,7 +368,7 @@
               <tr>
                 <th>Name</th>
                 <th>Provider</th>
-                <th>Purpose</th>
+                <th class="purpose">Purpose</th>
                 <th>Period of validity</th>
               </tr>
               <tr>
@@ -414,7 +414,7 @@
               <tr>
                 <th>Name</th>
                 <th>Provider</th>
-                <th>Purpose</th>
+                <th class="purpose">Purpose</th>
                 <th>Period of validity</th>
               </tr>
               <tr>
@@ -770,12 +770,7 @@ a {
         }
         &:first-child {
           th {
-            &:first-child {
-              min-width: 150px;
-              width: 150px;
-              max-width: 150px;
-            }
-            &:last-child {
+            &:not(.purpose) {
               min-width: 150px;
               width: 150px;
               max-width: 150px;

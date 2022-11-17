@@ -346,6 +346,11 @@ export default {
           img: "images/messages_of_support/Lithuania_1.jpg",
         },
         {
+          id: 10,
+          link: "videos/landingpage/Finian.mp4",
+          img: "images/messages_of_support/Finian.png",
+        },
+        {
           id: 5,
           link: "videos/landingpage/Lithuania2.mp4",
           img: "images/messages_of_support/Lithuania_2.jpg",
@@ -369,6 +374,11 @@ export default {
           id: 9,
           link: "videos/landingpage/Sweden.mp4",
           img: "images/messages_of_support/Sweden.png",
+        },
+        {
+          id: 9,
+          link: "videos/landingpage/Ireland.mp4",
+          img: "images/messages_of_support/Ireland.png",
         },
       ],
       supporters: [
