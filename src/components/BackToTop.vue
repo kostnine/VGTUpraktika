@@ -5,6 +5,9 @@
       id="go-to-top"
       v-if="windowScrollTop >= 250"
       @click="scrollToTop"
+      :style="{
+        bottom: `${this.gapFromFooter}`,
+      }"
     >
       <svg
         width="24"
@@ -21,9 +24,28 @@
 
 <script>
 export default {
+  data() {
+    return {
+      gapFromFooter: 0,
+      fixedArrow: "",
+    };
+  },
   methods: {
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+  },
+  watch: {
+    windowScrollTop: function (newVal) {
+      console.log(newVal);
+      const footer = document
+        .querySelector(".footer-container")
+        .getBoundingClientRect();
+      if (window.innerHeight > footer.y) {
+        this.gapFromFooter = `${window.innerHeight - footer.y + 15}px`;
+      } else {
+        this.gapFromFooter = `${30}px`;
+      }
     },
   },
 };
