@@ -3,7 +3,7 @@
     <div class="footer-image-container">
       <div class="image-with-under-text">
         <img src="@/assets/logo.svg" alt="logo" />
-        <span>18th November 2022</span>
+        <span>17th November 2023</span>
       </div>
     </div>
     <div class="footer-main-container">
@@ -16,7 +16,7 @@
           >E-Mail: <a href="mailto:info@eurofsa.org">info@eurofsa.org</a></span
         >
         <span class="bottom-rights"
-          >All content © 2022 European smoke alarm day campaign</span
+          >All content © 2023 European smoke alarm day campaign</span
         >
       </div>
     </div>

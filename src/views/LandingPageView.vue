@@ -4,7 +4,7 @@
       <div class="text">
         <h1 class="primary">European</h1>
         <h1><strong>Smoke Alarm</strong> Day</h1>
-        <h2>18th November 2022</h2>
+        <h2>17th November 2023</h2>
         <span class="hashtag">#smokealarmssavelives</span>
         <span class="under-hashtag"
           >This Campaign is part of European Fire Safety Week</span
