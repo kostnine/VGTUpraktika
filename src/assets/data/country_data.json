@@ -724,9 +724,20 @@
     "fill": "#C0554B",
     "content": [
       {
-        "text": "<span>There are <span class='semibold'>no known smoke alarm regulations</span> in this region.<br/><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or local<br>government website in the first instance.<br><p></p><span class='semibold'>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+        "text": "<span>In residential buildings with a conditioned size ranging from 26.5 m to 100 m, including premises such as apartments, autonomous fire detectors are installed. </br>The exception to this rule applies only to sanitary-hygienic premises. These installed fire detectors must meet the requirements outlined in DSTU EN-14604.</span>",
         "links":[
-        ]
+          {
+            "link_title": "The portal of the state electronic system in the field of construction:",
+            "link_url": "https://e-construction.gov.ua/laws_detail/3019199246864746128?doc_type=2",
+            "link_name": "State electronic system"
+          },
+          {
+            "link_title": "DBN V.2.5-56:2014 Fire protection systems:",
+            "link_url": "https://e-construction.gov.ua/files/new_doc/3019199246864746128/2023-01-19/78b74be7-1707-44fe-a42a-fdaeef434f8f.pdf",
+            "link_name": "DBN V.2.5-56:2014"
+          }
+        ],
+        "gap_size": "19px"
       }
     ]
   },
