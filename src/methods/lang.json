@@ -1,0 +1,1601 @@
+{
+  "home.european": {
+    "EN": "European",
+    "CZ": "Evropský"
+  },
+  "home.smoke_day": {
+    "EN": "<strong>Smoke Alarm</strong> Day",
+    "CZ": "Den <strong>detektorů požárů</strong>"
+  },
+  "home.main_date": {
+    "EN": "17th November 2023",
+    "CZ": "17. listopad 2023"
+  },
+  "home.campaign": {
+    "EN": "This Campaign is part of European Fire Safety Week",
+    "CZ": "Tato kampaň je součástí Evropského týdne požární bepečnosti"
+  },
+  "home.support": {
+    "EN": "Messages of Support",
+    "CZ": "Zprávy podpory"
+  },
+  "home.fire_officers": {
+    "EN": "Fire officers all over Europe support <span class='semibold'>#smokealarmsaveslives</span> campaign.",
+    "CZ": "Hasiči z celé Evropy podporují kampaň <span class='semibold'>#smokealarmsaveslives</span>"
+  },
+  "home.find_more": {
+    "EN": "Find Out More About Smoke Alarms",
+    "CZ": "Zjistěte více o detektorech požárů"
+  },
+  "home.regulations": {
+    "EN": "Regulations for Smoke Alarms in Europe",
+    "CZ": "Předpisy pro detektory požárů v Evropě"
+  },
+  "home.supported_by": {
+    "EN": "This Campaign is Supported by",
+    "CZ": "Kampaň je podporována"
+  },
+  "home.information": {
+    "EN": "Information You Need to Know About Smoke Alarms",
+    "CZ": "Informace, které potřbujete vědět o detektorech požárů"
+  },
+  "home.click_and_find": {
+    "EN": "Click and find out more!",
+    "CZ": "Klikněte a zjistěte více"
+  },
+  "home.about": {
+    "EN": "About",
+    "CZ": "O"
+  },
+  "home.where_to_place": {
+    "EN": "Where to place",
+    "CZ": "Kam umístit"
+  },
+  "home.smoke_alarms": {
+    "EN": "Smoke Alarms",
+    "CZ": "Detektory požárů"
+  },
+  "home.maintain": {
+    "EN": "How to Maintain",
+    "CZ": "Jak udržovat"
+  },
+  "home.join_project": {
+    "EN": "Want to join the project? Contact us!",
+    "CZ": "Chcete se připojitk projektu? Kontaktujte nás!"
+  },
+  "home.reserved": {
+    "EN": "All content © 2023 European smoke alarm day campaign",
+    "CZ": "Veškerý obsah © 2023 Kampaň k Evropskému dni detektorů požárů"
+  },
+  "home.cookies": {
+    "EN": "Cookies used on this website",
+    "CZ": "Cookies použité pro tento web"
+  },
+
+  "home.cookies_big": {
+    "EN": "Our website uses cookies to optimize and develop our activities, as well as to improve and analyze the visitor experience. By allowing all cookies, you allow us to provide you with the best browsing experience. Certain cookies are necessary for the proper functioning of our website and to enable you to use its features.",
+    "CZ": "Naše webové stránky používají soubory cookie k optimalizaci a rozvoji našich aktivit, jakož i ke zlepšení a analýze návštěvnické zkušenosti. Povolením všech souborů cookie nám umožňujete poskytovat vám nejlepší zážitek z prohlížení. Některé soubory cookie jsou nezbytné pro správné fungování našeho webu a pro to, abyste mohli používat jeho funkce."
+  },
+  "home.more_info": {
+    "EN": "For more information about cookies and how we use them, please visit",
+    "CZ": "Pro Více informací k souborům cookie a k tomu, jak je využíváme, navštivte "
+  },
+  "home.privacy_policy": {
+    "EN": "Privacy policy >",
+    "CZ": "Zásady ochrany osobních údajů >"
+  },
+  "home.allow_cookies": {
+    "EN": "Allow all cookies",
+    "CZ": "Povolit všechny souboy cookie"
+  },
+  "home.manage_choices": {
+    "EN": "Manage choices >",
+    "CZ": "Spravovat možnosti >"
+  },
+  "header.home": {
+    "EN": "Home",
+    "CZ": "Domů"
+  },
+  "header.regulations": {
+    "EN": "Regulations in Europe",
+    "CZ": "Evropské předpisy"
+  },
+  "header.sm_info": {
+    "EN": "Smoke Alarm Information",
+    "CZ": "Informace o detektorech požárů"
+  },
+  "header.important_facts": {
+    "EN": "Important Facts",
+    "CZ": "Důležité informace"
+  },
+  "header.practices": {
+    "EN": "Best practices",
+    "CZ": "Zkušenosti"
+  },
+  "header.about": {
+    "EN": "About Smoke Alarms",
+    "CZ": "O detektorech požárů"
+  },
+  "header.where": {
+    "EN": "Where To Place Smoke Alarms",
+    "CZ": "Kam Umístit Detektory Požárů"
+  },
+  "header.maintain": {
+    "EN": "How to Maintain Smoke Alarms",
+    "CZ": "Jak Udržovat Detektory Požárů"
+  },
+  "reg.check_map": {
+    "EN": "Check out the interactive map to find out more about regulations on smoke alarms in domestic properties in different European countries.",
+    "CZ": "Z interaktivní mapy zjístíte požadavky jednotlivých států na instalaci detektorů požárů v domácnostech"
+  },
+  "reg.map": {
+    "EN": "Map of Europe",
+    "CZ": "Mapa Evropy"
+  },
+  "reg.requirements": {
+    "EN": "Smoke alarm requirements",
+    "CZ": "Požadavky na detektory požárů"
+  },
+  "reg.see_reqs": {
+    "EN": "Click on the map and see what the requirements in each country are.",
+    "CZ": "Klikněte na místo v mapě a zjistěte požadavky v jednotlivých zemích"
+  },
+  "reg.multiple": {
+    "EN": "Multiple alarms per property",
+    "CZ": "Více než jeden detektor požáru na domácnost"
+  },
+  "reg.atleast_one": {
+    "EN": "At least one alarm per property",
+    "CZ": "Alepoň jeden detektor požáru na domácnost"
+  },
+  "reg.no_req": {
+    "EN": "No alarm requirement",
+    "CZ": "Bez požadavku na vybavení domácnosti detektory požáru"
+  },
+  "reg.select": {
+    "EN": "Select a country",
+    "CZ": "Zvolte stát"
+  },
+  "reg.info": {
+    "EN": "Information",
+    "CZ": "Informace"
+  },
+  "reg.extensive": {
+    "EN": "Extensive smoke alarm legislation in multiple countries",
+    "CZ": "Mnoho zemí má rozsáhlou legislativu ohledně hlásičů kouře"
+  },
+  "reg.no_south": {
+    "EN": "No legislation in Southern / Eastern Europe",
+    "CZ": "V jižní / východní Evropě neexistuje legislativa upravující instalaci detektorů požárů v domácnostech"
+  },
+  "reg.consumer": {
+    "EN": "Consumer awareness is found to be the most important influence in the decision to buy a smoke alarm, even without legislation or when legislation is limited.",
+    "CZ": "Nejdůležitějším faktorem pro rozhodnutí pořídit si detektor požáru je informovaný spotřebitel, a to i v případě chybějící nebo nedostatečné legislativy. "
+  },
+  "reg.E_OE": {
+    "EN": "E&OE – While we have made every effort to ensure the information provided is correct and up to date, we accept that there maybe errors and welcome updates. Corrections and contributions to improve accuracy or additional detail.",
+    "CZ": "Vynaložili jsme veškeré úsilí, abychom zajistili správné a aktulní informace. I přes to se na těchto stránkách mohou objevit nevhodné formulace nebo chyby. Budeme rádi za každou připomínku ke zlepšení stránek. "
+  },
+  "types.which": {
+    "EN": "Which smoke alarm is the best for you?<br> Let's find out!",
+    "CZ": "Jakýdetektor požáru je pro vás nejlepší?<br> Pojďme to zjistit!"
+  },
+  "types.learn_more": {
+    "EN": "Learn More",
+    "CZ": "Další informace"
+  },
+  "types.how_to_choose": {
+    "EN": "How to Choose Your Smoke Alarm?",
+    "CZ": "Jak vybrat správný detektor požáru"
+  },
+  "types.certified": {
+    "EN": "All smoke alarms placed on the EU market must be third party certified to <strong class='semibold'>EN14604</strong> and <strong class='semibold'>CE marked</strong> to conform with the Construction Products Directive.",
+    "CZ": "Detektory požárů uváděné na trh v EU musí být certifikovány podle <strong class='semibold'>EN14604</strong> a <strong class='semibold'>označeny CE</strong> "
+  },
+  "types.battery": {
+    "EN": "When you buy a smoke alarm, please pay attention to <span class='semibold'>the battery lifetime</span> of the product.",
+    "CZ": "Při nákupu detektoru požáru věnujte zvýšenou pozornost životnosti baterie."
+  },
+  "types.replacable": {
+    "EN": "Smoke alarms can have a replaceable battery with a lifetime of 1 up to 5 years. When the battery is empty you need to replace it, after ten years of usage you need to replace the smoke alarm as well.",
+    "CZ": "Životnost baterie u detektorů požárů s vyměnitelnou baterií se pohybuje od 1 do 5 let. Jamile je baterie vybitá, je nutné ji vyměnit. Po deseti letech je nutné vyměnit celý detektor požáru. "
+  },
+  "types.lifetime": {
+    "EN": "This is why smoke alarms with a sealed 10 year lifetime battery are the better option. Calculated over these ten years it is the best priced option because you do not need to replace the battery. You also do not run the risk of using the alarm for more than ten years.",
+    "CZ": "Z tohoto důvodu jsou lepší volbou detektory požáru s nevyměnitelnou baterií s garancí 10 let životnosti. Vyšší náklady spojené s pořízením takových detektorů se vrátí v průběhu 10 let, kdy nebude nutné měnit baterie. Po 10 letech je pak nutné vyměnit z důvodu životnosti každý detektor. "
+  },
+  "types.interconnected": {
+    "EN": "Another option is choosing a smoke alarm which is <span class='semibold'>interconnected</span>, this means if 1 smoke alarm detects smoke, they all go off.",
+    "CZ": "Další možností je pořízení vzájemně propojených detektorů požárů. Jakmile detekuje požár jeden detektor, alarm se spustí u všech. "
+  },
+  "types.wireless_int": {
+    "EN": "You can choose <span class='semibold'>wireless interconnected smoke alarms or mains connected smoke alarms.</span>",
+    "CZ": "Je možné mít bezdrátově propojené detektory požáru nebo síťově propjené detektory požáru. "
+  },
+  "types.linked": {
+    "EN": "Linked Smoke Alarm(s)",
+    "CZ": "Propojený detektor požáru"
+  },
+  "types.property": {
+    "EN": "In any property where multiple Smoke Alarms are deemed necessary, it is recommended to interconnect the alarms",
+    "CZ": "Pokud je v objektu instalováno více detektorů požárů, je vhodné je mezi sebou propojit. "
+  },
+  "types.all_alarms": {
+    "EN": "All alarms will sound once any one of them detects smoke. This provides earlier warning and improves escape time.",
+    "CZ": "Jakmile detekuje požár jeden detektor, všechny instalované detektory signalizují požár. Dříve tak upozorní na vznikající požár a poskytne delší čas pro evakuaci. "
+  },
+  "types.hardwired": {
+    "EN": "Interconnect can be hardwired or use radio linked signals depending on your property and the technology used.",
+    "CZ": "V návaznosti na místo instalace a zvolenou technologii je ožné použít drátové nebo bezdrátové propojení detektorů mezi sebou. "
+  },
+  "types.multiple_storey": {
+    "EN": "It is especially useful in multiple storey properties or where the sleeping zones are distant from the living areas where the fire risk may be higher.",
+    "CZ": "Doporučujeme využít zejména tam, kde jsou spací zóny velmi vzdálené od obytných zón s vyšší mírou požárního rizika."
+  },
+  "place.where": {
+    "EN": "Where to Place <br>Smoke Alarms?",
+    "CZ": "Kam umístit <br>Detektory požárů?"
+  },
+  "place.protect": {
+    "EN": "Protect yourself and your family with the right number and correct placement of smoke alarms.",
+    "CZ": "Chraňte sebe a svou rodinu dostatečným počtem detektorů požárů a jejich správným umístěním."
+  },
+  "place.learn_more": {
+    "EN": "Learn More About Locations",
+    "CZ": "Další informace o umístění"
+  },
+  "place.where_exactly": {
+    "EN": "Where Exactly Should",
+    "CZ": "Kde přesně by měly být"
+  },
+  "place.smoke_alarms_installed": {
+    "EN": "Smoke Alarms Be Installed?",
+    "CZ": "Je hlásič kouře nainstalován?"
+  },
+  "place.the_placement": {
+    "EN": "The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.",
+    "CZ": "Vhodné umístění detektoru požáru je nezbytné pro jehi správnou funkci. V případě správného umístění bude Vás i Vaši rodinu včas varovat před nebezpečím."
+  },
+  "place.although": {
+    "EN": "Although regulations differ slightly from country to country, this page provides some general guidelines on where to install smoke alarms.",
+    "CZ": "Ačkoli se předpisy v jednotlivých zemích mohou mírně lišit, na této stránce najdete několik obecných pokynů pro instalaci detektorů požárů. "
+  },
+  "place.according": {
+    "EN": "According to the recommendations of various European fire protection organisations and associations, <span class='semibold'>there should be at least 1 smoke alarm on every floor</span> (including the basements) of every home. In addition, it can be a requirement to place alarms in all bedrooms (especially children's rooms) and in rooms that are part of an escape route (e.g. hall, corridor).",
+    "CZ": "Organizace zabývající se požární bezpečností v Evropě doporučují instalaci alespoň jednoho detektoru požáru na každém patře domácnosti včetně sklepa. Dále doporučují umístění detektoru požáru ve všech místnostech určených ke spánku (speciálně v dětských ložnicích) a na únikových cestách (např. předsíň, chodba). "
+  },
+  "place.note": {
+    "EN": "Note",
+    "CZ": "Poznámka"
+  },
+  "place.apartaments": {
+    "EN": "In apartments, of course, every corridor is also an escape route. In some houses there are also corridors that do not serve as an exit in case of fire. We recommend installing smoke alarms here especially if there are sleeping quarters.",
+    "CZ": "V bytech je samozřejmě každá chodba také únikovou cestou. V některých domech jsou i chodby, které neslouží jako únikové cesty v případě požáru. Zde doporučujeme instalovat hlásiče kouře, zejména pokud se zde nachází prostory pro spaní."
+  },
+  "place.also_recommend": {
+    "EN": "We also recommend that <span class='semibold'>living rooms and study rooms</span> should always be equipped with alarms and that these alarms be connected to those in the sleeping areas.",
+    "CZ": "We also recommend that living rooms and study rooms should always be equipped with alarms and that these alarms be connected to those in the sleeping areas."
+  },
+  "place.makes_sense": {
+    "EN": "It also makes sense to install an alarm in rooms where <span class='semibold'>there are electrical appliances</span> (especially washing machines and dryers) and <span class='semibold'>in remote rooms</span> that are frequently used but where the signal from other smoke alarms cannot be heard.",
+    "CZ": "Smysluplné je také instalovat alarm v místnostech, kde jsou elektrické spotřebiče (zejména pračky a sušičky) a ve vzdálených místnostech , které jsou často používané, ale kde není slyšet signál z jiných hlásičů kouře."
+  },
+  "place.in_general": {
+    "EN": "In general, you should remember that <span class='semibold'>a smoke detector can monitor an area of up to 60 m²</span>. If your room area is larger than 60 m², you should install an additional smoke alarm. So depending on the size of your home, this means that <span class='semibold'>you will need several smoke alarms</span>. In corridors or escape routes an alarm should be positioned every 7.5 m.",
+    "CZ": "Obecně platí, že jeden deteltor požáru může střežit plochu maximálně 60 m². Pokud je plocha vaší místnosti větší než 60 m², měli byste nainstalovat další detektor požáru. V závislosti na velikosti vašeho domova to znamená, že budete potřebovat několik detektorů požárů. Na chodbách nebo únikových cestách by měl být detektor umístěn každých 7,5 m."
+  },
+  "place.before_installing": {
+    "EN": "Before installing your smoke alarms, please <strong>check country-specific regulations</strong> or seek advice from a local fire safety expert.",
+    "CZ": "Před instalací detektoirů požárů si ověřte platné předpisy v dané zemi nebo požádejte o radu odborníka na požární bezpečnost."
+  },
+  "place.location_req": {
+    "EN": "Location requirements for smoke and heat alarms according to the room of the house.",
+    "CZ": "Požadavky na umístění kouřových a teplotních detektorů požárů v závislosti na jejich umístění v domácnosti. "
+  },
+  "place.minimum_prot": {
+    "EN": "Minimum protection",
+    "CZ": "Minimální varianta umístění"
+  },
+  "place.additional_prot": {
+    "EN": "Additional recommended protection",
+    "CZ": "Doporučená varianta umístění "
+  },
+  "place.heat_detector": {
+    "EN": "Recommended heat detector",
+    "CZ": "Doporučená varianta - instalace teplotního detektoru požáru"
+  },
+  "place.no_alarm": {
+    "EN": "No alarm",
+    "CZ": "Bez instalace detektoru požáru"
+  },
+  "place.what_to_consider": {
+    "EN": "What to Consider for the Installation Location?",
+    "CZ": "Co je třeba vzít v úvahu při výběru místa pro instalaci? "
+  },
+  "place.determined": {
+    "EN": "Now that we have determined which rooms / areas should be equipped with detectors, the next question is <span class='semibold'>where in the room it should be installed.</span>",
+    "CZ": "Když je jasné, ve kterých prostorách mají být detektory požárů umístěny, je nutné určit, kde v místnosti mají být instalovány. "
+  },
+  "place.many_european": {
+    "EN": "In many European countries, legislation specifies or refers to a building code. Generally, the installation location must prioritise early detection of fire smoke and a sound level sufficient to wake all sleeping occupants on the property. Usually this will require multiple alarms per property.",
+    "CZ": "Obecně platí, že místo instalace musí umožňovat včasnou detekci projevů požárů (kouře) a zároveň zvukový signál musí být dosatečně silny, aby probudil spísí osoby v domácnosti. Obvykle je proto potřeba instalovat v domácnosti více detektorů. "
+  },
+  "place.addition": {
+    "EN": "In addition, there are also specifications on room sizes and living areas which may be different from country to country. Your local fire protection expert will be able to advise you on this.",
+    "CZ": "Navíc v různých zemích mohou být různé požadavky na maximální plochu střeženou detektory. Je proto vhodné se obrátit na odborníka v požární ochraně. "
+  },
+  "place.installation_room": {
+    "EN": "Installation in the Room",
+    "CZ": "Instalace v místnosti"
+  },
+  "place.smoke_rises": {
+    "EN": "As smoke rises, it is always preferable to <span class='semibold'>position alarms on the ceiling</span> to ensure the fastest possible detection. If this is not possible then wall mounting is allowed by some manufacturers. Always <span class='semibold'>read the user manual</span> before starting the installation.",
+    "CZ": "Kouř stoupá vzhůru, nejvhodnější je proto z důvodu rychlého zjištění požáru umístit detektory na strop. Pokud to není možné, vyberte takové detektory, u kterých výrobce umožňuje jejich instalaci na stěnu. Vždy postupujte dle návodu výrobce. "
+  },
+  "place.rawlplug": {
+    "EN": "<span class='semibold'>Use the screws and rawlplugs provided with the alarm</span> to ensure a solid, secure fixing that will last for the 10 year life of the product.",
+    "CZ": "Používejte šrouby a hmoždinky dodané výrobcem zařízení, aby bylo zajištěno pevné a bezpečné upevnění po dobu alespoň 10 let životnosti detektoru."
+  },
+  "place.centrally": {
+    "EN": "Smoke alarms should be placed centrally in the room, <span class='semibold'>at least 50 cm away from walls</span> to avoid dead air zones. Avoid objects such as lamps and other ceiling-mounted fixtures which may generate air currents that could deflect the smoke away from the alarm. <span class='semibold'>Do not install them near windows, doors, or ducts where drafts might interfere with their operation.</span>",
+    "CZ": "Ideální je umístit detektory požáru uprostřed střežené místnosti, nejméně 50 cm od stěn. Vyhněte se místům v blízkosti svítidel, které mohou vytvářet proudy vzduchu, jež odkloní kouř od detektoru. Neinstalujte detektory v blízkosti oken, dveří nebo potrubí, kde by mohl průvan narušit jejich spránou funkci. "
+  },
+  "place.basement": {
+    "EN": "Smoke <span class='semibold'>alarms installed in the basement</span> should be installed on the ceiling at the bottom of the stairs leading to the next level.",
+    "CZ": "Detektory požáru umístěné v suterénu by měly být instalovány na stropě spodní části schodiště vedoucího do dalšího patra."
+  },
+  "place.never_paint": {
+    "EN": "Never paint smoke alarms.",
+    "CZ": "Nikdy kouřové hlásiče nenatírejte"
+  },
+  "place.paint": {
+    "EN": "Paint, stickers, or other decorations could keep the alarms from working.",
+    "CZ": "Barvy, nálepky nebo jiné dekorace by mohly zabránit správné funkci detetorů. "
+  },
+  "place.siting": {
+    "EN": "Siting and Locations of Smoke Alarms",
+    "CZ": "Místa a umístění detektorů požárů"
+  },
+  "place.smoke": {
+    "EN": "Smoke, Heat and Fire Alarms",
+    "CZ": "Kouřové a teplotní detektory požárů. "
+  },
+  "place.ceiling": {
+    "EN": "Ceiling mount in central position.",
+    "CZ": "Umístění na stropě ve středu místnosti. "
+  },
+  "place.300_mm": {
+    "EN": "Site at least 300 mm from walls and obstructions (e.g. light pendant – where 300 mm cannot be achieved move closer to the pendant).",
+    "CZ": "Umístěte detektory alespoň 300 mm od stěn a jiných překážek."
+  },
+  "place.point": {
+    "EN": "Smoke alarms – max 7.5 m from any point in the area.",
+    "CZ": "Kouřové detektory požáru – umístění max. 7,5 m od libovolného místa v prostoru. "
+  },
+  "place.heat_alarms": {
+    "EN": "Heat alarms – max 5 m from any point in the area.",
+    "CZ": "Teplotní hlásiče – umístění max. 5 m od libovolného místa v prostoru."
+  },
+  "place.risk_areas": {
+    "EN": "Site alarm between risk areas (kitchen and lounge) and bedrooms.",
+    "CZ": "Umístění detektoru mezi rizikovými prostory (kuchyně a obývací pokoj) a ložnicí. "
+  },
+  "place.bedroom": {
+    "EN": "Site alarms max 3 m from any bedroom door.",
+    "CZ": "Umístění detektoru max. 3 m od jakýchkoli dveří do ložnice."
+  },
+  "maintain.how": {
+    "EN": "How to Maintain<br> Smoke Alarms",
+    "CZ": "Jak udržovat <br>detektory požárů?"
+  },
+  "maintain.important": {
+    "EN": "It is important that all smoke alarms in your home are working. Learn how to maintain them properly!",
+    "CZ": "Velmi důležité je, aby v domácnosti fungovaly všechny detektory požárů. "
+  },
+  "maintain.maintenance": {
+    "EN": "Learn More About Maintenance",
+    "CZ": "Zjistětě více o údržbě"
+  },
+  "maintain.how_to_maintain": {
+    "EN": "How to Maintain Smoke Alarms?",
+    "CZ": "Jak udržovat detektory požárů?"
+  },
+  "maintain.test": {
+    "EN": "It is important to test and clean your smoke alarm on a regular basis",
+    "CZ": "Nastavte si pravidelné testování a údržbu detektorů požárů"
+  },
+  "maintain.clean": {
+    "EN": "We advise to test the smoke alarm on a fixed date every month and to clean the smoke alarm every 6 months.",
+    "CZ": "Doporučujeme testovat detektory požárů každý měsíc a čistit je každých 6 měsíců. "
+  },
+  "maintain.vacuum": {
+    "EN": "Cleaning can be done by vacuum cleaning the part of the smoke alarm that has the opening for smoke, this is often the side of the alarm, to avoid dust building up inside the alarm.",
+    "CZ": "Čištění lze provést pomocí vysavače vysáváním nasávacích otvorů detektorů požárů. "
+  },
+  "maintain.holes": {
+    "EN": "The holes on top of the alarm are most often the sound output. It is also advised to clean the smoke alarm with a moist cloth.",
+    "CZ": "V horní části detektoru jsou také otvory zvukové signalizace. Doporučujeme je pravidelně čistit vlhkým hadříkem."
+  },
+  "maintain.false": {
+    "EN": "A smoke alarm that is not cleaned could cause false alarms",
+    "CZ": "Zaprášený detektor požáru může signalizovat falešný poplach."
+  },
+  "maintain.lifetime": {
+    "EN": "Smoke alarms have a normal working lifetime of 10 years, after this period the functionality of the smoke alarm can no longer be guaranteed.",
+    "CZ": "Běžná životnost detektorů požáru je 10 let. Po této době není správná funkce detektoru garantována."
+  },
+  "maintain.optical": {
+    "EN": "Inside the smoke alarm an optical smoke chamber can detect smoke, as the visual shows.",
+    "CZ": "Uvnitř detektoru požáru je opticko-kouřová komora, která detekuje kouř. "
+  },
+  "maintain.dust": {
+    "EN": "When dust or other pollution builds up inside the smoke alarm, the working of the alarm is compromised and the alarm should be replaced.",
+    "CZ": "Když se uvnitř detektoru požáru nahromadí prach nebo jiné znečištění, je narušena činnost detektoru a hlásič je nutné vyměnit."
+  },
+  "maintain.chosen": {
+    "EN": "If you have chosen smoke alarms with a battery that needs to be replaced",
+    "CZ": "Pokud jste zvolili detektory požárů s vyměnitelnou baterií"
+  },
+  "maintain.replace": {
+    "EN": "Please replace the battery on a fixed date every year or mark in your calendar when the battery must be replaced.",
+    "CZ": "Vyznačte si v kalendáři jednou za rok pevné datum, kdy vyměníte baterie."
+  },
+  "maintain.audible": {
+    "EN": "All smoke alarms will give an audible warning when the battery runs lows which will sound for 30 days or until the battery is replaced.",
+    "CZ": "Všechny detektory požárů akusticky upozorní na dosluhující baterie. Akustický signál se ozývá po dobu 30 dní až do výměny baterií. "
+  },
+  "facts.facts": {
+    "EN": "Important facts",
+    "CZ": "Důležité informace"
+  },
+  "facts.surprising": {
+    "EN": "Some surprising facts that you may not know!",
+    "CZ": "Několik důležitých informací, které možná neznáte!"
+  },
+  "facts.read_more": {
+    "EN": "Read more",
+    "CZ": "Přečtěte si více"
+  },
+  "facts.benefit": {
+    "EN": "Smoke Alarms Have One Major Benefit – They Save Lives!",
+    "CZ": "Proč instalovat detektory požáru - zachraňují životy!"
+  },
+  "facts.Dyk": {
+    "EN": "Did you know?",
+    "CZ": "Věděli jste že?"
+  },
+  "facts.installing": {
+    "EN": "By installing a smoke alarm, you reduce the chances of a fire occurring in your house by 75 percent.",
+    "CZ": "Instalací detektoru požáru ve vaši domácnosti snížíte pravděpodobnost požáru o 75 procent."
+  },
+  "facts.less_likely": {
+    "EN": "By having a smoke alarm at your house, you are 4 times less likely to die.",
+    "CZ": "Instalací detektoru požáru ve vaši domácnosti čtyřnásobně snížíte pravděpodobnost úmrtí v důsledku požáru."
+  },
+  "facts.deaths": {
+    "EN": "Deaths occur in 10 percent of homes that have no smoke alarms.",
+    "CZ": "V 10 % domácností, ve kterých nejsou instalovány detektory požárů, dochází k úmrtím v důsledku požárů."
+  },
+  "facts.success": {
+    "EN": "Success stories",
+    "CZ": "Skutečné příběhy"
+  },
+  "facts.saved_lives": {
+    "EN": "These smoke alarms have saved lives.",
+    "CZ": "Tyto detektory požárů zachránily životy."
+  },
+  "facts.still_work": {
+    "EN": "Some of them are still working!",
+    "CZ": "Některé z nich stále fungují!"
+  },
+  "facts.share_story": {
+    "EN": "Share your story with us!",
+    "CZ": "Podělte se s námi o váš příbeh!"
+  },
+  "facts.how": {
+    "EN": "How Do Smoke Alarms Work?",
+    "CZ": "Jak fungují detektory požárů?"
+  },
+  "facts.smoke_chamber": {
+    "EN": "All optical smoke alarms have a smoke chamber with a light and the receiver.",
+    "CZ": "Všechny optické detektory požárů mají kouřovou komoru se zdrojem světla a přijímačem."
+  },
+  "facts.smoke_enters": {
+    "EN": "As soon as smoke enters the smoke chamber and diffuses the lights, the smoke alarm will sound.",
+    "CZ": "Jakmile kouř vstoupí do kouřové komory a rozptýlí světlo, spustí se alarm."
+  },
+  "facts.entry": {
+    "EN": "Smoke entry",
+    "CZ": "Nasávání kouře"
+  },
+  "facts.insect": {
+    "EN": "Insect screen",
+    "CZ": "Síťka proti hzmyzu"
+  },
+  "facts.light": {
+    "EN": "Light transmitter",
+    "CZ": "Vysílač světelného paprsku"
+  },
+  "facts.receiver": {
+    "EN": "Light receiver",
+    "CZ": "Přijímač světelného paprsku"
+  },
+  "facts.emc": {
+    "EN": "EMC shield",
+    "CZ": "EMC štít"
+  },
+  "facts.light_dia": {
+    "EN": "Ambient light diaphragm",
+    "CZ": "Membrána proti okolnímu světlu"
+  },
+  "downloads.more_info": {
+    "EN": "More Information & <br> Downloads",
+    "CZ": "Více informací & <br> Ke stažení"
+  },
+  "downloads.read": {
+    "EN": "Read, watch videos and download more information!",
+    "CZ": "Čtěte, sledujte videa a stahujte další informace!"
+  },
+  "downloads.nfpa": {
+    "EN": "National Fire Protection Association (NFPA) Safety tips for smoke alarms",
+    "CZ": "Národní asociace požární ochrany (NFPA) Bezpečnostní tipy pro kouřové hlásiče"
+  },
+  "downloads.check_leaf": {
+    "EN": "Check out the leaflets and guidelines!",
+    "CZ": "Podívejte se na letáky a pokyny!"
+  },
+  "downloads.download_leaf": {
+    "EN": "Click on the image to download the leaflet.",
+    "CZ": "Kliknutím na obrázek si stáhněte leták."
+  },
+  "downloads.fire_spain": {
+    "EN": "Fire Prevention Week Campaign in Spain",
+    "CZ": "Kampaň Týden požární prevence ve Španělsku"
+  },
+  "downloads.video_about": {
+    "EN": "Video About Smoke Alarms",
+    "CZ": "Video o kouřových alarmech"
+  },
+  "downloads.brochure": {
+    "EN": "Brochure About Smoke Alarms",
+    "CZ": "Brožura o kouřových hlásičích"
+  },
+  "downloads.why_installing": {
+    "EN": "Why installing smoke alarms is important?",
+    "CZ": "Proč je důležité instalovat kouřové hlásiče?"
+  },
+  "downloads.videos_ireland": {
+    "EN": "Videos from Ireland",
+    "CZ": "Videa z Irska"
+  },
+  "downloads.how_to_test": {
+    "EN": "How to test your smoke alarm?",
+    "CZ": "Jak otestovat kouřový alarm?"
+  },
+  "downloads.videos_usa": {
+    "EN": "Videos from USA",
+    "CZ": "Videa z USA"
+  },
+  "downloads.raising_awareness": {
+    "EN": "Raising Awareness of Fire Risk Among Schools",
+    "CZ": "Zvyšování povědomí o požárním riziku ve školách"
+  },
+  "downloads.video_french": {
+    "EN": "Video by French Federation of Fire Professions(FFMI)",
+    "CZ": "Video od Francouzské federace hasičských profesí (FFMI)"
+  },
+  "downloads.leaflet1": {
+    "EN": "Smoke and Heat Alarm brochure (Ireland)",
+    "CZ": "Brožura o kouřových a tepelných hlásičích (Irsko)"
+  },
+  "downloads.leaflet2": {
+    "EN": "NFPA - Fire Alarm Basics Fact Sheet",
+    "CZ": "NFPA - Základní informace o požárním poplachu"
+  },
+  "downloads.leaflet3": {
+    "EN": "London Fire Brigade Advice",
+    "CZ": "Poradenství londýnských hasičů"
+  },
+  "downloads.leaflet4": {
+    "EN": "CFPA Guidelines",
+    "CZ": "Pokyny CFPA"
+  },
+  "downloads.spain_brochure": {
+    "EN": "Advice on Smoke Alarms in the Home.",
+    "CZ": "Rady týkající se kouřových alarmů v domácnosti."
+  },
+  "country.uk": {
+    "EN": "United Kingdom",
+    "CZ": "Velká Británie"
+  },
+  "country.uk_scot": {
+    "EN": "SCOTLAND:",
+    "CZ": "SKOTSKO:"
+  },
+  "country.uk_scot_data": {
+    "EN": "<span>New Rules apply to all homes from <span class='semibold'>1st February 2022</span>. All rooms that are used often and every hallway or landing should have an interconnected smoke alarm.</span>",
+    "CZ": "<span>Od 1. února 2022 platí nová pravidla pro všechny domácnosti. Všechny často užívané pokoje, chodby nebo chodba nebo podesty musí mít instalovány vzájemně proojené detektory požárů.</span>"
+  },
+  "country.regulations": {
+    "EN": "Regulations",
+    "CZ": "Předpisy"
+  },
+  "country.guidance": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.uk_scot_link1": {
+    "EN": "Fire safety for home owners",
+    "CZ": "Požární bezpečnost pro majitele domů"
+  },
+  "country.uk_scot_link2": {
+    "EN": "GOV.SCOT - Fire and smoke alarms",
+    "CZ": "Požární a kouřové detektory"
+  },
+  "country.uk_england": {
+    "EN": "ENGLAND:",
+    "CZ": "ANGLIE:"
+  },
+  "country.uk_eng_data": {
+    "EN": "<span>Rules apply to all rented homes from <span class='semibold'>1st October 2022.</span> At least 1 smoke alarm should be placed on each floor. Mains powered in new build. Interconnect recommended.</span>",
+    "CZ": "<span>Pravidla platí pro všechny pronajímané domy od 1. října 2022. Na každém patře by měl být umístěn alespoň 1 kouřový hlásič. V novostavbách napájené ze sítě. Doporučuje se propojení.</span>"
+  },
+  "country.uk_eng_link1": {
+    "EN": "Smoke and Carbon Monoxide Alarm (Amendment) Regulations 2022:",
+    "CZ": "Nařízení o poplašných zařízeních proti kouři a oxidu uhelnatému (změna) 2022:"
+  },
+  "country.uk_eng_link2": {
+    "EN": "GOV.UK",
+    "CZ": "GOV.UK"
+  },
+  "country.uk_wales": {
+    "EN": "WALES:",
+    "CZ": "WALES:"
+  },
+  "country.uk_wales_data": {
+    "EN": "<span>Rules apply to all rented homes from <span class='semibold'>1st December 2022.</span> 1 smoke alarm per floor which must be interlinked to other smoke alarms in the home.</span>",
+    "CZ": "<span>Pravidla platí pro všechny pronajaté domy od <span class='semibold'>1. prosince 2022.</span> 1 kouřový hlásič na patro, který musí být propojen s ostatními kouřovými hlásiči v domě.</span>"
+  },
+  "country.uk_wales_link1": {
+    "EN": "The Renting Homes Regulations 2022",
+    "CZ": "Nařízení o pronájmu domů 2022"
+  },
+  "country.uk_wales_link2": {
+    "EN": "GOV.WALES",
+    "CZ": "GOV.WALES"
+  },
+  "country.uk_ire": {
+    "EN": "NORTHERN IRELAND:",
+    "CZ": "SEVERNÍ IRSKO:"
+  },
+  "country.uk_ire_data": {
+    "EN": "<span>One Smoke alarm, hardwired permanently, installed in the room most frequently used for general daytime living purposes, in every circulation space on each storey, such as hallways and landings. Heat alarm installed in kitchen. Interconnection required.</span>",
+    "CZ": "<span>Jeden kouřový hlásič, trvale zapojený, instalovaný v místnosti nejčastěji používané pro běžné denní účely, v každém komunikačním prostoru v každém podlaží, jako jsou chodby a schodiště. Tepelný alarm instalovaný v kuchyni. Vyžaduje se propojení.</span>"
+  },
+  "country.uk_ire_link1": {
+    "EN": "The Private Tenancies Act (Northern Ireland) 2022",
+    "CZ": "Zákon o soukromých pronájmech (Severní Irsko) 2022"
+  },
+  "country.uk_ire_link2": {
+    "EN": "Smoke Alarms in Northern Ireland Homes",
+    "CZ": "Kouřové alarmy v domácnostech v Severním Irsku"
+  },
+
+  "country.norway": {
+    "EN": "Norway",
+    "CZ": "Norsko"
+  },
+  "country.norway_data": {
+    "EN": "<span>Smoke Alarms must cover the living room, bedroms and technical rooms. <br>Minimum one per floor. Minimum alarm of 60 dB in living rooms <br> and bedrooms when doors are closed. All smoke and heat alarms to be interlinked and mains powered.</span>",
+    "CZ": "<span>Detektory požárů musí být instalovány v obývacím pokoji, ložnicích a technických místnostech. Minimálně jeden detektor na patře. Minimální inteniza zvuku musí v obytných místnostech a ložnicích dosahovat při zavřených dveřích 60 dB. Všechny kouřové a teplotní detektory požárů musí být vzájemně propojeny a napájeny ze sítě. </span>"
+  },
+  "country.regulations_title": {
+    "EN": "Regulations:",
+    "CZ": "Předpisy"
+  },
+  "country.norway_link1": {
+    "EN": "Building code TEK17",
+    "CZ": "Stavební předpis TEK 17"
+  },
+  "country.guidance_title": {
+    "EN": "Guidance:",
+    "CZ": "Pokyny"
+  },
+  "country.norway_link2": {
+    "EN": "Norwegian Fire Protection Association",
+    "CZ": "Norská asociace požární ochrany"
+  },
+  "country.serbia": {
+    "EN": "Serbia",
+    "CZ": "Srbsko"
+  },
+  "country.no_reg_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.croatia": {
+    "EN": "Croatia",
+    "CZ": "Chorvatsko"
+  },
+  "country.croatia_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.slovenia": {
+    "EN": "Slovenia",
+    "CZ": "Slovinsko"
+  },
+  "country.slovenia_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.denmark": {
+    "EN": "Denmark",
+    "CZ": "Dánsko"
+  },
+  "country.denmark_data": {
+    "EN": "<span>At least one alarm per property and per level, mains powered and interconnected if more than one.</span>",
+    "CZ": "<span>Alespoň jeden detektor požáru napájený ze sítě na každém patře nemovitosti, detektory musí být vzájemně propojeny. </span>"
+  },
+  "country.denmark_link1_title": {
+    "EN": "Regulations",
+    "CZ": "Předpisy"
+  },
+  "country.denmark_link1": {
+    "EN": "Building Regulations, Section 2.3",
+    "CZ": "Stavební předpisy, část 2.3"
+  },
+  "country.denmark_link2_title": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.denmark_link2": {
+    "EN": "Smoke Alarms",
+    "CZ": "hlásiče kouře"
+  },
+  "country.belgium": {
+    "EN": "Belgium",
+    "CZ": "Belgie"
+  },
+  "country.belgium_data": {
+    "EN": "<span>In Flanders and Wallonia smoke alarms must be present in all homes, in Bruxelles only rental homes must have smoke alarms.</span>",
+    "CZ": "<span>Ve Flandrech a Valonsku musí být detektory požárů instalovány ve všech domech, v Bruselu pouze v nájemních domech.</span>"
+  },
+  "country.belgium_link1_title": {
+    "EN": "More information",
+    "CZ": "Více informací"
+  },
+  "country.belgium_link1": {
+    "EN": "BELGIUM.BE â€“ Smoke detectors",
+    "CZ": "BELGIUM.BE â€“ Smoke detectors"
+  },
+  "country.austria": {
+    "EN": "Austria",
+    "CZ": "Rakousko"
+  },
+  "country.austria_data": {
+    "EN": "<span>For all homes smoke alarms are mandatory in Austria. How many smoke alarms you need depends on how many rooms your home has.</span>",
+    "CZ": "<span>Každá domácnost musí být povinně vybavena detetory požárů. Počet detektorů požárů v domácnosti závisí na počtu pokojů. </span>"
+  },
+  "country.austria_link1_title": {
+    "EN": "More information",
+    "CZ": "Více informací"
+  },
+  "country.austria_link1": {
+    "EN": "Austrian Federal Fire Brigade Association â€“ Smoke alarms",
+    "CZ": "Rakouská spolková hasičská asociace"
+  },
+  "country.lithuania": {
+    "EN": "Lithuania",
+    "CZ": "Litva"
+  },
+  "country.lithuania_data": {
+    "EN": "<span>The obligation to install smoke alarms in residential houses in Lithuania<br> has been in effect <span class='semibold'>since 2017 December 27th.<br></span></span>",
+    "CZ": "<span>Povinnost instalovat detektory požárů v bytových domech platí od 27. prosince 2017</span>"
+  },
+  "country.lithuania_link1_title": {
+    "EN": "Fire and Rescue Department",
+    "CZ": "Hasičský záchranný sbor"
+  },
+  "country.lithuania_link1": {
+    "EN": "pagd.lrv.lt",
+    "CZ": "pagd.lrv.lt"
+  },
+  "country.lithuania_link2_title": {
+    "EN": "Lithuanian emergency preparedness website",
+    "CZ": "Litevská webová stránka krizové připravenosti"
+  },
+  "country.lithuania_link2": {
+    "EN": "lt72.lt",
+    "CZ": "lt72.lt"
+  },
+  "country.latvia": {
+    "EN": "Latvia",
+    "CZ": "Lotyšsko"
+  },
+  "country.latvia_data": {
+    "EN": "<span>It is mandatory to install a smoke alarm in every household from <span class='semibold'>1st<br> January 2020.</span><p></p>At least one smoke alarm in every flat, if there is a two floor flat at least one smoke alarm in every floor, the same rule for house</span>",
+    "CZ": "<span>Povinnost instalace alespoň jednoho detektoru požárů v každé domácnosti platí od 1. ledna 2020. Pokud je byt dvoupodlažní, musí být instalován alespoň jeden detektor požárů na každém patře, stejná povinnost platí pro byt. </span>"
+  },
+  "country.latvia_link1_title": {
+    "EN": "Regulations",
+    "CZ": "předpisy"
+  },
+  "country.latvia_link1": {
+    "EN": "Fire Safety Regulations",
+    "CZ": "předpisi požární bezpečnosti"
+  },
+  "country.latvia_link2_title": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.latvia_link2": {
+    "EN": "VUGD.GOV.LV – Par dūmu detektoriem",
+    "CZ": "VUGD.GOV.LV - O detektorech kouře"
+  },
+  "country.more_info": {
+    "EN": "More information",
+    "CZ": "Více informací"
+  },
+  "country.czech republic": {
+    "EN": "Czech Republic",
+    "CZ": "Česká Republika"
+  },
+  "country.czech republic_link1": {
+    "EN": "CAFO – Smoke alarms",
+    "CZ": "CAFO - Kouřové alarmy"
+  },
+  "country.czech republic_data": {
+    "EN": "<span>In the Czech Republic, it is mandatory to equip newly built family houses and apartments with smoke detectors from <span class='semibold'>1st July 2008.</span></span>",
+    "CZ": "<span>V České republice je od 1. července 2008 povinnost vybavit nově postavené rodinné domy a byty detektory požárů. </span>"
+  },
+  "country.czech republic_data2": {
+    "EN": "<span>The obligation also applies for accommodation facilities and facilities for the provision of social services, if they do not have obligation for electric fire alarm system.</span>",
+    "CZ": "<span>Povinnost se vztahuje i na ubytovací zařízení a zařízení pro poskytování sociálních služeb, pokud nemají povinnost elektrické požární signalizace.</span>"
+  },
+
+  "country.slovakia": {
+    "EN": "Slovakia",
+    "CZ": "Slovakia"
+  },
+  "country.slovakia_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.luxembourg": {
+    "EN": "Luxembourg",
+    "CZ": "Lucembursko"
+  },
+  "country.luxembourg_data": {
+    "EN": "<span>In Luxembourg, smoke alarms will be mandatory in all homes starting <span class='semibold'>1st of January 2023.</span></span>",
+    "CZ": "<span>V Lucembrusku platí povinnost instalace detektorů požárů ve všech domácnostech od 1. ledna 2023.</span>"
+  },
+  "country.luxembourg_link1_title": {
+    "EN": "More information",
+    "CZ": "Více informací"
+  },
+  "country.luxembourg_link1": {
+    "EN": "Smoke detectors in Luxembourg",
+    "CZ": "Detektory kouře v Lucembursku"
+  },
+  "country.portugal": {
+    "EN": "Portugal",
+    "CZ": "Portugalsko"
+  },
+  "country.portugal_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.spain": {
+    "EN": "Spain",
+    "CZ": "Španělsko"
+  },
+  "country.spain_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.italy": {
+    "EN": "Italy",
+    "CZ": "Itálie"
+  },
+  "country.italy_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.poland": {
+    "EN": "Poland",
+    "CZ": "Polsko"
+  },
+  "country.poland_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.We would advise you to check with your local fire brigade or localgovernment website in the first instance.We do advise placing at least 1 smoke alarm on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.greece": {
+    "EN": "Greece",
+    "CZ": "Řecko"
+  },
+  "country.greece_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.finland": {
+    "EN": "Finland",
+    "CZ": "Finsko"
+  },
+  "country.finland_data": {
+    "EN": "<span>Mains / battery powered alarms conforming to EN 14604 required for every<br> 60 m² of each floor of a residence.<br> Intrconnection recommended for larger properties.<br></span>",
+    "CZ": "<span>Detektory napájené ze sítě/bateriemi v souladu s EN 14604  jsou vyžadovány na každýh 60 m2 podlaží nemovitosti. U větších nemovitostí je doporučeno propojení detektorů. </span>"
+  },
+  "country.finland_link1_title": {
+    "EN": "Regulations (I):",
+    "CZ": "Předpisy"
+  },
+  "country.finland_link1": {
+    "EN": "Decree of the Ministry of the Interior on the placement and maintenance of fire alarms",
+    "CZ": "Decree of the Ministry of the Interior on the placement and maintenance of fire alarms"
+  },
+  "country.finland_link2_title": {
+    "EN": "Regulations (II):",
+    "CZ": "Předpisy"
+  },
+  "country.finland_link2": {
+    "EN": "Decree of the Government on the technical characteristics of fire alarms",
+    "CZ": "Decree of the Government on the technical characteristics of fire alarms"
+  },
+  "country.finland_link3_title": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.finland_link3": {
+    "EN": "Finnish Safety and Chemicals Agency (Tukes)",
+    "CZ": "Finnish Safety and Chemicals Agency (Tukes)"
+  },
+  "country.germany": {
+    "EN": "Germany",
+    "CZ": "Německo"
+  },
+  "country.germany_data": {
+    "EN": "<span>In all provinces of Germany smoke alarms are mandatory for all homes when the regulations in Sachsen become active since <span class='semibold'>23rd of January 2001.</span><br><p></p>Per province the rules can be different on how many smoke alarms and where to place them.</span>",
+    "CZ": "<span>Translation from Rauchmelder Retten Leben consumer campaign. Požadavek na instalaci detektoru kouře v obytných prostorách platí pro všech 16 spolkových zemí. Státní stavební předpisy v příslušných spolkových zemích upravují podrobnosti týkající se počtu nebo údržby detektorů požárů. </span>"
+  },
+  "country.germany_link1_title": {
+    "EN": "More information",
+    "CZ": "Více informací"
+  },
+  "country.germany_link1": {
+    "EN": "Rauchmelder Retten Leben consumer campaign",
+    "CZ": "Kampaň k instalaci detektorů požárů"
+  },
+  "country.sweden": {
+    "EN": "Sweden",
+    "CZ": "Švédsko"
+  },
+  "country.sweden_data": {
+    "EN": "<span>Required <span class='semibold'>since 2011</span> - one alarm on each floor, inside or outside, every bedroom, directly above each stairs.<br> Interconnect recommended if multiple alarms are on property.<br> </span>",
+    "CZ": "<span>Od roku 2011 platí povinnost instalovat jeden detektor požáru v každém podlaží, v každé ložnici, nad každým schodištěm. Pokud je v objeketu více detektorů, doporučuje se jejich propojení.</span>"
+  },
+  "country.sweden_link1_title": {
+    "EN": "Regulations",
+    "CZ": "Předpisy"
+  },
+  "country.sweden_link1": {
+    "EN": "BFS 2011-26,  S ",
+    "CZ": "BFS 2011-26,  S "
+  },
+  "country.sweden_link2_title": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.sweden_link2": {
+    "EN": "The Swedish Fire Protection Association ",
+    "CZ": "Švédská asociace požární ochrany"
+  },
+  "country.cyprus": {
+    "EN": "Cyprus",
+    "CZ": "Kypr"
+  },
+  "country.cyprus_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.ireland": {
+    "EN": "Ireland",
+    "CZ": "Irsko"
+  },
+  "country.ireland_data": {
+    "EN": "<span>Smoke Alarms must be installed in  circulation areas, living and sleeping spaces and a heat alarm in the kitchen. Interconnection required.</span>",
+    "CZ": "<span>Detektory požárů musí být instalovány v obytných prostorách a prostorách pro spánek. V kuchyni musí být instalován teplotní detektor požárů. Doporučují instalovat alespoň jeden detektor požáru na každém patře v domácnosti. Detektory musí být vzájemně propojeny. </span>"
+  },
+  "country.ireland_link1_title": {
+    "EN": "Regulations",
+    "CZ": "Předpisy"
+  },
+  "country.ireland_link1": {
+    "EN": "TGD B – Fire Safety Volume 2 Dwelling Houses 2017",
+    "CZ": "TGD B - Požární bezpečnost svazek 2 Obytné domy 2017"
+  },
+  "country.ireland_link2_title": {
+    "EN": "Building regulations",
+    "CZ": "Stavební předpisy"
+  },
+  "country.ireland_link2": {
+    "EN": "Technical Guidance B, Vol 2, Dwelling Houses, 2017",
+    "CZ": "Technické návody B, 2. díl, obytné budovy"
+  },
+  "country.ireland_link3_title": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.ireland_link3": {
+    "EN": "GOV.IE â€“ Fire detection in the home",
+    "CZ": "Požární ochran v domácnosti"
+  },
+  "country.hungary": {
+    "EN": "Hungary",
+    "CZ": "Maďarsko"
+  },
+  "country.hungary_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>V této oblasti nejsou známy žádné předpisy pro hlásiče kouře. Doporučujeme vám, abyste se nejprve informovali na webových stránkách místního hasičského sboru nebo místní samosprávy. Doporučujeme umístit alespoň 1 kouřový hlásič na každé patro vašeho domu.</span>"
+  },
+  "country.romania": {
+    "EN": "Romania",
+    "CZ": "Rumunsko"
+  },
+  "country.romania_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.bulgaria": {
+    "EN": "Bulgaria",
+    "CZ": "Bulhrasko"
+  },
+  "country.bulgaria_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.estonia": {
+    "EN": "Estonia",
+    "CZ": "Estonsko"
+  },
+  "country.estonia_data": {
+    "EN": "<span>Smoke alarms are obligatory in all homes in Estonia since 1st of July, 2009</span>",
+    "CZ": "<span>Od 1. července 2009 platí povinnost instalovat detektory požárů ve všech domácnostech.</span>"
+  },
+  "country.estonia_link1_title": {
+    "EN": "Estonian Rescue Board",
+    "CZ": "Rada záchranářů Estonska"
+  },
+  "country.estonia_link1": {
+    "EN": "rescue.ee",
+    "CZ": "rescue.ee"
+  },
+  "country.estonia_link2_title": {
+    "EN": "Home for fire safety - Emergency Service",
+    "CZ": "Domov pro požární bezpečnost - Pohotovostní služba"
+  },
+  "country.estonia_link2": {
+    "EN": "kodutuleohutuks.ee",
+    "CZ": "kodutuleohutuks.ee"
+  },
+  "country.france": {
+    "EN": "France",
+    "CZ": "Francie"
+  },
+  "country.france_data": {
+    "EN": "<span>At least one smoke alarm per property, circulation areas, securely fixed at highest point in room</span>",
+    "CZ": "<span>Alespoň jeden detektor požáru v nemovitosti, bezpečně upevněný v nejvyšším bodě místnosti.</span>"
+  },
+  "country.france_link1_title": {
+    "EN": "Regulations",
+    "CZ": "Předpisy"
+  },
+  "country.france_link1": {
+    "EN": "Loi Meslot/Morange 2010",
+    "CZ": "Loi Meslot/Morange 2010"
+  },
+  "country.france_link2_title": {
+    "EN": "Guidance",
+    "CZ": "Pokyny"
+  },
+  "country.france_link2": {
+    "EN": "GOUV.FR – Le détecteur de fumée (DAAF)",
+    "CZ": "GOUV.FR – Le détecteur de fumée (DAAF)"
+  },
+  "country.france_link3_title": {
+    "EN": "More information",
+    "CZ": "Více infromací"
+  },
+  "country.france_link3": {
+    "EN": "Together against Fire",
+    "CZ": "Together against Fire"
+  },
+  "country.netherlands": {
+    "EN": "Netherlands",
+    "CZ": "Holandsko"
+  },
+  "country.netherlands_data": {
+    "EN": "<span>All homes must have 1 smoke alarm per storey since <span class='semibold'>22nd of July 2001</span>, <br>preferably in the hallway.</span>",
+    "CZ": "<span>Od 22. července 2001 platí povinnost instalovat detektor požárů na každém podlaží, nejlépe na chodbě. </span>"
+  },
+  "country.netherlands_link1_title": {
+    "EN": "More information",
+    "CZ": "Více informací"
+  },
+  "country.netherlands_link1": {
+    "EN": "GOVERNMENT.NL â€“ Smoke detectors",
+    "CZ": "Detektory požárů"
+  },
+  "country.malta": {
+    "EN": "Malta",
+    "CZ": "Malta"
+  },
+  "country.malta_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.We would advise you to check with your local fire brigade or localgovernment website in the first instance.We do advise placing at least 1 smoke alarm on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.bosnia and herzegovina": {
+    "EN": "Bosnia and Herzegovina",
+    "CZ": "Bosna a Hercegovina"
+  },
+  "country.bosnia and herzegovina_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.montenegro": {
+    "EN": "Montenegro",
+    "CZ": "Černá Hora"
+  },
+  "country.montenegro_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.kosovo": {
+    "EN": "Kosovo",
+    "CZ": "Kosovo"
+  },
+  "country.kosovo_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.north macedonia": {
+    "EN": "North Macedonia",
+    "CZ": "Severní Makedonie"
+  },
+  "country.north macedonia_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.albania": {
+    "EN": "Albania",
+    "CZ": "Albánie"
+  },
+  "country.albania_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.turkey": {
+    "EN": "Turkey",
+    "CZ": "Turecko"
+  },
+  "country.turkey_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.iceland": {
+    "EN": "Iceland",
+    "CZ": "Island"
+  },
+  "country.iceland_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.faroe islands": {
+    "EN": "Faroe Islands",
+    "CZ": "Faerské Ostrovy"
+  },
+  "country.faroe islands_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.belarus": {
+    "EN": "Belarus",
+    "CZ": "Bělorusko"
+  },
+  "country.belarus_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.ukraine": {
+    "EN": "Ukraine",
+    "CZ": "Ukraina"
+  },
+  "country.ukraine_data": {
+    "EN": "<span>In residential buildings with a conditioned size ranging from 26.5 m to 100 m, including premises such as apartments, autonomous fire detectors are installed. </br>The exception to this rule applies only to sanitary-hygienic premises. These installed fire detectors must meet the requirements outlined in DSTU EN-14604.</span>",
+    "CZ": "<span>V obytných budovách s klimatizovanou velikostí od 26,5 m do 100 m, včetně prostor, jako jsou byty, jsou instalovány autonomní hlásiče požáru. <br>Výjimka z tohoto pravidla se vztahuje pouze na hygienicko-hygienické prostory. Tyto instalované hlásiče požáru musí splňovat požadavky uvedené v normě DSTU EN-14604.</span>"
+  },
+  "country.ukraine_link1_title": {
+    "EN": "The portal of the state electronic system in the field of construction",
+    "CZ": "Portál státního elektronického systému v oblasti stavebnictví"
+  },
+  "country.ukraine_link2_title": {
+    "EN": "DBN V.2.5-56:2014 Fire protection systems",
+    "CZ": "DBN V.2.5-56:2014 Systémy požární ochrany"
+  },
+  "country.ukraine_link1": {
+    "EN": "State electronic system",
+    "CZ": "Státní elektronický systém"
+  },
+  "country.ukraine_link2": {
+    "EN": "DBN V.2.5-56:2014",
+    "CZ": "DBN V.2.5-56:2014"
+  },
+  "country.switzerland": {
+    "EN": "Switzerland",
+    "CZ": "Švýcarsko"
+  },
+  "country.switzerland_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.moldova": {
+    "EN": "Moldova",
+    "CZ": "Moldavsko"
+  },
+  "country.moldova_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.andorra": {
+    "EN": "Andorra",
+    "CZ": "Andora"
+  },
+  "country.andorra_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.russia": {
+    "EN": "Russia",
+    "CZ": "Rusko"
+  },
+  "country.russia_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.liechtenstein": {
+    "EN": "Liechtenstein",
+    "CZ": "Lichtenštejnsko"
+  },
+  "country.liechtenstein_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.san marino": {
+    "EN": "San Marino",
+    "CZ": "San Marino"
+  },
+  "country.san marino_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.vatican": {
+    "EN": "Vatican",
+    "CZ": "Vatikán"
+  },
+  "country.vatican_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "country.monaco": {
+    "EN": "Monaco",
+    "CZ": "Monako"
+  },
+  "country.monaco_data": {
+    "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+  },
+  "cookies.necessary": {
+    "EN": "These cookies are necessary for our website to function properly and to protect against unusual activities. These cookies are usually installed to respond to your actions and requests, such as setting up privacy,logging in or filling out forms.",
+    "CZ": "Tyto soubory cookie jsou nezbytné pro správné fungování našich webových stránek a pro ochranu před neobvyklými aktivitami. Tyto soubory cookie se obvykle instalují, aby reagovaly na vaše akce a požadavky, jako je nastavení soukromí, přihlášení nebo vyplnění formulářů."
+  },
+  "cookies.necessary_title": {
+    "EN": "Necessary cookies",
+    "CZ": "Nezbytné cookies"
+  },
+  "cookies.analytical_title": {
+    "EN": "Analytical cookies",
+    "CZ": "Analytické cookies"
+  },
+  "cookies.analytical": {
+    "EN": "These cookies are often used to improve the performance of our website, as they allow us to analyze the traffic, number and sources of traffic of visitors. This type of cookie is not strictly necessary for our website to work, but is intended, for example, to let us know which pages are most interesting to you. The information collected about you using analytical cookies allows us to provide you with a personal and best internet user experience. For example, thanks to these cookies, we can ensure that the pages you visit are prepared for a certain number of visitors and, accordingly, load faster.",
+    "CZ": "Tyto soubory cookie se často používají ke zlepšení výkonu našich webových stránek, protože nám umožňují analyzovat návštěvnost, počet a zdroje návštěvníků. Tento typ souborů cookie není nezbytně nutný pro fungování našich webových stránek, ale je určen například k tomu, abychom věděli, které stránky jsou pro vás nejzajímavější. Informace shromážděné o vás pomocí analytických souborů cookie nám umožňují poskytnout vám osobní a co nejlepší uživatelský zážitek na internetu. Díky těmto souborům cookie můžeme například zajistit, aby stránky, které navštívíte, byly připraveny pro určitý počet návštěvníků a podle toho se rychleji načítaly."
+  },
+  "cookies.privacy": {
+    "EN": "Privacy Policy",
+    "CZ": "Zásady ochrany osobních údajů"
+  },
+  "cookies.learnkey": {
+    "EN": "UAB 'Learnkey' (hereinafter – the Data Controller) hereby establishes the terms and conditions for the processing of personal data when using the website smokealarmssavelives.eu managed by the Data Controller (hereinafter – Privacy Policy). The terms and conditions set out in this Privacy Policy apply each time you access the content and/or services we provide, regardless of the device (computer, mobile phone, tablet, TV etc.) you are using.",
+    "CZ": "Společnost 'Learnkey' (dále jen 'správce údajů') tímto stanoví podmínky zpracování osobních údajů při používání webových stránek smokealarmssavelives.eu. spravovaných Správcem údajů (dále jen - Zásady ochrany osobních údajů). Stránky podmínky stanovené v těchto Zásadách ochrany osobních údajů se vztahují na každý kdykoli přistupujete k obsahu a/nebo službám, které poskytujeme, bez ohledu na to. bez ohledu na zařízení (počítač, mobilní telefon, tablet, televizor atd.), které používáte. používáte."
+  },
+  "cookies.important": {
+    "EN": "It is very important that you read this Privacy Policy carefully, because each time you visit the www.learnkey.lt website, you agree to the terms and conditions described in this Privacy Policy. If you do not agree to these terms and conditions, we regretfully request that you do not visit our website or use our content and/or services. We confirm that the Data Controller's website visitors' data will be collected in accordance with the requirements of the applicable European Union and Republic of Lithuania legislation, as well as the instructions of the controlling authorities. All reasonable technical and administrative measures are in place to protect the data we collect about visitors to our website from loss, unauthorised use or alteration.",
+    "CZ": "Je velmi důležité, abyste si tyto zásady ochrany osobních údajů pečlivě přečetli, protože pokaždé, když navštívíte webové stránky www.learnkey.lt, souhlasíte s tím. s podmínkami popsanými v těchto Zásadách ochrany osobních údajů. Pokud na stránkách . s těmito podmínkami nesouhlasíte, s politováním vás upozorňujeme, že pokud s těmito podmínkami nesouhlasíte. žádáme vás, abyste nenavštěvovali naše webové stránky ani nepoužívali náš obsah. a/nebo služeb. Potvrzujeme, že webové stránky správce údajů. budou údaje návštěvníků shromažďovány v souladu se zákonem o ochraně osobních údajů. požadavky platných předpisů Evropské unie a České republiky. Litevské republiky, jakož i s pokyny Evropské komise. kontrolních orgánů. Veškeré přiměřené technické a administrativní opatření k ochraně údajů, které uchováváme. shromažďujeme o návštěvnících našich webových stránek, před ztrátou, neoprávněným použitím nebo změnám."
+  },
+  "cookies.persons": {
+    "EN": "Persons under the age of 16 may not submit any personal data through our website. If you are under the age of 16, you must obtain the consent of your parent or other legal guardian before submitting personal information.",
+    "CZ": "Osoby mladší 16 let nesmí prostřednictvím našich webových stránek poskytovat žádné osobní údaje. Pokud je vám méně než 16 let, musíte před odesláním osobních údajů získat souhlas rodiče nebo jiného zákonného zástupce."
+  },
+  "cookies.terms": {
+    "EN": "Terms used in this Privacy Policy shall be understood as they are defined in the General Data Protection Regulation 2016/679.",
+    "CZ": "Pojmy použité v těchto zásadách ochrany osobních údajů se chápou tak, jak jsou definovány v obecném nařízení o ochraně osobních údajů 2016/679."
+  },
+  "cookies.what_info": {
+    "EN": "What information do we collect about you?",
+    "CZ": "Jaké informace o vás shromažďujeme?"
+  },
+  "cookies.browsing_data": {
+    "EN": "Browsing data:",
+    "CZ": "Prohlížení dat:"
+  },
+  "cookies.browsing_data_text": {
+    "EN": "Browsing data: When you visit our website, your browser sends datato our server. This data allows us to improve our services and facilitate the use of our website. We automatically collect and store the data or third parties do so on our behalf. We may collect information about your computer for system administration purposes, as well as to transmit the collected information for internal marketing analysis purposes.",
+    "CZ": "Prohlížení dat: Když navštívíte naše webové stránky, váš prohlížeč odesílá data na náš server. Tyto údaje nám umožňují zlepšovat naše služby a usnadňovat používání našich webových stránek. Tyto údaje shromažďujeme a ukládáme automaticky nebo tak naším jménem činí třetí strany. Můžeme shromažďovat informace o vašem počítači pro účely správy systému a také předávat shromážděné informace pro účely interní marketingové analýzy."
+  },
+  "cookies.following_data": {
+    "EN": "The following data may be collected  relating to our users' browsing activities and characteristics:",
+    "CZ": "O našich uživatelích mohou být shromažďovány následující údaje. prohlížení a charakteristiky:"
+  },
+  "cookies.ip_adress": {
+    "EN": "- Visitor's IP address.",
+    "CZ": "- IP adresa návštěvníka."
+  },
+  "cookies.date_and_time": {
+    "EN": "- Date and time of visit.",
+    "CZ": "- Datum a čas návštěvy."
+  },
+  "cookies.referral": {
+    "EN": "Referral URL (the website from which the visitor was referred).",
+    "CZ": "URL odkazu (webová stránka, ze které byl návštěvník odkázán)."
+  },
+  "cookies.pages": {
+    "EN": "- The pages visited by the user and his/her movement around our website.",
+    "CZ": "- Stránky, které uživatel navštívil, a jeho pohyb po našich webových stránkách."
+  },
+  "cookies.information_browser": {
+    "EN": "- Information about the browser use (browser type, version, operating system, etc.).",
+    "CZ": "- Informace o používání prohlížeče (typ prohlížeče, verze, operační systém atd.)."
+  },
+  "cookies.other_info": {
+    "EN": "Other information we collect:",
+    "CZ": "Další informace, které shromažďujeme:"
+  },
+  "cookies.we_may_also": {
+    "EN": "We may also collect other information about you, your device, or your use of our website content with your consent.",
+    "CZ": "S vaším souhlasem můžeme shromažďovat i další informace o vás, vašem zařízení nebo o tom, jak používáte obsah našich webových stránek."
+  },
+  "cookies.how_we_use": {
+    "EN": "How we use your information?",
+    "CZ": "Jak vaše údaje používáme?"
+  },
+  "cookies.process": {
+    "EN": "We may process your personal data for the following purposes:",
+    "CZ": "Vaše osobní údaje můžeme zpracovávat pro následující účely:"
+  },
+  "cookies.direct_marketing": {
+    "EN": "- For direct marketing*, to send newsletters, to provide tailored advertisements and to send communications, to assess and analyse our market, customers, products and services (including collecting your opinion on products and services and organising customer surveys).",
+    "CZ": "- Pro přímý marketing*, zasílání newsletterů, poskytování reklamy na míru a zasílání sdělení, hodnocení a analýzu našeho trhu, zákazníků, produktů a služeb (včetně zjišťování vašich názorů na produkty a služby a pořádání zákaznických průzkumů)."
+  },
+  "cookies.administer": {
+    "EN": "- To administer the website.",
+    "CZ": "- Správa webových stránek."
+  },
+  "cookies.improve_experience": {
+    "EN": "- To improve your browsing experience by personalising this website.",
+    "CZ": "- Zlepšit vaše prohlížení přizpůsobením těchto webových stránek."
+  },
+  "cookies.other_ways": {
+    "EN": "- Other ways with your consent.*",
+    "CZ": "- Jiné způsoby s vaším souhlasem.*"
+  },
+  "cookies.be_advised": {
+    "EN": "*Please be advised that you have the right to object to or withdraw your consent to the processing of your data for the purposes set out above, marked with an asterisk, at any time.",
+    "CZ": "*Vezměte prosím na vědomí, že máte právo kdykoli vznést námitku nebo odvolat svůj souhlas se zpracováním vašich údajů pro výše uvedené účely označené hvězdičkou."
+  },
+  "cookies.to_whom": {
+    "EN": "To whom do we disclose your information?",
+    "CZ": "Komu sdělujeme vaše údaje?"
+  },
+  "cookies.undertake": {
+    "EN": "We undertake not to transfer your personal data to any unrelated third parties, except in the following cases:",
+    "CZ": "Zavazujeme se, že vaše osobní údaje nebudeme předávat žádným nesouvisejícím třetím stranám, s výjimkou následujících případů:"
+  },
+  "cookies.disclosure_consent": {
+    "EN": "- Where there is consent to the disclosure of personal data.",
+    "CZ": "- V případě souhlasu se zveřejněním osobních údajů."
+  },
+  "cookies.law_enforcement": {
+    "EN": "- To law enforcement authorities in accordance with the procedure provided for by the legislation of the Republic of Lithuania.",
+    "CZ": "- orgánům činným v trestním řízení v souladu s postupem stanoveným právními předpisy Litevské republiky."
+  },
+  "cookies.your_rights": {
+    "EN": "Your rights",
+    "CZ": "Vaše práva"
+  },
+  "cookies.know": {
+    "EN": "- Know (be informed) about the processing of your data (right to know);",
+    "CZ": "- Vědět (být informován) o zpracování svých údajů (právo vědět);"
+  },
+  "cookies.to_know": {
+    "EN": "- To know your data and how they are processed (right of access);",
+    "CZ": "- Znát své údaje a způsob jejich zpracování (právo na přístup);"
+  },
+  "cookies.request_rectification": {
+    "EN": "- Request rectification or, taking into account the purposes of the processing of personal data, completion of incomplete personal data (right to rectification);",
+    "CZ": "- požadovat opravu nebo s ohledem na účely zpracování osobních údajů doplnění neúplných osobních údajů (právo na opravu);"
+  },
+  "cookies.to_have_data": {
+    "EN": "- To have your data erased or to stop the processing of your data (except for storage) (right to erasure and right to be forgotten).",
+    "CZ": "- na vymazání vašich údajů nebo na zastavení zpracování vašich údajů (s výjimkou jejich uložení) (právo na výmaz a právo být zapomenut)."
+  },
+  "cookies.data_controller": {
+    "EN": "- Request the Data Controller to restrict the processing of personal data on one of the legitimate grounds (right to restrict).",
+    "CZ": "Zásady ochrany osobních údajů"
+  },
+  "cookies.right_to_port": {
+    "EN": "- You have the right to data portability (right to port).",
+    "CZ": "- Máte právo na přenositelnost údajů (právo na přenos)."
+  },
+  "cookies.right_to_object": {
+    "EN": "- Object to the processing of personal data where such data is processed or intended to be processed for the purposes of direct marketing, including profiling in relation to such direct marketing.",
+    "CZ": "- vznést námitku proti zpracování osobních údajů, pokud jsou tyto údaje zpracovávány nebo mají být zpracovávány pro účely přímého marketingu, včetně profilování v souvislosti s tímto přímým marketingem."
+  },
+  "cookies.no_longer_wish": {
+    "EN": "If you no longer wish to have your personal data processed for the purpose of direct marketing, you can contact info@learnkey.lt to object to the processing of your personal data for the purpose of direct marketing.",
+    "CZ": "Pokud si již nepřejete, aby byly vaše osobní údaje zpracovávány pro účely přímého marketingu, můžete se obrátit na adresu info@learnkey.lt a vznést námitku proti zpracování vašich osobních údajů pro účely přímého marketingu."
+  },
+  "cookies.you_may_submit": {
+    "EN": "You may submit any request or instruction relating to theprocessing of your personal data to the Data Controller at info@learnkey.lt. Upon receipt of such a request or instruction, the Data Controller shall respond and carry out or refuse to carry out the actions set out in the request within one month of the date of the request. Where necessary, the time limit may be extended by a further two months, depending on the complexity and number of requests. In such a case, the Data Controller shall inform the subject of such extension within one month of receipt of the request, together with the reasons for the delay.",
+    "CZ": "Jakoukoli žádost nebo pokyn týkající se zpracování vašich osobních údajů můžete podat správci údajů na adrese info@learnkey.lt. Po obdržení takové žádosti nebo pokynu správce údajů odpoví a provede nebo odmítne provést činnosti uvedené v žádosti do jednoho měsíce od data žádosti. V případě potřeby může být tato lhůta prodloužena o další dva měsíce v závislosti na složitosti a počtu žádostí. V takovém případě správce údajů informuje subjekt o takovém prodloužení do jednoho měsíce od obdržení žádosti spolu s důvody prodlení."
+  },
+  "cookies.third_party": {
+    "EN": "Third party websites, services, and products on our websites",
+    "CZ": "Webové stránky, služby a produkty třetích stran na našich webových stránkách. webové stránky"
+  },
+  "cookies.d_c_website": {
+    "EN": "The Data Controller's website may contain third-party banners, links to their websites and services, which are not under the Data Controller's control. The Data Controller is not responsible for the security and privacy of information collected by third parties. You must read the privacy statements applicable to the third-party websites and services that you use.",
+    "CZ": "Webové stránky správce údajů mohou obsahovat bannery třetích stran, odkazy na jejich webové stránky a služby, které nejsou pod kontrolou správce údajů. Správce údajů neodpovídá za bezpečnost a soukromí informací shromažďovaných třetími stranami. Musíte si přečíst prohlášení o ochraně osobních údajů platná pro webové stránky a služby třetích stran, které používáte."
+  },
+  "cookies.cookies": {
+    "EN": "Cookies",
+    "CZ": "Cookies"
+  },
+  "cookies.when_you_visit": {
+    "EN": "When you visit our website, we want to provide you with content and features that are tailored to your needs. This requires the use of cookies. These are small pieces of information that are automatically generated when you browse the website and stored on your computer or other terminal device. They help the Data Controller to recognise you as a previous visitor to a particular website, to store your visit history and to tailor the content of the website accordingly. Cookies also help to ensure the smooth running of websites, to monitor the duration and frequency of visits to websites and to collect statistical information about the number of visitors to websites.",
+    "CZ": "Když navštívíte naše webové stránky, chceme vám poskytnout obsah a funkce, které jsou přizpůsobeny vašim potřebám. To vyžaduje použití souborů cookie. Jedná se o malé informace, které se automaticky generují při prohlížení webových stránek a ukládají se do vašeho počítače nebo jiného koncového zařízení. Pomáhají správci údajů rozpoznat vás jako předchozího návštěvníka určité webové stránky, ukládat historii vašich návštěv a podle toho přizpůsobit obsah webové stránky. Soubory cookie rovněž pomáhají zajistit hladký chod webových stránek, sledovat délku a četnost návštěv webových stránek a shromažďovat statistické informace o počtu návštěvníků webových stránek."
+  },
+  "cookies.what_are": {
+    "EN": "What are cookies?",
+    "CZ": "Co jsou to cookies?"
+  },
+  "cookies.cookies_are": {
+    "EN": "Cookies are small text files that store information about your web browsing preferences. Cookie technology is used on almost all websites. Cookies are placed on a visitor's computer by a web browser when they first visit a website. If you visit the same website again from the same device, the cookie and the information stored in it are sent back to the original website ('first-party cookies') or to another related website ('third-party cookies'). This information helps to determine whether the website in question has already been viewed in your browser and, in some cases, allows you to tailor the content displayed on that website to the visitor.",
+    "CZ": "Soubory cookie jsou malé textové soubory, které ukládají informace o vašich preferencích při procházení webu. Technologie souborů cookie se používá téměř na všech webových stránkách. Soubory cookie ukládá webový prohlížeč do počítače návštěvníka při první návštěvě webové stránky. Pokud navštívíte stejnou webovou stránku znovu ze stejného zařízení, soubor cookie a informace v něm uložené se odešlou zpět na původní webovou stránku ('soubory cookie první strany') nebo na jinou související webovou stránku ('soubory cookie třetí strany'). Tyto informace pomáhají určit, zda již byla daná webová stránka ve vašem prohlížeči zobrazena, a v některých případech umožňují přizpůsobit obsah zobrazený na dané webové stránce návštěvníkovi."
+  },
+  "cookies.some_cookies": {
+    "EN": "Some cookies are particularly useful in that they help to improve the visitor's browsing experience when they revisit the website. If you use the same device and the same web browser, cookies will remember your personal preferences, your browsing habits on the website in question, and will tailor the content shown to you in a way that is as close to your needs and interests as possible.",
+    "CZ": "Některé soubory cookie jsou obzvláště užitečné, protože pomáhají zlepšit prohlížení webových stránek při jejich opětovné návštěvě. Pokud používáte stejné zařízení a stejný webový prohlížeč, soubory cookie si zapamatují vaše osobní preference, vaše zvyky při prohlížení daných webových stránek a přizpůsobí vám zobrazovaný obsah tak, aby se co nejvíce blížil vašim potřebám a zájmům."
+  },
+  "cookies.cookie_preferences": {
+    "EN": "Your cookie preferences on this website. This website uses cookies that do not require consent. 'Strictly necessary cookies' are important cookies that provide functions without which it would not be possible to use the website properly. Such cookies are used on this website and are therefore known as 'first party cookies'. They are stored on your computer for as long as you browse this website. One of the purposes of using essential cookies is to ensure that what you see on your screen is consistent with the amount of data that could be processed using your current internet connection. The other purpose of these cookies is to facilitate the transition from HTTP to HTTPS pages and to ensure secure data transfer. These types of cookies also store information about your decision to use cookies on our website. Your consent to the use of essential cookies is not required.",
+    "CZ": "Vaše preference souborů cookie na těchto webových stránkách. Tyto webové stránky používají soubory cookie, které nevyžadují souhlas. 'Nezbytně nutné soubory cookie' jsou důležité soubory cookie, které zajišťují funkce, bez nichž by nebylo možné webové stránky řádně používat. Takové soubory cookie se na těchto webových stránkách používají, a proto se označují jako 'soubory cookie první strany'. Jsou uloženy ve vašem počítači po dobu, kdy si prohlížíte tyto webové stránky. Jedním z účelů používání základních souborů cookie je zajistit, aby to, co vidíte na obrazovce, odpovídalo množství dat, které by mohlo být zpracováno pomocí vašeho aktuálního internetového připojení. Dalším účelem těchto souborů cookie je usnadnit přechod ze stránek HTTP na stránky HTTPS a zajistit bezpečný přenos dat. Tyto typy souborů cookie také ukládají informace o vašem rozhodnutí používat soubory cookie na našich webových stránkách. Váš souhlas s používáním základních souborů cookie není vyžadován."
+  },
+  "cookies.first_party": {
+    "EN": "This website uses first-party cookies that require your consent. Cookies that are not legally necessary to use this website nevertheless perform important functions. Without these cookies, you will not be able to use certain features (such as pre-populated forms )that make this website easy to use. The preferences you have chosen, such as language options, will not be saved, so you will have to re-select them each time you visit the website. In addition, we will no longer be able to provide you with offers that are tailored to your individual needs.",
+    "CZ": "Tyto webové stránky používají soubory cookie první strany, které vyžadují váš souhlas. Soubory cookie, které nejsou ze zákona nezbytné k používání těchto webových stránek, nicméně plní důležité funkce. Bez těchto souborů cookie nebudete moci používat určité funkce (například předvyplněné formuláře )které usnadňují používání těchto webových stránek. Vámi zvolené předvolby, jako například volby jazyka, nebudou uloženy, takže je budete muset při každé návštěvě webových stránek znovu zvolit. Kromě toho vám již nebudeme moci poskytovat nabídky přizpůsobené vašim individuálním potřebám."
+  },
+  "cookies.third_party_cookies": {
+    "EN": "This website uses third-party cookies that require your consent. This website contains content belonging to third parties. When you visit this website, these third-party service providers may place cookies on your computer to provide information about your visit to this website. To find out more about the use of cookies by these third-party service providers, please visit their websites. If you have chosen not to consent to the use of cookies that require consent, or if you have withdrawn your consent, you will only be able to use the features of the website that do not require such cookies to be used. In this case, you will not be able to access those parts of the website that may contain third party content and from which third-party cookies may be sent. If you do not want cookies to be stored on your device, you can select the appropriate browser settings.",
+    "CZ": "Tyto webové stránky používají soubory cookie třetích stran, které vyžadují váš souhlas. Tyto webové stránky obsahují obsah patřící třetím stranám. Když navštívíte tyto webové stránky, mohou tito poskytovatelé služeb třetích stran umístit do vašeho počítače soubory cookie, aby vám poskytli informace o vaší návštěvě těchto webových stránek. Chcete-li se dozvědět více o používání souborů cookie těmito poskytovateli služeb třetích stran, navštivte jejich webové stránky. Pokud jste se rozhodli nesouhlasit s používáním souborů cookie, které vyžadují souhlas, nebo pokud jste svůj souhlas odvolali, budete moci používat pouze ty funkce webových stránek, které použití těchto souborů cookie nevyžadují. V takovém případě nebudete mít přístup k těm částem webových stránek, které mohou obsahovat obsah třetích stran a z nichž mohou být odesílány soubory cookie třetích stran. Pokud si nepřejete, aby se soubory cookie ukládaly do vašeho zařízení, můžete zvolit příslušné nastavení prohlížeče."
+  },
+  "cookies.info_last_updated": {
+    "EN": "Information about cookies was last updated on 2022-11-14. For more information about cookies and how we use them, please visit: www.allaboutcookies.org.",
+    "CZ": "Informace o souborech cookie byly naposledy aktualizovány dne 2022-11-14. Další informace o souborech cookie a jejich používání naleznete na adrese: www.allaboutcookies.org."
+  },
+  "cookies.cookies_for_statistics": {
+    "EN": "Cookies for statistics",
+    "CZ": "Soubory cookie pro statistiky"
+  },
+  "cookies.statistical_cookies_text": {
+    "EN": "Statistical cookies collect and send information anonymously to website owners enabling them to learn how visitors navigate websites.",
+    "CZ": "Statistické soubory cookie shromažďují a anonymně odesílají informace majitelům webových stránek, kteří tak mohou zjistit, jak se návštěvníci na webových stránkách pohybují."
+  },
+  "cookies.name": {
+    "EN": "Name",
+    "CZ": "Název"
+  },
+  "cookies.provider": {
+    "EN": "Provider",
+    "CZ": "Poskytovatel"
+  },
+  "cookies.purpose": {
+    "EN": "Purpose",
+    "CZ": "Účel"
+  },
+  "cookies.validity": {
+    "EN": "Period of validity",
+    "CZ": "Doba platnosti"
+  },
+  "cookies.registers_id": {
+    "EN": "Registers a unique ID number used to generate statistics about how a visitor browses the website.",
+    "CZ": "Registruje jedinečné identifikační číslo, které slouží k vytváření statistik o tom, jak návštěvník prochází webové stránky."
+  },
+  "cookies.session": {
+    "EN": "Session",
+    "CZ": "Relace"
+  },
+  "cookies.cookie_limit": {
+    "EN": "A cookie used to limit the number of requests, which is used by the traffic analysis tool Google Analytics.",
+    "CZ": "Soubor cookie sloužící k omezení počtu požadavků, který používá nástroj pro analýzu návštěvnosti Google Analytics."
+  },
+  "cookies.third_parties": {
+    "EN": "Third party cookies",
+    "CZ": "Soubory cookie třetích stran"
+  },
+  "cookies.third_parties_text": {
+    "EN": "Third party cookies are placed on your device by a third party (i.e. not by us), e.g. youtube.com. You can block or delete these cookies. For more information:",
+    "CZ": "Soubory cookie třetích stran ukládá do vašeho zařízení třetí strana (tj. nikoli my), např. youtube.com. Tyto soubory cookie můžete zablokovat nebo vymazat. Další informace:"
+  },
+  "cookies.year": {
+    "EN": "1 year",
+    "CZ": "1 rok"
+  },
+  "cookies.consent": {
+    "EN": "CONSENT",
+    "CZ": "CONSENT"
+  },
+  "cookies.youtube": {
+    "EN": "This cookie stores information about how the end user uses the website and all advertising that the end user may have seen before visiting the said site. The main purpose of this cookie is Targeting / Advertising. Stores the user's video player preferences using embedded YouTube video.",
+    "CZ": "Tento soubor cookie ukládá informace o tom, jak koncový uživatel používá webovou stránku, a o všech reklamách, které mohl vidět před návštěvou uvedené stránky. Hlavním účelem tohoto souboru cookie je cílení / reklama. Ukládá uživatelské preference přehrávače videa pomocí vloženého videa YouTube."
+  },
+  "cookies.2_years": {
+    "EN": "2 years",
+    "CZ": "2 roky"
+  },
+  "cookies.6_months": {
+    "EN": "6 months",
+    "CZ": "6 měsíců"
+  },
+  "cookies.set_by_youtube": {
+    "EN": "This cookie is set by YouTube to track views of embedded videos.",
+    "CZ": "Tento soubor cookie je nastaven službou YouTube ke sledování zobrazení vložených souborů. videa."
+  },
+  "cookies.youtube_tracks": {
+    "EN": "This cookie is set by Youtube to keep track of user preferences for Youtube videos embedded in sites;it can also determine whether the website visitor is using the new or old version of the Youtube interface.",
+    "CZ": "Tento soubor cookie je nastaven společností Youtube za účelem sledování uživatelských preferencí pro videa Youtube vložená do stránek; může také určit, zda návštěvník webových stránek používá novou nebo starou verzi rozhraní Youtube."
+  },
+  "cookies.policy_changes": {
+    "EN": "Policy changes",
+    "CZ": "Změny politiky"
+  },
+  "cookies.we_may_update": {
+    "EN": "We may update this policy from time to time by posting a new version on our website. You should review this page from time to time to ensure that you are happy with any changes.",
+    "CZ": "Tyto zásady můžeme čas od času aktualizovat zveřejněním nové verze na našich webových stránkách. Čas od času byste měli tuto stránku zkontrolovat, abyste se ujistili, že jste s případnými změnami spokojeni."
+  },
+  "cookies.da_details": {
+    "EN": "Details of the data controller:",
+    "CZ": "Údaje o správci údajů:"
+  },
+  "cookies.registered_office": {
+    "EN": "Registered office address:",
+    "CZ": "Adresa sídla:"
+  },
+  "cookies.only_necessary": {
+    "EN": "Only necessary cookies",
+    "CZ": "Pouze nezbytné soubory cookie"
+  },
+  "cookies.allow_all": {
+    "EN": "Allow all cookies",
+    "CZ": "Povolit všechny soubory cookie"
+  }
+}

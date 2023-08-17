@@ -2,17 +2,11 @@
   <div class="downloads">
     <div class="top-section">
       <div class="text">
-        <h2>
-          More Information & <br />
-          Downloads
-        </h2>
-        <span>Read, watch videos and download more information!</span>
+        <h2 v-html="toLocal('downloads.more_info')"></h2>
+        <span>{{ toLocal("downloads.read") }}</span>
       </div>
       <div class="red-bar">
-        <span
-          >National Fire Protection Association (NFPA) Safety tips for smoke
-          alarms:</span
-        >
+        <span>{{ toLocal("downloads.nfpa") }}:</span>
         <div class="video-container">
           <div class="video" v-for="(video, index) in safetyTips" :key="index">
             <iframe
@@ -29,8 +23,8 @@
     </div>
     <div class="bottom-section">
       <div class="leaflet-container">
-        <h3>Check out the leaflets and guidelines!</h3>
-        <span>Click on the image to download the leaflet.</span>
+        <h3>{{ toLocal("downloads.check_leaf") }}</h3>
+        <span>{{ toLocal("downloads.download_leaf") }}</span>
         <div class="leaflets">
           <div
             class="leaflet"
@@ -44,7 +38,7 @@
           >
             <div class="bottom-content">
               <div class="leaflet-text">
-                {{ leaflet.text }}
+                {{ toLocal(leaflet.text) }}
               </div>
               <div class="download-btn">
                 <svg
@@ -67,12 +61,14 @@
       <div class="spain-container">
         <div class="title-container">
           <span class="spain-title"
-            >Fire Prevention Week Campaign in Spain:</span
+            >{{ toLocal("downloads.fire_spain") }}:</span
           >
         </div>
         <div class="section-container">
           <div class="video-container-with-text">
-            <span class="video-title">Video About Smoke Alarms:</span>
+            <span class="video-title"
+              >{{ toLocal("downloads.video_about") }}:</span
+            >
             <div class="video">
               <iframe
                 :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
@@ -89,7 +85,7 @@
         </div>
         <div class="section-container">
           <div class="brochure-container">
-            <span class="title">Brochure About Smoke Alarms:</span>
+            <span class="title">{{ toLocal("downloads.brochure") }}:</span>
             <div
               class="leaflet"
               :style="{
@@ -100,7 +96,7 @@
             >
               <div class="bottom-content">
                 <div class="leaflet-text">
-                  {{ spainBrochure.text }}
+                  {{ toLocal(spainBrochure.text) }}
                 </div>
                 <div class="download-btn">
                   <svg
@@ -122,10 +118,12 @@
         </div>
       </div>
       <div class="why-videos">
-        <span class="why-videos-title"
-          >Why installing smoke alarms is important?</span
-        >
-        <span class="why-videos-subTitle">Videos from Ireland</span>
+        <span class="why-videos-title">{{
+          toLocal("downloads.why_installing")
+        }}</span>
+        <span class="why-videos-subTitle">{{
+          toLocal("downloads.videos_ireland")
+        }}</span>
         <div class="main-video">
           <swiper
             ref="swiper"
@@ -203,8 +201,10 @@
         </div>
       </div>
       <div class="testing-videos">
-        <h3>How to test your smoke alarm?</h3>
-        <span class="testing-videos-subtitle">Videos from USA</span>
+        <h3>{{ toLocal("downloads.how_to_test") }}</h3>
+        <span class="testing-videos-subtitle">{{
+          toLocal("downloads.videos_usa")
+        }}</span>
         <div class="video-container" v-if="windowWidth >= 768">
           <div class="col">
             <div class="main-video" ref="mainTestingVideo">
@@ -290,10 +290,8 @@
       </div>
       <div class="red-circle"></div>
       <div class="extra-container">
-        <span class="title">Raising Awareness of Fire Risk Among Schools</span>
-        <span class="subtitle"
-          >Video by French Federation of Fire Professions(FFMI)</span
-        >
+        <span class="title">{{ toLocal("downloads.raising_awareness") }}</span>
+        <span class="subtitle">{{ toLocal("downloads.video_french") }}</span>
         <div class="video-container">
           <div class="video">
             <iframe
@@ -349,22 +347,22 @@ export default {
         {
           img: "images/downloads/leaflet1.png",
           download_path: "/downloads/Smoke_and_Heat_Alarm_brochure_Ireland.pdf",
-          text: "Smoke and Heat Alarm brochure (Ireland)",
+          text: "downloads.leaflet1",
         },
         {
           img: "images/downloads/leaflet2.png",
           download_path: "/downloads/NFPA-FireAlarmBasicsFactSheet.pdf",
-          text: "NFPA - Fire Alarm Basics Fact Sheet",
+          text: "downloads.leaflet2",
         },
         {
           img: "images/downloads/leaflet3.png",
           download_path: "/downloads/London_Fire_Brigade_Advice.pdf",
-          text: "London Fire Brigade Advice",
+          text: "downloads.leaflet3",
         },
         {
           img: "images/downloads/leaflet4.png",
           download_path: "/downloads/CFPA_E_Guideline_No_10_2008_F.pdf",
-          text: "CFPA_Guidelines",
+          text: "downloads.leaflet4",
         },
       ],
       videoStack: [
@@ -437,7 +435,7 @@ export default {
         img: "images/downloads/Asset8.png",
         download_path:
           "/downloads/tripticos-consejos-detectores-incendios-en-hogar.pdf",
-        text: "Advice on Smoke Alarms in the Home.",
+        text: "downloads.spain_brochure",
       },
       swiper: null,
       isLoadingNewVideo: false,
@@ -533,7 +531,6 @@ export default {
       );
       this.testing_videos[selectedVideo].active = true;
       this.$nextTick(() => {
-        console.log(this.$refs.testingMainVideo.player);
         setTimeout(() => {
           this.$refs.testingMainVideo.player.play();
         }, 100);
@@ -554,8 +551,6 @@ export default {
     playVideo() {
       this.$nextTick(() => {
         setTimeout(() => {
-          console.log(this.videoStack.length, this.$refs["mainMessageVideo-2"]);
-
           this.$refs[
             "mainMessageVideo-" + (this.videoStack.length - 1)
           ][0].player.play();
@@ -572,7 +567,6 @@ export default {
 .top-section {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   padding-top: 191px;
   @media (max-width: 1080px) {
     padding-top: 100px;
@@ -928,7 +922,7 @@ h3 {
     max-height: 60vw;
     @media (min-width: 1280px) {
       // width: 60%;
-       max-width: initial;
+      max-width: initial;
       width: initial;
     }
     @media (max-width: 1280px) {
@@ -936,12 +930,11 @@ h3 {
       // max-width: 55vw;
       max-width: initial;
       width: initial;
-      
     }
     @media (max-width: 1080px) {
       max-height: 40vw;
       // width: 60%;
-       max-width: initial;
+      max-width: initial;
       width: initial;
     }
     @media (max-width: 768px) {
@@ -1122,6 +1115,9 @@ h3 {
       height: 100%;
       min-height: 180px;
       border-radius: 10px;
+      @media (min-width: 2300px) {
+        width: 80%;
+      }
       iframe {
         border-radius: 10px;
         min-height: 180px;

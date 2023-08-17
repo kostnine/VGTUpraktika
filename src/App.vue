@@ -13,6 +13,11 @@ import FooterComponent from "./components/Footer.vue";
 import CookieModal from "./components/CookieModal.vue";
 import BackToTop from "./components/BackToTop.vue";
 export default {
+  data() {
+    return {
+      allowedLangs: ["EN", "CZ"],
+    };
+  },
   components: {
     HeaderComponent,
     FooterComponent,
@@ -29,6 +34,14 @@ export default {
     "$route.path"() {
       window.scroll(0, 0);
     },
+  },
+  mounted() {
+    if (
+      this.$route.params.lang != undefined &&
+      this.allowedLangs.includes(this.$route.params.lang.toUpperCase())
+    ) {
+      this.$store.state.lang = this.$route.params.lang.toUpperCase();
+    }
   },
 };
 </script>

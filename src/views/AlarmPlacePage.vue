@@ -2,52 +2,32 @@
   <div>
     <PageHeader
       image="images/install_smoke_alarms.jpg"
-      title="Where to Place<br> Smoke Alarms?"
-      content="Protect yourself and your family with the right number and correct placement of smoke alarms."
-      buttonText="Learn More About Locations"
+      title="place.where"
+      content="place.protect"
+      buttonText="place.learn_more"
       scrollTo="locations-header"
     />
     <div class="types-page-main-container">
       <div class="main-header" id="locations-header">
         <span class="main-header-title" id="types"
-          >Where Exactly Should<br />
-          Smoke Alarms Be Installed?</span
+          >{{ toLocal("place.where_exactly") }}<br />
+          {{ toLocal("place.smoke_alarms_installed") }}</span
         >
         <span class="main-header-content">
-          The placement of a smoke alarm is essential for the correct
-          functioning of the detector. Of course, it should work properly and
-          provide you and your family with life-saving minutes in the event of a
-          fire.
+          {{ toLocal("place.the_placement") }}
         </span>
         <span class="main-header-content">
-          Although regulations differ slightly from country to country, this
-          page provides some general guidelines on where to install smoke
-          alarms.
+          {{ toLocal("place.although") }}
         </span>
       </div>
       <div class="recommendations">
         <div class="row has-cols">
-          <div class="col left">
-            <p>
-              According to the recommendations of various European fire
-              protection organisations and associations,
-              <span class="semibold"
-                >there should be at least 1 smoke alarm on every floor</span
-              >
-              (including the basements) of every home. In addition, it can be a
-              requirement to place alarms in all bedrooms (especially children's
-              rooms) and in rooms that are part of an escape route (e.g. hall,
-              corridor).
-            </p>
-          </div>
+          <div class="col left" v-html="toLocal('place.according')"></div>
           <div class="col">
             <div class="card red">
               <p>
-                <span class="semibold">Note:</span> In apartments, of course,
-                every corridor is also an escape route. In some houses there are
-                also corridors that do not serve as an exit in case of fire. We
-                recommend installing smoke alarms here especially if there are
-                sleeping quarters.
+                <span class="semibold">{{ toLocal("place.note") }}:</span>
+                {{ toLocal("place.apartaments") }}
               </p>
             </div>
           </div>
@@ -68,12 +48,7 @@
                 />
               </svg>
             </div>
-            <p>
-              We also recommend that
-              <span class="semibold">living rooms and study rooms</span> should
-              always be equipped with alarms and that these alarms be connected
-              to those in the sleeping areas.
-            </p>
+            <p v-html="toLocal('place.also_recommend')"></p>
           </div>
           <div class="row">
             <div class="arrow-right">
@@ -90,26 +65,10 @@
                 />
               </svg>
             </div>
-            <p>
-              It also makes sense to install an alarm in rooms where
-              <span class="semibold">there are electrical appliances</span>
-              (especially washing machines and dryers) and in
-              <span class="semibold">in remote rooms</span> that are frequently
-              used but where the signal from other smoke alarms cannot be heard.
-            </p>
+            <p v-html="toLocal('place.makes_sense')"></p>
           </div>
           <div class="row white">
-            <p>
-              In general, you should remember that
-              <span class="semibold"
-                >a smoke detector can monitor an area of up to 60 m²</span
-              >. If your room area is larger than 60 m², you should install an
-              additional smoke alarm. So depending on the size of your home,
-              this means that
-              <span class="semibold">you will need several smoke alarms</span>.
-              In corridors or escape routes an alarm should be positioned every
-              7.5 m.
-            </p>
+            <p v-html="toLocal('place.in_general')"></p>
           </div>
           <div class="row">
             <div class="arrow-right">
@@ -126,11 +85,7 @@
                 />
               </svg>
             </div>
-            <p>
-              Before installing your smoke alarms, please
-              <strong>check country-specific regulations</strong> or seek advice
-              from a local fire safety expert.
-            </p>
+            <p v-html="toLocal('place.before_installing')"></p>
           </div>
         </div>
       </div>
@@ -140,8 +95,7 @@
             <div class="row">
               <div class="legend">
                 <span class="legend-title">
-                  Location requirements for smoke and heat alarms according to
-                  the room of the house.
+                  {{ toLocal("place.location_req") }}
                 </span>
                 <div
                   class="legend-item"
@@ -152,7 +106,7 @@
                     class="legend-color"
                     :style="{ 'background-color': item.color }"
                   ></div>
-                  <div class="legend-text">{{ item.text }}</div>
+                  <div class="legend-text">{{ toLocal(item.text) }}</div>
                 </div>
               </div>
             </div>
@@ -162,83 +116,41 @@
           </div>
         </div>
         <div class="consider-container">
-          <h2>What to Consider for the Installation Location?</h2>
-          <span class="even-text"
-            >Now that we have determined which rooms / areas should be equipped
-            with detectors, the next question is
-            <span class="semibold"
-              >where in the room it should be installed.</span
-            ></span
-          >
+          <h2>{{ toLocal("place.what_to_consider") }}</h2>
+          <span class="even-text" v-html="toLocal('place.determined')"></span>
           <div class="card wheat mb-40">
             <p>
-              In many European countries, legislation specifies or refers to a
-              building code. Generally, the installation location must
-              prioritise early detection of fire smoke and a sound level
-              sufficient to wake all sleeping occupants on the property. Usually
-              this will require multiple alarms per property.
+              {{ toLocal("place.many_european") }}
             </p>
             <p>
-              In addition, there are also specifications on room sizes and
-              living areas which may be different from country to country. Your
-              local fire protection expert will be able to advise you on this.
+              {{ toLocal("place.addition") }}
             </p>
           </div>
-          <h2>Installation in the Room</h2>
+          <h2>{{ toLocal("place.installation_room") }}</h2>
           <div class="row has-cols">
             <div class="col left">
               <div class="row">
                 <div class="block-with-number">1</div>
-                <p>
-                  As smoke rises, it is always preferable to
-                  <span class="semibold">position alarms on the ceiling</span>
-                  to ensure the fastest possible detection. If this is not
-                  possible then wall mounting is allowed by some manufacturers.
-                  Always
-                  <span class="semibold">read the user manual</span> before
-                  starting the installation.
-                </p>
+                <p v-html="toLocal('place.smoke_rises')"></p>
               </div>
               <div class="row">
                 <div class="block-with-number">2</div>
-                <p>
-                  <span class="semibold"
-                    >Use the screws and rawlplugs provided with the alarm</span
-                  >
-                  to ensure a solid, secure fixing that will last for the 10
-                  year life of the product.
-                </p>
+                <p v-html="toLocal('place.rawlplug')"></p>
               </div>
               <div class="row">
                 <div class="block-with-number">3</div>
-                <p>
-                  Smoke alarms should be placed centrally in the room,
-                  <span class="semibold">at least 50 cm away from walls</span>
-                  to avoid dead air zones. Avoid objects such as lamps and other
-                  ceiling-mounted fixtures which may generate air currents that
-                  could deflect the smoke away from the alarm.
-                  <span class="semibold"
-                    >Do not install them near windows, doors, or ducts where
-                    drafts might interfere with their operation.</span
-                  >
-                </p>
+                <p v-html="toLocal('place.centrally')"></p>
               </div>
               <div class="row">
                 <div class="block-with-number">4</div>
-                <p>
-                  Smoke
-                  <span class="semibold">alarms installed in the basement</span>
-                  should be installed on the ceiling at the bottom of the stairs
-                  leading to the next level.
-                </p>
+                <p v-html="toLocal('place.basement')"></p>
               </div>
             </div>
             <div class="col">
               <div class="card red">
-                <h4>Never paint smoke alarms.</h4>
+                <h4>{{ toLocal("place.never_paint") }}</h4>
                 <p>
-                  Paint, stickers, or other decorations could keep the alarms
-                  from working.
+                  {{ toLocal("place.paint") }}
                 </p>
               </div>
             </div>
@@ -246,8 +158,8 @@
         </div>
         <div class="locations">
           <div class="content-section">
-            <h2>Siting and Locations of Smoke Alarms</h2>
-            <h4>Smoke, Heat and Fire Alarms</h4>
+            <h2>{{ toLocal("place.siting") }}</h2>
+            <h4>{{ toLocal("place.smoke") }}</h4>
             <div class="location-container">
               <div
                 class="location"
@@ -255,7 +167,7 @@
                 :key="index"
               >
                 <img :src="require(`@/assets/${location.img}`)" />
-                <p>{{ location.text }}</p>
+                <p>{{ toLocal(location.text) }}</p>
               </div>
             </div>
           </div>
@@ -283,34 +195,34 @@ export default {
       locations: [
         {
           img: "images/locations/location1.svg",
-          text: "Ceiling mount in central position.",
+          text: "place.ceiling",
         },
         {
           img: "images/locations/location2.svg",
-          text: "Site at least 300 mm from walls and obstructions (e.g. light pendant – where 300 mm cannot be achieved move closer to the pendant).",
+          text: "place.300_mm",
         },
         {
           img: "images/locations/location3.svg",
-          text: "Smoke alarms – max 7.5 m from any point in the area.",
+          text: "place.point",
         },
         {
           img: "images/locations/location4.svg",
-          text: "Heat alarms – max 5 m from any point in the area.",
+          text: "place.heat_alarms",
         },
         {
           img: "images/locations/location5.svg",
-          text: "Site alarm between risk areas (kitchen and lounge) and bedrooms.",
+          text: "place.risk_areas",
         },
         {
           img: "images/locations/location6.svg",
-          text: "Site alarms max 3 m from any bedroom door.",
+          text: "place.bedroom",
         },
       ],
       legend: [
-        { color: "#a2bae5a8", text: "Minimum protection" },
-        { color: "#ead40ea9", text: "Additional recommended protection" },
-        { color: "#d93c2eaf", text: "Recommended heat detector" },
-        { color: "#6FC06EBD", text: "No alarm" },
+        { color: "#a2bae5a8", text: "place.minimum_prot" },
+        { color: "#ead40ea9", text: "place.additional_prot" },
+        { color: "#d93c2eaf", text: "place.heat_detector" },
+        { color: "#6FC06EBD", text: "place.no_alarm" },
       ],
     };
   },

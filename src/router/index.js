@@ -1,62 +1,105 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import LandingPageView from '../views/LandingPageView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import LandingPageView from "../views/LandingPageView.vue";
+import RegulationsView from "../views/RegulationsPage.vue";
+import FactsView from "../views/FactsPage.vue";
+import TypesView from "../views/TypesPage.vue";
+import AlarmsView from "../views/AlarmPlacePage.vue";
+import DownloadsView from "../views/DownloadsPage.vue";
+import MaintainView from "../views/MaintainPage.vue";
+import PrivacyView from "../views/PrivacyPolicy.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'landingpage',
-    component: LandingPageView
+    path: "/",
+    name: "landingpage",
+    component: LandingPageView,
   },
   {
-    path: '/regulations',
-    name: 'regulations',
+    path: "/regulations",
+    name: "regulations",
 
-    component: () => import('../views/RegulationsPage.vue')
+    component: RegulationsView,
   },
   {
-    path: '/types',
-    name: 'types of smoke alarms',
-    component: ()=> import('../views/TypesPage.vue')
-  },
-   {
-    path: '/place',
-    name: 'place',
-    component: ()=> import('../views/AlarmPlacePage.vue')
-  },
-   {
-    path: '/practices',
-    name: 'practices',
-    component: ()=> import('../views/DownloadsPage.vue')
+    path: "/types",
+    name: "types of smoke alarms",
+    component: TypesView,
   },
   {
-    path: '/facts',
-    name: 'facts',
-    component: ()=> import('../views/FactsPage.vue')
+    path: "/place",
+    name: "place",
+    component: AlarmsView,
   },
   {
-    path: '/maintain',
-    name: 'maintain',
-    component: ()=> import('../views/MaintainPage.vue')
+    path: "/practices",
+    name: "practices",
+    component: DownloadsView,
   },
-   {
-    path: '/privacy-policy',
-    name: 'privacypolicy',
-    component: ()=> import('../views/PrivacyPolicy.vue')
+  {
+    path: "/facts",
+    name: "facts",
+    component: FactsView,
   },
-   {
-    path: '/*/',
-    name: 'PageNotFound',
-    component: LandingPageView
-  }
-]
+  {
+    path: "/maintain",
+    name: "maintain",
+    component: MaintainView,
+  },
+  {
+    path: "/privacy-policy",
+    name: "privacypolicy",
+    component: PrivacyView,
+  },
+
+  {
+    path: "/:lang",
+    name: "lang-home",
+    component: LandingPageView,
+  },
+  {
+    path: "/:lang/regulations",
+    name: "lang-regulations",
+    component: RegulationsView,
+  },
+  {
+    path: "/:lang/types",
+    name: "lang-types",
+    component: TypesView,
+  },
+  {
+    path: "/:lang/place",
+    name: "lang-place",
+    component: AlarmsView,
+  },
+  {
+    path: "/:lang/practices",
+    name: "lang-practices",
+    component: DownloadsView,
+  },
+  {
+    path: "/:lang/facts",
+    name: "lang-facts",
+    component: FactsView,
+  },
+  {
+    path: "/:lang/maintain",
+    name: "lang-maintain",
+    component: MaintainView,
+  },
+  {
+    path: "/:lang/privacy-policy",
+    name: "lang-privacy",
+    component: PrivacyView,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

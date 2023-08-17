@@ -3,21 +3,17 @@
     <div class="footer-image-container">
       <div class="image-with-under-text">
         <img src="@/assets/logo.svg" alt="logo" />
-        <span>17th November 2023</span>
+        <span>{{ toLocal("home.main_date") }}</span>
       </div>
     </div>
     <div class="footer-main-container">
       <div class="footer-column-wrapper">
-        <span class="join-us-header"
-          >Want to join the project? Contact us!</span
-        >
+        <span class="join-us-header">{{ toLocal("home.join_project") }}</span>
         <span class="text">EUROFSA</span>
         <span class="text email-link"
           >E-Mail: <a href="mailto:info@eurofsa.org">info@eurofsa.org</a></span
         >
-        <span class="bottom-rights"
-          >All content © 2023 European smoke alarm day campaign</span
-        >
+        <span class="bottom-rights">{{ toLocal("home.reserved") }}</span>
       </div>
     </div>
   </div>

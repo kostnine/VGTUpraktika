@@ -1,13 +1,13 @@
 <template>
   <div class="header-component">
     <div class="header-text-half">
-      <span class="header-title" v-html="titleText"></span>
-      <span class="header-content" v-html="contentText"></span>
+      <span class="header-title" v-html="toLocal(titleText)"></span>
+      <span class="header-content" v-html="toLocal(contentText)"></span>
       <span
         :class="['header-button', { longtext: buttonTextContent.length > 27 }]"
         @click="scroll(scrollToId)"
       >
-        {{ buttonTextContent
+        {{ toLocal(buttonTextContent)
         }}<img
           class="header-down-arrow"
           src="@/assets/icons/arrow_down_white.svg"

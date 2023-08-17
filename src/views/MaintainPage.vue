@@ -2,16 +2,16 @@
   <div class="maintain-page">
     <PageHeader
       image="images/maintain/battery.jpg"
-      title="How to Maintain<br> Smoke Alarms"
-      content="It is important that all smoke alarms in your home are working. Learn how to maintain them properly!"
-      buttonText="Learn More About Maintenance"
+      title="maintain.how"
+      content="maintain.important"
+      buttonText="maintain.maintenance"
       scrollTo="maintain"
     />
     <div class="maintain-page-main-container">
       <div class="maintain-header">
-        <span class="maintain-header-title" id="maintain"
-          >How to Maintain Smoke Alarms?</span
-        >
+        <span class="maintain-header-title" id="maintain">{{
+          toLocal("maintain.how_to_maintain")
+        }}</span>
       </div>
       <div class="maintain-item">
         <div class="maintain-item-text-part">
@@ -30,21 +30,16 @@
                 />
               </svg>
             </div>
-            It is important to test and clean your smoke alarm on a regular
-            basis</span
+            {{ toLocal("maintain.test") }}</span
           >
           <span class="maintain-item-text-block first">
-            We advise to test the smoke alarm on a fixed date every month and to
-            clean the smoke alarm every 6 months.
+            {{ toLocal("maintain.clean") }}
           </span>
           <span class="maintain-item-text-block">
-            Cleaning can be done by vacuum cleaning the part of the smoke alarm
-            that has the opening for smoke, this is often the side of the alarm,
-            to avoid dust building up inside the alarm.
+            {{ toLocal("maintain.vacuum") }}
           </span>
           <span class="maintain-item-text-block last">
-            The holes on top of the alarm are most often the sound output. It is
-            also advised to clean the smoke alarm with a moist cloth.
+            {{ toLocal("maintain.holes") }}
           </span>
         </div>
         <div class="maintain-item-image-container">
@@ -62,21 +57,16 @@
         </div>
         <div class="text-container">
           <span class="title-text">
-            A smoke alarm that is not cleaned could cause false alarms
+            {{ toLocal("maintain.false") }}
           </span>
           <span class="text-block">
-            Smoke alarms have a normal working lifetime of 10 years, after this
-            period the functionality of the smoke alarm can no longer be
-            guaranteed.
+            {{ toLocal("maintain.lifetime") }}
           </span>
           <span class="text-block">
-            Inside the smoke alarm an optical smoke chamber can detect smoke, as
-            the visual shows.
+            {{ toLocal("maintain.optical") }}
           </span>
           <span class="text-block last">
-            When dust or other pollution builds up inside the smoke alarm, the
-            working of the alarm is compromised and the alarm should be
-            replaced.
+            {{ toLocal("maintain.dust") }}
           </span>
         </div>
       </div>
@@ -97,16 +87,13 @@
                 />
               </svg>
             </div>
-            If you have chosen smoke alarms with a battery that needs to be
-            replaced
+            {{ toLocal("maintain.chosen") }}
           </span>
           <span class="maintain-item-text-block">
-            Please replace the battery on a fixed date every year or mark in
-            your calendar when the battery must be replaced.
+            {{ toLocal("maintain.replace") }}
           </span>
           <span class="maintain-item-text-block">
-            All smoke alarms will give an audible warning when the battery runs
-            lows which will sound for 30 days or until the battery is replaced.
+            {{ toLocal("maintain.audible") }}
           </span>
         </div>
         <div class="maintain-item-image-container">
@@ -170,7 +157,6 @@ export default {
               el !== e.target &&
               e.target.classList[0] != "zoomable")
           ) {
-            console.log("should be closed");
             binding.value(e);
           }
         };
@@ -180,8 +166,7 @@ export default {
         document.addEventListener("click", handler);
       },
 
-      unbind: function (el, binding) {
-        console.log(binding);
+      unbind: function (el) {
         document.removeEventListener("click", el.__vueClickOutside__);
         el.__vueClickOutside__ = null;
       },

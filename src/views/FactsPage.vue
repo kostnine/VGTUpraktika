@@ -2,18 +2,18 @@
   <div class="facts-page-container">
     <PageHeader
       image="images/green_block.jpg"
-      title="Important facts"
-      content="Some surprising facts that you may not know!"
-      buttonText="Read more"
+      title="facts.facts"
+      content="facts.surprising"
+      buttonText="facts.read_more"
       scrollTo="facts"
     />
     <div class="facts-page-main">
       <div class="facts-main-header">
-        <span class="header-title" id="facts"
-          >Smoke Alarms Have One Major Benefit – They Save Lives!</span
-        >
+        <span class="header-title" id="facts">{{
+          toLocal("facts.benefit")
+        }}</span>
         <div class="header-list">
-          <span class="header-list-title">Did you know?</span>
+          <span class="header-list-title">{{ toLocal("facts.Dyk") }}</span>
           <span class="header-list-item"
             ><div class="arrow-right">
               <svg
@@ -29,8 +29,7 @@
                 />
               </svg>
             </div>
-            By installing a smoke alarm, you reduce the chances of a fire
-            occurring in your house by 75 percent.</span
+            {{ toLocal("facts.installing") }}</span
           >
           <span class="header-list-item"
             ><div class="arrow-right">
@@ -47,8 +46,7 @@
                 />
               </svg>
             </div>
-            By having a smoke alarm at your house, you ae 4 times less likely to
-            die.</span
+            {{ toLocal("facts.less_likely") }}</span
           >
           <span class="header-list-item"
             ><div class="arrow-right">
@@ -65,7 +63,7 @@
                 />
               </svg>
             </div>
-            Deaths occur in 10 percent of homes that have no smoke alarms.</span
+            {{ toLocal("facts.deaths") }}</span
           >
         </div>
       </div>
@@ -73,10 +71,10 @@
         <div class="red-bar"></div>
         <div class="facts-item">
           <div class="item-title">
-            <span class="item-text-title">Success stories</span>
+            <span class="item-text-title">{{ toLocal("facts.success") }}</span>
             <span class="item-text-content"
-              >These smoke alarms have saved lives.<br />
-              Some of them are still working!</span
+              >{{ toLocal("facts.saved_lives") }}<br />
+              {{ toLocal("facts.still_work") }}</span
             >
           </div>
           <div class="item-window">
@@ -89,11 +87,11 @@
           </div>
         </div>
         <div class="facts-share">
-          <span class="share-title">Share your story with us!</span>
+          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
           <button @click="mailto">info@eurofsa.org</button>
         </div>
         <div class="facts-how">
-          <span class="how-title">How Do Smoke Alarms Work?</span>
+          <span class="how-title">{{ toLocal("facts.how") }}</span>
 
           <div class="how-container">
             <div class="how-images">
@@ -106,39 +104,37 @@
             </div>
             <div class="how-text">
               <div class="column-text-list">
-                <span class="text-in-list"
-                  >All optical smoke alarms have a smoke chamber with a light
-                  and the receiver.</span
-                >
-                <span class="text-in-list"
-                  >As soon as smoke enters the smoke chamber and diffuses the
-                  lights, the smoke alarm will sound.</span
-                >
+                <span class="text-in-list">{{
+                  toLocal("facts.smoke_chamber")
+                }}</span>
+                <span class="text-in-list">{{
+                  toLocal("facts.smoke_enters")
+                }}</span>
               </div>
               <div class="column-text-list bullets">
                 <span class="text-with-bullet first"
                   ><div class="colored-block">1</div>
-                  Smoke entry</span
+                  {{ toLocal("facts.entry") }}</span
                 >
                 <span class="text-with-bullet"
                   ><div class="colored-block">2</div>
-                  Insect screen</span
+                  {{ toLocal("facts.insect") }}</span
                 >
                 <span class="text-with-bullet"
                   ><div class="colored-block">3</div>
-                  Light transmitter</span
+                  {{ toLocal("facts.light") }}</span
                 >
                 <span class="text-with-bullet"
                   ><div class="colored-block">4</div>
-                  Light receiver</span
+                  {{ toLocal("facts.receiver") }}</span
                 >
                 <span class="text-with-bullet"
                   ><div class="colored-block">5</div>
-                  EMC shield</span
+                  {{ toLocal("facts.emc") }}</span
                 >
                 <span class="text-with-bullet last"
                   ><div class="colored-block">6</div>
-                  Ambient light diaphragm</span
+                  {{ toLocal("facts.light_dia") }}</span
                 >
               </div>
             </div>

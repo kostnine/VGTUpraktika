@@ -2,13 +2,11 @@
   <div class="landing-page">
     <section class="date" id="smokealarmssavelives">
       <div class="text">
-        <h1 class="primary">European</h1>
-        <h1><strong>Smoke Alarm</strong> Day</h1>
-        <h2>17th November 2023</h2>
+        <h1 class="primary">{{ toLocal("home.european") }}</h1>
+        <h1 v-html="toLocal('home.smoke_day')"></h1>
+        <h2>{{ toLocal("home.main_date") }}</h2>
         <span class="hashtag">#smokealarmssavelives</span>
-        <span class="under-hashtag"
-          >This Campaign is part of European Fire Safety Week</span
-        >
+        <span class="under-hashtag">{{ toLocal("home.campaign") }}</span>
       </div>
       <div class="illustrations">
         <div class="smoke-detector-container">
@@ -76,22 +74,18 @@
           </div>
         </div>
         <div class="text">
-          <h3>Messages of Support</h3>
+          <h3>{{ toLocal("home.support") }}</h3>
 
-          <p>
-            Fire officers all over Europe support
-            <span class="semibold">#smokealarmsaveslives</span>
-            campaign.
-          </p>
+          <p v-html="toLocal('home.fire_officers')"></p>
           <div class="button-container" v-if="this.windowWidth >= 768">
             <button @click="$router.push({ path: '/types' })">
-              Find Out More About Smoke Alarms
+              {{ toLocal("home.find_more") }}
             </button>
             <button
               class="secondary"
               @click="$router.push({ path: '/regulations' })"
             >
-              Regulations for Smoke Alarms in Europe
+              {{ toLocal("home.regulations") }}
             </button>
           </div>
         </div>
@@ -167,7 +161,7 @@
             <div
               class="video"
               v-for="(video, index) in footerVideos"
-              :key="`videoKey-${video.id}`"
+              :key="`videoKey-${video.id}-${index}`"
               id="carousel-footer"
               :class="{ loading: isLoadingNewVideo }"
             >
@@ -214,20 +208,20 @@
       </div>
       <div class="button-container" v-if="this.windowWidth < 768">
         <button @click="$router.push({ path: '/types' })">
-          Find Out More About Smoke Alarms
+          {{ toLocal("home.find_more") }}
         </button>
         <button
           class="secondary"
           @click="$router.push({ path: '/regulations' })"
         >
-          Regulations for Smoke Alarms in Europe
+          {{ toLocal("home.regulations") }}
         </button>
       </div>
     </section>
     <section class="supporters" id="supporters">
       <div class="modal">
         <div class="modal-content">
-          <h3>This Campaign is Supported by:</h3>
+          <h3>{{ toLocal("home.supported_by") }}:</h3>
           <div class="supporter-container">
             <a
               :href="supporter.url"
@@ -276,17 +270,20 @@
       <div class="red-circle"></div>
     </section>
     <section class="information" id="information">
-      <h3>Information You Need to Know About Smoke Alarms</h3>
-      <span>Click and find out more!</span>
+      <h3>{{ toLocal("home.information") }}</h3>
+      <span>{{ toLocal("home.click_and_find") }}</span>
       <div class="card-container">
         <div
           class="card"
           v-for="(card, index) in cards"
-          :key="index"
+          :key="'card-' + index"
           @click="card.action"
         >
           <div class="card-content">
-            <div class="text" v-html="card.text"></div>
+            <div class="text">
+              {{ toLocal(card.key1) }} <br />
+              {{ toLocal(card.key2) }}
+            </div>
             <img
               v-if="card.img != ''"
               :src="require(`@/assets/${card.img}`)"
@@ -423,24 +420,27 @@ export default {
       ],
       cards: [
         {
-          text: "About<br> Smoke Alarms",
+          key1: "home.about",
+          key2: "home.smoke_alarms",
           img: "images/cards/detector.png",
           action: () => {
-            this.$router.push({ path: "/types" });
+            this.$router.push({ path: "./types" });
           },
         },
         {
-          text: "Where to place <br> Smoke Alarms",
+          key1: "home.where_to_place",
+          key2: "home.smoke_alarms",
           img: "images/cards/room.png",
           action: () => {
-            this.$router.push({ path: "/place" });
+            this.$router.push({ path: "./place" });
           },
         },
         {
-          text: "How to Maintain<br> Smoke Alarms",
+          key1: "home.maintain",
+          key2: "home.smoke_alarms",
           img: "images/cards/maintain.png",
           action: () => {
-            this.$router.push({ path: "/maintain" });
+            this.$router.push({ path: "./maintain" });
           },
         },
       ],
@@ -557,8 +557,6 @@ export default {
     playVideo() {
       this.$nextTick(() => {
         setTimeout(() => {
-          console.log(this.videoStack.length, this.$refs["mainMessageVideo-2"]);
-
           this.$refs[
             "mainMessageVideo-" + (this.videoStack.length - 1)
           ][0].player.play();
@@ -570,9 +568,7 @@ export default {
         this.swiper = swiper;
       }
     },
-    onSlideChange() {
-      console.log("slide change");
-    },
+    onSlideChange() {},
     onResize() {
       this.windowWidth = window.innerWidth;
     },
@@ -643,7 +639,6 @@ export default {
       if (this.transitioning) return;
       this.transitioning = true;
       if (isForward) {
-        console.log(this.mobileVideos);
         const innerWidth = this.$refs.mInner.scrollWidth;
         const cards = this.mobileVideos.length;
         this.cTranslation = `${innerWidth / cards / 4.65}px`;
@@ -659,16 +654,13 @@ export default {
           };
           for (let i = 0; i < 1; i++) {
             let card = this.mobileVideos[i];
-            console.log(card);
             this.mobileVideos.push(card);
             this.mobileVideos.shift();
-            console.log(this.$refs.mInner.parentElement);
           }
           this.transitioning = false;
           this.rerenderingVideo += 1;
         }, 500);
       } else {
-        console.log(this.videos);
         const innerWidth = this.$refs.mInner.scrollWidth;
         const cards = this.videos.length;
         this.cTranslation = `${(innerWidth / cards) * 1.8}px`;

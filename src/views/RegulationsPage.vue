@@ -2,33 +2,32 @@
   <div class="regulations-page-container">
     <PageHeader
       image="images/Man_writing.png"
-      title="Regulations in Europe"
-      content="Check out the interactive map to find out more about regulations on smoke alarms in domestic properties in different European countries."
-      buttonText="Map of Europe"
+      title="header.regulations"
+      content="reg.check_map"
+      buttonText="reg.map"
       scrollTo="map"
     />
     <div class="regulations-page-map" id="map">
       <div class="regulations-page-text-content" v-if="activeCountry == ''">
-        <span class="regulations-page-text-title"
-          >Smoke alarm requirements</span
-        >
-        <span class="regulations-page-text-subInfo"
-          >Click on the map and see what the requirements in each country
-          are.</span
-        >
+        <span class="regulations-page-text-title">{{
+          toLocal("reg.requirements")
+        }}</span>
+        <span class="regulations-page-text-subInfo">{{
+          toLocal("reg.see_reqs")
+        }}</span>
         <div class="regulations-page-dict-row">
           <div class="regulations-page-dict-wrapper">
             <span class="regulations-page-text-dict"
               ><div class="colored-block blue"></div>
-              Multiple alarms per property</span
+              {{ toLocal("reg.multiple") }}</span
             >
             <span class="regulations-page-text-dict"
               ><div class="colored-block orange"></div>
-              At least one alarm per property</span
+              {{ toLocal("reg.atleast_one") }}</span
             >
             <span class="regulations-page-text-dict"
               ><div class="colored-block red"></div>
-              No alarm requirement</span
+              {{ toLocal("reg.no_req") }}</span
             >
           </div>
         </div>
@@ -37,7 +36,9 @@
           @model="this.activeCountry"
           @change="(e) => setActiveCountry(e.target.value)"
         >
-          <option hidden disabled value="" selected>Select a country</option>
+          <option hidden disabled value="" selected>
+            {{ toLocal("reg.select") }}
+          </option>
           <option
             v-for="(country, key) in this.sorted_countries"
             :key="key"
@@ -48,14 +49,14 @@
         </select>
 
         <div class="regulations-information-block">
-          <span class="regulations-information-title">Information:</span>
+          <span class="regulations-information-title"
+            >{{ toLocal("reg.info") }}:</span
+          >
           <ul>
-            <li>Extensive smoke alarm legislation in multiple countries</li>
-            <li>No legislation in Southern / Eastern Europe</li>
+            <li>{{ toLocal("reg.extensive") }}</li>
+            <li>{{ toLocal("reg.no_south") }}</li>
             <li>
-              Consumer awareness is found to be the most important influence in
-              the decision to buy a smoke alarm, even without legislation or
-              when legislation is limited.
+              {{ toLocal("reg.consumer") }}
             </li>
           </ul>
         </div>
@@ -91,12 +92,7 @@
       </div>
     </div>
     <div class="disclaimer-bar">
-      <span class="disclaimer-text"
-        >E&OE – While we have made every effort to ensure the information
-        provided is correct and up to date, we accept that there maybe errors
-        and welcome updates. Corrections and contributions to improve accuracy
-        or additional detail.</span
-      >
+      <span class="disclaimer-text">{{ toLocal("reg.E_OE") }}</span>
     </div>
   </div>
 </template>

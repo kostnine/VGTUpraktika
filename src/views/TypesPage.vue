@@ -2,24 +2,19 @@
   <div class="types-page-container">
     <PageHeader
       image="images/hand_detector.jpg"
-      title="About Smoke Alarms"
-      content="Which smoke alarm is the best for you?<br> Let's find out!"
-      buttonText="Learn More"
+      title="header.about"
+      content="types.which"
+      buttonText="types.learn_more"
       scrollTo="types"
       break="false"
     />
     <div class="types-page-main-container">
       <div class="main-header">
-        <span class="main-header-title" id="types"
-          >How to Choose Your Smoke Alarm?</span
-        >
+        <span class="main-header-title" id="types">{{
+          toLocal("types.how_to_choose")
+        }}</span>
         <div class="main-header-content centered-row">
-          <span
-            >All smoke alarms placed on the EU market must be third party
-            certified to <strong class="semibold">EN14604</strong> and
-            <strong class="semibold">CE marked</strong> to conform with the
-            Construction Products Directive.</span
-          >
+          <span v-html="toLocal('types.certified')"></span>
           <div class="image-container">
             <img src="@/assets/images/C_sign.svg" alt="c_sign" />
           </div>
@@ -29,41 +24,29 @@
             <img src="@/assets/images/battery.jpg" alt="linked" />
           </div>
           <div class="main-content-text">
+            <span
+              class="content-text-block"
+              v-html="toLocal('types.battery')"
+            ></span>
             <span class="content-text-block"
-              >When you buy a smoke alarm, please pay attention to
-              <span class="semibold">the battery lifetime</span> of the
-              product.</span
-            >
-            <span class="content-text-block"
-              >Smoke alarms can have a replaceable battery with a lifetime of 1
-              up to 5 years. When the battery is empty you need to replace it,
-              after ten years of usage you need to replace the smoke alarm as
-              well.
+              >{{ toLocal("types.replacable") }}
             </span>
-            <span class="content-text-block"
-              >This is why smoke alarms with a sealed 10 year lifetime battery
-              are the better option. Calculated over these ten years it is the
-              best priced option because you do not need to replace the battery.
-              You also do not run the risk of using the alarm for more than ten
-              years.</span
-            >
+            <span class="content-text-block">{{
+              toLocal("types.lifetime")
+            }}</span>
           </div>
         </div>
         <div class="main-header-content">
           <div class="column-div">
-            <span class="whole-text"
-              >Another option is choosing a smoke alarm which is
-              <span class="semibold">interconnected</span>, this means if 1
-              smoke alarm detects smoke, they all go off.<br
-            /></span>
+            <span
+              class="whole-text"
+              v-html="toLocal('types.interconnected')"
+            ></span>
             <div class="separator"></div>
-            <span class="whole-text"
-              >You can choose
-              <span class="semibold"
-                >wireless interconnected smoke alarms or mains connected smoke
-                alarms.</span
-              ></span
-            >
+            <span
+              class="whole-text"
+              v-html="toLocal('types.wireless_int')"
+            ></span>
           </div>
         </div>
       </div>
@@ -76,24 +59,21 @@
             <img src="@/assets/images/types_smoke_detector.png" alt="linked" />
           </div>
           <div class="main-content-text">
-            <span class="content-text-title">Linked Smoke Alarm(s)</span>
+            <span class="content-text-title">{{
+              toLocal("types.linked")
+            }}</span>
+            <span class="content-text-block">{{
+              toLocal("types.property")
+            }}</span>
             <span class="content-text-block"
-              >In any property where multiple Smoke Alarms are deemed necessary,
-              it is recommended to interconnect the alarms</span
-            >
-            <span class="content-text-block"
-              >All alarms will sound once any one of them detects smoke. This
-              provides earlier warning and improves escape time.
+              >{{ toLocal("types.all_alarms") }}
             </span>
-            <span class="content-text-block"
-              >Interconnect can be hardwired or use radio linked signals
-              depending on your property and the technology used.</span
-            >
-            <span class="content-text-block"
-              >It is especially useful in multple storey properties or where the
-              sleeping zones are distant from the living areas where the fire
-              risk may be higher.</span
-            >
+            <span class="content-text-block">{{
+              toLocal("types.hardwired")
+            }}</span>
+            <span class="content-text-block">{{
+              toLocal("types.multiple_storey")
+            }}</span>
           </div>
         </div>
       </div>

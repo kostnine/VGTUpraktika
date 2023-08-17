@@ -1,32 +1,37 @@
 <template>
   <div
     class="country-card"
-    :class="this.country_data[countryInfo].expanded == true ? 'expanded' : ''"
-    v-scroll-lock="this.windowWidth <= 768"
+    :class="country_data[countryInfo].expanded == true ? 'expanded' : ''"
+    v-scroll-lock="windowWidth <= 768"
   >
     <div class="nav-line">
       <img
         src="@/assets/icons/close_cross.svg"
         class="card-close"
         alt="close"
-        @click="this.closeActiveCountry"
+        @click="closeActiveCountry"
       />
     </div>
 
     <span class="country-title">
-      {{ this.country_data[countryInfo].name }}
+      {{
+        translateCountry(
+          country_data[countryInfo].displayName,
+          country_data[countryInfo].name
+        )
+      }}
     </span>
     <div
       class="country-segment"
-      v-for="(segment, key) in this.country_data[this.countryInfo].content"
+      v-for="(segment, key) in country_data[this.countryInfo].content"
       :key="key"
     >
       <span v-if="segment.title != undefined" class="segment-title">{{
-        segment.title
+        translateCountry(segment.title, country_data[countryInfo].name)
       }}</span>
       <span
         v-if="segment.text != undefined"
-        v-html="segment.text"
+        v-html="translateCountry(segment.text, country_data[countryInfo].name)"
         class="segment-content"
       ></span>
       <div
@@ -39,9 +44,14 @@
             v-if="link.gap_above != 0"
             :style="['width: 100%', { height: link.gap_above }]"
           ></div>
-          <span class="link-title">{{ link.link_title }} </span
+          <span class="link-title"
+            >{{
+              translateCountry(link.link_title, country_data[countryInfo].name)
+            }}: </span
           ><br v-if="link.isUrlInNewLine" />
-          <a :href="link.link_url" target="_blank">{{ link.link_name }}</a>
+          <a :href="link.link_url" target="_blank">{{
+            translateCountry(link.link_name, country_data[countryInfo].name)
+          }}</a>
           <div
             v-if="link.gap_below != 0"
             :style="['width: 100%', { height: link.gap_below }]"
@@ -92,6 +102,12 @@ export default {
     },
   },
   methods: {
+    translateCountry(text, name = null) {
+      if (text.includes("<name>")) {
+        text = text.replace("<name>", name.toLowerCase());
+      }
+      return this.toLocal(text);
+    },
     closeOpenedCountry() {
       this.closeActiveCountry;
     },

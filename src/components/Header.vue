@@ -1,7 +1,7 @@
 <template>
   <div class="header-container">
     <div class="header-image-container">
-      <router-link class="logo" to="/"
+      <router-link class="logo" :to="`/${$store.state.lang}/`"
         ><img src="@/assets/logo.svg" alt="logo"
       /></router-link>
     </div>
@@ -17,16 +17,20 @@
       class="header-navigation-bar"
       :class="{ open: windowWidth < 768 ? isMenuOpen : true }"
     >
-      <router-link to="/" class="header-nav-block"> Home </router-link>
-      <router-link to="/regulations" class="header-nav-block"
-        >Regulations in Europe</router-link
+      <router-link :to="`/${$store.state.lang}/`" class="header-nav-block">
+        {{ toLocal("header.home") }}
+      </router-link>
+      <router-link
+        :to="`/${$store.state.lang}/regulations`"
+        class="header-nav-block"
+        >{{ toLocal("header.regulations") }}</router-link
       >
       <div class="header-button-with-dropdown">
         <div
           class="header-nav-block dropdown"
           @click="dropdownExtended = !dropdownExtended"
         >
-          Smoke Alarm Information
+          {{ toLocal("header.sm_info") }}
           <img
             :class="dropdownExtended ? 'flipped' : 'non-flipped'"
             src="@/assets/icons/arrow_down.svg"
@@ -39,24 +43,67 @@
             class="header-dropdown"
             v-click-outside="closeDropdown"
           >
-            <router-link to="/types" class="header-nav-block link-dropdown"
-              >About Smoke Alarms</router-link
+            <router-link
+              :to="`/${$store.state.lang}/types`"
+              class="header-nav-block link-dropdown"
+              >{{ toLocal("header.about") }}</router-link
             >
-            <router-link to="/place" class="header-nav-block link-dropdown"
-              >Where To Place Smoke Alarms</router-link
+            <router-link
+              :to="`/${$store.state.lang}/place`"
+              class="header-nav-block link-dropdown"
+              >{{ toLocal("header.where") }}</router-link
             >
-            <router-link to="/maintain" class="header-nav-block link-dropdown"
-              >How to Maintain Smoke Alarms</router-link
+            <router-link
+              :to="`/${$store.state.lang}/maintain`"
+              class="header-nav-block link-dropdown"
+              >{{ toLocal("header.maintain") }}</router-link
             >
           </div>
         </transition>
       </div>
-      <router-link to="/facts" class="header-nav-block"
-        >Important Facts</router-link
+      <router-link
+        :to="`/${$store.state.lang}/facts`"
+        class="header-nav-block"
+        >{{ toLocal("header.important_facts") }}</router-link
       >
-      <router-link to="/practices" class="header-nav-block"
-        >Best practices</router-link
+      <router-link
+        :to="`/${$store.state.lang}/practices`"
+        class="header-nav-block"
+        >{{ toLocal("header.practices") }}</router-link
       >
+      <div
+        class="language-selector header-nav-block dropdown"
+        @click="langDropdown"
+      >
+        {{ languages[$store.state.lang] }}
+        <svg
+          :class="{ reversed: isLangExtended }"
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="6"
+          viewBox="0 0 12 6"
+          fill="none"
+        >
+          <path d="M1 1L6 5L11 1" stroke="#1E1826" stroke-width="1.5" />
+        </svg>
+        <transition name="slide">
+          <div
+            class="language-dropdown"
+            v-click-outside="closeLangDropdown"
+            v-if="isLangExtended"
+          >
+            <span
+              class="dropdown-element"
+              :class="{ active: $store.state.lang == language.prefix }"
+              v-for="language in dropdownLanguages"
+              :key="`lang-${language.id}`"
+              @click="changeLanguage(language.prefix)"
+            >
+              {{ language.name }}
+            </span>
+          </div>
+        </transition>
+      </div>
     </nav>
   </div>
 </template>
@@ -69,6 +116,23 @@ export default {
       dropdownExtended: false,
       isMenuOpen: false,
       isNotHome: false,
+      isLangExtended: false,
+      languages: {
+        CZ: "Czech",
+        EN: "English",
+      },
+      dropdownLanguages: [
+        {
+          id: 1,
+          name: "English",
+          prefix: "EN",
+        },
+        {
+          id: 2,
+          name: "Czech",
+          prefix: "CZ",
+        },
+      ],
     };
   },
   watch: {
@@ -83,6 +147,16 @@ export default {
     },
   },
   methods: {
+    langDropdown() {
+      this.isLangExtended = !this.isLangExtended;
+    },
+    changeLanguage(lang) {
+      this.$store.state.lang = lang;
+      window.location.href = "/" + lang;
+    },
+    closeLangDropdown() {
+      this.isLangExtended = false;
+    },
     linkClick() {
       if (this.windowWidth < 768) {
         this.isMenuOpen = false;
@@ -96,9 +170,9 @@ export default {
     "click-outside": {
       bind: function (el, binding, vnode) {
         el.clickOutsideEvent = function (event) {
-          console.log(vnode.context);
           let outside = true;
-          if (event.target.classList[1] == "dropdown") {
+          console.log(event.target.classList.contains("dropdown"));
+          if (event.target.classList.contains("dropdown")) {
             outside = false;
           }
           Object.keys(el.children).forEach((child) => {
@@ -106,6 +180,7 @@ export default {
               outside = false;
             }
           });
+          console.log(outside);
           if (outside) {
             vnode.context[binding.expression](event);
           }
@@ -168,6 +243,7 @@ export default {
       margin-left: 64px;
     }
     .header-nav-block {
+      user-select: none;
       font-size: 16px;
       text-decoration: none;
       color: black;
@@ -186,11 +262,55 @@ export default {
       }
       &:hover {
         &:not(.link-dropdown) {
-          font-family: $semiBoldFont;
-          border-bottom: 2px solid #000000;
+          &:not(.language-selector) {
+            font-family: $semiBoldFont;
+            border-bottom: 2px solid #000000;
+          }
         }
         &.link-dropdown {
           font-family: $semiBoldFont;
+        }
+      }
+    }
+    .language-selector {
+      padding: 4px 12px;
+      border: 1px solid #c0554b;
+      border-radius: 5px;
+      margin-top: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      min-width: 88px;
+      transition: 0.2s ease-in-out;
+      transform-origin: top;
+      margin-left: 10px;
+      @media (max-width: 769px) {
+        margin-left: 15px;
+      }
+      .reversed {
+        transition: 0.25s;
+        transform: rotate(180deg);
+      }
+      .language-dropdown {
+        position: absolute;
+        transform-origin: top;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background: #c0554b;
+        transition: 0.25s;
+        .dropdown-element {
+          width: 100%;
+          color: white;
+          padding: 6px 4px;
+          &:hover {
+            font-weight: 600;
+          }
         }
       }
     }
@@ -311,7 +431,9 @@ export default {
         z-index: 99;
         .header-nav-block {
           font-size: clamp(16px, 7vw, 36px);
-          margin: 3vh 0;
+          &:not(.language-selector) {
+            margin: 3vh 0;
+          }
           .header-button-with-dropdown {
             width: 100%;
           }

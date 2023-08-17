@@ -36,8 +36,7 @@ export default {
     },
   },
   watch: {
-    windowScrollTop: function (newVal) {
-      console.log(newVal);
+    windowScrollTop: function () {
       const footer = document
         .querySelector(".footer-container")
         .getBoundingClientRect();
