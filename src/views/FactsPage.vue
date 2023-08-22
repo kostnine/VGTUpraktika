@@ -306,8 +306,8 @@ export default {
     .item-window {
       display: grid;
       box-sizing: border-box;
-      grid-template-columns: auto auto;
-      grid-auto-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       grid-auto-columns: auto;
       grid-column-gap: 50px;
       grid-row-gap: 30px;
@@ -318,6 +318,8 @@ export default {
         justify-content: center;
         align-items: center;
         width: 100%;
+        max-width: 100%;
+        max-height: 100%;
         box-sizing: border-box;
         border-radius: 15px;
         img {

@@ -98,7 +98,6 @@ export default {
   watch: {
     country(newVal) {
       this.countryInfo = newVal;
-      console.log(this.countryInfo);
     },
   },
   methods: {
@@ -112,7 +111,6 @@ export default {
       this.closeActiveCountry;
     },
     clearCountry() {
-      console.log("test");
     },
     onResize() {
       this.windowWidth = window.innerWidth;

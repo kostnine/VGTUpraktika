@@ -177,7 +177,6 @@ export default {
       bind: function (el, binding, vnode) {
         el.clickOutsideEvent = function (event) {
           let outside = true;
-          console.log(event.target.classList.contains("dropdown"));
           if (event.target.classList.contains("dropdown")) {
             outside = false;
           }
@@ -186,7 +185,6 @@ export default {
               outside = false;
             }
           });
-          console.log(outside);
           if (outside) {
             vnode.context[binding.expression](event);
           }

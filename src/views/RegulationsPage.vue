@@ -207,6 +207,7 @@ export default {
   box-sizing: border-box;
   align-items: center;
   overflow: hidden;
+  justify-content: space-between;
   @media (max-width: 1280px) {
     height: fit-content;
     padding: 0 0 80px 80px;
@@ -239,7 +240,7 @@ export default {
   }
 }
 .regulations-page-map-content {
-  width: 61%;
+  width: 50%;
   height: 95%;
   div {
     width: 100%;
