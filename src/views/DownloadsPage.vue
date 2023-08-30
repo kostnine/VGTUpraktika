@@ -84,6 +84,23 @@
           </div>
         </div>
         <div class="section-container">
+          <div class="video-container-with-text">
+            <span class="video-title">Duerme Tranquilo </span>
+            <div class="video">
+              <iframe
+                :src="`https://www.youtube.com/embed/6g8PWXPgJjA?si=CAZuTuluZEgq-luw`"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <span class="video-url"
+              >https://www.youtube.com/watch?v=6g8PWXPgJjA</span
+            >
+          </div>
+        </div>
+        <div class="section-container">
           <div class="brochure-container">
             <span class="title">{{ toLocal("downloads.brochure") }}:</span>
             <div
@@ -290,18 +307,38 @@
       </div>
       <div class="red-circle"></div>
       <div class="extra-container">
-        <span class="title">{{ toLocal("downloads.raising_awareness") }}</span>
-        <span class="subtitle">{{ toLocal("downloads.video_french") }}</span>
-        <div class="video-container">
-          <div class="video">
-            <iframe
-              :src="`https://www.youtube.com/embed/9B49KCXF2BY`"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <span>https://youtu.be/9B49KCXF2BY</span>
+        <div class="half">
+          <span class="title">{{
+            toLocal("downloads.raising_awareness")
+          }}</span>
+          <span class="subtitle">{{ toLocal("downloads.video_french") }}</span>
+          <div class="video-container">
+            <div class="video">
+              <iframe
+                :src="`https://www.youtube.com/embed/9B49KCXF2BY`"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <span>https://youtu.be/9B49KCXF2BY</span>
+            </div>
+          </div>
+        </div>
+        <div class="half">
+          <span class="title"> How to install a Smoke detector </span>
+          <span class="subtitle">By Home Depot</span>
+          <div class="video-container">
+            <div class="video">
+              <iframe
+                :src="`https://www.youtube.com/embed/Y8duhoCdDz4`"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <span>https://youtu.be/Y8duhoCdDz4</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1059,6 +1096,9 @@ h3 {
     width: 33%;
     margin-right: 1.5%;
     margin-left: 1.5%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
     @media (max-width: 768px) {
       width: 100%;
       display: flex;
@@ -1218,9 +1258,19 @@ h3 {
   min-width: 400px;
   background-color: #fbf3ed;
   display: flex;
-  flex-direction: column;
+  .half {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   padding: 40px calc(min(160px, 10vw));
   @media (max-width: 768px) {
+    flex-direction: column;
     justify-content: center;
     min-width: fit-content;
   }
@@ -1260,6 +1310,7 @@ h3 {
         max-width: 90vw;
         margin-top: 16px;
         height: 50vw;
+        width: 100%;
       }
       iframe {
         width: 100%;
