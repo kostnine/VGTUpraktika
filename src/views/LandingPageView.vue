@@ -752,6 +752,12 @@ section {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  @media(max-height: 768px)and( min-width: 1024px){
+    height: 130vh;
+  }
+  @media(max-height: 600px){
+    height: 150vh;
+  }
 }
 .play-button {
   opacity: 0.6;
@@ -784,7 +790,7 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-  padding: 196px 0 0 calc(min(160px, 10vw));
+  padding: 250px 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
     flex-direction: column;
@@ -802,6 +808,7 @@ section {
       width: 100%;
       padding: 0rem;
       margin: 0;
+      padding: 0 calc(min(160px, 10vw)) 0 0;
     }
     h1 {
       font-size: clamp(36px, 6vw, 96px);
@@ -821,7 +828,7 @@ section {
         left: 0rem;
         right: 0;
         bottom: 23vw;
-        top: initial;
+        top: 20px;
         margin: auto;
         height: 30vh;
         width: 30vh;
@@ -844,6 +851,9 @@ section {
       }
       @media (max-height: 487px) {
         display: none;
+      }
+      .smoke-detector-container{
+        top: 50px;
       }
       .red-circle {
         width: 90vw;

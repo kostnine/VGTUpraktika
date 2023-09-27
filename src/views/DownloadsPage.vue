@@ -326,8 +326,8 @@
           </div>
         </div>
         <div class="half">
-          <span class="title"> How to install a Smoke detector </span>
-          <span class="subtitle">By Home Depot</span>
+          <span class="title"> {{toLocal('practices.how_to_install')}}</span>
+          <span class="subtitle">{{toLocal('downloads.video_home_depot')}}</span>
           <div class="video-container">
             <div class="video">
               <iframe

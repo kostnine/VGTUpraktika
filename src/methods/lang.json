@@ -2,12 +2,12 @@
   "home.european": {
     "EN": "European",
     "CZ": "Evropský",
-    "ES": "Europeo"
+    "ES": "Día Europeo"
   },
   "home.smoke_day": {
     "EN": "<strong>Smoke Alarm</strong> Day",
     "CZ": "Den <strong>detektorů požárů</strong>",
-    "ES": "Día del detector de humo"
+    "ES": "del detector de humo"
   },
   "home.main_date": {
     "EN": "17th November 2023",
@@ -57,7 +57,7 @@
   "home.about": {
     "EN": "About",
     "ES": "Acerca de",
-    "CZ": "O"
+    "CZ": "O detektorech"
   },
   "home.where_to_place": {
     "EN": "Where to place",
@@ -67,7 +67,7 @@
   "home.smoke_alarms": {
     "EN": "Smoke Alarms",
     "ES": "Detectores de humo",
-    "CZ": "Detektory požárů"
+    "CZ": "požárů"
   },
   "home.maintain": {
     "EN": "How to Maintain",
@@ -147,12 +147,12 @@
   },
   "header.where": {
     "EN": "Where To Place Smoke Alarms",
-    "ES": "Dónde colocar detectores de humo",
+    "ES": "¿Dónde ubicar los detectores de humo?",
     "CZ": "Kam Umístit Detektory Požárů"
   },
   "header.maintain": {
     "EN": "How to Maintain Smoke Alarms",
-    "ES": "Cómo mantener los detectores de humo",
+    "ES": "¿Cómo mantener los detectores de humo?",
     "CZ": "Jak Udržovat Detektory Požárů"
   },
   "reg.check_map": {
@@ -223,7 +223,7 @@
   "types.which": {
     "EN": "Which smoke alarm is the best for you?<br> Let's find out!",
     "ES": "¿Qué detector de humo es el mejor para usted?<br> ¡Averigüémoslo!",
-    "CZ": "Jakýdetektor požáru je pro vás nejlepší?<br> Pojďme to zjistit!"
+    "CZ": "Jaký detektor požáru je pro vás nejlepší?<br> Pojďme to zjistit!"
   },
   "types.learn_more": {
     "EN": "Learn More",
@@ -307,13 +307,13 @@
   },
   "place.where_exactly": {
     "EN": "Where Exactly Should",
-    "ES": "¿Dónde exactamente",
+    "ES": "¿Dónde exactamente se",
     "CZ": "Kde přesně by měly být"
   },
   "place.smoke_alarms_installed": {
     "EN": "Smoke Alarms Be Installed?",
-    "ES": "Hay que instalar detectores de humo?",
-    "CZ": "Je hlásič kouře nainstalován?"
+    "ES": "deben instalar los detectores de humo?",
+    "CZ": "Instalovány kouřové alarmy?"
   },
   "place.the_placement": {
     "EN": "The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.",
@@ -343,7 +343,7 @@
   "place.also_recommend": {
     "EN": "We also recommend that <span class='semibold'>living rooms and study rooms</span> should always be equipped with alarms and that these alarms be connected to those in the sleeping areas.",
     "ES": "También recomendamos que las salas de estar y las salas de estudio estén siempre equipadas con detectores y que estos estén conectados a los de los dormitorios.",
-    "CZ": "We also recommend that living rooms and study rooms should always be equipped with alarms and that these alarms be connected to those in the sleeping areas."
+    "CZ": "Rovněž doporučujeme, aby detektory požáru byly umístěny v obývacích pokojích a studovnách. Tyto detektory požáru by měly být vzájemně projeny s detektory požárů umístěnými prostorách určených ke spánku."
   },
   "place.makes_sense": {
     "EN": "It also makes sense to install an alarm in rooms where <span class='semibold'>there are electrical appliances</span> (especially washing machines and dryers) and <span class='semibold'>in remote rooms</span> that are frequently used but where the signal from other smoke alarms cannot be heard.",
@@ -497,7 +497,7 @@
   },
   "maintain.how_to_maintain": {
     "EN": "How to Maintain Smoke Alarms?",
-    "ES": "Cómo mantener los detectores de humo",
+    "ES": "¿Cómo mantener los detectores de humo?",
     "CZ": "Jak udržovat detektory požárů?"
   },
   "maintain.test": {
@@ -572,7 +572,7 @@
   },
   "facts.benefit": {
     "EN": "Smoke Alarms Have One Major Benefit – They Save Lives!",
-    "ES": "¡La mayor ventaja de los detectores de humo - Salvan vidas!",
+    "ES": "La mayor ventaja de los detectores de humo - ¡Salvan vidas!",
     "CZ": "Proč instalovat detektory požáru - zachraňují životy!"
   },
   "facts.Dyk": {
@@ -730,6 +730,11 @@
     "ES": "Video de la Federación Francesa de Profesiones de Bomberos (FFMI)",
     "CZ": "Video od Francouzské federace hasičských profesí (FFMI)"
   },
+  "downloads.video_home_depot": {
+    "EN": "By Home Depot",
+    "ES": "Por Home Depot",
+    "CZ": "Od společnosti Home Depot"
+  },
   "downloads.leaflet1": {
     "EN": "Smoke and Heat Alarm brochure (Ireland)",
     "ES": "Folleto de detectores de humo y calor (Irlanda)",
@@ -768,7 +773,7 @@
   "country.uk_scot_data": {
     "EN": "<span>New Rules apply to all homes from <span class='semibold'>1st February 2022</span>. All rooms that are used often and every hallway or landing should have an interconnected smoke alarm.</span>",
     "ES": "<span>A partir del 1 de febrero de 2022, la nueva normativa se aplican a todas las viviendas. Todas las habitaciones que se usan con frecuencia y cada pasillo o descansillo deben tener un detector de humo interconectado.</span>",
-    "CZ": "<span>Od 1. února 2022 platí nová pravidla pro všechny domácnosti. Všechny často užívané pokoje, chodby nebo chodba nebo podesty musí mít instalovány vzájemně proojené detektory požárů.</span>"
+    "CZ": "<span>Od 1. února 2022 platí nová pravidla pro všechny domácnosti. Všechny často užívané pokoje, chodby nebo chodba nebo podesty musí mít instalovány vzájemně propojené detektory požárů.</span>"
   },
   "country.regulations": {
     "EN": "Regulations",
@@ -889,7 +894,7 @@
   "country.no_reg_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.croatia": {
     "EN": "Croatia",
@@ -899,7 +904,7 @@
   "country.croatia_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.slovenia": {
     "EN": "Slovenia",
@@ -909,7 +914,7 @@
   "country.slovenia_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.denmark": {
     "EN": "Denmark",
@@ -969,7 +974,7 @@
   "country.austria_data": {
     "EN": "<span>For all homes smoke alarms are mandatory in Austria. How many smoke alarms you need depends on how many rooms your home has.</span>",
     "ES": "<span>En Austria, los detectores de humo son obligatorios para todos los hogares. La cantidad de detectores de humo que necesita depende de la cantidad de habitaciones que tenga su hogar.</span>",
-    "CZ": "<span>Každá domácnost musí být povinně vybavena detetory požárů. Počet detektorů požárů v domácnosti závisí na počtu pokojů. </span>"
+    "CZ": "<span>Každá domácnost musí být povinně vybavena detektory požárů. Počet detektorů požárů v domácnosti závisí na počtu pokojů. </span>"
   },
   "country.austria_link1_title": {
     "EN": "More information",
@@ -1074,7 +1079,7 @@
   "country.slovakia_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.luxembourg": {
     "EN": "Luxembourg",
@@ -1104,7 +1109,7 @@
   "country.portugal_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.spain": {
     "EN": "Spain",
@@ -1114,7 +1119,7 @@
   "country.spain_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.italy": {
     "EN": "Italy",
@@ -1124,7 +1129,7 @@
   "country.italy_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.poland": {
     "EN": "Poland",
@@ -1134,7 +1139,7 @@
   "country.poland_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.We would advise you to check with your local fire brigade or localgovernment website in the first instance.We do advise placing at least 1 smoke alarm on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.greece": {
     "EN": "Greece",
@@ -1144,7 +1149,7 @@
   "country.greece_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.finland": {
     "EN": "Finland",
@@ -1244,7 +1249,7 @@
   "country.cyprus_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.ireland": {
     "EN": "Ireland",
@@ -1304,7 +1309,7 @@
   "country.romania_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.bulgaria": {
     "EN": "Bulgaria",
@@ -1314,7 +1319,7 @@
   "country.bulgaria_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.estonia": {
     "EN": "Estonia",
@@ -1414,7 +1419,7 @@
   "country.malta_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.We would advise you to check with your local fire brigade or localgovernment website in the first instance.We do advise placing at least 1 smoke alarm on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.bosnia and herzegovina": {
     "EN": "Bosnia and Herzegovina",
@@ -1424,7 +1429,7 @@
   "country.bosnia and herzegovina_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.montenegro": {
     "EN": "Montenegro",
@@ -1434,7 +1439,7 @@
   "country.montenegro_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.kosovo": {
     "EN": "Kosovo",
@@ -1444,7 +1449,7 @@
   "country.kosovo_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.north macedonia": {
     "EN": "North Macedonia",
@@ -1454,7 +1459,7 @@
   "country.north macedonia_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.albania": {
     "EN": "Albania",
@@ -1464,7 +1469,7 @@
   "country.albania_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.turkey": {
     "EN": "Turkey",
@@ -1474,7 +1479,7 @@
   "country.turkey_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.iceland": {
     "EN": "Iceland",
@@ -1484,7 +1489,7 @@
   "country.iceland_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.faroe islands": {
     "EN": "Faroe Islands",
@@ -1494,7 +1499,7 @@
   "country.faroe islands_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.belarus": {
     "EN": "Belarus",
@@ -1504,7 +1509,7 @@
   "country.belarus_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.ukraine": {
     "EN": "Ukraine",
@@ -1544,7 +1549,7 @@
   "country.switzerland_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.moldova": {
     "EN": "Moldova",
@@ -1554,7 +1559,7 @@
   "country.moldova_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.andorra": {
     "EN": "Andorra",
@@ -1564,7 +1569,7 @@
   "country.andorra_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.russia": {
     "EN": "Russia",
@@ -1574,7 +1579,7 @@
   "country.russia_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.liechtenstein": {
     "EN": "Liechtenstein",
@@ -1584,7 +1589,7 @@
   "country.liechtenstein_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.san marino": {
     "EN": "San Marino",
@@ -1594,7 +1599,7 @@
   "country.san marino_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.vatican": {
     "EN": "Vatican",
@@ -1604,7 +1609,7 @@
   "country.vatican_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.monaco": {
     "EN": "Monaco",
@@ -1614,7 +1619,7 @@
   "country.monaco_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1detektor požárů na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "cookies.necessary": {
     "EN": "These cookies are necessary for our website to function properly and to protect against unusual activities. These cookies are usually installed to respond to your actions and requests, such as setting up privacy,logging in or filling out forms.",
@@ -1995,5 +2000,95 @@
     "EN": "Allow all cookies",
     "ES": "Permitir todas las cookies",
     "CZ": "Povolit všechny soubory cookie"
+  },
+  "house.attic": {
+    "EN": "Attic",
+    "ES": "Ático",
+    "CZ": "Podkroví"
+  },
+  "house.bedroom": {
+    "EN": "Bedroom",
+    "ES": "Dormitorio",
+    "CZ": "Ložnice"
+  },
+  "house.landing": {
+    "EN": "Landing",
+    "ES": "Aterrizaje",
+    "CZ": "Přistání"
+  },
+  "house.living_room": {
+    "EN": "Living room",
+    "ES": "Sala de estar",
+    "CZ": "Obývací pokoj"
+  },
+  "house.hall": {
+    "EN": "Hall",
+    "ES": "Sala",
+    "CZ": "Hala"
+  },
+  "house.kitchen": {
+    "EN": "Kitchen",
+    "ES": "Cocina",
+    "CZ": "Kuchyně"
+  },
+  "house.bathroom": {
+    "EN": "Bathroom",
+    "ES": "Baño",
+    "CZ": "Koupelna"
+  },
+  "house.dining_room": {
+    "EN": "Dining room",
+    "ES": "Comedor",
+    "CZ": "Jídelna"
+  },
+  "house.garage": {
+    "EN": "Garage",
+    "ES": "Garaje",
+    "CZ": "Garáž"
+  },
+  "house.smoke": {
+    "EN": "Smoke",
+    "ES": "Humo",
+    "CZ": "Kouř"
+  },
+  "house.heat": {
+    "EN": "Heat",
+    "ES": "Calor",
+    "CZ": "Teplo"
+  },
+  "house.away": {
+    "EN": "Away from bathroom door.",
+    "ES": "Lejos de la puerta del baño.",
+    "CZ": "Dál od dveří koupelny."
+  },
+  "house.within1": {
+    "EN": "Within 7.5 m of any point",
+    "ES": "A menos de 7,5 m de",
+    "CZ": "Do vzdálenosti 7,5 m"
+  },
+  "house.within2": {
+    "EN": "within the area to be",
+    "ES": "cualquier punto de la zona",
+    "CZ": "od jakéhokoli bodu v"
+  },
+  "house.within3": {
+    "EN": "protected.",
+    "ES": "a proteger.",
+    "CZ": "chráněné oblasti."
+  },
+  "house.between1": {
+    "EN": "Between high risk rooms",
+    "ES": "Entre habitaciones y dormitorios",
+    "CZ": "Mezi rizikovými místnostmi"
+  },
+  "house.between2": {
+    "EN": "and bedrooms.",
+    "ES": "de alto riesgo.",
+    "CZ": "a ložnicemi."
+  },
+  "practices.how_to_install": {
+    "EN": "How to install a Smoke detector",
+    "ES": "¿Cómo instalar un detector de humo?",
+    "CZ": "Jak nainstalovat detektor kouře"
   }
 }
