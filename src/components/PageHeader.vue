@@ -61,6 +61,10 @@ export default {
   @media (max-width: 1280px) {
     height: 800px;
   }
+  @media (max-width: 878px) {
+    height: 80vh;
+    padding: 32px;
+  }
   .header-text-half {
     display: flex;
     flex-direction: column;
@@ -82,8 +86,9 @@ export default {
     .header-button {
       position: relative;
       width: 381px;
+      max-width: 360px;
       height: 64px;
-      font-size: 24px;
+      font-size: 18px;
       line-height: 32px;
       font-family: $semiBoldFont;
       text-align: center;
@@ -151,8 +156,7 @@ export default {
 @media (max-width: 768px) {
   .header-component {
     flex-direction: column-reverse;
-    height: 1280px;
-    max-height: calc(100vh - 110px);
+    height: fit-content;
     padding: 32px calc(min(160px, 10vw));
     .header-text-half {
       // margin-top: -320px;

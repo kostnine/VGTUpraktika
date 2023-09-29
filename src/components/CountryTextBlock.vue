@@ -110,8 +110,7 @@ export default {
     closeOpenedCountry() {
       this.closeActiveCountry;
     },
-    clearCountry() {
-    },
+    clearCountry() {},
     onResize() {
       this.windowWidth = window.innerWidth;
     },
@@ -151,7 +150,7 @@ export default {
     top: 110px;
     left: 0;
     width: 100vw;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 55px);
     overflow-y: auto;
   }
   &.expanded {

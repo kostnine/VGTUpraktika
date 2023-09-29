@@ -8,14 +8,14 @@
     <div
       class="burger"
       :class="{ active: isMenuOpen }"
-      v-if="windowWidth < 768"
+      v-if="windowWidth <= 880"
       @click="isMenuOpen = !isMenuOpen"
     >
       <span></span><span></span><span></span>
     </div>
     <nav
       class="header-navigation-bar"
-      :class="{ open: windowWidth < 768 ? isMenuOpen : true }"
+      :class="{ open: windowWidth <= 880 ? isMenuOpen : true }"
     >
       <router-link :to="`/${$store.state.lang}/`" class="header-nav-block">
         {{ toLocal("header.home") }}
@@ -45,17 +45,17 @@
           >
             <router-link
               :to="`/${$store.state.lang}/types`"
-              class="header-nav-block link-dropdown"
+              class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.about") }}</router-link
             >
             <router-link
               :to="`/${$store.state.lang}/place`"
-              class="header-nav-block link-dropdown"
+              class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.where") }}</router-link
             >
             <router-link
               :to="`/${$store.state.lang}/maintain`"
-              class="header-nav-block link-dropdown"
+              class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.maintain") }}</router-link
             >
           </div>
@@ -164,7 +164,7 @@ export default {
       this.isLangExtended = false;
     },
     linkClick() {
-      if (this.windowWidth < 768) {
+      if (this.windowWidth <= 880) {
         this.isMenuOpen = false;
       }
     },
@@ -216,29 +216,32 @@ export default {
   width: 100%;
   padding: 55px calc(min(160px, 10vw));
   z-index: 99;
+  justify-content: space-between;
+  @media (max-width: 1444px) {
+    padding: 55px calc(min(80px, 10vw));
+  }
   .header-image-container {
-    width: 40%;
     display: flex;
     img {
       min-width: 200px;
-      min-height: 131px;
       @media (max-width: 768px) {
         min-width: 120px;
         min-height: 80px;
       }
+      @media (max-width: 1280px) {
+        width: 60%;
+      }
     }
     @media (max-width: 1080px) {
-      width: 20%;
       a,
       img {
-        min-width: 60px;
+        min-width: 90px;
         min-height: 20px;
-        width: 100%;
+        width: 90%;
       }
     }
   }
   .header-navigation-bar {
-    width: 60%;
     display: flex;
     padding-top: 7px;
     justify-content: flex-end;
@@ -399,15 +402,20 @@ export default {
     }
   }
   @media (max-width: 1280px) {
-    padding: 30px calc(min(160px, 10vw));
+    padding: 30px 30px;
   }
   @media (max-width: 1050px) {
-    padding: 30px 30px;
+    padding: 25px 25px;
     .header-navigation-bar {
       width: 100%;
     }
+    .header-image-container {
+      img {
+        width: 100%;
+      }
+    }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -426,6 +434,8 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         padding: 12vh 0 0 5vw;
+        padding-bottom: 12vh;
+        gap: 16px;
         position: fixed;
         top: 0;
         left: 0;
@@ -433,11 +443,9 @@ export default {
         height: 100vh;
         background: white;
         z-index: 99;
+        overflow-y: auto;
         .header-nav-block {
           font-size: clamp(16px, 7vw, 36px);
-          &:not(.language-selector) {
-            margin: 3vh 0;
-          }
           .header-button-with-dropdown {
             width: 100%;
           }
@@ -446,10 +454,16 @@ export default {
             height: 13px;
           }
         }
+        .dd-link {
+          &:not(.language-selector) {
+            margin: 3vh 0;
+          }
+        }
       }
     }
     .header-image-container {
       height: 80px;
+      width: 50%;
       img {
         height: 100%;
         width: initial;

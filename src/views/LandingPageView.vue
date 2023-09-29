@@ -752,10 +752,10 @@ section {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  @media(max-height: 768px)and( min-width: 1024px){
+  @media (max-height: 768px) and( min-width: 1024px) {
     height: 130vh;
   }
-  @media(max-height: 600px){
+  @media (max-height: 600px) {
     height: 150vh;
   }
 }
@@ -800,10 +800,10 @@ section {
     height: 100%;
     margin-top: -6rem;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     padding: 0 0 0 calc(min(160px, 10vw));
     flex-direction: column;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 55px);
     .text {
       width: 100%;
       padding: 0rem;
@@ -826,21 +826,24 @@ section {
       .smoke-detector-container {
         margin-top: 0px;
         left: 0rem;
-        right: 0;
+        right: -10vw;
         bottom: 23vw;
         top: 20px;
         margin: auto;
         height: 30vh;
         width: 30vh;
-        min-width: 150px;
-        min-height: 150px;
+        min-width: 180px;
+        min-height: 180px;
       }
       @media (max-height: 640px) {
         // margin-top: 128px;
         .smoke-detector-container {
+          right: 0;
           height: 25vh;
           width: 25vh;
           bottom: 9vh;
+          min-width: 180px;
+          min-height: 180px;
         }
       }
       @media (max-height: 550px) {
@@ -852,7 +855,7 @@ section {
       @media (max-height: 487px) {
         display: none;
       }
-      .smoke-detector-container{
+      .smoke-detector-container {
         top: 50px;
       }
       .red-circle {

@@ -326,8 +326,10 @@
           </div>
         </div>
         <div class="half">
-          <span class="title"> {{toLocal('practices.how_to_install')}}</span>
-          <span class="subtitle">{{toLocal('downloads.video_home_depot')}}</span>
+          <span class="title"> {{ toLocal("practices.how_to_install") }}</span>
+          <span class="subtitle">{{
+            toLocal("downloads.video_home_depot")
+          }}</span>
           <div class="video-container">
             <div class="video">
               <iframe
@@ -722,11 +724,11 @@ h3 {
 }
 .leaflet-container {
   margin-top: 40px;
-  min-height: 640px;
   padding: 0 calc(min(160px, 10vw));
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 40px;
   @media (min-height: 700px) {
     min-height: 500px;
   }
@@ -734,6 +736,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    gap: 8px;
     @media (max-width: 768px) {
       flex-wrap: wrap;
       align-items: center;
@@ -919,14 +922,7 @@ h3 {
   padding: 50px calc(min(160px, 10vw));
   background: #fbf3ed;
   height: 100vh;
-  @media (max-width: 1280px) {
-    height: 85vh;
-  }
-  @media (max-width: 1080px) {
-    height: 60vh;
-    padding-top: 260px;
-    padding-bottom: 300px;
-  }
+  height: fit-content;
   .why-videos-title {
     font-size: 32px;
     line-height: 48px;
@@ -1094,16 +1090,22 @@ h3 {
   }
   .section-container {
     width: 33%;
-    margin-right: 1.5%;
-    margin-left: 1.5%;
     display: flex;
     justify-content: center;
     height: 100%;
+    &:last-child {
+      max-width: 300px;
+      min-width: 250px;
+    }
     @media (max-width: 768px) {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      &:last-child {
+        max-width: 300px;
+        min-width: 300px;
+      }
     }
   }
   .video-container-with-text {
@@ -1123,13 +1125,13 @@ h3 {
       height: 15%;
       padding: 20px 0;
       width: 100%;
-      font-size: 24px;
+      font-size: clamp(18px, 1.2vw, 24px);
       line-height: 32px;
       color: white;
       font-family: $semiBoldFont;
       text-align: start;
       @media (max-width: 1080px) {
-        font-size: 20px;
+        font-size: clamp(14px, 1.2vw, 18px);
       }
       @media (max-width: 768px) {
         width: 95%;
@@ -1137,7 +1139,7 @@ h3 {
       }
     }
     .video-url {
-      font-size: 16px;
+      font-size: 12px;
       line-height: 24px;
       color: white;
       margin-top: 5px;
@@ -1146,6 +1148,11 @@ h3 {
         width: 95%;
         text-align: center;
         white-space: initial;
+      }
+      @media (max-width: 960px) {
+        white-space: break-spaces;
+        text-align: center;
+        font-size: 14px;
       }
     }
     .video {
@@ -1174,19 +1181,20 @@ h3 {
     }
     @media (max-width: 768px) {
       margin: 0;
-      width: initial;
+      width: 100%;
     }
     .title {
       height: 15%;
       padding: 20px 0;
       width: 100%;
-      font-size: 24px;
+      font-size: clamp(18px, 1.2vw, 24px);
       line-height: 32px;
       color: white;
       font-family: $semiBoldFont;
       text-align: start;
       @media (max-width: 1080px) {
-        font-size: 20px;
+        font-size: 18px;
+        font-size: clamp(16px, 1.2vw, 18px);
       }
       @media (max-width: 768px) {
         width: 98%;
@@ -1197,7 +1205,7 @@ h3 {
       position: relative;
       background-position: top;
       min-height: 200px;
-      width: 300px;
+      width: 100%;
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
@@ -1231,6 +1239,7 @@ h3 {
     padding: 10px 0;
     @media (max-width: 1080px) {
       width: 40%;
+      margin: auto 0;
     }
     @media (max-width: 768px) {
       width: 100%;
@@ -1242,11 +1251,12 @@ h3 {
       color: white;
       width: 100%;
       height: 100%;
-      margin-right: calc(min(80px, 7vw));
+      margin-right: calc(min(20px, 7vw));
       @media (max-width: 1080px) {
         font-size: 24px;
         margin: 0;
         margin-right: 8px;
+        line-height: 36px;
       }
       @media (max-width: 768px) {
         margin: 0;
@@ -1258,10 +1268,12 @@ h3 {
   min-width: 400px;
   background-color: #fbf3ed;
   display: flex;
+  gap: 16px;
   .half {
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     @media (max-width: 768px) {
       width: 100%;
       justify-content: center;
@@ -1275,8 +1287,8 @@ h3 {
     min-width: fit-content;
   }
   .title {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: clamp(24px, 1.2vw, 32px);
+    line-height: clamp(32px, 1.2vw, 42px);
     font-family: $semiBoldFont;
     margin-bottom: 8px;
   }
