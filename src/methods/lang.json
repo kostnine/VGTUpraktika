@@ -680,6 +680,11 @@
     "ES": "¡Eche un vistazo a los folletos y las recomendaciones!",
     "CZ": "Podívejte se na letáky a pokyny!"
   },
+  "downloads.check_leaf_smoke": {
+    "EN": "Smoke alarm leaflets",
+    "ES": "Folletos sobre alarmas de humo",
+    "CZ": "Letáky o kouřovém alarmu"
+  },
   "downloads.download_leaf": {
     "EN": "Click on the image to download the leaflet.",
     "ES": "Haga clic en la imagen para descargar el folleto.",
@@ -2090,5 +2095,35 @@
     "EN": "How to install a Smoke detector",
     "ES": "¿Cómo instalar un detector de humo?",
     "CZ": "Jak nainstalovat detektor kouře"
+  }, 
+  "downloads.gifs": {
+    "EN": "Social Media Material",
+    "ES": "Material para las redes sociales",
+    "CZ": "Materiály sociálních médií"
+  },
+  "downloads.leaflet5EN": {
+    "EN": "Leaflet in English",
+    "ES": "Folleto en inglés",
+    "CZ": "Leták v angličtině"
+  },
+  "downloads.leaflet5ES": {
+    "EN": "Leaflet in Spanish",
+    "ES": "Folleto en español",
+    "CZ": "Leták ve španělštině"
+  },
+  "downloads.leaflet5CZ": {
+    "EN": "Leaflet in Czech",
+    "ES": "Folleto en checo",
+    "CZ": "Leták v češtině"
+  },
+  "downloads.leaflet5FR": {
+    "EN": "Leaflet in French",
+    "ES": "Folleto en francés",
+    "CZ": "Leták ve francouzštině"
+  },
+  "downloads.leaflet5IT": {
+    "EN": "Leaflet in Italian",
+    "ES": "Folleto en italiano",
+    "CZ": "Leták v italštině"
   }
 }

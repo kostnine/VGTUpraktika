@@ -1,9 +1,76 @@
 <template>
   <div class="downloads">
+    
     <div class="top-section">
       <div class="text">
         <h2 v-html="toLocal('downloads.more_info')"></h2>
         <span>{{ toLocal("downloads.read") }}</span>
+      </div>
+      <div class="leaflet-container red-bg">
+        <h3 class="color-text">{{ toLocal("downloads.check_leaf") }}</h3>
+        <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
+        <div class="leaflets">
+          <div
+            class="leaflet"
+            :style="{
+              backgroundImage:
+                'url(' + require(`@/assets/${leaflet.img}`) + ')',
+            }"
+            v-for="(leaflet, index) in infoLeaflets"
+            :key="index"
+            @click="downloadLeaflet(leaflet)"
+          >
+            <div class="bottom-content">
+              <div class="leaflet-text">
+                {{ toLocal(leaflet.text) }}
+              </div>
+              <div class="download-btn">
+                <svg
+                  width="37"
+                  height="37"
+                  viewBox="0 0 37 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gifs-container">
+        <div class="title-container">
+          <span class="title"
+            >
+            {{toLocal('downloads.gifs')}}
+            </span>
+        </div>
+        <div class="inner-container">
+          <vueper-slides
+          class="no-shadow"
+          :infinite="false"
+          :always-refresh-clones="true"
+          :visible-slides="4"
+          :slide-multiple="false"
+          :bullets="false"
+          :gap="4"
+          :slide-ratio="1 / 4"
+          :dragging-distance="200"
+          fixed-height="400px"
+          :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2 }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2 } }">
+            <vueper-slide 
+              v-for="gif, idx in gifs"
+              :key="`gif-${idx}`">
+              <template #content>
+                <img class="single-gif" draggable="false" :src="require(`@/assets/gifs/${$store.state.lang}/${gif.id}.gif`)" alt="gif">
+              </template>
+            </vueper-slide>
+          </vueper-slides>
+          </div>
       </div>
       <div class="red-bar">
         <span>{{ toLocal("downloads.nfpa") }}:</span>
@@ -345,6 +412,9 @@
         </div>
       </div>
     </div>
+    <div class="gifs">
+
+    </div>
   </div>
 </template>
 
@@ -354,6 +424,8 @@ import { Navigation, Pagination } from "swiper";
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
 import VideoPlayer from "@/components/VideoPlayer.vue";
+import {VueperSlides, VueperSlide} from "vueperslides";
+import 'vueperslides/dist/vueperslides.css'
 SwiperCore.use([Navigation, Pagination]);
 export default {
   name: "DownloadsPage",
@@ -361,6 +433,8 @@ export default {
     Swiper,
     SwiperSlide,
     VideoPlayer,
+    VueperSlides,
+    VueperSlide
   },
   metaInfo: {
     title: "Best practices",
@@ -469,6 +543,96 @@ export default {
           active: false,
         },
       ],
+      gifs:[
+        {
+          id: 1,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/1.gif`,
+        },
+        {
+          id: 2,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/2.gif`,
+        },
+        {
+          id: 3,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/3.gif`,
+        },
+        {
+          id: 4,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/4.gif`,
+        },
+        {
+          id: 5,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/5.gif`,
+        },
+        {
+          id: 6,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/6.gif`,
+        },
+        {
+          id: 7,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/7.gif`,
+        },
+        {
+          id: 8,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/8.gif`,
+        },
+        {
+          id: 9,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/9.gif`,
+        },
+        {
+          id: 10,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/10.gif`,
+        },
+        {
+          id: 11,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/11.gif`,
+        },
+        {
+          id: 12,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/12.gif`,
+        },
+        {
+          id: 13,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/13.gif`,
+        },
+        {
+          id: 14,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/14.gif`,
+        },
+        {
+          id: 15,
+          link: `gifs/${this.$store.state.lang.toUpperCase()}/15.gif`,
+        }
+      ],
+      infoLeaflets:[
+
+      {
+          img: "images/downloads/leaflet5EN.png",
+          download_path: "/downloads/Leaflet-English.pdf",
+          text: "downloads.leaflet5EN",
+        },
+        {
+          img: "images/downloads/leaflet5CZ.png",
+          download_path: "/downloads/Leaflet-Czech.pdf",
+          text: "downloads.leaflet5CZ",
+        },
+        {
+          img: "images/downloads/leaflet5FR.png",
+          download_path: "/downloads/Leaflet-French.pdf",
+          text: "downloads.leaflet5FR",
+        },
+        {
+          img: "images/downloads/leaflet5IT.png",
+          download_path: "/downloads/Leaflet-Italian.pdf",
+          text: "downloads.leaflet5IT",
+        },
+        {
+          img: "images/downloads/leaflet5ES.png",
+          download_path: "/downloads/Leaflet-Spanish.pdf",
+          text: "downloads.leaflet5ES",
+        },
+      ],
       footerVideos: [],
       spainBrochure: {
         img: "images/downloads/Asset8.png",
@@ -523,7 +687,7 @@ export default {
   methods: {
     downloadLeaflet(leaflet) {
       let link = document.createElement("a");
-      link.setAttribute("download", leaflet.text);
+      link.setAttribute("download", this.toLocal(leaflet.text) + '.pdf');
       link.href = leaflet.download_path;
       document.body.appendChild(link);
       link.click();
@@ -729,14 +893,22 @@ h3 {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 40px;
+  &.red-bg{
+    background: #C0554B; 
+    margin-bottom: 0;
+    .color-text{
+      color: white;
+    }
+  }
   @media (min-height: 700px) {
     min-height: 500px;
   }
   .leaflets {
     display: flex;
-    justify-content: space-between;
     margin-top: 30px;
-    gap: 8px;
+    gap:60px;
+    justify-content: center;
+    flex-wrap: wrap;
     @media (max-width: 768px) {
       flex-wrap: wrap;
       align-items: center;
@@ -790,6 +962,40 @@ h3 {
   }
   span {
     font-size: 16px;
+  }
+}
+.gifs-container{
+  display: flex;
+  flex-direction: column;
+  background-color: #fbf3ed;
+  box-sizing: border-box;
+  padding: 20px calc(min(80px, 10vw)) 80px calc(min(80px, 10vw));
+  gap: 26px;
+  .title{
+    width: 100%;
+    font-size: clamp(20px, 1.25vw, 32px);
+    font-size: 32px;
+    line-height: 48px;
+    color: #1E1826; 
+    font-weight: 600;
+  }
+  .inner-container{
+    flex-grow: 1;
+  }
+
+  .section-container{
+    height: 300px;
+    @media(max-width:768px){
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+    }
+  }
+  .single-gif{
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
   }
 }
 .bottom-section {
