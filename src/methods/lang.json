@@ -47,7 +47,7 @@
   "home.information": {
     "EN": "Information You Need to Know About Smoke Alarms",
     "ES": "Información que necesita saber sobre los detectores de humo",
-    "CZ": "Informace, které potřbujete vědět o detektorech požárů"
+    "CZ": "Informace, které potřebujete vědět o detektorech požárů"
   },
   "home.click_and_find": {
     "EN": "Click and find out more!",
@@ -77,7 +77,7 @@
   "home.join_project": {
     "EN": "Want to join the project? Contact us!",
     "ES": "¿Quiere unirse al proyecto? ¡Contáctenos!",
-    "CZ": "Chcete se připojitk projektu? Kontaktujte nás!"
+    "CZ": "Chcete se připojit k projektu? Kontaktujte nás!"
   },
   "home.reserved": {
     "EN": "All content © 2023 European smoke alarm day campaign",
@@ -93,7 +93,7 @@
   "home.cookies_big": {
     "EN": "Our website uses cookies to optimize and develop our activities, as well as to improve and analyze the visitor experience. By allowing all cookies, you allow us to provide you with the best browsing experience. Certain cookies are necessary for the proper functioning of our website and to enable you to use its features.",
     "ES": "Nuestra página web utiliza cookies para optimizar y desarrollar nuestras actividades, así como mejorar y analizar la experiencia del visitante. Al permitir todas las cookies, nos permite brindarle la mejor experiencia de navegación. Ciertas cookies son necesarias para el correcto funcionamiento de nuestra página web y para permitirle utilizar sus funciones.",
-    "CZ": "Naše webové stránky používají soubory cookie k optimalizaci a rozvoji našich aktivit, jakož i ke zlepšení a analýze návštěvnické zkušenosti. Povolením všech souborů cookie nám umožňujete poskytovat vám nejlepší zážitek z prohlížení. Některé soubory cookie jsou nezbytné pro správné fungování našeho webu a pro to, abyste mohli používat jeho funkce."
+    "CZ": "Naše webové stránky používají soubory cookie k optimalizaci a rozvoji našich aktivit, jakož i ke zlepšení a analýze návštěvnické zkušenosti. Povolením všech souborů cookie nám umožňujete poskytovat vám nejlepší zážitek z prohlížení. Některé soubory cookie jsou nezbytné pro správné fungování našeho webu a proto, abyste mohli používat jeho funkce."
   },
   "home.more_info": {
     "EN": "For more information about cookies and how we use them, please visit",
@@ -203,7 +203,7 @@
   "reg.extensive": {
     "EN": "Extensive smoke alarm legislation in multiple countries",
     "ES": "Amplia legislación sobre detectores de humo en varios países",
-    "CZ": "Mnoho zemí má rozsáhlou legislativu ohledně hlásičů kouře"
+    "CZ": "Mnoho zemí má rozsáhlou legislativu ohledně detektorů požárů"
   },
   "reg.no_south": {
     "EN": "No legislation in Southern / Eastern Europe",
@@ -263,7 +263,7 @@
   "types.wireless_int": {
     "EN": "You can choose <span class='semibold'>wireless interconnected smoke alarms or mains connected smoke alarms.</span>",
     "ES": "Puede elegir detectores de humo interconectados inalámbricos o detectores de humo conectados a la red eléctrica.",
-    "CZ": "Je možné mít bezdrátově propojené detektory požáru nebo síťově propjené detektory požáru. "
+    "CZ": "Je možné mít bezdrátově propojené detektory požáru nebo síťově propojené detektory požáru. "
   },
   "types.linked": {
     "EN": "Linked Smoke Alarm(s)",
@@ -278,12 +278,12 @@
   "types.all_alarms": {
     "EN": "All alarms will sound once any one of them detects smoke. This provides earlier warning and improves escape time.",
     "ES": "Todos los detectores sonarán una vez que cualquiera de ellos detecte humo. Esto proporciona una advertencia más temprana y mejora el tiempo de escape.",
-    "CZ": "Jakmile detekuje požár jeden detektor, všechny instalované detektory signalizují požár. Dříve tak upozorní na vznikající požár a poskytne delší čas pro evakuaci. "
+    "CZ": "Jakmile detekuje požár jeden detektor, všechny instalované detektory signalizují požár. Dříve tak upozorní na vznikající požár a poskytnou delší čas pro evakuaci. "
   },
   "types.hardwired": {
     "EN": "Interconnect can be hardwired or use radio linked signals depending on your property and the technology used.",
     "ES": "La interconexión puede ser cableada o usar señales de enlace de radio según su vivienda y la tecnología utilizada.",
-    "CZ": "V návaznosti na místo instalace a zvolenou technologii je ožné použít drátové nebo bezdrátové propojení detektorů mezi sebou. "
+    "CZ": "V návaznosti na místo instalace a zvolenou technologii je možné použít drátové nebo bezdrátové propojení detektorů mezi sebou."
   },
   "types.multiple_storey": {
     "EN": "It is especially useful in multiple storey properties or where the sleeping zones are distant from the living areas where the fire risk may be higher.",
@@ -308,17 +308,17 @@
   "place.where_exactly": {
     "EN": "Where Exactly Should",
     "ES": "¿Dónde exactamente se",
-    "CZ": "Kde přesně by měly být"
+    "CZ": "Kde přesně by měly"
   },
   "place.smoke_alarms_installed": {
     "EN": "Smoke Alarms Be Installed?",
     "ES": "deben instalar los detectores de humo?",
-    "CZ": "Instalovány kouřové alarmy?"
+    "CZ": "Být instalovány detektory požárů"
   },
   "place.the_placement": {
     "EN": "The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.",
     "ES": "La colocación de un detector de humo es fundamental para su correcto funcionamiento. Por supuesto, debería funcionar correctamente y brindarle a usted y a su familia minutos vitales en caso de incendio.",
-    "CZ": "Vhodné umístění detektoru požáru je nezbytné pro jehi správnou funkci. V případě správného umístění bude Vás i Vaši rodinu včas varovat před nebezpečím."
+    "CZ": "Vhodné umístění detektoru požáru je nezbytné pro jeho správnou funkci. V případě správného umístění bude Vás i Vaši rodinu včas varovat před nebezpečím."
   },
   "place.although": {
     "EN": "Although regulations differ slightly from country to country, this page provides some general guidelines on where to install smoke alarms.",
@@ -343,22 +343,22 @@
   "place.also_recommend": {
     "EN": "We also recommend that <span class='semibold'>living rooms and study rooms</span> should always be equipped with alarms and that these alarms be connected to those in the sleeping areas.",
     "ES": "También recomendamos que las salas de estar y las salas de estudio estén siempre equipadas con detectores y que estos estén conectados a los de los dormitorios.",
-    "CZ": "Rovněž doporučujeme, aby detektory požáru byly umístěny v obývacích pokojích a studovnách. Tyto detektory požáru by měly být vzájemně projeny s detektory požárů umístěnými prostorách určených ke spánku."
+    "CZ": "Rovněž doporučujeme, aby detektory požáru byly umístěny v obývacích pokojích a studovnách. Tyto detektory požáru by měly být vzájemně projeny s detektory požárů umístěnými v prostorách určených ke spánku."
   },
   "place.makes_sense": {
     "EN": "It also makes sense to install an alarm in rooms where <span class='semibold'>there are electrical appliances</span> (especially washing machines and dryers) and <span class='semibold'>in remote rooms</span> that are frequently used but where the signal from other smoke alarms cannot be heard.",
     "ES": "También tiene sentido instalar un detector en habitaciones donde hay electrodomésticos (especialmente lavadoras y secadoras) y en habitaciones alejadas, que se usan con frecuencia pero donde no se puede escuchar la señal de otros detectores de humo.",
-    "CZ": "Smysluplné je také instalovat alarm v místnostech, kde jsou elektrické spotřebiče (zejména pračky a sušičky) a ve vzdálených místnostech , které jsou často používané, ale kde není slyšet signál z jiných hlásičů kouře."
+    "CZ": "Smysluplné je také instalovat detektor v místnostech, kde jsou elektrické spotřebiče (zejména pračky a sušičky) a ve vzdálených místnostech , které jsou často používané, ale kde není slyšet signál z jiných hlásičů kouře."
   },
   "place.in_general": {
     "EN": "In general, you should remember that <span class='semibold'>a smoke detector can monitor an area of up to 60 m²</span>. If your room area is larger than 60 m², you should install an additional smoke alarm. So depending on the size of your home, this means that <span class='semibold'>you will need several smoke alarms</span>. In corridors or escape routes an alarm should be positioned every 7.5 m.",
     "ES": "En general, debe recordar que un detector de humo puede monitorear un área de hasta 60 m². Si el espacio a proteger es mayor a 60 m², debe instalar un detector de humo adicional. Dependiendo del tamaño de su vivienda, puede necesitar varios detectores de humo. En pasillos o vías de evacuación se debe colocar un detector cada 7,5 m.",
-    "CZ": "Obecně platí, že jeden deteltor požáru může střežit plochu maximálně 60 m². Pokud je plocha vaší místnosti větší než 60 m², měli byste nainstalovat další detektor požáru. V závislosti na velikosti vašeho domova to znamená, že budete potřebovat několik detektorů požárů. Na chodbách nebo únikových cestách by měl být detektor umístěn každých 7,5 m."
+    "CZ": "Obecně platí, že jeden detektor požáru může střežit plochu maximálně 60 m². Pokud je plocha vaší místnosti větší než 60 m², měli byste nainstalovat další detektor požáru. V závislosti na velikosti vašeho domova to znamená, že budete potřebovat několik detektorů požárů. Na chodbách nebo únikových cestách by měl být detektor umístěn každých 7,5 m."
   },
   "place.before_installing": {
     "EN": "Before installing your smoke alarms, please <strong>check country-specific regulations</strong> or seek advice from a local fire safety expert.",
     "ES": "Antes de instalar sus detectores de humo, consulte las normas específicas de cada país o busque el asesoramiento de un experto local en seguridad contra incendios.",
-    "CZ": "Před instalací detektoirů požárů si ověřte platné předpisy v dané zemi nebo požádejte o radu odborníka na požární bezpečnost."
+    "CZ": "Před instalací detektorů požárů si ověřte platné předpisy v dané zemi nebo požádejte o radu odborníka na požární bezpečnost."
   },
   "place.location_req": {
     "EN": "Location requirements for smoke and heat alarms according to the room of the house.",
@@ -398,7 +398,7 @@
   "place.many_european": {
     "EN": "In many European countries, legislation specifies or refers to a building code. Generally, the installation location must prioritise early detection of fire smoke and a sound level sufficient to wake all sleeping occupants on the property. Usually this will require multiple alarms per property.",
     "ES": "En muchos países europeos, la legislación hace referencia a un código de edificación. En general, la ubicación de la instalación debe priorizar la detección temprana del humo del fuego y un nivel de sonido suficiente para despertar a todos los ocupantes que duermen en la vivienda. Por lo general, esto requerirá varios detectores por vivienda.",
-    "CZ": "Obecně platí, že místo instalace musí umožňovat včasnou detekci projevů požárů (kouře) a zároveň zvukový signál musí být dosatečně silny, aby probudil spísí osoby v domácnosti. Obvykle je proto potřeba instalovat v domácnosti více detektorů. "
+    "CZ": "Obecně platí, že místo instalace musí umožňovat včasnou detekci projevů požárů (kouře) a zároveň zvukový signál musí být dostatečně silný, aby probudil spící osoby v domácnosti. Obvykle je proto potřeba instalovat v domácnosti více detektorů. "
   },
   "place.addition": {
     "EN": "In addition, there are also specifications on room sizes and living areas which may be different from country to country. Your local fire protection expert will be able to advise you on this.",
@@ -433,7 +433,7 @@
   "place.never_paint": {
     "EN": "Never paint smoke alarms.",
     "ES": "Nunca pinte los detectores de humo.",
-    "CZ": "Nikdy kouřové hlásiče nenatírejte"
+    "CZ": "Nikdy detektory požárů nenatírejte"
   },
   "place.paint": {
     "EN": "Paint, stickers, or other decorations could keep the alarms from working.",
@@ -453,7 +453,7 @@
   "place.ceiling": {
     "EN": "Ceiling mount in central position.",
     "ES": "Instalación en el techo en posición central",
-    "CZ": "Umístění na stropě ve středu místnosti. "
+    "CZ": "Umístěte detektory na stropě ve středu místnosti."
   },
   "place.300_mm": {
     "EN": "Site at least 300 mm from walls and obstructions (e.g. light pendant – where 300 mm cannot be achieved move closer to the pendant).",
@@ -468,7 +468,7 @@
   "place.heat_alarms": {
     "EN": "Heat alarms – max 5 m from any point in the area.",
     "ES": "Detectores de calor - máximo 5 m desde cualquier punto de la zona.",
-    "CZ": "Teplotní hlásiče – umístění max. 5 m od libovolného místa v prostoru."
+    "CZ": "Teplotní detektory – umístění max. 5 m od libovolného místa v prostoru."
   },
   "place.risk_areas": {
     "EN": "Site alarm between risk areas (kitchen and lounge) and bedrooms.",
@@ -478,7 +478,7 @@
   "place.bedroom": {
     "EN": "Site alarms max 3 m from any bedroom door.",
     "ES": "Colocar el detector a un máximo de 3 m de cualquier puerta del dormitorio.",
-    "CZ": "Umístění detektoru max. 3 m od jakýchkoli dveří do ložnice."
+    "CZ": "Umístěte detektor max. 3 m od jakýchkoli dveří do ložnice."
   },
   "maintain.how": {
     "EN": "How to Maintain<br> Smoke Alarms",
@@ -573,7 +573,7 @@
   "facts.benefit": {
     "EN": "Smoke Alarms Have One Major Benefit – They Save Lives!",
     "ES": "La mayor ventaja de los detectores de humo - ¡Salvan vidas!",
-    "CZ": "Proč instalovat detektory požáru - zachraňují životy!"
+    "CZ": "Proč instalovat detektory požárů - zachraňují životy!"
   },
   "facts.Dyk": {
     "EN": "Did you know?",
@@ -613,7 +613,7 @@
   "facts.share_story": {
     "EN": "Share your story with us!",
     "ES": "Comparta su historia con nosotros",
-    "CZ": "Podělte se s námi o váš příbeh!"
+    "CZ": "Podělte se s námi o váš příběh!"
   },
   "facts.how": {
     "EN": "How Do Smoke Alarms Work?",
@@ -773,7 +773,7 @@
   "country.uk_scot_data": {
     "EN": "<span>New Rules apply to all homes from <span class='semibold'>1st February 2022</span>. All rooms that are used often and every hallway or landing should have an interconnected smoke alarm.</span>",
     "ES": "<span>A partir del 1 de febrero de 2022, la nueva normativa se aplican a todas las viviendas. Todas las habitaciones que se usan con frecuencia y cada pasillo o descansillo deben tener un detector de humo interconectado.</span>",
-    "CZ": "<span>Od 1. února 2022 platí nová pravidla pro všechny domácnosti. Všechny často užívané pokoje, chodby nebo chodba nebo podesty musí mít instalovány vzájemně propojené detektory požárů.</span>"
+    "CZ": "<span>Od 1. února 2022 platí nová pravidla pro všechny domácnosti. Všechny často užívané pokoje, chodby nebo podesty musí mít instalovány vzájemně propojené detektory požárů.</span>"
   },
   "country.regulations": {
     "EN": "Regulations",
@@ -944,7 +944,7 @@
   "country.denmark_link2": {
     "EN": "Smoke Alarms",
     "ES": "Detectores de humo",
-    "CZ": "hlásiče kouře"
+    "CZ": "Detektory požáru"
   },
   "country.belgium": {
     "EN": "Belgium",
@@ -1029,12 +1029,12 @@
   "country.latvia_link1_title": {
     "EN": "Regulations",
     "ES": "Normativa",
-    "CZ": "předpisy"
+    "CZ": "Předpisy"
   },
   "country.latvia_link1": {
     "EN": "Fire Safety Regulations",
     "ES": "Normativa de Seguridad contra Incendios",
-    "CZ": "předpisi požární bezpečnosti"
+    "CZ": "Předpisy požární bezpečnosti"
   },
   "country.latvia_link2_title": {
     "EN": "Guidance",
@@ -1054,7 +1054,7 @@
   "country.czech republic": {
     "EN": "Czech Republic",
     "ES": "República Checa",
-    "CZ": "Česká Republika"
+    "CZ": "Česká republika"
   },
   "country.czech republic_link1": {
     "EN": "CAFO – Smoke alarms",
@@ -1099,7 +1099,7 @@
   "country.luxembourg_link1": {
     "EN": "Smoke detectors in Luxembourg",
     "ES": "Detectores de humo en Luxemburgo",
-    "CZ": "Detektory kouře v Lucembursku"
+    "CZ": "Detektory požárů v Lucembursku"
   },
   "country.portugal": {
     "EN": "Portugal",
@@ -1289,7 +1289,7 @@
   "country.ireland_link3": {
     "EN": "GOV.IE â€“ Fire detection in the home",
     "ES": "GOV.IE  Detección de incendios en viviendas",
-    "CZ": "Požární ochran v domácnosti"
+    "CZ": "Požární ochrana v domácnosti"
   },
   "country.hungary": {
     "EN": "Hungary",
@@ -1299,7 +1299,7 @@
   "country.hungary_data": {
     "EN": "<span>There are no known smoke alarm regulations in this region.<br><p></p>We would advise you to <span class='semibold'>check with your local fire brigade or loca<br>lgovernment website in the first instance.<br><p></p>We do advise placing at least 1 smoke alarm</span> on each floor of your home.</span>",
     "ES": "<span>No se conoce mormativa sobre detectores de humo en esta región. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-    "CZ": "<span>V této oblasti nejsou známy žádné předpisy pro hlásiče kouře. Doporučujeme vám, abyste se nejprve informovali na webových stránkách místního hasičského sboru nebo místní samosprávy. Doporučujeme umístit alespoň 1 kouřový hlásič na každé patro vašeho domu.</span>"
+    "CZ": "<span>Nejsou známy žádné předpisy řešící instalaci detektorů požárů v domácnostech. Doporučujeme vám, abyste se o podrobnostech k instalaci detektorů požárů informovali na webových stránkách místního hasičského sboru nebo místních úřadů. Doporučujeme instalovat alespoň 1 detektor požárů na každé patro vašeho domu.</span>"
   },
   "country.romania": {
     "EN": "Romania",
