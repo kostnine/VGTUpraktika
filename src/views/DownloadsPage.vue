@@ -60,8 +60,8 @@
           :gap="4"
           :slide-ratio="1 / 4"
           :dragging-distance="200"
-          fixed-height="400px"
-          :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2 }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2 } }">
+          fixed-height="350px"
+          :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, fixedHeight: false}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2, fixedHeight: false, }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2, fixedHeight: false } }">
             <vueper-slide 
               v-for="gif, idx in gifs"
               :key="`gif-${idx}`">
@@ -888,7 +888,7 @@ h3 {
 }
 .leaflet-container {
   margin-top: 40px;
-  padding: 0 calc(min(160px, 10vw));
+  padding: 20px calc(min(160px, 10vw));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -925,6 +925,7 @@ h3 {
     overflow: hidden;
     cursor: pointer;
     border-radius: 10px;
+    background-size: 100%;
     @media (max-width: 1080px) {
       width: 180px;
       height: 250px;
@@ -969,7 +970,7 @@ h3 {
   flex-direction: column;
   background-color: #fbf3ed;
   box-sizing: border-box;
-  padding: 20px calc(min(80px, 10vw)) 80px calc(min(80px, 10vw));
+  padding: 20px calc(min(160px, 10vw));
   gap: 26px;
   .title{
     width: 100%;
