@@ -9,13 +9,13 @@
     "EN": "<strong>Smoke Alarm</strong> Day",
     "CZ": "Den <strong>detektorů požárů</strong>",
     "ES": "del detector de humo",
-    "PL": "<strong>Alarm dymowy</strong> Dzień"
+    "PL": "Dzień <strong>Czujki Dymu</strong>"
   },
   "home.main_date": {
-    "EN": "17th November 2023",
-    "ES": "17 de noviembre de 2023",
-    "CZ": "17. listopad 2023",
-    "PL": "17 listopada 2023"
+    "EN": "17th November ",
+    "ES": "17 de noviembre de ",
+    "CZ": "17. listopad ",
+    "PL": "17 listopada "
   },
   "home.campaign": {
     "EN": "This Campaign is part of European Fire Safety Week",
@@ -69,7 +69,7 @@
     "EN": "About",
     "ES": "Acerca de los",
     "CZ": "O detektorech",
-    "PL": "O"
+    "PL": "Informacje o alarmach"
   },
   "home.where_to_place": {
     "EN": "Where to place",
@@ -81,7 +81,7 @@
     "EN": "Smoke Alarms",
     "ES": "Detectores de humo",
     "CZ": "požárů",
-    "PL": "Czujki dymu"
+    "PL": "dymowych"
   },
   "home.maintain": {
     "EN": "How to Maintain",
@@ -96,10 +96,10 @@
     "PL": "Chcesz dołączyć do projektu? Skontaktuj się z nami!"
   },
   "home.reserved": {
-    "EN": "All content © 2023 European smoke alarm day campaign",
-    "ES": "© Todo el contenido: 2023  Campaña Día Europeo del Detector de Humo",
-    "CZ": "Veškerý obsah © 2023 Kampaň k Evropskému dni detektorů požárů",
-    "PL": "Wszelkie treści zastrzeżone © Europejski Dzień Czujki Dymu 2023"
+    "EN": "All content © <span class='year'></span> European smoke alarm day campaign",
+    "ES": "© Todo el contenido: <span class='year'></span>  Campaña Día Europeo del Detector de Humo",
+    "CZ": "Veškerý obsah © <span class='year'></span> Kampaň k Evropskému dni detektorů požárů",
+    "PL": "Wszelkie treści zastrzeżone © Europejski Dzień Czujki Dymu <span class='year'></span>"
   },
   "home.cookies": {
     "EN": "Cookies used on this website",
@@ -1392,10 +1392,10 @@
     "PL": "Finlandia"
   },
   "country.finland_data": {
-    "EN": "<span>Mains / battery powered alarms conforming to EN 14604 required for every<br> 60 m² of each floor of a residence.<br> Intrconnection recommended for larger properties.<br></span>",
-    "ES": "<span>Se requieren detectores, alimentados por red o batería, conforme a EN 14604 por cada 60 m² de cada planta de una residencia. Interconexión recomendada para propiedades más grandes.</span>",
-    "CZ": "<span>Detektory napájené ze sítě/bateriemi v souladu s EN 14604  jsou vyžadovány na každýh 60 m2 podlaží nemovitosti. U větších nemovitostí je doporučeno propojení detektorů. </span>",
-    "PL": "<span>Czujka dymu (zgodna z EN14604, autonomiczny lub zasilana z sieci) wymagana na każde 60 m2 każdej kondygnacji obiektu mieszkalnego. W przypadku większych budynków zalecane ich sprzężenie.</span>"
+    "EN": "<span>Each floor of the apartment, as well as the basement floors and attics connected to them, must be equipped with at least one smoke alarm. There must be at least one smoke alarm for every 60 m2 of each floor or level of the apartment.<br><p></p>In addition to the floor area requirement above, the number and placement of smoke alarms must take into account the shape of the space to be protected and the functions that cause a special risk of ignition.<br></span>",
+    "ES": "<span>Cada planta de la vivienda, así como los sótanos y áticos conectados a ellas, deben estar equipados con al menos un detector de humo. Debe haber al menos un detector de humo por cada 60 m2 de cada planta o nivel del apartamento.<br>Además del requisito de superficie de suelo anterior, el número y la ubicación de los detectores de humo deben tener en cuenta la forma del espacio que se va a proteger y las funciones que provocan un riesgo especial de ignición.<br></span>",
+    "CZ": "<span>Každé patro bytu, jakož i suterénní patra a půdní prostory, které jsou s nimi propojeny, musí být vybaveny alespoň jedním kouřovým hlásičem. Na každých 60 m2 každého podlaží nebo úrovně bytu musí být alespoň jeden kouřový hlásič.<br>Kromě výše uvedeného požadavku na podlahovou plochu musí počet a umístění kouřových hlásičů zohledňovat tvar chráněného prostoru a funkce, které způsobují zvláštní riziko vznícení.<br></span>",
+    "PL": "<span>Każde piętro mieszkania, a także połączone z nim piwnice i poddasza muszą być wyposażone w co najmniej jeden czujnik dymu. Na każde 60 m2 każdego piętra lub poziomu mieszkania musi przypadać co najmniej jeden czujnik dymu.<br>Oprócz powyższego wymogu dotyczącego powierzchni podłogi, liczba i rozmieszczenie czujników dymu musi uwzględniać kształt chronionej przestrzeni oraz funkcje, które powodują szczególne ryzyko zapłonu.<br></span>"
   },
   "country.finland_link1_title": {
     "EN": "Regulations (I):",
@@ -1422,16 +1422,22 @@
     "PL": "Rozporządzenie Rady Ministrów w sprawie wymagań technicznych dla czujek dymu"
   },
   "country.finland_link3_title": {
-    "EN": "Guidance",
-    "ES": "Orientación",
-    "CZ": "Pokyny",
-    "PL": "Wytyczne"
+    "EN": "Regulations (III)",
+    "ES": "Normativa (III)",
+    "CZ": "Předpisy",
+    "PL": "Przepisy (III)"
   },
   "country.finland_link3": {
+    "EN": "Decree of the Ministry of the Interior on the placement and maintenance of fire alarms",
+    "ES": "Decreto del Ministerio del Interior sobre la colocación y el mantenimiento de alarmas contra incendios",
+    "CZ": "Vyhláška Ministerstva vnitra o umístění a údržbě požárních hlásičů",
+    "PL": "Rozporządzenie Ministerstwa Spraw Wewnętrznych w sprawie rozmieszczenia i konserwacji alarmów przeciwpożarowych"
+  },
+  "country.finland_link4": {
     "EN": "Finnish Safety and Chemicals Agency (Tukes)",
-    "ES": "Agencia Finlandesa de Seguridad y Productos Químicos (Tukes)",
-    "CZ": "Finnish Safety and Chemicals Agency (Tukes)",
-    "PL": "Fińska Agencja Bezpieczeństwa (Tukes)"
+    "ES": "Agencia Finlandesa de Seguridad y Sustancias Químicas (Tukes)",
+    "CZ": "Finská agentura pro bezpečnost a chemické látky (Tukes)",
+    "PL": "Fińska Agencja Bezpieczeństwa i Chemikaliów (Tukes)"
   },
   "country.germany": {
     "EN": "Germany",
@@ -2548,5 +2554,11 @@
     "ES": "Folleto en italiano",
     "CZ": "Leták v italštině",
     "PL": "Ulotka w języku włoskim"
+  },
+  "home.extraBottomText":{
+    "EN": "",
+    "ES": "",
+    "CZ": "",
+    "PL": "Strona przetłumaczona przez Roberta Klonowskiego przy wsparciu firm Aisko i Kidde"
   }
 }

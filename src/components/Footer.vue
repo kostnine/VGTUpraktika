@@ -13,7 +13,7 @@
         <span class="text email-link"
           >E-Mail: <a href="mailto:info@eurofsa.org">info@eurofsa.org</a></span
         >
-        <span class="bottom-rights">{{ toLocal("home.reserved") }}</span>
+        <span class="bottom-rights" v-html="toLocal('home.reserved')"></span>
       </div>
     </div>
   </div>
@@ -22,6 +22,11 @@
 <script>
 export default {
   name: "FooterComponent",
+  mounted(){
+    this.$nextTick(() => {
+      this.$el.querySelector(".year").innerHTML = new Date().getFullYear();
+    })
+  },
   data() {
     return {};
   },

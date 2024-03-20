@@ -4,7 +4,7 @@
       <div class="text">
         <h1 class="primary">{{ toLocal("home.european") }}</h1>
         <h1 v-html="toLocal('home.smoke_day')"></h1>
-        <h2>{{ toLocal("home.main_date") }}</h2>
+        <h2>{{ toLocal("home.main_date") }}{{ new Date().getFullYear() }}</h2>
         <span class="hashtag">#smokealarmssavelives</span>
         <span class="under-hashtag">{{ toLocal("home.campaign") }}</span>
       </div>
@@ -293,6 +293,7 @@
           </div>
         </div>
       </div>
+      <div class="extra-text">{{toLocal('home.extraBottomText')}}</div>
     </section>
   </div>
 </template>
@@ -303,6 +304,7 @@ import { Navigation, Pagination } from "swiper";
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
 import VideoPlayer from "@/components/VideoPlayer.vue";
+import store from "@/store.js";
 
 SwiperCore.use([Navigation, Pagination]);
 export default {
@@ -314,6 +316,7 @@ export default {
   },
   data() {
     return {
+      lang: store.state.lang,
       windowWidth: window.innerWidth,
       cTranslation: 125,
       videos: [
@@ -1426,7 +1429,8 @@ section {
   flex-direction: column;
   align-items: center;
   height: fit-content;
-  padding-bottom: 160px;
+  padding-bottom: 120px;
+  gap: 8px;
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -1497,7 +1501,7 @@ section {
   }
   @media (max-width: 1320px) {
     padding: 0 calc(min(80px, 10vw));
-    padding-bottom: 80px;
+    padding-bottom: 20px;
     .card-container {
       .card {
         width: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
@@ -1840,5 +1844,10 @@ section {
     height: 60vw;
     width: 60vw;
   }
+}
+.extra-text{
+  display: flex;
+  align-items: flex-end;
+  padding-top: 20px;
 }
 </style>

@@ -121,6 +121,7 @@ export default {
         CZ: "Czech",
         EN: "English",
         ES: "Spanish",
+        PL: "Polish",
       },
       dropdownLanguages: [
         {
@@ -137,6 +138,11 @@ export default {
           id: 3,
           name: "Spanish",
           prefix: "ES",
+        },
+        {
+          id: 4,
+          name: "Polish",
+          prefix: "PL",
         },
       ],
     };
