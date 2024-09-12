@@ -8,88 +8,7 @@
       scrollTo="facts"
     />
     <div class="facts-page-main">
-      <div class="facts-main-header">
-        <span class="header-title" id="facts">{{
-          toLocal("facts.benefit")
-        }}</span>
-        <div class="header-list">
-          <span class="header-list-title">{{ toLocal("facts.Dyk") }}</span>
-          <span class="header-list-item"
-            ><div class="arrow-right">
-              <svg
-                width="12"
-                height="23"
-                viewBox="0 0 12 23"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
-                  fill="#483A5B"
-                />
-              </svg>
-            </div>
-            {{ toLocal("facts.installing") }}</span
-          >
-          <span class="header-list-item"
-            ><div class="arrow-right">
-              <svg
-                width="12"
-                height="23"
-                viewBox="0 0 12 23"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
-                  fill="#483A5B"
-                />
-              </svg>
-            </div>
-            {{ toLocal("facts.less_likely") }}</span
-          >
-          <span class="header-list-item"
-            ><div class="arrow-right">
-              <svg
-                width="12"
-                height="23"
-                viewBox="0 0 12 23"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
-                  fill="#483A5B"
-                />
-              </svg>
-            </div>
-            {{ toLocal("facts.deaths") }}</span
-          >
-        </div>
-      </div>
       <div class="facts-main-container">
-        <div class="red-bar"></div>
-        <div class="facts-item">
-          <div class="item-title">
-            <span class="item-text-title">{{ toLocal("facts.success") }}</span>
-            <span class="item-text-content"
-              >{{ toLocal("facts.saved_lives") }}<br />
-              {{ toLocal("facts.still_work") }}</span
-            >
-          </div>
-          <div class="item-window">
-            <div class="image-container" v-for="n in 4" v-bind:key="n">
-              <img
-                :src="require('@/assets/images/facts/' + n + '.jpg')"
-                alt="burnt"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="facts-share">
-          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-          <button @click="mailto">info@eurofsa.org</button>
-        </div>
         <div class="facts-how">
           <span class="how-title">{{ toLocal("facts.how") }}</span>
 
@@ -186,7 +105,46 @@
             </div>
           </div> -->
         </div>
+        <div class="facts-item">
+        <div class="red-bar"></div>
+          <div class="item-title">
+            <span class="item-text-title">{{ toLocal("facts.success") }}</span>
+            <span class="item-text-content"
+              >{{ toLocal("facts.saved_lives") }}<br />
+              {{ toLocal("facts.still_work") }}</span
+            >
+          </div>
+          <div class="item-window">
+            <div class="image-container" v-for="n in 4" v-bind:key="n">
+              <img
+                :src="require('@/assets/images/facts/' + n + '.jpg')"
+                alt="burnt"
+              />
+            </div>
+          </div>
+        </div>
+          <div class="facts-banner">
+              <span class="upper">{{ toLocal('stories.examples') }}</span>
+              <span class="lower">{{ toLocal('stories.following') }}</span>
+          </div>
+        <div class="facts-stories">
+          <div class="stories-container">
+            <div class="story" :class="story.class" v-for="story in storiesStack" :key="story.title">
+              <div class="story-title">{{ toLocal(story.title) }}</div>
+              <div class="story-content">
+                <div class="text">{{ toLocal(story.text_1) }}</div>
+                <div class="text" v-if="story.text_2">
+                  {{ toLocal(story.text_2) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="facts-share">
+          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+          <button @click="mailto">info@eurofsa.org</button>
     </div>
   </div>
 </template>
@@ -206,6 +164,43 @@ export default {
       window.location.href = "mailto:info@eurofsa.org";
     },
   },
+  data(){
+    return{
+      storiesStack:[
+        {
+          'title': 'stories.paris',
+          'text_1': 'stories.paris_text',
+          'class': 'half yellow'
+        },
+        {
+          'title': 'stories.manchester',
+          'text_1': 'stories.manchester_text',
+          'text_2': 'stories.manchester_text_1',
+          'class': 'half red'
+        },
+        {
+          'title': 'stories.rome',
+          'text_1': 'stories.rome_text',
+          'class': 'third blue'
+        },
+        {
+          'title': 'stories.berlin',
+          'text_1': 'stories.berlin_text',
+          'class': 'third yellow'
+        },
+        {
+          'title': 'stories.stockholm',
+          'text_1': 'stories.stockholm_text',
+          'class': 'third blue'
+        },
+        {
+          'title': 'stories.copenhagen',
+          'text_1': 'stories.copenhagen_text',
+          'class': 'full d-blue'
+        },
+      ]
+    }
+  }
 };
 </script>
 <style scoped lang="scss">
@@ -280,10 +275,16 @@ export default {
     display: flex;
     flex-direction: column;
     width: 90%;
-    background: #faf7f5;
+    background: #FBF3ED;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     border-radius: 10px;
+    // position: relative;
+    .red-bar{
+      width: 100%;
+      left: 0;
+      margin-top: -40px;
+    }
     .item-title {
       display: flex;
       flex-direction: column;
@@ -332,50 +333,6 @@ export default {
         grid-template-columns: auto;
         padding: 8px;
       }
-    }
-  }
-}
-.facts-share {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  width: 100%;
-  background: #c0554b;
-  box-sizing: border-box;
-  @media (max-width: 768px) {
-    padding: 0 10vw;
-  }
-  .share-title {
-    font-size: 48px;
-    line-height: 72px;
-    font-family: $semiBoldFont;
-    text-align: center;
-    margin-top: 55px;
-    color: #ffffff;
-    @media (max-width: 768px) {
-      font-size: 32px;
-    }
-  }
-  button {
-    background: #fbf3ed;
-    border-radius: 5px;
-    border: none;
-    width: 30%;
-    height: 64px;
-    margin: 30px auto;
-    font-family: $semiBoldFont;
-    font-size: 24px;
-    line-height: 32px;
-    text-align: center;
-    color: #1e1826;
-    cursor: pointer;
-    &:hover {
-      background: #483a5b;
-      color: white;
-    }
-    @media (max-width: 768px) {
-      width: 70%;
-      height: 40px;
     }
   }
 }
@@ -560,6 +517,138 @@ export default {
           margin-top: 4px;
         }
       }
+    }
+  }
+}
+.facts-banner{
+  width: 100%;
+  background-color: #DCE3EF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 20px);
+  padding: clamp(20px, 2.5vw, 40px) 0;
+  .upper{
+    font-family: $semiBoldFont;
+    font-size: clamp(28px, 2.5vw, 32px);
+    width: 50%;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #1E1826;
+    @media(max-width: 768px){
+      width: 70%;
+    }
+  }
+  .lower{
+    font-size: clamp(16px, 1vw, 20px);
+    color: #1E1826;
+    width: 80%;
+  }
+}
+.facts-stories{
+  width: 90%;
+  // padding: 0 calc(min(160px, 10vw));
+}
+.stories-container{
+  width: 100%;
+  // border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  gap: clamp(20px, 2.5vw, 40px);
+  .story{
+    padding: clamp(12px , 2.5vw, 28px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .story-content{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .story-title{
+      font-size: clamp(12px , 2.5vw, 24px);
+      font-family: $semiBoldFont;
+    }
+  }
+  .half{
+    width: 45%;
+    flex-grow: 1;
+  }
+  .third{
+    width: calc(90% / 3);
+    flex-grow: 1;
+    @media(max-width: 768px){
+      width: 45%;
+    }
+  }
+  .full{
+    width: 100%;
+  }
+}
+
+.yellow{
+  background-color: #FBF3ED;
+  color: #1E1826;
+}
+.red{
+  background-color: #C0554B;
+  color: white;
+}
+.blue{
+  background-color: #DCE3EF;
+  color: #1E1826;
+}
+.d-blue{
+  background-color: #483A5B;
+  color: white;
+}
+</style>
+<style lang="scss">
+@import "@/assets/scss/variables";
+.facts-share {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  background: #c0554b;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    padding: 0 10vw;
+  }
+  .share-title {
+    font-size: 48px;
+    line-height: 72px;
+    font-family: $semiBoldFont;
+    text-align: center;
+    margin-top: 55px;
+    color: #ffffff;
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+  button {
+    background: #fbf3ed;
+    border-radius: 5px;
+    border: none;
+    width: 30%;
+    height: 64px;
+    margin: 30px auto;
+    font-family: $semiBoldFont;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #1e1826;
+    cursor: pointer;
+    &:hover {
+      background: #483a5b;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      width: 70%;
+      height: 40px;
     }
   }
 }

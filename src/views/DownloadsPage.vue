@@ -6,7 +6,7 @@
         <h2 v-html="toLocal('downloads.more_info')"></h2>
         <span>{{ toLocal("downloads.read") }}</span>
       </div>
-      <div class="leaflet-container red-bg">
+      <!-- <div class="leaflet-container red-bg">
         <h3 class="color-text">{{ toLocal("downloads.check_leaf") }}</h3>
         <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
         <div class="leaflets">
@@ -71,7 +71,7 @@
             </vueper-slide>
           </vueper-slides>
           </div>
-      </div>
+      </div> -->
       <div class="red-bar">
         <span>{{ toLocal("downloads.nfpa") }}:</span>
         <div class="video-container">
@@ -125,7 +125,7 @@
           </div>
         </div>
       </div>
-      <div class="spain-container">
+      <!-- <div class="spain-container">
         <div class="title-container">
           <span class="spain-title"
             >{{ toLocal("downloads.fire_spain") }}:</span
@@ -200,7 +200,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="why-videos">
         <span class="why-videos-title">{{
           toLocal("downloads.why_installing")
@@ -412,8 +412,9 @@
         </div>
       </div>
     </div>
-    <div class="gifs">
-
+    <div class="facts-share">
+          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+          <button @click="mailto">info@eurofsa.org</button>
     </div>
   </div>
 </template>
@@ -424,7 +425,7 @@ import { Navigation, Pagination } from "swiper";
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
 import VideoPlayer from "@/components/VideoPlayer.vue";
-import {VueperSlides, VueperSlide} from "vueperslides";
+// import {VueperSlides, VueperSlide} from "vueperslides";
 import 'vueperslides/dist/vueperslides.css'
 SwiperCore.use([Navigation, Pagination]);
 export default {
@@ -433,8 +434,8 @@ export default {
     Swiper,
     SwiperSlide,
     VideoPlayer,
-    VueperSlides,
-    VueperSlide
+    // VueperSlides,
+    // VueperSlide
   },
   metaInfo: {
     title: "Best practices",
@@ -685,6 +686,9 @@ export default {
     document.head.appendChild(velocityScript);
   },
   methods: {
+      mailto() {
+      window.location.href = "mailto:info@eurofsa.org";
+    },
     downloadLeaflet(leaflet) {
       let link = document.createElement("a");
       link.setAttribute("download", this.toLocal(leaflet.text) + '.pdf');
@@ -796,6 +800,7 @@ h2 {
 .text {
   height: 100%;
   padding: 50px calc(min(160px, 10vw));
+  padding-bottom: 100px;
   span {
     font-size: clamp(16px, 5vw, 24px);
   }

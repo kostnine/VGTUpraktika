@@ -18,10 +18,10 @@
     "PL": "22 listopada "
   },
   "home.campaign": {
-    "EN": "This Campaign is part of European Fire Safety Week",
-    "ES": "Esta campaña forma parte de la Semana Europea de la Seguridad contra Incendios",
-    "CZ": "Tato kampaň je součástí Evropského týdne požární bepečnosti",
-    "PL": "Ten projekt jest częścią Europejskiego Tygodnia Bezpieczeństwa Pożarowego"
+    "EN": "European Smoke Alarm Day is a joint campaign by the European Fire Safety Alliance and the Federation of European Fire Officers to promote greater awareness about smoke alarms. It is organised as part of the activities of European Fire Safety Week which takes place annually in November.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
   },
   "home.support": {
     "EN": "Messages of Support",
@@ -54,10 +54,10 @@
     "PL": "Ten projekt jest wspierany przez"
   },
   "home.information": {
-    "EN": "Information You Need to Know About Smoke Alarms",
-    "ES": "Información que necesita saber sobre los detectores de humo",
-    "CZ": "Informace, které potřebujete vědět o detektorech požárů",
-    "PL": "Co powinieneś wiedzieć o czujkach dymu"
+    "EN": "For further information",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
   },
   "home.click_and_find": {
     "EN": "Click and find out more!",
@@ -144,16 +144,22 @@
     "PL": "Strona główna"
   },
   "header.regulations": {
+    "EN": "National or Local Government",
+    "ES": "Administración nacional o local",
+    "CZ": "Státní správa nebo místní samospráva",
+    "PL": "Władze krajowe lub lokalne"
+  },
+  "header.extra_europe":{
     "EN": "Regulations in Europe",
     "ES": "Normativa en Europa",
     "CZ": "Evropské předpisy",
     "PL": "Uregulowania prawne w Europie"
   },
   "header.sm_info": {
-    "EN": "Smoke Alarm Information",
-    "ES": "Información sobre detectores",
-    "CZ": "Informace o detektorech požárů",
-    "PL": "Informacja o czujkach dymu"
+    "EN": "Fire Services",
+    "ES": "Servicios contra incendios",
+    "CZ": "Požární služby",
+    "PL": "Usługi przeciwpożarowe"
   },
   "header.important_facts": {
     "EN": "Important Facts",
@@ -792,9 +798,9 @@
     "PL": "Przesłona świetlna"
   },
   "downloads.more_info": {
-    "EN": "More Information & <br> Downloads",
-    "ES": "Más información y <br>descargas",
-    "CZ": "Více informací & <br> Ke stažení",
+    "EN": "More Information & Downloads",
+    "ES": "Más información y descargas",
+    "CZ": "Více informací & Ke stažení",
     "PL": "Więcej informacji i pliki do pobrania"
   },
   "downloads.read": {
@@ -1146,12 +1152,18 @@
     "PL": "Belgia"
   },
   "country.belgium_data": {
-    "EN": "<span>In Flanders and Wallonia smoke alarms must be present in all homes, in Bruxelles only rental homes must have smoke alarms.</span>",
-    "ES": "<span>En Flandes y Valonia, los detectores de humo deben estar presentes en todas las casas, en Bruselas, solo las viviendas de alquiler deben tener detectores de humo.</span>",
-    "CZ": "<span>Ve Flandrech a Valonsku musí být detektory požárů instalovány ve všech domech, v Bruselu pouze v nájemních domech.</span>",
-    "PL": "<span>We Flandrii i Walonii wszystkie domy i mieszkania muszą być wyposażone w czujki dymu. W Brukseli wymóg ten dotyczy tylko domów i mieszkań na wynajem.</span>"
+    "EN": "<span>In Flanders and Wallonia smoke alarms must be present in all homes. From January 2025, smoke detectors will be compulsory in all homes in the Brussels Capital Region.</span>",
+    "ES": "<span>En Flandes y Valonia debe haber detectores de humo en todas las viviendas. A partir de enero de 2025, los detectores de humo serán obligatorios en todas las viviendas de la Región de Bruselas-Capital.</span>",
+    "CZ": "<span>Ve Flandrech a Valonsku musí být kouřové hlásiče ve všech domácnostech. Od ledna 2025 budou detektory kouře povinné ve všech domácnostech v regionu hlavního města Bruselu.</span>",
+    "PL": "<span>We Flandrii i Walonii czujniki dymu muszą być obecne we wszystkich domach. Od stycznia 2025 r. czujniki dymu będą obowiązkowe we wszystkich domach w Regionie Stołecznym Brukseli.</span>"
   },
   "country.belgium_link1_title": {
+    "EN": "More information",
+    "ES": "Más información",
+    "CZ": "Více informací",
+    "PL": "Więcej informacji:"
+  },
+  "country.belgium_link2_title": {
     "EN": "More information",
     "ES": "Más información",
     "CZ": "Více informací",
@@ -1162,6 +1174,12 @@
     "ES": "BELGIUM.BE Detectores de humo",
     "CZ": "BELGIUM.BE â€“ Smoke detectors",
     "PL": "BELGIUM.BE â€“ Czujki dymu"
+  },
+  "country.belgium_link2": {
+    "EN": "www.brussels.be",
+    "ES": "www.brussels.be",
+    "CZ": "www.brussels.be",
+    "PL": "www.brussels.be"
   },
   "country.austria": {
     "EN": "Austria",
@@ -2560,5 +2578,170 @@
     "ES": "",
     "CZ": "",
     "PL": "Strona przetłumaczona przez Roberta Klonowskiego przy wsparciu firm Aisko i Kidde"
+  },
+  "header.householders":{
+    "EN": "Householders",
+    "ES": "Hogares",
+    "CZ": "Domácnosti",
+    "PL": "Właściciele domów"
+  },
+  "home.aim":{
+    "EN": "The aim is to",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.aim_encourage":{
+    "EN": "Encourage more countries in Europe to make it mandatory to install smoke alarms in residential homes.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.aim_encourage2":{
+    "EN": "Encourage fire services at national or local level to get involved in providing or installing smoke alarms for vulnerable people living in their communities and in promoting greater awareness about smoke alarms.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.aim_encourage3":{
+    "EN": "Provide basic information for householders about smoke alarms – type of smoke alarms, where to install them and how to look after them.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.aim_support":{
+    "EN": "We have received much support for our campaign from fire service personnel all over Europe and from MEP's and from smoke alarm companies working in the European market",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.aim_support2":{
+    "EN": "click here.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+
+  "home.if_you_are":{
+    "EN": "If you are",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.national_local":{
+    "EN": "national or local government",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.national_fire":{
+    "EN": "national or local fire service",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "home.householder":{
+    "EN": "householder",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "regulations.watch":{
+    "EN": "Click to watch the video.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "downloads.legislations_brochure":{
+    "EN": "Advice for legislators on how to introduce legislation or regulations.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "downloads.examples":{
+    "EN": "Examples of successful smoke alarm campaigns implemented in various countries",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "stories.paris":{
+    "EN": "Paris Fire Brigade, France",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "stories.paris_text":{
+    "EN": "The Paris Fire Brigade reported a significant decrease in fire related fatalities after a city-wide smoke alarm installation campaign.  A success story from this initiative involved a multi-story residential building where a smoke alarm detected smoke from a smouldering fire in a basement storage area. The alarm prompted the evacuation of the building’s residents before the fire grew, allowing firefighters to control the situation quickly and prevent any injuries.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "stories.manchester":{
+    "EN": "Greater Manchester Fire and Rescue Service, UK",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.manchester_text":{
+    "EN": "In Greater Manchester, a smoke alarm installation programme significantly improved fire safety. The fire service reported a drastic reduction in fire-related injuries and fatalities.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.manchester_text_1":{
+    "EN": "One notable incident involved a family in Salford who were alerted to a nighttime fire by their smoke alarm. The early warning allowed them to evacuate safely before the fire spread, avoiding potentially fatal consequences.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.rome":{
+    "EN": "Rome Fire Department, Italy",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.rome_text":{
+    "EN": "In Rome, a public awareness and smoke alarm installation campaign resulted in several life-saving incidents. One such incident involved a smoke alarm detecting a fire in a child’s bedroom caused by an overheated electronic device. The alarm woke the family, who were able to evacuate safely and call the fire brigade. The early detection prevented not only potential loss of life but also extensive property damage.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.berlin":{
+    "EN": "Berlin Fire Department, Germany",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.berlin_text":{
+    "EN": "In Berlin, the fire department implemented a widespread smoke alarm initiative in residential buildings. A success story from this programme involved an elderly couple who were alerted to a kitchen fire by their newly installed smoke alarm. The quick response enabled them to call the fire brigade promptly, who arrived and extinguished the fire before it caused extensive damage or injury.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.stockholm":{
+    "EN": "Stockholm Fire Department, Sweden",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.stockholm_text":{
+    "EN": "The Stockholm’s fire department’s campaign to install smoke alarms in high-risk areas paid off when a smoke alarm alerted residents of an apartment building to a fire in a neighbouing unit. The early warning allowed for a swift evacuation, and firefighters were able to contain the fire to the originating unit, preventing a potential tragedy and minimizing property damage. ",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.copenhagen":{
+    "EN": "Copenhagen Fire Brigade, Denmark",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },"stories.copenhagen_text":{
+    "EN": "In Copenhagen, a smoke alarm installation programme led to a remarkable incident where a smoke alarm saved a young family. The alarm sounded in the middle of the night, alerting the parents to a fire that had started in the living room due to an electrical fault. The family evacuated immediately, and the fire brigade arrived in time to prevent the fire from spreading beyond the initial room, ensuring the family’s safety and preserving most of their home.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "stories.examples":{
+    "EN": "Examples of success stories from local fire services in Europe that organised smoke alarm campaigns",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
+  },
+  "stories.following":{
+    "EN": "The following examples from around Europe highlight the benefits of installing smoke alarms.",
+    "ES": "",
+    "CZ": "",
+    "PL": ""
   }
 }

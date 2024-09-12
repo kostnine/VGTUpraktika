@@ -85,10 +85,9 @@ export default {
     }
     .header-button {
       position: relative;
-      width: 381px;
       max-width: 360px;
-      height: 64px;
-      font-size: 18px;
+      width: fit-content;
+      font-size: clamp(18px, 2.5vw, 24px);
       line-height: 32px;
       font-family: $semiBoldFont;
       text-align: center;
@@ -97,15 +96,13 @@ export default {
       justify-content: center;
       align-items: center;
       color: #ffffff;
-      border-radius: 5px;
+      // border-radius: 5px;
       margin-top: 75px;
       cursor: pointer;
       transition: 0.1s;
       z-index: 1;
-      img {
-        position: absolute;
-        right: 15px;
-      }
+      gap: 16px;
+      padding: 8px 12px;
       &:hover {
         background-color: $secondaryColor;
       }

@@ -3,7 +3,7 @@
     <div class="footer-image-container">
       <div class="image-with-under-text">
         <img src="@/assets/logo.svg" alt="logo" />
-        <span>{{ toLocal("home.main_date") }}</span>
+        <span>{{ toLocal("home.main_date") }} {{ new Date().getFullYear() }}</span>
       </div>
     </div>
     <div class="footer-main-container">

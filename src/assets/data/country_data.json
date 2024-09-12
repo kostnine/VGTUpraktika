@@ -172,6 +172,11 @@
             "link_title": "country.<name>_link1_title",
             "link_url": "https://www.belgium.be/nl/huisvesting/huisvestingsproblemen/brand/rookmelders",
             "link_name": "country.<name>_link1"
+          },
+          {
+            "link_title": "country.<name>_link2_title",
+            "link_url": "https://www.brussels.be/smoke-detectors-mandatory-brussels-2025#:~:text=From%20January%202025%2C%20smoke%20detectors,be%20fatal%20within%203%20minutes",
+            "link_name": "country.<name>_link2"
           }
         ],
         "gap_size": "40px"

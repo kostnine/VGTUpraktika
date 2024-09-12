@@ -17,11 +17,12 @@
       class="header-navigation-bar"
       :class="{ open: windowWidth <= 880 ? isMenuOpen : true }"
     >
-      <router-link :to="`/${$store.state.lang}/`" class="header-nav-block">
+      <router-link :to="`/${$store.state.lang}/`" class="header-nav-block" :data-text="toLocal('header.home')">
         {{ toLocal("header.home") }}
       </router-link>
       <router-link
         :to="`/${$store.state.lang}/regulations`"
+        :data-text="toLocal('header.regulations')"
         class="header-nav-block"
         >{{ toLocal("header.regulations") }}</router-link
       >
@@ -29,6 +30,7 @@
         <div
           class="header-nav-block dropdown"
           @click="dropdownExtended = !dropdownExtended"
+          :data-text="toLocal('header.sm_info')+ '>>'"
         >
           {{ toLocal("header.sm_info") }}
           <img
@@ -42,6 +44,38 @@
             v-if="dropdownExtended"
             class="header-dropdown"
             v-click-outside="closeDropdown"
+          >
+            <router-link
+              :to="`/${$store.state.lang}/messages`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal("home.support") }}</router-link
+            >
+            <router-link
+              :to="`/${$store.state.lang}/facts`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal("header.important_facts") }}</router-link
+            >
+          </div>
+        </transition>
+      </div>
+      <div class="header-button-with-dropdown">
+        <div
+          class="header-nav-block dropdown"
+          @click="dropdownExtended2 = !dropdownExtended2"
+          :data-text="toLocal('header.householders')+ '>>'"
+        >
+          {{ toLocal("header.householders") }}
+          <img
+            :class="dropdownExtended2 ? 'flipped' : 'non-flipped'"
+            src="@/assets/icons/arrow_down.svg"
+            alt="dropdown"
+          />
+        </div>
+        <transition name="slide">
+          <div
+            v-if="dropdownExtended2"
+            class="header-dropdown"
+            v-click-outside="closeDropdown2"
           >
             <router-link
               :to="`/${$store.state.lang}/types`"
@@ -58,10 +92,15 @@
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.maintain") }}</router-link
             >
+            <router-link
+              :to="`/${$store.state.lang}/practices`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal("downloads.more_info") }}</router-link
+            >
           </div>
         </transition>
       </div>
-      <router-link
+      <!-- <router-link
         :to="`/${$store.state.lang}/facts`"
         class="header-nav-block"
         >{{ toLocal("header.important_facts") }}</router-link
@@ -70,7 +109,7 @@
         :to="`/${$store.state.lang}/practices`"
         class="header-nav-block"
         >{{ toLocal("header.practices") }}</router-link
-      >
+      > -->
       <div
         class="language-selector header-nav-block dropdown"
         @click="langDropdown"
@@ -114,6 +153,7 @@ export default {
   data() {
     return {
       dropdownExtended: false,
+      dropdownExtended2: false,
       isMenuOpen: false,
       isNotHome: false,
       isLangExtended: false,
@@ -177,6 +217,9 @@ export default {
     closeDropdown() {
       this.dropdownExtended = false;
     },
+    closeDropdown2(){
+      this.dropdownExtended2 = false;
+    }
   },
   directives: {
     "click-outside": {
@@ -260,12 +303,13 @@ export default {
       font-size: 16px;
       text-decoration: none;
       color: black;
-      font-family: $mainFont;
+      // font-family: $mainFont;
       font-weight: 400;
       // border: 1px solid black;
       // min-width: 18%;
       white-space: nowrap;
       padding: 8px 15px;
+      font-family: $mainFont;
       &.link-dropdown {
         color: white;
         box-sizing: content-box;
@@ -495,6 +539,20 @@ export default {
         font-size: 14px;
       }
     }
+  }
+}
+
+.header-nav-block{
+    &::after{
+        display: block;
+        content: attr(data-text);
+        content: attr(data-text) / "";
+        font-weight: bold;
+        height: 1px;
+        color: transparent;
+        overflow: hidden;
+        visibility: hidden;
+        font-family: $semiBoldFont;
   }
 }
 </style>

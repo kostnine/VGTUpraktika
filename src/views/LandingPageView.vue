@@ -22,7 +22,83 @@
         </div>
       </div>
     </section>
-    <section class="message" id="message">
+    <div class="aim-section">
+        <div class="column-container">
+          <span class="aim-title">
+            {{ toLocal("home.aim") }}:
+          </span>
+          <div class="text-list">
+            <span class="text-in-list">1. {{ toLocal('home.aim_encourage') }}</span>
+            <span class="text-in-list">2. {{ toLocal('home.aim_encourage2') }}</span>
+            <span class="text-in-list">3. {{ toLocal('home.aim_encourage3') }}</span>
+          </div>
+          <div class="aim-support">
+            <span><span class="bolder">{{ toLocal("home.aim_support") }}</span> - <span class="link" @click="$router.push({ path: './messages' })">{{ toLocal("home.aim_support2") }}</span></span>
+          </div>
+        </div>
+    </div>
+    <div class="facts">
+      <div class="facts-main-header">
+        <span class="header-title" id="facts">{{
+          toLocal("facts.benefit")
+        }}</span>
+        <div class="header-list">
+          <span class="header-list-title">{{ toLocal("facts.Dyk") }}</span>
+          <span class="header-list-item"
+            ><div class="arrow-right">
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="#C0554B"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#C0554B"
+                />
+              </svg>
+            </div>
+            {{ toLocal("facts.installing") }}</span
+          >
+          <span class="header-list-item"
+            ><div class="arrow-right">
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="#C0554B"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#C0554B"
+                />
+              </svg>
+            </div>
+            {{ toLocal("facts.less_likely") }}</span
+          >
+          <span class="header-list-item"
+            ><div class="arrow-right">
+              <svg
+                width="12"
+                height="23"
+                viewBox="0 0 12 23"
+                fill="#C0554B"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 11.5L-6.59077e-08 22.3253L8.80472e-07 0.674682L12 11.5Z"
+                  fill="#C0554B"
+                />
+              </svg>
+            </div>
+            {{ toLocal("facts.deaths") }}</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- <section class="message" id="message">
       <div class="content">
         <div class="video-container">
           <div class="video" v-if="windowWidth > 768">
@@ -39,19 +115,6 @@
                 v-for="(video, index) in videoStack"
                 :key="`${video.link}-${index}`"
               >
-                <!-- <video
-                  :ref="`mainMessageVideo-${index}`"
-                  @mouseover="
-                    currentlyHoveringVideo = `mainMessageVideo-${index}`
-                  "
-                  @mouseleave="currentlyHoveringVideo = ''"
-                >
-                  <source
-                    :src="require(`@/assets/${video.link}`)"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video> -->
                 <video-player
                   :ref="`mainMessageVideo-${index}`"
                   :options="{
@@ -68,9 +131,6 @@
                 />
               </swiper-slide>
             </swiper>
-            <!-- <div class="carousel" ref="carousel" >
-                    
-                </div> -->
           </div>
         </div>
         <div class="text">
@@ -217,8 +277,9 @@
           {{ toLocal("home.regulations") }}
         </button>
       </div>
-    </section>
+    </section> -->
     <section class="supporters" id="supporters">
+      <div class="red-bar"></div>
       <div class="modal">
         <div class="modal-content">
           <h3>{{ toLocal("home.supported_by") }}:</h3>
@@ -271,7 +332,7 @@
     </section>
     <section class="information" id="information">
       <h3>{{ toLocal("home.information") }}</h3>
-      <span>{{ toLocal("home.click_and_find") }}</span>
+      <!-- <span>{{ toLocal("home.click_and_find") }}</span> -->
       <div class="card-container">
         <div
           class="card"
@@ -280,15 +341,17 @@
           @click="card.action"
         >
           <div class="card-content">
-            <div class="text">
-              {{ toLocal(card.key1) }} <br />
-              {{ toLocal(card.key2) }}
-            </div>
+            <span class="text">
+              {{ toLocal(card.key1) }}
+              <b>{{ toLocal(card.key2) }}</b>
+            </span>
+            <span class="click-here">
+              {{toLocal('home.aim_support2')}}
+            </span>
             <img
               v-if="card.img != ''"
               :src="require(`@/assets/${card.img}`)"
               alt=""
-              :class="{ maintain: index == 2 }"
             />
           </div>
         </div>
@@ -298,21 +361,21 @@
   </div>
 </template>
 
-<script>
-import { Navigation, Pagination } from "swiper";
+<script lang="js">
+// import { Navigation, Pagination } from "swiper";
 
-import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
+// import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
-import VideoPlayer from "@/components/VideoPlayer.vue";
+// import VideoPlayer from "@/components/VideoPlayer.vue";
 import store from "@/store.js";
 
-SwiperCore.use([Navigation, Pagination]);
+// SwiperCore.use([Navigation, Pagination]);
 export default {
   name: "LandingPageView",
   components: {
-    Swiper,
-    SwiperSlide,
-    VideoPlayer,
+    // Swiper,
+    // SwiperSlide,
+    // VideoPlayer,
   },
   data() {
     return {
@@ -423,27 +486,27 @@ export default {
       ],
       cards: [
         {
-          key1: "home.about",
-          key2: "home.smoke_alarms",
-          img: "images/cards/detector.png",
+          key1: "home.if_you_are",
+          key2: "home.national_local",
+          img: "images/cards/house_2.svg",
+          action: () => {
+            this.$router.push({ path: "./regulations" });
+          },
+        },
+        {
+          key1: "home.if_you_are",
+          key2: "home.national_fire",
+          img: "images/cards/house_3.svg",
+          action: () => {
+            this.$router.push({ path: "./messages" });
+          },
+        },
+        {
+          key1: "home.if_you_are",
+          key2: "home.householder",
+          img: "images/cards/house_1.svg",
           action: () => {
             this.$router.push({ path: "./types" });
-          },
-        },
-        {
-          key1: "home.where_to_place",
-          key2: "home.smoke_alarms",
-          img: "images/cards/room.png",
-          action: () => {
-            this.$router.push({ path: "./place" });
-          },
-        },
-        {
-          key1: "home.maintain",
-          key2: "home.smoke_alarms",
-          img: "images/cards/maintain.png",
-          action: () => {
-            this.$router.push({ path: "./maintain" });
           },
         },
       ],
@@ -689,6 +752,56 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/_variables.scss";
+.facts{
+  padding: 80px calc(min(160px, 10vw));
+  height: fit-content;
+}
+.facts-main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 600px;
+  width: 100%;
+  .header-title {
+    max-width: 45%;
+    font-size: 48px;
+    line-height: 72px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+
+    text-align: center;
+    font-family: $semiBoldFont;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      font-size: 36px;
+      padding: 0 10vw;
+    }
+  }
+  .header-list {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 30px calc(min(160px, 10vw));
+
+    .header-list-title {
+      font-size: 24px;
+      line-height: 32px;
+      font-family: $semiBoldFont;
+      text-align: start;
+    }
+    .header-list-item {
+      display: flex;
+      padding: 15px 0;
+      align-items: center;
+      font-size: 18px;
+    }
+  }
+  .arrow-right {
+    display: flex;
+    margin-right: 10px;
+    padding-top: 2px;
+  }
+}
 
 .button-container {
   display: flex;
@@ -736,9 +849,10 @@ h1 {
 }
 h2 {
   color: $mainColor;
-  font-size: clamp(24px, 4.5vw, 80px);
+  font-size: clamp(24px, 4.5vw, 56px);
   margin: 2rem 0 0 0;
-  font-weight: 500;
+  font-weight:500;
+  font-family: $semiBoldFont;
 }
 h3 {
   font-size: clamp(24px, 4vw, 46px);
@@ -749,7 +863,7 @@ h3 {
 .hashtag {
   margin-top: 5rem;
   font-size: 48px;
-  font-size: clamp(24px, 2.5vw, 48px);
+  font-size: clamp(24px, 2.5vw, 36px);
 }
 section {
   display: flex;
@@ -1192,6 +1306,15 @@ section {
   position: relative;
   padding: 50px calc(min(160px, 7vw));
   overflow: hidden;
+  .red-bar{
+    width: 100%;
+    height: 200px;
+    background-color: #C0554B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
   h3 {
     margin: 0rem 0 2rem;
   }
@@ -1255,6 +1378,9 @@ section {
         max-width: 47%;
         width: 17vw;
         margin: 1rem;
+        &:hover{
+          background-color: #FBF3ED;
+        }
       }
     }
   }
@@ -1292,7 +1418,7 @@ section {
       text-decoration: none;
     }
     &:hover {
-      background: #fbf3ed;
+      background: #DCE3EF;
       box-shadow: 0px 3px 10px 0px #0707073f;
     }
     &:active {
@@ -1452,11 +1578,12 @@ section {
       overflow: hidden;
       transition: background-color 0.3s, box-shadow 0.3s;
       .text {
-        display: flex;
         flex: 1;
         font-size: clamp(16px, 2vw, 36px);
         transition: color 0.3s;
-        margin-bottom: 1.5rem;
+        // margin-bottom: 1.5rem;
+        min-height: 33%;
+        justify-content: center;
       }
       img {
         // width: auto;
@@ -1473,7 +1600,8 @@ section {
       .card-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 1%;
+        // align-items: center;
         width: 100%;
         height: 100%;
         padding: calc(min(4vw, 3rem)) calc(min(4vw, 1.5rem));
@@ -1481,6 +1609,9 @@ section {
       }
       &:hover {
         background: $mainColor;
+        .click-here{
+          color: white;
+        }
         .text {
           color: white;
         }
@@ -1496,8 +1627,11 @@ section {
     margin: 3rem 0 0;
   }
   span {
-    font-size: clamp(16px, 1vw, 24px);
-    margin: 3rem 0 5rem;
+    &:not(.click-here){
+      font-size: clamp(16px, 1vw, 24px);
+    }
+    // margin: 3rem 0 5rem;
+    height: 30%;
   }
   @media (max-width: 1320px) {
     padding: 0 calc(min(80px, 10vw));
@@ -1572,7 +1706,6 @@ section {
         .card-content {
           padding: 1rem 2rem;
           .text {
-            flex: initial;
             font-size: clamp(24px, 3vw, 36px);
           }
           img {
@@ -1602,7 +1735,8 @@ section {
     }
     span {
       margin: 1rem 0;
-      font-size: clamp(16px, 2vw, 20px);
+      font-size: clamp(20px, 2vw, 28px);
+      height: fit-content;
     }
     .card-container {
       .card {
@@ -1616,8 +1750,7 @@ section {
         .card-content {
           padding: 1rem 2rem;
           .text {
-            flex: initial;
-            font-size: clamp(24px, 3vw, 36px);
+            font-size: clamp(32px, 3vw, 36px);
             height: 40%;
           }
           img {
@@ -1682,8 +1815,8 @@ section {
 }
 .under-hashtag {
   // font-size: 16px;
-  line-height: 24px;
-  font-size: clamp(16px, 1.5vw, 38px);
+  // line-height: 24px;
+  font-size: clamp(16px, 1.5vw, 20px);
   margin-top: 16px;
 }
 
@@ -1797,7 +1930,7 @@ section {
   display: flex;
   min-height: 50vw;
   justify-content: flex-end;
-  overflow: visible;
+  overflow: hidden;
   background: #c0554b;
   padding: 25px 0;
   position: relative;
@@ -1849,5 +1982,50 @@ section {
   display: flex;
   align-items: flex-end;
   padding-top: 20px;
+}
+
+.aim-section{
+  background-color: #FBF3ED;
+  padding: 48px calc(min(160px, 10vw));
+  height: fit-content;
+  .column-container{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 2vw, 12px);
+    .text-list{
+      display: flex;
+      flex-direction: column;
+      font-size: clamp(14px, 2vw, 18px);
+      gap: 4px;
+    }
+    .aim-support{
+      font-size: clamp(14px, 2vw, 18px);
+      .bolder{
+        font-weight: 600;
+      }
+      .link{
+        transition: 0.25s;
+        font-weight: 600;
+        color: #C0554B;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover{
+          color: #483A5B;
+        }
+      }
+    }
+  }
+  .aim-title{
+    font-size: clamp(18px, 5vw, 24px);
+  }
+}
+.click-here{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #C0554B;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
+  transition: 0.25s;
 }
 </style>

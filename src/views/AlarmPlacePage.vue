@@ -275,6 +275,10 @@
         </div>
       </div>
     </div>
+    <div class="facts-share">
+          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+          <button @click="mailto">info@eurofsa.org</button>
+    </div>
   </div>
 </template>
 
@@ -321,6 +325,9 @@ export default {
     };
   },
   methods: {
+    mailto() {
+      window.location.href = "mailto:info@eurofsa.org";
+    },
     scroll(id) {
       document.getElementById(id).scrollIntoView({
         behavior: "smooth",

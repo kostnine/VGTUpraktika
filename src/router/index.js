@@ -8,6 +8,7 @@ import AlarmsView from "../views/AlarmPlacePage.vue";
 import DownloadsView from "../views/DownloadsPage.vue";
 import MaintainView from "../views/MaintainPage.vue";
 import PrivacyView from "../views/PrivacyPolicy.vue";
+import SupportView from "../views/SupportPage.vue";
 
 Vue.use(VueRouter);
 
@@ -53,6 +54,11 @@ const routes = [
     name: "privacypolicy",
     component: PrivacyView,
   },
+  {
+    path: "/messages",
+    name: "messages",
+    component: SupportView,
+  },
 
   {
     path: "/:lang",
@@ -93,6 +99,11 @@ const routes = [
     path: "/:lang/privacy-policy",
     name: "lang-privacy",
     component: PrivacyView,
+  },
+  {
+    path: "/:lang/messages",
+    name: "messages",
+    component: SupportView,
   },
 ];
 
