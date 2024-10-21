@@ -20,28 +20,56 @@
       <router-link :to="`/${$store.state.lang}/`" class="header-nav-block" :data-text="toLocal('header.home')">
         {{ toLocal("header.home") }}
       </router-link>
-      <router-link
-        :to="`/${$store.state.lang}/regulations`"
-        :data-text="toLocal('header.regulations')"
-        class="header-nav-block"
-        >{{ toLocal("header.regulations") }}</router-link
-      >
       <div class="header-button-with-dropdown">
         <div
           class="header-nav-block dropdown"
-          @click="dropdownExtended = !dropdownExtended"
-          :data-text="toLocal('header.sm_info')+ '>>'"
+          @click="toggleDropdown(3)"
+          :data-text="toLocal('header.regulations')+ '>>'"
+          :class="{'active': ['lang-regulations-down', 'lang-regulations'].includes($route.name) }"
         >
-          {{ toLocal("header.sm_info") }}
+          {{ toLocal('header.regulations') }}
           <img
-            :class="dropdownExtended ? 'flipped' : 'non-flipped'"
+            :class="dropdownExtended == 3 ? 'flipped' : 'non-flipped'"
             src="@/assets/icons/arrow_down.svg"
             alt="dropdown"
           />
         </div>
         <transition name="slide">
           <div
-            v-if="dropdownExtended"
+            v-if="dropdownExtended == 3"
+            class="header-dropdown"
+            v-click-outside="closeDropdown"
+          >
+            <router-link
+              :to="`/${$store.state.lang}/regulations`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal('header.extra_europe') }}</router-link
+            >
+            <router-link
+              :to="`/${$store.state.lang}/regulationsDownload`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal("downloads.more_info") }}</router-link
+            >
+          </div>
+        </transition>
+      </div>
+      <div class="header-button-with-dropdown">
+        <div
+          class="header-nav-block dropdown"
+          @click="toggleDropdown(1)"
+          :data-text="toLocal('header.sm_info')+ '>>'"
+          :class="{'active': ['messages', 'lang-facts'].includes($route.name) }"
+        >
+          {{ toLocal("header.sm_info") }}
+          <img
+            :class="dropdownExtended == 1 ? 'flipped' : 'non-flipped'"
+            src="@/assets/icons/arrow_down.svg"
+            alt="dropdown"
+          />
+        </div>
+        <transition name="slide">
+          <div
+            v-if="dropdownExtended == 1"
             class="header-dropdown"
             v-click-outside="closeDropdown"
           >
@@ -55,27 +83,38 @@
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.important_facts") }}</router-link
             >
+              <router-link
+              :to="`/${$store.state.lang}/success`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal("header.success") }}</router-link
+            >
+            <router-link
+              :to="`/${$store.state.lang}/messagesDownload`"
+              class="header-nav-block link-dropdown dd-link"
+              >{{ toLocal("downloads.more_info") }}</router-link
+            >
           </div>
         </transition>
       </div>
       <div class="header-button-with-dropdown">
         <div
           class="header-nav-block dropdown"
-          @click="dropdownExtended2 = !dropdownExtended2"
+          :class="{'active': ['lang-maintain', 'lang-types', 'lang-place', 'lang-practices'].includes($route.name) }"
+          @click="toggleDropdown(2)"
           :data-text="toLocal('header.householders')+ '>>'"
         >
           {{ toLocal("header.householders") }}
           <img
-            :class="dropdownExtended2 ? 'flipped' : 'non-flipped'"
+            :class="dropdownExtended == 2 ? 'flipped' : 'non-flipped'"
             src="@/assets/icons/arrow_down.svg"
             alt="dropdown"
           />
         </div>
         <transition name="slide">
           <div
-            v-if="dropdownExtended2"
+            v-if="dropdownExtended == 2"
             class="header-dropdown"
-            v-click-outside="closeDropdown2"
+            v-click-outside="closeDropdown"
           >
             <router-link
               :to="`/${$store.state.lang}/types`"
@@ -152,8 +191,7 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-      dropdownExtended: false,
-      dropdownExtended2: false,
+      dropdownExtended: 0,
       isMenuOpen: false,
       isNotHome: false,
       isLangExtended: false,
@@ -162,6 +200,8 @@ export default {
         EN: "English",
         ES: "Spanish",
         PL: "Polish",
+        EE: "Estonian",
+        LV: "Latvian",
       },
       dropdownLanguages: [
         {
@@ -184,6 +224,16 @@ export default {
           name: "Polish",
           prefix: "PL",
         },
+        {
+          id: 5,
+          name: "Estonian",
+          prefix: "EE",
+        },
+        {
+          id: 4,
+          name: "Latvian",
+          prefix: "LV",
+        },
       ],
     };
   },
@@ -199,8 +249,17 @@ export default {
     },
   },
   methods: {
+    toggleDropdown(key) {
+      if(this.dropdownExtended == key){
+        this.dropdownExtended = 0
+      }else{
+        this.dropdownExtended = key
+      }
+      this.isLangExtended = false;
+    },
     langDropdown() {
       this.isLangExtended = !this.isLangExtended;
+      this.dropdownExtended = 0;
     },
     changeLanguage(lang) {
       this.$store.state.lang = lang;
@@ -215,11 +274,8 @@ export default {
       }
     },
     closeDropdown() {
-      this.dropdownExtended = false;
+      this.dropdownExtended = 0;
     },
-    closeDropdown2(){
-      this.dropdownExtended2 = false;
-    }
   },
   directives: {
     "click-outside": {
@@ -309,13 +365,19 @@ export default {
       // min-width: 18%;
       white-space: nowrap;
       padding: 8px 15px;
-      font-family: $mainFont;
+      &:not(.router-link-exact-active){
+        font-family: $mainFont;
+      }
       &.link-dropdown {
         color: white;
         box-sizing: content-box;
         // width: 236px;
         font-size: 16px;
         line-height: 24px;
+      }
+      &.active{
+        font-family: $semiBoldFont;
+        border-bottom: 2px solid #000000;
       }
       &:hover {
         &:not(.link-dropdown) {
@@ -495,7 +557,7 @@ export default {
         z-index: 99;
         overflow-y: auto;
         .header-nav-block {
-          font-size: clamp(16px, 7vw, 36px);
+          font-size: clamp(16px, 6vw, 28px);
           .header-button-with-dropdown {
             width: 100%;
           }
@@ -524,6 +586,7 @@ export default {
 .header-dropdown {
   .router-link-exact-active {
     border-bottom: 2px solid white;
+    font-family: $semiBoldFont;
   }
 }
 .router-link-exact-active {

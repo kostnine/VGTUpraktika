@@ -181,134 +181,9 @@
         </button>
       </div>
     </section>
-    <div class="information-section">
-        <span class="info-title">
-            {{ toLocal('downloads.more_info') }}
-        </span>
-        <div class="downloadables-container">
-            <div class="downloadable" @click="downloadFile('/downloads/Examples of successful smoke alarm campaigns implemented in various countries.docx', 'Examples of successful smoke alarm campaigns implemented in various countries')" :style="{
-                backgroundImage:
-                  'url(' + require(`@/assets/images/downloads/Asset10.svg`) + ')',
-              }">
-                <div class="downloadable-title">
-                    <div class="text">
-                        {{ toLocal('downloads.examples') }}
-                    </div>
-                    <div class="icon">
-                        <svg
-                            width="37"
-                            height="37"
-                            viewBox="0 0 37 37"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            >
-                            <path
-                                d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                                fill="white"
-                            />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="downloadable" @click="downloadFile('/downloads/Examples of training programmes for fire services to educate the public about smoke alarms.docx', 'Examples of training programmes for fire services to educate the public about smoke alarms')" :style="{
-                backgroundImage:
-                  'url(' + require(`@/assets/images/downloads/Asset11.svg`) + ')',
-              }">
-                <div class="downloadable-title">
-                    <div class="text">
-                        {{ toLocal('downloads.examples') }}
-                    </div>
-                    <div class="icon">
-                        <svg
-                            width="37"
-                            height="37"
-                            viewBox="0 0 37 37"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            >
-                            <path
-                                d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                                fill="white"
-                            />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="leaflet-section">
-        <div class="leaflet-container red-bg">
-        <h3 class="color-text leaflet-title">{{ toLocal("downloads.check_leaf_smoke") }}</h3>
-        <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
-        <div class="leaflets">
-          <div
-            class="leaflet"
-            :style="{
-              backgroundImage:
-                'url(' + require(`@/assets/${leaflet.img}`) + ')',
-            }"
-            v-for="(leaflet, index) in infoLeaflets"
-            :key="index"
-            @click="downloadLeaflet(leaflet)"
-          >
-            <div class="bottom-content">
-              <div class="leaflet-text">
-                {{ toLocal(leaflet.text) }}
-              </div>
-              <div class="download-btn">
-                <svg
-                  width="37"
-                  height="37"
-                  viewBox="0 0 37 37"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div>
-    <div class="gif-section">
-        <div class="gifs-container">
-        <div class="title-container">
-          <span class="title"
-            >
-            {{toLocal('downloads.gifs')}}
-            </span>
-        </div>
-        <div class="inner-container">
-          <vueper-slides
-          class="no-shadow"
-          :infinite="false"
-          :always-refresh-clones="true"
-          :visible-slides="4"
-          :slide-multiple="false"
-          :bullets="false"
-          :gap="4"
-          :slide-ratio="1 / 4"
-          :dragging-distance="200"
-          fixed-height="350px"
-          :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, fixedHeight: false}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2, fixedHeight: false, }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2, fixedHeight: false } }">
-            <vueper-slide 
-              v-for="gif, idx in gifs"
-              :key="`gif-${idx}`">
-              <template #content>
-                <img class="single-gif" draggable="false" :src="require(`@/assets/gifs/${$store.state.lang}/${gif.id}.gif`)" alt="gif">
-              </template>
-            </vueper-slide>
-          </vueper-slides>
-          </div>
-      </div>
-    </div>
     <div class="facts-share">
-          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-          <button @click="mailto">info@eurofsa.org</button>
+      <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+      <button @click="mailto">info@eurofsa.org</button>
     </div>
     
   </div>
@@ -319,8 +194,6 @@ import { Navigation, Pagination } from "swiper";
 
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import "swiper/swiper-bundle.css";
-import {VueperSlides, VueperSlide} from "vueperslides";
-import 'vueperslides/dist/vueperslides.css'
 import VideoPlayer from "@/components/VideoPlayer.vue";
 import store from "@/store.js";
 
@@ -517,8 +390,6 @@ export default {
         Swiper,
         SwiperSlide,
         VideoPlayer,
-        VueperSlides,
-        VueperSlide
     },
       mounted() {
     this.footerVideos = this.videos.filter((el) => el.id != 6);
@@ -1224,7 +1095,7 @@ export default {
   }
   button {
     max-width: 271px;
-    width: 30%;
+    width: 45%;
     transition: 0.25s;
     height: 56px;
   //   width: 80%;
@@ -1233,7 +1104,7 @@ export default {
     border: none;
     color: white;
     font-family: $mainFont;
-    font-size: clamp(12px, 1vw, 16px);
+    font-size: clamp(14px, 1vw, 18px);
     cursor: pointer;
     &.secondary {
       background: $secondaryColor;
@@ -1244,7 +1115,7 @@ export default {
     transition: all 0.3s;
     &:hover {
       box-shadow: 0px 3px 10px 0px #0707073f;
-      font-weight: 700;
+      font-family: $semiBoldFont;
     }
     &:active {
       box-shadow: 0px 2px 3px 0px #0000004f;

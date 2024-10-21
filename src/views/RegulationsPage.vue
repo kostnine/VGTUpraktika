@@ -94,130 +94,8 @@
     <div class="disclaimer-bar">
       <span class="disclaimer-text">{{ toLocal("reg.E_OE") }}</span>
     </div>
-    <div class="information-container">
-      <span class="info-title" v-html="toLocal('downloads.more_info')"></span>
-    <div class="spain-container">
-        <div class="title-container">
-          <span class="spain-title"
-            >{{ toLocal("downloads.fire_spain") }}</span
-          >
-          <span class="title-under">
-            {{toLocal('regulations.watch')}}
-          </span>
-        </div>
-        <div class="video-row">
-          <div class="section-container">
-            <div class="video-container-with-text">
-              <span class="video-title"
-                >{{ toLocal("downloads.video_about") }}:</span
-              >
-              <div class="video">
-                <iframe
-                  :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <span class="video-url"
-                >https://www.youtube.com/watch?v=NDShJjSbA1Y</span
-              >
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="video-container-with-text">
-              <span class="video-title">Duerme Tranquilo </span>
-              <div class="video">
-                <iframe
-                  :src="`https://www.youtube.com/embed/6g8PWXPgJjA?si=CAZuTuluZEgq-luw`"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <span class="video-url"
-                >https://www.youtube.com/watch?v=6g8PWXPgJjA</span
-              >
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-    <div class="leaflet-container">
-      <div class="container-title">
-        {{ toLocal('downloads.check_leaf') }}
-      </div>
-      <div class="container-under-title">
-        {{toLocal('downloads.download_leaf')}}
-      </div>
-      <div class="leaflet-row">
-        <div class="section-container">
-          <div class="brochure-container">
-            <div
-              class="leaflet"
-              :style="{
-                backgroundImage:
-                  'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
-              }"
-              @click="downloadLeaflet(spainBrochure)"
-            >
-              <div class="bottom-content">
-                <div class="leaflet-text">
-                  {{ toLocal(spainBrochure.text) }}
-                </div>
-                <div class="download-btn">
-                  <svg
-                    width="37"
-                    height="37"
-                    viewBox="0 0 37 37"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-container">
-          <div class="brochure-container">
-            <div
-              class="leaflet"
-              :style="{
-                backgroundImage:
-                  'url(' + require(`@/assets/${legislationsBrochure.img}`) + ')',
-              }"
-              @click="downloadLeaflet(legislationsBrochure)"
-            >
-              <div class="bottom-content">
-                <div class="leaflet-text">
-                  {{ toLocal(legislationsBrochure.text) }}
-                </div>
-                <div class="download-btn">
-                  <svg
-                    width="37"
-                    height="37"
-                    viewBox="0 0 37 37"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="under-disclaimer">
+
     </div>
     <div class="facts-share">
           <span class="share-title">{{ toLocal("facts.share_story") }}</span>
@@ -542,7 +420,6 @@ export default {
   color: white;
   .disclaimer-text{
     display: flex;
-    width: 60%;
   }
 }
 
@@ -804,6 +681,12 @@ export default {
     }
   }
   }
+}
+
+.under-disclaimer{
+  height: 40px;
+  background-color: #DCE3EF;
+  width: 100%;
 }
 
 </style>

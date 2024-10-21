@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import LandingPageView from "../views/LandingPageView.vue";
 import RegulationsView from "../views/RegulationsPage.vue";
+import RegulationsViewDownload from "../views/RegulationsViewDownload.vue";
+import MessagesViewDownload from "../views/MessagesViewDownload.vue";
 import FactsView from "../views/FactsPage.vue";
 import TypesView from "../views/TypesPage.vue";
 import AlarmsView from "../views/AlarmPlacePage.vue";
@@ -9,6 +11,7 @@ import DownloadsView from "../views/DownloadsPage.vue";
 import MaintainView from "../views/MaintainPage.vue";
 import PrivacyView from "../views/PrivacyPolicy.vue";
 import SupportView from "../views/SupportPage.vue";
+import SuccessPage from "../views/SuccessPage.vue";
 
 Vue.use(VueRouter);
 
@@ -59,6 +62,21 @@ const routes = [
     name: "messages",
     component: SupportView,
   },
+  {
+    path: "/messagesDownload",
+    name: "messages-down",
+    component: MessagesViewDownload,
+  },
+  {
+    path: "/success",
+    name: "success",
+    component: SuccessPage,
+  },
+  {
+    path: "/regulationsDownload",
+    name: "lang-regulations-down",
+    component: RegulationsViewDownload,
+  },
 
   {
     path: "/:lang",
@@ -69,6 +87,11 @@ const routes = [
     path: "/:lang/regulations",
     name: "lang-regulations",
     component: RegulationsView,
+  },
+  {
+    path: "/:lang/regulationsDownload",
+    name: "lang-regulations-down",
+    component: RegulationsViewDownload,
   },
   {
     path: "/:lang/types",
@@ -104,6 +127,16 @@ const routes = [
     path: "/:lang/messages",
     name: "messages",
     component: SupportView,
+  },
+  {
+    path: "/:lang/messagesDownload",
+    name: "messages-down",
+    component: MessagesViewDownload,
+  },
+  {
+    path: "/:lang/success",
+    name: "success",
+    component: SuccessPage,
   },
 ];
 

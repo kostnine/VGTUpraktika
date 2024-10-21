@@ -6,6 +6,25 @@
         <h2 v-html="toLocal('downloads.more_info')"></h2>
         <span>{{ toLocal("downloads.read") }}</span>
       </div>
+      <div class="game-container">
+        <div class="title">
+            <span>{{toLocal('info.game-title')}}</span>
+        </div>
+        <div class="inner-container">
+            <div class="desc" v-html="toLocal('info.game-desc')">
+            </div>
+            <div class="game-image" @click="goToGame()">
+                <img src="@/assets/images/game.png" alt="Video game image" />
+            </div>
+        </div>
+        <div class="under-button" @click="goToGame()">
+            <span>{{ toLocal('info.lets-play') }} </span>
+            <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 22L12 12L2 2" stroke="white" stroke-width="3"/>
+            </svg>
+                
+        </div>
+    </div>
       <!-- <div class="leaflet-container red-bg">
         <h3 class="color-text">{{ toLocal("downloads.check_leaf") }}</h3>
         <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
@@ -764,6 +783,12 @@ export default {
         }, 100);
       });
     },
+    goToGame(){
+        let link = document.createElement("a");
+        link.href = 'https://rauchmelder-lebensretter.de/120S-escape/?lang=en'
+        link.setAttribute('target', '_blank')
+        link.click();
+    }
   },
 };
 </script>
@@ -919,6 +944,7 @@ h3 {
       align-items: center;
       justify-content: center;
       margin-bottom: 64px;
+      gap: 16px;
     }
   }
   .leaflet {
@@ -937,9 +963,9 @@ h3 {
     }
     @media (max-width: 768px) {
       margin: 20px 0;
-      width: 46%;
-      margin: 2%;
-      height: 50vw;
+      width: 45%;
+      flex-grow: 1;
+      height: 200px;
       background-size: cover;
     }
     .bottom-content {
@@ -1507,6 +1533,7 @@ h3 {
   .subtitle {
     font-size: 20px;
     line-height: 24px;
+    width: 100%;
   }
   .video-container {
     display: flex;
@@ -1563,6 +1590,65 @@ h3 {
       width: 100%;
       margin: 16px 0;
     }
+  }
+}
+.game-container{
+  padding: 40px calc(min(80px, 5vw));
+  background-color: #DCE3EF;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  user-select: none;
+  .title{
+      font-size: clamp(24px, 2vw, 32px);
+      width: 100%;
+      padding: 0 28px;
+      font-family: $semiBoldFont;
+  }
+  .inner-container{
+      display: flex;
+      width: 100%;
+      gap: 28px;
+      padding: 0 28px;
+      z-index: 99;
+      pointer-events: none;
+      @media(max-width: 900px){
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .desc{
+          pointer-events: none;
+      }
+      .game-image{
+          cursor: pointer;
+          transition: 0.25s;
+          pointer-events: all;
+          &:hover{
+              transform: scale(0.95)
+          }
+      }
+  }
+  .under-button{
+      width: 100%;
+      padding: 24px 28px;
+      display: flex;
+      gap: 12px;
+      font-family: $semiBoldFont;
+      font-size: clamp(20px, 2vw, 28px);
+      background-color: #C0554B;
+      align-items: center;
+      border-radius: 10px;
+      @media(max-width: 900px){
+          margin-top: 0;
+      }
+      margin-top: -80px;
+      cursor: pointer;
+      color: white;
+      transition: 0.25s;
+      &:hover{
+          background-color: #483A5B;
+      }
   }
 }
 </style>

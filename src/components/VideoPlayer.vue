@@ -169,7 +169,7 @@ export default {
 <style lang="scss" scoped>
 .video-parent {
   max-height: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
 }
 video {

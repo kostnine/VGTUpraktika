@@ -1,13 +1,13 @@
 <template>
   <div class="facts-page-container">
     <PageHeader
-      image="images/green_block.jpg"
-      title="facts.facts"
+      image="images/smokelarm.png"
+      title="facts.how"
       content="facts.surprising"
       buttonText="facts.read_more"
-      scrollTo="facts"
+      scrollTo="facts-page-main"
     />
-    <div class="facts-page-main">
+    <div class="facts-page-main" id="facts-page-main">
       <div class="facts-main-container">
         <div class="facts-how">
           <span class="how-title">{{ toLocal("facts.how") }}</span>
@@ -104,41 +104,6 @@
               >
             </div>
           </div> -->
-        </div>
-        <div class="facts-item">
-        <div class="red-bar"></div>
-          <div class="item-title">
-            <span class="item-text-title">{{ toLocal("facts.success") }}</span>
-            <span class="item-text-content"
-              >{{ toLocal("facts.saved_lives") }}<br />
-              {{ toLocal("facts.still_work") }}</span
-            >
-          </div>
-          <div class="item-window">
-            <div class="image-container" v-for="n in 4" v-bind:key="n">
-              <img
-                :src="require('@/assets/images/facts/' + n + '.jpg')"
-                alt="burnt"
-              />
-            </div>
-          </div>
-        </div>
-          <div class="facts-banner">
-              <span class="upper">{{ toLocal('stories.examples') }}</span>
-              <span class="lower">{{ toLocal('stories.following') }}</span>
-          </div>
-        <div class="facts-stories">
-          <div class="stories-container">
-            <div class="story" :class="story.class" v-for="story in storiesStack" :key="story.title">
-              <div class="story-title">{{ toLocal(story.title) }}</div>
-              <div class="story-content">
-                <div class="text">{{ toLocal(story.text_1) }}</div>
-                <div class="text" v-if="story.text_2">
-                  {{ toLocal(story.text_2) }}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -627,6 +592,7 @@ export default {
     color: #ffffff;
     @media (max-width: 768px) {
       font-size: 32px;
+      line-height: 48px;
     }
   }
   button {

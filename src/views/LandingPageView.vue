@@ -33,7 +33,7 @@
             <span class="text-in-list">3. {{ toLocal('home.aim_encourage3') }}</span>
           </div>
           <div class="aim-support">
-            <span><span class="bolder">{{ toLocal("home.aim_support") }}</span> - <span class="link" @click="$router.push({ path: './messages' })">{{ toLocal("home.aim_support2") }}</span></span>
+            <span><span class="semibold">{{ toLocal("home.aim_support") }}</span> - <span class="link" @click="$router.push({ path: './messages' })">{{ toLocal("home.aim_support2") }}</span></span>
           </div>
         </div>
     </div>
@@ -483,6 +483,11 @@ export default {
           url_text: "www.kidde.com",
           logo: "images/supporters/kidde.svg",
         },
+        {
+          url: "https://www.eura-tech.eu",
+          url_text: "www.eura-tech.eu",
+          logo: "images/supporters/eura.svg",
+        },
       ],
       cards: [
         {
@@ -755,6 +760,9 @@ export default {
 .facts{
   padding: 80px calc(min(160px, 10vw));
   height: fit-content;
+  @media(max-width: 768px){
+    padding: 40px calc(min(80px, 5vw));
+  }
 }
 .facts-main-header {
   display: flex;
@@ -771,10 +779,14 @@ export default {
 
     text-align: center;
     font-family: $semiBoldFont;
+    @media(max-width: 1280px){
+      max-width: 100%;
+      line-height: 60px;
+    }
     @media (max-width: 768px) {
       max-width: 100%;
       font-size: 36px;
-      padding: 0 10vw;
+      padding: 0 5vw;
     }
   }
   .header-list {
@@ -1306,6 +1318,7 @@ section {
   position: relative;
   padding: 50px calc(min(160px, 7vw));
   overflow: hidden;
+  height: fit-content;
   .red-bar{
     width: 100%;
     height: 200px;
@@ -1495,7 +1508,7 @@ section {
     .modal-content {
       .supporter-container {
         .supporter {
-          width: 100%;
+          width: 80%;
           height: 44vw;
           margin: 1rem 0;
           max-width: 100%;
@@ -1511,7 +1524,7 @@ section {
         &.extra {
           padding: 0;
           .supporter {
-            max-width: 100%;
+            max-width: 80%;
             width: 100%;
           }
         }
@@ -1632,6 +1645,9 @@ section {
     }
     // margin: 3rem 0 5rem;
     height: 30%;
+    @media(max-width: 768px){
+    height: fit-content;
+    }
   }
   @media (max-width: 1320px) {
     padding: 0 calc(min(80px, 10vw));
@@ -1709,7 +1725,7 @@ section {
             font-size: clamp(24px, 3vw, 36px);
           }
           img {
-            width: 50vw;
+            width: 32vw;
             max-width: 280px;
             max-height: 100%;
             height: auto;
@@ -2000,9 +2016,6 @@ section {
     }
     .aim-support{
       font-size: clamp(14px, 2vw, 18px);
-      .bolder{
-        font-weight: 600;
-      }
       .link{
         transition: 0.25s;
         font-weight: 600;
