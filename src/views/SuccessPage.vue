@@ -144,7 +144,12 @@
           {
             'title': 'stories.copenhagen',
             'text_1': 'stories.copenhagen_text',
-            'class': 'full d-blue'
+            'class': 'half d-blue'
+          },
+          {
+          'title': 'stories.poland',
+          'text_1': 'stories.poland_text',
+          'class': 'half yellow'
           },
         ]
       }
