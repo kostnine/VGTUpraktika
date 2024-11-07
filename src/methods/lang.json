@@ -18,7 +18,7 @@
         "HU": "<strong>F\u00fcst\u00e9rz\u00e9kel\u0151</strong> Nap"
     },
     "home.main_date": {
-        "EN": "22th November ",
+        "EN": "22nd November ",
         "ES": "22 de noviembre de ",
         "CZ": "22. listopad ",
         "PL": "22 listopada ",
@@ -72,13 +72,22 @@
         "HU": "A f\u00fcst\u00e9rz\u00e9kel\u0151k szab\u00e1lyoz\u00e1sa Eur\u00f3p\u00e1ban."
     },
     "home.supported_by": {
-        "EN": "This Campaign is Supported by",
-        "ES": "Esta campa\u00f1a cuenta con el apoyo de",
-        "CZ": "Kampa\u0148 je podporov\u00e1na",
-        "PL": "Ten projekt jest wspierany przez",
-        "EE": "Seda kampaaniat toetab",
-        "LV": "\u0160o kampa\u0146u atbalsta",
-        "HU": "Ezt a kamp\u00e1nyt t\u00e1mogatja"
+        "EN": "This campaign is coordinated by",
+        "ES": "Esta campaña está coordinada por",
+        "CZ": "Tuto kampaň koordinuje",
+        "PL": "Ta kampania jest koordynowana przez",
+        "EE": "Seda kampaaniat koordineerib",
+        "LV": "Šo kampaņu koordinē",
+        "HU": "Ezt a kampányt a"
+    },
+    "home.supported_by2": {
+        "EN": "and is supported by",
+        "ES": "y cuenta con el apoyo de",
+        "CZ": "a je podporován",
+        "PL": "i jest wspierany przez",
+        "EE": "ja seda toetab",
+        "LV": "un to atbalsta",
+        "HU": "és támogatja a"
     },
     "home.information": {
         "EN": "For further information",

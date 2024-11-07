@@ -283,13 +283,36 @@
       <div class="modal">
         <div class="modal-content">
           <h3>{{ toLocal("home.supported_by") }}:</h3>
+          <div class="coordinater-container supporter-container">
+            <a
+              :href="supporter.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="supporter"
+              v-for="(supporter, index) in supporters.slice(0, 2)"
+              :key="index"
+            >
+              <div class="image-container">
+                <img
+                  :src="require(`@/assets/${supporter.logo}`)"
+                  alt="partner"
+                />
+              </div>
+              <div class="website-container">
+                <span class="website">
+                  {{ supporter.url_text }}
+                </span>
+              </div>
+            </a>
+          </div>
+          <h3>{{ toLocal("home.supported_by2") }}:</h3>
           <div class="supporter-container">
             <a
               :href="supporter.url"
               target="_blank"
               rel="noopener noreferrer"
               class="supporter"
-              v-for="(supporter, index) in supporters"
+              v-for="(supporter, index) in supporters.slice(2)"
               :key="index"
             >
               <div class="image-container">
@@ -455,13 +478,13 @@ export default {
           url_text: "www.europeanfiresafetyalliance.org",
           logo: "images/supporters/efsa-logo.svg",
         },
+      ],
+      supportersExtra: [
         {
           url: "https://www.euralarm.org",
           url_text: "www.euralarm.org",
           logo: "images/supporters/euralarm.svg",
         },
-      ],
-      supportersExtra: [
         {
           url: "https://www.smartwaresgroup.com",
           url_text: "www.smartwaresgroup.com",
@@ -1389,7 +1412,7 @@ section {
         height: 9vw;
         max-height: 170px;
         max-width: 47%;
-        width: 17vw;
+        width: 20vw;
         margin: 1rem;
         &:hover{
           background-color: #FBF3ED;
@@ -1403,7 +1426,7 @@ section {
     justify-content: space-around;
     align-items: center;
     margin: 1rem 2rem;
-    height: 15vw;
+    height: 12vw;
     font-size: 14px;
     line-height: 14px;
     width: 18vw;
@@ -1460,6 +1483,9 @@ section {
       box-shadow: none;
     }
     .modal-content {
+      h3{
+        text-align: center;
+      }
       .supporter-container {
         display: flex;
         width: 100%;
