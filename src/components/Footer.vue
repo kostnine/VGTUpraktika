@@ -3,7 +3,6 @@
     <div class="footer-image-container">
       <div class="image-with-under-text">
         <img src="@/assets/logo.svg" alt="logo" />
-        <span>{{ toLocal("home.main_date") }} {{ new Date().getFullYear() }}</span>
       </div>
     </div>
     <div class="footer-main-container">
@@ -13,7 +12,36 @@
         <span class="text email-link"
           >E-Mail: <a href="mailto:info@eurofsa.org">info@eurofsa.org</a></span
         >
-        <span class="bottom-rights" v-html="toLocal('home.reserved')"></span>
+        <div class="bottom-row">
+        <span class="bottom-section underlogo-date">{{ toLocal("home.main_date") }} {{ new Date().getFullYear() }}</span>
+        <div class="social-media-buttons bottom-section">
+          <img
+            src="@/assets/icons/fb_white.svg"
+            class="footer-link"
+            :class="{ opened: necessaryOpen }"
+            @click="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+          />
+          <img
+            src="@/assets/icons/ig_white.svg"
+            class="footer-link"
+            :class="{ opened: necessaryOpen }"
+            @click="openLink('https://www.instagram.com/eusmokealarmday/')"
+          />
+          <img
+            src="@/assets/icons/linkin_white.svg"
+            class="footer-link"
+            :class="{ opened: necessaryOpen }"
+            @click="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+          />
+          <img
+            src="@/assets/icons/x_white.svg"
+            class="footer-link"
+            :class="{ opened: necessaryOpen }"
+            @click="openLink('https://x.com/EuSmokeAlarmDay')"
+          />
+        </div>
+        <span class="bottom-rights bottom-section" v-html="toLocal('home.reserved')"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -24,12 +52,17 @@ export default {
   name: "FooterComponent",
   mounted(){
     this.$nextTick(() => {
-      this.$el.querySelector(".year").innerHTML = new Date().getFullYear();
+      this.$el.querySelector(".year").innerHTML = `${new Date().getFullYear()}&nbsp;`;
     })
   },
   data() {
     return {};
   },
+  methods:{
+    openLink(link){
+      window.open(link);
+    }
+  }
 };
 </script>
 
@@ -42,11 +75,14 @@ export default {
   display: flex;
   background-color: #483a5b;
   color: white;
-  height: 300px;
+  height: 270px;
   align-items: center;
-  padding: 0 160px;
+  padding: 0 calc(min(10vw, 160px));
   @media (max-width: 1280px) {
-    padding: 0 80px;
+    padding: 0 calc(min(2vw, 80px));
+    .bottom-rights{
+      font-size: 14px;
+    }
   }
   .footer-image-container {
     position: absolute;
@@ -80,6 +116,7 @@ export default {
       flex-direction: column;
       align-items: center;
       font-family: $mainFont;
+      width: 100%;
       .join-us-header {
         font-size: 25px;
         margin-bottom: 55px;
@@ -91,6 +128,55 @@ export default {
       }
       .bottom-rights {
         margin-top: 55px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        @media(max-width: 900px){
+          margin-top: 0;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .bottom-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    @media(max-width: 900px){
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .social-media-buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      @media(max-width: 1000px){
+        max-width: 20%;
+      }
+      .footer-link{
+        cursor: pointer;
+        transition: 0.25s;
+        &:hover{
+          transform: scale(1.04);
+        }
+      }
+    }
+    .bottom-section{
+      width: 33%;
+      flex-grow: 1;
+      @media(max-width: 900px){
+        width: 100%;
+        &.underlogo-date{
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
