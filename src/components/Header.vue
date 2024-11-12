@@ -149,6 +149,32 @@
         class="header-nav-block"
         >{{ toLocal("header.practices") }}</router-link
       > -->
+      <div class="social-media-buttons bottom-section">
+        <img
+          src="@/assets/icons/fb_red.svg"
+          class="footer-link"
+          :class="{ opened: necessaryOpen }"
+          @click="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+        />
+        <img
+          src="@/assets/icons/ig_red.svg"
+          class="footer-link"
+          :class="{ opened: necessaryOpen }"
+          @click="openLink('https://www.instagram.com/eusmokealarmday/')"
+        />
+        <img
+          src="@/assets/icons/linkin_red.svg"
+          class="footer-link"
+          :class="{ opened: necessaryOpen }"
+          @click="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+        />
+        <img
+          src="@/assets/icons/x_red.svg"
+          class="footer-link"
+          :class="{ opened: necessaryOpen }"
+          @click="openLink('https://x.com/EuSmokeAlarmDay')"
+        />
+      </div>
       <div
         class="language-selector header-nav-block dropdown"
         @click="langDropdown"
@@ -206,29 +232,24 @@ export default {
       },
       dropdownLanguages: [
         {
-          id: 1,
-          name: "English",
-          prefix: "EN",
-        },
-        {
           id: 2,
           name: "Czech",
           prefix: "CZ",
         },
         {
-          id: 3,
-          name: "Spanish",
-          prefix: "ES",
+          id: 7,
+          name: "Estonian",
+          prefix: "EE",
         },
         {
-          id: 4,
-          name: "Polish",
-          prefix: "PL",
+          id: 1,
+          name: "English",
+          prefix: "EN",
         },
         {
           id: 5,
-          name: "Estonian",
-          prefix: "EE",
+          name: "Hungarian",
+          prefix: "HU",
         },
         {
           id: 4,
@@ -236,9 +257,14 @@ export default {
           prefix: "LV",
         },
         {
-          id: 5,
-          name: "Hungarian",
-          prefix: "HU",
+          id: 6,
+          name: "Polish",
+          prefix: "PL",
+        },
+        {
+          id: 3,
+          name: "Spanish",
+          prefix: "ES",
         },
       ],
     };
@@ -255,6 +281,9 @@ export default {
     },
   },
   methods: {
+    openLink(link){
+      window.open(link);
+    },
     toggleDropdown(key) {
       if(this.dropdownExtended == key){
         this.dropdownExtended = 0
@@ -622,6 +651,21 @@ export default {
         overflow: hidden;
         visibility: hidden;
         font-family: $semiBoldFont;
+  }
+}
+.social-media-buttons{
+  padding: 4px 16px;
+  padding-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  .footer-link{
+    cursor: pointer;
+    transition: 0.25s;
+    &:hover{
+      transform: scale(1.10);
+    }
   }
 }
 </style>
