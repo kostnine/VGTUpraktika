@@ -189,6 +189,16 @@ import 'vueperslides/dist/vueperslides.css'
                     download_path: "/downloads/Leaflet-Spanish.pdf",
                     text: "downloads.leaflet5ES",
                 },
+                {
+                    img: "images/downloads/HU.png",
+                    download_path: "/downloads/Leaflet-Hungarian.pdf",
+                    text: "downloads.leaflet5HU",
+                },
+                 {
+                    img: "images/downloads/EE.png",
+                    download_path: "/downloads/Leaflet-SmokeAlarm-EE.pdf",
+                    text: "downloads.leaflet5EE",
+                },
                 ],
                 gifs:[
                 {
@@ -276,7 +286,7 @@ import 'vueperslides/dist/vueperslides.css'
             },
             downloadLeaflet(leaflet) {
             let link = document.createElement("a");
-            link.setAttribute("download", this.toLocal(leaflet.text) + leaflet.extension);
+            link.setAttribute("download", this.toLocal(leaflet.text) + '.pdf');
             link.href = leaflet.download_path;
             document.body.appendChild(link);
             link.click();

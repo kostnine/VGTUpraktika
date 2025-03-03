@@ -18,13 +18,13 @@
         "HU": "<strong>F\u00fcst\u00e9rz\u00e9kel\u0151</strong> Nap"
     },
     "home.main_date": {
-        "EN": "22nd November ",
-        "ES": "22 de noviembre de ",
-        "CZ": "22. listopad ",
-        "PL": "22 listopada ",
-        "EE": "22-Nov ",
-        "LV": "22-Nov ",
-        "HU": "November 22 "
+        "EN": "7th November ",
+        "ES": "7 de noviembre",
+        "CZ": "7. listopadu ",
+        "PL": "7 listopada ",
+        "EE": "7. november ",
+        "LV": "7. novembris ",
+        "HU": "November 7. "
     },
     "home.campaign": {
         "EN": "European Smoke Alarm Day is a joint campaign by the European Fire Safety Alliance and the Federation of European Fire Officers to promote greater awareness about smoke alarms. It is organised as part of the activities of European Fire Safety Week which takes place annually in November.",
@@ -1268,6 +1268,24 @@
         "LV": "Ugunsgr\u0113ku prevencijas ned\u0113\u013cas kampa\u0146a Sp\u0101nij\u0101",
         "HU": "T\u0171zmegel\u0151z\u00e9si H\u00e9t Kamp\u00e1ny Spanyolorsz\u00e1gban"
     },
+    "downloads.webinar_title":{
+        "EN": "European Smoke Alarm Day Webinar",
+        "ES": "Webinar sobre el Día Europeo de los Detectores de Humo",
+        "CZ": "Webinář k Evropskému dni kouřových alarmů",
+        "PL": "Webinarium na temat Europejskiego Dnia Alarmu Dymowego",
+        "EE": "Euroopa suitsuandurite päeva veebiseminar",
+        "LV": "Eiropas Dūmu signalizācijas dienas tīmekļa seminārs",
+        "HU": "Európai Füstjelző Nap webinárium"
+    },
+    "downloads.webinar_title_date":{
+        "EN": "2024 European Smoke Alarm Day Webinar",
+        "ES": "2024 Webinar sobre el Día Europeo de los Detectores de Humo",
+        "CZ": "2024 Webinář k Evropskému dni kouřových alarmů",
+        "PL": "2024 Webinarium na temat Europejskiego Dnia Alarmu Dymowego",
+        "EE": "2024 Euroopa suitsuandurite päeva veebiseminar",
+        "LV": "2024 Eiropas Dūmu signalizācijas dienas tīmekļa seminārs",
+        "HU": "2024 Európai Füstjelző Nap webinárium"
+    },
     "downloads.video_about": {
         "EN": "Video About Smoke Alarms",
         "ES": "Video sobre detectores de humo",
@@ -2088,14 +2106,110 @@
         "HU": "Lengyelorsz\u00e1g"
     },
     "country.poland_data": {
-        "EN": "<span>There are no known smoke alarm regulations in this region.We would advise you to check with your local fire brigade or local government website in the first instance.We do advise placing at least 1 smoke alarm on each floor of your home.</span>",
-        "ES": "<span>No se conoce mormativa sobre detectores de humo en esta regi\u00f3n. Le recomendamos que primero consulte con el servicio de bomberos local o el sitio web del gobierno local. Le recomendamos colocar al menos 1 detector de humo en cada planta de su hogar.</span>",
-        "CZ": "<span>Nejsou zn\u00e1my \u017e\u00e1dn\u00e9 p\u0159edpisy \u0159e\u0161\u00edc\u00ed instalaci detektor\u016f po\u017e\u00e1r\u016f v dom\u00e1cnostech. Doporu\u010dujeme v\u00e1m, abyste se o podrobnostech k instalaci detektor\u016f po\u017e\u00e1r\u016f informovali na webov\u00fdch str\u00e1nk\u00e1ch m\u00edstn\u00edho hasi\u010dsk\u00e9ho sboru nebo m\u00edstn\u00edch \u00fa\u0159ad\u016f. Doporu\u010dujeme instalovat alespo\u0148 1 detektor po\u017e\u00e1r\u016f na ka\u017ed\u00e9 patro va\u0161eho domu.</span>",
-        "PL": "<span>Brak oficjalnych wytycznych dotycz\u0105cych stosowania czujek dymu. Zalecany kontakt z miejscow\u0105 stra\u017c\u0105 po\u017carn\u0105 lub sprawdzenie krajowych stron internetowych. Generalnie zalecamy monta\u017c przynajmniej 1 czujki dymu na ka\u017cdej kondygnacji.</span>",
-        "EE": "<span>Selles piirkonnas puuduvad n\u00f5uded suitsuanduri paigaldamiseks. Soovitame teil otsida infot kohaliku p\u00e4\u00e4steasutuse v\u00f5i kohaliku omavalitsuse veebilehelt. Soovitame paigutada v\u00e4hemalt 1 suitsuandur igale eluruumi korrusele.</span>",
-        "LV": "<span>Nav inform\u0101cijas par \u0161\u012b re\u0123iona tiesisko regul\u0113jumu attiec\u012bb\u0101 uz d\u016bmu detektoriem. M\u0113s jums ieteiktu vispirms sazin\u0101ties ar viet\u0113jo ugunsdz\u0113s\u0113ju komandu vai iepaz\u012bties ar viet\u0113j\u0101s p\u0101rvaldes t\u012bmek\u013ca vietni. M\u0113s iesak\u0101m m\u0101jas katr\u0101 st\u0101v\u0101 novietot vismaz 1 d\u016bmu detektoru.</span>",
-        "HU": "<span>Ebben a r\u00e9gi\u00f3ban nincs ismert szab\u00e1lyoz\u00e1s a f\u00fcst\u00e9rz\u00e9kel\u0151re.<br><p></p>Javasoljuk, hogy el\u0151sz\u00f6r <span class='semibold'>a helyi t\u0171zolt\u00f3s\u00e1g vagy <br> a helyi \u00f6nkorm\u00e1nyzat webhely\u00e9t keresse fel.<br><p></p>Javasoljuk, hogy legal\u00e1bb 1 f\u00fcst\u00e9rz\u00e9kel\u0151t</span> helyezzen el otthona minden emelet\u00e9n.</span>"
+        "EN": "<span>From December 2024, the obligation to install at least one smoke alarm was introduced in newly constructed residential buildings and in newly constructed residential premises intended for the provision of hotel services designated for short-term, generally available rental of houses, apartments, rooms, and accommodation places.</span>",
+        "ES": "<span>A partir de diciembre de 2024, se introdujo la obligación de instalar al menos un detector de humo en los edificios residenciales de nueva construcción y en los locales residenciales de nueva construcción destinados a la prestación de servicios hoteleros designados para el alquiler a corto plazo y generalmente disponible de casas, apartamentos, habitaciones y lugares de alojamiento.</span>",
+        "CZ": "<span>Od prosince 2024 byla zavedena povinnost instalovat alespoň jeden kouřový hlásič v nově budovaných obytných budovách a v nově budovaných obytných prostorách určených k poskytování hotelových služeb určených ke krátkodobému, obecně dostupnému pronájmu domů, bytů, pokojů a ubytovacích míst.</span>",
+        "PL": "<span>Od grudnia 2024 r. wprowadzono obowiązek instalowania co najmniej jednego czujnika dymu w nowo budowanych budynkach mieszkalnych oraz w nowo budowanych lokalach mieszkalnych przeznaczonych do świadczenia usług hotelarskich przeznaczonych do krótkotrwałego, ogólnie dostępnego wynajmu domów, mieszkań, pokoi i miejsc noclegowych.</span>",
+        "EE": "<span>Alates 2024. aasta detsembrist kehtestati kohustus paigaldada vähemalt üks suitsuandur uutesse eluhoonetesse ja uutesse eluruumidesse, mis on mõeldud majade, korterite, tubade ja majutuskohtade lühiajaliseks üldkasutatavaks üürimiseks.</span>",
+        "LV": "<span>No 2024. gada decembra tika ieviests pienākums ierīkot vismaz vienu dūmu detektoru jaunbūvējamās dzīvojamās ēkās un jaunbūvējamās dzīvojamās telpās, kas paredzētas viesnīcu pakalpojumu sniegšanai un paredzētas īstermiņa vispārpieejamai māju, dzīvokļu, istabu un izmitināšanas vietu īrei.</span>",
+        "HU": "<span>2024 decemberétől az újonnan épített lakóépületekben és a házak, lakások, szobák és szálláshelyek rövid távú, általánosan hozzáférhető bérbeadására kijelölt, szállodai szolgáltatások nyújtására szolgáló újonnan épített lakóépületekben bevezették a legalább egy füstjelző felszerelésének kötelezettségét.</span>"
     },
+
+    "country.poland_data_1": {
+        "EN": "<span>From 1st January 2030 installation of at least one smoke alarm will get mandatory in existing residential buildings and from 30th June 2026 in existing residential premises intended for the provision of hotel services (short-term, generally available rental of houses, apartments, rooms, and accommodation places).</span>",
+        "ES": "<span>A partir del 1 de enero de 2030, será obligatoria la instalación de al menos un detector de humo en los edificios de viviendas existentes y, a partir del 30 de junio de 2026, en los locales de viviendas existentes destinados a la prestación de servicios hoteleros (alquiler a corto plazo, generalmente disponible, de casas, apartamentos, habitaciones y plazas de alojamiento).</span>",
+        "CZ": "<span>Od 1. ledna 2030 bude ve stávajících obytných budovách povinná instalace alespoň jednoho kouřového hlásiče a od 30. června 2026 ve stávajících obytných prostorách určených k poskytování hotelových služeb (krátkodobý, všeobecně dostupný pronájem domů, bytů, pokojů a ubytovacích míst).</span>",
+        "PL": "<span>Od 1 stycznia 2030 r. instalacja co najmniej jednego czujnika dymu stanie się obowiązkowa w istniejących budynkach mieszkalnych, a od 30 czerwca 2026 r. w istniejących lokalach mieszkalnych przeznaczonych do świadczenia usług hotelarskich (krótkoterminowy, ogólnie dostępny wynajem domów, mieszkań, pokoi i miejsc noclegowych).</span>",
+        "EE": "<span>Alates 1. jaanuarist 2030 muutub kohustuslikuks vähemalt ühe suitsuanduri paigaldamine olemasolevatesse eluhoonetesse ja alates 30. juunist 2026 olemasolevatesse eluruumidesse, mis on ette nähtud hotellide teenuse osutamiseks (majade, korterite, tubade ja majutuskohtade lühiajaline, üldkasutatav rentimine).</span>",
+        "LV": "<span>No 2030. gada 1. janvāra vismaz viena dūmu detektora uzstādīšana būs obligāta esošajās dzīvojamās ēkās un no 2026. gada 30. jūnija - esošajās dzīvojamās telpās, kas paredzētas viesnīcu pakalpojumu sniegšanai (īstermiņa, vispārpieejama māju, dzīvokļu, istabu un izmitināšanas vietu īre).</span>",
+        "HU": "<span>2030. január 1-jétől legalább egy füstjelző felszerelése kötelező lesz a meglévő lakóépületekben, 2026. június 30-tól pedig a szállodai szolgáltatások nyújtására (házak, lakások, szobák és szálláshelyek rövid távú, általánosan hozzáférhető bérbeadása) szolgáló meglévő lakóépületekben.</span>"
+    },
+
+     "country.poland_data_2": {
+        "EN": "<span>These obligations do not apply where a residential building or residential premises are protected by a fire alarm system or a fixed automatic fire extinguishing device.</span>",
+        "ES": "<span>Estas obligaciones no se aplican cuando un edificio de viviendas o locales residenciales están protegidos por un sistema de alarma contra incendios o un dispositivo automático fijo de extinción de incendios.</span>",
+        "CZ": "<span>Tyto povinnosti se nevztahují na případy, kdy jsou obytná budova nebo obytné prostory chráněny požárním poplachovým systémem nebo stabilním automatickým hasicím zařízením.</span>",
+        "PL": "<span>Obowiązki te nie mają zastosowania w przypadku, gdy budynek mieszkalny lub lokal mieszkalny są chronione przez system alarmu przeciwpożarowego lub stałe automatyczne urządzenie gaśnicze.</span>",
+        "EE": "<span>Neid kohustusi ei kohaldata, kui elamu või eluruumid on kaitstud tulekahjusignalisatsioonisüsteemi või paiksete automaatsete tulekustutusvahenditega.</span>",
+        "LV": "<span>Šie pienākumi neattiecas uz gadījumiem, kad dzīvojamā ēka vai dzīvojamās telpas ir aizsargātas ar ugunsgrēka signalizācijas sistēmu vai stacionāru automātisko ugunsdzēsības ierīci.</span>",
+        "HU": "<span>Ezek a kötelezettségek nem vonatkoznak arra az esetre, ha a lakóépületet vagy lakóhelyiséget tűzjelző rendszer vagy beépített automatikus tűzoltó készülék védi.</span>"
+    },
+    "country.poland_link1_title": {
+        "EN": "More info",
+        "ES": "Seguir leyendo",
+        "CZ": "Více informací",
+        "PL": "Więcej informacji",
+        "EE": "Rohkem infot",
+        "LV": "Vairāk informācijas",
+        "HU": "További információ"
+    },
+    "country.poland_link1": {
+        "EN": "here",
+        "ES": "Aquí",
+        "CZ": "Zde",
+        "PL": "Tutaj",
+        "EE": "Siin",
+        "LV": "Šeit",
+        "HU": "Itt"
+    },
+
+    "country.poland_link2_title": {
+        "EN": "National Headquarters of the State Fire Service",
+        "ES": "Cuartel General Nacional del Cuerpo de Bomberos del Estado",
+        "CZ": "Národní velitelství státní požární služby",
+        "PL": "Komenda Główna Państwowej Straży Pożarnej",
+        "EE": "Riigi tuletõrjeteenistuse riiklik peakorter",
+        "LV": "Valsts ugunsdzēsības dienesta štābs",
+        "HU": "Az Állami Tűzoltóság Országos Parancsnoksága"
+    },
+    "country.poland_link2": {
+        "EN": "www.gov.pl/web/kgpsp",
+        "ES": "www.gov.pl/web/kgpsp",
+        "CZ": "www.gov.pl/web/kgpsp",
+        "PL": "www.gov.pl/web/kgpsp",
+        "EE": "www.gov.pl/web/kgpsp",
+        "LV": "www.gov.pl/web/kgpsp",
+        "HU": "www.gov.pl/web/kgpsp"
+    },
+
+    "country.poland_link3_title": {
+        "EN": "Ministry of the Interior and Administration",
+        "ES": "Ministerio del Interior y de la Administración",
+        "CZ": "Ministerstvo vnitra a správy",
+        "PL": "Ministerstwo Spraw Wewnętrznych i Administracji",
+        "EE": "Siseministeerium ja haldusministeerium",
+        "LV": "Iekšlietu un administrācijas ministrija",
+        "HU": "Belügyminisztérium és Közigazgatási Minisztérium"
+    },
+    "country.poland_link3": {
+        "EN": "www.gov.pl/web/mswia",
+        "ES": "www.gov.pl/web/mswia",
+        "CZ": "www.gov.pl/web/mswia",
+        "PL": "www.gov.pl/web/mswia",
+        "EE": "www.gov.pl/web/mswia",
+        "LV": "www.gov.pl/web/mswia",
+        "HU": "www.gov.pl/web/mswia"
+    },
+
+    "country.poland_link4_title": {
+        "EN": "National programme: SMOKE ALARM UNDER EACH ROOF",
+        "ES": "Programa nacional: ALARMA DE HUMO BAJO CADA TEJADO",
+        "CZ": "Národní program: KOUŘOVÝ HLÁSIČ POD KAŽDOU STŘECHOU",
+        "PL": "Program krajowy: ALARM DYMOWY POD KAŻDYM DACHEM",
+        "EE": "Riiklik programm: SUITSUANDUR IGA KATUSE ALL",
+        "LV": "Valsts programma: DŪMU SIGNALIZĀCIJA ZEM KATRA JUMTA",
+        "HU": "Nemzeti program: FÜSTJELZŐ MINDEN TETŐ ALATT"
+    },
+    "country.poland_link4": {
+        "EN": "www.testbezpieczenstwa.pl",
+        "ES": "www.testbezpieczenstwa.pl",
+        "CZ": "www.testbezpieczenstwa.pl",
+        "PL": "www.testbezpieczenstwa.pl",
+        "EE": "www.testbezpieczenstwa.pl",
+        "LV": "www.testbezpieczenstwa.pl",
+        "HU": "www.testbezpieczenstwa.pl"
+    },
+
     "country.greece": {
         "EN": "Greece",
         "ES": "Grecia",
@@ -3842,6 +3956,24 @@
         "LV": "Bukleri sp\u0101\u0146u valod\u0101",
         "HU": "Sz\u00f3r\u00f3lap Spanyolul"
     },
+    "downloads.leaflet5HU": {
+        "EN": "Leaflet in Hungarian",
+        "ES": "Folleto en húngaro",
+        "CZ": "Leták v maďarštině",
+        "PL": "Ulotka w j\u0119zyku węgierskim",
+        "EE": "Infoleht ungari keeles",
+        "LV": "Buklets ungāru valodā",
+        "HU": "Szórólap magyarul"
+    },
+    "downloads.leaflet5EE": {
+        "EN": "Leaflet in Estonian",
+        "ES": "Folleto en estonio",
+        "CZ": "Leták v estonštině",
+        "PL": "Ulotka w języku estońskim",
+        "EE": "Eestikeelne infoleht",
+        "LV": "Buklets igauņu valodā",
+        "HU": "Szórólap észt nyelven"
+    },
     "downloads.leaflet5CZ": {
         "EN": "Leaflet in Czech",
         "ES": "Folleto en checo",
@@ -3994,6 +4126,15 @@
         "EE": "N\u00f5uanded seadusandjatele, kuidas \u00f5igusakte v\u00f5i m\u00e4\u00e4rusi kehtestada.",
         "LV": "\nIeteikumi likumdev\u0113jiem par to, k\u0101 ieviest likumdo\u0161anu vai regul\u0113jumus.",
         "HU": "Tan\u00e1csok a jogalkot\u00f3knak a jogszab\u00e1lyok vagy rendeletek bevezet\u00e9s\u00e9hez."
+    },
+    "downloads.final_report": {
+        "EN": "EU Smoke Alarm Day Campaign 2024 Final Report",
+        "ES": "Informe final de la Campaña del Día Europeo del Detector de Humos 2024",
+        "CZ": "Závěrečná zpráva kampaně EU ke Dni kouřových poplachů 2024",
+        "PL": "Unijna kampania na rzecz Dnia Alarmu Dymowego 2024 - raport końcowy",
+        "EE": "ELi suitsuandurite päeva kampaania 2024 lõpparuanne",
+        "LV": "ES dūmu modinātāju dienas kampaņas 2024 nobeiguma ziņojums",
+        "HU": "Az EU Füstjelző Nap 2024 kampányának zárójelentése"
     },
     "downloads.examples": {
         "EN": "Examples of successful smoke alarm campaigns implemented in various countries",
