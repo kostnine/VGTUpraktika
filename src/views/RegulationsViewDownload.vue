@@ -7,6 +7,40 @@
                 <span>{{ toLocal("downloads.read") }}</span>
             </div>
         </div>
+
+        <div class="information-container webinar">
+            <div class="spain-container webinar">
+                <div class="title-container">
+                <span class="spain-title"
+                    >{{ toLocal("downloads.webinar_title") }}</span
+                >
+                <span class="title-under">
+                    {{toLocal('regulations.watch')}}
+                </span>
+                </div>
+                <div class="video-row">
+                <div class="section-container">
+                    <div class="video-container-with-text">
+                    <span class="video-title"
+                        >{{ toLocal("downloads.webinar_title_date") }}:</span
+                    >
+                    <div class="video">
+                        <iframe
+                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    <span class="video-url"
+                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
         <div class="information-container">
             <div class="spain-container">
                 <div class="title-container">
@@ -65,7 +99,7 @@
             {{toLocal('downloads.download_leaf')}}
         </div>
         <div class="leaflet-row">
-            <div class="section-container">
+            <div class="section-container" v-for="spainBrochure, index in downloadBrochures" :key="`brochure-${index}`">
             <div class="brochure-container">
                 <div
                 class="leaflet"
@@ -78,6 +112,38 @@
                 <div class="bottom-content">
                     <div class="leaflet-text">
                     {{ toLocal(spainBrochure.text) }}
+                    </div>
+                    <div class="download-btn">
+                    <svg
+                        width="37"
+                        height="37"
+                        viewBox="0 0 37 37"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                        fill="white"
+                        />
+                    </svg>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- <div class="section-container">
+            <div class="brochure-container">
+                <div
+                class="leaflet"
+                :style="{
+                    backgroundImage:
+                    'url(' + require(`@/assets/${legislationsBrochure.img}`) + ')',
+                }"
+                @click="downloadLeaflet(legislationsBrochure)"
+                >
+                <div class="bottom-content">
+                    <div class="leaflet-text">
+                    {{ toLocal(legislationsBrochure.text) }}
                     </div>
                     <div class="download-btn">
                     <svg
@@ -128,7 +194,7 @@
                 </div>
                 </div>
             </div>
-            </div>
+            </div> -->
         </div>
         </div>
         <div class="facts-share">
@@ -156,7 +222,31 @@
                 "/downloads/Advice for legislators on how to introduce legislation or regulations to install smoke alarms in a country or region.docx",
                 extension: '.docx',
                 text: "downloads.legislations_brochure",
-            }
+            },
+            downloadBrochures:[
+              {
+                img: "images/downloads/Asset8.svg",
+                download_path:
+                "/downloads/tripticos-consejos-detectores-incendios-en-hogar.pdf",
+                extension: '.pdf',
+                text: "downloads.spain_brochure",
+              },
+              {
+                img: "images/downloads/Asset9.svg",
+                download_path:
+                "/downloads/Advice for legislators on how to introduce legislation or regulations to install smoke alarms in a country or region.docx",
+                extension: '.docx',
+                  text: "downloads.legislations_brochure",
+              },
+              {
+                img: "images/downloads/Asset12.svg",
+                download_path:
+                "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
+                extension: '.pdf',
+                text: "downloads.final_report",
+
+              }
+            ]
             };
         },
         methods:{
@@ -222,6 +312,9 @@ span {
     .info-title{
       font-size: clamp(36px, 2.5vw, 48px);
     }
+    &.webinar{
+      background-color: #C0554B;
+    }
   }
   
   .spain-container {
@@ -236,6 +329,26 @@ span {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    &.webinar{
+      background-color: #C0554B;
+      .title-container{
+        color: #ffffff;
+        .spain-title{
+          color: #ffffff;
+        }
+        .title-under{
+          color: #ffffff;
+        }
+      }
+      .video-row{
+        .video-title{
+          color: #ffffff;
+        }
+        .video-url{
+          color: #ffffff;
+        }
+      }
     }
     .section-container {
       display: flex;

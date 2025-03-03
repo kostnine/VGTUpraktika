@@ -265,6 +265,11 @@ export default {
           link: "videos/landingpage/Ireland.mp4",
           img: "images/messages_of_support/Ireland.png",
         },
+        {
+          id: 10,
+          link: "videos/landingpage/Spain.mp4",
+          img: "images/messages_of_support/Spain.png",
+        },
       ],
       infoLeaflets:[
 
