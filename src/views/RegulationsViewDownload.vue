@@ -14,13 +14,13 @@
                 <span class="spain-title"
                     >{{ toLocal("downloads.webinar_title") }}</span
                 >
-                <span class="title-under">
-                    {{toLocal('regulations.watch')}}
-                </span>
                 </div>
                 <div class="video-row">
                 <div class="section-container">
                     <div class="video-container-with-text">
+                    <span class="title-under">
+                      {{toLocal('regulations.watch')}}
+                    </span>
                     <span class="video-title"
                         >{{ toLocal("downloads.webinar_title_date") }}:</span
                     >
@@ -38,8 +38,70 @@
                     >
                     </div>
                 </div>
+                <!-- <div class="section-container">
+                    <div class="video-container-with-text">
+                    <span class="title-under">
+                      {{toLocal('regulations.watch')}}
+                    </span>
+                    <span class="video-title"
+                        >{{ toLocal("downloads.webinar_title_date") }}:</span
+                    >
+                    <div class="video">
+                        <iframe
+                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    <span class="video-url"
+                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
+                    >
+                    </div>
+                </div> -->
+                <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
+                  <span class="title-under">
+                    {{toLocal('regulations.download')}}
+                  </span>
+                  <span class="video-title"
+                        >{{ toLocal("downloads.final_report") }}:</span
+                    >
+                  <div class="brochure-container">
+                <div
+                class="leaflet"
+                :style="{
+                    backgroundImage:
+                    'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
+                }"
+                @click="downloadLeaflet(spainBrochure)"
+                >
+                <div class="bottom-content">
+                    <div class="leaflet-text">
+                    {{ toLocal(spainBrochure.text) }}
+                    </div>
+                    <div class="download-btn">
+                    <svg
+                        width="37"
+                        height="37"
+                        viewBox="0 0 37 37"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                        fill="white"
+                        />
+                    </svg>
+                    </div>
+                </div>
+                </div>
+                  </div>
+            </div>
                 </div>
             </div>
+
+            
         </div>
         <div class="information-container">
             <div class="spain-container">
@@ -238,6 +300,8 @@
                 extension: '.docx',
                   text: "downloads.legislations_brochure",
               },
+            ],
+            webinarBrochures:[
               {
                 img: "images/downloads/Asset12.svg",
                 download_path:
@@ -348,6 +412,123 @@ span {
         .video-url{
           color: #ffffff;
         }
+      }
+    }
+    &.webinar{
+      .video-row{
+        align-items: flex-start;
+        .section-container{
+          .title-under{
+            color: #ffffff;
+            width: 100%;
+
+          }
+        }
+      }
+
+      .download{
+        height: 100%;
+        min-height: 180px;
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        @media(max-width: 1280px){
+          width: 50%;
+        }
+        .video-title {
+        height: 15%;
+        width: 100%;
+        font-size: clamp(18px, 1.2vw, 24px);
+        line-height: 32px;
+        color: #1E1826;
+        font-family: $semiBoldFont;
+        text-align: start;
+        color: white;
+        @media (max-width: 1080px) {
+          font-size: clamp(14px, 1.2vw, 18px);
+        }
+        @media (max-width: 768px) {
+          width: 95%;
+          text-align: center;
+        }
+        }
+        @media(max-width: 1000px){
+          width: 50%;
+        }
+        @media(max-width: 768px){
+          width: 100%;
+        }
+        .brochure-container {
+          height: 100%;
+          width: 75%;
+          display: flex;
+          flex-direction: column;
+          @media (max-width: 768px) {
+            margin: 0;
+            width: 100%;
+          }
+          @media(max-width: 1280px){
+            width: 90%
+          }
+          @media(max-width: 1000px){
+            width: 100%;
+          }
+        .title {
+          height: 15%;
+          padding: 20px 0;
+          width: 100%;
+          font-size: clamp(18px, 1.2vw, 24px);
+          line-height: 32px;
+          color: white;
+          font-family: $semiBoldFont;
+          text-align: start;
+          @media (max-width: 1080px) {
+            font-size: 18px;
+            font-size: clamp(16px, 1.2vw, 18px);
+          }
+          @media (max-width: 768px) {
+            width: 98%;
+            text-align: center;
+          }
+        }
+        .leaflet {
+          position: relative;
+          background-position: top;
+          min-height: 180px;
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          @media (max-width: 1000px) {
+            width: 100%;
+            min-height: 400px;
+          }
+          @media(min-width: 1280px){
+            min-height: 285px;
+          }
+          .bottom-content {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #1e1826;
+            color: white;
+            padding: 10px;
+            width: 100%;
+          }
+          .leaflet-text {
+            width: 100%;
+          }
+        }
+        span {
+          font-size: 16px;
+        }
+      }
       }
     }
     .section-container {

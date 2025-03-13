@@ -25,6 +25,101 @@
                 
         </div>
     </div>
+      <div class="information-container webinar">
+            <div class="spain-container2 webinar">
+                <div class="title-container">
+                <span class="spain-title"
+                    >{{ toLocal("downloads.webinar_title") }}</span
+                >
+                </div>
+                <div class="video-row">
+                <div class="section-container">
+                    <div class="video-container-with-text">
+                    <span class="title-under">
+                      {{toLocal('regulations.watch')}}
+                    </span>
+                    <span class="video-title"
+                        >{{ toLocal("downloads.webinar_title_date") }}:</span
+                    >
+                    <div class="video">
+                        <iframe
+                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    <span class="video-url"
+                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
+                    >
+                    </div>
+                </div>
+                <!-- <div class="section-container">
+                    <div class="video-container-with-text">
+                    <span class="title-under">
+                      {{toLocal('regulations.watch')}}
+                    </span>
+                    <span class="video-title"
+                        >{{ toLocal("downloads.webinar_title_date") }}:</span
+                    >
+                    <div class="video">
+                        <iframe
+                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    <span class="video-url"
+                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
+                    >
+                    </div>
+                </div> -->
+                <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
+                  <span class="title-under">
+                    {{toLocal('regulations.download')}}
+                  </span>
+                  <span class="video-title"
+                        >{{ toLocal("downloads.final_report") }}:</span
+                    >
+                  <div class="brochure-container">
+                <div
+                class="leaflet"
+                :style="{
+                    backgroundImage:
+                    'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
+                }"
+                @click="downloadLeaflet(spainBrochure)"
+                >
+                <div class="bottom-content">
+                    <div class="leaflet-text">
+                    {{ toLocal(spainBrochure.text) }}
+                    </div>
+                    <div class="download-btn">
+                    <svg
+                        width="37"
+                        height="37"
+                        viewBox="0 0 37 37"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                        fill="white"
+                        />
+                    </svg>
+                    </div>
+                </div>
+                </div>
+                  </div>
+            </div>
+                </div>
+            </div>
+
+            
+      </div>
       <!-- <div class="leaflet-container red-bg">
         <h3 class="color-text">{{ toLocal("downloads.check_leaf") }}</h3>
         <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
@@ -108,7 +203,7 @@
       </div>
     </div>
     <div class="bottom-section">
-      <div class="leaflet-container">
+      <div class="leaflet-container red-bg">
         <h3>{{ toLocal("downloads.check_leaf") }}</h3>
         <span>{{ toLocal("downloads.download_leaf") }}</span>
         <div class="leaflets">
@@ -462,6 +557,16 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
+      webinarBrochures:[
+        {
+          img: "images/downloads/Asset12.svg",
+          download_path:
+          "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
+          extension: '.pdf',
+          text: "downloads.final_report",
+
+        }
+      ],
       safetyTips: [
         {
           embed_url: "https://youtube.com/embed/vCkHtCLpLbY",
@@ -833,9 +938,9 @@ h2 {
 .red-bar {
   display: flex;
   flex-direction: column;
-  background: #c0554b;
+  background: white;
   padding: 0 calc(min(160px, 10vw));
-  color: white;
+  color: #1e1826;
   font-size: clamp(16px, 5vw, 24px);
   min-height: 300px;
   justify-content: center;
@@ -924,6 +1029,7 @@ h3 {
   justify-content: center;
   margin-bottom: 40px;
   &.red-bg{
+    color: white;
     background: #C0554B; 
     margin-bottom: 0;
     .color-text{
@@ -1651,4 +1757,301 @@ h3 {
       }
   }
 }
+
+
+.information-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCE3EF;
+    gap: clamp(36px, 5vh, 60px);
+    padding: 80px calc(min(160px, 10vw));
+    .info-title{
+      font-size: clamp(36px, 2.5vw, 48px);
+    }
+    &.webinar{
+      background-color: #C0554B;
+    }
+  }
+  
+  .spain-container2 {
+    width: 100%;
+    display: flex;
+    background-color: #DCE3EF;
+    box-sizing: border-box;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &.webinar{
+      background-color: #C0554B;
+      .title-container{
+        color: #ffffff;
+        .spain-title{
+          color: #ffffff;
+        }
+        .title-under{
+          color: #ffffff;
+        }
+      }
+      .video-row{
+        .video-title{
+          color: #ffffff;
+        }
+        .video-url{
+          color: #ffffff;
+        }
+      }
+    }
+    &.webinar{
+      .video-row{
+        align-items: flex-start;
+        .section-container{
+          .title-under{
+            color: #ffffff;
+            width: 100%;
+
+          }
+        }
+      }
+
+      .download{
+        height: 100%;
+        min-height: 180px;
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        @media(max-width: 1280px){
+          width: 50%;
+        }
+        .video-title {
+        height: 15%;
+        width: 100%;
+        font-size: clamp(18px, 1.2vw, 24px);
+        line-height: 32px;
+        color: #1E1826;
+        font-family: $semiBoldFont;
+        text-align: start;
+        color: white;
+        @media (max-width: 1080px) {
+          font-size: clamp(14px, 1.2vw, 18px);
+        }
+        @media (max-width: 768px) {
+          width: 95%;
+          text-align: center;
+        }
+        }
+        @media(max-width: 1000px){
+          width: 50%;
+        }
+        @media(max-width: 768px){
+          width: 100%;
+        }
+        .brochure-container {
+          height: 100%;
+          width: 75%;
+          display: flex;
+          flex-direction: column;
+          @media (max-width: 768px) {
+            margin: 0;
+            width: 100%;
+          }
+          @media(max-width: 1280px){
+            width: 90%
+          }
+          @media(max-width: 1000px){
+            width: 100%;
+          }
+        .title {
+          height: 15%;
+          padding: 20px 0;
+          width: 100%;
+          font-size: clamp(18px, 1.2vw, 24px);
+          line-height: 32px;
+          color: white;
+          font-family: $semiBoldFont;
+          text-align: start;
+          @media (max-width: 1080px) {
+            font-size: 18px;
+            font-size: clamp(16px, 1.2vw, 18px);
+          }
+          @media (max-width: 768px) {
+            width: 98%;
+            text-align: center;
+          }
+        }
+        .leaflet {
+          position: relative;
+          background-position: top;
+          min-height: 180px;
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          @media (max-width: 1000px) {
+            width: 100%;
+            min-height: 400px;
+          }
+          @media(min-width: 1280px){
+            min-height: 285px;
+          }
+          .bottom-content {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #1e1826;
+            color: white;
+            padding: 10px;
+            width: 100%;
+          }
+          .leaflet-text {
+            width: 100%;
+          }
+        }
+        span {
+          font-size: 16px;
+        }
+      }
+      }
+    }
+    .section-container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 30%;
+  
+      @media (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .video-container-with-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      gap: 12px;
+      @media (max-width: 1280px) {
+        width: 95%;
+      }
+      @media (max-width: 768px) {
+        margin: 0;
+        width: 100%;
+      }
+      .video-title {
+        height: 15%;
+        width: 100%;
+        font-size: clamp(18px, 1.2vw, 24px);
+        line-height: 32px;
+        color: #1E1826;
+        font-family: $semiBoldFont;
+        text-align: start;
+        @media (max-width: 1080px) {
+          font-size: clamp(14px, 1.2vw, 18px);
+        }
+        @media (max-width: 768px) {
+          width: 95%;
+          text-align: center;
+        }
+      }
+      .video-url {
+        font-size: clamp(12px, 2.5vw, 16px);
+        line-height: 24px;
+        color: #1E1826;
+        margin-top: 5px;
+        white-space: nowrap;
+        width: 100%;
+        @media (max-width: 768px) {
+          width: 95%;
+          text-align: center;
+          white-space: initial;
+        }
+        @media (max-width: 960px) {
+          white-space: break-spaces;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+      .video {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        min-height: 180px;
+        border-radius: 10px;
+        @media (min-width: 2300px) {
+          width: 80%;
+        }
+        iframe {
+          border-radius: 10px;
+          min-height: 285px;
+        }
+      }
+    }
+    .title-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+      padding: 10px 0;
+      @media (max-width: 1080px) {
+        width: 40%;
+        margin: auto 0;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .title-under{
+        color: #1E1826;
+        @media(max-width: 768px){
+          text-align: center;
+          width: 100%;
+        }
+      }
+      .spain-title {
+        font-size: clamp(26px, 2.5vw, 32px);
+        font-family: $semiBoldFont;
+        line-height: 48px;
+        color: #1E1826;
+        width: 100%;
+        height: 100%;
+        margin-right: calc(min(20px, 7vw));
+        @media (max-width: 1080px) {
+          font-size: 24px;
+          margin: 0;
+          margin-right: 8px;
+          line-height: 36px;
+        }
+        @media (max-width: 768px) {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+    .video-row{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: clamp(20px, 3vw, 40px);
+      @media(max-width: 768px){
+        flex-direction: column;
+      }
+    }
+  }
 </style>
