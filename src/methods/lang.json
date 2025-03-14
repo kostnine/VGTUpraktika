@@ -1269,13 +1269,13 @@
         "HU": "T\u0171zmegel\u0151z\u00e9si H\u00e9t Kamp\u00e1ny Spanyolorsz\u00e1gban"
     },
     "downloads.webinar_title":{
-        "EN": "European Smoke Alarm Day Webinar",
-        "ES": "Webinar sobre el Día Europeo de los Detectores de Humo",
-        "CZ": "Webinář k Evropskému dni kouřových alarmů",
-        "PL": "Webinarium na temat Europejskiego Dnia Alarmu Dymowego",
-        "EE": "Euroopa suitsuandurite päeva veebiseminar",
-        "LV": "Eiropas Dūmu signalizācijas dienas tīmekļa seminārs",
-        "HU": "Európai Füstjelző Nap webinárium"
+        "EN": "Activities",
+        "ES": "Actividades",
+        "CZ": "Aktivity",
+        "PL": "Działania",
+        "EE": "Tegevused",
+        "LV": "Aktivitātes",
+        "HU": "Tevékenységek"
     },
     "downloads.webinar_title_date":{
         "EN": "2024 European Smoke Alarm Day Webinar",
@@ -4117,6 +4117,15 @@
         "EE": "Kl\u00f5psake video vaatamiseks.",
         "LV": "Noklik\u0161\u0137ini \u0161eit, lai skat\u012btu video.",
         "HU": "Kattintson a vide\u00f3 megtekint\u00e9s\u00e9hez."
+    },
+    "regulations.download": {
+        "EN": "Click to download.",
+        "ES": "Haga clic para descargar.",
+        "CZ": "Klikněte pro stažení.",
+        "PL": "Kliknij, aby pobrać.",
+        "EE": "Klõpsake allalaadimiseks.",
+        "LV": "Noklikšķiniet, lai lejupielādētu.",
+        "HU": "Kattintson a letöltéshez."
     },
     "downloads.legislations_brochure": {
         "EN": "Advice for legislators on how to introduce legislation or regulations.",
