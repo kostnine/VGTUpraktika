@@ -1618,7 +1618,7 @@ section {
       transition: background-color 0.3s, box-shadow 0.3s;
       .text {
         flex: 1;
-        font-size: clamp(16px, 2vw, 36px);
+        font-size: clamp(16px, 2vw, 25px);
         transition: color 0.3s;
         // margin-bottom: 1.5rem;
         min-height: 33%;
