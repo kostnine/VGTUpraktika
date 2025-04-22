@@ -229,6 +229,7 @@ export default {
         EE: "Estonian",
         LV: "Latvian",
         HU: "Hungarian",
+        LT: "Lithuanian",
       },
       dropdownLanguages: [
         {
@@ -255,6 +256,11 @@ export default {
           id: 4,
           name: "Latvian",
           prefix: "LV",
+        },
+        {
+          id: 8,
+          name: "Lithuanian",
+          prefix: "LT",
         },
         {
           id: 6,
