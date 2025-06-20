@@ -1960,34 +1960,34 @@
         "LT": "<span>Flamandijoje ir Valonijoje d\u016bm\u0173 signalizatoriai turi b\u016bti \u012frengti visuose namuose. Nuo 2025 m. sausio m\u0117n. d\u016bm\u0173 signalizatoriai taps privalomi visuose namuose Briuselio sostin\u0117s regione.</span>"
     },
     "country.belgium_link1_title": {
-        "EN": "More information",
-        "ES": "M\u00e1s informaci\u00f3n",
-        "CZ": "V\u00edce informac\u00ed",
-        "PL": "Wi\u0119cej informacji:",
-        "EE": "Rohkem infot",
-        "LV": "Vair\u0101k inform\u0101cijas",
-        "HU": "Tov\u00e1bbi inform\u00e1ci\u00f3",
-        "LT": "Daugiau informacijos"
+        "EN": "General information",
+        "ES": "Información general",
+        "CZ": "Obecné informace",
+        "PL": "Informacje ogólne",
+        "EE": "Üldine teave",
+        "LV": "Vispārīga informācija",
+        "HU": "Általános információk",
+        "LT": "Bendra informacija"
     },
     "country.belgium_link2_title": {
-        "EN": "More information",
-        "ES": "M\u00e1s informaci\u00f3n",
-        "CZ": "V\u00edce informac\u00ed",
-        "PL": "Wi\u0119cej informacji:",
-        "EE": "Rohkem informatsiooni",
-        "LV": "Vair\u0101k inform\u0101cijas",
-        "HU": "Tov\u00e1bbi inform\u00e1ci\u00f3",
-        "LT": "Daugiau informacijos"
+        "EN": "Brussels",
+        "ES": "Brussels",
+        "CZ": "Brussels",
+        "PL": "Brussels",
+        "EE": "Brussels",
+        "LV": "Brussels",
+        "HU": "Brussels",
+        "LT": "Brussels"
     },
     "country.belgium_link1": {
-        "EN": "BELGIUM.BE \u00e2\u20ac\u201c Smoke detectors",
-        "ES": "BELGIUM.BE Detectores de humo",
-        "CZ": "BELGIUM.BE \u00e2\u20ac\u201c Smoke detectors",
-        "PL": "BELGIUM.BE \u00e2\u20ac\u201c Czujki dymu",
-        "EE": "BELGIUM.BE \u00e2\u20ac\u201c Smoke detectors",
-        "LV": "BELGIUM.BE \u00e2\u20ac\u201c D\u016bmu detektori",
-        "HU": "BELGIUM.BE \u00e2\u20ac\u201c F\u00fcst\u00e9rz\u00e9kel\u0151k",
-        "LT": "BELGIUM.BE \u2013 D\u016bm\u0173 sinalizatoriai"
+        "EN": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "ES": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "CZ": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "PL": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "EE": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "LV": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "HU": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
+        "LT": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/"
     },
     "country.belgium_link2": {
         "EN": "www.brussels.be",
@@ -2010,14 +2010,14 @@
         "LT": "Austrija"
     },
     "country.austria_data": {
-        "EN": "<span>For all homes smoke alarms are mandatory in Austria. How many smoke alarms you need depends on how many rooms your home has.</span>",
-        "ES": "<span>En Austria, los detectores de humo son obligatorios para todos los hogares. La cantidad de detectores de humo que necesita depende de la cantidad de habitaciones que tenga su hogar.</span>",
-        "CZ": "<span>Ka\u017ed\u00e1 dom\u00e1cnost mus\u00ed b\u00fdt povinn\u011b vybavena detektory po\u017e\u00e1r\u016f. Po\u010det detektor\u016f po\u017e\u00e1r\u016f v dom\u00e1cnosti z\u00e1vis\u00ed na po\u010dtu pokoj\u016f. </span>",
-        "PL": "<span>Czujki dymu s\u0105 obowi\u0105zkowe we wszystkich domach i mieszkaniach. Ich liczba jest uzale\u017cniona od liczby pomieszcze\u0144.</span>",
-        "EE": "<span>Austrias on suitsuandur k\u00f5igis kodudes kohustuslik. Kui palju suitsuandureid vajate, s\u00f5ltub sellest, mitu tuba teie kodus on.</span>",
-        "LV": "<span>Austrij\u0101 d\u016bmu detektori ir oblig\u0101ti visos m\u0101jok\u013cos. D\u016bmu detektoru skaits ir atkar\u012bgs no telpu skaita m\u0101jokl\u012b.</span>",
-        "HU": "<span>Ausztri\u00e1ban minden otthonban k\u00f6telez\u0151 a f\u00fcst\u00e9rz\u00e9kel\u0151. Az, hogy h\u00e1ny f\u00fcst\u00e9rz\u00e9kel\u0151re van sz\u00fcks\u00e9g, att\u00f3l f\u00fcgg, hogy h\u00e1ny szob\u00e1ja van az otthonnak.</span>",
-        "LT": "<span>Austrijoje d\u016bm\u0173 signalizatoriai yra privalomi visuose namuose. Kiek jums reikia d\u016bm\u0173 signalizatori\u0173, priklauso nuo to, kiek kambari\u0173 yra j\u016bs\u0173 namuose.</span>"
+        "EN": "<span>For all newbuild homes and for certain types of newbuild accommodation facilities smoke alarms are mandatory in all provinces in Austria. In the province Kaernten smoke alarms are also mandatory in all existing homes.</span>",
+        "ES": "<span>En todas las provincias de Austria es obligatorio instalar detectores de humo en todas las viviendas de nueva construcción y en determinados tipos de alojamientos de nueva construcción. En la provincia de Kaernten, los detectores de humo también son obligatorios en todas las viviendas existentes.</span>",
+        "CZ": "<span>Ve všech rakouských spolkových zemích jsou pro všechny nově postavené domy a pro některé typy nově postavených ubytovacích zařízení povinné kouřové hlásiče. Ve spolkové zemi Kaernten jsou kouřové hlásiče povinné také ve všech stávajících domech.</span>",
+        "PL": "<span>Czujniki dymu są obowiązkowe we wszystkich nowo budowanych domach i niektórych typach nowo budowanych obiektów mieszkalnych we wszystkich krajach związkowych Austrii. W prowincji Kaernten czujniki dymu są również obowiązkowe we wszystkich istniejących domach.</span>",
+        "EE": "<span>Kõikides Austria liidumaades on suitsuandurid kõigis uusehitatud elamutes ja teatud tüüpi uusehitatud eluruumides kohustuslikud. Kärnteni liidumaal on suitsuandurid kohustuslikud ka kõikides olemasolevates elamutes.</span>",
+        "LV": "<span>Visās Austrijas federālajās zemēs dūmu detektori ir obligāti visās jaunbūvējamās mājās un dažos jaunbūvējamo dzīvojamo ēku tipos. Provincē Kārntene dūmu detektori ir obligāti arī visās esošajās mājās.</span>",
+        "HU": "<span>Minden új építésű lakásban és bizonyos típusú új építésű lakóépületekben a füstjelzők használata kötelező Ausztria valamennyi tartományában. Kaernten tartományban a füstjelző minden meglévő lakásban is kötelező.</span>",
+        "LT": "<span>Visuose naujai statomuose namuose ir tam tikrų tipų naujai statomose gyvenamosiose patalpose dūmų signalizatoriai privalomi visose Austrijos žemėse. Kaernteno provincijoje dūmų signalizatoriai taip pat privalomi visuose esamuose namuose.</span>"
     },
     "country.austria_link1_title": {
         "EN": "More information",
