@@ -1980,14 +1980,14 @@
         "LT": "Brussels"
     },
     "country.belgium_link1": {
-        "EN": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "ES": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "CZ": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "PL": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "EE": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "LV": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "HU": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/",
-        "LT": "https://spielnichtmitdemfeuer.be/nl/rauchmelder/"
+        "EN": "https://speelnietmetvuur.be/",
+        "ES": "https://speelnietmetvuur.be/",
+        "CZ": "https://speelnietmetvuur.be/",
+        "PL": "https://speelnietmetvuur.be/",
+        "EE": "https://speelnietmetvuur.be/",
+        "LV": "https://speelnietmetvuur.be/",
+        "HU": "https://speelnietmetvuur.be/",
+        "LT": "https://speelnietmetvuur.be/"
     },
     "country.belgium_link2": {
         "EN": "www.brussels.be",
@@ -2020,14 +2020,14 @@
         "LT": "<span>Visuose naujai statomuose namuose ir tam tikrų tipų naujai statomose gyvenamosiose patalpose dūmų signalizatoriai privalomi visose Austrijos žemėse. Kaernteno provincijoje dūmų signalizatoriai taip pat privalomi visuose esamuose namuose.</span>"
     },
     "country.austria_link1_title": {
-        "EN": "More information",
-        "ES": "M\u00e1s informaci\u00f3n",
-        "CZ": "V\u00edce informac\u00ed",
-        "PL": "Wi\u0119cej informacji:",
-        "EE": "Rohkem infot",
-        "LV": "Vair\u0101k inform\u0101cijas",
-        "HU": "Tov\u00e1bbi inform\u00e1ci\u00f3",
-        "LT": "Daugiau informacijos"
+        "EN": "Guidance",
+        "ES": "Orientación",
+        "CZ": "Poradenství",
+        "PL": "Wskazówki",
+        "EE": "Suunised",
+        "LV": "Vadlīnijas",
+        "HU": "Útmutatás",
+        "LT": "Gairės"
     },
     "country.austria_link1": {
         "EN": "Austrian Federal Fire Brigade Association \u00e2\u20ac\u201c Smoke alarms",
