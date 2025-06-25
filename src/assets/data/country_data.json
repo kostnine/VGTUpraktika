@@ -170,7 +170,7 @@
         "links":[
           {
             "link_title": "country.<name>_link1_title",
-            "link_url": "https://www.belgium.be/nl/huisvesting/huisvestingsproblemen/brand/rookmelders",
+            "link_url": "https://speelnietmetvuur.be/",
             "link_name": "country.<name>_link1"
           },
           {
@@ -194,7 +194,7 @@
         "links":[
           {
             "link_title": "country.<name>_link1_title",
-            "link_url": "https://www.bundesfeuerwehrverband.at/wp-content/uploads/2017/07/TRVB-122-13-ohne-Anhang-3.pdf",
+            "link_url": "https://www.bmi.gv.at/magazin/2022_01_02/Brandverhuetung.aspx",
             "link_name": "country.<name>_link1",
             "isUrlInNewLine": true
           }

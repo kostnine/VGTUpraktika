@@ -2030,14 +2030,14 @@
         "LT": "Gairės"
     },
     "country.austria_link1": {
-        "EN": "Austrian Federal Fire Brigade Association \u00e2\u20ac\u201c Smoke alarms",
-        "ES": "\nAsociaci\u00f3n Federal de Bomberos de Austria. Detectores de humo",
-        "CZ": "Rakousk\u00e1 spolkov\u00e1 hasi\u010dsk\u00e1 asociace",
-        "PL": "Austriackie Federalne Stowarzyszenie Stra\u017cy Po\u017carnych \u00e2\u20ac\u201c Czujki dymu",
-        "EE": "Austrian Federal Fire Brigade Association \u00e2\u20ac\u201c Smoke alarms",
-        "LV": "Austrijas Feder\u0101l\u0101 ugunsdz\u0113s\u0113ju brig\u0101\u017eu apvien\u012bba \u00e2 \u20ac\u201c D\u016bmu detektori",
-        "HU": "Osztr\u00e1k Sz\u00f6vets\u00e9gi T\u0171zolt\u00f3s\u00e1gok Sz\u00f6vets\u00e9ge \u00e2\u20ac\u201c F\u00fcst\u00e9rz\u00e9kel\u0151k",
-        "LT": "Austrijos federalin\u0117 ugniagesi\u0173 asociacija \u2013 d\u016bm\u0173 signalizatoriai"
+        "EN": "Austrian Federal Ministry of the Interior",
+        "ES": "Ministerio Federal del Interior austriaco",
+        "CZ": "Rakouské spolkové ministerstvo vnitra",
+        "PL": "Austriackie Federalne Ministerstwo Spraw Wewnętrznych",
+        "EE": "Austria Siseministeerium",
+        "LV": "Austrijas Federālā iekšlietu ministrija",
+        "HU": "Osztrák Szövetségi Belügyminisztérium",
+        "LT": "Austrijos federalinė vidaus reikalų ministerija"
     },
     "country.lithuania": {
         "EN": "Lithuania",
