@@ -112,7 +112,7 @@
             </div>
           </div>
           <div class="house">
-            <HouseComponent />
+            <HouseComponent/>
           </div>
         </div>
         <div class="consider-container">

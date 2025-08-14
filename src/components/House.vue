@@ -734,7 +734,10 @@
       font-weight="600"
       letter-spacing="0em"
     >
-      <tspan x="47.0039" y="248">
+      <tspan x="30" y="275" class="smaller-malta" v-if="lang == 'MT'">
+        {{ toLocal("house.bedroom").toUpperCase() }}
+      </tspan>
+      <tspan x="47.0039" y="248" class="smaller-malta" v-if="lang != 'MT'">
         {{ toLocal("house.bedroom").toUpperCase() }}
       </tspan>
     </text>
@@ -794,11 +797,13 @@
 </template>
 
 <script>
+import store from "@/store";
 export default {
   name: "HouseComponent",
   data() {
     return {
       garage: this.toLocal("house.garage"),
+      lang: store.state.lang,
     };
   },
 };
