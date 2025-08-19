@@ -269,41 +269,46 @@ import 'vueperslides/dist/vueperslides.css'
                 ],
                 infoLeaflets:[
 
-                {
-                    img: "images/downloads/leaflet5EN.png",
-                    download_path: "/downloads/Leaflet-English.pdf",
-                    text: "downloads.leaflet5EN",
-                },
-                {
-                    img: "images/downloads/leaflet5CZ.png",
-                    download_path: "/downloads/Leaflet-Czech.pdf",
-                    text: "downloads.leaflet5CZ",
-                },
-                {
-                    img: "images/downloads/leaflet5FR.png",
-                    download_path: "/downloads/Leaflet-French.pdf",
-                    text: "downloads.leaflet5FR",
-                },
-                {
-                    img: "images/downloads/leaflet5IT.png",
-                    download_path: "/downloads/Leaflet-Italian.pdf",
-                    text: "downloads.leaflet5IT",
-                },
-                {
-                    img: "images/downloads/leaflet5ES.png",
-                    download_path: "/downloads/Leaflet-Spanish.pdf",
-                    text: "downloads.leaflet5ES",
-                },
-                {
-                    img: "images/downloads/HU.png",
-                    download_path: "/downloads/Leaflet-Hungarian.pdf",
-                    text: "downloads.leaflet5HU",
-                },
-                 {
-                    img: "images/downloads/EE.png",
-                    download_path: "/downloads/Leaflet-SmokeAlarm-EE.pdf",
-                    text: "downloads.leaflet5EE",
-                },
+                  {
+                      img: "images/downloads/leaflet5EN.png",
+                      download_path: "/downloads/Leaflet-English.pdf",
+                      text: "downloads.leaflet5EN",
+                    },
+                    {
+                      img: "images/downloads/leaflet5CZ.png",
+                      download_path: "/downloads/Leaflet-Czech.pdf",
+                      text: "downloads.leaflet5CZ",
+                    },
+                    {
+                      img: "images/downloads/leaflet5NL.png",
+                      download_path: "/downloads/Leaflet-Dutch.pdf",
+                      text: "downloads.leaflet5DE",
+                    },
+                    {
+                      img: "images/downloads/leaflet5LV.png",
+                      download_path: "/downloads/Leaflet-Latvian.pdf",
+                      text: "downloads.leaflet5LV",
+                    },
+                    {
+                      img: "images/downloads/leaflet5HU.png",
+                      download_path: "/downloads/Leaflet-Hungarian.pdf",
+                      text: "downloads.leaflet5HU",
+                    },
+                    {
+                      img: "images/downloads/leaflet5FR.png",
+                      download_path: "/downloads/Leaflet-French.pdf",
+                      text: "downloads.leaflet5FR",
+                    },
+                    {
+                      img: "images/downloads/leaflet5IT.png",
+                      download_path: "/downloads/Leaflet-Italian.pdf",
+                      text: "downloads.leaflet5IT",
+                    },
+                    {
+                      img: "images/downloads/leaflet5ES.png",
+                      download_path: "/downloads/Leaflet-Spanish.pdf",
+                      text: "downloads.leaflet5ES",
+                    },
                 ],
                 gifs:[
                 {

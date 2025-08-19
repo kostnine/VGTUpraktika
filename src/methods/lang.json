@@ -4861,6 +4861,31 @@
         "LT": "Lankstinukas \u010dek\u0173 kalba",
         "MT": "Fuljett bi\u010b-\u010aek"
     },
+
+    "downloads.leaflet5DE": {
+        "EN": "Leaflet in Dutch",
+        "ES": "Folleto en neerlandés",
+        "CZ": "Leták v holandštině",
+        "PL": "Ulotka w języku niderlandzkim",
+        "EE": "Brošüür hollandi keeles",
+        "LV": "Brošūra holandiešu valodā",
+        "HU": "Hollandiául írt szórólap",
+        "LT": "Lankstinukas olandų kalba",
+        "MT": "Fuljett bl-Olandiż"
+    },
+
+    "downloads.leaflet5LV": {
+        "EN": "Leaflet in Latvian",
+        "ES": "Folleto en letón",
+        "CZ": "Leták v lotyštině",
+        "PL": "Ulotka w języku łotewskim",
+        "EE": "Infoleht läti keeles",
+        "LV": "Brošūra latviešu valodā",
+        "HU": "Szórólap lett nyelven",
+        "LT": "Lankstukas latvių kalba",
+        "MT": "Fuljett bil-Latvjan"
+    },
+
     "downloads.leaflet5FR": {
         "EN": "Leaflet in French",
         "ES": "Folleto en franc\u00e9s",

@@ -743,6 +743,21 @@ export default {
           text: "downloads.leaflet5CZ",
         },
         {
+          img: "images/downloads/leaflet5NL.png",
+          download_path: "/downloads/Leaflet-Dutch.pdf",
+          text: "downloads.leaflet5DE",
+        },
+        {
+          img: "images/downloads/leaflet5LV.png",
+          download_path: "/downloads/Leaflet-Latvian.pdf",
+          text: "downloads.leaflet5LV",
+        },
+        {
+          img: "images/downloads/leaflet5HU.png",
+          download_path: "/downloads/Leaflet-Hungarian.pdf",
+          text: "downloads.leaflet5HU",
+        },
+        {
           img: "images/downloads/leaflet5FR.png",
           download_path: "/downloads/Leaflet-French.pdf",
           text: "downloads.leaflet5FR",
