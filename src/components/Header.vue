@@ -229,6 +229,8 @@ export default {
         EE: "Estonian",
         LV: "Latvian",
         HU: "Hungarian",
+        IT: "Italian",
+        PT: "Portuguese",
         LT: "Lithuanian",
         MT: "Maltese"
       },
@@ -253,6 +255,11 @@ export default {
           name: "Hungarian",
           prefix: "HU",
         },
+        { 
+          id: 10,
+          name: "Italian",
+          prefix: "IT",
+        },
         {
           id: 4,
           name: "Latvian",
@@ -272,6 +279,11 @@ export default {
           id: 6,
           name: "Polish",
           prefix: "PL",
+        },
+        {
+          id: 11,
+          name: "Portuguese",
+          prefix: "PT",
         },
         {
           id: 3,
