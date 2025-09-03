@@ -658,7 +658,7 @@
     "HU": "F\u00fcst\u00e9rz\u00e9kel\u0151 v\u00e1s\u00e1rl\u00e1sakor \u00fcgyeljen <span class='semibold'>a term\u00e9k akkumul\u00e1tor\u00e1nak \u00e9lettartam\u00e1ra</span>.",
     "LT": "Pirkdami d\u016bm\u0173 signalizatori\u0173 atkreipkite d\u0117mes\u012f \u012f gaminio baterijos veikimo laik\u0105.",
     "MT": "Meta tixtri alarm tad-du\u0127\u0127an, jekk jog\u0127\u0121bok oqg\u0127od attent g\u0127al <span class='semibold'>kemm hi twila l-\u0127ajja </isservi> tal-batterija tal-prodott.",
-    "IT": "Quando comprate un rilevatore di fumo, fate, per favore, attenzione alla classe di intervallo in semigrassetto con la durata della batteria del prodotto.",
+    "IT": "Quando comprate un rilevatore di fumo, fate, per favore, attenzione alla <span class='semibold'> con la durata della batteria </span> del prodotto.",
     "PT": "Ao comprar um detetor de fumo, preste aten\u00e7\u00e3o \u00e0 <span class='semibold'>vida \u00fatil da bateria</span> do produto."
   },
   "types.replacable": {
@@ -697,7 +697,7 @@
     "HU": "Egy m\u00e1sik lehet\u0151s\u00e9g a f\u00fcst\u00e9rz\u00e9kel\u0151k kiv\u00e1laszt\u00e1s\u00e1ra az <span class='semibold'>\u00f6sszekapcsolt \u00e9rz\u00e9kel\u0151k</span>, ami azt jelenti, hogy ha 1 f\u00fcst\u00e9rz\u00e9kel\u0151 f\u00fcst\u00f6t \u00e9szlel, akkor mindegyik jelezni fog.",
     "LT": "Kita galimyb\u0117 \u2013 pasirinkti d\u016bm\u0173 detektori\u0173, kuris veikia taip, kad jei vienas signalizatorius aptinka d\u016bmus, pradeda skamb\u0117ti visi.",
     "MT": "Possibbilt\u00e0 o\u0127ra hija li tag\u0127\u017cel alarm tad-du\u0127\u0127an li hija <span class='semibold'>interkonnessa</span>, li jfisser li jekk alarm tad-du\u0127\u0127an wa\u0127da t\u0127oss id-du\u0127\u0127an, ifaqqg\u0127u l-o\u0127rajn kollha.",
-    "IT": "Un'altra opzione \u00e8 scegliere un rilevatore di fumo che sia < classe di intervallo=semigrassetto>interconnesso</classe>, che significa che se un allarme antincendio rileva del fumo, tutti gli altri allarmi si spengono.",
+    "IT": "Un'altra opzione \u00e8 scegliere un rilevatore di fumo che sia <span class='semibold'>interconnesso</span>, che significa che se un allarme antincendio rileva del fumo, tutti gli altri allarmi si spengono.",
     "PT": "Outra op\u00e7\u00e3o \u00e9 escolher um detetor de fumo que esteja <span class='semibold'>interligado</span>, o que significa que se um detetor de fumo detetar fumo, todos ser\u00e3o activados."
   },
   "types.wireless_int": {
@@ -710,7 +710,7 @@
     "HU": "V\u00e1laszthat <span class='semibold'>vezet\u00e9k n\u00e9lk\u00fcl \u00f6sszekapcsolt f\u00fcst\u00e9rz\u00e9kel\u0151ket vagy vezet\u00e9kkel h\u00e1l\u00f3zatba kapcsolt f\u00fcst\u00e9rz\u00e9kel\u0151ket</span>.",
     "LT": "Galite pasirinkti belaid\u017eius tarpusavyje sujungtus d\u016bm\u0173 signalizatorius arba \u012f tinkl\u0105 prijungtus d\u016bm\u0173 signalizatorius.",
     "MT": "Tista' tag\u0127\u017cel <span class='semibold'>jew alarms tad-du\u0127\u0127an interkonnettjati ming\u0127ajr wajer  jew alarms tad-du\u0127\u0127an imqabbda mal-mains.</span>",
-    "IT": "Potete scegliere < clesse di intervallo=semigrassetto>allarmi antincendio interconnessi senza fili o allarmi antincendio collegati alla rete elettrica.",
+    "IT": "Potete scegliere<span class='semibold'> allarmi antincendio interconnessi senza fili o allarmi antincendio collegati alla rete elettrica.</span>",
     "PT": "Pode escolher <span class='semibold'>detetores de fumo interligados sem fios ou detetores de fumo ligados \u00e0 rede el\u00e9trica.</span>"
   },
   "types.linked": {

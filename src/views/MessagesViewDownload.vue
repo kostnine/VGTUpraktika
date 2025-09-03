@@ -313,7 +313,7 @@ import 'vueperslides/dist/vueperslides.css'
                 gifs:[
                 {
                     id: 1,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/1.gif`,
+                    link: `gifs/${(this.$store.state.lang.toUpperCase() == 'CZ' ||this.$store.state.lang.toUpperCase() == 'ES' || this.$store.state.lang.toUpperCase() == 'EN') ? this.$store.state.lang.toUpperCase() : 'EN' }/1.gif`,
                 },
                 {
                     id: 2,

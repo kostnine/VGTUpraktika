@@ -734,10 +734,10 @@
       font-weight="600"
       letter-spacing="0em"
     >
-      <tspan x="30" y="275" class="smaller-malta" v-if="lang == 'MT'">
+      <tspan x="30" y="275" class="smaller-malta" v-if="lang == 'MT' || lang == 'IT'">
         {{ toLocal("house.bedroom").toUpperCase() }}
       </tspan>
-      <tspan x="47.0039" y="248" class="smaller-malta" v-if="lang != 'MT'">
+      <tspan x="47.0039" y="248" class="smaller-malta" v-if="lang != 'MT' && lang != 'IT'">
         {{ toLocal("house.bedroom").toUpperCase() }}
       </tspan>
     </text>
