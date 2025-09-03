@@ -313,63 +313,63 @@ import 'vueperslides/dist/vueperslides.css'
                 gifs:[
                 {
                     id: 1,
-                    link: `gifs/${(this.$store.state.lang.toUpperCase() == 'CZ' ||this.$store.state.lang.toUpperCase() == 'ES' || this.$store.state.lang.toUpperCase() == 'EN') ? this.$store.state.lang.toUpperCase() : 'EN' }/1.gif`,
+                    link: `gifs/${this.langString()}/1.gif`,
                 },
                 {
                     id: 2,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/2.gif`,
+                    link: `gifs/${this.langString()}/2.gif`,
                 },
                 {
                     id: 3,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/3.gif`,
+                    link: `gifs/${this.langString()}/3.gif`,
                 },
                 {
                     id: 4,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/4.gif`,
+                    link: `gifs/${this.langString()}/4.gif`,
                 },
                 {
                     id: 5,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/5.gif`,
+                    link: `gifs/${this.langString()}/5.gif`,
                 },
                 {
                     id: 6,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/6.gif`,
+                    link: `gifs/${this.langString()}/6.gif`,
                 },
                 {
                     id: 7,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/7.gif`,
+                    link: `gifs/${this.langString()}/7.gif`,
                 },
                 {
                     id: 8,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/8.gif`,
+                    link: `gifs/${this.langString()}/8.gif`,
                 },
                 {
                     id: 9,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/9.gif`,
+                    link: `gifs/${this.langString()}/9.gif`,
                 },
                 {
                     id: 10,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/10.gif`,
+                    link: `gifs/${this.langString()}/10.gif`,
                 },
                 {
                     id: 11,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/11.gif`,
+                    link: `gifs/${this.langString()}/11.gif`,
                 },
                 {
                     id: 12,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/12.gif`,
+                    link: `gifs/${this.langString()}/12.gif`,
                 },
                 {
                     id: 13,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/13.gif`,
+                    link: `gifs/${this.langString()}/13.gif`,
                 },
                 {
                     id: 14,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/14.gif`,
+                    link: `gifs/${this.langString()}/14.gif`,
                 },
                 {
                     id: 15,
-                    link: `gifs/${this.$store.state.lang.toUpperCase()}/15.gif`,
+                    link: `gifs/${this.langString()}/15.gif`,
                 }
                 ],
                 downloadsLeaflets:[
@@ -382,6 +382,11 @@ import 'vueperslides/dist/vueperslides.css'
             VueperSlide
         },
         methods:{
+
+            langString(){
+              return (this.$store.state.lang.toUpperCase() == 'CZ' ||this.$store.state.lang.toUpperCase() == 'ES' || this.$store.state.lang.toUpperCase() == 'EN') ? this.$store.state.lang.toUpperCase() : 'EN'
+            },
+
             mailto() {
             window.location.href = "mailto:info@eurofsa.org";
             },
