@@ -15,7 +15,7 @@ import BackToTop from "./components/BackToTop.vue";
 export default {
   data() {
     return {
-      allowedLangs: ["EN", "CZ", "ES", 'PL', 'EE', 'LV', 'HU', 'LT', 'MT', 'IT', 'PT'],
+      allowedLangs: ["EN", "CZ", "ES", 'FR', 'PL', 'EE', 'LV', 'HU', 'LT', 'MT', 'IT', 'PT'],
     };
   },
   components: {

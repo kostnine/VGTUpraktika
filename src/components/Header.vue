@@ -225,6 +225,7 @@ export default {
         CZ: "Czech",
         EN: "English",
         ES: "Spanish",
+        FR: "French",
         PL: "Polish",
         EE: "Estonian",
         LV: "Latvian",
@@ -232,7 +233,7 @@ export default {
         IT: "Italian",
         PT: "Portuguese",
         LT: "Lithuanian",
-        MT: "Maltese"
+        MT: "Maltese",
       },
       dropdownLanguages: [
         {
@@ -249,6 +250,11 @@ export default {
           id: 1,
           name: "English",
           prefix: "EN",
+        },
+        {
+          id: 11,
+          name: "French",
+          prefix: "FR",
         },
         {
           id: 5,
