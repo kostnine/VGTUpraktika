@@ -630,7 +630,7 @@
     "FR": "La sensibilisation des consommateurs est d\u00e9terminante dans la decision d\u2019acheter un d\u00e9tecteur, m\u00eame lorsqu\u2019il n\u2019y a pas ou peu de r\u00e8glementation"
   },
   "reg.E_OE": {
-    "EN": "E&OE \u2013 While we have made every effort to ensure the information provided is correct and up to date, we accept that there maybe errors and welcome updates. Corrections and contributions to improve accuracy or additional detail.",
+    "EN": "E&OE – While we have made every effort to ensure the information provided is correct and up to date, we accept that there may be errors and welcome updates. Corrections and contributions to improve accuracy or additional detail.",
     "ES": "s.e.u.o.\ufeff - Si bien hemos hecho todo lo posible para asegurar que la informaci\u00f3n proporcionada sea correcta y est\u00e9 actualizada, admitimos que pueda haber errores y se agradece la actualizaci\u00f3n de la informaci\u00f3n, correcciones y aportaciones para mejorar la exactitud o detalles adicionales. ",
     "CZ": "Vynalo\u017eili jsme ve\u0161ker\u00e9 \u00fasil\u00ed, abychom zajistili spr\u00e1vn\u00e9 a aktuln\u00ed informace. I p\u0159es to se na t\u011bchto str\u00e1nk\u00e1ch mohou objevit nevhodn\u00e9 formulace nebo chyby. Budeme r\u00e1di za ka\u017edou p\u0159ipom\u00ednku ke zlep\u0161en\u00ed str\u00e1nek. ",
     "PL": "Zastrze\u017cenie: Chocia\u017c do\u0142o\u017cyli\u015bmy wszelkich stara\u0144, aby podawane przez nas dane by\u0142y prawdziwe i aktualne, to zdajemy sobie spraw\u0119, \u017ce mog\u0105 pojawi\u0107 si\u0119 b\u0142\u0119dy lub nie\u015bcis\u0142o\u015bci. B\u0119dziemy wdzi\u0119czni za przysy\u0142anie nam informacji uzupe\u0142niaj\u0105cych, koryguj\u0105cych i aktualizuj\u0105cych. ",
@@ -640,7 +640,7 @@
     "LT": "E&OE \u2013 Nors d\u0117jome visas pastangas, kad u\u017etikrintume, jog pateikta informacija b\u016bt\u0173 teisinga ir atnaujinta, sutinkame, kad gali b\u016bti klaid\u0173 ir laukiame pataisym\u0173. Pataisymai ir pasi\u016blymai, siekiant pagerinti tikslum\u0105 arba papildyti informacij\u0105.",
     "MT": "E&OE \u2013 Filwaqt li g\u0127amilna kull sforz biex ni\u017cguraw li l-informazzjoni pprovduta hija korretta u a\u0121\u0121ornata, nifhmu li forsi jkun hemm xi \u017cbalji u nilqg\u0127u a\u0121\u0121ornamenti, korrezzjonijiet u kontribuzzjonijiet jew dettalji addizzjonali biex inkunu iktar pre\u010bi\u017ci.",
     "PT": "E&OE \u2013 Embora tenhamos feito todos os esfor\u00e7os para garantir que as informa\u00e7\u00f5es fornecidas sejam precisas e atualizadas, reconhecemos que podem ocorrer erros e agradecemos atualiza\u00e7\u00f5es, corre\u00e7\u00f5es e sugest\u00f5es para maior precis\u00e3o ou detalhes adicionais.",
-    "FR": ""
+    "FR": "Erreurs ou omissions — Malgré tous nos efforts pour fournir des informations fiables et à jour, il se peut qu’il y ait des inexactitudes ; nous serons ravis d’actualiser et de perfectionner notre site grâce à vos corrections, ajouts et contributions."
   },
   "types.which": {
     "EN": "Which smoke alarm is the best for you?<br> Let's find out!",
@@ -738,7 +738,7 @@
     "MT": "Huwa g\u0127alhekk li l-alarms tad-du\u0127\u0127an b'batterija ssi\u0121illata b'tul ta' \u0127ajja ta' 10 snin huma l-a\u0127jar g\u0127a\u017cla. Ikkalkulata fuq dawn l-g\u0127axar snin din hija l-a\u0127jar g\u0127a\u017cla mil-lat ta' prezz g\u0127aliex m'g\u0127andekx b\u017conn tibdel il-batterija. Int ukoll ma tirriskjax li tu\u017ca l-allarm g\u0127al aktar minn g\u0127axar snin.",
     "IT": "Questo perch\u00e9 un rilevatore di fumo con una batteria garantita 10 anni \u00e8 la migliore opzione. Il calcolo di 10 anni \u00e8 l'opzione pi\u00f9 conveniente perch\u00e9 non c'\u00e8 bisogno di sostituire la batteria e non si corre il rischio di usare l'allarme per pi\u00f9 di 10 anni.",
     "PT": "\u00c9 por isso que os detetores de fumo com bateria selada com uma vida \u00fatil de 10 anos s\u00e3o a melhor op\u00e7\u00e3o. Se fizermos o c\u00e1lculo ao longo destes dez anos, \u00e9 a op\u00e7\u00e3o com melhor rela\u00e7\u00e3o custo-benef\u00edcio, uma vez que n\u00e3o \u00e9 necess\u00e1rio substituir a bateria. Tamb\u00e9m n\u00e3o corre o risco de utilizar o detetor por mais de dez anos.",
-    "FR": ""
+    "FR": "C’est pourquoi il est recommandé d’acheter un détecteur de fumée muni d’une pile scellée d’une durée de vie de 10 ans. Ce choix garantit le meilleur rapport qualité-prix car il n’est pas nécessaire de remplacer la pile pendant la durée de vie du détecteur. Cela élimine également le risque d’utiliser le détecteur pendant plus de 10 ans."
   },
   "types.interconnected": {
     "EN": "Another option is choosing a smoke alarm which is <span class='semibold'>interconnected</span>, this means if 1 smoke alarm detects smoke, they all go off.",
@@ -1018,7 +1018,7 @@
     "MT": "B'mod \u0121enerali, ftakar li <span class='semibold'>detector tad-du\u0127\u0127an jista' jimmonitorja spazju sa 60 m\u00b2</span>. Jekk il-kamra tieg\u0127ek hi akbar minn 60 m\u00b2, g\u0127andek twa\u0127\u0127al smoke alarm ie\u0127or. G\u0127alhekk, skont id-daqs tad-dar tieg\u0127ek, dan ifisser li <span class='semibold'>se jkollok b\u017conn diversi alarms tad-du\u0127\u0127an </span>. F'kurituri jew passa\u0121\u0121i minn fejn to\u0127ro\u0121, g\u0127andu jitqieg\u0127ed alarm kull 7.5 m.",
     "IT": "In generale, dovreste ricordare che un rilevatore di fumo pu\u00f2 monitorare un'area fino a 60 m2. Se la vostra stanza ha una superficie superiore a 60 m2, dovreste istallare un rilevatore addizionale. Quindi, a seconda della superficie della vostra casa, ci\u00f2 significa che avrete bisogno di pi\u00f9 allarmi antincendio. Nei corridoi o nelle vie di fuga dovrebbero essere posizioanti ogno 7,5 m.",
     "PT": "",
-    "FR": ""
+    "FR": "Il faut toujours garder à l’esprit qu’un détecteur de fumée est efficace dans un espace d’environ 60m2 maximum. Si la zone à équiper est plus vaste que 60m2, il faut installer un détecteur supplémentaire. Ainsi, en fonction de la surface de votre logement, plusieurs détecteurs seront nécessaires. Dans les couloirs et les voies d’évacuation, il faut 1 détecteur tous les 7,5m."
   },
   "place.before_installing": {
     "EN": "Before installing your smoke alarms, please <strong>check country-specific regulations</strong> or seek advice from a local fire safety expert.",
@@ -1200,7 +1200,7 @@
     "MT": "<span class='semibold'>U\u017ca l-viti u r-rawlplugs li jkun hemm fil-kaxxa mal-alarm </span> u ara li je\u0127lu sew u b'mod sod, biex iservi g\u0127al perjodu kollu t'g\u0127axar snin tal-prodott. ",
     "IT": "Utilizzare le viti e i tasselli forniti con il rilevatore di fumo per garantire un fissaggio solido e sicuro che duri per tutti i 10 anni di vita del prodotto.",
     "PT": "<span class='semibold'>Utilize os parafusos e buchas fornecidos com o  detetor</span> para garantir uma fixa\u00e7\u00e3o s\u00f3lida e segura durante os 10 anos de vida \u00fatil do produto.",
-    "FR": ""
+    "FR": "Utiliser les vis et les chevilles fournies avec le détecteur afin d’effectuer une installation solide et sûre pendant les dix ans de la durée de vie du détecteur."
   },
   "place.centrally": {
     "EN": "Smoke alarms should be placed centrally in the room, <span class='semibold'>at least 50 cm away from walls</span> to avoid dead air zones. Avoid objects such as lamps and other ceiling-mounted fixtures which may generate air currents that could deflect the smoke away from the alarm. <span class='semibold'>Do not install them near windows, doors, or ducts where drafts might interfere with their operation.</span>",
@@ -1214,7 +1214,7 @@
     "MT": "L-alarms tad-du\u0127\u0127an g\u0127andhom ji\u0121u installati fin-nofs tal-kamra, <span class='semibold'> tal-inqas 50 \u010bm 'il bog\u0127od mill-\u0127ajt <span> biex ji\u0121u evitati spazji fejn m'hemmx \u010birkolazzjoni tal-arja. Evita o\u0121\u0121etti b\u0127al lampi u affarijiet o\u0127ra mwa\u0127\u0127lin mas-saqaf li jistg\u0127u ji\u0121\u0121eneraw kurrenti tal-arja li jistg\u0127u jbieg\u0127du d-du\u0127\u0127an mill-alarm. <span class='semibold'> Twa\u0127\u0127alhomx fejn it-twieqi, il-bibien, jew katusi fejn il-kurrent jista' jtellifhom milli ja\u0127dmu sew.",
     "IT": "I rilevatori di fumo devono essere posizionati al centro della stanza, ad almeno 50 cm dalle pareti per evitare zone d'aria stagnanti. Evitare oggetti come lampade e altri apparecchi montati a soffitto che potrebbero generare correnti d'aria che potrebbero deviare il fumo lontano dal rilevatore. Non installarli vicino a finestre, porte o condotti dove le correnti d'aria potrebbero interferire con il loro funzionamento.",
     "PT": "Os detetores de fumo devem ser colocados no centro da divis\u00e3o, <span class='semibold'>a pelo menos 50 cm de dist\u00e2ncia das paredes</span> para evitar \u00e1reas sem ventila\u00e7\u00e3o. Evite objetos como l\u00e2mpadas e outros acess\u00f3rios montados no teto que possam criar correntes de ar e desviar o fumo do detetor. <span class='semibold'>N\u00e3o os instale perto de janelas, portas ou condutas onde as correntes de ar possam interferir com o seu funcionamento.</span>",
-    "FR": ""
+    "FR": "Il est préférable d’installer les détecteurs au centre des pièces et au moins à 50 cm des murs pour éviter les zones d’air stagnant. Il faut éviter la proximité avec les lampes et autres dispositifs fixés sur les plafonds susceptibles de générer des courants d’air qui pourraient éloigner la fumée des détecteurs. Ne pas les installer près des fenêtres, portes, ou gaines, où des courants d’air pourraient obérer leur fonctionnement"
   },
   "place.basement": {
     "EN": "Smoke <span class='semibold'>alarms installed in the basement</span> should be installed on the ceiling at the bottom of the stairs leading to the next level.",
@@ -1228,7 +1228,7 @@
     "MT": "<span class='semibold'>L-Alarms tad-du\u0127\u0127an installati fil-kantina</span> g\u0127andhom ji\u0121u installati mas-saqaf fit-tarf tat-tara\u0121 li jag\u0127ti g\u0127al-livell li jmiss.",
     "IT": "I rilevatori di fumo installati nel seminterrato devono essere installati sul soffitto in fondo alle scale che portano al piano superiore.",
     "PT": "Os <span class='semibold'>detetores de fumo instalados na cave</span> devem ser instalados no teto, na parte inferior da escada que conduz ao n\u00edvel seguinte.",
-    "FR": ""
+    "FR": "Les détecteurs installés dans les sous-sols doivent être placés sur le plafond au bas de l’escalier menant à l’étage supérieur."
   },
   "place.never_paint": {
     "EN": "Never paint smoke alarms.",
@@ -1312,7 +1312,7 @@
     "MT": "Il-post fejn se je\u0127lu g\u0127andu jkun mill-inqas 300 mm 'l bog\u0127od mill-\u0127ajt u xkiel ie\u0127or (e\u017c. fanal jew linef tad-dawl \u2013 f'ka\u017c fejn ma jkunux jistg\u0127u j\u017commu 'l bog\u0127od 300 mm, ersaq eqreb lejn il-fanal/linfa).",
     "IT": "Posizionare ad almeno 300 mm da pareti e ostacoli (ad esempio, lampada a sospensione: se non \u00e8 possibile raggiungere i 300 mm, avvicinarsi alla lampada a sospensione).",
     "PT": "Coloque-o a uma dist\u00e2ncia m\u00ednima de 300 mm de dist\u00e2ncia de paredes e obst\u00e1culos (por exemplo, lumin\u00e1ria pendente \u2013 onde n\u00e3o seja poss\u00edvel atingir os 300 mm, aproxime-o da luz).",
-    "FR": ""
+    "FR": "Placer le détecteur à une distance d’au moins 30 cm des murs et obstacles (par exemple les suspensions lumineuses — au cas où 30 cm ne pourraient être trouvés il convient de se rapprocher de la suspension)."
   },
   "place.point": {
     "EN": "Smoke alarms \u2013 max 7.5 m from any point in the area.",
@@ -1536,7 +1536,7 @@
     "MT": "Meta jid\u0127ol it-trab jew \u0127mie\u0121  ie\u0127or fl-alarm tad-du\u0127\u0127an, l-alarm ma jibdiex jiffunzjona sew u l-alarm g\u0127andu jinbidel.",
     "IT": "Quando all'interno del rilevatore di fumo si accumula polvere o altri agenti inquinanti, il funzionamento dell'allarme viene compromesso e l'allarme deve essere sostituito.",
     "PT": "Quando se acumulam poeiras ou sujidade, no interior do detetor de fumo, o desempenho do detetor fica comprometido e deve ser substitu\u00eddo por um novo.",
-    "FR": ""
+    "FR": "Lorsque la poussière ou d’autres polluants s’accumulent à l’intérieur du détecteur de fumée, son fonctionnement est compromis ; il faut alors le remplacer."
   },
   "maintain.chosen": {
     "EN": "If you have chosen smoke alarms with a battery that needs to be replaced",
@@ -6071,7 +6071,7 @@
     "MT": "Bejn kmamar b'riskju g\u0127oli",
     "IT": "Tra le stanze ad alto rischio",
     "PT": "Entre divis\u00f5es de alto risco ",
-    "FR": ""
+    "FR": "À distance de la porte "
   },
   "house.between2": {
     "EN": "and bedrooms.",
@@ -6085,7 +6085,7 @@
     "MT": "u l-kmamar tas-sodda.",
     "IT": "e le camere da letto",
     "PT": "e quartos",
-    "FR": ""
+    "FR": "de la salle de bain"
   },
   "practices.how_to_install": {
     "EN": "How to install a Smoke detector",
@@ -6629,7 +6629,7 @@
     "MT": "Il-kampanja tad-dipartiment tat-tifi tan-nar ta\u2019 Stokkolma biex tinstalla alarms tad-du\u0127\u0127an f\u2019\u017coni b\u2019riskju g\u0127oli tat il-frott meta alarm tad-du\u0127\u0127an av\u017ca lir-residenti ta\u2019 binja ta\u2019 appartamenti dwar nar f\u2019binja \u0121irien. It-twissija bikrija ppermettiet evakwazzjoni mg\u0127a\u0121\u0121la, u l-pumpiera setg\u0127u j\u017commu n-nar fil-post fejn beda, jipprevjenu tra\u0121edja potenzjali u jimminimizzaw il-\u0127sara lill-proprjet\u00e0.",
     "IT": "La campagna dei vigili del fuoco di Stoccolma per installare rilevatori di fumo nelle aree ad alto rischio ha dato i suoi frutti quando un rilevatore ha allertato i residenti di un condominio di un incendio in un'unit\u00e0 adiacente. L'allarme tempestivo ha consentito un'evacuazione rapida e i vigili del fuoco sono riusciti a contenere l'incendio fino all'unit\u00e0 di origine, evitando una potenziale tragedia e riducendo al minimo i danni materiali.",
     "PT": "A campanha do departamento de bombeiros de Estocolmo para instalar alarmes de fumo em \u00e1reas de alto risco compensou quando um alarme de fumo alertou os residentes de um edif\u00edcio de apartamentos para um inc\u00eandio numa unidade vizinha. O aviso precoce permitiu uma evacua\u00e7\u00e3o r\u00e1pida, e os bombeiros conseguiram conter o inc\u00eandio \u00e0 unidade de origem, prevenindo uma potencial trag\u00e9dia e minimizando os danos \u00e0 propriedade.",
-    "FR": ""
+    "FR": "La campagne pour installer des détecteurs de fumée menée par le Département Incendie de Stockholm s’est avérée payante, quand un détecteur a alerté les habitants d’un immeuble qu’il y avait un incendie dans l’un des logements. L’alerte précoce a permis une évacuation rapide de l’immeuble, et les pompiers ont pu contenir le feu dans le logement où il avait pris, évitant un drame potentiel et réduisant les dégâts matériels."
   },
   "stories.copenhagen": {
     "EN": "Copenhagen Fire Brigade, Denmark",
@@ -6769,7 +6769,7 @@
     "MT": "\u0126ajjiet li \u0121ew salvati",
     "IT": "Intestazione salva-vita",
     "PT": "",
-    "FR": ""
+    "FR": "Ces détecteurs de fumée ont sauvé des vies. Certains d’entre eux fonctionnent encore!"
   },
   "stories.poland": {
     "EN": "Poland State Fire Service",
@@ -6795,6 +6795,6 @@
     "MT": "F'Pozna\u0144, Smoke Alarm li kien installat f'wie\u0127ed mill-appartamenti fir-4 sular salva f'waqtu lir-residenti kollha tal-bini billi induna bid-du\u0127\u0127an li kien qed jinfirex minn nar fi\u017c-\u017cona ta\u0127t l-art, li wassal g\u0127al evakwazzjoni immedjata tar-residenti kollha u salva \u0127ajjet 20 persuna. Ftit wara, is-sitwazzjoni tan-nar ikkaw\u017cat l-isplu\u017cjoni fil-kantina, il-bini kollu waqa\u2019 u \u017cew\u0121 pumpieri tilfu \u0127ajjithom. Il-Polonja b\u0127alissa qed ta\u0127dem fil-livell governattiv fuq regolamenti ta' implimentazzjoni li jobbligaw l-installazzjoni ta' alarms tad-du\u0127\u0127an f'bini residenzjali.",
     "IT": "A Pozna\u0144, un rilevatore di fumo installato in uno degli appartamenti al quarto piano ha salvato tempestivamente tutti i residenti dell'edificio, rilevando il fumo che si stava diffondendo da un incendio nel seminterrato, consentendo l'evacuazione improvvisa di tutti i residenti e salvando la vita a 20 persone. Poco dopo, l'incendio ha provocato un'esplosione nel seminterrato, il crollo dell'intero edificio e la morte di due vigili del fuoco. La Polonia sta attualmente lavorando a livello governativo all'attuazione di normative che impongono l'installazione di rilevatori di fumo negli edifici residenziali.",
     "PT": "Em Pozna\u0144, um alarme de fumo instalado num dos apartamentos no 4.\u00ba andar salvou atempadamente todos os residentes do edif\u00edcio ao detetar fumo que se propagava de um inc\u00eandio na \u00e1rea subterr\u00e2nea, levando a uma evacua\u00e7\u00e3o espont\u00e2nea de todos os residentes e salvando 20 vidas. Pouco depois, a situa\u00e7\u00e3o do inc\u00eandio causou a explos\u00e3o na cave, todo o edif\u00edcio colapsou e dois bombeiros perderam as suas vidas. A Pol\u00f3nia est\u00e1 atualmente a trabalhar a n\u00edvel governamental na implementa\u00e7\u00e3o de regulamentos que tornem obrigat\u00f3ria a instala\u00e7\u00e3o de alarmes de fumo em edif\u00edcios residenciais.",
-    "FR": ""
+    "FR": "À Poznań, un détecteur de fumée installé dans un logement du 4è étage a sauvé tous les résidents de l’immeuble en détectant la fumée venant d’un incendie au sous-sol, provocant l’évacuation spontanée de tous les résidents et sauvant ainsi 20 personnes. Peu après l’incendie provoqua l’effondrement de l’immeuble, et deux pompiers périrent. La Pologne travaille actuellement à une loi nationale visant à instituer une règlementation rendant obligatoire l’installation de détecteurs de fumée dans les immeubles d’habitation."
   }
 }
