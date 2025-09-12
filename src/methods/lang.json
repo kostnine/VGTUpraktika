@@ -81,7 +81,7 @@
     "MT": "L-uffi\u010bjali ta' kontra n-nirien madwar l-Ewropa kollha jappo\u0121\u0121jaw il-kampanja  <span class='semibold'>#smokealarmsaveslives</span>",
     "IT": "I vigili del fuoco di tutta Europa supportano il rilevatore di fumo, che salva vite umane",
     "PT": "Bombeiros de toda a Europa apoiam a campanha <span class='semibold'>#detetores de fumosalvamvidas</span>.",
-    "FR": ""
+    "FR": "Partout en Europe, des pompiers soutiennent la campagne <span class='semibold'>#smokealarmsaveslives</span>"
   },
   "home.find_more": {
     "EN": "Find Out More About Smoke Alarms",
@@ -892,7 +892,7 @@
     "MT": "Fejn E\u017catt G\u0127andhom Jitwa\u0127\u0127lu",
     "IT": "Dove dovrebbe essere istallato esattamente il rilevatore di fumo?",
     "PT": "Onde Exactamente se Devem",
-    "FR": "Quels sont les bons endroits pour installer les d\u00e9tecteurs\u00a0?"
+    "FR": "Quels sont les bons endroits"
   },
   "place.smoke_alarms_installed": {
     "EN": "Smoke Alarms Be Installed?",
@@ -906,7 +906,7 @@
     "MT": "l-Alarms tad-Du\u0127\u0127an?",
     "IT": " ",
     "PT": "Instalar os Detetores de Fumo?",
-    "FR": ""
+    "FR": "pour installer les d\u00e9tecteurs\u00a0?"
   },
   "place.the_placement": {
     "EN": "The placement of a smoke alarm is essential for the correct functioning of the detector. Of course, it should work properly and provide you and your family with life-saving minutes in the event of a fire.",
@@ -2110,7 +2110,7 @@
     "MT": "Vidjow mill-Federazzjoni Fran\u010bi\u017ca tal-Professjonisti tan-Nar (FFMI)",
     "IT": "Video della Federazione francese delle professioni antincendio (FFMI)",
     "PT": "V\u00eddeo da Federa\u00e7\u00e3o Francesa de Bombeiros (FFMI)",
-    "FR": ""
+    "FR": "Vidéo de la Fédération Française des Métiers de l’Incendie (FFMI)"
   },
   "downloads.video_home_depot": {
     "EN": "By Home Depot",
@@ -2236,7 +2236,7 @@
     "MT": "<span>Mill-1 ta' Frar 2022 se jid\u0127lu fis-se\u0127\u0127 Regoli \u0120odda li japplikaw g\u0127ad-djar kollha <span class='semibold'> </span>. Kemm il-kmamar kollha li jintu\u017caw kif ukoll kull kurritur jew pjan tat-tara\u0121 g\u0127andu jkollhom alarm tad-du\u0127\u0127an interkonness.</span>",
     "IT": "Le nuove regole si applicano a tutte le case dal 1\u00b0 febbraio 2022. Tutte le stanze utilizzate frequentemente e ogni corridoio o pianerottolo devono essere dotati di un rilevatore di fumo interconnesso.",
     "PT": "<span>Aplicam-se novas regras a todas as casas a partir de <span class='semibold'>1 de fevereiro de 2022</span>. Todos os quartos utilizados com frequ\u00eancia e todos os corredores ou patamares devem ter um detetor de fumo interligado.</span>",
-    "FR": ""
+    "FR": "<span>Règlementation applicable dans tous les logements depuis le 1er février 2022 : toutes les pièces fréquemment utilisées et tous les couloirs doivent être équipés de détecteurs de fumée interconnectés.</span>"
   },
   "country.regulations": {
     "EN": "Regulations",
@@ -2320,7 +2320,7 @@
     "MT": "<span>Ir-regoli japplikaw g\u0127ad-djar kollha mikrija mill- <span class='semibold'>1 t'Ottubru 2022.</span> Fuq kull sular irid jitqieg\u0127ed talanqas alarm tad-du\u0127\u0127an wie\u0127ed. Imqabbad mal-main f'bini \u0121did. Irrikmandat li jkun interkonness.</span>",
     "IT": "Le regole si applicano a tutte le case in affitto dal 1\u00b0 ottobre 2022. \u00c8 necessario installare almeno un rilevatore di fumo su ogni piano. Alimentazione elettrica nelle nuove costruzioni. Si consiglia l'interconnessione.",
     "PT": "<span>As regras aplicam-se a todas as casas arrendadas a partir de <span class='semibold'>1 de outubro de 2022.</span> Deve ser instalado pelo menos 1 detetor de fumo em cada piso. Em constru\u00e7\u00f5es novas, a alimenta\u00e7\u00e3o \u00e9 feita pela rede el\u00e9trica. Recomenda-se a interliga\u00e7\u00e3o.</span>",
-    "FR": ""
+    "FR": "<span>Règlementation applicable dans tous les logements locatifs depuis le 1er octobre 2022. Au minimum 1 détecteur de fumée par étage fonctionnant sur secteur dans les constructions neuves. L’interconnexion est recommandée.</span>"
   },
   "country.uk_eng_link1": {
     "EN": "Smoke and Carbon Monoxide Alarm (Amendment) Regulations 2022:",
@@ -2376,7 +2376,7 @@
     "MT": "<span>Ir-Regoli japplikaw g\u0127ad-djar kollha mikrija mill- <span class='semibold'>1 ta' Di\u010bembru 2022.</span> L-alarm tad-du\u0127\u0127an fuq kull sular irid ji\u0121i interkonness mal-alarms tad-du\u0127\u0127an l-o\u0127ra fid-dar.</span>",
     "IT": "Le regole si applicano a tutte le case in affitto dal 1\u00b0 dicembre 2022. 1 rilevatore di fumo per piano che deve essere interconnesso agli altri rilevatori di fumo presenti nella casa.",
     "PT": "<span>As regras aplicam-se a todas as casas arrendadas a partir de <span class='semibold'>1 de dezembro de 2022.</span> 1 detetor de fumo por piso, que deve estar interligado aos restantes detetores de fumo da casa.</span>",
-    "FR": ""
+    "FR": "<span>Règlementation applicable à tous les logements locatifs depuis le 1er décembre 2022. 1 détecteur de fumée par étage, tous reliés entre eux. </span>"
   },
   "country.uk_wales_link1": {
     "EN": "The Renting Homes Regulations 2022",
@@ -2516,7 +2516,7 @@
     "MT": "<span>L-Alarms tad-Du\u0127\u0127an iridu jkopru l-kmamar tal-g\u0127ajxien, il-kmamar tas-sodda u l-kmamar tekni\u010bi. <br>Minimu ta' wa\u0127da fuq kull sular. Alarm minimu ta' 60 dB fil-kmamar tal-g\u0127ajxien <br> u l-kmamar tas-sodda meta l-bibien ikunu mag\u0127luqa. L-alarms tad-du\u0127\u0127an u l-alarms tas-s\u0127ana jridu jkunu interkonnessi u mqabbdin mal-main.</span>",
     "IT": "I rilevatori di fumo devono coprire il soggiorno, le camere da letto e i locali tecnici. Almeno uno per piano. Allarme minimo di 60 dB nei soggiorni e nelle camere da letto quando le porte sono chiuse. Tutti i rilevatori di fumo e calore devono essere interconnessi e alimentati dalla rete elettrica.",
     "PT": "<span>Os detetores de fumo devem ser instalados na sala de estar, nos quartos e nas \u00e1reas de servi\u00e7o. <br> No m\u00ednimo um detetor por piso. Deve ser definido um alarme m\u00ednimo de 60 dB nas salas de estar <br> e nos quartos quando as portas est\u00e3o fechadas. Todos os detetores de fumo e de calor devem ser interligados e alimentados pela rede el\u00e9trica.</span>",
-    "FR": ""
+    "FR": "<span>Le séjour, les chambres et les pièces techniques doivent être équipés de détecteurs. 1 détecteur par étage au minimum. Le volume sonore de l’alarme doit être au minimum de 60 dB dans les séjours et les chambres, portes fermées. Tous les détecteurs de fumée et de surchauffe doivent être interconnectés et fonctionner sur secteur. </span>"
   },
   "country.norway_link1": {
     "EN": "Building code TEK17",
@@ -2740,7 +2740,7 @@
     "MT": "<span>Fi Flanders u l-Wallonja l-alarms tad-du\u0127\u0127an g\u0127andhom ikunu pre\u017centi fid-djar kollha. Minn Jannar 2025, l-intra\u010b\u010bar tad-du\u0127\u0127an se jkunu obbligatorju fid-djar kollha fir-Re\u0121jun Kapitali ta' Brussell.</span>w",
     "IT": "Nelle Fiandre e in Vallonia, i rilevatori di fumo devono essere installati in tutte le abitazioni. Da gennaio 2025, i rilevatori di fumo sono obbligatori in tutte le abitazioni della Regione di Bruxelles-Capitale.",
     "PT": "",
-    "FR": ""
+    "FR": "</span>En Flandre et en Wallonie tous les logements doivent être équipés d’un détecteur de fumée. Depuis janvier 2025, les détecteurs de fumée sont obligatoires dans les logements de la région Bruxelles-Capitale.</span>"
   },
   "country.belgium_link1_title": {
     "EN": "General information",
@@ -2964,7 +2964,7 @@
     "MT": "<span>Huwa obbligatorju li ji\u0121i installat alarm tad-du\u0127\u0127an f'kull dar mill-<span class='semibold'>l-1<br> ta' Jannar 2020.</span><p></p> Mill-inqas Alarm tad-Du\u0127\u0127an wie\u0127ed f'kull flat, jekk ikun hemm flat b'\u017cew\u0121 sulari mill-inqas alarm tad-du\u0127\u0127an wie\u0127ed f'kull sular, l-istess jg\u0127odd g\u0127ad-dar</span>",
     "IT": "\u00c8 obbligatorio installare un rilevatore di fumo in ogni abitazione da gennaio 2020. Almeno un rilevatore di fumo in ogni appartamento, se c'\u00e8 un appartamento a due piani almeno un rilevatore di fumo in ogni piano, la stessa regola per tutta la casa",
     "PT": "<span>\u00c9 obrigat\u00f3rio instalar um detetor de fumo em todas as habita\u00e7\u00f5es desde <span class='semibold'>1 de janeiro de 2020.</span><p></p>Pelo menos um detetor de fumo em cada piso. Se for um apartamento de dois andares, pelo menos um detetor de fumo em cada piso. A mesma regra \u00e9 aplic\u00e1vel \u00e0s casas</span>",
-    "FR": ""
+    "FR": "<span>L’obligation d’installer 1 détecteur de fumée dans chaque logement est en vigueur depuis le 1er janvier 2020. 1 détecteur de fumée au minimum par logement, si le logement comporte deux niveaux il faut au minimum 1 détecteur par niveau ; de même dans les pavillons.</span>"
   },
   "country.latvia_link1_title": {
     "EN": "Regulations",
@@ -3076,7 +3076,7 @@
     "MT": "<span>Fir-Repubblika \u010aeka, huwa obbligatorju li kemm id-djar mibnijin \u0121odda kif ukoll l-appartamenti ji\u0121u mg\u0127ammra b'detectors tad-du\u0127\u0127an mill-<span class='semibold'>1 ta' Lulju 2008.</span></span>",
     "IT": "Nella Repubblica Ceca, dal 1\u00b0 luglio 2008, \u00e8 obbligatorio dotare le case unifamiliari e gli appartamenti di nuova costruzione di rilevatori di fumo.",
     "PT": "",
-    "FR": ""
+    "FR": "<span>En République Tchèque il est obligatoire d’installer des détecteurs dans les maisons et appartements neufs depuis le 1er juillet 2008.</span>"
   },
   "country.czech republic_data2": {
     "EN": "<span>The obligation also applies for accommodation facilities and facilities for the provision of social services, if they do not have obligation for electric fire alarm system.</span>",
@@ -3146,7 +3146,7 @@
     "MT": "<span>Fil-Lussemburgu, l-alarms tad-du\u0127\u0127an se jkunu obbligatorji fid-djar kollha mill- <span class='semibold'>1 ta' Jannar 2023.</span></span>",
     "IT": "In Lussemburgo, i rivelatori di fumo sono obbligatori in tutte le case a partire dal 1\u00b0 gennaio 2023.",
     "PT": "<span>No Luxemburgo, os detetores de fumo s\u00e3o obrigat\u00f3rios em todas as habita\u00e7\u00f5es, desde <span class='semibold'>1 de janeiro de 2023.</span></span>",
-    "FR": ""
+    "FR": "<span>Au Luxembourg les détecteurs de fumée sont obligatoires dans tous les logements depuis le 1er janvier 2023.</span>"
   },
   "country.luxembourg_link1_title": {
     "EN": "More information",
@@ -3286,7 +3286,7 @@
     "MT": "<span>Minn Di\u010bembru 2024, l-obbligu li ji\u0121i installat mill-anqas alarm tad-du\u0127\u0127an wie\u0127ed \u0121ie introdott f'bini residenzjali mibni \u0121did u f'bini residenzjali mibni \u0121did ma\u0127sub g\u0127all-provvediment ta' servizzi ta' lukandi ddisinjati g\u0127al kiri g\u0127al \u017cmien qasir, \u0121eneralment djar, appartamenti, kmamar, u postijiet ta' akkomodazzjoni disponibbli g\u0127all-kiri.</span>",
     "IT": "Da dicembre 2024 \u00e8 stato introdotto l'obbligo di installare almeno un rilevatore di fumo negli edifici residenziali di nuova costruzione e nei locali residenziali di nuova costruzione destinati alla fornitura di servizi alberghieri destinati all'affitto di case, appartamenti, camere e alloggi generalmente disponibili a breve termine.",
     "PT": "<span>A partir de dezembro de 2024, foi introduzida a obriga\u00e7\u00e3o de instalar pelo menos um detetor de fumo em edif\u00edcios residenciais rec\u00e9m-constru\u00eddos e em instala\u00e7\u00f5es residenciais rec\u00e9m-constru\u00eddas destinadas \u00e0 presta\u00e7\u00e3o de servi\u00e7os hoteleiros, destinadas para arrendamento de curta dura\u00e7\u00e3o e disponibilidade geral de casas, apartamentos, quartos e locais de alojamento.</span>",
-    "FR": ""
+    "FR": "<span>L'obligation d’installer au minimum 1 détecteur de fumée dans les bâtiments d’habitation neufs ainsi que dans les bâtiments à usage d’hôtels sociaux et d’hébergement de courte durée, dans les maisons, appartements et chambres en location et les lieux d’hébergement, est en vigueur depuis décembre 2024.</span>"
   },
   "country.poland_data_1": {
     "EN": "<span>From 1st\u00a0January 2030 installation of at least one smoke alarm will get mandatory in existing residential buildings and from 30th\u00a0June 2026 in existing residential premises intended for the provision of hotel services (short-term, generally available rental of houses, apartments, rooms, and accommodation places).</span>",
@@ -3300,7 +3300,7 @@
     "MT": "<span>Mill-1\u00a0Jannar 2030 se ssir obbligatorja l-installazzjoni ta' mill-inqas alarm tad-du\u0127\u0127an wie\u0127ed  f'bini residenzjali e\u017cistenti u mit-30\u00a0\u00a0\u0120unju 2026 f'bini residenzjali e\u017cistenti ma\u0127sub g\u0127all-provvediment ta' servizzi ta' lukanda (djar, appartamenti, kmamar u postijiet ta' akkomodazzjoni g\u0127all-kiri g\u0127al \u017cmien qasir, \u0121eneralment disponibbli).</span>",
     "IT": "Dal 1\u00b0 gennaio 2030 l'installazione di almeno un rilevatore di fumo diventer\u00e0 obbligatoria negli edifici residenziali esistenti e dal 30 giugno 2026 nei locali residenziali esistenti destinati alla fornitura di servizi alberghieri (affitto a breve termine e generalmente disponibile di case, appartamenti, camere e posti letto).",
     "PT": "<span>A partir de 1 de janeiro de 2030, a instala\u00e7\u00e3o de, pelo menos, um detetor de fumo ser\u00e1 obrigat\u00f3ria nos edif\u00edcios residenciais existentes e, a partir de 30 de junho de 2026, nas instala\u00e7\u00f5es residenciais existentes destinadas \u00e0 presta\u00e7\u00e3o de servi\u00e7os hoteleiros (alugueres de curta dura\u00e7\u00e3o de casas, apartamentos, quartos e espa\u00e7os de acomoda\u00e7\u00e3o, geralmente dispon\u00edveis).</span>",
-    "FR": ""
+    "FR": "<span>L'installation d’1 détecteur minimum sera obligatoire dans les bâtiments d’habitation existants à partir du 1er janvier 2030 ; et à partir du 30 juin 2026 dans les bâtiments à usage d’hébergement social et d’hébergement de courte durée, dans les maisons, appartements et chambres en location et d’hébergement.</span>"
   },
   "country.poland_data_2": {
     "EN": "<span>These obligations do not apply where a residential building or residential premises are protected by a fire alarm system or a fixed automatic fire extinguishing device.</span>",
@@ -3314,7 +3314,7 @@
     "MT": "<span>Dawn l-obbligi ma japplikawx fejn hemm bini residenzjali jew post residenzjali li huma protetti minn sistema ta' alarm tan-nar jew minn apparat imwa\u0127\u0127al li jitfi n-nar wa\u0127du.</span>",
     "IT": "Tali obblighi non si applicano qualora un edificio residenziale o locali residenziali siano protetti da un sistema di allarme antincendio o da un dispositivo automatico fisso di estinzione incendi.",
     "PT": "<span>Estas obriga\u00e7\u00f5es n\u00e3o se aplicam quando o edif\u00edcio de habita\u00e7\u00e3o ou instala\u00e7\u00f5es residenciais est\u00e3o protegidas por um sistema de alarme de inc\u00eandio ou por um dispositivo fixo autom\u00e1tico de extin\u00e7\u00e3o de inc\u00eandios.</span>",
-    "FR": ""
+    "FR": "<span>L’obligation ne s’applique pas dans les bâtiments d’habitation équipés d’un système d’alarme incendie ou d’un dispositif fixe d’extinction d’incendie.</span>"
   },
   "country.poland_link1_title": {
     "EN": "More info",
@@ -3608,7 +3608,7 @@
     "MT": "<span>Fil-provin\u010bji kollha tal-\u0120ermanja l-alarms tad-du\u0127\u0127an huma obbligatorji g\u0127ad-djar kollha meta jsiru attivi r-regolamenti f'Sachsen mit-<span class='semibold'>23 ta' Jannar 2001.</span><br><p></p>Skont il-provin\u010bja r-regoli jistg\u0127u jkunu differenti dwar kemm g\u0127andu jkun hemm alarms tad-du\u0127\u0127an u g\u0127andhom jitqieg\u0127du.</span>",
     "IT": "In tutte le province della Germania i rilevatori di fumo sono obbligatori in tutte le abitazioni da quando sono entrate in vigore le normative in Sassonia, a partire dal 23 gennaio 2001. Le regole sul numero di rivelatori di fumo e sulla loro collocazione possono variare a seconda della provincia.",
     "PT": "Os detetores de fumo s\u00e3o obrigat\u00f3rios em todas as habita\u00e7\u00f5es em todas as prov\u00edncias da Alemanha, desde que os regulamentos da Sax\u00f3nia entraram em vigor a 23 de janeiro de 2001.\n\nAs regras podem variar por prov\u00edncia, em rela\u00e7\u00e3o ao n\u00famero e \u00e0 localiza\u00e7\u00e3o dos detetores.",
-    "FR": ""
+    "FR": "<span>Les détecteurs de fumée sont obligatoires dans toutes les régions d’Allemagne depuis le 23 janvier 2001. La règlementation relative au nombre et à l’emplacement des détecteurs de fumée peut varier selon les régions.</span>"
   },
   "country.germany_link1_title": {
     "EN": "More information",
@@ -3664,7 +3664,7 @@
     "MT": "<span>Me\u0127tie\u0121 <span class='semibold'>mill-2011</span> - alarm wie\u0127ed f'kull sular, \u0121ewwa jew barra, f'kull kamra tas-sodda, direttament fuq kull tara\u0121.<br> Interkonnessjoni rakkomandata jekk ikun hemm diversi alarms fil-proprjet\u00e0.<br> </span>",
     "IT": "Dal 2011 \u00e8 obbligatorio installare un allarme per piano, interno o esterno, in ogni camera da letto, direttamente sopra ogni scala. Si consiglia l'interconnessione se sono presenti pi\u00f9 allarmi nella propriet\u00e0",
     "PT": "Obrigat\u00f3rio desde 2011 \u2013 um detetor em cada piso, no interior ou exterior de cada quarto, diretamente acima das escadas. \u00c9 recomendada a interliga\u00e7\u00e3o se houver v\u00e1rios detetores na propriedade.",
-    "FR": ""
+    "FR": "<span>Obligatoirement 1 détecteur de fumée par étage, à l’intérieur ou à l’extérieur, dans chaque chambre, au-dessus de chaque escalier. L’interconnexion est recommandée lorsqu’il y a plusieurs détecteurs.</span>"
   },
   "country.sweden_link1_title": {
     "EN": "Regulations",
@@ -3776,7 +3776,7 @@
     "MT": "<span>L-alarms tad-du\u0127\u0127an g\u0127andhom ji\u0121u installati f'\u017coni ta' \u010birkolazzjoni, spazji ta' g\u0127ajxien u tal-irqad u alarm tas-s\u0127ana fil-k\u010bina. Interkonnessjoni me\u0127tie\u0121a.</span>",
     "IT": "\u00c8 obbligatorio installare rilevatori di fumo nelle aree di passaggio, nelle zone giorno e notte e un rilevatore di calore in cucina. \u00c8 richiesta l'interconnessione.",
     "PT": "Os detetores de fumo devem ser instalados em zonas de circula\u00e7\u00e3o, salas e quartos, e deve existir um detetor t\u00e9rmico na cozinha. A interliga\u00e7\u00e3o \u00e9 obrigat\u00f3ria.",
-    "FR": ""
+    "FR": "<span>Des détecteurs de fumée doivent être installés dans les aires de circulation, les séjours et les espaces de nuit ; 1 détecteur de surchauffe dans la cuisine. L’interconnexion est recommandée.</span>"
   },
   "country.ireland_link1_title": {
     "EN": "Regulations",
@@ -4168,7 +4168,7 @@
     "MT": "<span>Id-djar kollha jrid ikollhom alarm tad-du\u0127\u0127an wie\u0127ed g\u0127al kull sular sa mit-<span class='semibold'>22 ta' Lulju 2001</span>, <br>preferibbilment fil-kuritur.</span>",
     "IT": "Dal 22 luglio 2001 tutte le case devono avere un rilevatore di fumo per piano, preferibilmente nel corridoio.",
     "PT": "Todas as casas devem ter pelo menos 1 detetor de fumo por andar desde 22 de julho de 2001, preferencialmente no corredor.",
-    "FR": ""
+    "FR": "<span>Tous les logements doivent être équipés d’1 détecteur de fumée à chaque étage depuis le 22 juillet 2001, de préférence dans le couloir.</span>"
   },
   "country.netherlands_link1_title": {
     "EN": "More information",
@@ -4504,7 +4504,7 @@
     "MT": "<span>F'bini residenzjali b'daqs kundizzjonat li jvarja minn 26.5 m sa 100 m, inklu\u017c il-bini b\u0127al appartamenti, ji\u0121u installati detectors tan-nar awtonomi. </br>L-e\u010b\u010bezzjoni g\u0127al din ir-regola tapplika biss g\u0127al bini sanitarju-i\u0121jeniku. Dawn id-detectors tan-nar installati jridu jissodisfaw ir-rekwi\u017citi deskritti fid-DSTU EN-14604.</span>",
     "IT": "Negli edifici residenziali con superficie climatizzata compresa tra 26,5 m\u00b2 e 100 m\u00b2, compresi locali come gli appartamenti, vengono installati rilevatori di incendio autonomi. L'eccezione a questa regola si applica solo ai locali igienico-sanitari. I rilevatori di incendio installati devono soddisfare i requisiti previsti dalla norma DSTU EN-14604.",
     "PT": "",
-    "FR": ""
+    "FR": "<span>Dans les bâtiments d’habitation allant de 26,5 m2 à 100 m2, y compris dans les appartements, il faut installer des détecteurs autonomes de fumée. La règlementation ne s’applique pas dans les locaux sanitaires. Les détecteurs installés doivent être conformes aux exigences énoncées dans le décret DSTU EN-14604.</span>"
   },
   "country.ukraine_link1_title": {
     "EN": "The portal of the state electronic system in the field of construction",
