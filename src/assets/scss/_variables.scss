@@ -1,0 +1,16 @@
+@font-face{
+    font-family: 'Barlow';
+    src: url(@/assets/BarlowSemiCondensed-Regular.ttf);
+}
+@font-face{
+    font-family: 'Barlow-semiBold';
+    src: url(@/assets/BarlowSemiCondensed-SemiBold.ttf);
+}
+$mainColor:#c0554b;
+$secondaryColor:#483a5b;
+$footerColor:#483a5b;
+$tetriaryColor: #FBF3ED;
+$mainFont: Barlow;
+$semiBoldFont: Barlow-semiBold;
+$paddingHorizontal: 160px;
+$paddingHorizontalMobile: 20px;
