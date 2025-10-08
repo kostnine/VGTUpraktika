@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
       "accessibility.banner_text": {
   "EN": "We are committed to making our website accessible in line with the <span class='semibold'>EU Web Accessibility Directive</span> and the <span class='semibold'>European Accessibility Act.</span> Currently, the site is partially compliant with <span class='semibold'>WCAG 2.2 AA.</span> We are actively working to achieve full compliance.",
   "ES": "Estamos comprometidos a hacer que nuestro sitio web sea accesible de acuerdo con la <span class='semibold'>Directiva de Accesibilidad Web de la UE</span> y la <span class='semibold'>Ley Europea de Accesibilidad.</span> Actualmente, el sitio cumple parcialmente con las <span class='semibold'>WCAG 2.2 AA.</span> Estamos trabajando activamente para lograr el cumplimiento total.",
@@ -13,6 +14,8 @@
   "PT": "Estamos empenhados em tornar o nosso site acessível em conformidade com a <span class='semibold'>Diretiva da UE sobre Acessibilidade na Web</span> e o <span class='semibold'>Ato Europeu de Acessibilidade.</span> Atualmente, o site está parcialmente em conformidade com as <span class='semibold'>WCAG 2.2 AA.</span> Estamos a trabalhar ativamente para alcançar a conformidade total.",
   "FR": "Nous nous engageons à rendre notre site web accessible conformément à la <span class='semibold'>Directive européenne sur l’accessibilité du Web</span> et à l’<span class='semibold'>Acte européen sur l’accessibilité.</span> Actuellement, le site est partiellement conforme aux <span class='semibold'>WCAG 2.2 AA.</span> Nous travaillons activement à atteindre une conformité totale."
 },
+=======
+>>>>>>> d3ed32dd79b56f472396e03c4def8bd40eef1d3b
   "home.european": {
     "EN": "European",
     "ES": "D\u00eda Europeo",
