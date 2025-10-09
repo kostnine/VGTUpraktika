@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   
   <div class="landing-page">
         <!--  Accessibility Banner (viršuje, po Header) -->
@@ -10,9 +9,6 @@
       >
         <p v-html="toLocal('accessibility.banner_text')"></p>
       </div>
-=======
-  <div class="landing-page">
->>>>>>> d3ed32dd79b56f472396e03c4def8bd40eef1d3b
     <section class="date" id="smokealarmssavelives">
       <div class="text">
         <h1 class="primary">{{ toLocal("home.european") }}</h1>
@@ -2080,7 +2076,6 @@ section {
   font-weight: 600;
   transition: 0.25s;
 }
-<<<<<<< HEAD
 /* Accessibility Banner (pagal Figma) */
 
 .accessibility-banner {
@@ -2122,6 +2117,4 @@ section {
   }
 }
 
-=======
->>>>>>> d3ed32dd79b56f472396e03c4def8bd40eef1d3b
 </style>
