@@ -2,7 +2,7 @@
   
   <div class="landing-page">
         <!--  Accessibility Banner (viršuje, po Header) -->
-      <div
+        <div
         class="accessibility-banner"
         role="region"
         aria-label="Accessibility statement"
@@ -951,7 +951,8 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-  padding: 250px 0 0 calc(min(160px, 10vw));
+  // padding: 250px 0 0 calc(min(160px, 10vw));
+  padding: 0 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
     flex-direction: column;
@@ -2093,6 +2094,8 @@ section {
   box-sizing: border-box;
   position: relative;
   z-index: 5;
+  //nuimti po bannerio
+  margin-top: 250px;
 
   p {
     margin: 0;
@@ -2103,6 +2106,9 @@ section {
     strong {
       font-weight: 600;
     }
+  }
+  @media (max-width: 880px) {
+    margin-top: 0px;
   }
 
   @media (max-width: 768px) {
