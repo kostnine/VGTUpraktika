@@ -281,7 +281,7 @@ import 'vueperslides/dist/vueperslides.css'
                     },
                     {
                       img: "images/downloads/leaflet5NL.png",
-                      download_path: "/downloads/Leaflet-Dutch.pdf",
+                      download_path: "/downloads/Leaflet_Dutch.pdf",
                       text: "downloads.leaflet5DE",
                     },
                     {
@@ -308,6 +308,16 @@ import 'vueperslides/dist/vueperslides.css'
                       img: "images/downloads/leaflet5ES.png",
                       download_path: "/downloads/Leaflet-Spanish.pdf",
                       text: "downloads.leaflet5ES",
+                    },
+                    {
+                      img: "images/downloads/leaflet5LT.png",
+                      download_path: "/downloads/Leaflet_Lithuanian.pdf",
+                      text: "downloads.leaflet5LT",
+                    },
+                    {
+                      img: "images/downloads/leaflet5MT.png",
+                      download_path: "/downloads/Leaflet_Maltese.pdf",
+                      text: "downloads.leaflet5MT",
                     },
                 ],
                 gifs:[

@@ -1,21 +1,72 @@
 <template>
   
   <div class="landing-page">
-        <!--  Accessibility Banner (viršuje, po Header) -->
-        <div
-        class="accessibility-banner"
-        role="region"
-        aria-label="Accessibility statement"
-      >
-        <p v-html="toLocal('accessibility.banner_text')"></p>
-      </div>
+     <!--  Accessibility Banner (viršuje, po Header) -->
+    <div
+      class="accessibility-banner"
+      role="region"
+      aria-label="Accessibility statement"
+    >
+      <p v-html="toLocal('accessibility.banner_text')"></p>
+    </div>
+
     <section class="date" id="smokealarmssavelives">
+    <div class="webinar-banner" role="region" aria-label="Webinar invitation">
+      <div class="icon">
+        <img
+          src="@/assets/images/Fire.png"
+          alt="Fire icon"
+          width="20"
+          height="20"
+        />
+      </div>
+      <div class="text">
+        <p class="title">{{ toLocal('webinar.registration.line1') }}</p>
+        <p>{{ toLocal('webinar.registration.line2') }}</p>
+        <p><strong>{{ toLocal('webinar.registration.line3') }}</strong></p>
+        <p class="register">
+          <a
+            href="https://www.europeanfiresafetyalliance.org/european-fire-safety-week/edition-2025/7-11/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ toLocal('webinar.registration.cta') }}
+          </a>
+        </p>
+      </div>
+    </div>
       <div class="text">
         <h1 class="primary">{{ toLocal("home.european") }}</h1>
         <h1 v-html="toLocal('home.smoke_day')"></h1>
         <h2>{{ toLocal("home.main_date") }}{{ new Date().getFullYear() }}</h2>
         <span class="hashtag">#smokealarmssavelives</span>
         <span class="under-hashtag">{{ toLocal("home.campaign") }}</span>
+        
+        <!-- Mobile webinar banner -->
+        <div class="webinar-banner mobile-only" role="region" aria-label="Webinar invitation">
+          <div class="icon">
+            <img
+              src="@/assets/images/Fire.png"
+              alt="Fire icon"
+              width="18"
+              height="18"
+            />
+          </div>
+          <div class="text">
+            <p class="title">{{ toLocal('webinar.registration.line1') }}</p>
+            <p>{{ toLocal('webinar.registration.line2') }}</p>
+            <p><strong>{{ toLocal('webinar.registration.line3') }}</strong></p>
+            <p class="register">
+              <a
+                href="https://www.europeanfiresafetyalliance.org/european-fire-safety-week/edition-2025/7-11/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ toLocal('webinar.registration.cta') }}
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="illustrations">
         <div class="smoke-detector-container">
@@ -579,10 +630,29 @@ export default {
       window.addEventListener("resize", this.onResize);
     });
     // this.setStep();
+      //  Pridedame globalų fokusavimo stebėjimą
+      document.addEventListener("focusin", this.handleGlobalFocus);
   },
   computed: {
     isMobile() {
       return this.windowWidth < 768;
+    },
+    webinarText() {
+      const webinarData = this.toLocal('webinar.registration');
+      console.log('Webinar data:', webinarData);
+      console.log('Current language:', this.$store.state.lang);
+      
+      // Jei grąžina objektą su line1, line2 ir t.t.
+      if (webinarData && typeof webinarData === 'object' && webinarData.line1) {
+        return webinarData;
+      }
+      // Fallback - jei kažkas negerai, grąžiname anglų kalbos duomenis
+      return {
+        line1: "We invite you to join the webinar",
+        line2: "Full programme & registration:",
+        line3: "on 7 November 2025, from 11:00 to 13:00 CET.",
+        cta: "Register here!"
+      };
     },
   },
   watch: {
@@ -784,6 +854,26 @@ export default {
         }, 500);
       }
     },
+        handleGlobalFocus(e) {
+      // Tikriname, ar fokusas tikras (ne body, ne svg)
+      const el = e.target;
+
+      if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+      // Skrolinam į centrą, bet tik jei elementas matomas
+      const rect = el.getBoundingClientRect();
+      const visible =
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+      if (!visible) {
+        const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+        window.scrollTo({
+          top: elementCenter,
+          behavior: "smooth",
+        });
+      }
+    },
   },
 };
 </script>
@@ -913,7 +1003,7 @@ section {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  @media (max-height: 768px) and( min-width: 1024px) {
+  @media (max-height: 768px) and (min-width: 1024px) {
     height: 130vh;
   }
   @media (max-height: 600px) {
@@ -951,8 +1041,8 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-  // padding: 250px 0 0 calc(min(160px, 10vw));
-  padding: 0 0 0 calc(min(160px, 10vw));
+   padding: 40px 0 0 calc(min(160px, 10vw));
+  //padding: 0 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
     flex-direction: column;
@@ -961,6 +1051,8 @@ section {
     flex: 1;
     height: 100%;
     margin-top: -6rem;
+    /* Add padding-top to prevent overlap with webinar banner */
+    padding-top: clamp(140px, 20vh, 200px);
   }
   @media (max-width: 880px) {
     padding: 0 0 0 calc(min(160px, 10vw));
@@ -971,6 +1063,8 @@ section {
       padding: 0rem;
       margin: 0;
       padding: 0 calc(min(160px, 10vw)) 0 0;
+      /* Reset padding-top for mobile since banner is positioned differently */
+      padding-top: 0;
     }
     h1 {
       font-size: clamp(36px, 6vw, 96px);
@@ -2119,6 +2213,156 @@ section {
     p {
       text-align: left;
       line-height: 1.6;
+    }
+  }
+}
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+.webinar-banner {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0px;
+  position: absolute;
+  top: -50px;
+  left: calc(min(160px, 10vw) + 24px);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: #1E1826;
+  background: none;
+  max-width: 420px;
+  z-index: 10;
+  /* Make banner more responsive to different language text lengths */
+  min-height: 80px;
+  flex-wrap: wrap;
+
+  &.mobile-only {
+    display: none;
+  }
+
+  .icon {
+    display: flex;
+    align-items: baseline;
+    flex-shrink: 0;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    /* Better text wrapping for different languages */
+    word-wrap: break-word;
+    hyphens: auto;
+
+    p {
+      margin: 0 0 2px 0;
+      color: #1E1826;
+      font-weight: 400;
+
+      /* === Pirmoji eilutė (Line 1) — Didesnė ir ryškesnė === */
+      &.title {
+        font-weight: 900; /* Barlow Black (jei įkelta iš Google Fonts) */
+        font-size: 22px;  /* Didesnė už kitas eilutes */
+        color: #483A5B;   /* Pagal Figma */
+        line-height: 1.3;
+        margin-bottom: 6px;
+      }
+
+      /* === Vidurinės eilutės === */
+      strong {
+        font-weight: 700;
+        color: #1E1826;
+      }
+
+      /* === Registracijos nuoroda === */
+      &.register {
+        margin-top: 6px;
+        margin-bottom: 0;
+
+        a {
+          color: #DB5F53;
+          font-weight: 700;
+          text-decoration: underline;
+          transition: color 0.25s;
+          font-size: 16px;
+
+          &:hover {
+            color: #BE544A;
+          }
+        }
+      }
+    }
+  }
+
+  /* === Responsive (Tablet) === */
+  @media (max-width: 1024px) {
+    position: static;
+    margin: 32px 0;
+    padding: 0 24px;
+    max-width: none;
+  }
+
+  /* === Desktop adjustments for better text responsiveness === */
+  @media (min-width: 1025px) {
+    /* Position banner lower on desktop */
+    position: absolute;
+    top: -50px;
+    /* Ensure banner doesn't overlap with main content */
+    max-width: min(420px, 35vw);
+  }
+
+  /* === Mobile Variant === */
+  @media (max-width: 768px) {
+    /* Hide desktop banner */
+    &:not(.mobile-only) {
+      display: none;
+    }
+
+    /* Show mobile banner */
+    &.mobile-only {
+      display: flex;
+      position: static;
+      margin: 16px 0;
+      padding: 0;
+      gap: 8px;
+      max-width: none;
+
+      .text {
+        font-size: 14px;
+
+        p {
+          margin: 0 0 1px 0;
+
+          &.title {
+            font-weight: 900;  /* Extra bold / Black */
+            font-size: 20px;   /* 👈 Padidinta mobiliajame */
+            color: #483A5B;
+            margin-bottom: 3px;
+            line-height: 1.35;
+          }
+
+          &.register {
+            margin-top: 4px;
+          }
+        }
+      }
+
+      .icon img {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }

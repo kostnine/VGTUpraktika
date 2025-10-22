@@ -1,4 +1,61 @@
 {
+  
+  "webinar.registration.line1": {
+    "EN": "We invite you to join the webinar",
+    "ES": "Te invitamos a unirte al webinar",
+    "CZ": "Zveme vás k účasti na webináři",
+    "PL": "Zapraszamy do udziału w webinarium",
+    "EE": "Kutsume teid osalema veebiseminaril",
+    "LV": "Mēs aicinām jūs pievienoties tīmekļa semināram",
+    "HU": "Meghívjuk Önt a webináriumra",
+    "LT": "Kviečiame prisijungti prie internetinio seminaro",
+    "MT": "Nistiednu biex tingħaqad mal-webinar",
+    "IT": "Vi invitiamo a partecipare al webinar",
+    "PT": "Convidamo-lo a juntar-se ao webinar",
+    "FR": "Nous vous invitons à rejoindre le webinaire"
+  },
+  "webinar.registration.line2": {
+    "EN": "Full programme & registration:",
+    "ES": "Programa completo y registro:",
+    "CZ": "Úplný program a registrace:",
+    "PL": "Pełny program i rejestracja:",
+    "EE": "Täielik programm ja registreerimine:",
+    "LV": "Pilna programma un reģistrācija:",
+    "HU": "Teljes program és regisztráció:",
+    "LT": "Pilna programa ir registracija:",
+    "MT": "Programm sħiħ u reġistrazzjoni:",
+    "IT": "Programma completo e registrazione:",
+    "PT": "Programa completo e registo:",
+    "FR": "Programme complet et inscription :"
+  },
+  "webinar.registration.line3": {
+    "EN": "on 7 November 2025, from 11:00 to 13:00 CET.",
+    "ES": "el 7 de noviembre de 2025, de 11:00 a 13:00 CET.",
+    "CZ": "7. listopadu 2025, od 11:00 do 13:00 CET.",
+    "PL": "7 listopada 2025, od 11:00 do 13:00 CET.",
+    "EE": "7. novembril 2025, kell 11:00–13:00 CET.",
+    "LV": "7. novembrī 2025, no 11:00 līdz 13:00 CET.",
+    "HU": "2025. november 7-én, 11:00–13:00 CET között.",
+    "LT": "2025 m. lapkričio 7 d., nuo 11:00 iki 13:00 CET.",
+    "MT": "fis-7 ta' Novembru 2025, minn 11:00 sa 13:00 CET.",
+    "IT": "il 7 novembre 2025, dalle 11:00 alle 13:00 CET.",
+    "PT": "a 7 de novembro de 2025, das 11:00 às 13:00 CET.",
+    "FR": "le 7 novembre 2025, de 11h00 à 13h00 CET."
+  },
+  "webinar.registration.cta": {
+    "EN": "Register here!",
+    "ES": "¡Regístrate aquí!",
+    "CZ": "Registrujte se zde!",
+    "PL": "Zarejestruj się tutaj!",
+    "EE": "Registreeruge siin!",
+    "LV": "Reģistrējieties šeit!",
+    "HU": "Regisztráljon itt!",
+    "LT": "Registruokitės čia!",
+    "MT": "Irreġistra hawn!",
+    "IT": "Registrati qui!",
+    "PT": "Registe-se aqui!",
+    "FR": "Inscrivez-vous ici !"
+  },
   "accessibility.banner_text": {
     "EN": "We are committed to making our website accessible in line with the <span class='semibold'>EU Web Accessibility Directive</span> and the <span class='semibold'>European Accessibility Act.</span> Currently, the site is partially compliant with <span class='semibold'>WCAG 2.2 AA.</span> We are actively working to achieve full compliance.",
     "ES": "Estamos comprometidos a hacer que nuestro sitio web sea accesible de acuerdo con la <span class='semibold'>Directiva de Accesibilidad Web de la UE</span> y la <span class='semibold'>Ley Europea de Accesibilidad.</span> Actualmente, el sitio cumple parcialmente con las <span class='semibold'>WCAG 2.2 AA.</span> Estamos trabajando activamente para lograr el cumplimiento total.",
@@ -6252,6 +6309,34 @@
     "IT": "Foglio illustrativo in italiano",
     "PT": "Folheto em italiano",
     "FR": "D\u00e9pliant en italien"
+  },
+  "downloads.leaflet5LT": {
+    "EN": "Leaflet in Lithuanian",
+    "ES": "Folleto en lituano",
+    "CZ": "Let\u00e1k v litevštin\u011b",
+    "PL": "Ulotka w j\u0119zyku litewskim",
+    "EE": "Infoleht leedu keeles",
+    "LV": "Bukleti lietu valod\u0101",
+    "HU": "Sz\u00f3r\u00f3lap lit\u00e1n nyelven",
+    "LT": "Lankstinukas lietuvi\u0173 kalba",
+    "MT": "Fuljett bil-Litwan",
+    "IT": "Foglio illustrativo in lituano",
+    "PT": "Folheto em lituano",
+    "FR": "D\u00e9pliant en lituanien"
+  },
+  "downloads.leaflet5MT": {
+    "EN": "Leaflet in Maltese",
+    "ES": "Folleto en malt\u00e9s",
+    "CZ": "Let\u00e1k v malt\u0161tin\u011b",
+    "PL": "Ulotka w j\u0119zyku malta\u0144skim",
+    "EE": "Infoleht malta keeles",
+    "LV": "Bukleti maltiešu valod\u0101",
+    "HU": "Sz\u00f3r\u00f3lap m\u00e1ltai nyelven",
+    "LT": "Lankstinukas maltiečių kalba",
+    "MT": "Fuljett bil-Malti",
+    "IT": "Foglio illustrativo in maltese",
+    "PT": "Folheto em malt\u00eas",
+    "FR": "D\u00e9pliant en maltais"
   },
   "home.extraBottomText": {
     "EN": " ",

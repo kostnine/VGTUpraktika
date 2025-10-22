@@ -361,7 +361,7 @@ export default {
       width: 90vw;
       height: 100vw;
     }
-    @media (max-width: 768px) and(min-height: 800px) {
+    @media (max-width: 768px) and (min-height: 800px) {
       top: 25%;
     }
     @media (max-height: 1000px) {
