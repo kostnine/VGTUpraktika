@@ -21,3 +21,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
