@@ -7,17 +7,17 @@
         <span>{{ toLocal("downloads.read") }}</span>
       </div>
       <!-- Video Section - Testimonials -->
-    <div class="video-section">
+      <div class="video-section">
         <div class="video-wrapper">
-        <div class="video-header">
+          <div class="video-header">
             <span class="testimonials-title">Real voices. Real survival. Real protection Testimonials.</span>
-        </div>
-        <div class="video-container">
-            <vueper-slides
+          </div>
+          <div class="video-container">
+          <vueper-slides
             class="no-shadow testimonials-slider"
             :infinite="false"
             :always-refresh-clones="true"
-            :visible-slides="3.5"
+            :visible-slides="3"
             :slide-multiple="false"
             :bullets="false"
             :arrows="true"
@@ -28,34 +28,32 @@
             fixed-height="320px"
             :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, arrowsOutside: false}, 1280: {visibleSlides: 3, slideRatio: 1/3, arrowsOutside: false}, 768: { visibleSlides: 1, arrowsOutside: false, slideRatio: 1/1 }, 1000: { visibleSlides: 2, arrowsOutside: false, slideRatio: 1/2 } }">
             <vueper-slide 
-                v-for="(video, idx) in testimonialsVideos"
-                :key="`testimonial-${idx}`">
-                <template #content>
+              v-for="(video, idx) in testimonialsVideos"
+              :key="`testimonial-${idx}`">
+              <template #content>
                 <div class="video-item">
-                    <div class="video-frame" v-if="video.type === 'youtube'">
+                  <div class="video-frame" v-if="video.type === 'youtube'">
                     <iframe
-                        :src="video.embed_url"
-                        title="Testimonial video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                      :src="video.embed_url"
+                      title="Testimonial video"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
                     </iframe>
-                    </div>
-                    <div class="video-frame" v-else-if="video.type === 'local'">
+                  </div>
+                  <div class="video-frame" v-else-if="video.type === 'local'">
                     <video controls>
-                        <source :src="getVideoSrc(video)" type="video/mp4">
-                        Your browser does not support the video tag.
+                      <source :src="video.src" type="video/mp4">
+                      Your browser does not support the video tag.
                     </video>
-                    </div>
-                    <span v-if="video.type === 'youtube'" class="video-url">{{ video.url }}</span>
-                    <span v-else class="video-url" style="visibility: hidden;">&nbsp;</span>
+                  </div>
                 </div>
-                </template>
+              </template>
             </vueper-slide>
-            </vueper-slides>
+          </vueper-slides>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
       <div class="game-container">
         <div class="title">
             <span>{{toLocal('info.game-title')}}</span>
@@ -620,23 +618,13 @@ export default {
         },
         {
           type: 'local',
-          src: 'Maria.mp4',
+          src: require('@/assets/videos/downloads/Maria.mp4'),
           title: 'Maria Testimonial'
         },
         {
           type: 'local',
-          src: 'Paul.mp4',
+          src: require('@/assets/videos/downloads/Paul.mp4'),
           title: 'Paul Testimonial'
-        }
-      ],
-      webinarBrochures:[
-        {
-          img: "images/downloads/Asset12.svg",
-          download_path:
-          "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
-          extension: '.pdf',
-          text: "downloads.final_report",
-
         }
       ],
       safetyTips: [
@@ -740,118 +728,7 @@ export default {
           active: false,
         },
       ],
-      gifs:[
-        {
-          id: 1,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/1.gif`,
-        },
-        {
-          id: 2,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/2.gif`,
-        },
-        {
-          id: 3,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/3.gif`,
-        },
-        {
-          id: 4,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/4.gif`,
-        },
-        {
-          id: 5,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/5.gif`,
-        },
-        {
-          id: 6,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/6.gif`,
-        },
-        {
-          id: 7,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/7.gif`,
-        },
-        {
-          id: 8,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/8.gif`,
-        },
-        {
-          id: 9,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/9.gif`,
-        },
-        {
-          id: 10,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/10.gif`,
-        },
-        {
-          id: 11,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/11.gif`,
-        },
-        {
-          id: 12,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/12.gif`,
-        },
-        {
-          id: 13,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/13.gif`,
-        },
-        {
-          id: 14,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/14.gif`,
-        },
-        {
-          id: 15,
-          link: `gifs/${this.$store.state.lang.toUpperCase()}/15.gif`,
-        }
-      ],
-      infoLeaflets:[
-
-      {
-          img: "images/downloads/leaflet5EN.png",
-          download_path: "/downloads/Leaflet-English.pdf",
-          text: "downloads.leaflet5EN",
-        },
-        {
-          img: "images/downloads/leaflet5CZ.png",
-          download_path: "/downloads/Leaflet-Czech.pdf",
-          text: "downloads.leaflet5CZ",
-        },
-        {
-          img: "images/downloads/leaflet5NL.png",
-          download_path: "/downloads/Leaflet-Dutch.pdf",
-          text: "downloads.leaflet5DE",
-        },
-        {
-          img: "images/downloads/leaflet5LV.png",
-          download_path: "/downloads/Leaflet-Latvian.pdf",
-          text: "downloads.leaflet5LV",
-        },
-        {
-          img: "images/downloads/leaflet5HU.png",
-          download_path: "/downloads/Leaflet-Hungarian.pdf",
-          text: "downloads.leaflet5HU",
-        },
-        {
-          img: "images/downloads/leaflet5FR.png",
-          download_path: "/downloads/Leaflet-French.pdf",
-          text: "downloads.leaflet5FR",
-        },
-        {
-          img: "images/downloads/leaflet5IT.png",
-          download_path: "/downloads/Leaflet-Italian.pdf",
-          text: "downloads.leaflet5IT",
-        },
-        {
-          img: "images/downloads/leaflet5ES.png",
-          download_path: "/downloads/Leaflet-Spanish.pdf",
-          text: "downloads.leaflet5ES",
-        },
-      ],
       footerVideos: [],
-      spainBrochure: {
-        img: "images/downloads/Asset8.png",
-        download_path:
-          "/downloads/tripticos-consejos-detectores-incendios-en-hogar.pdf",
-        text: "downloads.spain_brochure",
-      },
       swiper: null,
       isLoadingNewVideo: false,
       selectedVideoID: 0,
@@ -895,15 +772,10 @@ export default {
       "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"
     );
     document.head.appendChild(velocityScript);
+    document.addEventListener("focusin", this.handleGlobalFocus);
   },
   methods: {
-    getVideoSrc(video) {
-      if (video.type === 'local') {
-        return `/videos/downloads/${video.src}`;
-      }
-      return video.src;
-    },
-    mailto() {
+      mailto() {
       window.location.href = "mailto:info@eurofsa.org";
     },
     downloadLeaflet(leaflet) {
@@ -986,7 +858,27 @@ export default {
         link.href = 'https://rauchmelder-lebensretter.de/120S-escape/?lang=en'
         link.setAttribute('target', '_blank')
         link.click();
-    }
+    },
+            handleGlobalFocus(e) {
+      // Tikriname, ar fokusas tikras (ne body, ne svg)
+      const el = e.target;
+
+      if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+      // Skrolinam į centrą, bet tik jei elementas matomas
+      const rect = el.getBoundingClientRect();
+      const visible =
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+      if (!visible) {
+        const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+        window.scrollTo({
+          top: elementCenter,
+          behavior: "smooth",
+        });
+      }
+    },
   },
 };
 </script>
@@ -994,9 +886,22 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 
+.top-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 191px;
+  @media (max-width: 1080px) {
+    padding-top: 100px;
+  }
+  @media (max-width: 768px) {
+    height: fit-content;
+    padding-top: 20px;
+  }
+}
+
 // Video Section - Testimonials
 .video-section {
-//   margin-bottom: 20px; // Reduced margin to be closer to games
+  margin-bottom: 20px; // Reduced margin to be closer to games
   width: 100vw; // Full viewport width
   margin-left: calc(-50vw + 50%); // Extend to full width
   background: $mainColor; // Full width red background
@@ -1008,9 +913,9 @@ export default {
   }
   
   .video-header {
-    padding-top: 20px;
+    padding: 20px;
     text-align: left;
-    padding-left: clamp(42px, 10vw, 78px);
+    padding-left: 40px;
     
     .testimonials-title {
       color: white;
@@ -1021,7 +926,7 @@ export default {
   }
   
   .video-container {
-    // padding: 0 20px 20px 20px; // Reduced padding to get closer to edges
+    padding: 0 20px 20px 20px; // Reduced padding to get closer to edges
     height: 343px; // Adjusted for larger video height
     position: relative; // For arrow positioning
     
@@ -1044,7 +949,6 @@ export default {
         height: 320px;
         width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         
@@ -1068,21 +972,6 @@ export default {
           @media (max-width: 768px) {
             width: 280px; // Increased mobile size
             height: 158px; // Increased mobile size
-          }
-        }
-        
-        .video-url {
-          color: white;
-          font-size: clamp(12px, 1.4vw, 16px);
-          font-family: $mainFont;
-          margin-top: 8px;
-          text-align: center;
-          word-break: break-all;
-          max-width: 400px;
-          
-          @media (max-width: 768px) {
-            max-width: 280px;
-            font-size: 12px;
           }
         }
       }
@@ -1115,19 +1004,6 @@ export default {
         }
       }
     }
-  }
-}
-
-.top-section {
-  display: flex;
-  flex-direction: column;
-  padding-top: 191px;
-  @media (max-width: 1080px) {
-    padding-top: 100px;
-  }
-  @media (max-width: 768px) {
-    height: fit-content;
-    padding-top: 20px;
   }
 }
 h2 {
@@ -1319,40 +1195,6 @@ h3 {
     font-size: 16px;
   }
 }
-.gifs-container{
-  display: flex;
-  flex-direction: column;
-  background-color: #fbf3ed;
-  box-sizing: border-box;
-  padding: 20px calc(min(160px, 10vw));
-  gap: 26px;
-  .title{
-    width: 100%;
-    font-size: clamp(20px, 1.25vw, 32px);
-    font-size: 32px;
-    line-height: 48px;
-    color: #1E1826; 
-    font-weight: 600;
-  }
-  .inner-container{
-    flex-grow: 1;
-  }
-
-  .section-container{
-    height: 300px;
-    @media(max-width:768px){
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-    }
-  }
-  .single-gif{
-    user-select: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 13px;
-  }
-}
 .bottom-section {
   overflow: hidden;
   position: relative;
@@ -1374,8 +1216,6 @@ h3 {
     left: 0;
     top: 0;
     width: 100%;
-    // max-height: 100%;
-    // transition: top 0.3s;
   }
   video,
   img {
@@ -1437,30 +1277,6 @@ h3 {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 4vw;
-  height: 4vw;
-  max-width: 30px;
-  max-height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.67);
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  margin: auto;
-  cursor: pointer;
-  svg {
-    margin-right: -4px;
-    width: 35%;
-  }
-}
-.play-button {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1482,7 +1298,6 @@ h3 {
   justify-content: center;
   padding: 50px calc(min(160px, 10vw));
   background: #fbf3ed;
-  height: 100vh;
   height: fit-content;
   .why-videos-title {
     font-size: 32px;
@@ -1515,19 +1330,16 @@ h3 {
     border-radius: 20px;
     max-height: 60vw;
     @media (min-width: 1280px) {
-      // width: 60%;
       max-width: initial;
       width: initial;
     }
     @media (max-width: 1280px) {
       max-height: 50vw;
-      // max-width: 55vw;
       max-width: initial;
       width: initial;
     }
     @media (max-width: 1080px) {
       max-height: 40vw;
-      // width: 60%;
       max-width: initial;
       width: initial;
     }
@@ -1595,7 +1407,7 @@ h3 {
 .fade-leave-active {
   transition: opacity 0.3s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
@@ -1603,13 +1415,10 @@ h3 {
 .move-leave-active {
   transition: all 0.3s;
 }
-.move-enter {
-  // transform: translateX(100px);
-}
 .move-leave-to {
   transform: translate(-250px, 100px);
 }
-.move-enter, .move-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.move-enter, .move-leave-to {
   opacity: 1;
 }
 @media (max-width: 768px) {
@@ -1626,202 +1435,6 @@ h3 {
       margin-right: 0;
       min-height: 40vw;
       max-height: 50vw;
-    }
-  }
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.spain-container {
-  width: 100%;
-  display: flex;
-  background-color: #c0554b;
-  box-sizing: border-box;
-  padding: 20px calc(min(160px, 10vw));
-  align-items: start;
-  justify-content: center;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .section-container {
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    &:last-child {
-      max-width: 300px;
-      min-width: 250px;
-    }
-    @media (max-width: 768px) {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &:last-child {
-        max-width: 300px;
-        min-width: 300px;
-      }
-    }
-  }
-  .video-container-with-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 75%;
-    @media (max-width: 1280px) {
-      width: 95%;
-    }
-    @media (max-width: 768px) {
-      margin: 0;
-      width: initial;
-    }
-    .video-title {
-      height: 15%;
-      padding: 20px 0;
-      width: 100%;
-      font-size: clamp(18px, 1.2vw, 24px);
-      line-height: 32px;
-      color: white;
-      font-family: $semiBoldFont;
-      text-align: start;
-      @media (max-width: 1080px) {
-        font-size: clamp(14px, 1.2vw, 18px);
-      }
-      @media (max-width: 768px) {
-        width: 95%;
-        text-align: center;
-      }
-    }
-    .video-url {
-      font-size: 12px;
-      line-height: 24px;
-      color: white;
-      margin-top: 5px;
-      white-space: nowrap;
-      @media (max-width: 768px) {
-        width: 95%;
-        text-align: center;
-        white-space: initial;
-      }
-      @media (max-width: 960px) {
-        white-space: break-spaces;
-        text-align: center;
-        font-size: 14px;
-      }
-    }
-    .video {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      min-height: 180px;
-      border-radius: 10px;
-      @media (min-width: 2300px) {
-        width: 80%;
-      }
-      iframe {
-        border-radius: 10px;
-        min-height: 180px;
-      }
-    }
-  }
-  .brochure-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @media (max-width: 1080px) {
-      margin-left: 5%;
-    }
-    @media (max-width: 768px) {
-      margin: 0;
-      width: 100%;
-    }
-    .title {
-      height: 15%;
-      padding: 20px 0;
-      width: 100%;
-      font-size: clamp(18px, 1.2vw, 24px);
-      line-height: 32px;
-      color: white;
-      font-family: $semiBoldFont;
-      text-align: start;
-      @media (max-width: 1080px) {
-        font-size: 18px;
-        font-size: clamp(16px, 1.2vw, 18px);
-      }
-      @media (max-width: 768px) {
-        width: 98%;
-        text-align: center;
-      }
-    }
-    .leaflet {
-      position: relative;
-      background-position: top;
-      min-height: 200px;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      @media (max-width: 768px) {
-        width: initial;
-      }
-      .bottom-content {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: #1e1826;
-        color: white;
-        padding: 10px;
-        width: 100%;
-      }
-      .leaflet-text {
-        width: 100%;
-      }
-    }
-    span {
-      font-size: 16px;
-    }
-  }
-  .title-container {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-    @media (max-width: 1080px) {
-      width: 40%;
-      margin: auto 0;
-    }
-    @media (max-width: 768px) {
-      width: 100%;
-      text-align: center;
-    }
-    .spain-title {
-      font-size: 32px;
-      line-height: 48px;
-      color: white;
-      width: 100%;
-      height: 100%;
-      margin-right: calc(min(20px, 7vw));
-      @media (max-width: 1080px) {
-        font-size: 24px;
-        margin: 0;
-        margin-right: 8px;
-        line-height: 36px;
-      }
-      @media (max-width: 768px) {
-        margin: 0;
-      }
     }
   }
 }
@@ -1962,10 +1575,10 @@ h3 {
       background-color: #C0554B;
       align-items: center;
       border-radius: 10px;
-      margin-top: -80px;
       @media(max-width: 900px){
-          margin-top: 20px !important;
+          margin-top: 0;
       }
+      margin-top: -80px;
       cursor: pointer;
       color: white;
       transition: 0.25s;
@@ -1975,300 +1588,33 @@ h3 {
   }
 }
 
-
-.information-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #DCE3EF;
-    gap: clamp(36px, 5vh, 60px);
-    padding: 80px calc(min(160px, 10vw));
-    .info-title{
-      font-size: clamp(36px, 2.5vw, 48px);
-    }
-    &.webinar{
-      background-color: #C0554B;
-    }
+.facts-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: #f8f8f8;
+  
+  .share-title {
+    font-size: 24px;
+    font-family: $semiBoldFont;
+    margin-bottom: 20px;
+    text-align: center;
   }
   
-  .spain-container2 {
-    width: 100%;
-    display: flex;
-    background-color: #DCE3EF;
-    box-sizing: border-box;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    &.webinar{
-      background-color: #C0554B;
-      .title-container{
-        color: #ffffff;
-        .spain-title{
-          color: #ffffff;
-        }
-        .title-under{
-          color: #ffffff;
-        }
-      }
-      .video-row{
-        .video-title{
-          color: #ffffff;
-        }
-        .video-url{
-          color: #ffffff;
-        }
-      }
-    }
-    &.webinar{
-      .video-row{
-        align-items: flex-start;
-        .section-container{
-          .title-under{
-            color: #ffffff;
-            width: 100%;
-
-          }
-        }
-      }
-
-      .download{
-        height: 100%;
-        min-height: 180px;
-        display: flex;
-        gap: 12px;
-        flex-direction: column;
-        width: 30%;
-        justify-content: center;
-        @media(max-width: 1280px){
-          width: 50%;
-        }
-        .video-title {
-        height: 15%;
-        width: 100%;
-        font-size: clamp(18px, 1.2vw, 24px);
-        line-height: 32px;
-        color: #1E1826;
-        font-family: $semiBoldFont;
-        text-align: start;
-        color: white;
-        @media (max-width: 1080px) {
-          font-size: clamp(14px, 1.2vw, 18px);
-        }
-        @media (max-width: 768px) {
-          width: 95%;
-          text-align: center;
-        }
-        }
-        @media(max-width: 1000px){
-          width: 50%;
-        }
-        @media(max-width: 768px){
-          width: 100%;
-        }
-        .brochure-container {
-          height: 100%;
-          width: 75%;
-          display: flex;
-          flex-direction: column;
-          @media (max-width: 768px) {
-            margin: 0;
-            width: 100%;
-          }
-          @media(max-width: 1280px){
-            width: 90%
-          }
-          @media(max-width: 1000px){
-            width: 100%;
-          }
-        .title {
-          height: 15%;
-          padding: 20px 0;
-          width: 100%;
-          font-size: clamp(18px, 1.2vw, 24px);
-          line-height: 32px;
-          color: white;
-          font-family: $semiBoldFont;
-          text-align: start;
-          @media (max-width: 1080px) {
-            font-size: 18px;
-            font-size: clamp(16px, 1.2vw, 18px);
-          }
-          @media (max-width: 768px) {
-            width: 98%;
-            text-align: center;
-          }
-        }
-        .leaflet {
-          position: relative;
-          background-position: top;
-          min-height: 180px;
-          width: 100%;
-          border-radius: 10px;
-          overflow: hidden;
-          cursor: pointer;
-          background-repeat: no-repeat;
-          background-size: 100% 100%;
-          @media (max-width: 1000px) {
-            width: 100%;
-            min-height: 400px;
-          }
-          @media(min-width: 1280px){
-            min-height: 285px;
-          }
-          .bottom-content {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background: #1e1826;
-            color: white;
-            padding: 10px;
-            width: 100%;
-          }
-          .leaflet-text {
-            width: 100%;
-          }
-        }
-        span {
-          font-size: 16px;
-        }
-      }
-      }
-    }
-    .section-container {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      width: 30%;
-  
-      @media (max-width: 768px) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    .video-container-with-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      gap: 12px;
-      @media (max-width: 1280px) {
-        width: 95%;
-      }
-      @media (max-width: 768px) {
-        margin: 0;
-        width: 100%;
-      }
-      .video-title {
-        height: 15%;
-        width: 100%;
-        font-size: clamp(18px, 1.2vw, 24px);
-        line-height: 32px;
-        color: #1E1826;
-        font-family: $semiBoldFont;
-        text-align: start;
-        @media (max-width: 1080px) {
-          font-size: clamp(14px, 1.2vw, 18px);
-        }
-        @media (max-width: 768px) {
-          width: 95%;
-          text-align: center;
-        }
-      }
-      .video-url {
-        font-size: clamp(12px, 2.5vw, 16px);
-        line-height: 24px;
-        color: #1E1826;
-        margin-top: 5px;
-        white-space: nowrap;
-        width: 100%;
-        @media (max-width: 768px) {
-          width: 95%;
-          text-align: center;
-          white-space: initial;
-        }
-        @media (max-width: 960px) {
-          white-space: break-spaces;
-          text-align: center;
-          font-size: 14px;
-        }
-      }
-      .video {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        min-height: 180px;
-        border-radius: 10px;
-        @media (min-width: 2300px) {
-          width: 80%;
-        }
-        iframe {
-          border-radius: 10px;
-          min-height: 285px;
-        }
-      }
-    }
-    .title-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 12px;
-      padding: 10px 0;
-      @media (max-width: 1080px) {
-        width: 40%;
-        margin: auto 0;
-      }
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-      .title-under{
-        color: #1E1826;
-        @media(max-width: 768px){
-          text-align: center;
-          width: 100%;
-        }
-      }
-      .spain-title {
-        font-size: clamp(26px, 2.5vw, 32px);
-        font-family: $semiBoldFont;
-        line-height: 48px;
-        color: #1E1826;
-        width: 100%;
-        height: 100%;
-        margin-right: calc(min(20px, 7vw));
-        @media (max-width: 1080px) {
-          font-size: 24px;
-          margin: 0;
-          margin-right: 8px;
-          line-height: 36px;
-        }
-        @media (max-width: 768px) {
-          margin: 0;
-          text-align: center;
-        }
-      }
-    }
-    .video-row{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      gap: clamp(20px, 3vw, 40px);
-      @media(max-width: 768px){
-        flex-direction: column;
-      }
+  button {
+    background: $mainColor;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background: darken($mainColor, 10%);
     }
   }
+}
 </style>

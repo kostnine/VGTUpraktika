@@ -1046,14 +1046,22 @@ section {
   .text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: flex-start;
     flex: 1;
     height: 100%;
-    margin-top: -6rem;
+    margin-top: -7rem;
     /* Add padding-top to prevent overlap with webinar banner */
-    padding-top: clamp(140px, 20vh, 200px);
+    padding-top: clamp(160px, 22vh, 220px);
   }
+  /* === Fix text padding for smaller screen heights === */
+  @media (max-height: 830px) and (min-width: 1025px) {
+    .text {
+      margin-top: -15rem !important;
+      padding-top: clamp(250px, 25vh, 250px) !important;
+    }
+  }
+
   @media (max-width: 880px) {
     padding: 0 0 0 calc(min(160px, 10vw));
     flex-direction: column;
@@ -2189,7 +2197,7 @@ section {
   position: relative;
   z-index: 5;
   //nuimti po bannerio
-  margin-top: 250px;
+  margin-top: clamp(120px, calc(250px + (100vw - 1077px) * (250 - 120) / (1280 - 1077)), 250px);
 
   p {
     margin: 0;
@@ -2232,7 +2240,7 @@ a:focus-visible,
   gap: 0px;
   position: absolute;
   top: -50px;
-  left: calc(min(160px, 10vw) + 24px);
+  left: calc(min(160px, 10vw) + 12px);
   font-family: 'Barlow Semi Condensed', sans-serif;
   color: #1E1826;
   background: none;
@@ -2252,14 +2260,15 @@ a:focus-visible,
     flex-shrink: 0;
 
     img {
-      width: 20px;
-      height: 20px;
+      width: 32px;
+      height: 32px;
       margin-bottom: 2px;
+      transform: translateY(3px); /* Move logo down by 3px */
     }
   }
 
   .text {
-    font-size: 16px;
+    font-size: clamp(16px, 1.8vw, 20px);
     line-height: 1.4;
     font-family: 'Barlow Semi Condensed', sans-serif;
     /* Better text wrapping for different languages */
@@ -2274,7 +2283,7 @@ a:focus-visible,
       /* === Pirmoji eilutė (Line 1) — Didesnė ir ryškesnė === */
       &.title {
         font-weight: 900; /* Barlow Black (jei įkelta iš Google Fonts) */
-        font-size: 22px;  /* Didesnė už kitas eilutes */
+        font-size: clamp(24px, 2.8vw, 30px);  /* Responsive title size */
         color: #483A5B;   /* Pagal Figma */
         line-height: 1.3;
         margin-bottom: 6px;
@@ -2296,7 +2305,7 @@ a:focus-visible,
           font-weight: 700;
           text-decoration: underline;
           transition: color 0.25s;
-          font-size: 16px;
+          font-size: clamp(14px, 1.6vw, 18px);
 
           &:hover {
             color: #BE544A;
@@ -2308,9 +2317,8 @@ a:focus-visible,
 
   /* === Responsive (Tablet) === */
   @media (max-width: 1024px) {
-    position: static;
-    margin: 32px 0;
-    padding: 0 24px;
+    // position: static;
+    margin-top: 24px;
     max-width: none;
   }
 
@@ -2320,11 +2328,19 @@ a:focus-visible,
     position: absolute;
     top: -50px;
     /* Ensure banner doesn't overlap with main content */
-    max-width: min(420px, 35vw);
+    max-width: min(463px, 54vw);
+  }
+
+  /* === Fix for smaller screen heights === */
+  @media (max-height: 830px) and (min-width: 1025px) {
+    position: absolute;
+    top: 10px; /* Move it down from top instead of negative positioning */
+    left: calc(min(160px, 10vw) + 12px);
+    max-width: min(463px, 54vw);
   }
 
   /* === Mobile Variant === */
-  @media (max-width: 768px) {
+  @media (max-width: 880px) {
     /* Hide desktop banner */
     &:not(.mobile-only) {
       display: none;
