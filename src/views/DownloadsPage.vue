@@ -17,7 +17,7 @@
             class="no-shadow testimonials-slider"
             :infinite="false"
             :always-refresh-clones="true"
-            :visible-slides="3.5"
+            :visible-slides="4"
             :slide-multiple="false"
             :bullets="false"
             :arrows="true"
@@ -25,8 +25,8 @@
             :gap="0.5"
             :slide-ratio="1 / 3"
             :dragging-distance="200"
-            fixed-height="320px"
-            :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, arrowsOutside: false}, 1280: {visibleSlides: 3, slideRatio: 1/3, arrowsOutside: false}, 768: { visibleSlides: 1, arrowsOutside: false, slideRatio: 1/1 }, 1000: { visibleSlides: 2, arrowsOutside: false, slideRatio: 1/2 } }">
+            fixed-height="251px"
+            :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, arrowsOutside: true}, 1370: {visibleSlides: 2, slideRatio: 1/3, arrowsOutside: true}, 1275: {visibleSlides: 2, slideRatio: 1/2, arrowsOutside: true}, 1063: {visibleSlides: 1, slideRatio: 1/1, arrowsOutside: true}}">
             <vueper-slide 
                 v-for="(video, idx) in testimonialsVideos"
                 :key="`testimonial-${idx}`">
@@ -42,7 +42,16 @@
                     </iframe>
                     </div>
                     <div class="video-frame" v-else-if="video.type === 'local'">
-                    <video controls>
+                    <div v-if="!playingVideos[idx]" class="video-thumbnail" @click="playThumbnailVideo(idx)">
+                        <img :src="video.thumbnail" :alt="video.title" />
+                        <div class="play-button-overlay">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.9)"/>
+                            <path d="M20 15L35 25L20 35V15Z" fill="#1E1826"/>
+                        </svg>
+                        </div>
+                    </div>
+                    <video v-else controls autoplay>
                         <source :src="getVideoSrc(video)" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -607,8 +616,21 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
+      playingVideos: {},
       testimonialsVideos: [
         {
+          type: 'local',
+          src: 'Maria.mp4',
+          title: 'Maria Testimonial',
+          thumbnail: '/images/thumbnails/maria-thumbnail.png'
+        },
+        {
+          type: 'local',
+          src: 'Paul.mp4',
+          title: 'Paul Testimonial',
+          thumbnail: '/images/thumbnails/paul-thumbnail.png'
+        },
+         {
           type: 'youtube',
           embed_url: 'https://www.youtube.com/embed/ud8W56MXhaA',
           url: 'https://www.youtube.com/watch?v=ud8W56MXhaA&t=1s'
@@ -617,16 +639,6 @@ export default {
           type: 'youtube', 
           embed_url: 'https://www.youtube.com/embed/2_aRXxaUXNU',
           url: 'https://www.youtube.com/watch?v=2_aRXxaUXNU'
-        },
-        {
-          type: 'local',
-          src: 'Maria.mp4',
-          title: 'Maria Testimonial'
-        },
-        {
-          type: 'local',
-          src: 'Paul.mp4',
-          title: 'Paul Testimonial'
         }
       ],
       webinarBrochures:[
@@ -903,6 +915,9 @@ export default {
       }
       return video.src;
     },
+    playThumbnailVideo(index) {
+      this.$set(this.playingVideos, index, true);
+    },
     mailto() {
       window.location.href = "mailto:info@eurofsa.org";
     },
@@ -948,15 +963,27 @@ export default {
       }
     },
     setMainTestingVideo(video) {
+      console.log('setMainTestingVideo called with:', video);
       let currentActive = this.testing_videos.findIndex((el) => el.active);
-      this.testing_videos[currentActive].active = false;
       let selectedVideo = this.testing_videos.findIndex(
         (el) => el.id == video.id
       );
-      this.testing_videos[selectedVideo].active = true;
+      
+      // Use $set to ensure reactivity
+      this.$set(this.testing_videos[currentActive], 'active', false);
+      this.$set(this.testing_videos[selectedVideo], 'active', true);
+      
+      console.log('Updated testing_videos:', this.testing_videos);
+      console.log('Active video should be:', this.activeTestingVideo);
+      
       this.$nextTick(() => {
         setTimeout(() => {
-          this.$refs.testingMainVideo.player.play();
+          console.log('testingMainVideo ref:', this.$refs.testingMainVideo);
+          if (this.$refs.testingMainVideo && this.$refs.testingMainVideo.player) {
+            this.$refs.testingMainVideo.player.play();
+          } else {
+            console.error('testingMainVideo ref or player not found');
+          }
         }, 100);
       });
     },
@@ -1008,40 +1035,42 @@ export default {
   }
   
   .video-header {
-    padding-top: 20px;
+    padding-top: 16px;
     text-align: left;
     padding-left: clamp(42px, 10vw, 78px);
+    padding-bottom: 7px;
     
     .testimonials-title {
       color: white;
       font-size: 20px;
       font-family: $semiBoldFont;
-      font-weight: 600;
+      font-weight: 599;
     }
   }
   
   .video-container {
-    // padding: 0 20px 20px 20px; // Reduced padding to get closer to edges
-    height: 343px; // Adjusted for larger video height
+    height: 290px; // Reduced height from 343px to 280px
     position: relative; // For arrow positioning
+    padding: 0 60px; // Add padding for outside arrows
     
     .testimonials-slider {
-      height: 320px;
+      height: 260px; // Reduced from 320px to 260px
       
       .vueperslide__content-wrapper {
         padding: 0;
-        height: 320px;
+        height: 260px; // Reduced from 320px to 260px
       }
       
       .vueperslide__content {
-        height: 320px;
+        height: 260px; // Reduced from 320px to 260px
         display: flex;
         align-items: center;
         justify-content: center;
       }
       
       .video-item {
-        height: 320px;
+        height: 260px; // Reduced from 320px to 260px
+        padding: 10px; // Added smaller padding to video-item
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1069,6 +1098,35 @@ export default {
             width: 280px; // Increased mobile size
             height: 158px; // Increased mobile size
           }
+          
+          .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            
+            .play-button-overlay {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              transition: all 0.3s ease;
+              
+              &:hover {
+                transform: translate(-50%, -50%) scale(1.1);
+              }
+              
+              svg {
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+              }
+            }
+          }
         }
         
         .video-url {
@@ -1087,7 +1145,7 @@ export default {
         }
       }
       
-      // Custom arrow styles - positioned at screen edges
+      // Custom arrow styles - outside positioning handled by vueperslides
       .vueperslides__arrows .vueperslides__arrow {
         background-color: rgba(255, 255, 255, 0.9);
         color: $mainColor;
@@ -1096,19 +1154,13 @@ export default {
         height: 40px;
         z-index: 10;
         
-        &.vueperslides__arrow--prev {
-          left: 5px; // Even closer to left edge
-        }
-        
-        &.vueperslides__arrow--next {
-          right: 5px; // Even closer to right edge
-        }
-        
         &:hover {
           background-color: white;
         }
         
         svg {
+          color: white;
+               
           @media(max-width: 768px) {
             width: 20px;
           }
