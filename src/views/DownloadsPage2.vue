@@ -662,6 +662,11 @@ export default {
           download_path: "/downloads/CFPA_E_Guideline_No_10_2008_F.pdf",
           text: "downloads.leaflet4",
         },
+        {
+          img: "images/downloads/leaflet5.png",
+          download_path: "/downloads/SmokeAlarmPoster.pdf",
+          text: "downloads.leaflet5",
+        },
       ],
       videoStack: [
         {

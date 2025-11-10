@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <video v-else controls autoplay>
-                        <source :src="getVideoSrc(video)" type="video/mp4">
+                        <source :src="require(`@/assets/videos/landingpage/${video.src}`)" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     </div>
@@ -686,6 +686,11 @@ export default {
           download_path: "/downloads/CFPA_E_Guideline_No_10_2008_F.pdf",
           text: "downloads.leaflet4",
         },
+        {
+          img: "images/downloads/leaflet5.png",
+          download_path: "/downloads/SmokeAlarmPoster.pdf",
+          text: "downloads.leaflet5",
+        },
       ],
       videoStack: [
         {
@@ -909,12 +914,6 @@ export default {
     document.head.appendChild(velocityScript);
   },
   methods: {
-    getVideoSrc(video) {
-      if (video.type === 'local') {
-        return `/videos/downloads/${video.src}`;
-      }
-      return video.src;
-    },
     playThumbnailVideo(index) {
       this.$set(this.playingVideos, index, true);
     },
@@ -1078,8 +1077,8 @@ export default {
         align-items: center;
         
         .video-frame {
-          width: 400px; // Increased from 321px
-          height: 225px; // Increased from 181px
+          width: 320px; // Optimized for video content
+          height: 180px; // 16:9 aspect ratio
           border-radius: 8px;
           overflow: hidden;
           background: #000;
@@ -1091,12 +1090,12 @@ export default {
           }
           
           video {
-            object-fit: cover;
+            object-fit: contain;
           }
           
           @media (max-width: 768px) {
-            width: 280px; // Increased mobile size
-            height: 158px; // Increased mobile size
+            width: 240px; // Mobile 16:9 aspect ratio
+            height: 135px; // Mobile 16:9 aspect ratio
           }
           
           .video-thumbnail {

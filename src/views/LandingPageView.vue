@@ -11,63 +11,14 @@
     </div>
 
     <section class="date" id="smokealarmssavelives">
-    <div class="webinar-banner" role="region" aria-label="Webinar invitation">
-      <div class="icon">
-        <img
-          src="@/assets/images/Fire.png"
-          alt="Fire icon"
-          width="20"
-          height="20"
-        />
-      </div>
-      <div class="text">
-        <p class="title">{{ toLocal('webinar.registration.line1') }}</p>
-        <p>{{ toLocal('webinar.registration.line2') }}</p>
-        <p><strong>{{ toLocal('webinar.registration.line3') }}</strong></p>
-        <p class="register">
-          <a
-            href="https://www.europeanfiresafetyalliance.org/european-fire-safety-week/edition-2025/7-11/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ toLocal('webinar.registration.cta') }}
-          </a>
-        </p>
-      </div>
-    </div>
       <div class="text">
         <h1 class="primary">{{ toLocal("home.european") }}</h1>
         <h1 v-html="toLocal('home.smoke_day')"></h1>
         <h2>{{ toLocal("home.main_date") }}{{ new Date().getFullYear() }}</h2>
         <span class="hashtag">#smokealarmssavelives</span>
         <span class="under-hashtag">{{ toLocal("home.campaign") }}</span>
-        
-        <!-- Mobile webinar banner -->
-        <div class="webinar-banner mobile-only" role="region" aria-label="Webinar invitation">
-          <div class="icon">
-            <img
-              src="@/assets/images/Fire.png"
-              alt="Fire icon"
-              width="18"
-              height="18"
-            />
-          </div>
-          <div class="text">
-            <p class="title">{{ toLocal('webinar.registration.line1') }}</p>
-            <p>{{ toLocal('webinar.registration.line2') }}</p>
-            <p><strong>{{ toLocal('webinar.registration.line3') }}</strong></p>
-            <p class="register">
-              <a
-                href="https://www.europeanfiresafetyalliance.org/european-fire-safety-week/edition-2025/7-11/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ toLocal('webinar.registration.cta') }}
-              </a>
-            </p>
-          </div>
-        </div>
       </div>
+
       <div class="illustrations">
         <div class="smoke-detector-container">
           <img
@@ -1041,7 +992,7 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-   padding: 40px 0 0 calc(min(160px, 10vw));
+   padding: 0 0 0 calc(min(160px, 10vw));
   //padding: 0 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
@@ -1052,13 +1003,13 @@ section {
     height: 100%;
     margin-top: -7rem;
     /* Add padding-top to prevent overlap with webinar banner */
-    padding-top: clamp(160px, 22vh, 220px);
+    padding-top: clamp(80px, 22vh, 5px);
   }
   /* === Fix text padding for smaller screen heights === */
   @media (max-height: 830px) and (min-width: 1025px) {
     .text {
       margin-top: -15rem !important;
-      padding-top: clamp(250px, 25vh, 250px) !important;
+      padding-top: clamp(245px, 25vh, 250px) !important;
     }
   }
 
@@ -1071,8 +1022,8 @@ section {
       padding: 0rem;
       margin: 0;
       padding: 0 calc(min(160px, 10vw)) 0 0;
-      /* Reset padding-top for mobile since banner is positioned differently */
-      padding-top: 0;
+      /* Increased padding-top for mobile to give more breathing room */
+      padding-top: clamp(10px, 15vh, 25px);
     }
     h1 {
       font-size: clamp(36px, 6vw, 96px);

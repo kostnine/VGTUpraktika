@@ -2253,6 +2253,20 @@
     "PT": "Orienta\u00e7\u00f5es da CFPA",
     "FR": "Les instructions de la CFPA"
   },
+  "downloads.leaflet5": {
+    "EN": "EU Smoke Alarm Action Day",
+    "ES": "Día de Acción de Alarmas de Humo de la UE",
+    "CZ": "Den akce kouřových hlásičů EU",
+    "PL": "Europejski Dzień Akcji Alarmów Dymowych",
+    "EE": "EL suitsuanduri tegevuspäev",
+    "LV": "ES dūmu trauksmes darbības diena",
+    "HU": "EU füstérzékelő akciónap",
+    "LT": "ES dūmų signalizacijos veiklos diena",
+    "MT": "Jum tal-Azzjoni tal-Alarm tad-Duħħan tal-UE",
+    "IT": "Giornata d'Azione degli Allarmi Fumo UE",
+    "PT": "Dia de Ação de Alarmes de Fumo da UE",
+    "FR": "Journée d'Action des Alarmes Incendie de l'UE"
+  },
   "downloads.spain_brochure": {
     "EN": "Advice on Smoke Alarms in the Home.",
     "ES": "Consejos sobre detectores de humo en viviendas.",
