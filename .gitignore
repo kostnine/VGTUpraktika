@@ -2,8 +2,13 @@
 node_modules
 /dist
 
-# Public folder with large video files
-/public/videos/
+# Large video files (but allow essential videos in public/videos)
+# Allow Maria.mp4 and Paul.mp4 in public/videos for the website
+# Ignore other large video files
+/src/assets/videos/
+*.mov
+*.avi
+*.mkv
 
 # local env files
 .env.local
@@ -23,8 +28,4 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-*.mp4
-*.mov
-*.avi
-*.mkv
 *.zip
