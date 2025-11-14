@@ -618,12 +618,12 @@ export default {
         },
         {
           type: 'local',
-          src: require('@/assets/videos/landingpage/Maria.mp4'),
+          src: '/videos/Maria.mp4',
           title: 'Maria Testimonial'
         },
         {
           type: 'local',
-          src: require('@/assets/videos/landingpage/Paul.mp4'),
+          src: '/videos/Paul.mp4',
           title: 'Paul Testimonial'
         }
       ],

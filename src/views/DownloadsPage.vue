@@ -620,13 +620,13 @@ export default {
       testimonialsVideos: [
         {
           type: 'local',
-          src: 'Maria.mp4',
+          src: '/videos/Maria.mp4',
           title: 'Maria Testimonial',
           thumbnail: '/images/thumbnails/maria-thumbnail.png'
         },
         {
           type: 'local',
-          src: 'Paul.mp4',
+          src: '/videos/Paul.mp4',
           title: 'Paul Testimonial',
           thumbnail: '/images/thumbnails/paul-thumbnail.png'
         },

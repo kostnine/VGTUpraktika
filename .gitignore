@@ -2,6 +2,8 @@
 node_modules
 /dist
 
+# Public folder with large video files
+/public/videos/
 
 # local env files
 .env.local
