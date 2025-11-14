@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <video v-else controls autoplay>
-                        <source :src="require(`@/assets/videos/landingpage/${video.src}`)" type="video/mp4">
+                        <source :src="video.src" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     </div>
