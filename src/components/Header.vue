@@ -1,51 +1,92 @@
 <template>
-  <div class="header-container">
+  <header class="header-container" role="banner">
     <div class="header-image-container">
-      <router-link class="logo" :to="`/${$store.state.lang}/`"
-        ><img src="@/assets/logo.svg" alt="logo"
-      /></router-link>
+      <router-link
+        class="logo"
+        :to="`/${$store.state.lang}/`"
+        tabindex="0"
+        aria-label="Go to homepage"
+      >
+        <img src="@/assets/logo.svg" alt="Smoke Alarm Day logo" />
+      </router-link>
     </div>
+
+    <!-- Burgeris -->
     <div
       class="burger"
       :class="{ active: isMenuOpen }"
       v-if="windowWidth <= 880"
+      tabindex="0"
+      role="button"
+      aria-label="Toggle menu"
+      :aria-expanded="isMenuOpen"
       @click="isMenuOpen = !isMenuOpen"
+      @keyup.enter="isMenuOpen = !isMenuOpen"
+      @keyup.space="isMenuOpen = !isMenuOpen"
     >
       <span></span><span></span><span></span>
     </div>
+
+    <!-- NAVIGATION -->
     <nav
       class="header-navigation-bar"
+      role="navigation"
+      aria-label="Main navigation"
       :class="{ open: windowWidth <= 880 ? isMenuOpen : true }"
     >
-      <router-link :to="`/${$store.state.lang}/`" class="header-nav-block" :data-text="toLocal('header.home')">
-        {{ toLocal("header.home") }}
-      </router-link>
+      <!-- home -->
+      <router-link
+        :to="`/${$store.state.lang}/`"
+        class="header-nav-block"
+        tabindex="0"
+        :aria-label="`${toLocal('header.home')} - Go to homepage`"
+        >{{ toLocal("header.home") }}</router-link
+      >
+
+      <!-- REGULATIONS -->
       <div class="header-button-with-dropdown">
         <div
           class="header-nav-block dropdown"
+          tabindex="0"
+          role="button"
+          aria-haspopup="true"
+          :aria-expanded="dropdownExtended == 3"
+          :aria-label="`${toLocal('header.regulations')} menu`"
           @click="toggleDropdown(3)"
-          :data-text="toLocal('header.regulations')+ '>>'"
-          :class="{'active': ['lang-regulations-down', 'lang-regulations'].includes($route.name) }"
+          @keyup.enter="toggleDropdown(3)"
+          @keyup.space="toggleDropdown(3)"
+          :class="{
+            active: ['lang-regulations', 'lang-regulations-down'].includes(
+              $route.name
+            ),
+          }"
         >
-          {{ toLocal('header.regulations') }}
+          {{ toLocal("header.regulations") }}
           <img
             :class="dropdownExtended == 3 ? 'flipped' : 'non-flipped'"
             src="@/assets/icons/arrow_down.svg"
-            alt="dropdown"
+            alt=""
+            aria-hidden="true"
           />
         </div>
+
         <transition name="slide">
           <div
             v-if="dropdownExtended == 3"
             class="header-dropdown"
             v-click-outside="closeDropdown"
+            role="menu"
           >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/regulations`"
               class="header-nav-block link-dropdown dd-link"
-              >{{ toLocal('header.extra_europe') }}</router-link
+              >{{ toLocal("header.extra_europe") }}</router-link
             >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/regulationsDownload`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("downloads.more_info") }}</router-link
@@ -53,42 +94,63 @@
           </div>
         </transition>
       </div>
+
+      <!-- SMOKE INFO -->
       <div class="header-button-with-dropdown">
         <div
           class="header-nav-block dropdown"
+          tabindex="0"
+          role="button"
+          aria-haspopup="true"
+          :aria-expanded="dropdownExtended == 1"
+          :aria-label="`${toLocal('header.sm_info')} menu`"
           @click="toggleDropdown(1)"
-          :data-text="toLocal('header.sm_info')+ '>>'"
-          :class="{'active': ['messages', 'lang-facts'].includes($route.name) }"
+          @keyup.enter="toggleDropdown(1)"
+          @keyup.space="toggleDropdown(1)"
+          :class="{
+            active: ['messages', 'lang-facts'].includes($route.name),
+          }"
         >
           {{ toLocal("header.sm_info") }}
           <img
             :class="dropdownExtended == 1 ? 'flipped' : 'non-flipped'"
             src="@/assets/icons/arrow_down.svg"
-            alt="dropdown"
+            alt=""
+            aria-hidden="true"
           />
         </div>
+
         <transition name="slide">
           <div
             v-if="dropdownExtended == 1"
             class="header-dropdown"
             v-click-outside="closeDropdown"
+            role="menu"
           >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/messages`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("home.support") }}</router-link
             >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/facts`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.important_facts") }}</router-link
             >
-              <router-link
+            <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/success`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.success") }}</router-link
             >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/messagesDownload`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("downloads.more_info") }}</router-link
@@ -96,42 +158,68 @@
           </div>
         </transition>
       </div>
+
+      <!-- housholderiai -->
       <div class="header-button-with-dropdown">
         <div
           class="header-nav-block dropdown"
-          :class="{'active': ['lang-maintain', 'lang-types', 'lang-place', 'lang-practices'].includes($route.name) }"
+          tabindex="0"
+          role="button"
+          aria-haspopup="true"
+          :aria-expanded="dropdownExtended == 2"
+          :aria-label="`${toLocal('header.householders')} menu`"
           @click="toggleDropdown(2)"
-          :data-text="toLocal('header.householders')+ '>>'"
+          @keyup.enter="toggleDropdown(2)"
+          @keyup.space="toggleDropdown(2)"
+          :class="{
+            active: [
+              'lang-maintain',
+              'lang-types',
+              'lang-place',
+              'lang-practices',
+            ].includes($route.name),
+          }"
         >
           {{ toLocal("header.householders") }}
           <img
             :class="dropdownExtended == 2 ? 'flipped' : 'non-flipped'"
             src="@/assets/icons/arrow_down.svg"
-            alt="dropdown"
+            alt=""
+            aria-hidden="true"
           />
         </div>
+
         <transition name="slide">
           <div
             v-if="dropdownExtended == 2"
             class="header-dropdown"
             v-click-outside="closeDropdown"
+            role="menu"
           >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/types`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.about") }}</router-link
             >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/place`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.where") }}</router-link
             >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/maintain`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("header.maintain") }}</router-link
             >
             <router-link
+              tabindex="0"
+              role="menuitem"
               :to="`/${$store.state.lang}/practices`"
               class="header-nav-block link-dropdown dd-link"
               >{{ toLocal("downloads.more_info") }}</router-link
@@ -139,45 +227,62 @@
           </div>
         </transition>
       </div>
-      <!-- <router-link
-        :to="`/${$store.state.lang}/facts`"
-        class="header-nav-block"
-        >{{ toLocal("header.important_facts") }}</router-link
-      >
-      <router-link
-        :to="`/${$store.state.lang}/practices`"
-        class="header-nav-block"
-        >{{ toLocal("header.practices") }}</router-link
-      > -->
-      <div class="social-media-buttons bottom-section">
+
+      <!-- soc.media  -->
+      <div class="social-media-buttons" role="list" aria-label="Social media links">
         <img
           src="@/assets/icons/fb_red.svg"
           class="footer-link"
-          :class="{ opened: necessaryOpen }"
+          tabindex="0"
+          role="link"
+          alt="Visit our Facebook page"
           @click="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+          @keyup.enter="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+          @keyup.space="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
         />
         <img
           src="@/assets/icons/ig_red.svg"
           class="footer-link"
-          :class="{ opened: necessaryOpen }"
+          tabindex="0"
+          role="link"
+          alt="Visit our Instagram page"
           @click="openLink('https://www.instagram.com/eusmokealarmday/')"
+          @keyup.enter="openLink('https://www.instagram.com/eusmokealarmday/')"
+          @keyup.space="openLink('https://www.instagram.com/eusmokealarmday/')"
         />
         <img
           src="@/assets/icons/linkin_red.svg"
           class="footer-link"
-          :class="{ opened: necessaryOpen }"
+          tabindex="0"
+          role="link"
+          alt="Visit our LinkedIn page"
           @click="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+          @keyup.enter="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+          @keyup.space="openLink('https://www.linkedin.com/company/eusmokealarmday')"
         />
         <img
           src="@/assets/icons/x_red.svg"
           class="footer-link"
-          :class="{ opened: necessaryOpen }"
+          tabindex="0"
+          role="link"
+          alt="Visit our X (Twitter) page"
           @click="openLink('https://x.com/EuSmokeAlarmDay')"
+          @keyup.enter="openLink('https://x.com/EuSmokeAlarmDay')"
+          @keyup.space="openLink('https://x.com/EuSmokeAlarmDay')"
         />
       </div>
+
+      <!-- Languages -->
       <div
         class="language-selector header-nav-block dropdown"
+        tabindex="0"
+        role="button"
+        aria-haspopup="true"
+        :aria-expanded="isLangExtended"
+        :aria-label="`Current language: ${languages[$store.state.lang]}. Select language`"
         @click="langDropdown"
+        @keyup.enter="langDropdown"
+        @keyup.space="langDropdown"
       >
         {{ languages[$store.state.lang] }}
         <svg
@@ -187,29 +292,38 @@
           height="6"
           viewBox="0 0 12 6"
           fill="none"
+          aria-hidden="true"
         >
           <path d="M1 1L6 5L11 1" stroke="#1E1826" stroke-width="1.5" />
         </svg>
+
         <transition name="slide">
           <div
+            v-if="isLangExtended"
             class="language-dropdown"
             v-click-outside="closeLangDropdown"
-            v-if="isLangExtended"
+            role="menu"
+            aria-label="Language options"
           >
             <span
               class="dropdown-element"
-              :class="{ active: $store.state.lang == language.prefix }"
               v-for="language in dropdownLanguages"
               :key="`lang-${language.id}`"
+              tabindex="0"
+              role="menuitem"
+              :aria-selected="$store.state.lang == language.prefix"
+              :aria-label="`Switch to ${language.name}`"
+              :class="{ active: $store.state.lang == language.prefix }"
               @click="changeLanguage(language.prefix)"
+              @keyup.enter="changeLanguage(language.prefix)"
+              @keyup.space="changeLanguage(language.prefix)"
+              >{{ language.name }}</span
             >
-              {{ language.name }}
-            </span>
           </div>
         </transition>
       </div>
     </nav>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -326,10 +440,21 @@ export default {
       this.isLangExtended = !this.isLangExtended;
       this.dropdownExtended = 0;
     },
-    changeLanguage(lang) {
-      this.$store.state.lang = lang;
-      window.location.href = "/" + lang;
-    },
+      changeLanguage(lang) {
+        this.$store.state.lang = lang;
+        // Get current route path without language parameter
+        let currentPath = this.$route.path;
+        // Remove existing language parameter if present
+        if (currentPath.match(/^\/[A-Z]{2}(\/|$)/)) {
+          currentPath = currentPath.substring(3) || '/';
+        }
+        // Navigate to the same page with new language
+        if (currentPath === '/') {
+          window.location.href = "/" + lang;
+        } else {
+          window.location.href = "/" + lang + currentPath;  //  Preserves current page
+        }
+      },
     closeLangDropdown() {
       this.isLangExtended = false;
     },
@@ -697,5 +822,15 @@ export default {
       transform: scale(1.10);
     }
   }
+}
+/* Fokuso stylius  */
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 </style>

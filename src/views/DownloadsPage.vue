@@ -67,16 +67,26 @@
     </div>
       <div class="game-container">
         <div class="title">
-            <span>{{toLocal('info.game-title')}}</span>
+            <h2>{{toLocal('info.game-title')}}</h2>
         </div>
         <div class="inner-container">
             <div class="desc" v-html="toLocal('info.game-desc')">
             </div>
-            <div class="game-image" @click="goToGame()">
+            <div class="game-image" @click="goToGame()"
+                                @keyup.enter="goToGame()" 
+                    @keyup.space="goToGame()" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Play fire safety game">
                 <img src="@/assets/images/game.png" alt="Video game image" />
             </div>
         </div>
-        <div class="under-button" @click="goToGame()">
+        <div class="under-button" @click="goToGame()"
+                            @keyup.enter="goToGame()" 
+                    @keyup.space="goToGame()" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Play fire safety game">
             <span>{{ toLocal('info.lets-play') }} </span>
             <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 22L12 12L2 2" stroke="white" stroke-width="3"/>
@@ -84,169 +94,8 @@
                 
         </div>
     </div>
-      <div class="information-container webinar">
-            <div class="spain-container2 webinar">
-                <div class="title-container">
-                <span class="spain-title"
-                    >{{ toLocal("downloads.webinar_title") }}</span
-                >
-                </div>
-                <div class="video-row">
-                <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="title-under">
-                      {{toLocal('regulations.watch')}}
-                    </span>
-                    <span class="video-title"
-                        >{{ toLocal("downloads.webinar_title_date") }}:</span
-                    >
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
-                    >
-                    </div>
-                </div>
-                <!-- <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="title-under">
-                      {{toLocal('regulations.watch')}}
-                    </span>
-                    <span class="video-title"
-                        >{{ toLocal("downloads.webinar_title_date") }}:</span
-                    >
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
-                    >
-                    </div>
-                </div> -->
-                <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
-                  <span class="title-under">
-                    {{toLocal('regulations.download')}}
-                  </span>
-                  <span class="video-title"
-                        >{{ toLocal("downloads.final_report") }}:</span
-                    >
-                  <div class="brochure-container">
-                <div
-                class="leaflet"
-                :style="{
-                    backgroundImage:
-                    'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
-                }"
-                @click="downloadLeaflet(spainBrochure)"
-                >
-                <div class="bottom-content">
-                    <div class="leaflet-text">
-                    {{ toLocal(spainBrochure.text) }}
-                    </div>
-                    <div class="download-btn">
-                    <svg
-                        width="37"
-                        height="37"
-                        viewBox="0 0 37 37"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                        fill="white"
-                        />
-                    </svg>
-                    </div>
-                </div>
-                </div>
-                  </div>
-            </div>
-                </div>
-            </div>
-
-            
-      </div>
-      <!-- <div class="leaflet-container red-bg">
-        <h3 class="color-text">{{ toLocal("downloads.check_leaf") }}</h3>
-        <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
-        <div class="leaflets">
-          <div
-            class="leaflet"
-            :style="{
-              backgroundImage:
-                'url(' + require(`@/assets/${leaflet.img}`) + ')',
-            }"
-            v-for="(leaflet, index) in infoLeaflets"
-            :key="index"
-            @click="downloadLeaflet(leaflet)"
-          >
-            <div class="bottom-content">
-              <div class="leaflet-text">
-                {{ toLocal(leaflet.text) }}
-              </div>
-              <div class="download-btn">
-                <svg
-                  width="37"
-                  height="37"
-                  viewBox="0 0 37 37"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                    fill="white"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="gifs-container">
-        <div class="title-container">
-          <span class="title"
-            >
-            {{toLocal('downloads.gifs')}}
-            </span>
-        </div>
-        <div class="inner-container">
-          <vueper-slides
-          class="no-shadow"
-          :infinite="false"
-          :always-refresh-clones="true"
-          :visible-slides="4"
-          :slide-multiple="false"
-          :bullets="false"
-          :gap="4"
-          :slide-ratio="1 / 4"
-          :dragging-distance="200"
-          fixed-height="350px"
-          :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, fixedHeight: false}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2, fixedHeight: false, }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2, fixedHeight: false } }">
-            <vueper-slide 
-              v-for="gif, idx in gifs"
-              :key="`gif-${idx}`">
-              <template #content>
-                <img class="single-gif" draggable="false" :src="require(`@/assets/gifs/${$store.state.lang}/${gif.id}.gif`)" alt="gif">
-              </template>
-            </vueper-slide>
-          </vueper-slides>
-          </div>
-      </div> -->
       <div class="red-bar">
-        <span>{{ toLocal("downloads.nfpa") }}:</span>
+        <h2>{{ toLocal("downloads.nfpa") }}:</h2>
         <div class="video-container">
           <div class="video" v-for="(video, index) in safetyTips" :key="index">
             <iframe
@@ -274,7 +123,12 @@
             }"
             v-for="(leaflet, index) in leaflets"
             :key="index"
-            @click="downloadLeaflet(leaflet)"
+            @click="downloadLeaflet(leaflet)"                                        
+            @keyup.enter="downloadLeaflet(leaflet)"                  
+            @keyup.space="downloadLeaflet(leaflet)"         
+            tabindex="0"                               
+            role="button"               
+            :aria-label="`Download ${toLocal(leaflet.text)}`"
           >
             <div class="bottom-content">
               <div class="leaflet-text">
@@ -298,86 +152,10 @@
           </div>
         </div>
       </div>
-      <!-- <div class="spain-container">
-        <div class="title-container">
-          <span class="spain-title"
-            >{{ toLocal("downloads.fire_spain") }}:</span
-          >
-        </div>
-        <div class="section-container">
-          <div class="video-container-with-text">
-            <span class="video-title"
-              >{{ toLocal("downloads.video_about") }}:</span
-            >
-            <div class="video">
-              <iframe
-                :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <span class="video-url"
-              >https://www.youtube.com/watch?v=NDShJjSbA1Y</span
-            >
-          </div>
-        </div>
-        <div class="section-container">
-          <div class="video-container-with-text">
-            <span class="video-title">Duerme Tranquilo </span>
-            <div class="video">
-              <iframe
-                :src="`https://www.youtube.com/embed/6g8PWXPgJjA?si=CAZuTuluZEgq-luw`"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <span class="video-url"
-              >https://www.youtube.com/watch?v=6g8PWXPgJjA</span
-            >
-          </div>
-        </div>
-        <div class="section-container">
-          <div class="brochure-container">
-            <span class="title">{{ toLocal("downloads.brochure") }}:</span>
-            <div
-              class="leaflet"
-              :style="{
-                backgroundImage:
-                  'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
-              }"
-              @click="downloadLeaflet(spainBrochure)"
-            >
-              <div class="bottom-content">
-                <div class="leaflet-text">
-                  {{ toLocal(spainBrochure.text) }}
-                </div>
-                <div class="download-btn">
-                  <svg
-                    width="37"
-                    height="37"
-                    viewBox="0 0 37 37"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <div class="why-videos">
-        <span class="why-videos-title">{{
+        <h2 class="why-videos-title">{{
           toLocal("downloads.why_installing")
-        }}</span>
+        }}</h2>
         <span class="why-videos-subTitle">{{
           toLocal("downloads.videos_ireland")
         }}</span>
@@ -431,6 +209,11 @@
                 :key="video.id"
                 alt=""
                 @click="setMainMessageVideo(video, index)"
+                @keyup.enter="setMainMessageVideo(video, index)"
+                @keyup.space="setMainMessageVideo(video, index)"             
+                tabindex="0"              
+                role="button"              
+                :aria-label="`Download ${toLocal(video.img)}`"
               />
             </transition>
             <transition name="fade" mode="out-in">
@@ -439,6 +222,11 @@
                 :key="video.id"
                 class="play-button"
                 @click="setMainMessageVideo(video, index)"
+                @keyup.enter="setMainMessageVideo(video, index)"
+                @keyup.space="setMainMessageVideo(video, index)"             
+                tabindex="0"              
+                role="button"              
+                :aria-label="`Download ${toLocal(video.img)}`"
               >
                 <svg
                   width="17"
@@ -451,7 +239,7 @@
                     d="M0.643555 2.84994C0.643555 1.27614 2.37722 0.31895 3.70907 1.1574L15.1553 8.36327C16.4013 9.14766 16.4013 10.9639 15.1553 11.7483L3.70907 18.9542C2.37722 19.7927 0.643555 18.8355 0.643555 17.2617V2.84994Z"
                     fill="#1E1826"
                   />
-                </svg>
+                </svg>      
               </div>
             </transition>
           </div>
@@ -497,6 +285,11 @@
                     :key="video.id"
                     alt=""
                     @click="setMainTestingVideo(video)"
+                  @keyup.enter="setMainTestingVideo(video)"
+                @keyup.space="setMainTestingVideo(video)"             
+                tabindex="0"              
+                role="button"              
+                :aria-label="`Download ${toLocal(video.img)}`"
                   />
                 </transition>
                 <transition name="fade" mode="out-in">
@@ -504,6 +297,11 @@
                     :key="video.id"
                     class="play-button"
                     @click="setMainTestingVideo(video)"
+                @keyup.enter="setMainTestingVideo(video)"
+                @keyup.space="setMainTestingVideo(video)"             
+                tabindex="0"              
+                role="button"              
+                :aria-label="`Download ${toLocal(video.img)}`"
                   >
                     <svg
                       width="17"
@@ -548,9 +346,9 @@
       <div class="red-circle"></div>
       <div class="extra-container">
         <div class="half">
-          <span class="title">{{
+          <h3 class="title">{{
             toLocal("downloads.raising_awareness")
-          }}</span>
+          }}</h3>
           <span class="subtitle">{{ toLocal("downloads.video_french") }}</span>
           <div class="video-container">
             <div class="video">
@@ -566,7 +364,7 @@
           </div>
         </div>
         <div class="half">
-          <span class="title"> {{ toLocal("practices.how_to_install") }}</span>
+          <h3 class="title"> {{ toLocal("practices.how_to_install") }}</h3>
           <span class="subtitle">{{
             toLocal("downloads.video_home_depot")
           }}</span>
@@ -587,7 +385,7 @@
     </div>
     <div class="facts-share">
           <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-          <button @click="mailto">info@eurofsa.org</button>
+          <button type="button" @click="mailto">info@eurofsa.org</button>
     </div>
   </div>
 </template>
@@ -619,6 +417,16 @@ export default {
       playingVideos: {},
       testimonialsVideos: [
         {
+          type: 'youtube',
+          embed_url: 'https://www.youtube.com/embed/ud8W56MXhaA',
+          url: 'https://www.youtube.com/watch?v=ud8W56MXhaA&t=1s'
+        },
+        {
+          type: 'youtube', 
+          embed_url: 'https://www.youtube.com/embed/2_aRXxaUXNU',
+          url: 'https://www.youtube.com/watch?v=2_aRXxaUXNU'
+        },
+        {
           type: 'local',
           src: '/videos/Maria.mp4',
           title: 'Maria Testimonial',
@@ -629,16 +437,6 @@ export default {
           src: '/videos/Paul.mp4',
           title: 'Paul Testimonial',
           thumbnail: '/images/thumbnails/paul-thumbnail.png'
-        },
-         {
-          type: 'youtube',
-          embed_url: 'https://www.youtube.com/embed/ud8W56MXhaA',
-          url: 'https://www.youtube.com/watch?v=ud8W56MXhaA&t=1s'
-        },
-        {
-          type: 'youtube', 
-          embed_url: 'https://www.youtube.com/embed/2_aRXxaUXNU',
-          url: 'https://www.youtube.com/watch?v=2_aRXxaUXNU'
         }
       ],
       webinarBrochures:[
@@ -912,6 +710,10 @@ export default {
       "https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"
     );
     document.head.appendChild(velocityScript);
+    document.addEventListener("focusin", this.handleGlobalFocus);
+  },
+  beforeUnmount() {
+    document.removeEventListener("focusin", this.handleGlobalFocus);
   },
   methods: {
     playThumbnailVideo(index) {
@@ -1012,6 +814,26 @@ export default {
         link.href = 'https://rauchmelder-lebensretter.de/120S-escape/?lang=en'
         link.setAttribute('target', '_blank')
         link.click();
+    },
+    handleGlobalFocus(e) {
+      // Check if focus is real (not body, not svg)
+      const el = e.target;
+
+      if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+      // Scroll to center, but only if element is visible
+      const rect = el.getBoundingClientRect();
+      const visible =
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+      if (!visible) {
+        const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+        window.scrollTo({
+          top: elementCenter,
+          behavior: "smooth",
+        });
+      }
     }
   },
 };
@@ -1442,6 +1264,7 @@ h3 {
 
   &.loading {
     video {
+      opacity: 0.7;
     }
   }
 }
@@ -1655,7 +1478,7 @@ h3 {
   transition: all 0.3s;
 }
 .move-enter {
-  // transform: translateX(100px);
+  opacity: 1;
 }
 .move-leave-to {
   transform: translate(-250px, 100px);
@@ -2322,4 +2145,13 @@ h3 {
       }
     }
   }
+  /* Focus styles for accessibility */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
 </style>

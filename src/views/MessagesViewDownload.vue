@@ -8,137 +8,162 @@
         </div>
         <div class="game-container">
             <div class="title">
-                <span>{{toLocal('info.game-title')}}</span>
+                <h2>{{toLocal('info.game-title')}}</h2>
             </div>
             <div class="inner-container">
                 <div class="desc" v-html="toLocal('info.game-desc')">
                 </div>
-                <div class="game-image" @click="goToGame()">
+                <div 
+                    class="game-image" 
+                    @click="goToGame()" 
+                    @keyup.enter="goToGame()" 
+                    @keyup.space="goToGame()" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Play fire safety game"
+                >
                     <img src="@/assets/images/game.png" alt="Video game image" />
                 </div>
             </div>
-            <div class="under-button" @click="goToGame()">
+            <div 
+                class="under-button" 
+                @click="goToGame()" 
+                @keyup.enter="goToGame()" 
+                @keyup.space="goToGame()" 
+                tabindex="0" 
+                role="button" 
+                aria-label="Play the game"
+            >
                 <span>{{ toLocal('info.lets-play') }} </span>
                 <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 22L12 12L2 2" stroke="white" stroke-width="3"/>
                 </svg>
-                    
             </div>
         </div>
-              <div class="information-container webinar">
+
+        <div class="information-container webinar">
             <div class="spain-container2 webinar">
                 <div class="title-container">
-                <span class="spain-title"
-                    >{{ toLocal("downloads.webinar_title") }}</span
-                >
+                    <h2 class="spain-title">{{ toLocal("downloads.webinar_title") }}</h2>
                 </div>
                 <div class="video-row">
-                <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="title-under">
-                      {{toLocal('regulations.watch')}}
-                    </span>
-                    <span class="video-title"
-                        >{{ toLocal("downloads.webinar_title_date") }}:</span
-                    >
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
+                    <!-- 2025 European Smoke Alarm Day Webinar -->
+                    <div class="section-container">
+                        <div class="video-container-with-text">
+                            <span class="title-under">{{toLocal('regulations.watch')}}</span>
+                            <span class="video-title">2025 European Smoke Alarm Day Webinar:</span>
+                            <div class="video" tabindex="0" role="region" aria-label="Watch 2025 webinar video">
+                                <iframe
+                                    :src="`https://www.youtube.com/embed/6nvdsPeZ4Zs`"
+                                    title="2025 European Smoke Alarm Day Webinar"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                            <span 
+                                class="video-url" 
+                                @click="window.open('https://www.youtube.com/watch?v=6nvdsPeZ4Zs', '_blank')" 
+                                tabindex="0" 
+                                role="link" 
+                                aria-label="Open 2025 webinar on YouTube"
+                                @keyup.enter="window.open('https://www.youtube.com/watch?v=6nvdsPeZ4Zs', '_blank')" 
+                                @keyup.space="window.open('https://www.youtube.com/watch?v=6nvdsPeZ4Zs', '_blank')"
+                            >
+                                https://www.youtube.com/watch?v=6nvdsPeZ4Zs
+                            </span>
+                        </div>
                     </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
-                    >
-                    </div>
-                </div>
-                <!-- <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="title-under">
-                      {{toLocal('regulations.watch')}}
-                    </span>
-                    <span class="video-title"
-                        >{{ toLocal("downloads.webinar_title_date") }}:</span
-                    >
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
-                    >
-                    </div>
-                </div> -->
-                <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
-                  <span class="title-under">
-                    {{toLocal('regulations.download')}}
-                  </span>
-                  <span class="video-title"
-                        >{{ toLocal("downloads.final_report") }}:</span
-                    >
-                  <div class="brochure-container">
-                <div
-                class="leaflet"
-                :style="{
-                    backgroundImage:
-                    'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
-                }"
-                @click="downloadLeaflet(spainBrochure)"
-                >
-                <div class="bottom-content">
-                    <div class="leaflet-text">
-                    {{ toLocal(spainBrochure.text) }}
-                    </div>
-                    <div class="download-btn">
-                    <svg
-                        width="37"
-                        height="37"
-                        viewBox="0 0 37 37"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                        fill="white"
-                        />
-                    </svg>
-                    </div>
-                </div>
-                </div>
-                  </div>
-            </div>
-                </div>
-            </div>
 
-            
-        </div>
-        <div class="information-section">
-            <span class="info-title">{{toLocal('info.check-out')}}</span>
-            <div class="downloadables-container">
-                <div class="downloadable" @click="downloadFile('/downloads/Examples of successful smoke alarm campaigns implemented in various countries.docx', 'Examples of successful smoke alarm campaigns implemented in various countries')" :style="{
-                    backgroundImage:
-                      'url(' + require(`@/assets/images/downloads/Asset10.svg`) + ')',
-                  }">
-                    <div class="downloadable-title">
-                        <div class="text">
-                            {{ toLocal('downloads.examples') }}
+                    <!-- 2024 European Smoke Alarm Day Webinar -->
+                    <div class="section-container">
+                        <div class="video-container-with-text">
+                            <span class="title-under">{{toLocal('regulations.watch')}}</span>
+                            <span class="video-title">{{ toLocal("downloads.webinar_title_date") }}:</span>
+                            <div class="video" tabindex="0" role="region" aria-label="Watch 2024 webinar video">
+                                <iframe
+                                    :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                            <span 
+                                class="video-url" 
+                                @click="window.open('https://www.youtube.com/watch?v=nq1zr_lYkN4', '_blank')" 
+                                tabindex="0" 
+                                role="link" 
+                                aria-label="Open 2024 webinar on YouTube"
+                                @keyup.enter="window.open('https://www.youtube.com/watch?v=nq1zr_lYkN4', '_blank')" 
+                                @keyup.space="window.open('https://www.youtube.com/watch?v=nq1zr_lYkN4', '_blank')"
+                            >
+                                https://www.youtube.com/watch?v=nq1zr_lYkN4
+                            </span>
                         </div>
+                    </div>
+
+                    <div 
+                        class="section-container download" 
+                        v-for="spainBrochure, index in webinarBrochures" 
+                        :key="`brochure-${index}`"
+                    >
+                        <span class="title-under">{{toLocal('regulations.download')}}</span>
+                        <span class="video-title">{{ toLocal("downloads.final_report") }}:</span>
+                        <div class="brochure-container">
+                            <div
+                                class="leaflet"
+                                :style="{ backgroundImage: 'url(' + require(`@/assets/${spainBrochure.img}`) + ')' }"
+                                @click="downloadLeaflet(spainBrochure)"
+                                @keyup.enter="downloadLeaflet(spainBrochure)"
+                                @keyup.space="downloadLeaflet(spainBrochure)"
+                                tabindex="0"
+                                role="button"
+                                :aria-label="`Download ${toLocal(spainBrochure.text)}`"
+                            >
+                                <div class="bottom-content">
+                                    <div class="leaflet-text">
+                                        {{ toLocal(spainBrochure.text) }}
+                                    </div>
+                                    <div class="download-btn">
+                                        <svg
+                                            width="37"
+                                            height="37"
+                                            viewBox="0 0 37 37"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="information-section">
+            <h2 class="info-title">{{toLocal('info.check-out')}}</h2>
+            <div class="downloadables-container">
+                <div 
+                    class="downloadable" 
+                    @click="downloadFile('/downloads/Examples of successful smoke alarm campaigns implemented in various countries.docx', 'Examples of successful smoke alarm campaigns implemented in various countries')" 
+                    @keyup.enter="downloadFile('/downloads/Examples of successful smoke alarm campaigns implemented in various countries.docx', 'Examples of successful smoke alarm campaigns implemented in various countries')" 
+                    @keyup.space="downloadFile('/downloads/Examples of successful smoke alarm campaigns implemented in various countries.docx', 'Examples of successful smoke alarm campaigns implemented in various countries')" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Download Examples of successful smoke alarm campaigns document"
+                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Asset10.svg`) + ')' }"
+                >
+                    <div class="downloadable-title">
+                        <div class="text">{{ toLocal('downloads.examples') }}</div>
                         <div class="icon">
-                            <svg
-                                width="37"
-                                height="37"
-                                viewBox="0 0 37 37"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                >
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
                                     fill="white"
@@ -147,22 +172,111 @@
                         </div>
                     </div>
                 </div>
-                <div class="downloadable" @click="downloadFile('/downloads/Examples of training programmes for fire services to educate the public about smoke alarms.docx', 'Examples of training programmes for fire services to educate the public about smoke alarms')" :style="{
-                    backgroundImage:
-                      'url(' + require(`@/assets/images/downloads/Asset11.svg`) + ')',
-                  }">
+
+                <div 
+                    class="downloadable" 
+                    @click="downloadFile('/downloads/Examples of training programmes for fire services to educate the public about smoke alarms.docx', 'Examples of training programmes for fire services to educate the public about smoke alarms')" 
+                    @keyup.enter="downloadFile('/downloads/Examples of training programmes for fire services to educate the public about smoke alarms.docx', 'Examples of training programmes for fire services to educate the public about smoke alarms')" 
+                    @keyup.space="downloadFile('/downloads/Examples of training programmes for fire services to educate the public about smoke alarms.docx', 'Examples of training programmes for fire services to educate the public about smoke alarms')" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Download Examples of training programmes document"
+                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Asset11.svg`) + ')' }"
+                >
                     <div class="downloadable-title">
-                        <div class="text">
-                            {{ toLocal('downloads.examples') }}
-                        </div>
+                        <div class="text">{{ toLocal('downloads.examples') }}</div>
                         <div class="icon">
-                            <svg
-                                width="37"
-                                height="37"
-                                viewBox="0 0 37 37"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                >
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div 
+                    class="downloadable video-embed"
+                    tabindex="0" 
+                    role="region" 
+                    aria-label="Embedded YouTube video about smoke alarm campaigns"
+                >
+                    <div class="video-iframe-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/NDShJjSbA1Y?start=2"
+                            title="YouTube video player - Smoke Alarm Campaigns"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            tabindex="-1"
+                            aria-hidden="true"
+                        ></iframe>
+                    </div>
+                    <div class="downloadable-title">
+                        <div class="text">{{ toLocal('downloads.fire_spain') }}</div>
+                    </div>
+                </div>
+
+                <div 
+                    class="downloadable video-embed"
+                    tabindex="0" 
+                    role="region" 
+                    aria-label="Embedded YouTube video about fire safety education"
+                >
+                    <div class="video-iframe-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/6g8PWXPgJjA"
+                            title="YouTube video player - Fire Safety Education"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            tabindex="-1"
+                            aria-hidden="true"
+                        ></iframe>
+                    </div>
+                    <div class="downloadable-title">
+                        <div class="text">{{ toLocal('downloads.fire_spain') }}</div>
+                    </div>
+                </div>
+
+                <div 
+                    class="downloadable" 
+                    @click="downloadFile('/downloads/FireKills.pdf', 'Fire kills campaign toolkit')" 
+                    @keyup.enter="downloadFile('/downloads/FireKills.pdf', 'Fire kills campaign toolkit')" 
+                    @keyup.space="downloadFile('/downloads/FireKills.pdf', 'Fire kills campaign toolkit')" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Download Fire kills campaign toolkit document"
+                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Asset10.svg`) + ')' }"
+                >
+                    <div class="downloadable-title">
+                        <div class="text">Fire kills campaign toolkit</div>
+                        <div class="icon">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div 
+                    class="downloadable" 
+                    @click="downloadFile('/downloads/FirePreventionWeekCampaigniFrance.docx', 'Fire Prevention Week Campaign in France')" 
+                    @keyup.enter="downloadFile('/downloads/FirePreventionWeekCampaigniFrance.docx', 'Fire Prevention Week Campaign in France')" 
+                    @keyup.space="downloadFile('/downloads/FirePreventionWeekCampaigniFrance.docx', 'Fire Prevention Week Campaign in France')" 
+                    tabindex="0" 
+                    role="button" 
+                    aria-label="Download Fire Prevention Week Campaign in France document"
+                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Asset11.svg`) + ')' }"
+                >
+                    <div class="downloadable-title">
+                        <div class="text">Fire Prevention Week Campaign in France</div>
+                        <div class="icon">
+                            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
                                     fill="white"
@@ -173,83 +287,82 @@
                 </div>
             </div>
         </div>
+
         <div class="leaflet-section">
             <div class="leaflet-container red-bg">
-            <h3 class="color-text leaflet-title">{{ toLocal("downloads.check_leaf_smoke") }}</h3>
-            <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
-            <div class="leaflets">
-              <div
-                class="leaflet"
-                :style="{
-                  backgroundImage:
-                    'url(' + require(`@/assets/${leaflet.img}`) + ')',
-                }"
-                v-for="(leaflet, index) in infoLeaflets"
-                :key="index"
-                @click="downloadLeaflet(leaflet)"
-              >
-                <div class="bottom-content">
-                  <div class="leaflet-text">
-                    {{ toLocal(leaflet.text) }}
-                  </div>
-                  <div class="download-btn">
-                    <svg
-                      width="37"
-                      height="37"
-                      viewBox="0 0 37 37"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                <h3 class="color-text leaflet-title">{{ toLocal("downloads.check_leaf_smoke") }}</h3>
+                <span class="color-text">{{ toLocal("downloads.download_leaf") }}</span>
+                <div class="leaflets">
+                    <div
+                        class="leaflet"
+                        :style="{ backgroundImage: 'url(' + require(`@/assets/${leaflet.img}`) + ')' }"
+                        v-for="(leaflet, index) in infoLeaflets"
+                        :key="index"
+                        @click="downloadLeaflet(leaflet)"
+                        @keyup.enter="downloadLeaflet(leaflet)"
+                        @keyup.space="downloadLeaflet(leaflet)"
+                        tabindex="0"
+                        role="button"
+                        :aria-label="`Download ${toLocal(leaflet.text)}`"
                     >
-                      <path
-                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
+                        <div class="bottom-content">
+                            <div class="leaflet-text">{{ toLocal(leaflet.text) }}</div>
+                            <div class="download-btn">
+                                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
             </div>
         </div>
+
         <div class="gif-section">
             <div class="gifs-container">
-            <div class="title-container">
-              <span class="title"
-                >
-                {{toLocal('downloads.gifs')}}
-                </span>
+                <div class="title-container">
+                    <h2 class="title">{{toLocal('downloads.gifs')}}</h2>
+                </div>
+                <div class="inner-container">
+                    <vueper-slides
+                        class="no-shadow"
+                        :infinite="false"
+                        :always-refresh-clones="true"
+                        :visible-slides="4"
+                        :slide-multiple="false"
+                        :bullets="false"
+                        :gap="4"
+                        :slide-ratio="1 / 4"
+                        :dragging-distance="200"
+                        fixed-height="350px"
+                        :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, fixedHeight: false}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2, fixedHeight: false, }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2, fixedHeight: false } }"
+                    >
+                        <vueper-slide 
+                            v-for="gif, idx in gifs"
+                            :key="`gif-${idx}`">
+                            <template #content>
+                                <img 
+                                    class="single-gif" 
+                                    draggable="false" 
+                                    :src="require(`@/assets/gifs/${$store.state.lang}/${gif.id}.gif`)" 
+                                    alt="gif"
+                                >
+                            </template>
+                        </vueper-slide>
+                    </vueper-slides>
+                </div>
             </div>
-            <div class="inner-container">
-              <vueper-slides
-              class="no-shadow"
-              :infinite="false"
-              :always-refresh-clones="true"
-              :visible-slides="4"
-              :slide-multiple="false"
-              :bullets="false"
-              :gap="4"
-              :slide-ratio="1 / 4"
-              :dragging-distance="200"
-              fixed-height="350px"
-              :breakpoints="{ 1860: {visibleSlides: 3, slideRatio: 1/3, fixedHeight: false}, 1280: {visibleSlides: 3, slideRatio: 1/4, fixedHeight: false}, 768: { visibleSlides: 1, arrowsOutside: true, slideRatio: 1/1, slideMultiple: 2, fixedHeight: false, }, 1000: { visibleSlides: 2, arrowsOutside: true, slideRatio: 1/2, fixedHeight: false } }">
-                <vueper-slide 
-                  v-for="gif, idx in gifs"
-                  :key="`gif-${idx}`">
-                  <template #content>
-                    <img class="single-gif" draggable="false" :src="require(`@/assets/gifs/${$store.state.lang}/${gif.id}.gif`)" alt="gif">
-                  </template>
-                </vueper-slide>
-              </vueper-slides>
-              </div>
-          </div>
         </div>
+
         <div class="facts-share">
-              <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-              <button @click="mailto">info@eurofsa.org</button>
+            <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+            <button @click="mailto" tabindex="0">info@eurofsa.org</button>
         </div>
     </div>
 </template>
-
 <script>
 import {VueperSlides, VueperSlide} from "vueperslides";
 import 'vueperslides/dist/vueperslides.css'
@@ -391,6 +504,12 @@ import 'vueperslides/dist/vueperslides.css'
             VueperSlides,
             VueperSlide
         },
+        metaInfo() {
+            return {
+                title: this.toLocal('page.title.messages'),
+                titleTemplate: '%s | European Smoke Alarm Day'
+            }
+        },
         methods:{
 
             langString(){
@@ -422,13 +541,61 @@ import 'vueperslides/dist/vueperslides.css'
                 link.href = 'https://rauchmelder-lebensretter.de/120S-escape/?lang=en'
                 link.setAttribute('target', '_blank')
                 link.click();
+            },
+            openVideo(){
+                let link = document.createElement("a");
+                link.href = 'https://youtube.com/watch?time_continue=2&v=NDShJjSbA1Y&embeds_referring_euri=http%3A%2F%2Flocalhost%3A8081%2F&source_ve_path=Mjg2NjY'
+                link.setAttribute('target', '_blank')
+                link.click();
+            },
+            handleGlobalFocus(e) {
+            // Only scroll if user is navigating with keyboard
+            if (!this.$store.state.isKeyboardNavigating) return;
+            
+            // Tikriname, ar fokusas tikras (ne body, ne svg)
+            const el = e.target;
+
+            if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+            // Skrolinam į centrą, bet tik jei elementas matomas
+            const rect = el.getBoundingClientRect();
+            const visible =
+              rect.top >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+            if (!visible) {
+              const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+              window.scrollTo({
+                top: elementCenter,
+                behavior: "smooth",
+              });
             }
-        }
+          },
+        },
+          mounted() {
+          // 👇 Pridedame globalų fokusavimo stebėjimą
+          document.addEventListener("focusin", this.handleGlobalFocus);
+        },
     }
 </script>
 
+
 <style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
+
+/* Reset heading tags to preserve existing styling */
+h2.spain-title,
+h2.info-title,
+h2.title,
+.game-container .title h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
 .top-section {
     display: flex;
     flex-direction: column;
@@ -481,26 +648,44 @@ border-radius: 50%;
 }
 .downloadables-container{
     display: flex;
+    flex-wrap: wrap;
     padding: 60px calc(min(80px, 5vw));
     justify-content: center;
     align-items: center;
-    gap: clamp(32px, 4vw, 80px);
+    gap: clamp(20px, 3vw, 40px);
+    max-width: 100%;
+    
+    .downloadable {
+        flex: 0 0 calc(33.333% - 30px);
+        max-width: calc(33.333% - 30px);
+        
+        @media(max-width: 1024px){
+            flex: 0 0 calc(50% - 30px);
+            max-width: calc(50% - 30px);
+        }
+        
+        @media(max-width: 768px){
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
     @media(max-width: 768px){
       flex-direction: column;
     }
 }
 .downloadable{
-    min-height: 300px;
+    min-height: 220px;
     min-width: 20%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    aspect-ratio: 100/71;
+    aspect-ratio: 16/9;
     position: relative;
     cursor: pointer;
     .downloadable-title{
         width: 100%;
         background-color: #1E1826;
-        height: 20%;
+        height: 60px;
         position: absolute;
         bottom: 0;
         border-radius: 0 0 13px 13px;
@@ -510,11 +695,37 @@ border-radius: 50%;
         align-items: center;
         font-size: clamp(12px, 2.5vw, 16px);
         @media(max-width: 768px){
-          height: 30%;
+          height: 50px;
         }
     }
     @media(max-width: 768px){
-      min-height: 50vw;
+      min-height: 45vw;
+    }
+    // Video embed specific styles
+    &.video-embed {
+        .video-iframe-container {
+            width: 100%;
+            height: calc(100% - 60px);
+            border-radius: 13px 13px 0 0;
+            overflow: hidden;
+            
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 13px 13px 0 0;
+                
+                @media (max-width: 768px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        
+        &:focus-visible {
+            outline: 2px solid #C0554B;
+            border-radius: 13px;
+        }
     }
 }
 
@@ -1038,4 +1249,24 @@ border-radius: 50%;
       }
     }
   }
+  
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Specifiškai Vueper slides rodyklėms */
+:deep(.vueperslides__arrow) {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+:deep(.vueperslides__arrow:focus-visible) {
+  box-shadow: 0 0 0 4px rgba(10, 10, 10, 0.5);
+  transform: scale(1.1);
+}
 </style>

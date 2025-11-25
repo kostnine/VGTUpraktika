@@ -10,6 +10,10 @@
         class="card-close"
         alt="close"
         @click="closeActiveCountry"
+                @keyup.enter="closeActiveCountry"
+        @keyup.space="closeActiveCountry"
+        tabindex="0"
+        aria-label="Close country information"
       />
     </div>
 
@@ -115,11 +119,13 @@ export default {
       this.windowWidth = window.innerWidth;
     },
   },
-  mounted() {
-    this.$nextTick(() => {
-      window.addEventListener("resize", this.onResize);
-    });
-  },
+    mounted() {
+      this.$nextTick(() => {
+        window.addEventListener("resize", this.onResize);
+        const closeBtn = this.$el.querySelector(".card-close");
+        if (closeBtn) closeBtn.focus();
+      });
+    },
 };
 </script>
 <style lang="scss" scoped>

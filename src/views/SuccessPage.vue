@@ -2,14 +2,17 @@
     <div class="facts-page-container">
       <PageHeader
         image="images/4.jpg"
+        
+        alt="Success image"
         title="header.success"
         content="header.saved-lives"
         buttonText="facts.read_more"
         scrollTo="facts-page-main"
       />
-      <div class="facts-page-main" id="facts-page-main">
+      <main class="facts-page-main" id="facts-page-main">
+        <h1 class="sr-only">{{ toLocal('header.success') }}</h1>
         <div class="facts-main-container">
-          <div class="facts-how">
+          <section class="facts-how">
   
             <!-- <div class="how-item">
               <div class="image-container">
@@ -57,8 +60,8 @@
                 >
               </div>
             </div> -->
-          </div>
-          <div class="facts-item">
+          </section>
+          <section class="facts-item">
           <div class="red-bar"></div>
             <div class="item-title">
             </div>
@@ -66,36 +69,37 @@
               <div class="image-container" v-for="n in 3" v-bind:key="n">
                 <img
                   :src="require('@/assets/images/facts/' + n + '.jpg')"
-                  alt="burnt"
+                  alt="The image shows the burnt smoke alarm"
                 />
               </div>
             </div>
-          </div>
-            <div class="facts-banner">
-                <span class="upper">{{ toLocal('stories.examples') }}</span>
-                <span class="lower">{{ toLocal('stories.following') }}</span>
-            </div>
-          <div class="facts-stories">
+          </section>
+            <section class="facts-banner">
+                <h2 class="upper">{{ toLocal('stories.examples') }}</h2>
+                <p class="lower">{{ toLocal('stories.following') }}</p>
+            </section>
+          <section class="facts-stories">
             <div class="stories-container">
-              <div class="story" :class="story.class" v-for="story in storiesStack" :key="story.title">
-                <div class="story-title">{{ toLocal(story.title) }}</div>
+              <article class="story" :class="story.class" v-for="story in storiesStack" :key="story.title">
+                <h3 class="story-title">{{ toLocal(story.title) }}</h3>
                 <div class="story-content">
                   <div class="text">{{ toLocal(story.text_1) }}</div>
                   <div class="text" v-if="story.text_2">
                     {{ toLocal(story.text_2) }}
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
-      <div class="facts-share">
+      </main>
+      <footer class="facts-share">
             <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-            <button @click="mailto">info@eurofsa.org</button>
-      </div>
+            <button type="button" @click="mailto">info@eurofsa.org</button>
+      </footer>
     </div>
   </template>
+  
   
   <script>
   import PageHeader from "@/components/PageHeader.vue";
@@ -107,11 +111,40 @@
     components: {
       PageHeader,
     },
-    methods: {
+     methods: {
       mailto() {
         window.location.href = "mailto:info@eurofsa.org";
       },
+            handleGlobalFocus(e) {
+        // Only scroll if user is navigating with keyboard
+        if (!this.$store.state.isKeyboardNavigating) return;
+        
+        // Tikriname, ar fokusas tikras (ne body, ne svg)
+        const el = e.target;
+
+        if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+        // Skrolinam į centrą, bet tik jei elementas matomas
+        const rect = el.getBoundingClientRect();
+        const visible =
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+        if (!visible) {
+          const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+          window.scrollTo({
+            top: elementCenter,
+            behavior: "smooth",
+          });
+        }
+      },
+
     },
+        mounted() {
+      // 👇 Pridedame globalų fokusavimo stebėjimą
+      document.addEventListener("focusin", this.handleGlobalFocus);
+    },
+
     data(){
       return{
         storiesStack:[
@@ -158,6 +191,43 @@
   </script>
   <style scoped lang="scss">
   @import "@/assets/scss/variables";
+  
+  /* Reset semantic HTML tags to not affect layout */
+  main, section, footer, article {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Reset heading tags to preserve existing styling */
+  h2.upper,
+  h3.story-title,
+  p.lower {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+  }
+  
+  /* Ensure footer.facts-share inherits proper styling */
+  footer.facts-share {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Screen reader only text */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
   .facts-page-container {
     font-family: $mainFont;
     color: #1e1826;
@@ -580,6 +650,16 @@
     background-color: #483A5B;
     color: white;
   }
+
+    /* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
   </style>
   <style lang="scss">
   @import "@/assets/scss/variables";

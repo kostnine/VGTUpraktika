@@ -1,106 +1,169 @@
 <template>
-  <div class="regulations-page-container">
-    <PageHeader
-      image="images/Man_writing.png"
-      title="header.extra_europe"
-      content="reg.check_map"
-      buttonText="facts.read_more"
-      scrollTo="map"
-    />
-    <div class="regulations-page-map" id="map">
-      <div class="regulations-page-text-content" v-if="activeCountry == ''">
-        <span class="regulations-page-text-title">{{
-          toLocal("reg.requirements")
-        }}</span>
-        <span class="regulations-page-text-subInfo">{{
-          toLocal("reg.see_reqs")
-        }}</span>
-        <div class="regulations-page-dict-row">
-          <div class="regulations-page-dict-wrapper">
-            <span class="regulations-page-text-dict"
-              ><div class="colored-block blue"></div>
-              {{ toLocal("reg.multiple") }}</span
-            >
-            <span class="regulations-page-text-dict"
-              ><div class="colored-block orange"></div>
-              {{ toLocal("reg.atleast_one") }}</span
-            >
-            <span class="regulations-page-text-dict"
-              ><div class="colored-block red"></div>
-              {{ toLocal("reg.no_req") }}</span
-            >
+  <div class="regulations-page-container" role="document">
+    <header role="banner">
+      <PageHeader
+        image="images/Man_writing.png"
+        :title="toLocal('header.extra_europe')"
+        :content="toLocal('reg.check_map')"
+        :buttonText="toLocal('facts.read_more')"
+        scrollTo="map"
+        aria-label="Main header"
+      />
+    </header>
+
+    <section 
+      class="regulations-page-map" 
+      aria-labelledby="page-title"
+    >
+      <h1 id="page-title" class="sr-only">{{ toLocal("header.extra_europe") }} - {{ toLocal("reg.requirements") }}</h1>
+      
+      <!-- ==================== PAGRINDINIS TURINYS ==================== -->
+      <section 
+        class="regulations-page-text-content" 
+        v-if="activeCountry == ''" 
+        aria-labelledby="requirements-title"
+        role="region"
+      >
+        <h2 class="regulations-page-text-title" id="requirements-title" tabindex="-1">
+          {{ toLocal("reg.requirements") }}
+        </h2>
+        <span class="regulations-page-text-subInfo">
+          {{ toLocal("reg.see_reqs") }}
+        </span>
+
+        <div 
+          class="regulations-page-dict-row"
+          role="region"
+          aria-label="Regulation indicators"
+        >
+          <div class="regulations-page-dict-wrapper" role="list">
+            <p class="sr-only" role="note">Color indicators: </p>
+            <div class="regulations-legend" role="listitem">
+              <span class="regulations-page-text-dict" role="listitem">
+                <div class="colored-block blue" aria-hidden="true" role="presentation"></div>
+                <span><span class="sr-only">Blue: </span>{{ toLocal("reg.multiple") }}</span>
+              </span>
+              <span class="regulations-page-text-dict" role="listitem">
+                <div class="colored-block orange" aria-hidden="true" role="presentation"></div>
+                <span><span class="sr-only">Orange: </span>{{ toLocal("reg.atleast_one") }}</span>
+              </span>
+              <span class="regulations-page-text-dict" role="listitem">
+                <div class="colored-block red" aria-hidden="true" role="presentation"></div>
+                <span><span class="sr-only">Red: </span>{{ toLocal("reg.no_req") }}</span>
+              </span>
+            </div>
           </div>
         </div>
-        <select
-          class="country-select"
-          @model="this.activeCountry"
-          @change="(e) => setActiveCountry(e.target.value)"
-        >
-          <option hidden disabled value="" selected>
-            {{ toLocal("reg.select") }}
-          </option>
-          <option
-            v-for="(country, key) in this.sorted_countries"
-            :key="key"
-            :value="country"
-          >
-            {{ country }}
-          </option>
-        </select>
 
-        <div class="regulations-information-block">
-          <span class="regulations-information-title"
-            >{{ toLocal("reg.info") }}:</span
+        <!-- Country Selection -->
+        <div role="region" aria-labelledby="country-select-label" class="country-selection-container">
+          <label id="country-select-label" for="country-select" class="sr-only">
+            {{ toLocal('reg.select_country') }}
+          </label>
+          <select
+            id="country-select"
+            class="country-select"
+            v-model="activeCountry"
+            @change="(e) => setActiveCountry(e.target.value)"
+            @keydown.enter.prevent="setActiveCountry(activeCountry)"
+            @keydown.space.prevent="setActiveCountry(activeCountry)"
+            tabindex="0"
+            aria-describedby="country-select-hint"
+            :aria-expanded="!!activeCountry"
+            aria-controls="country-block"
           >
+            <option value="" disabled selected>
+              {{ toLocal("reg.select") }}
+            </option>
+            <option
+              v-for="(country, key) in sorted_countries"
+              :key="key"
+              :value="country"
+            >
+              {{ country }}
+            </option>
+          </select>
+          <span id="country-select-hint" class="sr-only">
+            {{ toLocal('reg.select_country_hint') }}
+          </span>
+          <span v-if="activeCountry" class="sr-only" role="status" aria-live="polite">
+            {{ toLocal('reg.selected_country') }}: {{ activeCountry }}. {{ toLocal('reg.country_selection_instructions') }}
+          </span>
+        </div>
+
+        <!-- Informacinis blokas -->
+        <div class="regulations-information-block">
+          <span class="regulations-information-title">
+            {{ toLocal("reg.info") }}:
+          </span>
           <ul>
             <li>{{ toLocal("reg.extensive") }}</li>
             <li>{{ toLocal("reg.no_south") }}</li>
-            <li>
-              {{ toLocal("reg.consumer") }}
-            </li>
+            <li>{{ toLocal("reg.consumer") }}</li>
           </ul>
         </div>
-      </div>
-      <div
+      </section>
+
+      <!-- ==================== AKTYVI ŠALIS ==================== -->
+      <section
         class="regulations-page-text-content"
         v-else-if="activeCountry != ''"
+        aria-labelledby="country-info-title"
       >
         <CountryTextBlock
-          :country="this.activeCountry"
+          :country="activeCountry"
           :closeCountry="clearActiveCountry"
           id="country-block"
           v-click-outside="clearActiveCountry"
         />
-      </div>
-      <div class="regulations-page-map-content">
+      </section>
+
+      <!-- ==================== ŽEMĖLAPIS ==================== -->
+      <section class="regulations-page-map-content" aria-label="Interactive European map">
         <div>
           <svg
             class="map-svg"
             viewBox="0 100 929 980"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            role="group"
+            aria-label="European map showing smoke alarm regulations by country"
           >
+            <!--  Each country accessible via keyboard -->
             <CountryComponent
-              v-for="(country, country_key) in this.country_data"
+              v-for="(country, country_key) in country_data"
               :key="country_key"
               :country="country"
-              :setActiveCountry="setActiveCountry"
+              :setActiveCountry="setActiveCountry"            
               :activeSelectedCountry="activeCountry"
+              tabindex="-1"  
             />
           </svg>
         </div>
-      </div>
-    </div>
-    <div class="disclaimer-bar">
-      <span class="disclaimer-text">{{ toLocal("reg.E_OE") }}</span>
-    </div>
-    <div class="under-disclaimer">
+      </section>
+    </section>
 
-    </div>
-    <div class="facts-share">
-          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-          <button @click="mailto">info@eurofsa.org</button>
-    </div>
+    <!-- ==================== DISCLAMER ==================== -->
+    <section class="disclaimer-bar" aria-label="Disclaimer information">
+      <span class="disclaimer-text">{{ toLocal("reg.E_OE") }}</span>
+    </section>
+
+    <div class="under-disclaimer"></div>
+
+    <!-- ==================== SHARE BLOKAS ==================== -->
+    <footer class="facts-share" role="contentinfo" aria-label="Contact information">
+      <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+      <button
+        @click="mailto"
+        tabindex="0"
+        role="button"
+        aria-label="Send email to info@eurofsa.org"
+        @keydown.enter.prevent="mailto"
+        @keydown.space.prevent="mailto"
+      >
+        info@eurofsa.org
+      </button>     
+    </footer>
   </div>
 </template>
 
@@ -133,8 +196,19 @@ export default {
       }
     };
   },
-  metaInfo: {
-    title: "Regulations",
+  metaInfo() {
+    return {
+      title: this.toLocal('page.title.regulations'),
+      titleTemplate: '%s | European Smoke Alarm Day',
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+        'aria-live': 'polite',
+        'aria-atomic': 'true'
+      },
+      meta: [
+        { name: 'description', content: this.toLocal('reg.check_map') }
+      ]
+    }
   },
   components: {
     CountryComponent,
@@ -169,11 +243,40 @@ export default {
       this.activeCountry = "";
       document.querySelector("#go-to-top").style.zIndex = "99";
     },
-    scroll(id) {
-      document.getElementById(id).scrollIntoView({
-        behavior: "smooth",
-      });
+    handleCountryFocus(countryName) {
+      // Announce country focus to screen readers
+      const statusElement = document.querySelector('.sr-only[role="status"]');
+      if (statusElement) {
+        statusElement.textContent = `Focused on ${countryName}`;
+      }
     },
+    handleGlobalFocus(e) {
+  // Only scroll if user is navigating with keyboard
+  if (!this.$store.state.isKeyboardNavigating) return;
+  
+  // Tikriname, ar fokusas tikras (ne body, ne svg)
+  const el = e.target;
+
+  if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+  // Skrolinam į centrą, bet tik jei elementas matomas
+  const rect = el.getBoundingClientRect();
+  const visible =
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+  if (!visible) {
+    const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+    window.scrollTo({
+      top: elementCenter,
+      behavior: "smooth",
+    });
+  }
+  },
+  beforeUnmount() {
+  document.removeEventListener("focusin", this.handleGlobalFocus);
+},
+
   },
   mounted() {
     this.sorted_countries = Object.keys(this.country_data).sort((a, b) =>
@@ -182,6 +285,8 @@ export default {
     this.sorted_countries = this.sorted_countries.filter(
       (country) => !country.includes("_")
     );
+
+    document.addEventListener("focusin", this.handleGlobalFocus);
   },
   directives: {
     "click-outside": {
@@ -689,6 +794,34 @@ export default {
   width: 100%;
 }
 
+.map-object:focus-visible {
+  outline: 3px solid #000000ff;
+  outline-offset: 2px;
+  stroke-width: 3;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
 </style>
 <style lang="scss">
 @import "@/assets/scss/variables";

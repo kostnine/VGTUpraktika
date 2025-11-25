@@ -142,7 +142,26 @@ export default {
     //     }
     //   }
     // });
-  },
+      // Padarome video fokusinamu klaviatūra
+  this.$refs.videoPlayer.setAttribute("tabindex", "0");
+  this.$refs.videoPlayer.setAttribute("role", "button");
+  this.$refs.videoPlayer.setAttribute(
+    "aria-label",
+    "Video player, press Enter or Space to play or pause"
+  );
+
+  // Valdom klaviatūrą (Enter / Space)
+  this.$refs.videoPlayer.addEventListener("keyup", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      if (this.player.paused()) {
+        this.player.play();
+      } else {
+        this.player.pause();
+      }
+    }
+  });
+},
+
   beforeDestroy() {
     if (this.player) {
       this.player.dispose();

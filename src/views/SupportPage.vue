@@ -1,6 +1,7 @@
 <template>
   
   <div class="support-container" >
+    <div>
     <section class="message" id="message">
       <div class="content">
         <div class="text">
@@ -8,12 +9,22 @@
 
           <p v-html="toLocal('home.fire_officers')"></p>
           <div class="button-container" v-if="this.windowWidth >= 768">
-            <button @click="$router.push({ path: '/types' })">
+            <button type="button" @click="$router.push({ path: '/types' })"
+              @keyup.enter="$router.push({ path: '/types' })"
+              @keyup.space="$router.push({ path: '/types' })"
+              tabindex="0"
+              role="button"
+               aria-label="Find Out More about Smoke Alarms"
+              >
               {{ toLocal("home.find_more") }}
             </button>
-            <button
+            <button type="button"
               class="secondary"
               @click="$router.push({ path: '/regulations' })"
+              @keyup.enter="$router.push({ path: '/regulations' })"
+              @keyup.space="$router.push({ path: '/regulations' })"
+              tabindex="0"
+              role="button"
             >
               {{ toLocal("home.regulations") }}
             </button>
@@ -36,6 +47,7 @@
               >
                 <video-player
                   :ref="`mainMessageVideo-${index}`"
+                  
                   :options="{
                     autoplay: false,
                     controls: true,
@@ -54,7 +66,7 @@
         </div>
       </div>
       <div class="mobile-carousel-footer" v-if="this.windowWidth <= 768">
-        <button class="mob-carousel-btn left" @click="moveMobileSlide(false)">
+        <button type="button" class="mob-carousel-btn left" @click="moveMobileSlide(false)">
           <svg
             width="8"
             height="14"
@@ -89,7 +101,7 @@
             />
           </div>
         </div>
-        <button class="mob-carousel-btn right" @click="moveMobileSlide(true)">
+        <button type="button" class="mob-carousel-btn right" @click="moveMobileSlide(true)">
           <svg
             width="8"
             height="14"
@@ -131,14 +143,24 @@
               <img
                 :src="require(`@/assets/${video.img}`)"
                 :key="`videoImgKey-${video.id}`"
-                alt=""
+                :alt="`Thumbnail for ${toLocal('home.support_video_' + index)}`"
                 @click="setMainMessageVideo(video, index)"
+                tabindex="0"
+                role="button"
+                :aria-label="`Play video ${index + 1}`"
+                @keyup.enter="setMainMessageVideo(video, index)"
+                @keyup.space="setMainMessageVideo(video, index)"
               />
               <div
                 v-if="windowWidth >= 768"
                 :key="`videoBtnKey-${video.id}`"
                 class="play-button"
                 @click="setMainMessageVideo(video, index)"
+                  tabindex="0"
+                role="button"
+                :aria-label="`Play video ${index + 1}`"
+                @keyup.enter="setMainMessageVideo(video, index)"
+                @keyup.space="setMainMessageVideo(video, index)"
               >
                 <svg
                   width="17"
@@ -170,10 +192,10 @@
         </div>
       </div>
       <div class="button-container" v-if="this.windowWidth < 768">
-        <button @click="$router.push({ path: '/types' })">
+        <button type="button" @click="$router.push({ path: '/types' })">
           {{ toLocal("home.find_more") }}
         </button>
-        <button
+        <button type="button"
           class="secondary"
           @click="$router.push({ path: '/regulations' })"
         >
@@ -181,10 +203,12 @@
         </button>
       </div>
     </section>
-    <div class="facts-share">
-      <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-      <button @click="mailto">info@eurofsa.org</button>
     </div>
+    
+    <footer class="facts-share">
+      <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+      <button type="button" @click="mailto">info@eurofsa.org</button>
+    </footer>
     
   </div>
 </template>
@@ -411,6 +435,12 @@ export default {
         SwiperSlide,
         VideoPlayer,
     },
+    metaInfo() {
+        return {
+            title: this.toLocal('page.title.support'),
+            titleTemplate: '%s | European Smoke Alarm Day'
+        }
+    },
       mounted() {
     this.footerVideos = this.videos.filter((el) => el.id != 6);
     this.mobileVideos = this.videos;
@@ -418,6 +448,8 @@ export default {
       window.addEventListener("resize", this.onResize);
     });
     // this.setStep();
+      //  Pridedame globalų fokusavimo stebėjimą
+  document.addEventListener("focusin", this.handleGlobalFocus);
   },
   computed: {
     isMobile() {
@@ -459,7 +491,9 @@ export default {
   methods: {
     mailto() {
       window.location.href = "mailto:info@eurofsa.org";
+      
     },
+    
 
     downloadFile(file, linktext) {
       let link = document.createElement("a");
@@ -477,33 +511,64 @@ export default {
       link.click();
       link.remove();
     },
-    setMainMessageVideo(video, index) {
-      if (this.isLoadingNewVideo) return;
-      if (this.videoStack[this.videoStack.length - 1].id == video.id) return;
-      this.isLoadingNewVideo = true;
-      let oldVideo = this.mainMessageVideo;
-      this.videoStack.push(video);
-      this.mainMessageVideo = video;
-      video = oldVideo;
-      this.footerVideos[index] = oldVideo;
-      this.pauseAllVideos();
-      this.$nextTick(() => {
-        this.swiper.update();
+setMainMessageVideo(video, index) {
+  if (this.isLoadingNewVideo) return;
+  if (this.videoStack[this.videoStack.length - 1].id == video.id) return;
+
+  this.isLoadingNewVideo = true;
+  let oldVideo = this.mainMessageVideo;
+  this.videoStack.push(video);
+  this.mainMessageVideo = video;
+  video = oldVideo;
+  this.footerVideos[index] = oldVideo;
+  this.pauseAllVideos();
+
+  this.$nextTick(() => {
+    this.swiper.update();
+    this.$nextTick(() => {
+      this.swiper.slideTo(this.videoStack.length - 1, 300);
+      if (this.videoStack.length > 2) {
+        setTimeout(() => {
+          this.swiper.removeSlide(0);
+          this.isLoadingNewVideo = false;
+          this.playVideo();
+
+          // Po video pasikeitimo, fokusas grįžta į pagrindinį playerį
+          this.focusMainPlayer();
+        }, 350);
+      } else {
+        this.isLoadingNewVideo = false;
+        this.playVideo();
+
+        // Fokusas grįžta į pagrindinį playerį
+        this.focusMainPlayer();
+      }
+    });
+  });
+},
+      focusMainPlayer() {
         this.$nextTick(() => {
-          this.swiper.slideTo(this.videoStack.length - 1, 300);
-          if (this.videoStack.length > 2) {
-            setTimeout(() => {
-              this.swiper.removeSlide(0);
-              this.isLoadingNewVideo = false;
-              this.playVideo();
-            }, 350);
-          } else {
-            this.isLoadingNewVideo = false;
-            this.playVideo();
+          // Randame pagrindinį video
+          const mainVideo = this.$refs[
+            "mainMessageVideo-" + (this.videoStack.length - 1)
+          ]?.[0]?.$el?.querySelector("video");
+
+          if (mainVideo) {
+            // Suteikiame fokusą
+            mainVideo.focus();
+
+            // Ir centruojame ekraną į pagrindinį playerį
+            const rect = mainVideo.getBoundingClientRect();
+            const scrollToY =
+              rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+
+            window.scrollTo({
+              top: scrollToY,
+              behavior: "smooth",
+            });
           }
         });
-      });
-    },
+      },    
     pauseAllVideos() {
       this.$nextTick(() => {
         this.videoStack.forEach((slide, index) => {
@@ -643,12 +708,88 @@ export default {
         }, 500);
       }
     },
+      handleGlobalFocus(e) {
+        // Only scroll if user is navigating with keyboard
+        if (!this.$store.state.isKeyboardNavigating) return;
+        
+        const el = e.target;
+        if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+        // Tikriname, ar tai video karuselės elementas
+        const videoEl = el.closest(".footer .video");
+        if (videoEl) {
+          const carousel = this.$refs.inner;
+          if (carousel) {
+            const videoRect = videoEl.getBoundingClientRect();
+            const carouselRect = carousel.getBoundingClientRect();
+
+            // Patikriname ar video yra matomas karuselės lange
+            const isVisibleHorizontally =
+              videoRect.left >= carouselRect.left &&
+              videoRect.right <= carouselRect.right;
+
+            if (!isVisibleHorizontally) {
+              // Skaičiuojame kiek reikia paslinkti
+              const offset =
+                videoEl.offsetLeft -
+                carousel.clientWidth / 2 +
+                videoEl.clientWidth / 2;
+
+              carousel.scrollTo({
+                left: offset,
+                behavior: "smooth",
+              });
+            }
+          }
+
+          // Vertikalus scroll'as (kad karuselė visada matytųsi ekrane)
+          const rect = videoEl.getBoundingClientRect();
+          const elementCenter =
+            rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+
+          window.scrollTo({
+            top: elementCenter,
+            behavior: "smooth",
+          });
+
+          return;
+        }
+
+        // Bendras fallback visiems kitiems fokusams
+        const rect = el.getBoundingClientRect();
+        const visible =
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+        if (!visible) {
+          const elementCenter =
+            rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+          window.scrollTo({
+            top: elementCenter,
+            behavior: "smooth",
+          });
+        }
+      },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_variables.scss";
+
+/* Reset semantic HTML tags to not affect layout */
+main, section, footer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure footer.facts-share inherits proper styling */
+footer.facts-share {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
 .support-container{
     padding-top: 250px;
@@ -709,11 +850,6 @@ export default {
       }
       img {
         cursor: pointer;
-      }
-
-      &.loading {
-        video {
-        }
       }
     }
     h3 {
@@ -1141,5 +1277,45 @@ export default {
       box-shadow: 0px 2px 3px 0px #0000004f;
     }
   }
+}
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Specifiškai Vueper slides rodyklėms */
+:deep(.vueperslides__arrow) {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+:deep(.vueperslides__arrow:focus-visible) {
+  box-shadow: 0 0 0 4px rgba(10, 10, 10, 0.5);
+  transform: scale(1.1);
+}
+.c-video-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.c-video-container::-webkit-scrollbar {
+  display: none;
+}
+.c-video-container .video {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+.c-video-container .video:focus-within {
+  outline: 3px solid #000;
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 </style>

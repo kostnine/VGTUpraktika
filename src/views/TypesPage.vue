@@ -1,5 +1,6 @@
 <template>
   <div class="types-page-container">
+    <!-- ===== HEADERIS ===== -->
     <PageHeader
       image="images/hand_detector.jpg"
       title="header.about"
@@ -8,82 +9,128 @@
       scrollTo="types"
       break="false"
     />
-    <div class="types-page-main-container">
+
+    <!-- ===== PAGRINDINIS TURINYS ===== -->
+    <main class="types-page-main-container" role="main">
       <div class="main-header">
-        <span class="main-header-title" id="types">{{
-          toLocal("types.how_to_choose")
-        }}</span>
+        <h2 class="main-header-title" id="types" >
+          {{ toLocal("types.how_to_choose") }}
+        </h2>
+
+        <!-- Sertifikavimo informacija -->
         <div class="main-header-content centered-row">
-          <span v-html="toLocal('types.certified')"></span>
+          <span v-html="toLocal('types.certified')" ></span>
           <div class="image-container">
-            <img src="@/assets/images/C_sign.svg" alt="c_sign" />
+            <img
+              src="@/assets/images/C_sign.svg"
+              alt="CE certification mark"
+             
+            />
           </div>
         </div>
+
+        <!-- Baterijų tipų aprašymas -->
         <div class="main-header-item">
           <div class="main-content-image">
-            <img src="@/assets/images/battery.jpg" alt="linked" />
+            <img
+              src="@/assets/images/battery.jpg"
+              alt="Smoke detector battery types"
+              
+            />
           </div>
           <div class="main-content-text">
-            <span
+            <p
               class="content-text-block"
               v-html="toLocal('types.battery')"
-            ></span>
-            <span class="content-text-block"
-              >{{ toLocal("types.replacable") }}
-            </span>
-            <span class="content-text-block">{{
-              toLocal("types.lifetime")
-            }}</span>
+    
+            ></p>
+            <p class="content-text-block" >
+              {{ toLocal("types.replacable") }}
+            </p>
+            <p class="content-text-block" >
+              {{ toLocal("types.lifetime") }}
+            </p>
           </div>
         </div>
+
+        <!-- Jungimo būdų aprašymas -->
         <div class="main-header-content">
           <div class="column-div">
-            <span
+            <p
               class="whole-text"
               v-html="toLocal('types.interconnected')"
-            ></span>
-            <div class="separator"></div>
-            <span
+
+            ></p>
+            <div class="separator" aria-hidden="true"></div>
+            <p
               class="whole-text"
               v-html="toLocal('types.wireless_int')"
-            ></span>
+
+            ></p>
           </div>
         </div>
       </div>
-      <div class="main-content">
-        <div class="main-content-red-bar">
-          <img src="@/assets/images/smoke.png" alt="smoke" />
+
+      <!-- 2 PASTRAIPA -->
+      <section
+        class="main-content"
+        aria-label="Smoke detector types information section"
+      >
+        <!-- Dekoratyvinis fonas -->
+        <div class="main-content-red-bar" aria-hidden="true">
+          <img src="@/assets/images/smoke.png" alt="" />
         </div>
+
+        <!-- Turinys su paveikslėliu -->
         <div class="main-content-item first">
           <div class="main-content-image">
-            <img src="@/assets/images/types_smoke_detector.png" alt="linked" />
+            <img
+              src="@/assets/images/types_smoke_detector.png"
+              alt="Interconnected smoke detectors example"
+ 
+            />
           </div>
+
           <div class="main-content-text">
-            <span class="content-text-title">{{
-              toLocal("types.linked")
-            }}</span>
-            <span class="content-text-block">{{
-              toLocal("types.property")
-            }}</span>
-            <span class="content-text-block"
-              >{{ toLocal("types.all_alarms") }}
-            </span>
-            <span class="content-text-block">{{
-              toLocal("types.hardwired")
-            }}</span>
-            <span class="content-text-block">{{
-              toLocal("types.multiple_storey")
-            }}</span>
+            <h3 class="content-text-title">
+              {{ toLocal("types.linked") }}
+            </h3>
+            <p class="content-text-block" >
+              {{ toLocal("types.property") }}
+            </p>
+            <p class="content-text-block" >
+              {{ toLocal("types.all_alarms") }}
+            </p>
+            <p class="content-text-block" >
+              {{ toLocal("types.hardwired") }}
+            </p>
+            <p class="content-text-block">
+              {{ toLocal("types.multiple_storey") }}
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="facts-share">
-          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-        <button @click="mailto">info@eurofsa.org</button>
-    </div>
+      </section>
+    </main>
+
+    <!-- ===== DALINIMOSI SEKCIJA ===== -->
+    <footer class="facts-share" role="contentinfo">
+      <span class="share-title">
+        {{ toLocal("facts.share_story") }}
+      </span>
+
+      <button
+        class="share-button"
+        @click="mailto"
+        tabindex="0"
+        aria-label="Send an email to info@eurofsa.org"
+        @keyup.enter="mailto"
+        @keyup.space="mailto"
+      >
+        info@eurofsa.org
+      </button>
+    </footer>
   </div>
-</template>
+</template> 
 
 <script>
 import PageHeader from "@/components/PageHeader.vue";
@@ -92,21 +139,49 @@ export default {
   components: {
     PageHeader,
   },
-  metaInfo: {
-    title: "About Smoke Alarms",
+  metaInfo() {
+    return {
+      title: this.toLocal('page.title.types'),
+      titleTemplate: '%s | European Smoke Alarm Day'
+    }
   },
   methods: {
     mailto() {
       window.location.href = "mailto:info@eurofsa.org";
     },
-    scroll(id) {
-      document.getElementById(id).scrollIntoView({
-        behavior: "smooth",
-      });
-    },
+    handleGlobalFocus(e) {
+        // Only scroll if user is navigating with keyboard
+        if (!this.$store.state.isKeyboardNavigating) return;
+        
+        // Tikriname, ar fokusas tikras (ne body, ne svg)
+        const el = e.target;
+
+        if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+        // Skrolinam į centrą, bet tik jei elementas matomas
+        const rect = el.getBoundingClientRect();
+        const visible =
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+        if (!visible) {
+          const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+          window.scrollTo({
+            top: elementCenter,
+            behavior: "smooth",
+          });
+        }
+      },
   },
+
+      mounted() {
+      // 👇 Pridedame globalų fokusavimo stebėjimą
+      document.addEventListener("focusin", this.handleGlobalFocus);
+    },
+
 };
 </script>
+
 <style scoped lang="scss">
 @import "@/assets/scss/variables";
 .types-page-container {
@@ -408,4 +483,14 @@ export default {
   font-family: $semiBoldFont;
   font-weight: 500;
 }
+  /* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 </style>

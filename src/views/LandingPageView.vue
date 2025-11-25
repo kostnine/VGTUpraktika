@@ -1,7 +1,7 @@
 <template>
-  
   <div class="landing-page">
-     <!--  Accessibility Banner (viršuje, po Header) -->
+    
+    <!--  Accessibility Banner (viršuje, po Header) -->
     <div
       class="accessibility-banner"
       role="region"
@@ -10,15 +10,14 @@
       <p v-html="toLocal('accessibility.banner_text')"></p>
     </div>
 
-    <section class="date" id="smokealarmssavelives">
+    <section class="date" id="smokealarmssavelives" aria-labelledby="main-heading">
       <div class="text">
-        <h1 class="primary">{{ toLocal("home.european") }}</h1>
-        <h1 v-html="toLocal('home.smoke_day')"></h1>
+        <h1 class="primary" id="main-heading">{{ toLocal("home.european") }} <span v-html="toLocal('home.smoke_day')"></span></h1>
         <h2>{{ toLocal("home.main_date") }}{{ new Date().getFullYear() }}</h2>
-        <span class="hashtag">#smokealarmssavelives</span>
-        <span class="under-hashtag">{{ toLocal("home.campaign") }}</span>
+        <p class="hashtag" role="text" aria-label="Hashtag smokealarmssavelives">#smokealarmssavelives</p>
+        <p class="under-hashtag">{{ toLocal("home.campaign") }}</p>
+      
       </div>
-
       <div class="illustrations">
         <div class="smoke-detector-container">
           <img
@@ -48,15 +47,16 @@
           </div>
         </div>
     </div>
-    <div class="facts">
+    <section class="facts" aria-labelledby="facts-heading">
       <div class="facts-main-header">
-        <span class="header-title" id="facts">{{
+        <h2 class="header-title" id="facts-heading">{{
           toLocal("facts.benefit")
-        }}</span>
+        }}</h2>
         <div class="header-list">
-          <span class="header-list-title">{{ toLocal("facts.Dyk") }}</span>
-          <span class="header-list-item"
-            ><div class="arrow-right">
+          <h3 class="header-list-title">{{ toLocal("facts.Dyk") }}</h3>
+          <ul role="list" aria-label="Key facts about smoke alarms">
+          <li class="header-list-item">
+            <div class="arrow-right" aria-hidden="true">
               <svg
                 width="12"
                 height="23"
@@ -70,10 +70,10 @@
                 />
               </svg>
             </div>
-            {{ toLocal("facts.installing") }}</span
-          >
-          <span class="header-list-item"
-            ><div class="arrow-right">
+            {{ toLocal("facts.installing") }}
+          </li>
+          <li class="header-list-item">
+            <div class="arrow-right" aria-hidden="true">
               <svg
                 width="12"
                 height="23"
@@ -87,10 +87,10 @@
                 />
               </svg>
             </div>
-            {{ toLocal("facts.less_likely") }}</span
-          >
-          <span class="header-list-item"
-            ><div class="arrow-right">
+            {{ toLocal("facts.less_likely") }}
+          </li>
+          <li class="header-list-item">
+            <div class="arrow-right" aria-hidden="true">
               <svg
                 width="12"
                 height="23"
@@ -104,11 +104,12 @@
                 />
               </svg>
             </div>
-            {{ toLocal("facts.deaths") }}</span
-          >
+            {{ toLocal("facts.deaths") }}
+          </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
     <!-- <section class="message" id="message">
       <div class="content">
         <div class="video-container">
@@ -162,13 +163,14 @@
         </div>
       </div>
       <div class="mobile-carousel-footer" v-if="this.windowWidth <= 768">
-        <button class="mob-carousel-btn left" @click="moveMobileSlide(false)">
+        <button class="mob-carousel-btn left" @click="moveMobileSlide(false)" aria-label="Previous video" type="button">
           <svg
             width="8"
             height="14"
             viewBox="0 0 8 14"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path d="M7.5 0.5L1.5 7L7.5 13.5" />
           </svg>
@@ -197,20 +199,21 @@
             />
           </div>
         </div>
-        <button class="mob-carousel-btn right" @click="moveMobileSlide(true)">
+        <button class="mob-carousel-btn right" @click="moveMobileSlide(true)" aria-label="Next video" type="button">
           <svg
             width="8"
             height="14"
             viewBox="0 0 8 14"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path d="M1 13.5L7 7L1 0.499999" />
           </svg>
         </button>
       </div>
       <div class="footer w-carousel" v-else>
-        <div class="c-arrow-left c-arrow" @click="carouselMove(false)">
+        <button class="c-arrow-left c-arrow" @click="carouselMove(false)" aria-label="Previous video" type="button">
           <div class="c-arrow-block"></div>
           <svg
             width="24"
@@ -219,9 +222,15 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M22 13L12 3L2 13" stroke="#483A5B" stroke-width="3" />
+            <path
+              d="M23 7.5L1 7.5M1 7.5L7.5 14M1 7.5L7.5 1"
+              stroke="#C0554B"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
           </svg>
-        </div>
+        </button>
         <div class="carousel">
           <div
             class="c-video-container"
@@ -264,7 +273,7 @@
             </div>
           </div>
         </div>
-        <div class="c-arrow-right c-arrow" @click="carouselMove(true)">
+        <button class="c-arrow-right c-arrow" @click="carouselMove(true)" aria-label="Next video" type="button">
           <svg
             width="24"
             height="15"
@@ -275,7 +284,7 @@
             <path d="M22 13L12 3L2 13" stroke="#483A5B" stroke-width="3" />
           </svg>
           <div class="c-arrow-block"></div>
-        </div>
+        </button>
       </div>
       <div class="button-container" v-if="this.windowWidth < 768">
         <button @click="$router.push({ path: '/types' })">
@@ -289,12 +298,12 @@
         </button>
       </div>
     </section> -->
-    <section class="supporters" id="supporters">
-      <div class="red-bar"></div>
+    <section class="supporters" id="supporters" aria-labelledby="supporters-heading">
+      <div class="red-bar" aria-hidden="true"></div>
       <div class="modal">
         <div class="modal-content">
-          <h3>{{ toLocal("home.supported_by") }}:</h3>
-          <div class="coordinater-container supporter-container">
+          <h2 id="supporters-heading">{{ toLocal("home.supported_by") }}:</h2>
+          <div class="coordinater-container supporter-container" role="list" aria-label="Main supporters">
             <a
               :href="supporter.url"
               target="_blank"
@@ -302,11 +311,13 @@
               class="supporter"
               v-for="(supporter, index) in supporters.slice(0, 2)"
               :key="index"
+              role="listitem"
+              :aria-label="`Visit ${supporter.url_text} website`"
             >
               <div class="image-container">
                 <img
                   :src="require(`@/assets/${supporter.logo}`)"
-                  alt="partner"
+                  :alt="`${supporter.url_text} logo`"
                 />
               </div>
               <div class="website-container">
@@ -317,7 +328,7 @@
             </a>
           </div>
           <h3>{{ toLocal("home.supported_by2") }}:</h3>
-          <div class="supporter-container">
+          <div class="supporter-container" role="list" aria-label="Additional supporters">
             <a
               :href="supporter.url"
               target="_blank"
@@ -325,11 +336,13 @@
               class="supporter"
               v-for="(supporter, index) in supporters.slice(2)"
               :key="index"
+              role="listitem"
+              :aria-label="`Visit ${supporter.url_text} website`"
             >
               <div class="image-container">
                 <img
                   :src="require(`@/assets/${supporter.logo}`)"
-                  alt="partner"
+                  :alt="`${supporter.url_text} logo`"
                 />
               </div>
               <div class="website-container">
@@ -339,7 +352,7 @@
               </div>
             </a>
           </div>
-          <div class="supporter-container extra">
+          <div class="supporter-container extra" role="list" aria-label="Industry partners">
             <a
               :href="supporter.url"
               target="_blank"
@@ -347,10 +360,12 @@
               class="supporter"
               v-for="(supporter, index) in supportersExtra"
               :key="index"
+              role="listitem"
+              :aria-label="`Visit ${supporter.url_text} website`"
               ><div class="image-container">
                 <img
                   :src="require(`@/assets/${supporter.logo}`)"
-                  alt="partner"
+                  :alt="`${supporter.url_text} logo`"
                 />
               </div>
               <div class="website-container">
@@ -364,17 +379,17 @@
       </div>
       <div class="red-circle"></div>
     </section>
-    <section class="information" id="information">
-      <h3>{{ toLocal("home.information") }}</h3>
+    <section class="information" id="information" aria-labelledby="information-heading">
+      <h2 id="information-heading">{{ toLocal("home.information") }}</h2>
       <!-- <span>{{ toLocal("home.click_and_find") }}</span> -->
-      <div class="card-container">
-        <div
+      <div class="card-container" role="list" aria-label="Information categories">
+        <article
           class="card"
           v-for="(card, index) in cards"
           :key="'card-' + index"
-          @click="card.action"
+          role="listitem"
         >
-          <div class="card-content">
+          <button class="card-content" @click="card.action" type="button" :aria-label="`${toLocal(card.key1)} ${toLocal(card.key2)} - ${toLocal('home.aim_support2')}`">
             <span class="text">
               {{ toLocal(card.key1) }}
               <b>{{ toLocal(card.key2) }}</b>
@@ -385,10 +400,10 @@
             <img
               v-if="card.img != ''"
               :src="require(`@/assets/${card.img}`)"
-              alt=""
+              :alt="`${toLocal(card.key1)} ${toLocal(card.key2)} illustration`"
             />
-          </div>
-        </div>
+          </button>
+        </article>
       </div>
       <div class="extra-text">{{toLocal('home.extraBottomText')}}</div>
     </section>
@@ -2333,5 +2348,13 @@ a:focus-visible,
     }
   }
 }
-
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 2px;
+  border-radius: 8px;
+}
 </style>

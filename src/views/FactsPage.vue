@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="facts-page-container">
     <PageHeader
       image="images/smokelarm.png"
@@ -7,55 +7,51 @@
       buttonText="facts.read_more"
       scrollTo="facts-page-main"
     />
-    <div class="facts-page-main" id="facts-page-main">
+    <main class="facts-page-main" id="facts-page-main">
       <div class="facts-main-container">
-        <div class="facts-how">
-          <span class="how-title">{{ toLocal("facts.how") }}</span>
+        <section class="facts-how">
+          <h2 class="how-title">{{ toLocal("facts.how") }}</h2>
 
           <div class="how-container">
             <div class="how-images">
               <div class="image-container">
-                <img src="@/assets/images/facts/foto9.jpg" alt="alarm" />
+                <img src="@/assets/images/facts/foto9.jpg" alt="How smoke alarm works" />
               </div>
               <div class="image-container">
-                <img src="@/assets/images/facts/foto8.jpg" alt="alarm" />
+                <img src="@/assets/images/facts/foto8.jpg" alt="How smoke alarm works" />
               </div>
             </div>
             <div class="how-text">
               <div class="column-text-list">
-                <span class="text-in-list">{{
-                  toLocal("facts.smoke_chamber")
-                }}</span>
-                <span class="text-in-list">{{
-                  toLocal("facts.smoke_enters")
-                }}</span>
+                <span class="text-in-list">{{ toLocal("facts.smoke_chamber") }}</span>
+                <span class="text-in-list">{{ toLocal("facts.smoke_enters") }}</span>
               </div>
-              <div class="column-text-list bullets">
-                <span class="text-with-bullet first"
-                  ><div class="colored-block">1</div>
-                  {{ toLocal("facts.entry") }}</span
-                >
-                <span class="text-with-bullet"
-                  ><div class="colored-block">2</div>
-                  {{ toLocal("facts.insect") }}</span
-                >
-                <span class="text-with-bullet"
-                  ><div class="colored-block">3</div>
-                  {{ toLocal("facts.light") }}</span
-                >
-                <span class="text-with-bullet"
-                  ><div class="colored-block">4</div>
-                  {{ toLocal("facts.receiver") }}</span
-                >
-                <span class="text-with-bullet"
-                  ><div class="colored-block">5</div>
-                  {{ toLocal("facts.emc") }}</span
-                >
-                <span class="text-with-bullet last"
-                  ><div class="colored-block">6</div>
-                  {{ toLocal("facts.light_dia") }}</span
-                >
-              </div>
+              <ol class="column-text-list bullets" aria-label="Smoke alarm components">
+                <li class="text-with-bullet first">
+                  <div class="colored-block" aria-hidden="true">1</div>
+                  {{ toLocal("facts.entry") }}
+                </li>
+                <li class="text-with-bullet">
+                  <div class="colored-block" aria-hidden="true">2</div>
+                  {{ toLocal("facts.insect") }}
+                </li>
+                <li class="text-with-bullet">
+                  <div class="colored-block" aria-hidden="true">3</div>
+                  {{ toLocal("facts.light") }}
+                </li>
+                <li class="text-with-bullet">
+                  <div class="colored-block" aria-hidden="true">4</div>
+                  {{ toLocal("facts.receiver") }}
+                </li>
+                <li class="text-with-bullet">
+                  <div class="colored-block" aria-hidden="true">5</div>
+                  {{ toLocal("facts.emc") }}
+                </li>
+                <li class="text-with-bullet last">
+                  <div class="colored-block" aria-hidden="true">6</div>
+                  {{ toLocal("facts.light_dia") }}
+                </li>
+              </ol>
             </div>
           </div>
           <!-- <div class="how-item">
@@ -63,13 +59,13 @@
               <img src="@/assets/images/facts/foto9.jpg" alt="alarm" />
             </div>
             <div class="column-text-list">
-              <span class="text-in-list"
+              <h3 class="text-in-list"
                 >All optical smoke alarms have a smoke chamber with a light and
-                the receiver.</span
+                the receiver.</h3
               >
-              <span class="text-in-list"
+              <h3 class="text-in-list"
                 >As soon as smoke enters the smoke chamber and diffuses the
-                lights, the smoke alarm will sound.</span
+                lights, the smoke alarm will sound.</h3
               >
             </div>
           </div>
@@ -78,39 +74,39 @@
               <img src="@/assets/images/facts/foto8.jpg" alt="alarm" />
             </div>
             <div class="column-text-list">
-              <span class="text-with-bullet first"
+              <h3 class="text-with-bullet first"
                 ><div class="colored-block">1</div>
-                Smoke entry</span
+                Smoke entry</h3
               >
-              <span class="text-with-bullet"
+              <h3 class="text-with-bullet"
                 ><div class="colored-block">2</div>
-                Insect screen</span
+                Insect screen</h3
               >
-              <span class="text-with-bullet"
+              <h3 class="text-with-bullet"
                 ><div class="colored-block">3</div>
-                Light transmitter</span
+                Light transmitter</h3
               >
-              <span class="text-with-bullet"
+              <h3 class="text-with-bullet"
                 ><div class="colored-block">4</div>
-                Light receiver</span
+                Light receiver</h3
               >
-              <span class="text-with-bullet"
+              <h3 class="text-with-bullet"
                 ><div class="colored-block">5</div>
-                EMC shield</span
+                EMC shield</h3
               >
-              <span class="text-with-bullet last"
+              <h3 class="text-with-bullet last"
                 ><div class="colored-block">6</div>
-                Ambient light diaphragm</span
+                Ambient light diaphragm</h3
               >
             </div>
           </div> -->
-        </div>
+        </section>
       </div>
-    </div>
-    <div class="facts-share">
-          <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-          <button @click="mailto">info@eurofsa.org</button>
-    </div>
+    </main>
+    <footer class="facts-share">
+      <span class="share-title">{{ toLocal("facts.share_story") }}</span>
+      <button type="button" @click="mailto">info@eurofsa.org</button>
+    </footer>
   </div>
 </template>
 
@@ -175,6 +171,41 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/variables";
+
+/* Reset semantic HTML tags to not affect layout */
+main, section, footer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset list elements to preserve existing styling */
+ol.column-text-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.text-with-bullet {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset heading tags to preserve existing styling */
+h2.how-title {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
+/* Ensure footer.facts-share inherits proper styling */
+footer.facts-share {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .facts-page-container {
   font-family: $mainFont;
   color: #1e1826;

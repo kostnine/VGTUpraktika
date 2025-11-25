@@ -1,50 +1,98 @@
 <template>
-  <div class="footer-container">
+  <footer class="footer-container" role="contentinfo">
     <div class="footer-image-container">
       <div class="image-with-under-text">
-        <img src="@/assets/logo.svg" alt="logo" />
+        <img
+          src="@/assets/logo.svg"
+          alt="Smoke Alarm Day logo"
+          aria-label="Smoke Alarm Day logo"
+        />
       </div>
     </div>
+
     <div class="footer-main-container">
       <div class="footer-column-wrapper">
-        <span class="join-us-header">{{ toLocal("home.join_project") }}</span>
+        <!-- Heading -->
+        <span class="join-us-header" >
+          {{ toLocal("home.join_project") }}
+        </span>
         <span class="text">EUROFSA</span>
-        <span class="text email-link"
-          >E-Mail: <a href="mailto:info@eurofsa.org">info@eurofsa.org</a></span
-        >
+
+        <!-- Linkas Emailo -->
+        <span class="text email-link">
+          E-Mail:
+          <a
+            href="mailto:info@eurofsa.org"
+            tabindex="0"
+            aria-label="Send email to info@eurofsa.org"
+          >
+            info@eurofsa.org
+          </a>
+        </span>
+
+        <!-- bottom -->
         <div class="bottom-row">
-        <span class="bottom-section underlogo-date">{{ toLocal("home.main_date") }} {{ new Date().getFullYear() }}</span>
-        <div class="social-media-buttons bottom-section">
-          <img
-            src="@/assets/icons/fb_white.svg"
-            class="footer-link"
-            :class="{ opened: necessaryOpen }"
-            @click="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
-          />
-          <img
-            src="@/assets/icons/ig_white.svg"
-            class="footer-link"
-            :class="{ opened: necessaryOpen }"
-            @click="openLink('https://www.instagram.com/eusmokealarmday/')"
-          />
-          <img
-            src="@/assets/icons/linkin_white.svg"
-            class="footer-link"
-            :class="{ opened: necessaryOpen }"
-            @click="openLink('https://www.linkedin.com/company/eusmokealarmday')"
-          />
-          <img
-            src="@/assets/icons/x_white.svg"
-            class="footer-link"
-            :class="{ opened: necessaryOpen }"
-            @click="openLink('https://x.com/EuSmokeAlarmDay')"
-          />
-        </div>
-        <span class="bottom-rights bottom-section" v-html="toLocal('home.reserved')"></span>
+          <span class="bottom-section underlogo-date" >
+            {{ toLocal("home.main_date") }} {{ new Date().getFullYear() }}
+          </span>
+
+          <!-- SOC. MEDIA-->
+          <div
+            class="social-media-buttons bottom-section"
+            role="navigation"
+            aria-label="Social media links"
+          >
+            <img
+              src="@/assets/icons/fb_white.svg"
+              class="footer-link"
+              tabindex="0"
+              role="link"
+              aria-label="Visit our Facebook page"
+              @click="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+              @keyup.enter="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+              @keyup.space="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
+            />
+            <img
+              src="@/assets/icons/ig_white.svg"
+              class="footer-link"
+              tabindex="0"
+              role="link"
+              aria-label="Visit our Instagram profile"
+              @click="openLink('https://www.instagram.com/eusmokealarmday/')"
+              @keyup.enter="openLink('https://www.instagram.com/eusmokealarmday/')"
+              @keyup.space="openLink('https://www.instagram.com/eusmokealarmday/')"
+            />
+            <img
+              src="@/assets/icons/linkin_white.svg"
+              class="footer-link"
+              tabindex="0"
+              role="link"
+              aria-label="Visit our LinkedIn page"
+              @click="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+              @keyup.enter="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+              @keyup.space="openLink('https://www.linkedin.com/company/eusmokealarmday')"
+            />
+            <img
+              src="@/assets/icons/x_white.svg"
+              class="footer-link"
+              tabindex="0"
+              role="link"
+              aria-label="Visit our X (Twitter) profile"
+              @click="openLink('https://x.com/EuSmokeAlarmDay')"
+              @keyup.enter="openLink('https://x.com/EuSmokeAlarmDay')"
+              @keyup.space="openLink('https://x.com/EuSmokeAlarmDay')"
+            />
+          </div>
+
+          <!-- Copyrightas -->
+          <span
+            class="bottom-rights bottom-section"
+            v-html="toLocal('home.reserved')"
+          ></span>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -229,5 +277,14 @@ export default {
       font-family: $semiBoldFont;
     }
   }
+}
+//fokusavmo styliai
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 </style>

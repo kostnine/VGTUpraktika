@@ -10,12 +10,19 @@
       })
     "
     @click="setSelectedCountry(countryInfo.name)"
+    @keydown.enter.prevent="setSelectedCountry(countryInfo.name)"
+    @keydown.space.prevent="setSelectedCountry(countryInfo.name)"
+    @focus="$emit('country-focus', countryInfo.name)"
     :d="this.countryInfo.svg"
     :fill="this.countryInfo.fill"
     stroke="#1E1826"
     stroke-miterlimit="10"
     stroke-linecap="round"
     stroke-linejoin="round"
+    role="button"
+    :aria-label="`${countryInfo.name} - ${getRegulationStatus()}`"
+    :aria-pressed="activeSelectedCountry === countryInfo.name"
+    tabindex="0"
   />
 </template>
 
@@ -33,6 +40,14 @@ export default {
   methods: {
     setSelectedCountry(name) {
       this.setCountry(name);
+    },
+    getRegulationStatus() {
+      // Determine regulation status based on color
+      const color = this.countryInfo.fill;
+      if (color === '#a2bbe5') return 'Multiple requirements';
+      if (color === '#f39964') return 'At least one requirement';
+      if (color === '#c0554b') return 'No requirements';
+      return 'Regulation status unknown';
     },
   },
 };

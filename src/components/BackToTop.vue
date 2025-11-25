@@ -3,10 +3,18 @@
     <div
       class="go-to-top"
       id="go-to-top"
-      v-if="windowScrollTop >= 250"
+      v-show="true"
+      role="button"
+      :tabindex="windowScrollTop >= 250 ? 0 : -1" 
+      aria-label="Go to top of page"
       @click="scrollToTop"
-      :style="{
-        bottom: `${this.gapFromFooter}`,
+      @keyup.enter="scrollToTop"
+      @keyup.space="scrollToTop"
+      :aria-hidden="windowScrollTop < 250" 
+      :style="{ 
+        bottom: `${gapFromFooter}`, 
+        opacity: windowScrollTop >= 250 ? 1 : 0, 
+        pointerEvents: windowScrollTop >= 250 ? 'auto' : 'none' 
       }"
     >
       <svg
@@ -15,6 +23,7 @@
         viewBox="0 0 24 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         <path d="M22 13L12 3L2 13" stroke="#483A5B" stroke-width="3" />
       </svg>
@@ -30,9 +39,28 @@ export default {
       fixedArrow: "",
     };
   },
+    mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    handleScroll() {
+      this.windowScrollTop = window.scrollY;
+
+      const footer = document.querySelector(".footer-container");
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        if (window.innerHeight > footerRect.y) {
+          this.gapFromFooter = `${window.innerHeight - footerRect.y + 15}px`;
+        } else {
+          this.gapFromFooter = `30px`;
+        }
+      }
     },
   },
   watch: {
@@ -84,5 +112,14 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+//fokusavmo styliai
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 </style>

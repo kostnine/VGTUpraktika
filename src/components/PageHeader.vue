@@ -1,11 +1,16 @@
 <template>
   <div class="header-component">
     <div class="header-text-half">
-      <span class="header-title" v-html="toLocal(titleText)"></span>
+      <h1 class="header-title" v-html="toLocal(titleText)"></h1>
       <span class="header-content" v-html="toLocal(contentText)"></span>
       <span
         :class="['header-button', { longtext: buttonTextContent.length > 27 }]"
         @click="scroll(scrollToId)"
+                tabindex="0"
+        role="button"
+        aria-label="Scroll to section below"
+        @keyup.enter="scroll(scrollToId)"
+        @keyup.space="scroll(scrollToId)"
       >
         {{ toLocal(buttonTextContent)
         }}<img
@@ -49,6 +54,18 @@ export default {
 </script>
 <style scoped lang="scss">
 @import "@/assets/scss/variables";
+
+/* Reset h1 to preserve existing styling */
+h1.header-title {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  display: block;
+}
+
 .header-component {
   position: relative;
   padding: 0 calc(min(160px, 10vw));

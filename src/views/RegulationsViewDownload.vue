@@ -11,18 +11,43 @@
         <div class="information-container webinar">
             <div class="spain-container webinar">
                 <div class="title-container">
-                <span class="spain-title"
-                    >{{ toLocal("downloads.webinar_title") }}</span
+                <h2 class="spain-title"
+                    >{{ toLocal("downloads.webinar_title") }}</h2
                 >
                 </div>
                 <div class="video-row">
+                <!-- 2025 European Smoke Alarm Day Webinar -->
                 <div class="section-container">
                     <div class="video-container-with-text">
-                    <span class="title-under">
+                    <h3 class="title-under">
                       {{toLocal('regulations.watch')}}
-                    </span>
-                    <span class="video-title"
-                        >{{ toLocal("downloads.webinar_title_date") }}:</span
+                    </h3>
+                    <h4 class="video-title"
+                        >2025 European Smoke Alarm Day Webinar:</h4
+                    >
+                    <div class="video">
+                        <iframe
+                        :src="`https://www.youtube.com/embed/6nvdsPeZ4Zs`"
+                        title="2025 European Smoke Alarm Day Webinar"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        ></iframe>
+                    </div>
+                    <span class="video-url"
+                        >https://www.youtube.com/watch?v=6nvdsPeZ4Zs</span
+                    >
+                    </div>
+                </div>
+
+                <!-- 2024 European Smoke Alarm Day Webinar -->
+                <div class="section-container">
+                    <div class="video-container-with-text">
+                    <h3 class="title-under">
+                      {{toLocal('regulations.watch')}}
+                    </h3>
+                    <h4 class="video-title"
+                        >{{ toLocal("downloads.webinar_title_date") }}:</h4
                     >
                     <div class="video">
                         <iframe
@@ -38,34 +63,12 @@
                     >
                     </div>
                 </div>
-                <!-- <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="title-under">
-                      {{toLocal('regulations.watch')}}
-                    </span>
-                    <span class="video-title"
-                        >{{ toLocal("downloads.webinar_title_date") }}:</span
-                    >
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
-                    >
-                    </div>
-                </div> -->
                 <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
-                  <span class="title-under">
+                  <h3 class="title-under">
                     {{toLocal('regulations.download')}}
-                  </span>
-                  <span class="video-title"
-                        >{{ toLocal("downloads.final_report") }}:</span
+                  </h3>
+                  <h4 class="video-title"
+                        >{{ toLocal("downloads.final_report") }}:</h4
                     >
                   <div class="brochure-container">
                 <div
@@ -74,7 +77,12 @@
                     backgroundImage:
                     'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
                 }"
-                @click="downloadLeaflet(spainBrochure)"
+                                @click="downloadLeaflet(spainBrochure)"
+                                @keyup.enter="downloadLeaflet(spainBrochure)"
+                                @keyup.space="downloadLeaflet(spainBrochure)"
+                                tabindex="0"
+                                role="button"
+                                :aria-label="`Download ${toLocal(spainBrochure.text)}`"
                 >
                 <div class="bottom-content">
                     <div class="leaflet-text">
@@ -103,60 +111,10 @@
 
             
         </div>
-        <div class="information-container">
-            <div class="spain-container">
-                <div class="title-container">
-                <span class="spain-title"
-                    >{{ toLocal("downloads.fire_spain") }}</span
-                >
-                <span class="title-under">
-                    {{toLocal('regulations.watch')}}
-                </span>
-                </div>
-                <div class="video-row">
-                <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="video-title"
-                        >{{ toLocal("downloads.video_about") }}:</span
-                    >
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/NDShJjSbA1Y`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=NDShJjSbA1Y</span
-                    >
-                    </div>
-                </div>
-                <div class="section-container">
-                    <div class="video-container-with-text">
-                    <span class="video-title">Duerme Tranquilo </span>
-                    <div class="video">
-                        <iframe
-                        :src="`https://www.youtube.com/embed/6g8PWXPgJjA?si=CAZuTuluZEgq-luw`"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        ></iframe>
-                    </div>
-                    <span class="video-url"
-                        >https://www.youtube.com/watch?v=6g8PWXPgJjA</span
-                    >
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <div class="leaflet-container">
-        <div class="container-title">
+        <h2 class="container-title">
             {{ toLocal('downloads.check_leaf') }}
-        </div>
+        </h2>
         <div class="container-under-title">
             {{toLocal('downloads.download_leaf')}}
         </div>
@@ -170,11 +128,15 @@
                     'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
                 }"
                 @click="downloadLeaflet(spainBrochure)"
+                @keyup.enter="downloadLeaflet(spainBrochure)"
+                @keyup.space="downloadLeaflet(spainBrochure)"
+                    tabindex="0" 
+                    role="button" 
                 >
                 <div class="bottom-content">
                     <div class="leaflet-text">
                     {{ toLocal(spainBrochure.text) }}
-                    </div>
+                    </div>          
                     <div class="download-btn">
                     <svg
                         width="37"
@@ -262,6 +224,7 @@
         <div class="facts-share">
             <span class="share-title">{{ toLocal("facts.share_story") }}</span>
             <button @click="mailto">info@eurofsa.org</button>
+
         </div>
     </div>
 </template>
@@ -313,6 +276,12 @@
             ]
             };
         },
+        metaInfo() {
+            return {
+                title: this.toLocal('page.title.regulations'),
+                titleTemplate: '%s | European Smoke Alarm Day'
+            }
+        },
         methods:{
             downloadLeaflet(leaflet) {
             let link = document.createElement("a");
@@ -325,12 +294,50 @@
             mailto() {
             window.location.href = "mailto:info@eurofsa.org";
             },
-        }
+            handleGlobalFocus(e) {
+              // Only scroll if user is navigating with keyboard
+              if (!this.$store.state.isKeyboardNavigating) return;
+              
+              // Tikriname, ar fokusas tikras (ne body, ne svg)
+              const el = e.target;
+
+              if (!el || el.tagName === "BODY" || el.tagName === "HTML") return;
+
+              // Skrolinam į centrą, bet tik jei elementas matomas
+              const rect = el.getBoundingClientRect();
+              const visible =
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+
+              if (!visible) {
+                const elementCenter = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+                window.scrollTo({
+                  top: elementCenter,
+                  behavior: "smooth",
+                });
+              }
+            },
+        },
+          mounted() {
+          // 👇 Pridedame globalų fokusavimo stebėjimą
+          document.addEventListener("focusin", this.handleGlobalFocus);
+      },
     }
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
+/* Reset heading tags to preserve existing styling */
+h2.spain-title,
+h2.container-title,
+h3.title-under,
+h4.video-title {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
 .top-section {
     display: flex;
     flex-direction: column;
@@ -428,7 +435,7 @@ span {
 
       .download{
         height: 100%;
-        min-height: 180px;
+        min-height: 80px;
         display: flex;
         gap: 12px;
         flex-direction: column;
@@ -496,19 +503,20 @@ span {
         .leaflet {
           position: relative;
           background-position: top;
-          min-height: 180px;
+          min-height: 80px;
           width: 100%;
           border-radius: 10px;
           overflow: hidden;
           cursor: pointer;
           background-repeat: no-repeat;
           background-size: 100% 100%;
+          aspect-ratio: 16/9;
           @media (max-width: 1000px) {
             width: 100%;
-            min-height: 400px;
+            min-height: 100px;
           }
           @media(min-width: 1280px){
-            min-height: 285px;
+            min-height: 110px;
           }
           .bottom-content {
             display: flex;
@@ -730,19 +738,20 @@ span {
       .leaflet {
         position: relative;
         background-position: top;
-        min-height: 300px;
+        min-height: 120px;
         width: 100%;
         border-radius: 10px;
         overflow: hidden;
         cursor: pointer;
         background-repeat: no-repeat;
         background-size: 100% 100%;
+        aspect-ratio: 16/9;
         @media (max-width: 1000px) {
           width: 100%;
-          min-height: 300px;
+          min-height: 140px;
         }
         @media(min-width: 1280px){
-          min-height: 40vh;
+          min-height: 150px;
         }
         .bottom-content {
           display: flex;
@@ -764,6 +773,15 @@ span {
       }
     }
     }
+      /* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
+}
   }
 </style>
 <style lang="scss">

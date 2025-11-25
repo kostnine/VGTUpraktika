@@ -9,9 +9,9 @@
     />
     <div class="types-page-main-container">
       <div class="main-header" id="locations-header">
-        <span class="main-header-title" id="types"
+        <h2 class="main-header-title" id="types"
           >{{ toLocal("place.where_exactly") }}<br />
-          {{ toLocal("place.smoke_alarms_installed") }}</span
+          {{ toLocal("place.smoke_alarms_installed") }}</h2
         >
         <span class="main-header-content">
           {{ toLocal("place.the_placement") }}
@@ -94,9 +94,9 @@
           <div class="info">
             <div class="row">
               <div class="legend">
-                <span class="legend-title">
+                <h3 class="legend-title">
                   {{ toLocal("place.location_req") }}
-                </span>
+                </h3>
                 <div
                   class="legend-item"
                   v-for="(item, index) in legend"
@@ -277,7 +277,7 @@
     </div>
     <div class="facts-share">
           <span class="share-title">{{ toLocal("facts.share_story") }}</span>
-          <button @click="mailto">info@eurofsa.org</button>
+          <button type="button" @click="mailto">info@eurofsa.org</button>
     </div>
   </div>
 </template>
@@ -339,6 +339,18 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
+/* Reset heading tags to preserve existing styling */
+h2.main-header-title,
+h3.legend-title {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  display: block;
+}
 
 .page-header {
   position: relative;
@@ -966,5 +978,14 @@ export default {
 }
 .semibold {
   font-family: $semiBoldFont;
+}
+/* Fokusavimo stiliai */
+[tabindex="0"]:focus-visible,
+button:focus-visible,
+a:focus-visible,
+:deep(.vueperslides__arrow:focus-visible) {
+  outline: 3px solid #000000ff; /* kontrastingas apvadas */
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 </style>
