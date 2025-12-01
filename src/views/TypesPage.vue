@@ -141,7 +141,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.toLocal('page.title.types'),
+      title: this.toLocal('header.about'),
       titleTemplate: '%s | European Smoke Alarm Day'
     }
   },

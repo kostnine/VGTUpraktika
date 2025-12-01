@@ -437,7 +437,7 @@ export default {
     },
     metaInfo() {
         return {
-            title: this.toLocal('page.title.support'),
+            title: this.toLocal('header.sm_info'),
             titleTemplate: '%s | European Smoke Alarm Day'
         }
     },

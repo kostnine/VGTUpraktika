@@ -198,10 +198,10 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.toLocal('page.title.regulations'),
+      title: this.toLocal('country.regulations'),
       titleTemplate: '%s | European Smoke Alarm Day',
       htmlAttrs: {
-        lang: this.$i18n.locale,
+        lang: this.$i18n?.locale || 'en',
         'aria-live': 'polite',
         'aria-atomic': 'true'
       },

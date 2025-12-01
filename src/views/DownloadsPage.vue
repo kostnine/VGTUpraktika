@@ -94,6 +94,107 @@
                 
         </div>
     </div>
+    <div class="information-container webinar">
+        <div class="spain-container webinar">
+            <div class="title-container">
+            <h2 class="spain-title"
+                >{{ toLocal("downloads.webinar_title") }}</h2
+            >
+            </div>
+            <div class="video-row">
+            <!-- 2025 European Smoke Alarm Day Webinar -->
+            <div class="section-container">
+                <div class="video-container-with-text">
+                <h3 class="title-under">
+                  {{toLocal('regulations.watch')}}
+                </h3>
+                <h4 class="video-title"
+                    >2025 European Smoke Alarm Day Webinar:</h4
+                >
+                <div class="video">
+                    <iframe
+                    :src="`https://www.youtube.com/embed/6nvdsPeZ4Zs`"
+                    title="2025 European Smoke Alarm Day Webinar"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    ></iframe>
+                </div>
+                <span class="video-url"
+                    >https://www.youtube.com/watch?v=6nvdsPeZ4Zs</span
+                >
+                </div>
+            </div>
+
+            <!-- 2024 European Smoke Alarm Day Webinar -->
+            <div class="section-container">
+                <div class="video-container-with-text">
+                <h3 class="title-under">
+                  {{toLocal('regulations.watch')}}
+                </h3>
+                <h4 class="video-title"
+                    >{{ toLocal("downloads.webinar_title_date") }}:</h4
+                >
+                <div class="video">
+                    <iframe
+                    :src="`https://www.youtube.com/embed/nq1zr_lYkN4`"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    ></iframe>
+                </div>
+                <span class="video-url"
+                    >https://www.youtube.com/watch?v=nq1zr_lYkN4</span
+                >
+                </div>
+            </div>
+            <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
+              <h3 class="title-under">
+                {{toLocal('regulations.download')}}
+              </h3>
+              <h4 class="video-title"
+                    >{{ toLocal("downloads.final_report") }}:</h4
+                >
+              <div class="brochure-container">
+            <div
+            class="leaflet"
+            :style="{
+                backgroundImage:
+                'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
+            }"
+                            @click="downloadLeaflet(spainBrochure)"
+                            @keyup.enter="downloadLeaflet(spainBrochure)"
+                            @keyup.space="downloadLeaflet(spainBrochure)"
+                            tabindex="0"
+                            role="button"
+                            :aria-label="`Download ${toLocal(spainBrochure.text)}`"
+            >
+            <div class="bottom-content">
+                <div class="leaflet-text">
+                {{ toLocal(spainBrochure.text) }}
+                </div>
+                <div class="download-btn">
+                <svg
+                    width="37"
+                    height="37"
+                    viewBox="0 0 37 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                    fill="white"
+                    />
+                </svg>
+                </div>
+            </div>
+            </div>
+              </div>
+        </div>
+            </div>
+        </div>
+    </div>
       <div class="red-bar">
         <h2>{{ toLocal("downloads.nfpa") }}:</h2>
         <div class="video-container">
@@ -409,23 +510,13 @@ export default {
     VueperSlide
   },
   metaInfo: {
-    title: "Best practices",
+    title: "Home",
   },
   data() {
     return {
       windowWidth: window.innerWidth,
       playingVideos: {},
       testimonialsVideos: [
-        {
-          type: 'youtube',
-          embed_url: 'https://www.youtube.com/embed/ud8W56MXhaA',
-          url: 'https://www.youtube.com/watch?v=ud8W56MXhaA&t=1s'
-        },
-        {
-          type: 'youtube', 
-          embed_url: 'https://www.youtube.com/embed/2_aRXxaUXNU',
-          url: 'https://www.youtube.com/watch?v=2_aRXxaUXNU'
-        },
         {
           type: 'local',
           src: '/videos/Maria.mp4',
@@ -437,6 +528,16 @@ export default {
           src: '/videos/Paul.mp4',
           title: 'Paul Testimonial',
           thumbnail: '/images/thumbnails/paul-thumbnail.png'
+        },
+        {
+          type: 'youtube',
+          embed_url: 'https://www.youtube.com/embed/ud8W56MXhaA',
+          url: 'https://www.youtube.com/watch?v=ud8W56MXhaA&t=1s'
+        },
+        {
+          type: 'youtube', 
+          embed_url: 'https://www.youtube.com/embed/2_aRXxaUXNU',
+          url: 'https://www.youtube.com/watch?v=2_aRXxaUXNU'
         }
       ],
       webinarBrochures:[
@@ -834,13 +935,24 @@ export default {
           behavior: "smooth",
         });
       }
-    }
+    },
   },
 };
+
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
+/* Reset heading tags to preserve existing styling */
+h2.spain-title,
+h2.container-title,
+h3.title-under,
+h4.video-title {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
 
 // Video Section - Testimonials
 .video-section {
@@ -1513,34 +1625,164 @@ h3 {
 .spain-container {
   width: 100%;
   display: flex;
-  background-color: #c0554b;
+  background-color: #DCE3EF;
   box-sizing: border-box;
-  padding: 20px calc(min(160px, 10vw));
   align-items: start;
   justify-content: center;
+  flex-direction: column;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  &.webinar{
+    background-color: #C0554B;
+    .title-container{
+      color: #ffffff;
+      .spain-title{
+        color: #ffffff;
+      }
+      .title-under{
+        color: #ffffff;
+      }
+    }
+    .video-row{
+      .video-title{
+        color: #ffffff;
+      }
+      .video-url{
+        color: #ffffff;
+      }
+    }
+  }
+  &.webinar{
+    .video-row{
+      align-items: flex-start;
+      .section-container{
+        .title-under{
+          color: #ffffff;
+          width: 100%;
+          font-size: clamp(14px, 1vw, 16px);
+        }
+      }
+    }
+
+    .download{
+      height: 100%;
+      min-height: 180px;
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      width: 30%;
+      justify-content: center;
+      @media(max-width: 1280px){
+        width: 50%;
+      }
+      .video-title {
+      height: 15%;
+      width: 100%;
+      font-size: clamp(18px, 1.2vw, 24px);
+      line-height: 32px;
+      color: #1E1826;
+      font-family: $semiBoldFont;
+      text-align: start;
+      color: white;
+      @media (max-width: 1080px) {
+        font-size: clamp(14px, 1.2vw, 18px);
+      }
+      @media (max-width: 768px) {
+        width: 95%;
+        text-align: center;
+      }
+      }
+      @media(max-width: 1000px){
+        width: 50%;
+      }
+      @media(max-width: 768px){
+        width: 100%;
+      }
+      .brochure-container {
+        height: 100%;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+          margin: 0;
+          width: 100%;
+        }
+        @media(max-width: 1280px){
+          width: 90%
+        }
+        @media(max-width: 1000px){
+          width: 100%;
+        }
+      .title {
+        height: 15%;
+        padding: 20px 0;
+        width: 100%;
+        font-size: clamp(18px, 1.2vw, 24px);
+        line-height: 32px;
+        color: white;
+        font-family: $semiBoldFont;
+        text-align: start;
+        @media (max-width: 1080px) {
+          font-size: 18px;
+          font-size: clamp(16px, 1.2vw, 18px);
+        }
+        @media (max-width: 768px) {
+          width: 98%;
+          text-align: center;
+        }
+      }
+      .leaflet {
+        position: relative;
+        background-position: top;
+        min-height: 180px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        @media (max-width: 1000px) {
+          width: 100%;
+          min-height: 400px;
+        }
+        @media(min-width: 1280px){
+          min-height: 285px;
+        }
+        .bottom-content {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: #1e1826;
+          color: white;
+          padding: 10px;
+          width: 100%;
+        }
+        .leaflet-text {
+          width: 100%;
+        }
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+    }
+  }
   .section-container {
-    width: 33%;
     display: flex;
     justify-content: center;
     height: 100%;
-    &:last-child {
-      max-width: 300px;
-      min-width: 250px;
-    }
+    width: 30%;
+
     @media (max-width: 768px) {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      &:last-child {
-        max-width: 300px;
-        min-width: 300px;
-      }
     }
   }
   .video-container-with-text {
@@ -1548,21 +1790,21 @@ h3 {
     flex-direction: column;
     align-items: center;
     height: 100%;
-    width: 75%;
+    width: 100%;
+    gap: 4px;
     @media (max-width: 1280px) {
       width: 95%;
     }
     @media (max-width: 768px) {
       margin: 0;
-      width: initial;
+      width: 100%;
     }
     .video-title {
       height: 15%;
-      padding: 20px 0;
       width: 100%;
       font-size: clamp(18px, 1.2vw, 24px);
       line-height: 32px;
-      color: white;
+      color: #1E1826;
       font-family: $semiBoldFont;
       text-align: start;
       @media (max-width: 1080px) {
@@ -1574,11 +1816,12 @@ h3 {
       }
     }
     .video-url {
-      font-size: 12px;
+      font-size: clamp(12px, 2.5vw, 16px);
       line-height: 24px;
-      color: white;
+      color: #1E1826;
       margin-top: 5px;
       white-space: nowrap;
+      width: 100%;
       @media (max-width: 768px) {
         width: 95%;
         text-align: center;
@@ -1602,75 +1845,16 @@ h3 {
       }
       iframe {
         border-radius: 10px;
-        min-height: 180px;
+        min-height: 285px;
       }
-    }
-  }
-  .brochure-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @media (max-width: 1080px) {
-      margin-left: 5%;
-    }
-    @media (max-width: 768px) {
-      margin: 0;
-      width: 100%;
-    }
-    .title {
-      height: 15%;
-      padding: 20px 0;
-      width: 100%;
-      font-size: clamp(18px, 1.2vw, 24px);
-      line-height: 32px;
-      color: white;
-      font-family: $semiBoldFont;
-      text-align: start;
-      @media (max-width: 1080px) {
-        font-size: 18px;
-        font-size: clamp(16px, 1.2vw, 18px);
-      }
-      @media (max-width: 768px) {
-        width: 98%;
-        text-align: center;
-      }
-    }
-    .leaflet {
-      position: relative;
-      background-position: top;
-      min-height: 200px;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      @media (max-width: 768px) {
-        width: initial;
-      }
-      .bottom-content {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: #1e1826;
-        color: white;
-        padding: 10px;
-        width: 100%;
-      }
-      .leaflet-text {
-        width: 100%;
-      }
-    }
-    span {
-      font-size: 16px;
     }
   }
   .title-container {
-    width: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
     padding: 10px 0;
     @media (max-width: 1080px) {
       width: 40%;
@@ -1678,12 +1862,19 @@ h3 {
     }
     @media (max-width: 768px) {
       width: 100%;
-      text-align: center;
+    }
+    .title-under{
+      color: #1E1826;
+      @media(max-width: 768px){
+        text-align: center;
+        width: 100%;
+      }
     }
     .spain-title {
-      font-size: 32px;
+      font-size: clamp(26px, 2.5vw, 32px);
+      font-family: $semiBoldFont;
       line-height: 48px;
-      color: white;
+      color: #1E1826;
       width: 100%;
       height: 100%;
       margin-right: calc(min(20px, 7vw));
@@ -1695,7 +1886,18 @@ h3 {
       }
       @media (max-width: 768px) {
         margin: 0;
+        text-align: center;
       }
+    }
+  }
+  .video-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: clamp(20px, 3vw, 40px);
+    @media(max-width: 768px){
+      flex-direction: column;
     }
   }
 }
@@ -1857,7 +2059,7 @@ h3 {
     align-items: center;
     background-color: #DCE3EF;
     gap: clamp(36px, 5vh, 60px);
-    padding: 80px calc(min(160px, 10vw));
+    padding: 80px calc(min(80px, 5vw));
     .info-title{
       font-size: clamp(36px, 2.5vw, 48px);
     }

@@ -278,7 +278,7 @@
         },
         metaInfo() {
             return {
-                title: this.toLocal('page.title.regulations'),
+                title: this.toLocal('header.home'),
                 titleTemplate: '%s | European Smoke Alarm Day'
             }
         },
@@ -435,7 +435,7 @@ span {
 
       .download{
         height: 100%;
-        min-height: 80px;
+        min-height: 180px;
         display: flex;
         gap: 12px;
         flex-direction: column;
@@ -503,20 +503,19 @@ span {
         .leaflet {
           position: relative;
           background-position: top;
-          min-height: 80px;
+          min-height: 180px;
           width: 100%;
           border-radius: 10px;
           overflow: hidden;
           cursor: pointer;
           background-repeat: no-repeat;
           background-size: 100% 100%;
-          aspect-ratio: 16/9;
           @media (max-width: 1000px) {
             width: 100%;
-            min-height: 100px;
+            min-height: 400px;
           }
           @media(min-width: 1280px){
-            min-height: 110px;
+            min-height: 285px;
           }
           .bottom-content {
             display: flex;

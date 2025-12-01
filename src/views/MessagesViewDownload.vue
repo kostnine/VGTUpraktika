@@ -236,7 +236,7 @@
                         ></iframe>
                     </div>
                     <div class="downloadable-title">
-                        <div class="text">{{ toLocal('downloads.fire_spain') }}</div>
+                        <div class="text">Duerme Tranquilo</div>
                     </div>
                 </div>
 
@@ -248,7 +248,7 @@
                     tabindex="0" 
                     role="button" 
                     aria-label="Download Fire kills campaign toolkit document"
-                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Asset10.svg`) + ')' }"
+                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Fire_kills_campaign_toolkit-100.svg`) + ')' }"
                 >
                     <div class="downloadable-title">
                         <div class="text">Fire kills campaign toolkit</div>
@@ -271,7 +271,7 @@
                     tabindex="0" 
                     role="button" 
                     aria-label="Download Fire Prevention Week Campaign in France document"
-                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Asset11.svg`) + ')' }"
+                    :style="{ backgroundImage: 'url(' + require(`@/assets/images/downloads/Fire_Prevention_Week_Campaign_in_France1.svg`) + ')' }"
                 >
                     <div class="downloadable-title">
                         <div class="text">Fire Prevention Week Campaign in France</div>
@@ -506,7 +506,7 @@ import 'vueperslides/dist/vueperslides.css'
         },
         metaInfo() {
             return {
-                title: this.toLocal('page.title.messages'),
+                title: this.toLocal('header.home'),
                 titleTemplate: '%s | European Smoke Alarm Day'
             }
         },
@@ -693,6 +693,7 @@ border-radius: 50%;
         display: flex;
         padding: 8px 16px;
         align-items: center;
+        justify-content: space-between;
         font-size: clamp(12px, 2.5vw, 16px);
         @media(max-width: 768px){
           height: 50px;
