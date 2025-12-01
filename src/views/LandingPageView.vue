@@ -1723,9 +1723,16 @@ section {
         height: 100%;
         padding: calc(min(4vw, 3rem)) calc(min(4vw, 1.5rem));
         text-align: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
       }
       &:hover {
         background: $mainColor;
+        .card-content {
+          background: $mainColor;
+        }
         .click-here{
           color: white;
         }
