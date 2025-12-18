@@ -917,6 +917,9 @@ export default {
         link.click();
     },
     handleGlobalFocus(e) {
+      // Only scroll if user is navigating with keyboard
+      if (!this.$store.state.isKeyboardNavigating) return;
+      
       // Check if focus is real (not body, not svg)
       const el = e.target;
 

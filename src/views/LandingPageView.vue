@@ -821,6 +821,9 @@ export default {
       }
     },
         handleGlobalFocus(e) {
+      // Only scroll if user is navigating with keyboard
+      if (!this.$store.state.isKeyboardNavigating) return;
+      
       // Tikriname, ar fokusas tikras (ne body, ne svg)
       const el = e.target;
 
@@ -2165,7 +2168,7 @@ section {
   font-family: Barlow;
   font-size: 13px;
   line-height: 1.5;
-  padding: 0 24px;
+  padding: 8px 24px;
   box-sizing: border-box;
   position: relative;
   z-index: 5;
@@ -2175,9 +2178,9 @@ section {
   p {
     margin: 0;
     color: #ffffff;
-    max-width: 1280px;
+    max-width: 100%;
     width: 100%;
-    text-align: left; /* kairinis lygiavimas */
+    text-align: center;
     strong {
       font-weight: 600;
     }
