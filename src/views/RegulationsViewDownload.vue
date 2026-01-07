@@ -509,7 +509,7 @@ span {
           overflow: hidden;
           cursor: pointer;
           background-repeat: no-repeat;
-          background-size: 100% 100%;
+          background-size: cover;
           @media (max-width: 1000px) {
             width: 100%;
             min-height: 400px;
@@ -743,7 +743,7 @@ span {
         overflow: hidden;
         cursor: pointer;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: cover;
         aspect-ratio: 16/9;
         @media (max-width: 1000px) {
           width: 100%;

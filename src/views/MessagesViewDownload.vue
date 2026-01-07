@@ -678,7 +678,7 @@ border-radius: 50%;
     min-height: 220px;
     min-width: 20%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     aspect-ratio: 16/9;
     position: relative;
     cursor: pointer;

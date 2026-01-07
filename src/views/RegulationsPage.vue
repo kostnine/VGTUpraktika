@@ -758,7 +758,7 @@ export default {
       overflow: hidden;
       cursor: pointer;
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
       @media (max-width: 1000px) {
         width: 100%;
         min-height: 300px;
