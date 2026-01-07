@@ -849,12 +849,13 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/scss/_variables.scss";
 .facts{
-  padding: 80px calc(min(160px, 10vw));
+  padding: 80px calc(clamp(0px, 10vw, 160px));
   height: fit-content;
   @media(max-width: 768px){
-    padding: 40px calc(min(80px, 5vw));
+    padding: 40px calc(clamp(0px, 5vw, 80px));
   }
 }
+
 .facts-main-header {
   display: flex;
   flex-direction: column;
@@ -884,7 +885,7 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: start;
-    padding: 30px calc(min(160px, 10vw));
+    padding: 30px calc(clamp(0px, 10vw, 160px));
 
     .header-list-title {
       font-size: 24px;
@@ -1010,7 +1011,7 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-   padding: 0 0 0 calc(min(160px, 10vw));
+   padding: 0 0 0 calc(clamp(0px, 10vw, 160px));
   //padding: 0 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
@@ -1032,14 +1033,14 @@ section {
   }
 
   @media (max-width: 880px) {
-    padding: 0 0 0 calc(min(160px, 10vw));
+    padding: 0 0 0 calc(clamp(0px, 10vw, 160px));
     flex-direction: column;
     height: calc(100vh - 55px);
     .text {
       width: 100%;
       padding: 0rem;
       margin: 0;
-      padding: 0 calc(min(160px, 10vw)) 0 0;
+      padding: 0 calc(clamp(0px, 10vw, 160px)) 0 0;
       /* Increased padding-top for mobile to give more breathing room */
       padding-top: clamp(10px, 15vh, 25px);
     }
@@ -1188,7 +1189,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px calc(min(160px, 10vw));
+    padding: 0px calc(clamp(0px, 10vw, 160px));
     height: 100%;
     width: 100%;
     .video-container {
@@ -1202,8 +1203,8 @@ section {
       display: flex;
       flex-direction: column;
       height: 40vw;
-      min-width: calc(min(500px, 40vw));
-      min-height: calc(min(500px, 40vw));
+      min-width: clamp(0px, 40vw, 500px);
+      min-height: clamp(0px, 40vw, 500px);
       max-height: 500px;
       border-radius: 20px;
       overflow: hidden;
@@ -1326,7 +1327,7 @@ section {
     min-height: 100vh;
     height: auto;
     .content {
-      padding: 2rem calc(min(160px, 10vw));
+      padding: 2rem calc(clamp(0px, 10vw, 160px));
     }
     .video {
       display: flex;
@@ -1350,7 +1351,7 @@ section {
     height: auto;
     .content {
       flex-direction: column-reverse;
-      padding: 2rem calc(min(160px, 10vw));
+      padding: 2rem calc(clamp(0px, 10vw, 160px));
       .video {
         width: 40vw;
         height: 40vw;
@@ -1420,7 +1421,7 @@ section {
 }
 .supporters {
   position: relative;
-  padding: 50px calc(min(160px, 7vw));
+  padding: 50px calc(clamp(0px, 7vw, 160px));
   overflow: hidden;
   height: fit-content;
   .red-bar{
@@ -1724,7 +1725,7 @@ section {
         // align-items: center;
         width: 100%;
         height: 100%;
-        padding: calc(min(4vw, 3rem)) calc(min(4vw, 1.5rem));
+        padding: clamp(0px, 4vw, 3rem) clamp(0px, 4vw, 1.5rem);
         text-align: center;
         background: transparent;
         border: none;
@@ -1764,14 +1765,14 @@ section {
     }
   }
   @media (max-width: 1320px) {
-    padding: 0 calc(min(80px, 10vw));
+    padding: 0 calc(clamp(0px, 10vw, 80px));
     padding-bottom: 20px;
     .card-container {
       .card {
-        width: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
-        height: calc((100vw - (calc(min(160px, 10vw)) * 2) - 6rem) / 3);
+        width: calc((100vw - (calc(clamp(0px, 10vw, 160px)) * 2) - 6rem) / 3);
+        height: calc((100vw - (calc(clamp(0px, 10vw, 160px)) * 2) - 6rem) / 3);
         .card-content {
-          padding: calc(min(2vw, 2rem)) calc(min(3vw, 1.5rem));
+          padding: clamp(0px, 2vw, 2rem) clamp(0px, 3vw, 1.5rem);
         }
       }
     }
@@ -1962,7 +1963,7 @@ section {
         // justify-content: flex-start;
         width: 100vw;
         box-sizing: border-box;
-        margin: 0 calc(min(160px, 10vw));
+        margin: 0 calc(clamp(0px, 10vw, 160px));
         overflow-x: hidden;
         border-radius: 10px;
         // @media (max-width: 1280px) {
@@ -2019,7 +2020,7 @@ section {
   }
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  margin-left: calc(min(160px, 10vw));
+  margin-left: calc(clamp(0px, 10vw, 160px));
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.6) 0%,
@@ -2041,7 +2042,7 @@ section {
   }
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  margin-right: calc(min(160px, 10vw));
+  margin-right: calc(clamp(0px, 10vw, 160px));
   background: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.6) 0%,
@@ -2116,7 +2117,7 @@ section {
 
 .aim-section{
   background-color: #FBF3ED;
-  padding: 48px calc(min(160px, 10vw));
+  padding: 48px calc(clamp(0px, 10vw, 160px));
   height: fit-content;
   .column-container{
     display: flex;
@@ -2216,7 +2217,7 @@ a:focus-visible,
   gap: 0px;
   position: absolute;
   top: -50px;
-  left: calc(min(160px, 10vw) + 12px);
+  left: calc(clamp(0px, 10vw, 160px) + 12px);
   font-family: 'Barlow Semi Condensed', sans-serif;
   color: #1E1826;
   background: none;
@@ -2304,15 +2305,15 @@ a:focus-visible,
     position: absolute;
     top: -50px;
     /* Ensure banner doesn't overlap with main content */
-    max-width: min(463px, 54vw);
+    max-width: clamp(0px, 54vw, 463px);
   }
 
   /* === Fix for smaller screen heights === */
   @media (max-height: 830px) and (min-width: 1025px) {
     position: absolute;
     top: 10px; /* Move it down from top instead of negative positioning */
-    left: calc(min(160px, 10vw) + 12px);
-    max-width: min(463px, 54vw);
+    left: calc(clamp(0px, 10vw, 160px) + 12px);
+    max-width: clamp(0px, 54vw, 463px);
   }
 
   /* === Mobile Variant === */
