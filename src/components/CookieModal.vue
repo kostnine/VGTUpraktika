@@ -2,7 +2,7 @@
   <div class="privacy-container">
     <div class="cookie-modal" v-if="!cookieAccepted && !privacyOpened">
       <div class="logo-container">
-        <img src="@/assets/logo.svg" alt="logo" />
+        <img src="@/assets/logo.svg" :alt="toLocal('alt.logo')" />
       </div>
       <div class="text-block">
         <span class="text-title">{{ toLocal("home.cookies") }}</span>
@@ -34,7 +34,7 @@
       <div class="cookie-big-inside">
         <div class="big-header" :class="{ absolute: extraExpanded }">
           <div class="logo-container">
-            <img src="@/assets/logo.svg" alt="logo" />
+            <img src="@/assets/logo.svg" :alt="toLocal('alt.logo')" />
           </div>
           <div class="buttons-container">
             <div class="btn-row">
@@ -43,6 +43,8 @@
                   ><img
                     src="@/assets/icons/arrow_right.svg"
                     class="arrow-right"
+                    alt=""
+                    aria-hidden="true"
                     :class="{ opened: necessaryOpen }"
                     @click="necessaryOpen = !necessaryOpen"
                   />{{ toLocal("cookies.necessary_title") }}</span
@@ -67,6 +69,8 @@
                   ><img
                     src="@/assets/icons/arrow_right.svg"
                     class="arrow-right"
+                    alt=""
+                    aria-hidden="true"
                     :class="{ opened: analyticalOpen }"
                     @click="analyticalOpen = !analyticalOpen"
                   />{{ toLocal("cookies.analytical_title") }}</span
@@ -90,7 +94,7 @@
             <img
               @click="closePrivacy"
               src="@/assets/icons/close_cross.svg"
-              alt="cross"
+              :alt="toLocal('alt.close')"
             />
           </div>
         </div>

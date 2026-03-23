@@ -43,7 +43,7 @@
           </span>
         </div>
         <div class="maintain-item-image-container">
-          <img src="@/assets/images/maintain/clean.jpg" alt="clean" />
+          <img src="@/assets/images/maintain/clean.jpg" :alt="toLocal('alt.maintenance_clean')" />
         </div>
       </div>
       <div class="maintain-middle-info">
@@ -52,7 +52,7 @@
             class="zoomable"
             src="@/assets/images/maintain/info.jpg"
             @click="isExpanded = true"
-            alt="info"
+            :alt="toLocal('alt.maintenance_info')"
           />
         </div>
         <div class="text-container">
@@ -97,19 +97,19 @@
           </span>
         </div>
         <div class="maintain-item-image-container">
-          <img src="@/assets/images/maintain/pin.jpg" alt="clean" />
+          <img src="@/assets/images/maintain/pin.jpg" :alt="toLocal('alt.maintenance_pin')" />
         </div>
       </div>
     </div>
     <div class="expanded-schema" v-if="isExpanded" v-scroll-lock="isExpanded">
       <div class="expanded-image-container" v-click-outside="closeModal">
         <div class="expanded-close" @click="isExpanded = false">
-          <img src="@/assets/icons/close_cross.svg" alt="close" />
+          <img src="@/assets/icons/close_cross.svg" :alt="toLocal('alt.close')" />
         </div>
         <img
           class="expanded-image"
           src="@/assets/images/maintain/info.jpg"
-          alt="info"
+          :alt="toLocal('alt.maintenance_info')"
         />
       </div>
     </div>

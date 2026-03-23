@@ -16,17 +16,19 @@
         }}<img
           class="header-down-arrow"
           src="@/assets/icons/arrow_down_white.svg"
-          alt="down_arrow"
+          alt=""
+          aria-hidden="true"
         />
       </span>
     </div>
     <div class="header-image-half">
-      <img :src="require(`@/assets/${imagesrc}`)" alt="photo" />
+      <img :src="require(`@/assets/${imagesrc}`)" :alt="toLocal(titleText)" />
     </div>
     <img
       class="cropped-circle"
       src="@/assets/images/Circle_red.svg"
-      alt="circle"
+      alt=""
+      aria-hidden="true"
     />
   </div>
 </template>

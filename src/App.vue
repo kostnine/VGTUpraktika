@@ -10,7 +10,7 @@
       @blur="hideSkipLink"
     >
       Skip to main content
-      <img src="@/assets/images/strelyte.png" alt="" class="skip-arrow" />
+      <img src="@/assets/images/strelyte.png" alt="" aria-hidden="true" class="skip-arrow" />
     </a>
 
     <div class="page-wrapper">

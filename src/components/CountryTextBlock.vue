@@ -8,7 +8,7 @@
       <img
         src="@/assets/icons/close_cross.svg"
         class="card-close"
-        alt="close"
+        :alt="toLocal('alt.close')"
         @click="closeActiveCountry"
                 @keyup.enter="closeActiveCountry"
         @keyup.space="closeActiveCountry"

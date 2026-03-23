@@ -7,7 +7,7 @@
         tabindex="0"
         aria-label="Go to homepage"
       >
-        <img src="@/assets/logo.svg" alt="Smoke Alarm Day logo" />
+        <img src="@/assets/logo.svg" :alt="toLocal('alt.logo')" />
       </router-link>
     </div>
 
@@ -235,7 +235,8 @@
           class="footer-link"
           tabindex="0"
           role="link"
-          alt="Visit our Facebook page"
+          alt=""
+          aria-label="Visit our Facebook page"
           @click="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
           @keyup.enter="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
           @keyup.space="openLink('https://www.facebook.com/EuropeanSmokeAlarmDay/')"
@@ -245,7 +246,8 @@
           class="footer-link"
           tabindex="0"
           role="link"
-          alt="Visit our Instagram page"
+          alt=""
+          aria-label="Visit our Instagram page"
           @click="openLink('https://www.instagram.com/eusmokealarmday/')"
           @keyup.enter="openLink('https://www.instagram.com/eusmokealarmday/')"
           @keyup.space="openLink('https://www.instagram.com/eusmokealarmday/')"
@@ -255,7 +257,8 @@
           class="footer-link"
           tabindex="0"
           role="link"
-          alt="Visit our LinkedIn page"
+          alt=""
+          aria-label="Visit our LinkedIn page"
           @click="openLink('https://www.linkedin.com/company/eusmokealarmday')"
           @keyup.enter="openLink('https://www.linkedin.com/company/eusmokealarmday')"
           @keyup.space="openLink('https://www.linkedin.com/company/eusmokealarmday')"
@@ -265,7 +268,8 @@
           class="footer-link"
           tabindex="0"
           role="link"
-          alt="Visit our X (Twitter) page"
+          alt=""
+          aria-label="Visit our X (Twitter) page"
           @click="openLink('https://x.com/EuSmokeAlarmDay')"
           @keyup.enter="openLink('https://x.com/EuSmokeAlarmDay')"
           @keyup.space="openLink('https://x.com/EuSmokeAlarmDay')"

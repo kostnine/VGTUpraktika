@@ -43,7 +43,7 @@
                     </div>
                     <div class="video-frame" v-else-if="video.type === 'local'">
                     <div v-if="!playingVideos[idx]" class="video-thumbnail" @click="playThumbnailVideo(idx)">
-                        <img :src="video.thumbnail" :alt="video.title" />
+                        <img :src="video.thumbnail" :alt="`${toLocal('alt.testimonial_video_thumbnail')} ${idx + 1}`" />
                         <div class="play-button-overlay">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.9)"/>
@@ -86,7 +86,7 @@
                     <path d="M14 8.66659V11.9999C14 13.1045 13.1046 13.9999 12 13.9999H4C2.89543 13.9999 2 13.1045 2 11.9999V3.99992C2 2.89535 2.89543 1.99992 4 1.99992H7.33333" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </span>
-                <img src="@/assets/images/game.png" alt="Video game image" />
+                <img src="@/assets/images/game.png" :alt="toLocal('alt.game_image')" />
             </div>
         </div>
         <div class="under-button" @click="goToGame()"
@@ -324,7 +324,7 @@
                 v-else
                 :src="require(`@/assets/${video.img}`)"
                 :key="video.id"
-                alt=""
+                :alt="`${toLocal('alt.video_thumbnail')} ${index + 1}`"
                 @click="setMainMessageVideo(video, index)"
                 @keyup.enter="setMainMessageVideo(video, index)"
                 @keyup.space="setMainMessageVideo(video, index)"             
@@ -400,7 +400,7 @@
                     :ref="`testing-video-primary-${index}`"
                     :src="require(`@/assets/${video.img}`)"
                     :key="video.id"
-                    alt=""
+                    :alt="`${toLocal('alt.video_thumbnail')} ${index + 1}`"
                     @click="setMainTestingVideo(video)"
                   @keyup.enter="setMainTestingVideo(video)"
                 @keyup.space="setMainTestingVideo(video)"             

@@ -23,12 +23,12 @@
           <img
             class="smoke-detector"
             src="@/assets/images/smoke_detector.png"
-            alt="Smoke detector image"
+            :alt="toLocal('alt.smoke_detector')"
           />
         </div>
         <div class="circle">
           <div class="red-circle"></div>
-          <img class="smoke" src="@/assets/images/smoke.png" alt="Smoke" />
+          <img class="smoke" src="@/assets/images/smoke.png" :alt="toLocal('alt.smoke_illustration')" />
         </div>
       </div>
     </section>
@@ -317,7 +317,7 @@
               <div class="image-container">
                 <img
                   :src="require(`@/assets/${supporter.logo}`)"
-                  :alt="`${supporter.url_text} logo`"
+                  :alt="supporter.url_text"
                 />
               </div>
               <div class="website-container">
@@ -342,7 +342,7 @@
               <div class="image-container">
                 <img
                   :src="require(`@/assets/${supporter.logo}`)"
-                  :alt="`${supporter.url_text} logo`"
+                  :alt="supporter.url_text"
                 />
               </div>
               <div class="website-container">
@@ -365,7 +365,7 @@
               ><div class="image-container">
                 <img
                   :src="require(`@/assets/${supporter.logo}`)"
-                  :alt="`${supporter.url_text} logo`"
+                  :alt="supporter.url_text"
                 />
               </div>
               <div class="website-container">
@@ -400,7 +400,7 @@
             <img
               v-if="card.img != ''"
               :src="require(`@/assets/${card.img}`)"
-              :alt="`${toLocal(card.key1)} ${toLocal(card.key2)} illustration`"
+              :alt="`${toLocal(card.key1)} ${toLocal(card.key2)}`"
             />
           </button>
         </article>

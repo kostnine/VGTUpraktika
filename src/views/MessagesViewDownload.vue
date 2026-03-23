@@ -30,7 +30,7 @@
                             <path d="M14 8.66659V11.9999C14 13.1045 13.1046 13.9999 12 13.9999H4C2.89543 13.9999 2 13.1045 2 11.9999V3.99992C2 2.89535 2.89543 1.99992 4 1.99992H7.33333" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <img src="@/assets/images/game.png" alt="Video game image" />
+                    <img src="@/assets/images/game.png" :alt="toLocal('alt.game_image')" />
                 </div>
             </div>
             <div 
@@ -364,7 +364,7 @@
                                     class="single-gif" 
                                     draggable="false" 
                                     :src="require(`@/assets/gifs/${$store.state.lang}/${gif.id}.gif`)" 
-                                    alt="gif"
+                                    :alt="`${toLocal('alt.gif_image')} ${idx + 1}`"
                                 >
                             </template>
                         </vueper-slide>

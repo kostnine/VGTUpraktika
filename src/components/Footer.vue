@@ -4,8 +4,7 @@
       <div class="image-with-under-text">
         <img
           src="@/assets/logo.svg"
-          alt="Smoke Alarm Day logo"
-          aria-label="Smoke Alarm Day logo"
+          :alt="toLocal('alt.logo')"
         />
       </div>
     </div>
@@ -45,6 +44,8 @@
             <img
               src="@/assets/icons/fb_white.svg"
               class="footer-link"
+              alt=""
+              aria-hidden="true"
               tabindex="0"
               role="link"
               aria-label="Visit our Facebook page"
@@ -55,6 +56,8 @@
             <img
               src="@/assets/icons/ig_white.svg"
               class="footer-link"
+              alt=""
+              aria-hidden="true"
               tabindex="0"
               role="link"
               aria-label="Visit our Instagram profile"
@@ -65,6 +68,8 @@
             <img
               src="@/assets/icons/linkin_white.svg"
               class="footer-link"
+              alt=""
+              aria-hidden="true"
               tabindex="0"
               role="link"
               aria-label="Visit our LinkedIn page"
@@ -75,6 +80,8 @@
             <img
               src="@/assets/icons/x_white.svg"
               class="footer-link"
+              alt=""
+              aria-hidden="true"
               tabindex="0"
               role="link"
               aria-label="Visit our X (Twitter) profile"

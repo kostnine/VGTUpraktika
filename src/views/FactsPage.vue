@@ -15,10 +15,10 @@
           <div class="how-container">
             <div class="how-images">
               <div class="image-container">
-                <img src="@/assets/images/facts/foto9.jpg" alt="How smoke alarm works" />
+                <img src="@/assets/images/facts/foto9.jpg" :alt="toLocal('alt.smoke_alarm_how_works')" />
               </div>
               <div class="image-container">
-                <img src="@/assets/images/facts/foto8.jpg" alt="How smoke alarm works" />
+                <img src="@/assets/images/facts/foto8.jpg" :alt="toLocal('alt.smoke_alarm_how_works')" />
               </div>
             </div>
             <div class="how-text">

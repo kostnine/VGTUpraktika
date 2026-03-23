@@ -23,7 +23,7 @@
           <div class="image-container">
             <img
               src="@/assets/images/C_sign.svg"
-              alt="CE certification mark"
+              :alt="toLocal('alt.ce_mark')"
              
             />
           </div>
@@ -34,7 +34,7 @@
           <div class="main-content-image">
             <img
               src="@/assets/images/battery.jpg"
-              alt="Smoke detector battery types"
+              :alt="toLocal('alt.battery_types')"
               
             />
           </div>
@@ -78,7 +78,7 @@
       >
         <!-- Dekoratyvinis fonas -->
         <div class="main-content-red-bar" aria-hidden="true">
-          <img src="@/assets/images/smoke.png" alt="" />
+          <img src="@/assets/images/smoke.png" :alt="toLocal('alt.smoke_illustration')" />
         </div>
 
         <!-- Turinys su paveikslėliu -->
@@ -86,8 +86,8 @@
           <div class="main-content-image">
             <img
               src="@/assets/images/types_smoke_detector.png"
-              alt="Interconnected smoke detectors example"
- 
+              :alt="toLocal('alt.interconnected_detectors')"
+
             />
           </div>
 

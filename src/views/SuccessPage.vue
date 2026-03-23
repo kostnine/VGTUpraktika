@@ -2,8 +2,6 @@
     <div class="facts-page-container">
       <PageHeader
         image="images/4.jpg"
-        
-        alt="Success image"
         title="header.success"
         content="header.saved-lives"
         buttonText="facts.read_more"
@@ -69,7 +67,7 @@
               <div class="image-container" v-for="n in 3" v-bind:key="n">
                 <img
                   :src="require('@/assets/images/facts/' + n + '.jpg')"
-                  alt="The image shows the burnt smoke alarm"
+                  :alt="toLocal('alt.burnt_smoke_alarm')"
                 />
               </div>
             </div>

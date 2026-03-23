@@ -166,7 +166,7 @@
                 v-for="(location, index) in locations1"
                 :key="index"
               >
-                <img :src="require(`@/assets/${location.img}`)" />
+                <img :src="require(`@/assets/${location.img}`)" :alt="toLocal(location.text)" />
                 <p>{{ toLocal(location.text) }}</p>
               </div>
               <div class="location">
@@ -266,7 +266,7 @@
                 v-for="(location, index) in locations2"
                 :key="index"
               >
-                <img :src="require(`@/assets/${location.img}`)" />
+                <img :src="require(`@/assets/${location.img}`)" :alt="toLocal(location.text)" />
                 <p>{{ toLocal(location.text) }}</p>
               </div>
             </div>

@@ -143,7 +143,7 @@
               <img
                 :src="require(`@/assets/${video.img}`)"
                 :key="`videoImgKey-${video.id}`"
-                :alt="`Thumbnail for ${toLocal('home.support_video_' + index)}`"
+                :alt="`${toLocal('alt.video_thumbnail')} ${index + 1}`"
                 @click="setMainMessageVideo(video, index)"
                 tabindex="0"
                 role="button"
