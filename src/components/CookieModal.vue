@@ -468,7 +468,7 @@ export default {
 }
 a {
   cursor: pointer;
-  color: #c0554b;
+  color: $mainColorText;
   &:hover {
     text-decoration: underline;
   }

@@ -1670,6 +1670,19 @@ section {
     }
   }
 }
+
+@keyframes landing-card-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .information {
   background: #fbf3ed;
   display: flex;
@@ -1731,22 +1744,41 @@ section {
         border: none;
         cursor: pointer;
         transition: background-color 0.3s;
+        &:focus-visible {
+          outline: none;
+          outline-offset: 0;
+          border-radius: 15px;
+          box-shadow: inset 0 0 0 3px #000000ff;
+        }
       }
       &:hover {
+        animation: landing-card-bounce 0.05s ease-out 0.3s;
+        transition-delay: 0.3s;
         background: $mainColor;
         .card-content {
+          transition-delay: 0.3s;
           background: $mainColor;
         }
         .click-here{
+          transition-delay: 0.3s;
           color: white;
         }
         .text {
+          transition-delay: 0.3s;
           color: white;
         }
       }
       &:active {
         box-shadow: 0px 2px 3px 0px #0000004f;
       }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card {
+      animation: none;
+    }
+    .card:hover {
+      animation: none;
     }
   }
   h3 {
@@ -1934,6 +1966,7 @@ section {
 }
 </style>
 <style lang="scss">
+@import "@/assets/scss/_variables.scss";
 .swiper-container {
   min-width: 100%;
   min-height: 100%;
@@ -2134,7 +2167,7 @@ section {
       .link{
         transition: 0.25s;
         font-weight: 600;
-        color: #C0554B;
+        color: $mainColorText;
         text-decoration: underline;
         cursor: pointer;
         &:hover{
@@ -2151,7 +2184,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #C0554B;
+  color: $mainColorText;
   font-size: clamp(18px, 2vw, 24px);
   font-weight: 600;
   transition: 0.25s;
@@ -2278,14 +2311,14 @@ a:focus-visible,
         margin-bottom: 0;
 
         a {
-          color: #DB5F53;
+          color: $mainColorText;
           font-weight: 700;
           text-decoration: underline;
           transition: color 0.25s;
           font-size: clamp(14px, 1.6vw, 18px);
 
           &:hover {
-            color: #BE544A;
+            color: $secondaryColor;
           }
         }
       }

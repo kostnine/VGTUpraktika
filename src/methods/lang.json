@@ -6842,6 +6842,20 @@
     "PT": "Vamos jogar o Jogo de Fuga de 120 Segundos",
     "FR": "Jouons au jeu \u00c9vacuation en 120 secondes"
   },
+  "info.opens-link-tooltip": {
+    "EN": "Opens in a new page",
+    "ES": "Se abre en una página nueva",
+    "CZ": "Otevře se na nové stránce",
+    "PL": "Otwiera się na nowej stronie",
+    "EE": "Avaneb uuel lehel",
+    "LV": "Atveras jaunā lapā",
+    "HU": "Új oldalon nyílik meg",
+    "LT": "Atidaroma naujame puslapyje",
+    "MT": "Tinfetaħ f'paġna ġdida",
+    "IT": "Si apre in una nuova pagina",
+    "PT": "Abre numa nova página",
+    "FR": "S'ouvre dans une nouvelle page"
+  },
   "info.check-out": {
     "EN": "Check out an Examples of Successful Smoke Alarm Campaigns and Training Programmes!",
     "ES": "\u00a1Vea ejemplos de campa\u00f1as exitosas de detectores de humo y programas de formaci\u00f3n!",

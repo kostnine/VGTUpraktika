@@ -77,7 +77,15 @@
                     @keyup.space="goToGame()" 
                     tabindex="0" 
                     role="button" 
-                    aria-label="Play fire safety game">
+                    aria-label="Play fire safety game"
+                    :title="toLocal('info.opens-link-tooltip')">
+                <span class="link-indicator" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.6667 1.33325H14.6667V5.33325" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 7.99992L14.6667 1.33325" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 8.66659V11.9999C14 13.1045 13.1046 13.9999 12 13.9999H4C2.89543 13.9999 2 13.1045 2 11.9999V3.99992C2 2.89535 2.89543 1.99992 4 1.99992H7.33333" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
                 <img src="@/assets/images/game.png" alt="Video game image" />
             </div>
         </div>
@@ -86,8 +94,16 @@
                     @keyup.space="goToGame()" 
                     tabindex="0" 
                     role="button" 
-                    aria-label="Play fire safety game">
+                    aria-label="Play fire safety game"
+                    :title="toLocal('info.opens-link-tooltip')">
             <span>{{ toLocal('info.lets-play') }} </span>
+            <span class="link-indicator button" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6667 1.33325H14.6667V5.33325" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 7.99992L14.6667 1.33325" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 8.66659V11.9999C14 13.1045 13.1046 13.9999 12 13.9999H4C2.89543 13.9999 2 13.1045 2 11.9999V3.99992C2 2.89535 2.89543 1.99992 4 1.99992H7.33333" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 22L12 12L2 2" stroke="white" stroke-width="3"/>
             </svg>
@@ -228,7 +244,7 @@
             @keyup.enter="downloadLeaflet(leaflet)"                  
             @keyup.space="downloadLeaflet(leaflet)"         
             tabindex="0"                               
-            role="button"               
+            role="button"              
             :aria-label="`Download ${toLocal(leaflet.text)}`"
           >
             <div class="bottom-content">
@@ -1794,7 +1810,7 @@ h3 {
     align-items: center;
     height: 100%;
     width: 100%;
-    gap: 4px;
+    gap: 12px;
     @media (max-width: 1280px) {
       width: 95%;
     }
@@ -1935,7 +1951,6 @@ h3 {
   .subtitle {
     font-size: 20px;
     line-height: 24px;
-    width: 100%;
   }
   .video-container {
     display: flex;
@@ -2026,8 +2041,29 @@ h3 {
           cursor: pointer;
           transition: 0.25s;
           pointer-events: all;
+          position: relative;
           &:hover{
               transform: scale(0.95)
+          }
+          .link-indicator {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              z-index: 2;
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              color: #1E1826;
+              background: rgba(255, 255, 255, 0.92);
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+              pointer-events: none;
+              &.button {
+                  color: #C0554B;
+                  background: rgba(255, 255, 255, 0.98);
+              }
           }
       }
   }
@@ -2051,9 +2087,25 @@ h3 {
       &:hover{
           background-color: #483A5B;
       }
+      .link-indicator {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #1E1826;
+          background: rgba(255, 255, 255, 0.92);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+          flex-shrink: 0;
+          pointer-events: none;
+          &.button {
+              color: #C0554B;
+              background: rgba(255, 255, 255, 0.98);
+          }
+      }
   }
 }
-
 
 .information-container{
     display: flex;
@@ -2070,7 +2122,6 @@ h3 {
       background-color: #C0554B;
     }
   }
-  
   .spain-container2 {
     width: 100%;
     display: flex;
