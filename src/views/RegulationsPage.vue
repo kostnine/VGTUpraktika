@@ -3,9 +3,9 @@
     <header role="banner">
       <PageHeader
         image="images/Man_writing.png"
-        :title="toLocal('header.extra_europe')"
-        :content="toLocal('reg.check_map')"
-        :buttonText="toLocal('facts.read_more')"
+        title="header.extra_europe"
+        content="reg.check_map"
+        buttonText="facts.read_more"
         scrollTo="map"
         aria-label="Main header"
       />
