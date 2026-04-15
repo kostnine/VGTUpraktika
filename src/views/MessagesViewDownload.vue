@@ -125,7 +125,7 @@
                         :key="`brochure-${index}`"
                     >
                         <span class="title-under">{{toLocal('regulations.download')}}</span>
-                        <span class="video-title">{{ toLocal("downloads.final_report") }}:</span>
+                        <span class="video-title">{{ toLocal(spainBrochure.text) }}:</span>
                         <div class="brochure-container">
                             <div
                                 class="leaflet"
@@ -393,6 +393,14 @@ import 'vueperslides/dist/vueperslides.css'
                     "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
                     extension: '.pdf',
                     text: "downloads.final_report",
+
+                  },
+                   {
+                    img: "images/downloads/2025_final_report.png",
+                    download_path:
+                    "/downloads/EU Smoke Alarm Day 2025 final report with Appendices final March 2026.pdf",
+                    extension: '.pdf',
+                    text: "downloads.final_report_2025",
 
                   }
                 ],
@@ -1061,8 +1069,13 @@ border-radius: 50%;
           .title-under{
             color: #ffffff;
             width: 100%;
-
+            @media(max-width: 1000px){
+                text-align: center;
+            }
           }
+        }
+          @media(max-width: 1280px){
+            flex-wrap: wrap;
         }
       }
 
@@ -1075,7 +1088,7 @@ border-radius: 50%;
         width: 30%;
         justify-content: center;
         @media(max-width: 1280px){
-          width: 50%;
+          width: 33%;
         }
         .video-title {
         height: 15%;
@@ -1102,7 +1115,7 @@ border-radius: 50%;
         }
         .brochure-container {
           height: 100%;
-          width: 75%;
+          width: 98%;
           display: flex;
           flex-direction: column;
           @media (max-width: 768px) {
@@ -1114,6 +1127,7 @@ border-radius: 50%;
           }
           @media(max-width: 1000px){
             width: 100%;
+            align-items: center;
           }
         .title {
           height: 15%;
@@ -1142,13 +1156,21 @@ border-radius: 50%;
           overflow: hidden;
           cursor: pointer;
           background-repeat: no-repeat;
-          background-size: 100% 100%;
+          background-size: contain;
+          background-position: center;
+          max-width: 25rem;
           @media (max-width: 1000px) {
             width: 100%;
             min-height: 400px;
           }
           @media(min-width: 1280px){
             min-height: 285px;
+          }
+          @media(max-width: 1280px){
+            min-height: 266px;
+          }
+          @media(max-width: 768px){
+            min-height: 293px;
           }
           .bottom-content {
             display: flex;

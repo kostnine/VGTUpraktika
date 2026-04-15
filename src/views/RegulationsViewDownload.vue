@@ -68,7 +68,7 @@
                     {{toLocal('regulations.download')}}
                   </h3>
                   <h4 class="video-title"
-                        >{{ toLocal("downloads.final_report") }}:</h4
+                        >{{ toLocal(spainBrochure.text) }}:</h4
                     >
                   <div class="brochure-container">
                 <div
@@ -272,6 +272,14 @@
                 extension: '.pdf',
                 text: "downloads.final_report",
 
+              },
+              {
+                img: "images/downloads/2025_final_report.png",
+                download_path:
+                "/downloads/EU Smoke Alarm Day 2025 final report with Appendices final March 2026.pdf",
+                extension: '.pdf',
+                text: "downloads.final_report_2025",
+
               }
             ]
             };
@@ -428,8 +436,13 @@ span {
           .title-under{
             color: #ffffff;
             width: 100%;
-
+            @media(max-width: 1000px){
+                text-align: center;
+            }
           }
+        }
+        @media(max-width: 1280px){
+            flex-wrap: wrap;
         }
       }
 
@@ -442,7 +455,7 @@ span {
         width: 30%;
         justify-content: center;
         @media(max-width: 1280px){
-          width: 50%;
+          width: 33%;
         }
         .video-title {
         height: 15%;
@@ -469,7 +482,7 @@ span {
         }
         .brochure-container {
           height: 100%;
-          width: 75%;
+          width: 98%;
           display: flex;
           flex-direction: column;
           @media (max-width: 768px) {
@@ -481,6 +494,7 @@ span {
           }
           @media(max-width: 1000px){
             width: 100%;
+            align-items: center;
           }
         .title {
           height: 15%;
@@ -509,13 +523,21 @@ span {
           overflow: hidden;
           cursor: pointer;
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: contain;
+          background-position: center;
+          max-width: 25rem;
           @media (max-width: 1000px) {
             width: 100%;
             min-height: 400px;
           }
           @media(min-width: 1280px){
             min-height: 285px;
+          }
+          @media(max-width: 1280px){
+            min-height: 266px;
+          }
+          @media(max-width: 768px){
+            min-height: 293px;
           }
           .bottom-content {
             display: flex;

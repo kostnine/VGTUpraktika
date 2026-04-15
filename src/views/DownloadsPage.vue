@@ -170,7 +170,7 @@
                 {{toLocal('regulations.download')}}
               </h3>
               <h4 class="video-title"
-                    >{{ toLocal("downloads.final_report") }}:</h4
+                    >{{ toLocal(spainBrochure.text) }}:</h4
                 >
               <div class="brochure-container">
             <div
@@ -563,6 +563,14 @@ export default {
           "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
           extension: '.pdf',
           text: "downloads.final_report",
+
+        },
+         {
+          img: "images/downloads/2025_final_report.png",
+          download_path:
+          "/downloads/EU Smoke Alarm Day 2025 final report with Appendices final March 2026.pdf",
+          extension: '.pdf',
+          text: "downloads.final_report_2025",
 
         }
       ],
@@ -1682,8 +1690,14 @@ h3 {
           color: #ffffff;
           width: 100%;
           font-size: clamp(14px, 1vw, 16px);
+           @media(max-width: 1000px){
+              text-align: center;
+          }
         }
       }
+       @media(max-width: 1280px){
+            flex-wrap: wrap;
+        }
     }
 
     .download{
@@ -1695,7 +1709,7 @@ h3 {
       width: 30%;
       justify-content: center;
       @media(max-width: 1280px){
-        width: 50%;
+        width: 33%;
       }
       .video-title {
       height: 15%;
@@ -1722,7 +1736,7 @@ h3 {
       }
       .brochure-container {
         height: 100%;
-        width: 75%;
+        width: 98%;
         display: flex;
         flex-direction: column;
         @media (max-width: 768px) {
@@ -1734,6 +1748,7 @@ h3 {
         }
         @media(max-width: 1000px){
           width: 100%;
+          align-items: center;
         }
       .title {
         height: 15%;
@@ -1762,13 +1777,22 @@ h3 {
         overflow: hidden;
         cursor: pointer;
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        // background-size: 100% 100%;
+        background-size: contain;
+        background-position: center;
+        max-width: 25rem;
         @media (max-width: 1000px) {
           width: 100%;
           min-height: 400px;
         }
         @media(min-width: 1280px){
           min-height: 285px;
+        }
+        @media(max-width: 1280px){
+          min-height: 266px;
+        }
+        @media(max-width: 768px){
+          min-height: 293px;
         }
         .bottom-content {
           display: flex;
@@ -1888,6 +1912,7 @@ h3 {
         text-align: center;
         width: 100%;
       }
+      
     }
     .spain-title {
       font-size: clamp(26px, 2.5vw, 32px);
@@ -2162,7 +2187,7 @@ h3 {
           .title-under{
             color: #ffffff;
             width: 100%;
-
+           
           }
         }
       }
@@ -2215,6 +2240,7 @@ h3 {
           }
           @media(max-width: 1000px){
             width: 100%;
+            align-items: center;
           }
         .title {
           height: 15%;
