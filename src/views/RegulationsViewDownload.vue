@@ -16,6 +16,50 @@
                 >
                 </div>
                 <div class="video-row">
+                <!-- 2025 Final Report -->
+                <div class="section-container download">
+                  <h3 class="title-under">
+                    {{toLocal('regulations.download')}}
+                  </h3>
+                  <h4 class="video-title"
+                        >{{ toLocal(webinarBrochures[0].text) }}:</h4
+                    >
+                  <div class="brochure-container">
+                <div
+                class="leaflet"
+                :style="{
+                    backgroundImage:
+                    'url(' + require(`@/assets/${webinarBrochures[0].img}`) + ')',
+                }"
+                                @click="downloadLeaflet(webinarBrochures[0])"
+                                @keyup.enter="downloadLeaflet(webinarBrochures[0])"
+                                @keyup.space="downloadLeaflet(webinarBrochures[0])"
+                                tabindex="0"
+                                role="button"
+                                :aria-label="`Download ${toLocal(webinarBrochures[0].text)}`"
+                >
+                <div class="bottom-content">
+                    <div class="leaflet-text">
+                    {{ toLocal(webinarBrochures[0].text) }}
+                    </div>
+                    <div class="download-btn">
+                    <svg
+                        width="37"
+                        height="37"
+                        viewBox="0 0 37 37"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                        fill="white"
+                        />
+                    </svg>
+                    </div>
+                </div>
+                </div>
+                  </div>
+            </div>
                 <!-- 2025 European Smoke Alarm Day Webinar -->
                 <div class="section-container">
                     <div class="video-container-with-text">
@@ -39,7 +83,50 @@
                     >
                     </div>
                 </div>
-
+                <!-- 2024 Final Report -->
+                <div class="section-container download">
+                  <h3 class="title-under">
+                    {{toLocal('regulations.download')}}
+                  </h3>
+                  <h4 class="video-title"
+                        >{{ toLocal(webinarBrochures[1].text) }}:</h4
+                    >
+                  <div class="brochure-container">
+                <div
+                class="leaflet"
+                :style="{
+                    backgroundImage:
+                    'url(' + require(`@/assets/${webinarBrochures[1].img}`) + ')',
+                }"
+                                @click="downloadLeaflet(webinarBrochures[1])"
+                                @keyup.enter="downloadLeaflet(webinarBrochures[1])"
+                                @keyup.space="downloadLeaflet(webinarBrochures[1])"
+                                tabindex="0"
+                                role="button"
+                                :aria-label="`Download ${toLocal(webinarBrochures[1].text)}`"
+                >
+                <div class="bottom-content">
+                    <div class="leaflet-text">
+                    {{ toLocal(webinarBrochures[1].text) }}
+                    </div>
+                    <div class="download-btn">
+                    <svg
+                        width="37"
+                        height="37"
+                        viewBox="0 0 37 37"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
+                        fill="white"
+                        />
+                    </svg>
+                    </div>
+                </div>
+                </div>
+                  </div>
+            </div>
                 <!-- 2024 European Smoke Alarm Day Webinar -->
                 <div class="section-container">
                     <div class="video-container-with-text">
@@ -63,49 +150,6 @@
                     >
                     </div>
                 </div>
-                <div class="section-container download" v-for="spainBrochure, index in webinarBrochures" :key="`brochure-${index}`">
-                  <h3 class="title-under">
-                    {{toLocal('regulations.download')}}
-                  </h3>
-                  <h4 class="video-title"
-                        >{{ toLocal(spainBrochure.text) }}:</h4
-                    >
-                  <div class="brochure-container">
-                <div
-                class="leaflet"
-                :style="{
-                    backgroundImage:
-                    'url(' + require(`@/assets/${spainBrochure.img}`) + ')',
-                }"
-                                @click="downloadLeaflet(spainBrochure)"
-                                @keyup.enter="downloadLeaflet(spainBrochure)"
-                                @keyup.space="downloadLeaflet(spainBrochure)"
-                                tabindex="0"
-                                role="button"
-                                :aria-label="`Download ${toLocal(spainBrochure.text)}`"
-                >
-                <div class="bottom-content">
-                    <div class="leaflet-text">
-                    {{ toLocal(spainBrochure.text) }}
-                    </div>
-                    <div class="download-btn">
-                    <svg
-                        width="37"
-                        height="37"
-                        viewBox="0 0 37 37"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                        d="M13.875 0V13.875H4.625L18.5 27.75L32.375 13.875H23.125V0H13.875ZM0 32.375V37H37V32.375H0Z"
-                        fill="white"
-                        />
-                    </svg>
-                    </div>
-                </div>
-                </div>
-                  </div>
-            </div>
                 </div>
             </div>
 
@@ -266,19 +310,19 @@
             ],
             webinarBrochures:[
               {
-                img: "images/downloads/Asset12.svg",
-                download_path:
-                "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
-                extension: '.pdf',
-                text: "downloads.final_report",
-
-              },
-              {
                 img: "images/downloads/2025_final_report.png",
                 download_path:
                 "/downloads/EU Smoke Alarm Day 2025 final report with Appendices final March 2026.pdf",
                 extension: '.pdf',
                 text: "downloads.final_report_2025",
+
+              },
+              {
+                img: "images/downloads/Asset12.svg",
+                download_path:
+                "/downloads/EU Smoke Alarm Day 2024 final report with Appendices final Feb 2025.pdf",
+                extension: '.pdf',
+                text: "downloads.final_report",
 
               }
             ]

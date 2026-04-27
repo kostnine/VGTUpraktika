@@ -1011,16 +1011,20 @@ section {
   flex-direction: row;
   align-items: center;
   position: relative;
-  padding: clamp(120px, calc(250px + (100vw - 1077px) * (250 - 120) / (1280 - 1077)), 250px) 0 0 calc(clamp(0px, 10vw, 160px));
+   padding: 0 0 0 calc(clamp(0px, 10vw, 160px));
+  //padding: 0 0 0 calc(min(160px, 10vw));
   .text {
     display: flex;
     flex-direction: column;
+    // justify-content: center;
     align-items: flex-start;
     flex: 1;
     height: 100%;
     margin-top: -7rem;
+    /* Add padding-top to prevent overlap with webinar banner */
     padding-top: clamp(80px, 22vh, 5px);
   }
+  /* === Fix text padding for smaller screen heights === */
   @media (max-height: 830px) and (min-width: 1025px) {
     .text {
       margin-top: -15rem !important;
@@ -2188,11 +2192,11 @@ section {
 /* Accessibility Banner (pagal Figma) */
 
 .accessibility-banner {
-  display: none;
   width: 100%;
   min-height: 44px;
   background-color: #483a5b;
   color: #ffffff;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-family: Barlow;

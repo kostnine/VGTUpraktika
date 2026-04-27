@@ -29,18 +29,18 @@
     "FR": "Programme complet et inscription :"
   },
   "webinar.registration.line3": {
-    "EN": "on 7 November 2026, from 11:00 to 13:00 CET.",
-    "ES": "el 7 de noviembre de 2026, de 11:00 a 13:00 CET.",
-    "CZ": "7. listopadu 2026, od 11:00 do 13:00 CET.",
-    "PL": "7 listopada 2026, od 11:00 do 13:00 CET.",
-    "EE": "7. novembril 2026, kell 11:00–13:00 CET.",
-    "LV": "7. novembrī 2026, no 11:00 līdz 13:00 CET.",
-    "HU": "2026. november 7-én, 11:00–13:00 CET között.",
-    "LT": "2026 m. lapkričio 7 d., nuo 11:00 iki 13:00 CET.",
-    "MT": "fis-7 ta' Novembru 2026, minn 11:00 sa 13:00 CET.",
-    "IT": "il 7 novembre 2026, dalle 11:00 alle 13:00 CET.",
-    "PT": "a 7 de novembro de 2026, das 11:00 às 13:00 CET.",
-    "FR": "le 7 novembre 2026, de 11h00 à 13h00 CET."
+    "EN": "on 20 November 2026, from 11:00 to 13:00 CET.",
+    "ES": "el 20 de noviembre de 2026, de 11:00 a 13:00 CET.",
+    "CZ": "20. listopadu 2026, od 11:00 do 13:00 CET.",
+    "PL": "20 listopada 2026, od 11:00 do 13:00 CET.",
+    "EE": "20. novembril 2026, kell 11:00–13:00 CET.",
+    "LV": "20. novembrī 2026, no 11:00 līdz 13:00 CET.",
+    "HU": "2026. november 20-án, 11:00–13:00 CET között.",
+    "LT": "2026 m. lapkričio 20 d., nuo 11:00 iki 13:00 CET.",
+    "MT": "fis-20 ta' Novembru 2026, minn 11:00 sa 13:00 CET.",
+    "IT": "il 20 novembre 2026, dalle 11:00 alle 13:00 CET.",
+    "PT": "a 20 de novembro de 2026, das 11:00 às 13:00 CET.",
+    "FR": "le 20 novembre 2026, de 11h00 à 13h00 CET."
   },
   "webinar.registration.cta": {
     "EN": "Register here!",
@@ -57,18 +57,18 @@
     "FR": "Inscrivez-vous ici !"
   },
   "accessibility.banner_text": {
-    "EN": "We are committed to making our website accessible in line with the EU Web Accessibility Directive and the European Accessibility Act. The site is partially compliant with WCAG 2.2 AA, with keyboard navigation and improved HTML structure already implemented. We continue working towards full compliance.",
-    "ES": "Estamos comprometidos a hacer que nuestro sitio web sea accesible de acuerdo con la Directiva de Accesibilidad Web de la UE y la Ley Europea de Accesibilidad. El sitio cumple parcialmente con las WCAG 2.2 AA, con navegación por teclado y estructura HTML mejorada ya implementadas. Continuamos trabajando hacia el cumplimiento total.",
-    "CZ": "Zavazujeme se zpřístupnit naše webové stránky v souladu s směrnicí EU o přístupnosti webu a Evropským aktem o přístupnosti. Web je částečně v souladu se WCAG 2.2 AA, s již implementovanou navigací pomocí klávesnice a vylepšenou strukturou HTML. Pokračujeme v práci na dosažení plné shody.",
-    "PL": "Zobowiązujemy się do zapewnienia dostępności naszej strony internetowej zgodnie z Dyrektywą UE w sprawie dostępności stron internetowych oraz Europejskim Aktem o Dostępności. Strona jest częściowo zgodna z WCAG 2.2 AA, z już wdrożoną nawigacją klawiaturową i ulepszoną strukturą HTML. Kontynuujemy pracę nad pełną zgodnością.",
-    "EE": "Oleme pühendunud oma veebisaidi ligipääsetavuse tagamisele vastavalt ELi veebiligipääsetavuse direktiivile ja Euroopa ligipääsetavuse aktile. Veebisait on osaliselt vastavuses WCAG 2.2 AA nõuetega, klaviatuurinavigatsioon ja täiustatud HTML-struktuur on juba rakendatud. Jätkame tööd täieliku vastavuse saavutamiseks.",
-    "LV": "Mēs esam apņēmušies nodrošināt, ka mūsu tīmekļa vietne ir pieejama saskaņā ar ES tīmekļa piekļūstamības direktīvu un Eiropas piekļūstamības aktu. Vietne daļēji atbilst WCAG 2.2 AA standartiem, ar jau ieviesto tastatūras navigāciju un uzlabotu HTML struktūru. Mēs turpinām strādāt pie pilnīgas atbilstības.",
-    "HU": "Elkötelezettek vagyunk amellett, hogy weboldalunk megfeleljen az EU webes akadálymentesítési irányelvének és az Európai Akadálymentesítési Törvénynek. Az oldal részben felel meg a WCAG 2.2 AA előírásoknak, a billentyűzetes navigáció és a továbbfejlesztett HTML struktúra már meg van valósítva. Folytatjuk a munkát a teljes megfelelés felé.",
-    "LT": "Esame įsipareigoję padaryti savo svetainę prieinamą pagal ES žiniatinklio prieinamumo direktyvą ir Europos prieinamumo aktą. Svetainė iš dalies atitinka WCAG 2.2 AA reikalavimus, su jau įdiegta klaviatūros navigacija ir patobulinta HTML struktūra. Toliau siekiame visiško atitikimo.",
-    "MT": "Aħna impenjati li nagħmlu l-websajt tagħna aċċessibbli skont id-Direttiva tal-UE dwar l-Aċċessibilità tal-Web u l-Att Ewropew dwar l-Aċċessibilità. Is-sit jikkonforma parzjalment ma' WCAG 2.2 AA, b'navigazzjoni bit-tastiera u struttura HTML imtejba diġà implimentati. Qegħdin inkomplu naħdmu lejn konformità sħiħa.",
-    "IT": "Siamo impegnati a rendere il nostro sito web accessibile in conformità con la Direttiva UE sull'accessibilità del web e l'Atto europeo sull'accessibilità. Il sito è parzialmente conforme alle WCAG 2.2 AA, con navigazione da tastiera e struttura HTML migliorata già implementate. Continuiamo a lavorare verso la piena conformità.",
-    "PT": "Estamos empenhados em tornar o nosso site acessível em conformidade com a Diretiva da UE sobre Acessibilidade na Web e o Ato Europeu de Acessibilidade. O site está parcialmente em conformidade com as WCAG 2.2 AA, com navegação por teclado e estrutura HTML melhorada já implementadas. Continuamos a trabalhar para alcançar a conformidade total.",
-    "FR": "Nous nous engageons à rendre notre site web accessible conformément à la Directive européenne sur l'accessibilité du Web et à l'Acte européen sur l'accessibilité. Le site est partiellement conforme aux WCAG 2.2 AA, avec une navigation au clavier et une structure HTML améliorée déjà mises en œuvre. Nous continuons à travailler vers une conformité totale."
+    "EN": "Navigate without barriers: we have fully adapted our website to the standards of the European Accessibility Act (EAA).",
+    "ES": "Navega sin barreras: hemos adaptado completamente nuestro sitio web a los estándares del Acta Europea de Accesibilidad (EAA).",
+    "CZ": "Procházejte bez bariér: plně jsme přizpůsobili naše webové stránky standardům Evropského aktu o přístupnosti (EAA).",
+    "PL": "Przeglądaj bez barier: w pełni dostosowaliśmy naszą stronę do standardów Europejskiego Aktu o Dostępności (EAA).",
+    "EE": "Sirvige takistusteta: oleme oma veebisaidi täielikult kohandanud Euroopa ligipääsetavuse akti (EAA) standarditele.",
+    "LV": "Pārlūkojiet bez šķēršļiem: mēs esam pilnībā pielāgojuši savu vietni Eiropas Pieejamības akta (EPA) standartiem.",
+    "HU": "Böngésszen akadályok nélkül: weboldalunkat teljes mértékben az Európai akadálymentesítési irányelv (EAA) szabványaihoz igazítottuk.",
+    "LT": "Naršykite be kliūčių: esame pilnai pritaikę svetainę pagal Europos prieinamumo akto (EAA) standartus.",
+    "MT": "Ibbrawżja mingħajr ostakli: addattajna l-websajt tagħna b'mod sħiħ għall-istandards tal-Att Ewropew dwar l-Aċċessibbiltà (EAA).",
+    "IT": "Naviga senza barriere: abbiamo completamente adattato il nostro sito web agli standard dell'Atto europeo sull'accessibilità (EAA).",
+    "PT": "Navegue sem barreiras: adaptámos totalmente o nosso website aos padrões da Lei Europeia da Acessibilidade (EAA).",
+    "FR": "Naviguez sans barrières : nous avons entièrement adapté notre site web aux normes de l'Acte européen sur l'accessibilité (AEA)."
   },
   "home.european": {
     "EN": "European",
@@ -99,18 +99,18 @@
     "FR": "<strong>D\u00e9tecteurs de Fum\u00e9e</strong>"
   },
   "home.main_date": {
-    "EN": "7th November ",
-    "ES": "7 de noviembre",
-    "CZ": "7. listopadu ",
-    "PL": "7 listopada ",
-    "EE": "7. november ",
-    "LV": "7. novembris ",
-    "HU": "November 7. ",
-    "LT": "Lapkri\u010dio 7 d. ",
-    "MT": "7 ta' Novembru",
-    "IT": "7-Nov.",
-    "PT": "7 de Novembro",
-    "FR": "Le 7 novembre "
+    "EN": "20th November ",
+    "ES": "20 de noviembre",
+    "CZ": "20. listopadu ",
+    "PL": "20 listopada ",
+    "EE": "20. november ",
+    "LV": "20. novembris ",
+    "HU": "November 20. ",
+    "LT": "Lapkri\u010dio 20 d. ",
+    "MT": "20 ta' Novembru",
+    "IT": "20-Nov.",
+    "PT": "20 de Novembro",
+    "FR": "Le 20 novembre "
   },
   "home.campaign": {
     "EN": "European Smoke Alarm Day is a joint campaign by the European Fire Safety Alliance and the Federation of European Fire Officers to promote greater awareness about smoke alarms. It is organised as part of the activities of European Fire Safety Week which takes place annually in November.",
