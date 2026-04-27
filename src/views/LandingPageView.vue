@@ -1006,107 +1006,102 @@ section {
     }
   }
 }
-.date {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-   padding: 0 0 0 calc(clamp(0px, 10vw, 160px));
-  //padding: 0 0 0 calc(min(160px, 10vw));
-  .text {
-    display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-    height: 100%;
-    margin-top: -7rem;
-    /* Add padding-top to prevent overlap with webinar banner */
-    padding-top: clamp(80px, 22vh, 5px);
-  }
-  /* === Fix text padding for smaller screen heights === */
-  @media (max-height: 830px) and (min-width: 1025px) {
-    .text {
-      margin-top: -15rem !important;
-      padding-top: clamp(245px, 25vh, 250px) !important;
-    }
-  }
+ .date {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   position: relative;
+   padding: clamp(120px, calc(250px + (100vw - 1077px) * (250 - 120) / (1280 - 1077)), 250px) 0 0 calc(clamp(0px, 10vw, 160px));
+   .text {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     flex: 1;
+     height: 100%;
+     margin-top: -7rem;
+     padding-top: clamp(80px, 22vh, 5px);
+   }
+   @media (max-height: 830px) and (min-width: 1025px) {
+     .text {
+       margin-top: -15rem !important;
+       padding-top: clamp(245px, 25vh, 250px) !important;
+     }
+   }
 
-  @media (max-width: 880px) {
-    padding: 0 0 0 calc(clamp(0px, 10vw, 160px));
-    flex-direction: column;
-    height: calc(100vh - 55px);
-    .text {
-      width: 100%;
-      padding: 0rem;
-      margin: 0;
-      padding: 0 calc(clamp(0px, 10vw, 160px)) 0 0;
-      /* Increased padding-top for mobile to give more breathing room */
-      padding-top: clamp(10px, 15vh, 25px);
-    }
-    h1 {
-      font-size: clamp(36px, 6vw, 96px);
-    }
-    h2 {
-      margin: 1rem 0 0;
-      font-size: clamp(36px, 6vw, 96px);
-    }
-    .hashtag {
-      margin: 2rem 0 0;
-    }
-    .illustrations {
-      width: 100%;
-      margin-top: 32px;
-      .smoke-detector-container {
-        margin-top: 0px;
-        left: 0rem;
-        right: -10vw;
-        bottom: 23vw;
-        top: 20px;
-        margin: auto;
-        height: 30vh;
-        width: 30vh;
-        min-width: 180px;
-        min-height: 180px;
-      }
-      @media (max-height: 640px) {
-        // margin-top: 128px;
-        .smoke-detector-container {
-          right: 0;
-          height: 25vh;
-          width: 25vh;
-          bottom: 9vh;
-          min-width: 180px;
-          min-height: 180px;
-        }
-      }
-      @media (max-height: 550px) {
-        // margin-top: 128px;
-        .smoke-detector-container {
-          display: none;
-        }
-      }
-      @media (max-height: 487px) {
-        display: none;
-      }
-      .smoke-detector-container {
-        top: 50px;
-      }
-      .red-circle {
-        width: 90vw;
-        height: 90vw;
-        left: 0;
-        right: 0;
-        margin: auto;
-        bottom: -23vh;
-        right: -32vw;
-      }
-      .smoke {
-        left: -8rem;
+   @media (max-width: 880px) {
+    padding: 150px 0 0 calc(clamp(0px, 10vw, 160px));
+     flex-direction: column;
+     height: calc(100vh - 55px);
+     .text {
+       width: 100%;
+       padding: 0rem;
+       margin: 0;
+       padding: 0 calc(clamp(0px, 10vw, 160px)) 0 0;
+      padding-top: 0;
+     }
+     h1 {
+       font-size: clamp(36px, 6vw, 96px);
+     }
+     h2 {
+       margin: 1rem 0 0;
+       font-size: clamp(36px, 6vw, 96px);
+     }
+     .hashtag {
+       margin: 2rem 0 0;
+     }
+     .illustrations {
+       width: 100%;
+       margin-top: 32px;
+       .smoke-detector-container {
+         margin-top: 0px;
+         left: 0rem;
+         right: -10vw;
+         bottom: 23vw;
+         top: 20px;
+         margin: auto;
+         height: 30vh;
+         width: 30vh;
+         min-width: 180px;
+         min-height: 180px;
+       }
+       @media (max-height: 640px) {
+         // margin-top: 128px;
+         .smoke-detector-container {
+           right: 0;
+           height: 25vh;
+           width: 25vh;
+           bottom: 9vh;
+           min-width: 180px;
+           min-height: 180px;
+         }
+       }
+       @media (max-height: 550px) {
+         // margin-top: 128px;
+         .smoke-detector-container {
+           display: none;
+         }
+       }
+       @media (max-height: 487px) {
+         display: none;
+       }
+       .smoke-detector-container {
+         top: 50px;
+       }
+       .red-circle {
+         width: 90vw;
+         height: 90vw;
+         left: 0;
+         right: 0;
+         margin: auto;
+         bottom: -23vh;
+         right: -32vw;
+       }
+       .smoke {
+         left: -8rem;
       }
     }
   }
-}
+ }
 .illustrations {
   flex: 1;
   position: relative;
@@ -1228,10 +1223,6 @@ section {
         cursor: pointer;
       }
 
-      &.loading {
-        video {
-        }
-      }
     }
     h3 {
       font-size: clamp(24px, 3vw, 64px);
@@ -2192,11 +2183,11 @@ section {
 /* Accessibility Banner (pagal Figma) */
 
 .accessibility-banner {
+  display: flex;
   width: 100%;
   min-height: 44px;
   background-color: #483a5b;
   color: #ffffff;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-family: Barlow;
@@ -2204,10 +2195,13 @@ section {
   line-height: 1.5;
   padding: 8px 24px;
   box-sizing: border-box;
-  position: relative;
+  position: absolute;
+  top: 200px;
+  left: 0;
   z-index: 5;
-  //nuimti po bannerio
-  margin-top: clamp(120px, calc(250px + (100vw - 1077px) * (250 - 120) / (1280 - 1077)), 250px);
+  @media (max-width: 880px) {
+    top: 110px;
+  }
 
   p {
     margin: 0;
@@ -2226,7 +2220,7 @@ section {
   @media (max-width: 768px) {
     font-size: 11px;
     justify-content: flex-start;
-    padding: 0 16px;
+    padding: 8px 16px;
 
     p {
       text-align: left;
