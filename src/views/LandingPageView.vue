@@ -1028,6 +1028,17 @@ section {
      }
    }
 
+   @media (min-width: 881px) and (max-width: 1080px) {
+     height: auto;
+     min-height: calc(100vh - 244px);
+     padding: 64px 0 0 calc(clamp(0px, 10vw, 160px));
+
+     .text {
+       margin-top: 0;
+       padding-top: 0;
+     }
+   }
+
    @media (max-width: 880px) {
     padding: 150px 0 0 calc(clamp(0px, 10vw, 160px));
      flex-direction: column;
@@ -2199,6 +2210,14 @@ section {
   top: 200px;
   left: 0;
   z-index: 5;
+
+  @media (min-width: 881px) and (max-width: 1080px) {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 200px;
+  }
+
   @media (max-width: 880px) {
     top: 110px;
   }

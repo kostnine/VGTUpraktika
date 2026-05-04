@@ -1101,13 +1101,18 @@ footer.facts-share {
     aspect-ratio: 100/71;
     position: relative;
     cursor: pointer;
+    border-radius: 13px;
+    overflow: hidden;
     .downloadable-title{
-        width: 100%;
+        left: 0;
+        right: 0;
+        width: auto;
         background-color: #1E1826;
         height: 20%;
         position: absolute;
         bottom: 0;
         border-radius: 0 0 13px 13px;
+        box-sizing: border-box;
         color: white;
         display: flex;
         padding: 8px 16px;

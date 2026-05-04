@@ -1817,6 +1817,7 @@ h3 {
         background-position: top;
         min-height: 180px;
         width: 100%;
+        aspect-ratio: 400 / 284;
         border-radius: 10px;
         overflow: hidden;
         cursor: pointer;
@@ -1844,13 +1845,24 @@ h3 {
           position: absolute;
           bottom: 0;
           left: 0;
+          right: 0;
           background: #1e1826;
           color: white;
           padding: 10px;
-          width: 100%;
+          width: auto;
+          border-radius: 0 0 10px 10px;
+          box-sizing: border-box;
+          gap: 12px;
         }
         .leaflet-text {
-          width: 100%;
+          flex: 1 1 auto;
+          line-height: 1.2;
+        }
+        .download-btn {
+          flex: 0 0 auto;
+          svg {
+            display: block;
+          }
         }
       }
       span {
@@ -2309,6 +2321,7 @@ h3 {
           background-position: top;
           min-height: 180px;
           width: 100%;
+          aspect-ratio: 400 / 284;
           border-radius: 10px;
           overflow: hidden;
           cursor: pointer;
@@ -2327,13 +2340,24 @@ h3 {
             position: absolute;
             bottom: 0;
             left: 0;
+            right: 0;
             background: #1e1826;
             color: white;
             padding: 10px;
-            width: 100%;
+            width: auto;
+            border-radius: 0 0 10px 10px;
+            box-sizing: border-box;
+            gap: 12px;
           }
           .leaflet-text {
-            width: 100%;
+            flex: 1 1 auto;
+            line-height: 1.2;
+          }
+          .download-btn {
+            flex: 0 0 auto;
+            svg {
+              display: block;
+            }
           }
         }
         span {
