@@ -370,6 +370,11 @@ export default {
           prefix: "EN",
         },
         {
+          id: 3,
+          name: "Español",
+          prefix: "ES",
+        },
+        {
           id: 11,
           name: "Français",
           prefix: "FR",
@@ -408,11 +413,6 @@ export default {
           id: 11,
           name: "Português",
           prefix: "PT",
-        },
-        {
-          id: 3,
-          name: "Español",
-          prefix: "ES",
         },
       ],
     };
