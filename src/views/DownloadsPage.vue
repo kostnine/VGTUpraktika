@@ -53,6 +53,13 @@
                     </div>
                     <video v-else controls autoplay>
                         <source :src="video.src" type="video/mp4">
+                        <track v-for="(track, trackIdx) in video.tracks || []" 
+                               :key="`track-${trackIdx}`"
+                               :kind="track.kind" 
+                               :src="track.src" 
+                               :srclang="track.srclang" 
+                               :label="track.label"
+                               :default="track.default || false">
                         Your browser does not support the video tag.
                     </video>
                     </div>
@@ -345,6 +352,7 @@
                     },
                   ],
                 }"
+                :tracks="getVideoTracks(video)"
               />
             </swiper-slide>
           </swiper>
@@ -362,6 +370,13 @@
                   :src="require(`@/assets/${video.link}`)"
                   type="video/mp4"
                 />
+                <track v-for="(track, trackIdx) in getVideoTracks(video)"
+                       :key="`video-track-${trackIdx}`"
+                       :kind="track.kind"
+                       :src="track.src"
+                       :srclang="track.srclang"
+                       :label="track.label"
+                       :default="track.default || false" />
                 Your browser does not support the video tag.
               </video>
               <img
@@ -427,6 +442,7 @@
                     },
                   ],
                 }"
+                :tracks="getVideoTracks(activeTestingVideo)"
               />
             </div>
           </div>
@@ -500,6 +516,7 @@
                   },
                 ],
               }"
+              :tracks="getVideoTracks(video)"
             />
           </div>
         </div>
@@ -581,13 +598,31 @@ export default {
           type: 'local',
           src: '/videos/Maria.mp4',
           title: 'Maria Testimonial',
-          thumbnail: '/images/thumbnails/maria-thumbnail.png'
+          thumbnail: '/images/thumbnails/maria-thumbnail.png',
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/Maria.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ]
         },
         {
           type: 'local',
           src: '/videos/Paul.mp4',
           title: 'Paul Testimonial',
-          thumbnail: '/images/thumbnails/paul-thumbnail.png'
+          thumbnail: '/images/thumbnails/paul-thumbnail.png',
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/Paul.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ]
         },
         {
           type: 'youtube',
@@ -881,10 +916,35 @@ export default {
     document.head.appendChild(velocityScript);
     document.addEventListener("focusin", this.handleGlobalFocus);
   },
-  beforeUnmount() {
+  beforeDestroy() {
     document.removeEventListener("focusin", this.handleGlobalFocus);
   },
   methods: {
+    getVideoTracks(video) {
+      if (!video) return [];
+      if (video.tracks) return video.tracks;
+
+      const subtitleMap = {
+        "videos/landingpage/1.FIRESAFETY_CANDLES.mp4": "/videos/landingpage/1.FIRESAFETY_CANDLES.vtt",
+        "videos/landingpage/2.FIRESAFETY_Cooking.mp4": "/videos/landingpage/2.FIRESAFETY_Cooking.vtt",
+        "videos/landingpage/3.FIRESAFETY_PHONE_.mp4": "/videos/landingpage/3.FIRESAFETY_PHONE_.vtt",
+        "videos/landingpage/4.FIRESAFETY_SOCKET.mp4": "/videos/landingpage/4.FIRESAFETY_SOCKET.vtt",
+        "videos/landingpage/5.FIRESAFETY_TONGS.mp4": "/videos/landingpage/5.FIRESAFETY_TONGS.vtt",
+        "videos/landingpage/6.FireSafety-Christmas lights.mp4": "/videos/landingpage/6.FireSafety-Christmas lights.vtt",
+      };
+      const src = subtitleMap[video.link];
+      return src
+        ? [
+            {
+              kind: "subtitles",
+              src,
+              srclang: "en",
+              label: "English",
+              default: true,
+            },
+          ]
+        : [];
+    },
     playThumbnailVideo(index) {
       this.$set(this.playingVideos, index, true);
     },

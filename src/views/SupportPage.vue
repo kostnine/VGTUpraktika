@@ -59,6 +59,7 @@
                       },
                     ],
                   }"
+                  :tracks="video.tracks || []"
                 />
               </swiper-slide>
             </swiper>
@@ -98,6 +99,7 @@
                   },
                 ],
               }"
+              :tracks="video.tracks || []"
             />
           </div>
         </div>
@@ -233,26 +235,71 @@ export default {
           id: 0,
           link: "videos/landingpage/Finland.mp4",
           img: "images/messages_of_support/1.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Finland.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 1,
           link: "videos/landingpage/Czech.mp4",
           img: "images/messages_of_support/2.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Czech.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 2,
           link: "videos/landingpage/Latvia.mp4",
           img: "images/messages_of_support/3.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Latvia.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 3,
           link: "videos/landingpage/Denmark.mp4",
           img: "images/messages_of_support/4.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Denmark.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 4,
           link: "videos/landingpage/Lithuania1.mp4",
           img: "images/messages_of_support/Lithuania_1.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Lithuania1.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 10,
@@ -263,6 +310,15 @@ export default {
           id: 5,
           link: "videos/landingpage/Lithuania2.mp4",
           img: "images/messages_of_support/Lithuania_2.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Lithuania2.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 6,
@@ -273,6 +329,15 @@ export default {
           id: 7,
           link: "videos/landingpage/Estonia.mp4",
           img: "images/messages_of_support/Estonia.png",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Estonia.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 8,
@@ -288,6 +353,15 @@ export default {
           id: 9,
           link: "videos/landingpage/Ireland.mp4",
           img: "images/messages_of_support/Ireland.png",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Ireland.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 10,
@@ -450,6 +524,10 @@ export default {
     // this.setStep();
       //  Pridedame globalų fokusavimo stebėjimą
   document.addEventListener("focusin", this.handleGlobalFocus);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
+    document.removeEventListener("focusin", this.handleGlobalFocus);
   },
   computed: {
     isMobile() {

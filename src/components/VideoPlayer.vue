@@ -124,6 +124,12 @@ export default {
         return {};
       },
     },
+    tracks: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
   },
   data() {
     return {
@@ -134,7 +140,16 @@ export default {
     };
   },
   mounted() {
-    this.player = videojs(this.$refs.videoPlayer, this.options);
+    if (!this.$refs.videoPlayer) {
+      return;
+    }
+
+    const playerOptions = { ...this.options };
+    if (this.tracks && this.tracks.length > 0) {
+      playerOptions.tracks = [...(playerOptions.tracks || []), ...this.tracks];
+    }
+
+    this.player = videojs(this.$refs.videoPlayer, playerOptions);
     // this.player.on("ready", () => {
     //   if (this.isLoading) {
     //     if (this.playerLoading) {
@@ -142,32 +157,38 @@ export default {
     //     }
     //   }
     // });
-      // Padarome video fokusinamu klaviatūra
-  this.$refs.videoPlayer.setAttribute("tabindex", "0");
-  this.$refs.videoPlayer.setAttribute("role", "button");
-  this.$refs.videoPlayer.setAttribute(
-    "aria-label",
-    "Video player, press Enter or Space to play or pause"
-  );
+    this.$refs.videoPlayer.setAttribute("tabindex", "0");
+    this.$refs.videoPlayer.setAttribute(
+      "aria-label",
+      "Video player, press Enter or Space to play or pause"
+    );
 
-  // Valdom klaviatūrą (Enter / Space)
-  this.$refs.videoPlayer.addEventListener("keyup", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      if (this.player.paused()) {
-        this.player.play();
-      } else {
-        this.player.pause();
-      }
-    }
-  });
-},
+    this.$refs.videoPlayer.addEventListener("keyup", this.handleKeyup);
+  },
 
   beforeDestroy() {
+    if (this.$refs.videoPlayer) {
+      this.$refs.videoPlayer.removeEventListener("keyup", this.handleKeyup);
+    }
+
     if (this.player) {
       this.player.dispose();
     }
   },
   methods: {
+    handleKeyup(e) {
+      if (!this.player || e.target !== this.$refs.videoPlayer) {
+        return;
+      }
+
+      if (e.key === "Enter" || e.key === " " || e.key === "Space") {
+        if (this.player.paused()) {
+          this.player.play();
+        } else {
+          this.player.pause();
+        }
+      }
+    },
     videoPause() {
       this.buttonType = "pause";
       this.showPlayButton = true;
