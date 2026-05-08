@@ -366,6 +366,15 @@ export default {
           id: 9,
           link: "videos/landingpage/Sweden.mp4",
           img: "images/messages_of_support/Sweden.png",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Sweden.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 9,
