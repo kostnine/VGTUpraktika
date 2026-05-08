@@ -361,6 +361,15 @@ export default {
           id: 8,
           link: "videos/landingpage/Maria.mp4",
           img: "images/messages_of_support/Maria.png",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/Maria.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 9,
