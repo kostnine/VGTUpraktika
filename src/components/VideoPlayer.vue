@@ -183,7 +183,10 @@ export default {
 
       if (e.key === "Enter" || e.key === " " || e.key === "Space") {
         if (this.player.paused()) {
-          this.player.play();
+          const playPromise = this.player.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+          }
         } else {
           this.player.pause();
         }

@@ -689,9 +689,16 @@ setMainMessageVideo(video, index) {
     playVideo() {
       this.$nextTick(() => {
         setTimeout(() => {
-          this.$refs[
+          const video = this.$refs[
             "mainMessageVideo-" + (this.videoStack.length - 1)
-          ][0].player.play();
+          ];
+          const player = video && video[0] && video[0].player;
+          if (!player) return;
+
+          const playPromise = player.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {});
+          }
         }, 100);
       });
     },
