@@ -324,6 +324,15 @@ export default {
           id: 6,
           link: "videos/landingpage/Stephan.mp4",
           img: "images/messages_of_support/Stephan.jpg",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Stephan.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 7,
