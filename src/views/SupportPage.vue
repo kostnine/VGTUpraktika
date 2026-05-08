@@ -657,10 +657,9 @@ setMainMessageVideo(video, index) {
   if (this.videoStack[this.videoStack.length - 1].id == video.id) return;
 
   this.isLoadingNewVideo = true;
-  let oldVideo = this.mainMessageVideo;
+  let oldVideo = { ...this.mainMessageVideo };
   this.videoStack.push(video);
-  this.mainMessageVideo = video;
-  video = oldVideo;
+  this.mainMessageVideo = { ...video };
   this.footerVideos[index] = oldVideo;
   this.pauseAllVideos();
 
