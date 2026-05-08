@@ -305,6 +305,15 @@ export default {
           id: 10,
           link: "videos/landingpage/Finian.mp4",
           img: "images/messages_of_support/Finian.png",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Finian.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
         {
           id: 5,
@@ -376,6 +385,15 @@ export default {
           id: 10,
           link: "videos/landingpage/Spain.mp4",
           img: "images/messages_of_support/Spain.png",
+          tracks: [
+            {
+              kind: 'subtitles',
+              src: '/videos/landingpage/Spain.vtt',
+              srclang: 'en',
+              label: 'English',
+              default: true
+            }
+          ],
         },
       ],
       infoLeaflets:[
