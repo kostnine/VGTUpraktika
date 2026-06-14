@@ -1,0 +1,425 @@
+INTEGRATION TESTŲ RAŠYMAS SU VITEST
+SmokeAlert projekto pavyzdžiai ir užduotys
+
+============================================================
+1. KAS YRA INTEGRATION TESTAS
+============================================================
+
+Integration testas tikrina ne vieną izoliuotą funkciją ar komponentą, o tai,
+kaip kelios aplikacijos dalys veikia kartu.
+
+SmokeAlert projekto pavyzdžiai:
+
+- parent komponentas perduoda props į Country.vue;
+- Country.vue po click iškviečia parent funkciją;
+- parent būsena pasikeičia ir atnaujina kitą puslapio dalį;
+- Header.vue naudoja tikrą Vuex store kalbai gauti;
+- router-link naudoja tikrą Vue Router;
+- pasikeitus maršrutui router-view parodo kitą komponentą;
+- CookieModal.vue skaito ir rašo slapuką per tikrą VueCookies pluginą.
+
+Palyginimas:
+
+UNIT TESTAS
+Tikrina vieną dalį atskirai. Priklausomybės dažnai pakeičiamos mockais arba
+stubais.
+
+INTEGRATION TESTAS
+Tikrina dviejų ar daugiau tikrų dalių bendradarbiavimą. Mockinamos tik išorinės
+arba konkrečiam scenarijui nereikalingos priklausomybės.
+
+E2E TESTAS
+Cypress paleidžia visą aplikaciją naršyklėje ir tikrina pilną vartotojo kelią.
+
+
+============================================================
+2. PALEIDIMAS
+============================================================
+
+Integration testams naudojamas tas pats Vitest setupas:
+
+npm run test -- --run
+
+Paleisti tik integration testus:
+
+npm run test -- src/integration --run
+
+Paleisti vieną pavyzdį:
+
+npm run test -- src/integration/CountrySelection.example.integration.test.js --run
+
+Integration testuose dažniausiai naudojamas mount, o ne shallowMount.
+
+mount pilnai atvaizduoja tikrus child komponentus.
+shallowMount child komponentus automatiškai pakeičia stubais.
+
+Todėl mount geriau tinka tikrinti realų kelių komponentų bendradarbiavimą.
+
+
+============================================================
+3. PAPRASTAS PAVYZDYS: PARENT + COUNTRY.VUE
+============================================================
+
+Failas:
+
+src/integration/CountrySelection.example.integration.test.js
+
+Tikslas:
+
+Patikrinti, kaip paprastas parent komponentas ir tikras Country.vue veikia kartu.
+
+Vartotojo scenarijus:
+
+1. Parent pradžioje neturi pasirinktos šalies.
+2. Parent perduoda šalies duomenis į Country.vue per props.
+3. Vartotojas paspaudžia tikrą Country.vue SVG path.
+4. Country.vue iškviečia parent perduotą selectCountry funkciją.
+5. Parent atnaujina selectedCountry būseną.
+6. Nauja būsena parodoma tekste ir grįžta į Country.vue per prop.
+
+Svarbiausia pavyzdžio dalis:
+
+const CountrySelection = {
+  components: { Country },
+  data() {
+    return {
+      selectedCountry: "",
+      country: {
+        name: "Lithuania",
+        svg: "M0 0 L10 10",
+        fill: "#a2bbe5",
+      },
+    };
+  },
+  methods: {
+    selectCountry(countryName) {
+      this.selectedCountry = countryName;
+    },
+  },
+};
+
+Kodėl tai integration, o ne paprastas Country.vue unit testas?
+
+- Naudojamas tikras child komponentas Country.vue.
+- Yra atskiras parent komponentas.
+- Duomenys keliauja iš parent į child per props.
+- Veiksmas keliauja iš child atgal į parent per callback.
+- Parent būsena pasikeičia.
+- Pasikeitusi būsena vėl perduodama child komponentui.
+
+Teste tikrinamas visas šis ryšys, o ne tik vienas Country.vue metodas.
+
+
+============================================================
+4. PAPRASTA UŽDUOTIS: PAGEHEADER + PUSLAPIO SECTION
+============================================================
+
+Failas jau sukurtas:
+
+src/integration/PageHeaderSection.integration.test.js
+
+Tikslas:
+
+Sukurti testinį parent komponentą, kuriame būtų:
+
+- tikras PageHeader.vue;
+- puslapio sekcija su id="types";
+- parent perduodami PageHeader props.
+
+Testas turi patikrinti:
+
+1. Parent perduoda scrollTo="types" į PageHeader.
+2. Paspaudus .header-button randamas parent puslapio #types elementas.
+3. Tam elementui iškviečiamas scrollIntoView.
+4. Tas pats veikia paspaudus Enter.
+
+Parent komponento pradžia:
+
+const TestPage = {
+  components: { PageHeader },
+  template: `
+    <div>
+      <PageHeader
+        image="images/hand_detector.jpg"
+        title="header.about"
+        content="types.which"
+        buttonText="types.learn_more"
+        scrollTo="types"
+      />
+      <section id="types">Smoke alarm types</section>
+    </div>
+  `,
+};
+
+scrollIntoView jsdom aplinkoje reikia sukurti kaip mocką:
+
+const scrollIntoView = vi.fn();
+Element.prototype.scrollIntoView = scrollIntoView;
+
+Vertimus galima pateikti per mocks:
+
+mocks: {
+  toLocal: (key) => key,
+}
+
+Vertinimas:
+
+- turi būti naudojamas mount;
+- PageHeader negali būti stubinamas;
+- tikrinamas tikras ryšys tarp child mygtuko ir parent DOM sekcijos;
+- neturi būti naudojamas setTimeout ar fiksuotas laukimas.
+
+
+============================================================
+5. SUNKESNIS PAVYZDYS: HEADER + ROUTER + STORE
+============================================================
+
+Failas:
+
+src/integration/HeaderRouter.example.integration.test.js
+
+Šiame pavyzdyje kartu veikia:
+
+- tikras Header.vue;
+- tikras Vue Router;
+- tikras Vuex store;
+- tikras router-link;
+- tikras router-view;
+- du testiniai puslapių komponentai.
+
+Testo eiga:
+
+1. Store turi lang="EN".
+2. Router atidaro /EN.
+3. router-view rodo HomePage.
+4. Paspaudžiamas Header dropdown.
+5. Randama tikra router-link nuoroda į /EN/regulations.
+6. Paspaudus nuorodą Vue Router pakeičia maršrutą.
+7. router-view pašalina HomePage ir parodo RegulationsPage.
+
+Svarbi setupo dalis:
+
+const localVue = createLocalVue();
+localVue.use(VueRouter);
+localVue.use(Vuex);
+
+const router = new VueRouter({
+  mode: "abstract",
+  routes: [
+    { path: "/EN", component: HomePage },
+    { path: "/EN/regulations", component: RegulationsPage },
+  ],
+});
+
+const store = new Vuex.Store({
+  state: { lang: "EN" },
+});
+
+Kodėl router naudojamas mode="abstract"?
+
+Testui nereikia tikro naršyklės URL. Abstract režimas leidžia Vue Router valdyti
+maršrutų istoriją atmintyje.
+
+Kodėl tai integration testas?
+
+Nėra tikrinamas vien tik Header metodas. Tikrinama visa grandinė:
+
+Header -> router-link -> Vue Router -> router-view -> naujas puslapis.
+
+
+============================================================
+6. SUNKI UŽDUOTIS 1: REGULATIONSPAGE + COUNTRY KOMPONENTAI
+============================================================
+
+Failas jau sukurtas:
+
+src/integration/RegulationsCountry.integration.test.js
+
+Tikslas:
+
+Patikrinti realų RegulationsPage.vue, Country.vue ir CountryTextBlock.vue ryšį.
+
+Reikalavimai:
+
+1. Mountinti RegulationsPage su mount.
+2. PageHeader galima pakeisti stubu, nes jis nėra šio scenarijaus dalis.
+3. Country ir CountryTextBlock turi likti tikri.
+4. Testo duomenyse palikti vieną šalį, kad testas būtų mažas ir aiškus.
+5. Pradžioje turi būti matoma .country-select ir instrukcijų turinys.
+6. Paspaudus tikro Country komponento path, activeCountry turi pasikeisti.
+7. Turi atsirasti tikras CountryTextBlock.
+8. CountryTextBlock turi gauti pasirinktos šalies pavadinimą.
+9. Paspaudus .card-close informacinis blokas turi užsidaryti.
+10. Turi vėl atsirasti pradinis šalies pasirinkimo turinys.
+
+Naudingi hintai:
+
+RegulationsPage naudoja globalius metodus, todėl galima pateikti:
+
+mocks: {
+  toLocal: (key) => key,
+  scroll: vi.fn(),
+  $store: {
+    state: {
+      isKeyboardNavigating: false,
+    },
+  },
+}
+
+PageHeader stubas:
+
+stubs: {
+  PageHeader: true,
+}
+
+Country duomenų sumažinimas:
+
+wrapper.setData({
+  country_data: {
+    Lithuania: {
+      name: "Lithuania",
+      displayName: "Lithuania",
+      svg: "M0 0 L10 10",
+      fill: "#a2bbe5",
+      expanded: false,
+      content: [],
+    },
+  },
+  sorted_countries: ["Lithuania"],
+});
+
+Pastaba: jeigu CountryTextBlock reikalauja content segmento laukų, pateik pilną
+minimalų segmentą su links: [].
+
+Vertinimas:
+
+- tikrinami bent trys tikri komponentai;
+- duomenys keliauja per props;
+- vartotojo click pakeičia parent būseną;
+- parent būsena valdo kito child komponento atsiradimą;
+- testas nepriklauso nuo viso didelio country_data failo.
+
+
+============================================================
+7. SUNKI UŽDUOTIS 2: COOKIEMODAL + VUECOOKIES
+============================================================
+
+Failas jau sukurtas:
+
+src/integration/CookieConsentPlugin.integration.test.js
+
+Tikslas:
+
+Patikrinti CookieModal.vue integraciją su tikru VueCookies pluginu ir jsdom
+naršyklės document.cookie.
+
+Svarbus skirtumas nuo unit testo:
+
+Unit teste $cookies būtų paprastas vi.fn mock objektas.
+Šiame integration teste localVue turi naudoti tikrą VueCookies pluginą.
+
+Setup pradžia:
+
+const localVue = createLocalVue();
+localVue.use(VueCookies, { expires: "7d" });
+
+const wrapper = mount(CookieModal, {
+  localVue,
+  mocks: {
+    toLocal: (key) => translations[key] || key,
+  },
+  directives: {
+    "scroll-lock": {},
+  },
+});
+
+Reikalavimai:
+
+1. Išvalyti cookies_accepted prieš testą.
+2. Mountinti CookieModal su tikru VueCookies.
+3. Patikrinti, kad be slapuko rodomas .cookie-modal.
+4. Paspausti "Allow all cookies".
+5. Patikrinti, kad document.cookie turi cookies_accepted=true.
+6. Patikrinti, kad modal langas pasislepia.
+7. Sunaikinti wrapper su wrapper.destroy().
+8. Mountinti naują CookieModal kopiją.
+9. Patikrinti, kad nauja kopija perskaito esamą slapuką.
+10. Patikrinti, kad modal langas išlieka paslėptas.
+
+Išorinę Google Analytics bootstrap funkciją reikia mockinti, nes ji nėra šio
+integration scenarijaus dalis:
+
+vi.mock("vue-gtag", () => ({
+  bootstrap: vi.fn(),
+}));
+
+Po kiekvieno testo išvalyti naršyklės slapuką:
+
+document.cookie =
+  "cookies_accepted=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+
+Vertinimas:
+
+- $cookies negali būti pakeistas paprastu mock objektu;
+- naudojamas localVue.use(VueCookies);
+- tikrinamas tikras document.cookie;
+- patikrinamas naujas komponento mount su jau išsaugotu slapuku;
+- Google Analytics lieka mockinta kaip išorinė paslauga.
+
+
+============================================================
+8. DAŽNIAUSIOS INTEGRATION TESTŲ KLAIDOS
+============================================================
+
+1. Visi child komponentai stubinami
+
+Jeigu visi child komponentai pakeisti stubais, testas dažniausiai tampa parent
+komponento unit testu.
+
+2. Mockinama dalis, kurią norime integruoti
+
+Jeigu tikriname Header ir Router ryšį, negalima pakeisti $router objektu su
+vi.fn. Reikia naudoti tikrą Vue Router.
+
+3. Bandoma paleisti visą produkcinę aplikaciją
+
+Integration testui nebūtina mountinti viso App.vue su visais puslapiais.
+Paliekamos tik scenarijui reikalingos tikros dalys.
+
+4. Naudojamas shallowMount
+
+shallowMount automatiškai stubina child komponentus. Integration testuose
+dažniausiai reikia mount.
+
+5. Nepalaukiama Vue DOM reakcijos
+
+Po click, setData, setProps arba router navigacijos naudoti await ir prireikus:
+
+await Vue.nextTick();
+
+6. Testai priklauso nuo ankstesnio testo būsenos
+
+Kiekvienas testas turi pats susikurti router, store, wrapper ar slapukų būseną.
+
+
+============================================================
+9. GALUTINIS FAILŲ SĄRAŠAS
+============================================================
+
+Pilnai išspręsti pavyzdžiai:
+
+src/integration/CountrySelection.example.integration.test.js
+src/integration/HeaderRouter.example.integration.test.js
+
+Praktikantės užduočių karkasai:
+
+src/integration/PageHeaderSection.integration.test.js
+src/integration/RegulationsCountry.integration.test.js
+src/integration/CookieConsentPlugin.integration.test.js
+
+Visi integration testai:
+
+npm run test -- src/integration --run
+
+Kol užduotys neįgyvendintos, jos bus rodomos kaip todo. Pilnai išspręsti
+pavyzdžiai turi praeiti be klaidų.
